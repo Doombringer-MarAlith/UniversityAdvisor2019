@@ -1,0 +1,22 @@
+﻿USE [notex]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE IF NOT EXISTS TABLE [dbo].[bybys](
+	[Name] [nvarchar](50) NULL,
+	[Password] [nvarchar](50) NULL,
+	[Email] [nvarchar](50) NULL,
+	[Guid] [nvarchar](50) NOT NULL,
+	[Age] [nvarchar](50) NULL,
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_bybys] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
