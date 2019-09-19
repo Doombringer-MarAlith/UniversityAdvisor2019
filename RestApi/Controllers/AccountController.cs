@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Models.Models;
 using Newtonsoft.Json;
 
-namespace Notex.Server.Controllers
+namespace RestApi.Controllers
 {
     [Route("api/account")]
     [ApiController]

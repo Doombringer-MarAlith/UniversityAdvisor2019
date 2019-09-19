@@ -4,7 +4,7 @@ using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Text;
 
-namespace NotexServerCallFromApp
+namespace ServerCallFromApp
 {
     public static class DataManipulations
     {
