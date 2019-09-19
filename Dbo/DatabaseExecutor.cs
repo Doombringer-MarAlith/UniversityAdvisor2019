@@ -7,7 +7,7 @@ namespace Dbo
 {
     public class DatabaseExecutor
     {
-        internal static string connetionString = @"Server=(localdb)\madder;Database=notex;Trusted_Connection=True;";
+        internal static string connetionString = @"Server=(localdb)\madder;Database=UniversityAdvisor;Trusted_Connection=True;";
 
         public void CreateAccount(Account acc)
         {
