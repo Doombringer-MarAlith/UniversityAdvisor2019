@@ -32,8 +32,8 @@ namespace ServerCallFromApp
             HttpClient client = new HttpClient();
             var payload = data;
 
-            HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
-            HttpResponseMessage response = client.PostAsync(Url + url,c).Result;
+            HttpContent httpContent = new StringContent(payload, Encoding.UTF8, "application/json");
+            HttpResponseMessage response = client.PostAsync(Url + url,httpContent).Result;
             client.Dispose();
         }
     }

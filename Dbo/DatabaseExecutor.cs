@@ -1,24 +1,26 @@
-﻿using System;
+﻿using Models.Models;
+using System;
 using System.Data.SqlClient;
 using System.Globalization;
-using Models.Models;
 
 namespace Dbo
 {
     public class DatabaseExecutor
     {
-        internal static string connetionString = @"Server=(localdb)\madder;Database=UniversityAdvisor;Trusted_Connection=True;";
+        internal static string connetionString =
+            @"Server=(localdb)\madder;Database=UniversityAdvisor;Trusted_Connection=True;";
 
-        public void CreateAccount(Account acc)
+        public void CreateAccount(Account account)
         {
             var bdoConnection = new SqlConnection(connetionString);
             bdoConnection.Open();
-            using (SqlCommand command = new SqlCommand(
-                $"Insert Into [Account] values ('{acc.Name}' , '{acc.Password}' , '{acc.Email}' , '{acc.Guid}' ,'{acc.Age.ToString(CultureInfo.InvariantCulture)}')",
+            using (var command = new SqlCommand(
+                $"Insert Into [Account] values ('{account.Name}' , '{account.Password}' , '{account.Email}' , '{account.Guid}' ,'{account.Age.ToString(CultureInfo.InvariantCulture)}')",
                 bdoConnection))
             {
-                SqlDataReader reader = command.ExecuteReader();
+                var reader = command.ExecuteReader();
             }
+
             bdoConnection.Close();
         }
 
@@ -26,25 +28,24 @@ namespace Dbo
         {
             var bdoConnection = new SqlConnection(connetionString);
             bdoConnection.Open();
-            using (SqlCommand command = new SqlCommand(
+            using (var command = new SqlCommand(
                 $"Select * from [Account] where Guid='{id}'",
                 bdoConnection))
             {
-                using (SqlDataReader reader = command.ExecuteReader())
+                using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
-                    {
                         return new Account
                         {
                             Name = reader["Name"].ToString(),
                             Age = DateTime.Parse(reader["Age"].ToString()),
                             Password = reader["Password"].ToString(),
                             Email = reader["Email"].ToString(),
-                       //     Guid = reader["Guid"].ToString()
+                            Guid = reader["Guid"].ToString()
                         };
-                    }
                 }
             }
+
             bdoConnection.Close();
             return null;
         }
@@ -53,11 +54,13 @@ namespace Dbo
         {
             var bdoConnection = new SqlConnection(connetionString);
             bdoConnection.Open();
-            using (SqlCommand command = new SqlCommand(
+            using (var command = new SqlCommand(
                 $"Delete from [Account] where Guid={id}",
                 bdoConnection))
             {
+                command.ExecuteReader();
             }
+
             bdoConnection.Close();
         }
     }
