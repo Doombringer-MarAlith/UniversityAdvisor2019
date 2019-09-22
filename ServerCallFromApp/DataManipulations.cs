@@ -13,7 +13,7 @@ namespace ServerCallFromApp
         public static string GetDataFromServer(string url)
         {
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = client.GetAsync(Url+url).Result;
+            HttpResponseMessage response = client.GetAsync(Url + url).Result;
 
             if (response.IsSuccessStatusCode)
             {
@@ -24,16 +24,16 @@ namespace ServerCallFromApp
             }
 
             client.Dispose();
-
             return null;
         }
-        public static void PostDataToServer(string url,string data)
+
+        public static void PostDataToServer(string url, string data)
         {
             HttpClient client = new HttpClient();
             var payload = data;
 
             HttpContent httpContent = new StringContent(payload, Encoding.UTF8, "application/json");
-            HttpResponseMessage response = client.PostAsync(Url + url,httpContent).Result;
+            HttpResponseMessage response = client.PostAsync(Url + url, httpContent).Result;
             client.Dispose();
         }
     }

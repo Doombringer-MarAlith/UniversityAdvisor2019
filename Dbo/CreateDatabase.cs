@@ -21,15 +21,15 @@ namespace Dbo
                 File.OpenRead(fileEntry);
                 string script = File.ReadAllText(fileEntry);
                 script = script.Replace("\r\n", " ");
-                using (SqlCommand command = new SqlCommand(script,sqlConnection))
+                using (SqlCommand command = new SqlCommand(script, sqlConnection))
                 {
                     SqlDataReader reader = command.ExecuteReader();
-                    Console.WriteLine("DataBase was updated successfully");
+                    Console.WriteLine("Database was updated successfully.");
                 }
             }
             
             sqlConnection.Close();
-            Console.WriteLine("DataBase is ready");
+            Console.WriteLine("Database is ready.");
         }
     }
 }

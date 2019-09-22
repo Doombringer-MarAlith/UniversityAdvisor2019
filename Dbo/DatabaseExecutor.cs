@@ -14,9 +14,12 @@ namespace Dbo
         {
             var bdoConnection = new SqlConnection(connetionString);
             bdoConnection.Open();
-            using (var command = new SqlCommand(
-                $"Insert Into [Account] values ('{account.Name}' , '{account.Password}' , '{account.Email}' , '{account.Guid}' ,'{account.Age.ToString(CultureInfo.InvariantCulture)}')",
-                bdoConnection))
+
+            using (var command = new SqlCommand
+            (
+                $"INSERT INTO [Account] VALUES ('{account.Name}', '{account.Password}', '{account.Email}', '{account.Guid}', '{account.Age.ToString(CultureInfo.InvariantCulture)}')",
+                bdoConnection
+            ))
             {
                 var reader = command.ExecuteReader();
             }
@@ -28,9 +31,11 @@ namespace Dbo
         {
             var bdoConnection = new SqlConnection(connetionString);
             bdoConnection.Open();
-            using (var command = new SqlCommand(
-                $"Select * from [Account] where Guid='{id}'",
-                bdoConnection))
+            using (var command = new SqlCommand
+            (
+                $"SELECT * FROM [Account] WHERE Guid='{id}'",
+                bdoConnection
+            ))
             {
                 using (var reader = command.ExecuteReader())
                 {
@@ -54,9 +59,11 @@ namespace Dbo
         {
             var bdoConnection = new SqlConnection(connetionString);
             bdoConnection.Open();
-            using (var command = new SqlCommand(
-                $"Delete from [Account] where Guid={id}",
-                bdoConnection))
+            using (var command = new SqlCommand
+            (
+                $"DELETE FROM [Account] WHERE Guid={id}",
+                bdoConnection
+            ))
             {
                 command.ExecuteReader();
             }
