@@ -16,6 +16,11 @@ namespace RestApi.Controllers
         {
             return JsonConvert.SerializeObject(_database.ReturnAccount(id));
         }
+        [HttpGet("login/{name}/{password}")]
+        public ActionResult<string> Get(string name, string password)
+        {
+            return _database.ReturnAccountGuid(name,password);
+        }
 
         [HttpPost("create")]
         public void Post([FromBody] Account account)
