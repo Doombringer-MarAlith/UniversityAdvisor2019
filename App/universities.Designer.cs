@@ -39,11 +39,13 @@
             // 
             // searchBar
             // 
-            this.searchBar.Location = new System.Drawing.Point(106, 59);
+            this.searchBar.Location = new System.Drawing.Point(80, 48);
+            this.searchBar.Margin = new System.Windows.Forms.Padding(2);
             this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(500, 22);
+            this.searchBar.Size = new System.Drawing.Size(376, 20);
             this.searchBar.TabIndex = 0;
-            this.searchBar.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.searchBar.Text = "Enter university name";
+            this.searchBar.Click += new System.EventHandler(this.SearchBar_Click);
             // 
             // contextMenuStrip1
             // 
@@ -54,9 +56,10 @@
             // searchButton
             // 
             this.searchButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchButton.Location = new System.Drawing.Point(645, 55);
+            this.searchButton.Location = new System.Drawing.Point(484, 45);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(2);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(106, 30);
+            this.searchButton.Size = new System.Drawing.Size(80, 24);
             this.searchButton.TabIndex = 2;
             this.searchButton.Text = "search";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -65,42 +68,46 @@
             // universitiesList
             // 
             this.universitiesList.FormattingEnabled = true;
-            this.universitiesList.ItemHeight = 16;
-            this.universitiesList.Location = new System.Drawing.Point(106, 171);
+            this.universitiesList.Location = new System.Drawing.Point(80, 139);
+            this.universitiesList.Margin = new System.Windows.Forms.Padding(2);
             this.universitiesList.Name = "universitiesList";
-            this.universitiesList.Size = new System.Drawing.Size(500, 212);
+            this.universitiesList.Size = new System.Drawing.Size(376, 173);
             this.universitiesList.TabIndex = 3;
             // 
             // all
             // 
             this.all.AutoSize = true;
             this.all.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.all.Location = new System.Drawing.Point(306, 139);
+            this.all.Location = new System.Drawing.Point(230, 113);
+            this.all.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.all.Name = "all";
-            this.all.Size = new System.Drawing.Size(113, 16);
+            this.all.Size = new System.Drawing.Size(90, 14);
             this.all.TabIndex = 4;
             this.all.Text = "All universities";
             // 
             // selectUniButton
             // 
             this.selectUniButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectUniButton.Location = new System.Drawing.Point(309, 389);
+            this.selectUniButton.Location = new System.Drawing.Point(232, 316);
+            this.selectUniButton.Margin = new System.Windows.Forms.Padding(2);
             this.selectUniButton.Name = "selectUniButton";
-            this.selectUniButton.Size = new System.Drawing.Size(106, 30);
+            this.selectUniButton.Size = new System.Drawing.Size(80, 24);
             this.selectUniButton.TabIndex = 5;
             this.selectUniButton.Text = "select";
             this.selectUniButton.UseVisualStyleBackColor = true;
+            this.selectUniButton.Click += new System.EventHandler(this.SelectUniButton_Click);
             // 
             // universities
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.selectUniButton);
             this.Controls.Add(this.all);
             this.Controls.Add(this.universitiesList);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchBar);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "universities";
             this.Text = "Form1";
             this.ResumeLayout(false);

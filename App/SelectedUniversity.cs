@@ -12,9 +12,11 @@ namespace Objektinis
 {
     public partial class SelectedUniversity : Form
     {
-        public SelectedUniversity()
+        string universitySelected;
+        public SelectedUniversity(string uniSelected)
         {
             InitializeComponent();
+            universitySelected = uniSelected;
         }
 
         private void Button1_Click(object sender, EventArgs e)
