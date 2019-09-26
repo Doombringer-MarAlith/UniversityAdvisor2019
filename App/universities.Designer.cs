@@ -41,6 +41,7 @@
             // 
             this.searchBar.Location = new System.Drawing.Point(80, 48);
             this.searchBar.Margin = new System.Windows.Forms.Padding(2);
+            this.searchBar.MaxLength = 50;
             this.searchBar.Name = "searchBar";
             this.searchBar.Size = new System.Drawing.Size(376, 20);
             this.searchBar.TabIndex = 0;
