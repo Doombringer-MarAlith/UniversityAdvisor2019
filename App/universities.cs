@@ -25,7 +25,8 @@ namespace Objektinis
             if(searchBar.Text.Length  > 0)
             {
                 searchFor = searchBar.Text;
-                List<string> result = DataManipulations.GetDataFromServer($"uniDbSearch/{searchFor}").Split(',').ToList();
+                List<string> result = new List<string>();
+                // = DataManipulations.GetDataFromServer($"uniDbSearch/{searchFor}").Split(',').ToList(); // Need controller for getting uni search results
                 if(result.Count != 0)
                 {
                     universitiesList.Items.Clear();
