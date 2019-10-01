@@ -25,14 +25,14 @@ namespace Dbo
                 {
                     var reader = command.ExecuteReader();
                     bdoConnection.Close();
-
-                    Logger.Log
-                    (
-                        $"CreateAccount(Account): Account is created with command: INSERT/INTO/[Account]/VALUES/('" +
-                        $"{account.Name}', '{account.Password}', '{account.Email}', '{account.Guid}', '{account.Age.ToString(CultureInfo.InvariantCulture)}')"
-                    );
                 }
             }
+
+            Logger.Log
+                    (
+                        $"CreateAccount: Account is created with command: INSERT/INTO/ACCOUNT/VALUES/('" +
+                        $"{account.Name}', '{account.Password}', '{account.Email}', '{account.Guid}', '{account.Age.ToString(CultureInfo.InvariantCulture)}')"
+                    );
         }
 
         public Account ReturnAccount(string id)
@@ -66,7 +66,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"ReturnAccount(string): Account return value is null", Level.Warning);
+            Logger.Log($"ReturnAccount({id}): Account return value is null", Level.Warning);
             return null;
         }
 
@@ -93,7 +93,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"ReturnAccountGuid(string, string): Account guid return value is null", Level.Warning);
+            Logger.Log($"ReturnAccountGuid({name}, {password}): Account guid return value is null", Level.Warning);
             return null;
         }
 
