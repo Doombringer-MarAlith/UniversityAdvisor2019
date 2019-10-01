@@ -30,8 +30,7 @@ namespace Dbo
 
             Logger.Log
                     (
-                        $"CreateAccount: Account is created with command: INSERT/INTO/ACCOUNT/VALUES/('" +
-                        $"{account.Name}', '{account.Password}', '{account.Email}', '{account.Guid}', '{account.Age.ToString(CultureInfo.InvariantCulture)}')"
+                        $"DatabaseExecutor.CreateAccount: Account is created with values ({account.Name} , {account.Password} , {account.Email} , {account.Guid} , {account.Age.ToString(CultureInfo.InvariantCulture)} )"
                     );
         }
 
@@ -66,18 +65,18 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"ReturnAccount({id}): Account return value is null", Level.Warning);
+            Logger.Log($"DatabaseExecutor.ReturnAccount({id}): Account return value is null", Level.Warning);
             return null;
         }
 
-        public string ReturnAccountGuid(string name, string password)
+        public string ReturnAccountGuid(string email, string password)
         {
             using (var bdoConnection = new SqlConnection(connectionString))
             {
                 bdoConnection.Open();
                 using (var command = new SqlCommand
                 (
-                    $"SELECT * FROM [Account] WHERE Name='{name}' AND Password='{password}'",
+                    $"SELECT * FROM [Account] WHERE Email='{email}' AND Password='{password}'",
                     bdoConnection
                 ))
                 {
@@ -93,7 +92,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"ReturnAccountGuid({name}, {password}): Account guid return value is null", Level.Warning);
+            Logger.Log($"DatabaseExecutor.ReturnAccountGuid({email}  ,  {password}): Account guid return value is null", Level.Warning);
             return null;
         }
 

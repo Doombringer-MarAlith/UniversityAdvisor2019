@@ -17,12 +17,12 @@ namespace AcceptanceTests
             {
                 Name = Helper.GenerateRandomString(50),
                 Password = Helper.GenerateRandomString(50),
-                Email = "hahaha@gmail.com",
+                Email = Helper.GenerateRandomString(50),
                 Guid = guid
             };
 
             DataManipulations.PostDataToServer("account/create", JsonConvert.SerializeObject(account));
-            var returnGuid = DataManipulations.GetDataFromServer($"account/login/{account.Name}/{account.Password}");
+            var returnGuid = DataManipulations.GetDataFromServer($"account/login/{account.Email}/{account.Password}");
             Assert.NotNull(returnGuid);
             Assert.Equal(guid, returnGuid);
 

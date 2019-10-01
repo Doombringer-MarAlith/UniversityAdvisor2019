@@ -16,7 +16,7 @@ namespace RestApi.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(string id)
         {
-            Logger.Log($"AccountController::Get(): {id}");
+            Logger.Log($"AccountController:Get({id})");
 
             try
             {
@@ -24,15 +24,15 @@ namespace RestApi.Controllers
             }
             catch (Exception exception)
             {
-                Logger.Log($"AccountController::Get(): DomainError", Level.Error, exception);
+                Logger.Log($"AccountController.Get({id}): DomainError", Level.Error, exception);
                 throw;
             }
         }
 
-        [HttpGet("login/{name}/{password}")]
+        [HttpGet("login/{email}/{password}")]
         public ActionResult<string> Get(string email, string password)
         {
-            Logger.Log($"AccountController::Get(): {email} {password}");
+            Logger.Log($"AccountController.Get({email} ,  {password}) ");
 
             try
             {
@@ -48,7 +48,7 @@ namespace RestApi.Controllers
         [HttpPost("create")]
         public void Post([FromBody] Account account)
         {
-            Logger.Log($"AccountController::Post()");
+            Logger.Log($"AccountController::Post(Create Account)");
 
             try
             {
@@ -56,7 +56,7 @@ namespace RestApi.Controllers
             }
             catch (Exception exception)
             {
-                Logger.Log($"AccountController::Post(): DomainError", Level.Error, exception);
+                Logger.Log($"AccountController.Post(Account): DomainError", Level.Error, exception);
                 throw;
             }
         }
