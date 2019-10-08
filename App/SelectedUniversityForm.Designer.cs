@@ -1,6 +1,6 @@
 ﻿namespace Objektinis
 {
-    partial class SelectedUniversity
+    partial class SelectedUniversityForm
     {
         /// <summary>
         /// Required designer variable.

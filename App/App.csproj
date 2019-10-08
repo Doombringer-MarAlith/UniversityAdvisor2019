@@ -47,34 +47,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="login.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="reviewForm.cs">
+    <Compile Include="ReviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="reviewForm.Designer.cs">
-      <DependentUpon>reviewForm.cs</DependentUpon>
+    <Compile Include="ReviewForm.Designer.cs">
+      <DependentUpon>ReviewForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SelectedUniversity.cs">
+    <Compile Include="SelectedUniversityForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectedUniversity.Designer.cs">
-      <DependentUpon>SelectedUniversity.cs</DependentUpon>
+    <Compile Include="SelectedUniversityForm.Designer.cs">
+      <DependentUpon>SelectedUniversityForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="universities.cs">
+    <Compile Include="UniversitySearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="universities.Designer.cs">
-      <DependentUpon>universities.cs</DependentUpon>
+    <Compile Include="UniversitySearchForm.Designer.cs">
+      <DependentUpon>UniversitySearchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,14 +86,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="reviewForm.resx">
-      <DependentUpon>reviewForm.cs</DependentUpon>
+    <EmbeddedResource Include="ReviewForm.resx">
+      <DependentUpon>ReviewForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectedUniversity.resx">
-      <DependentUpon>SelectedUniversity.cs</DependentUpon>
+    <EmbeddedResource Include="SelectedUniversityForm.resx">
+      <DependentUpon>SelectedUniversityForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="universities.resx">
-      <DependentUpon>universities.cs</DependentUpon>
+    <EmbeddedResource Include="UniversitySearchForm.resx">
+      <DependentUpon>UniversitySearchForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

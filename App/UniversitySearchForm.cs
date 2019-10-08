@@ -9,25 +9,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ServerCallFromApp;
 
-
 namespace Objektinis
 {
-    public partial class universities : Form
+    public partial class UniversitySearchForm : Form
     {
-        string searchFor;
-        public universities()
+        private string _textToSearch;
+
+        public UniversitySearchForm()
         {
             InitializeComponent();
         }
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            if(searchBar.Text.Length  > 0)
+            if (!String.IsNullOrWhiteSpace(searchBar.Text))
             {
-                searchFor = searchBar.Text;
+                _textToSearch = searchBar.Text;
+
                 List<string> result = new List<string>();
                 // = DataManipulations.GetDataFromServer($"uniDbSearch/{searchFor}").Split(',').ToList(); // Need controller for getting uni search results
-                if(result.Count != 0)
+                if (result.Count != 0)
                 {
                     universitiesList.Items.Clear();
                     universitiesList.Items.AddRange(result.ToArray());
@@ -35,7 +36,7 @@ namespace Objektinis
             }
             else
             {
-                MessageBox.Show("Please enter a university you want to search for");
+                MessageBox.Show("Please enter a university you want to search for!");
             }
         }
 
@@ -46,16 +47,16 @@ namespace Objektinis
 
         private void SelectUniButton_Click(object sender, EventArgs e)
         {
-            if(universitiesList.SelectedItem != null)
+            if (universitiesList.SelectedItem != null)
             {
                 this.Hide();
-                SelectedUniversity selectedUniversity = new SelectedUniversity(universitiesList.SelectedItem.ToString());
+                SelectedUniversityForm selectedUniversity = new SelectedUniversityForm(universitiesList.SelectedItem.ToString());
                 selectedUniversity.Closed += (s, args) => this.Close();
                 selectedUniversity.Show();
             }
             else
             {
-                MessageBox.Show("Please select a university from the list first");
+                MessageBox.Show("Please select a university from the list first!");
             }
         }
     }

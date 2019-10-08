@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Objektinis
 {
-    public partial class login : Form
+    public partial class LoginForm : Form
     {
-        public login()
+        public LoginForm()
         {
             InitializeComponent();
         }
