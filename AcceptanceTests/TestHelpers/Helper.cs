@@ -15,6 +15,7 @@ namespace AcceptanceTests.TestHelpers
             {
                 result.Append(characters[random.Next(characters.Length)]);
             }
+
             return result.ToString();
         }
     }

@@ -19,6 +19,7 @@ namespace Dbo
                 File.OpenRead(fileEntry);
                 string script = File.ReadAllText(fileEntry);
                 script = script.Replace("\r\n", " ");
+
                 using (SqlCommand command = new SqlCommand(script, sqlConnection))
                 {
                     SqlDataReader reader = command.ExecuteReader();

@@ -11,18 +11,19 @@ using ServerCallFromApp;
 
 namespace Objektinis
 {
-    public partial class SelectedUniversity : Form
+    public partial class SelectedUniversityForm : Form
     {
-        string universitySelected;
-        public SelectedUniversity(string uniSelected)
+        private string _selectedUniversity;
+
+        public SelectedUniversityForm(string selectedUniversity)
         {
             InitializeComponent();
-            universitySelected = uniSelected;
+            _selectedUniversity = selectedUniversity;
         }
 
         private void ReadButton_Click(object sender, EventArgs e)
         {
-            if(facultiesListBox.SelectedItem == null)
+            if (facultiesListBox.SelectedItem == null)
             {
                 // new Form to read reviews of a selected university
             }
@@ -47,15 +48,16 @@ namespace Objektinis
 
         private void SelectedUniversity_Load(object sender, EventArgs e)
         {
-            // request server to get faculties of selected university and add them to listbox
-            List <string> faculties = DataManipulations.GetDataFromServer($"facultiesOfUni/{universitySelected}").Split(',').ToList();
-            if(faculties.Count != 0)
+            // Request server to get faculties of selected university and add them to listbox
+            List <string> faculties = DataManipulations.GetDataFromServer($"facultiesOfUni/{_selectedUniversity}").Split(',').ToList();
+
+            if (faculties.Count != 0)
             {
                 facultiesListBox.Items.AddRange(faculties.ToArray());
             }
             else
             {
-                facultiesListBox.Items.Add("No faculties found for this university");
+                facultiesListBox.Items.Add("No faculties found for this university.");
             }
         }
     }

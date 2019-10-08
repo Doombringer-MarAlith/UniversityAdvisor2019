@@ -1,6 +1,6 @@
 ﻿namespace Objektinis
 {
-    partial class reviewForm
+    partial class ReviewForm
     {
         /// <summary>
         /// Required designer variable.

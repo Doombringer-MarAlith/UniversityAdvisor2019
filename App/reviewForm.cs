@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Objektinis
 {
-    public partial class reviewForm : Form
+    public partial class ReviewForm : Form
     {
-        public reviewForm()
+        public ReviewForm()
         {
             InitializeComponent();
         }
