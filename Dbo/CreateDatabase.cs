@@ -12,7 +12,6 @@ namespace Dbo
         {
             SqlConnection sqlConnection = new SqlConnection(SqlConnectionString);
             var fileEntries = Directory.GetFiles("Scripts");
-
             foreach (var fileEntry in fileEntries)
             {
                 sqlConnection.Open();

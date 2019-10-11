@@ -1,6 +1,7 @@
 ﻿using Debugger;
 using Models.Models;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Globalization;
 
@@ -96,6 +97,66 @@ namespace Dbo
             return null;
         }
 
+        public void CreateUniversity(University university)
+        {
+            using (var bdoConnection = new SqlConnection(connectionString))
+            {
+                bdoConnection.Open();
+
+                using (var command = new SqlCommand
+                (
+                    $"INSERT INTO [University] VALUES ('{university.Guid}','{university.Name}')",
+
+                    bdoConnection
+                ))
+                {
+                    var reader = command.ExecuteReader();
+                    bdoConnection.Close();
+                }
+            }
+
+            Logger.Log
+                    (
+                        $"DatabaseExecutor.CreateUniversity: university is created with values ({university.Guid}, {university.Name})"
+                    );
+        }
+
+        public List<University> ReturnUniversities(string name)
+        {
+            using (var bdoConnection = new SqlConnection(connectionString))
+            {
+                bdoConnection.Open();
+                using (var command = new SqlCommand
+                (
+                    $"SELECT * FROM [University] WHERE Name LIKE '%{name}%'",
+                    bdoConnection
+                ))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        List <University> unis = new List<University>();
+                        while (reader.Read())
+                        {
+                            var uni = new University
+                            {
+                                Name = reader["Name"].ToString(),
+                                Guid = reader["Guid"].ToString()
+                            };
+
+                            bdoConnection.Close();
+                            unis.Add(uni);
+                        }
+                        if(unis != null)
+                        {
+                            return unis;
+                        }
+                    }
+                }
+            }
+
+            Logger.Log($"DatabaseExecutor.ReturnUniversityGuid({name}): University guid return value is null", Level.Warning);
+            return null;
+        }
         //public void DeleteAccount(string id)
         //{
         //    using (var bdoConnection = new SqlConnection(connectionString))

@@ -27,7 +27,7 @@ namespace AcceptanceTests
             Assert.Equal(guid, returnGuid);
 
             var fetchedAccount = JsonConvert.DeserializeObject<Account>(DataManipulations.GetDataFromServer($"account/{guid}"));
-            Assert.Equal(fetchedAccount.Guid, fetchedAccount.Guid);
+            Assert.Equal(fetchedAccount.Guid, account.Guid);
             Assert.Equal(fetchedAccount.Name, fetchedAccount.Name);
             Assert.Equal(fetchedAccount.Password, fetchedAccount.Password);
             Assert.Equal(fetchedAccount.Age, fetchedAccount.Age);

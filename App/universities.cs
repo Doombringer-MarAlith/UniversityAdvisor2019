@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ServerCallFromApp;
+using Models.Models;
+using Newtonsoft.Json;
+
 
 
 namespace Objektinis
@@ -25,13 +28,25 @@ namespace Objektinis
             if(searchBar.Text.Length  > 0)
             {
                 searchFor = searchBar.Text;
-                List<string> result = new List<string>();
-                // = DataManipulations.GetDataFromServer($"uniDbSearch/{searchFor}").Split(',').ToList(); // Need controller for getting uni search results
-                if(result.Count != 0)
+                List<University> result = new List<University>();
+                try
+                {
+                    result =
+                    JsonConvert.DeserializeObject<List<University>>(DataManipulations.GetDataFromServer($"university/{searchFor}"));
+                }
+                catch (ArgumentNullException)
+                {
+                    MessageBox.Show("NULL");
+                }
+                
+                if(result.Count != 0)   
                 {
                     universitiesList.Items.Clear();
-                    universitiesList.Items.AddRange(result.ToArray());
+                    var range = result.Select(uni => uni.Name).ToArray();
+                    universitiesList.Items.AddRange(range);
+                    MessageBox.Show(result.ToString());
                 }
+
             }
             else
             {
@@ -57,6 +72,11 @@ namespace Objektinis
             {
                 MessageBox.Show("Please select a university from the list first");
             }
+        }
+
+        private void Universities_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -111,6 +111,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "universities";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Universities_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
