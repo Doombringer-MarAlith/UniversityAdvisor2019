@@ -30,7 +30,7 @@ namespace Objektinis
                 searchFor = searchBar.Text;
                 List<University> result = new List<University>();
                 try
-                {
+                { // returns list of universities that match the search phrase
                     result =
                     JsonConvert.DeserializeObject<List<University>>(DataManipulations.GetDataFromServer($"university/{searchFor}"));
                 }
@@ -44,7 +44,6 @@ namespace Objektinis
                     universitiesList.Items.Clear();
                     var range = result.Select(uni => uni.Name).ToArray();
                     universitiesList.Items.AddRange(range);
-                    MessageBox.Show(result.ToString());
                 }
 
             }

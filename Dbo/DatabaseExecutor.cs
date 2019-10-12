@@ -142,11 +142,10 @@ namespace Dbo
                                 Name = reader["Name"].ToString(),
                                 Guid = reader["Guid"].ToString()
                             };
-
-                            bdoConnection.Close();
                             unis.Add(uni);
                         }
-                        if(unis != null)
+                        bdoConnection.Close();
+                        if (unis != null)
                         {
                             return unis;
                         }
