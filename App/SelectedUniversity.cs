@@ -8,16 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ServerCallFromApp;
+using Models.Models;
 
 namespace Objektinis
 {
-    public partial class SelectedUniversity : Form
+    public partial class SelectedUniversity : System.Windows.Forms.Form
     {
-        string universitySelected;
-        public SelectedUniversity(string uniSelected)
+        public SelectedUniversity()
         {
             InitializeComponent();
-            universitySelected = uniSelected;
         }
 
         private void ReadButton_Click(object sender, EventArgs e)
@@ -48,7 +47,7 @@ namespace Objektinis
         private void SelectedUniversity_Load(object sender, EventArgs e)
         {
             // request server to get faculties of selected university and add them to listbox
-            List <string> faculties = DataManipulations.GetDataFromServer($"facultiesOfUni/{universitySelected}").Split(',').ToList();
+            List<Faculty> faculties = FormManager.GetFaculties();
             if(faculties.Count != 0)
             {
                 facultiesListBox.Items.AddRange(faculties.ToArray());

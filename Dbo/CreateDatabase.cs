@@ -26,7 +26,7 @@ namespace Dbo
 
                 sqlConnection.Close();
             }
-            
+            AddJsonFiles.AddJsons(); // ADDED RANDOMLY. Needs better placement
             Console.WriteLine("Database is ready.");
         }
     }

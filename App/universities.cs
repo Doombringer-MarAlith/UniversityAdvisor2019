@@ -15,10 +15,9 @@ using Newtonsoft.Json;
 
 namespace Objektinis
 {
-    public partial class universities : Form
+    public partial class UniversitiesSearchForm : Form
     {
-        string searchFor;
-        public universities()
+        public UniversitiesSearchForm()
         {
             InitializeComponent();
         }
@@ -27,23 +26,16 @@ namespace Objektinis
         {
             if(searchBar.Text.Length  > 0)
             {
-                searchFor = searchBar.Text;
-                List<University> result = new List<University>();
-                try
-                { // returns list of universities that match the search phrase
-                    result =
-                    JsonConvert.DeserializeObject<List<University>>(DataManipulations.GetDataFromServer($"university/{searchFor}"));
-                }
-                catch (ArgumentNullException)
-                {
-                    MessageBox.Show("NULL");
-                }
-                
+                List<University> result = FormManager.GetUniversity(searchBar.Text);
                 if(result.Count != 0)   
                 {
                     universitiesList.Items.Clear();
                     var range = result.Select(uni => uni.Name).ToArray();
                     universitiesList.Items.AddRange(range);
+                }
+                else
+                {
+                    MessageBox.Show("No universities with that name");
                 }
 
             }
@@ -62,10 +54,7 @@ namespace Objektinis
         {
             if(universitiesList.SelectedItem != null)
             {
-                this.Hide();
-                SelectedUniversity selectedUniversity = new SelectedUniversity(universitiesList.SelectedItem.ToString());
-                selectedUniversity.Closed += (s, args) => this.Close();
-                selectedUniversity.Show();
+                FormManager.OpenSelected(universitiesList.SelectedIndex, this);
             }
             else
             {

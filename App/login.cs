@@ -21,5 +21,10 @@ namespace Objektinis
         {
 
         }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            FormManager.CheckCredentials(usernameTextBox.Text, passwordTextBox.Text, this);
+        }
     }
 }

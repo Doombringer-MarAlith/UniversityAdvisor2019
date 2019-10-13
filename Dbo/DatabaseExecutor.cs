@@ -128,7 +128,7 @@ namespace Dbo
                 bdoConnection.Open();
                 using (var command = new SqlCommand
                 (
-                    $"SELECT * FROM [University] WHERE Name LIKE '%{name}%'",
+                    $"SELECT * FROM [University] WHERE LOWER(Name) LIKE LOWER('%{name}%')",
                     bdoConnection
                 ))
                 {
@@ -139,7 +139,7 @@ namespace Dbo
                         {
                             var uni = new University
                             {
-                                Name = reader["Name"].ToString(),
+                                Name = reader["Name"].ToString(), // add more fields
                                 Guid = reader["Guid"].ToString()
                             };
                             unis.Add(uni);
@@ -154,6 +154,42 @@ namespace Dbo
             }
 
             Logger.Log($"DatabaseExecutor.ReturnUniversityGuid({name}): University guid return value is null", Level.Warning);
+            return null;
+        }
+
+        public List<Faculty> ReturnFaculties(string guid)
+        {
+            using (var bdoConnection = new SqlConnection(connectionString))
+            {
+                bdoConnection.Open();
+                using (var command = new SqlCommand
+                (
+                    $"SELECT * FROM [Faculty] WHERE UniversityGuid = '{guid}')",
+                    bdoConnection
+                ))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        List<Faculty> facs = new List<Faculty>();
+                        while (reader.Read())
+                        {
+                            var uni = new Faculty
+                            {
+                                Name = reader["Name"].ToString(), // add more fields
+                                Guid = reader["Guid"].ToString()
+                            };
+                            facs.Add(uni);
+                        }
+                        bdoConnection.Close();
+                        if (facs != null)
+                        {
+                            return facs;
+                        }
+                    }
+                }
+            }
+
+            Logger.Log($"DatabaseExecutor.ReturnFaculties({guid}): Faculties return value is null", Level.Warning);
             return null;
         }
         //public void DeleteAccount(string id)
