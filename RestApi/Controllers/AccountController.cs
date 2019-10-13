@@ -20,7 +20,7 @@ namespace RestApi.Controllers
 
             try
             {
-                return JsonConvert.SerializeObject(_database.ReturnFaculties(id));
+                return JsonConvert.SerializeObject(_database.ReturnAccount(id));
             }
             catch (Exception exception)
             {

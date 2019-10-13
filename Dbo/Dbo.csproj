@@ -26,6 +26,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Jsons\Accounts.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Scripts\CreateDebugTable.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
