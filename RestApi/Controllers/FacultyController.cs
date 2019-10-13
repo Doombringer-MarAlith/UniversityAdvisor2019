@@ -30,5 +30,21 @@ namespace RestApi.Controllers
             }
         }
 
-    }
+        [HttpPost("{create}")]
+        public void Post([FromBody] Faculty faculty)
+        {
+            Logger.Log($"FacultyController::Post(Create Faculties)");
+
+            try
+            {
+                _database.CreateFaculty(faculty);
+            }
+            catch (Exception exception)
+            {
+                Logger.Log($"FacultyController.Post(Faculties): DomainError", Level.Error, exception);
+                throw;
+            }
+
+        }
 }
+    }

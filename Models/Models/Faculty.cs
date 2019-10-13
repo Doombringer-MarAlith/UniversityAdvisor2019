@@ -9,14 +9,14 @@ namespace Models.Models
         [JsonProperty("Name")]
         public string Name { get; set; }
 
-        [JsonProperty("Location")]
+       /* [JsonProperty("Location")]
         public string Location { get; set; }
 
         [JsonProperty("StudentCount")]
-        public string StudentCount { get; set; }
+        public string StudentCount { get; set; }*/
 
-        [JsonProperty("Guid")]
-        public string Guid { get; set; }
+        [JsonProperty("FacultyGuid")]
+        public string FacultyGuid { get; set; }
 
         [JsonProperty("UniGuid")]
         public string UniGuid { get; set; }

@@ -157,7 +157,31 @@ namespace Dbo
             return null;
         }
 
-        public List<Faculty> ReturnFaculties(string guid)
+        public void CreateFaculty(Faculty faculty)
+        {
+            using (var bdoConnection = new SqlConnection(connectionString))
+            {
+                bdoConnection.Open();
+
+                using (var command = new SqlCommand
+                (
+                    $"INSERT INTO [Faculties] VALUES ('{faculty.UniGuid}','{faculty.Name}', '{faculty.FacultyGuid}')",
+
+                    bdoConnection
+                ))
+                {
+                    var reader = command.ExecuteReader();
+                    bdoConnection.Close();
+                }
+            }
+
+            Logger.Log
+                    (
+                        $"DatabaseExecutor.CreateFaculty: university is created with values ({faculty.UniGuid}, {faculty.Name}, {faculty.FacultyGuid})"
+                    );
+        }
+        
+            public List<Faculty> ReturnFaculties(string guid)
         {
             using (var bdoConnection = new SqlConnection(connectionString))
             {
@@ -176,7 +200,8 @@ namespace Dbo
                             var uni = new Faculty
                             {
                                 Name = reader["Name"].ToString(), // add more fields
-                                Guid = reader["Guid"].ToString()
+                                UniGuid = reader["UniGuid"].ToString(),
+                                FacultyGuid = reader["FacultyGuid"].ToString()
                             };
                             facs.Add(uni);
                         }
