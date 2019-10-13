@@ -2,7 +2,7 @@
 using AutoFixture.AutoMoq;
 using AutoFixture.Xunit2;
 
-namespace Dbo.UnitTests.Helper
+namespace AcceptanceTests.TestHelpers
 {
     internal class AutoMoqData : AutoDataAttribute
     {

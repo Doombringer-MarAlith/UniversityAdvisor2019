@@ -33,10 +33,9 @@ namespace ServerCallFromApp
 
         public async Task PostDataToServer(string url, string data)
         {
-
             var payload = data;
             HttpContent httpContent = new StringContent(payload, Encoding.UTF8, "application/json");
-            HttpResponseMessage response = await _client.PostAsync(Url + url, httpContent);
+            await _client.PostAsync(Url + url, httpContent);
             _client.Dispose();
         }
     }
