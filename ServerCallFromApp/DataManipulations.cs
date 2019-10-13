@@ -1,19 +1,23 @@
-﻿using System;
-using System.Net.Http;
-using System.Net.Http.Formatting;
-using System.Net.Http.Headers;
+﻿using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ServerCallFromApp
 {
-    public static class DataManipulations
+    public class DataManipulations : IDataManipulations
     {
         private const string Url = "https://localhost:44380/api/";
+        private readonly HttpClient _client;
 
-        public static string GetDataFromServer(string url)
+        public DataManipulations(HttpClient client)
+        {
+            _client = client;
+        }
+
+        public async Task<string> GetDataFromServer(string url)
         {
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = client.GetAsync(Url + url).Result;
+            HttpResponseMessage response = await client.GetAsync(Url + url);
 
             if (response.IsSuccessStatusCode)
             {
@@ -27,14 +31,13 @@ namespace ServerCallFromApp
             return null;
         }
 
-        public static void PostDataToServer(string url, string data)
+        public async Task PostDataToServer(string url, string data)
         {
-            HttpClient client = new HttpClient();
-            var payload = data;
 
+            var payload = data;
             HttpContent httpContent = new StringContent(payload, Encoding.UTF8, "application/json");
-            HttpResponseMessage response = client.PostAsync(Url + url, httpContent).Result;
-            client.Dispose();
+            HttpResponseMessage response = await _client.PostAsync(Url + url, httpContent);
+            _client.Dispose();
         }
     }
 }

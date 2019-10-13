@@ -7,18 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Objektinis;
 using ServerCallFromApp;
 
-namespace Objektinis
+namespace App
 {
-    public partial class SelectedUniversityForm : Form
+    public partial class SelectedUniversityForm : Form,ISelectedUniversityForm
     {
         private string _selectedUniversity;
+        private readonly IDataManipulations _dataManipulations;
 
-        public SelectedUniversityForm(string selectedUniversity)
+        public SelectedUniversityForm(string selectedUniversity,IDataManipulations dataManipulations)
         {
             InitializeComponent();
             _selectedUniversity = selectedUniversity;
+            _dataManipulations = dataManipulations;
         }
 
         private void ReadButton_Click(object sender, EventArgs e)
@@ -46,10 +49,10 @@ namespace Objektinis
             }
         }
 
-        private void SelectedUniversity_Load(object sender, EventArgs e)
+        private async void SelectedUniversity_Load(object sender, EventArgs e)
         {
             // Request server to get faculties of selected university and add them to listbox
-            List <string> faculties = DataManipulations.GetDataFromServer($"facultiesOfUni/{_selectedUniversity}").Split(',').ToList();
+            List <string> faculties = (await _dataManipulations.GetDataFromServer($"facultiesOfUni/{_selectedUniversity}")).Split(',').ToList();
 
             if (faculties.Count != 0)
             {

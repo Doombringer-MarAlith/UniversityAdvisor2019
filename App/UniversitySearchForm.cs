@@ -7,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Objektinis;
 using ServerCallFromApp;
 
-namespace Objektinis
+namespace App
 {
-    public partial class UniversitySearchForm : Form
+    public partial class UniversitySearchForm: Form, IUniversitySearchForm 
     {
+        private readonly IDataManipulations _dataManipulations;
         private string _textToSearch;
 
-        public UniversitySearchForm()
+        public UniversitySearchForm(IDataManipulations dataManipulations)
         {
+            _dataManipulations = dataManipulations;
             InitializeComponent();
         }
 
@@ -50,7 +53,7 @@ namespace Objektinis
             if (universitiesList.SelectedItem != null)
             {
                 this.Hide();
-                SelectedUniversityForm selectedUniversity = new SelectedUniversityForm(universitiesList.SelectedItem.ToString());
+                SelectedUniversityForm selectedUniversity = new SelectedUniversityForm(universitiesList.SelectedItem.ToString(),_dataManipulations);
                 selectedUniversity.Closed += (s, args) => this.Close();
                 selectedUniversity.Show();
             }

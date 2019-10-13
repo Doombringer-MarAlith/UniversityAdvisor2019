@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcceptanceTests", "Acceptan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debugger", "Debugger\Debugger.csproj", "{D3ACBCBC-201F-4D23-8C24-DAA78CBAAFC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerCallFromApp.UnitTests", "ServerCallFromApi\ServerCallFromApp.UnitTests.csproj", "{5E2A96D1-9364-4E15-8834-6B113B05FD22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerCallFromApp.UnitTests", "ServerCallFromApi\ServerCallFromApp.UnitTests.csproj", "{5E2A96D1-9364-4E15-8834-6B113B05FD22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
