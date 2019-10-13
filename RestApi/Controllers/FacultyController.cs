@@ -17,7 +17,7 @@ namespace RestApi.Controllers
         [HttpGet("{uniGuid}")]
         public ActionResult<string> Get(string uniGuid)
         {
-            Logger.Log($"AccountController:Get({uniGuid})");
+            Logger.Log($"FacultyController:Get({uniGuid})");
 
             try
             {

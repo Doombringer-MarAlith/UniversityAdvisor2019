@@ -4,7 +4,7 @@ using Models.Models;
 using Newtonsoft.Json;
 using ServerCallFromApp;
 using System.Windows.Forms;
-
+using System.Linq;
 
 namespace Objektinis
 {
@@ -13,21 +13,22 @@ namespace Objektinis
 
         static List<University> foundUnis;
         static int selected = -1;
+        static List<Faculty> foundFaculties;
 
         // returns list of universities that match the search phrase or null if there are no
-        public static List<University> GetUniversity(string name)
+        public static List<string> GetUniversity(string name)
         {
             List<University> result = new List<University>();
             string data = DataManipulations.GetDataFromServer($"university/{name}");
             if (data != null)
             {
-                result = JsonConvert.DeserializeObject<List<University>>(data);
+                foundUnis = JsonConvert.DeserializeObject<List<University>>(data);
             }
             else
             {
                 return null;
             }
-            return foundUnis = result;
+            return foundUnis.Select(uni => uni.Name).ToList();
         }
 
         internal static void CheckCredentials(string username, string password, Form form)
@@ -93,14 +94,15 @@ namespace Objektinis
             return form;
         }
 
-        public static List<Faculty> GetFaculties()
+        public static List<string> GetFaculties()
         {
             if(selected != -1)
             {
-                var data = DataManipulations.GetDataFromServer($"faculty/'{foundUnis[selected].Guid}'");
+                var data = DataManipulations.GetDataFromServer($"faculty/{foundUnis[selected].Guid}");
                 if(data != null)
                 {
-                    return JsonConvert.DeserializeObject<List<Faculty>>(data); // NEBAIGTA
+                    foundFaculties = JsonConvert.DeserializeObject<List<Faculty>>(data);
+                    return foundFaculties.Select(fac => fac.Name).ToList(); 
                 }
             }
             return null;

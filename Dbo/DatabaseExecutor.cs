@@ -177,18 +177,18 @@ namespace Dbo
 
             Logger.Log
                     (
-                        $"DatabaseExecutor.CreateFaculty: university is created with values ({faculty.UniGuid}, {faculty.Name}, {faculty.FacultyGuid})"
+                        $"DatabaseExecutor.CreateFaculty: faculty is created with values ({faculty.UniGuid}, {faculty.Name}, {faculty.FacultyGuid})"
                     );
         }
         
-            public List<Faculty> ReturnFaculties(string guid)
+        public List<Faculty> ReturnFaculties(string guid)
         {
             using (var bdoConnection = new SqlConnection(connectionString))
             {
                 bdoConnection.Open();
                 using (var command = new SqlCommand
                 (
-                    $"SELECT * FROM [Faculty] WHERE UniversityGuid = '{guid}')",
+                    $"SELECT * FROM [Faculties] WHERE UniGuid = '{guid}'",
                     bdoConnection
                 ))
                 {
@@ -197,13 +197,13 @@ namespace Dbo
                         List<Faculty> facs = new List<Faculty>();
                         while (reader.Read())
                         {
-                            var uni = new Faculty
+                            var fac = new Faculty
                             {
                                 Name = reader["Name"].ToString(), // add more fields
                                 UniGuid = reader["UniGuid"].ToString(),
                                 FacultyGuid = reader["FacultyGuid"].ToString()
                             };
-                            facs.Add(uni);
+                            facs.Add(fac);
                         }
                         bdoConnection.Close();
                         if (facs != null)
