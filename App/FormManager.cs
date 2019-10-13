@@ -105,5 +105,11 @@ namespace Objektinis
             }
             return null;
         }
+
+        //what type this is supposed to be?
+       /* public static List<Review> GetUniReview(string name)
+        {
+            
+        }*/
     }
 }

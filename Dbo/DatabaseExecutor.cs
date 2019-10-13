@@ -232,5 +232,29 @@ namespace Dbo
         //        }
         //    }
         //}
+
+            //might not work, didn't check
+        public void CreateReview(Review review)
+        {
+            using (var bdoConnection = new SqlConnection(connectionString))
+            {
+                bdoConnection.Open();
+
+                using (var command = new SqlCommand
+                (
+                    $"INSERT INTO [UniReviews] VALUES ('{review.UniGuid}','{review.Text}', '{review.Value}', '{review.Value}', '{review.UserId}', '{review.ReviewGuid}')",
+                    bdoConnection
+                ))
+                {
+                    var reader = command.ExecuteReader();
+                    bdoConnection.Close();
+                }
+            }
+
+            Logger.Log
+                    (
+                        $"DatabaseExecutor.CreateReview: university review is created with values ({review.UniGuid}, {review.Text}, {review.Value}, {review.UserId}, {review.ReviewGuid} )"
+                    );
+        }
     }
 }
