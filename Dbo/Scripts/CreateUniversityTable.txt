@@ -3,6 +3,8 @@ begin
 CREATE TABLE [dbo].[University](
 	[Guid] [nvarchar](50) NOT NULL,
 	[Name] [nvarchar](50) NOT NULL,
+	[Descripition] [nvarchar](150) NOT NULL,
+	[Year] [nvarchar](4) NOT NULL,
  CONSTRAINT [PK_University] PRIMARY KEY CLUSTERED 
 (
 	[Guid] ASC
