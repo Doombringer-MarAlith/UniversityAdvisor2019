@@ -32,6 +32,12 @@
     <None Update="Scripts\CreateDebugTable.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Scripts\CreateFacultiesTable.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\CreateUniReviewTable.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Scripts\CreateUniversityTable.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
