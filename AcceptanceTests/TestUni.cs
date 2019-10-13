@@ -16,7 +16,7 @@ namespace AcceptanceTests
             string newGuid = Guid.NewGuid().ToString();
             var uni = new University()
             {
-                Name = Helper.GenerateRandomString(50),
+                Name = "Vilniaus Universitetas",
                 Guid = newGuid
             };
 

@@ -18,11 +18,13 @@ namespace Dbo
         {
             SqlConnection sqlConnection = new SqlConnection(SqlConnectionString);
             var fileEntries = Directory.GetFiles("Jsons");
+            //string path = "json/";
             foreach (var fileEntry in fileEntries)
             {
+                Console.WriteLine(fileEntry);
                 switch (fileEntry)
                 {
-                    case "Accounts.json":
+                    case "Jsons\\Accounts.json":
                         using (StreamReader r = new StreamReader(fileEntry))
                         {
                             string json = r.ReadToEnd();
@@ -32,8 +34,11 @@ namespace Dbo
                                 db.CreateAccount(account);
                             }
                         }
+                        Console.WriteLine("PAVYkO");
                         break;
                     default:
+                        Console.WriteLine("nePAVYkO");
+
                         break;
                 }
             }
