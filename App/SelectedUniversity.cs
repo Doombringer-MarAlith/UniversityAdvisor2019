@@ -47,7 +47,7 @@ namespace Objektinis
         private void SelectedUniversity_Load(object sender, EventArgs e)
         {
             // request server to get faculties of selected university and add them to listbox
-            List<Faculty> faculties = FormManager.GetFaculties();
+            List<string> faculties = FormManager.GetFaculties();
             if(faculties.Count != 0)
             {
                 facultiesListBox.Items.AddRange(faculties.ToArray());

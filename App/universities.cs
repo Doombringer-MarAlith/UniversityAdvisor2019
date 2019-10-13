@@ -26,12 +26,11 @@ namespace Objektinis
         {
             if(searchBar.Text.Length  > 0)
             {
-                List<University> result = FormManager.GetUniversity(searchBar.Text);
+                List<string> result = FormManager.GetUniversity(searchBar.Text);
                 if(result.Count != 0)   
                 {
                     universitiesList.Items.Clear();
-                    var range = result.Select(uni => uni.Name).ToArray();
-                    universitiesList.Items.AddRange(range);
+                    universitiesList.Items.AddRange(result.ToArray());
                 }
                 else
                 {
