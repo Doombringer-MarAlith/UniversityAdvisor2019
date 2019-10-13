@@ -18,18 +18,18 @@ namespace RestApi.Controllers
         {
             private readonly DatabaseExecutor _database = new DatabaseExecutor();
 
-            [HttpGet("{Text}")]
-            public ActionResult<string> Get(string text)
+            [HttpGet("{uniGuid}")]
+            public ActionResult<string> Get(string uniGuid)
             {
-                Logger.Log($"UniReviewController:Get({text})");
+                Logger.Log($"UniReviewController:Get({uniGuid})");
 
                 try
                 {
-                    return JsonConvert.SerializeObject(_database.ReturnUniversities(text));
+                    return JsonConvert.SerializeObject(_database.ReturnReviews(uniGuid));
                 }
                 catch (Exception exception)
                 {
-                    Logger.Log($"UniversityController.Get({text}): DomainError", Level.Error, exception);
+                    Logger.Log($"uniReviewController.Get({uniGuid}): DomainError", Level.Error, exception);
                     throw;
                 }
             }

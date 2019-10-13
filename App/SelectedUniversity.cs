@@ -23,11 +23,13 @@ namespace Objektinis
         {
             if(facultiesListBox.SelectedItem == null)
             {
-                // new Form to read reviews of a selected university
+                // new readReviewForm for uni
+                // FormManager opens it up, already has selected index
             }
             else
             {
-                // new Form to read reviews of selected faculty
+                // new readReviewForm to read reviews of selected faculty
+                // send index of selected Faculty
             }
         }
 
@@ -35,12 +37,13 @@ namespace Objektinis
         {
             if (facultiesListBox.SelectedItem == null)
             {
-                // new Form to write review of a selected university
+                // new reviewForm for uni
+                // FormManager opens it up, already has selected index
             }
             else
             {
-                // new Form to write review of selected faculty
-                // maybe no need for different forms (this if statement), just set the name to that uni or faculty and send request to add to fac/uni
+                // new reviewForm to write reviews of selected faculty
+                // send index of selected Faculty
             }
         }
 

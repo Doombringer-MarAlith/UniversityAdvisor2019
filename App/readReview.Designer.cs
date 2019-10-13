@@ -1,6 +1,6 @@
 ﻿namespace Objektinis
 {
-    partial class readReview
+    partial class readReviewForm
     {
         /// <summary>
         /// Required designer variable.
@@ -40,9 +40,10 @@
             // 
             // reviewText
             // 
-            this.reviewText.Location = new System.Drawing.Point(160, 133);
+            this.reviewText.Location = new System.Drawing.Point(120, 108);
+            this.reviewText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.reviewText.Name = "reviewText";
-            this.reviewText.Size = new System.Drawing.Size(456, 227);
+            this.reviewText.Size = new System.Drawing.Size(343, 185);
             this.reviewText.TabIndex = 0;
             this.reviewText.Text = "";
             // 
@@ -54,9 +55,10 @@
             // 
             // titleOfThing
             // 
-            this.titleOfThing.Location = new System.Drawing.Point(236, 67);
+            this.titleOfThing.Location = new System.Drawing.Point(177, 54);
+            this.titleOfThing.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.titleOfThing.Name = "titleOfThing";
-            this.titleOfThing.Size = new System.Drawing.Size(295, 22);
+            this.titleOfThing.Size = new System.Drawing.Size(222, 20);
             this.titleOfThing.TabIndex = 2;
             this.titleOfThing.Text = "Name of what is reviewed";
             this.titleOfThing.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -64,9 +66,10 @@
             // 
             // nextButton
             // 
-            this.nextButton.Location = new System.Drawing.Point(540, 387);
+            this.nextButton.Location = new System.Drawing.Point(405, 314);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(76, 34);
+            this.nextButton.Size = new System.Drawing.Size(57, 28);
             this.nextButton.TabIndex = 3;
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = true;
@@ -74,43 +77,47 @@
             // 
             // previousButton
             // 
-            this.previousButton.Location = new System.Drawing.Point(160, 387);
+            this.previousButton.Location = new System.Drawing.Point(120, 314);
+            this.previousButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.previousButton.Name = "previousButton";
-            this.previousButton.Size = new System.Drawing.Size(76, 34);
+            this.previousButton.Size = new System.Drawing.Size(57, 28);
             this.previousButton.TabIndex = 4;
             this.previousButton.Text = "Previous";
             this.previousButton.UseVisualStyleBackColor = true;
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(12, 12);
+            this.backButton.Location = new System.Drawing.Point(9, 10);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(76, 34);
+            this.backButton.Size = new System.Drawing.Size(57, 28);
             this.backButton.TabIndex = 5;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
             // 
             // LikeButton
             // 
-            this.LikeButton.Location = new System.Drawing.Point(656, 148);
+            this.LikeButton.Location = new System.Drawing.Point(492, 120);
+            this.LikeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LikeButton.Name = "LikeButton";
-            this.LikeButton.Size = new System.Drawing.Size(44, 30);
+            this.LikeButton.Size = new System.Drawing.Size(33, 24);
             this.LikeButton.TabIndex = 6;
             this.LikeButton.Text = "+1";
             this.LikeButton.UseVisualStyleBackColor = true;
             // 
-            // readReview
+            // readReviewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.LikeButton);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.previousButton);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.titleOfThing);
             this.Controls.Add(this.reviewText);
-            this.Name = "readReview";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "readReviewForm";
             this.Text = "readReview";
             this.ResumeLayout(false);
             this.PerformLayout();

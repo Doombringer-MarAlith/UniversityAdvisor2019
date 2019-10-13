@@ -35,6 +35,11 @@ namespace Dbo
                     );
         }
 
+        public object ReturnReviews(string text) // NOT IMPLEMENTED
+        {
+            throw new NotImplementedException();
+        }
+
         public Account ReturnAccount(string id)
         {
             using (var bdoConnection = new SqlConnection(connectionString))
