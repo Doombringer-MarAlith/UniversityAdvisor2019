@@ -56,7 +56,7 @@ namespace Objektinis
         internal static void OpenSelected(int selectedIndex, Form form)
         {
             selected = selectedIndex;
-            ChangeForm(form, "selected");
+            ChangeForm(form, "university");
         }
 
         // Closes {form} and opens form which has name {formName}
