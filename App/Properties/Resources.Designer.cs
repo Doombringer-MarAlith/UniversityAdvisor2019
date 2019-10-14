@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Objektinis.Properties {
+namespace App.Properties {
     using System;
     
     

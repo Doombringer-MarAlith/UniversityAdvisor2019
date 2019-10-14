@@ -1,4 +1,6 @@
-﻿namespace Objektinis
+﻿using System.Threading.Tasks;
+
+namespace App
 {
     partial class SelectedUniversityForm
     {

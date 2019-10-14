@@ -1,4 +1,4 @@
-﻿namespace Objektinis
+﻿namespace App
 {
     partial class ReviewForm
     {
