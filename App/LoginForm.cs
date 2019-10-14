@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,14 +11,14 @@ using Objektinis;
 
 namespace App
 {
-    public partial class ReviewForm : Form, IReviewForm
+    public partial class LoginForm : Form, ILoginForm
     {
-        public ReviewForm()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
-        private void NumericReview_SelectedIndexChanged(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }

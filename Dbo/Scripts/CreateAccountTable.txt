@@ -5,7 +5,6 @@ CREATE TABLE  [dbo].[Account](
 	[Password] [nvarchar](50) NOT NULL,
 	[Email] [nvarchar](50) NOT NULL,
 	[Guid] [nvarchar](50) NOT NULL,
-	[Age] [nvarchar](50) NOT NULL,
 	[Id] [bigint] IDENTITY(1,1) NOT NULL,
  CONSTRAINT [PK_Account] PRIMARY KEY CLUSTERED 
 (

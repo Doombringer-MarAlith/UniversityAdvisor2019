@@ -4,7 +4,7 @@ using System.Globalization;
 
 namespace Debugger
 {
-    public static class Logger
+    public class Logger : ILogger
     {
         internal static string connectionString = @"Server=(localdb)\madder;Database=UniversityAdvisor;Trusted_Connection=True;";
 

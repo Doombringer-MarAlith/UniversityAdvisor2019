@@ -1,6 +1,6 @@
-﻿namespace Objektinis
+﻿namespace App
 {
-    partial class reviewForm
+    partial class ReviewForm
     {
         /// <summary>
         /// Required designer variable.

@@ -20,7 +20,7 @@ namespace Dbo
 
                 using (var command = new SqlCommand
                 (
-                    $"INSERT INTO [Account] VALUES ('{account.Name}', '{account.Password}', '{account.Email}', '{account.Guid}', '{account.Age.ToString(CultureInfo.InvariantCulture)}')",
+                    $"INSERT INTO [Account] VALUES ('{account.Name}', '{account.Password}', '{account.Email}', '{account.Guid}')",
                     bdoConnection
                 ))
                 {
@@ -29,10 +29,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log
-                    (
-                        $"DatabaseExecutor.CreateAccount: Account is created with values ({account.Name} , {account.Password} , {account.Email} , {account.Guid} , {account.Age.ToString(CultureInfo.InvariantCulture)} )"
-                    );
+            Logger.Log($"DatabaseExecutor.CreateAccount: Account is created with values ({account.Name} ,{account.Password} ,{account.Email} ,{account.Guid})");
         }
 
         public object ReturnReviews(string text) // NOT IMPLEMENTED
@@ -58,7 +55,6 @@ namespace Dbo
                             var account = new Account
                             {
                                 Name = reader["Name"].ToString(),
-                                Age = DateTime.Parse(reader["Age"].ToString()),
                                 Password = reader["Password"].ToString(),
                                 Email = reader["Email"].ToString(),
                                 Guid = reader["Guid"].ToString()
@@ -98,7 +94,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.ReturnAccountGuid({email}  ,  {password}): Account guid return value is null", Level.Warning);
+            Logger.Log($"DatabaseExecutor.ReturnAccountGuid({email}, {password}): Account guid return value is null", Level.Warning);
             return null;
         }
 
