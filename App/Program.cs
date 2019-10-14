@@ -16,7 +16,7 @@ namespace Objektinis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UniversitiesSearchForm());
+            Application.Run(new UniversitiesSearchForm()); // change to login(false) for presentation
         }
     }
 }

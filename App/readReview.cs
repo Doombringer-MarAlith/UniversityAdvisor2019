@@ -15,15 +15,24 @@ namespace Objektinis
         public readReviewForm()
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+            titleOfThing.Text = FormManager.GetNameOfReviewee();
+            reviewText.Text = FormManager.GetReviewText();
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void NextButton_Click(object sender, EventArgs e)
         {
+            FormManager.LoadReview(true, this);
+        }
+
+        private void PreviousButton_Click(object sender, EventArgs e)
+        {
+            FormManager.LoadReview(false, this);
+        }
+
+        private void LikeButton_Click(object sender, EventArgs e)
+        {
+            // increment review Value? Points?
 
         }
     }

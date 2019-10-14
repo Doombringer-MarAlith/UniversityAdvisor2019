@@ -25,11 +25,13 @@ namespace Objektinis
             {
                 // new readReviewForm for uni
                 // FormManager opens it up, already has selected index
+                FormManager.LoadReviewsOf(-1, this);
             }
             else
             {
                 // new readReviewForm to read reviews of selected faculty
                 // send index of selected Faculty
+                FormManager.LoadReviewsOf(facultiesListBox.SelectedIndex, this);
             }
         }
 
@@ -57,7 +59,7 @@ namespace Objektinis
             }
             else
             {
-                facultiesListBox.Items.Add("No faculties found for this university");
+                MessageBox.Show("No faculties found for this university");
             }
         }
     }

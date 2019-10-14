@@ -41,7 +41,7 @@
             // reviewText
             // 
             this.reviewText.Location = new System.Drawing.Point(120, 108);
-            this.reviewText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reviewText.Margin = new System.Windows.Forms.Padding(2);
             this.reviewText.Name = "reviewText";
             this.reviewText.Size = new System.Drawing.Size(343, 185);
             this.reviewText.TabIndex = 0;
@@ -56,39 +56,39 @@
             // titleOfThing
             // 
             this.titleOfThing.Location = new System.Drawing.Point(177, 54);
-            this.titleOfThing.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.titleOfThing.Margin = new System.Windows.Forms.Padding(2);
             this.titleOfThing.Name = "titleOfThing";
             this.titleOfThing.Size = new System.Drawing.Size(222, 20);
             this.titleOfThing.TabIndex = 2;
             this.titleOfThing.Text = "Name of what is reviewed";
             this.titleOfThing.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.titleOfThing.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // nextButton
             // 
             this.nextButton.Location = new System.Drawing.Point(405, 314);
-            this.nextButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(2);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(57, 28);
             this.nextButton.TabIndex = 3;
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = true;
-            this.nextButton.Click += new System.EventHandler(this.button1_Click);
+            this.nextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // previousButton
             // 
             this.previousButton.Location = new System.Drawing.Point(120, 314);
-            this.previousButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.previousButton.Margin = new System.Windows.Forms.Padding(2);
             this.previousButton.Name = "previousButton";
             this.previousButton.Size = new System.Drawing.Size(57, 28);
             this.previousButton.TabIndex = 4;
             this.previousButton.Text = "Previous";
             this.previousButton.UseVisualStyleBackColor = true;
+            this.previousButton.Click += new System.EventHandler(this.PreviousButton_Click);
             // 
             // backButton
             // 
             this.backButton.Location = new System.Drawing.Point(9, 10);
-            this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(57, 28);
             this.backButton.TabIndex = 5;
@@ -98,12 +98,13 @@
             // LikeButton
             // 
             this.LikeButton.Location = new System.Drawing.Point(492, 120);
-            this.LikeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LikeButton.Margin = new System.Windows.Forms.Padding(2);
             this.LikeButton.Name = "LikeButton";
             this.LikeButton.Size = new System.Drawing.Size(33, 24);
             this.LikeButton.TabIndex = 6;
             this.LikeButton.Text = "+1";
             this.LikeButton.UseVisualStyleBackColor = true;
+            this.LikeButton.Click += new System.EventHandler(this.LikeButton_Click);
             // 
             // readReviewForm
             // 
@@ -116,7 +117,7 @@
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.titleOfThing);
             this.Controls.Add(this.reviewText);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "readReviewForm";
             this.Text = "readReview";
             this.ResumeLayout(false);

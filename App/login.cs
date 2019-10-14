@@ -5,9 +5,13 @@ namespace Objektinis
 {
     public partial class login : Form
     {
-        public login()
+        public login(bool displayMsg)
         {
             InitializeComponent();
+            if (displayMsg)
+            {
+                MessageBox.Show("Wrong username or password");
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -17,7 +21,14 @@ namespace Objektinis
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            FormManager.CheckCredentials(usernameTextBox.Text, passwordTextBox.Text, this);
+            if(usernameTextBox.Text.Length != 0 && passwordTextBox.Text.Length != 0)
+            {
+                FormManager.CheckCredentials(usernameTextBox.Text, passwordTextBox.Text, this);
+            }
+            else
+            {
+                MessageBox.Show("You have not entered username or password");
+            }
         }
     }
 }

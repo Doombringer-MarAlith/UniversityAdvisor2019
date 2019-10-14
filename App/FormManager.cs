@@ -14,6 +14,61 @@ namespace Objektinis
         static List<University> foundUnis;
         static int selected = -1;
         static List<Faculty> foundFaculties;
+        static int currentReviewIndex = 0;
+        static List<Review> reviews;
+
+        internal static string GetNameOfReviewee()
+        {
+            return "NAME"; // FIX THIS
+        }
+
+        // returns text of current review or empty string if the boundaries are reached
+        internal static string GetReviewText()
+        {
+            if(currentReviewIndex > 0 && currentReviewIndex < reviews.Count)
+            {
+                return reviews[currentReviewIndex].Text;
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+        internal static void LoadReviewsOf(int index, Form form)
+        {
+            if (index == -1)
+            {
+                // reviews = GET reviews of selected UNI from db
+            }
+            else
+            {
+                // reviews = GET reviews of selected FACULTY from db
+            }
+            ChangeForm(form, "readReview");
+        }
+
+        // loads next review if there is one. Arg true = next, false = previous.
+        internal static void LoadReview(bool increment, Form form)
+        {
+            if (increment)
+            {
+                if(++currentReviewIndex >= reviews.Count)
+                {
+                    currentReviewIndex--;
+                }
+            }
+            else
+            {
+                if(--currentReviewIndex < 0)
+                {
+                    currentReviewIndex++;
+                }
+            }
+            ChangeForm(form, "readReview");
+        }
+
+
 
         // returns list of universities that match the search phrase or null if there are no
         public static List<string> GetUniversity(string name)
@@ -36,21 +91,13 @@ namespace Objektinis
             var returnGuid = DataManipulations.GetDataFromServer($"account/login/{username}/{password}");
             if(returnGuid == null)
             {
-
+                ChangeForm(form, "login");
             }
             else
             {
                 ChangeForm(form, "universities");
             }
             
-        }
-
-        public static void ChangeForm(Form form, int selected)
-        {
-            form.Hide();
-            SelectedUniversity selectedUniversity = new SelectedUniversity();
-            selectedUniversity.Closed += (s, args) => form.Close();
-            selectedUniversity.Show();
         }
 
         // Opens form for selected University
@@ -79,13 +126,16 @@ namespace Objektinis
                     form = new UniversitiesSearchForm();
                     break;
                 case "login":
-                    form = new login();
+                    form = new login(true);
                     break;
                 case "university":
                     form = new SelectedUniversity();
                     break;
-                case "review":
+                case "writeReview":
                     form = new reviewForm();
+                    break;
+                case "readReview":
+                    form = new readReviewForm();
                     break;
                 default:
                     form = null;
