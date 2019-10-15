@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Dbo;
 using Debugger;
 using Models.Models;
@@ -12,24 +8,24 @@ using System;
 namespace RestApi.Controllers
 {
    
-        [Route("api/uniReview")]
+        [Route("api/review")]
         [ApiController]
-        public class UniReviewController : ControllerBase
+        public class ReviewController : ControllerBase
         {
             private readonly DatabaseExecutor _database = new DatabaseExecutor();
 
-            [HttpGet("{uniGuid}")]
-            public ActionResult<string> Get(string uniGuid)
+            [HttpGet("reviewsByGuid/{Guid}/{guidType}")]
+            public ActionResult<string> Get(string Guid, int guidType)
             {
-                Logger.Log($"UniReviewController:Get({uniGuid})");
+                Logger.Log($"ReviewController:Get({Guid})");
 
                 try
                 {
-                    return JsonConvert.SerializeObject(_database.ReturnUniReviews(uniGuid));
+                    return JsonConvert.SerializeObject(_database.ReturnReviews(Guid, guidType));
                 }
                 catch (Exception exception)
                 {
-                    Logger.Log($"uniReviewController.Get({uniGuid}): DomainError", Level.Error, exception);
+                    Logger.Log($"ReviewController.Get({Guid}): DomainError", Level.Error, exception);
                     throw;
                 }
             }

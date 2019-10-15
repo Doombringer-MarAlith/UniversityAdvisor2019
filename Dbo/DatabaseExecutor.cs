@@ -12,6 +12,14 @@ namespace Dbo
         internal static string connectionString =
             @"Server=(localdb)\madder;Database=UniversityAdvisor;Trusted_Connection=True;";
 
+        enum GuidEnum
+        {
+            UniGuid,
+            FacultyGuid,
+            LecturerGuid,
+            UniProgramGuid
+        }
+
         public void CreateAccount(Account account)
         {
             using (var bdoConnection = new SqlConnection(connectionString))
@@ -35,14 +43,15 @@ namespace Dbo
                     );
         }
 
-        public object ReturnUniReviews(string uniGuid)
+        public object ReturnReviews(string Guid, int guidType)
         {
+            string GuidType = ((GuidEnum)guidType).ToString();
             using (var bdoConnection = new SqlConnection(connectionString))
             {
                 bdoConnection.Open();
                 using (var command = new SqlCommand
                 (
-                    $"SELECT * FROM [UniReviews] WHERE UniGuid = '{uniGuid}'",
+                    $"SELECT * FROM [UniReviews] WHERE {GuidType} = '{Guid}'",
                     bdoConnection
                 ))
                 {
@@ -53,7 +62,7 @@ namespace Dbo
                         {
                             var review = new Review
                             {
-                                UserId = reader["UserId"].ToString(), // add more fields
+                                UserId = reader["UserId"].ToString(),
                                 UniGuid = reader["UniGuid"].ToString(),
                                 ReviewGuid = reader["ReviewGuid"].ToString(),
                                 Text = reader["Text"].ToString(),
@@ -71,7 +80,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.ReturnUniReviews({uniGuid}): University guid return value is null", Level.Warning);
+            Logger.Log($"DatabaseExecutor.ReturnReviews({Guid}): Reviews return value is null", Level.Warning);
             return null;
         }
 

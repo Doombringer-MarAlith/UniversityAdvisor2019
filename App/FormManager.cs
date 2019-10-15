@@ -19,6 +19,15 @@ namespace Objektinis
         static List<Review> reviews;
         static bool reviewingUni = true;
 
+        enum GuidType
+        {
+            UniGuid,
+            FacultyGuid,
+            LecturerGuid,
+            UniProgramGuid
+        }
+
+
         internal static string GetNameOfReviewee()
         {
             return reviewingUni ? foundUnis[selectedUni].Name : foundFaculties[facultyIndex].Name; // FIX THIS
@@ -42,7 +51,7 @@ namespace Objektinis
             if (index == -1)
             {
                 // reviews = GET reviews of selected UNI from db
-                var res = DataManipulations.GetDataFromServer($"uniReview/{foundUnis[selectedUni].Guid}");
+                var res = DataManipulations.GetDataFromServer($"review/reviewsByGuid/{foundUnis[selectedUni].Guid}/{(int)GuidType.UniGuid}");
                 if(res != null)
                 {
                     reviews = JsonConvert.DeserializeObject<List<Review>>(res);
@@ -51,7 +60,12 @@ namespace Objektinis
             else
             {
                 // reviews = GET reviews of selected FACULTY from db
-                // reviews = DataManipulations.GetDataFromServer($"faculty/{foundFaculties[index]}");
+                // reviews = DataManipulations.GetDataFromServer($"uniReview/{foundFaculties[index].FacultyGuid}");
+                var res = DataManipulations.GetDataFromServer($"review/reviewsByGuid/{foundFaculties[index].FacultyGuid}/{(int)GuidType.FacultyGuid}");
+                if (res != null)
+                {
+                    reviews = JsonConvert.DeserializeObject<List<Review>>(res);
+                }
                 facultyIndex = index;
                 reviewingUni = false;
             }
