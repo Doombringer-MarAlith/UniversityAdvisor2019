@@ -25,7 +25,7 @@ namespace RestApi.Controllers
 
                 try
                 {
-                    return JsonConvert.SerializeObject(_database.ReturnReviews(uniGuid));
+                    return JsonConvert.SerializeObject(_database.ReturnUniReviews(uniGuid));
                 }
                 catch (Exception exception)
                 {

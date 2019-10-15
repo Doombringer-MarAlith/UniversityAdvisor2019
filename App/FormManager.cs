@@ -12,20 +12,22 @@ namespace Objektinis
     {
 
         static List<University> foundUnis;
-        static int selected = -1;
+        static int selectedUni = -1;
+        static int facultyIndex = -1;
         static List<Faculty> foundFaculties;
         static int currentReviewIndex = 0;
         static List<Review> reviews;
+        static bool reviewingUni = true;
 
         internal static string GetNameOfReviewee()
         {
-            return "NAME"; // FIX THIS
+            return reviewingUni ? foundUnis[selectedUni].Name : foundFaculties[facultyIndex].Name; // FIX THIS
         }
 
         // returns text of current review or empty string if the boundaries are reached
         internal static string GetReviewText()
         {
-            if(currentReviewIndex > 0 && currentReviewIndex < reviews.Count)
+            if(currentReviewIndex >= 0 && currentReviewIndex < reviews.Count)
             {
                 return reviews[currentReviewIndex].Text;
             }
@@ -40,14 +42,20 @@ namespace Objektinis
             if (index == -1)
             {
                 // reviews = GET reviews of selected UNI from db
-                // reviews = DataManipulations.GetDataFromServer($"university/{foundUnis[selected]}");
+                var res = DataManipulations.GetDataFromServer($"uniReview/{foundUnis[selectedUni].Guid}");
+                if(res != null)
+                {
+                    reviews = JsonConvert.DeserializeObject<List<Review>>(res);
+                }
             }
             else
             {
                 // reviews = GET reviews of selected FACULTY from db
                 // reviews = DataManipulations.GetDataFromServer($"faculty/{foundFaculties[index]}");
+                facultyIndex = index;
+                reviewingUni = false;
             }
-            ChangeForm(form, "readReview");
+            ChangeForm(form, GetForm("readReview"));
         }
 
         // loads next review if there is one. Arg true = next, false = previous.
@@ -67,7 +75,7 @@ namespace Objektinis
                     currentReviewIndex++;
                 }
             }
-            ChangeForm(form, "readReview");
+            ChangeForm(form, GetForm("readReview"));
         }
 
 
@@ -93,11 +101,11 @@ namespace Objektinis
             var returnGuid = DataManipulations.GetDataFromServer($"account/login/{username}/{password}");
             if(returnGuid == null)
             {
-                ChangeForm(form, "login");
+                ChangeForm(form, GetForm("login"));
             }
             else
             {
-                ChangeForm(form, "universities");
+                ChangeForm(form, GetForm("universities"));
             }
             
         }
@@ -105,14 +113,13 @@ namespace Objektinis
         // Opens form for selected University
         internal static void OpenSelected(int selectedIndex, Form form)
         {
-            selected = selectedIndex;
-            ChangeForm(form, "university");
+            selectedUni = selectedIndex;
+            ChangeForm(form, GetForm("university"));
         }
 
         // Closes {form} and opens form which has name {formName}
-        public static void ChangeForm(Form form, string formName)
+        public static void ChangeForm(Form form, Form changeTo)
         {
-            Form changeTo = GetForm(formName);
             form.Hide();
             changeTo.Closed += (s, args) => form.Close();
             changeTo.Show();
@@ -148,9 +155,9 @@ namespace Objektinis
 
         public static List<string> GetFaculties()
         {
-            if(selected != -1)
+            if(selectedUni != -1)
             {
-                var data = DataManipulations.GetDataFromServer($"faculty/{foundUnis[selected].Guid}");
+                var data = DataManipulations.GetDataFromServer($"faculty/{foundUnis[selectedUni].Guid}");
                 if(data != null)
                 {
                     foundFaculties = JsonConvert.DeserializeObject<List<Faculty>>(data);

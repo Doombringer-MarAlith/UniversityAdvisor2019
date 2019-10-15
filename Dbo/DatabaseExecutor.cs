@@ -35,9 +35,44 @@ namespace Dbo
                     );
         }
 
-        public object ReturnReviews(string text) // NOT IMPLEMENTED
+        public object ReturnUniReviews(string uniGuid)
         {
-            throw new NotImplementedException();
+            using (var bdoConnection = new SqlConnection(connectionString))
+            {
+                bdoConnection.Open();
+                using (var command = new SqlCommand
+                (
+                    $"SELECT * FROM [UniReviews] WHERE UniGuid = '{uniGuid}'",
+                    bdoConnection
+                ))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        List<Review> reviews = new List<Review>();
+                        while (reader.Read())
+                        {
+                            var review = new Review
+                            {
+                                UserId = reader["UserId"].ToString(), // add more fields
+                                UniGuid = reader["UniGuid"].ToString(),
+                                ReviewGuid = reader["ReviewGuid"].ToString(),
+                                Text = reader["Text"].ToString(),
+                                Value = reader["Value"].ToString()
+
+                            };
+                            reviews.Add(review);
+                        }
+                        bdoConnection.Close();
+                        if (reviews != null)
+                        {
+                            return reviews;
+                        }
+                    }
+                }
+            }
+
+            Logger.Log($"DatabaseExecutor.ReturnUniReviews({uniGuid}): University guid return value is null", Level.Warning);
+            return null;
         }
 
         public Account ReturnAccount(string id)
