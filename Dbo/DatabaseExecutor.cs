@@ -20,6 +20,8 @@ namespace Dbo
             UniProgramGuid
         }
 
+        // Account START
+
         public void CreateAccount(Account account)
         {
             using (var bdoConnection = new SqlConnection(connectionString))
@@ -28,7 +30,7 @@ namespace Dbo
 
                 using (var command = new SqlCommand
                 (
-                    $"INSERT INTO [Account] VALUES ('{account.Name}', '{account.Password}', '{account.Email}', '{account.Guid}', '{account.Age.ToString(CultureInfo.InvariantCulture)}')",
+                    $"INSERT INTO [Account] VALUES ('{account.Name}', '{account.Password}', '{account.Email}', '{account.Guid}')",
                     bdoConnection
                 ))
                 {
@@ -39,49 +41,8 @@ namespace Dbo
 
             Logger.Log
                     (
-                        $"DatabaseExecutor.CreateAccount: Account is created with values ({account.Name} , {account.Password} , {account.Email} , {account.Guid} , {account.Age.ToString(CultureInfo.InvariantCulture)} )"
+                        $"DatabaseExecutor.CreateAccount: Account is created with values ({account.Name} , {account.Password} , {account.Email} , {account.Guid} )"
                     );
-        }
-
-        public object ReturnReviews(string Guid, int guidType)
-        {
-            string GuidType = ((GuidEnum)guidType).ToString();
-            using (var bdoConnection = new SqlConnection(connectionString))
-            {
-                bdoConnection.Open();
-                using (var command = new SqlCommand
-                (
-                    $"SELECT * FROM [UniReviews] WHERE {GuidType} = '{Guid}'",
-                    bdoConnection
-                ))
-                {
-                    using (var reader = command.ExecuteReader())
-                    {
-                        List<Review> reviews = new List<Review>();
-                        while (reader.Read())
-                        {
-                            var review = new Review
-                            {
-                                UserId = reader["UserId"].ToString(),
-                                UniGuid = reader["UniGuid"].ToString(),
-                                ReviewGuid = reader["ReviewGuid"].ToString(),
-                                Text = reader["Text"].ToString(),
-                                Value = reader["Value"].ToString()
-
-                            };
-                            reviews.Add(review);
-                        }
-                        bdoConnection.Close();
-                        if (reviews != null)
-                        {
-                            return reviews;
-                        }
-                    }
-                }
-            }
-
-            Logger.Log($"DatabaseExecutor.ReturnReviews({Guid}): Reviews return value is null", Level.Warning);
-            return null;
         }
 
         public Account ReturnAccount(string id)
@@ -102,7 +63,6 @@ namespace Dbo
                             var account = new Account
                             {
                                 Name = reader["Name"].ToString(),
-                                Age = DateTime.Parse(reader["Age"].ToString()),
                                 Password = reader["Password"].ToString(),
                                 Email = reader["Email"].ToString(),
                                 Guid = reader["Guid"].ToString()
@@ -146,6 +106,66 @@ namespace Dbo
             return null;
         }
 
+        public void DeleteAccount(string id)
+        {
+            using (var bdoConnection = new SqlConnection(connectionString))
+            {
+                bdoConnection.Open();
+                using (var command = new SqlCommand
+                (
+                    $"DELETE FROM [Account] WHERE Guid={id}",
+                    bdoConnection
+                ))
+                {
+                    command.ExecuteReader();
+                }
+            }
+        }
+
+        // Account END
+
+        public object ReturnReviews(string Guid, int guidType)
+        {
+            string GuidType = ((GuidEnum)guidType).ToString();
+            using (var bdoConnection = new SqlConnection(connectionString))
+            {
+                bdoConnection.Open();
+                using (var command = new SqlCommand
+                (
+                    $"SELECT * FROM [UniReviews] WHERE {GuidType} = '{Guid}'",
+                    bdoConnection
+                ))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        List<Review> reviews = new List<Review>();
+                        while (reader.Read())
+                        {
+                            var review = new Review
+                            {
+                                UserId = reader["UserId"].ToString(),
+                                UniGuid = reader["UniGuid"].ToString(),
+                                ReviewGuid = reader["ReviewGuid"].ToString(),
+                                Text = reader["Text"].ToString(),
+                                Value = reader["Value"].ToString()
+
+                            };
+                            reviews.Add(review);
+                        }
+                        bdoConnection.Close();
+                        if (reviews != null)
+                        {
+                            return reviews;
+                        }
+                    }
+                }
+            }
+
+            Logger.Log($"DatabaseExecutor.ReturnReviews({Guid}): Reviews return value is null", Level.Warning);
+            return null;
+        }
+
+
         public void CreateUniversity(University university)
         {
             using (var bdoConnection = new SqlConnection(connectionString))
@@ -183,7 +203,7 @@ namespace Dbo
                 {
                     using (var reader = command.ExecuteReader())
                     {
-                        List <University> unis = new List<University>();
+                        List<University> unis = new List<University>();
                         while (reader.Read())
                         {
                             var uni = new University
@@ -229,7 +249,7 @@ namespace Dbo
                         $"DatabaseExecutor.CreateFaculty: faculty is created with values ({faculty.UniGuid}, {faculty.Name}, {faculty.FacultyGuid})"
                     );
         }
-        
+
         public List<Faculty> ReturnFaculties(string guid)
         {
             using (var bdoConnection = new SqlConnection(connectionString))
@@ -266,23 +286,8 @@ namespace Dbo
             Logger.Log($"DatabaseExecutor.ReturnFaculties({guid}): Faculties return value is null", Level.Warning);
             return null;
         }
-        //public void DeleteAccount(string id)
-        //{
-        //    using (var bdoConnection = new SqlConnection(connectionString))
-        //    {
-        //        bdoConnection.Open();
-        //        using (var command = new SqlCommand
-        //        (
-        //            $"DELETE FROM [Account] WHERE Guid={id}",
-        //            bdoConnection
-        //        ))
-        //        {
-        //            command.ExecuteReader();
-        //        }
-        //    }
-        //}
 
-            //might not work, didn't check
+        //might not work, didn't check
         public void CreateReview(Review review)
         {
             using (var bdoConnection = new SqlConnection(connectionString))

@@ -3,35 +3,38 @@ using Models.Models;
 using Newtonsoft.Json;
 using ServerCallFromApp;
 using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace AcceptanceTests
 {
     public class ServerSide_Should
     {
-        [Fact]
-        public void Create_Login_AndGetAccount()
+        [Theory]
+        [AutoMoqData]
+        public async Task Create_Login_AndGetAccount(Account acc)
         {
-            string guid = Guid.NewGuid().ToString();
-            var account = new Account()
+            DataManipulations dataManipulations = new DataManipulations(new HttpClient());
+            //string guid = Guid.NewGuid().ToString();
+            var account = acc;/* new Account()
             {
                 Name = Helper.GenerateRandomString(50),
                 Password = Helper.GenerateRandomString(50),
                 Email = Helper.GenerateRandomString(50),
                 Guid = guid
             };
-
-            DataManipulations.PostDataToServer("account/create", JsonConvert.SerializeObject(account));
-            var returnGuid = DataManipulations.GetDataFromServer($"account/login/{account.Email}/{account.Password}");
+            */
+            await dataManipulations.PostDataToServer("account/create", JsonConvert.SerializeObject(account));
+            var returnGuid = await dataManipulations.GetDataFromServer($"account/login/{account.Email}/{account.Password}");
             Assert.NotNull(returnGuid);
-            Assert.Equal(guid, returnGuid);
+            Assert.Equal(acc.Guid, returnGuid);
 
-            var fetchedAccount = JsonConvert.DeserializeObject<Account>(DataManipulations.GetDataFromServer($"account/{guid}"));
-            Assert.Equal(fetchedAccount.Guid, account.Guid);
-            Assert.Equal(fetchedAccount.Name, fetchedAccount.Name);
-            Assert.Equal(fetchedAccount.Password, fetchedAccount.Password);
-            Assert.Equal(fetchedAccount.Age, fetchedAccount.Age);
-            Assert.Equal(fetchedAccount.Email, fetchedAccount.Email);
+            var fetchedAccount = JsonConvert.DeserializeObject<Account>(await dataManipulations.GetDataFromServer($"account/{acc.Guid}"));
+            Assert.Equal(account.Guid, fetchedAccount.Guid);
+            Assert.Equal(account.Name, fetchedAccount.Name);
+            Assert.Equal(account.Password, fetchedAccount.Password);
+            Assert.Equal(account.Email, fetchedAccount.Email);
         }
     }
 }

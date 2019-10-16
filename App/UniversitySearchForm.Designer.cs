@@ -1,6 +1,6 @@
-﻿namespace Objektinis
+﻿namespace App
 {
-    partial class UniversitiesSearchForm
+    partial class UniversitySearchForm
     {
         /// <summary>
         /// Required designer variable.
@@ -98,7 +98,7 @@
             this.selectUniButton.UseVisualStyleBackColor = true;
             this.selectUniButton.Click += new System.EventHandler(this.SelectUniButton_Click);
             // 
-            // UniversitiesSearchForm
+            // universities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -109,9 +109,8 @@
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchBar);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "UniversitiesSearchForm";
+            this.Name = "universities";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Universities_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

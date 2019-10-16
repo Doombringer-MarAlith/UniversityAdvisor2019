@@ -1,18 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using AcceptanceTests.TestHelpers;
+﻿using AcceptanceTests.TestHelpers;
 using Models.Models;
 using Newtonsoft.Json;
 using ServerCallFromApp;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace AcceptanceTests
 {
     public class TestUni
     {
-        [Fact]
-        public void Create_Uni_AndGetUni()
+        [Theory]
+        [AutoMoqData]
+        public async Task Create_Uni_AndGetUni()
         {
+            DataManipulations dataManipulations = new DataManipulations(new HttpClient());
             string newGuid = Guid.NewGuid().ToString();
             var uni = new University()
             {
@@ -20,21 +24,13 @@ namespace AcceptanceTests
                 Guid = newGuid
             };
 
-            DataManipulations.PostDataToServer("university/create", JsonConvert.SerializeObject(uni));
-            var returnUnis = JsonConvert.DeserializeObject<List<University>>(DataManipulations.GetDataFromServer($"university/{uni.Name}"));
+            await dataManipulations.PostDataToServer("university/create", JsonConvert.SerializeObject(uni));
+            var returnUnis = JsonConvert.DeserializeObject<List<University>>(await dataManipulations.GetDataFromServer($"university/{uni.Name}"));
             Assert.NotNull(returnUnis);
-            foreach(University un in returnUnis)
+            /*foreach (University un in returnUnis)
             {
-                if (un.Equals(uni))
-                {
-                    Console.WriteLine("Found one");
-                }
-            }
-            //Assert.Equal(newGuid, returnUni.Guid);
-
-            //var fetchedUni = JsonConvert.DeserializeObject<University>(DataManipulations.GetDataFromServer($"university/{newGuid}"));
-            //Assert.Equal(fetchedUni.Guid, uni.Guid);
-            //Assert.Equal(fetchedUni.Name, uni.Name);
+                Assert.Equal(un, uni);
+            }*/
         }
     }
 }

@@ -4,20 +4,27 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Objektinis;
 
-namespace Objektinis
+namespace App
 {
-    public partial class reviewForm : System.Windows.Forms.Form
+    public partial class ReviewForm : Form, IReviewForm
     {
-        public reviewForm()
+        public ReviewForm()
         {
             InitializeComponent();
         }
 
         private void NumericReview_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
         {
 
         }

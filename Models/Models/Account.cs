@@ -12,9 +12,6 @@ namespace Models.Models
         [JsonProperty("Password")]
         public string Password { get; set; }
 
-        [JsonProperty("Age")]
-        public DateTime Age { get; set; }
-
         [JsonProperty("Email")]
         public string Email { get; set; }
 

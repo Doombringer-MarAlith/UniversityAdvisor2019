@@ -1,32 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ServerCallFromApp;
-using Models.Models;
-using Newtonsoft.Json;
 
 
-
-namespace Objektinis
+namespace App
 {
-    public partial class UniversitiesSearchForm : Form
+    public partial class UniversitySearchForm : Form, IUniversitySearchForm
     {
-        public UniversitiesSearchForm()
+        public UniversitySearchForm()
         {
             InitializeComponent();
         }
 
-        private void SearchButton_Click(object sender, EventArgs e)
+        private async void SearchButton_Click(object sender, EventArgs e)
         {
-            if(searchBar.Text.Length  > 0)
+            if(!String.IsNullOrWhiteSpace(searchBar.Text))
             {
-                List<string> result = FormManager.GetUniversity(searchBar.Text);
+                List<string> result = await FormManager.GetUniversity(searchBar.Text);
                 if(result.Count != 0)   
                 {
                     universitiesList.Items.Clear();
@@ -57,7 +48,7 @@ namespace Objektinis
             }
             else
             {
-                MessageBox.Show("Please select a university from the list first");
+                MessageBox.Show("Please select a university from the list first!");
             }
         }
 

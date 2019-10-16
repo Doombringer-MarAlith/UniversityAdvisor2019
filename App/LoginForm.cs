@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
+using Objektinis;
 
-namespace Objektinis
+namespace App
 {
-    public partial class login : Form
+    public partial class LoginForm : Form, ILoginForm
     {
-        public login(bool displayMsg)
+        public LoginForm(bool displayMsg)
         {
             InitializeComponent();
             if (displayMsg)
@@ -19,11 +20,11 @@ namespace Objektinis
 
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private async void LoginButton_Click(object sender, EventArgs e)
         {
-            if(usernameTextBox.Text.Length != 0 && passwordTextBox.Text.Length != 0)
+            if (usernameTextBox.Text.Length != 0 && passwordTextBox.Text.Length != 0)
             {
-                FormManager.CheckCredentials(usernameTextBox.Text, passwordTextBox.Text, this);
+                await FormManager.CheckCredentials(usernameTextBox.Text, passwordTextBox.Text, this);
             }
             else
             {

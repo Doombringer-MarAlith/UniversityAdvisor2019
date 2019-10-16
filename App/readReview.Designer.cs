@@ -1,6 +1,6 @@
-﻿namespace Objektinis
+﻿namespace App
 {
-    partial class readReviewForm
+    partial class ReadReviewForm
     {
         /// <summary>
         /// Required designer variable.
@@ -106,7 +106,7 @@
             this.LikeButton.UseVisualStyleBackColor = true;
             this.LikeButton.Click += new System.EventHandler(this.LikeButton_Click);
             // 
-            // readReviewForm
+            // ReadReviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,8 +118,9 @@
             this.Controls.Add(this.titleOfThing);
             this.Controls.Add(this.reviewText);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "readReviewForm";
+            this.Name = "ReadReviewForm";
             this.Text = "readReview";
+            this.Load += new System.EventHandler(this.ReadReviewForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Models.Models;
 using Newtonsoft.Json;
 using ServerCallFromApp;
 using System.Windows.Forms;
 using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 
-namespace Objektinis
+
+
+namespace App
 {
     public static class FormManager
     {
@@ -18,6 +21,7 @@ namespace Objektinis
         static int currentReviewIndex = 0;
         static List<Review> reviews;
         static bool reviewingUni = true;
+        static readonly DataManipulations dataManipulations = new DataManipulations(new HttpClient());
 
         enum GuidType
         {
@@ -36,7 +40,7 @@ namespace Objektinis
         // returns text of current review or empty string if the boundaries are reached
         internal static string GetReviewText()
         {
-            if(currentReviewIndex >= 0 && currentReviewIndex < reviews.Count)
+            if (currentReviewIndex >= 0 && currentReviewIndex < reviews.Count)
             {
                 return reviews[currentReviewIndex].Text;
             }
@@ -46,13 +50,13 @@ namespace Objektinis
             }
         }
 
-        internal static void LoadReviewsOf(int index, Form form)
+        internal static async Task LoadReviewsOf(int index, Form form)
         {
             if (index == -1)
             {
                 // reviews = GET reviews of selected UNI from db
-                var res = DataManipulations.GetDataFromServer($"review/reviewsByGuid/{foundUnis[selectedUni].Guid}/{(int)GuidType.UniGuid}");
-                if(res != null)
+                var res = await dataManipulations.GetDataFromServer($"review/reviewsByGuid/{foundUnis[selectedUni].Guid}/{(int)GuidType.UniGuid}");
+                if (res != null)
                 {
                     reviews = JsonConvert.DeserializeObject<List<Review>>(res);
                 }
@@ -60,8 +64,7 @@ namespace Objektinis
             else
             {
                 // reviews = GET reviews of selected FACULTY from db
-                // reviews = DataManipulations.GetDataFromServer($"uniReview/{foundFaculties[index].FacultyGuid}");
-                var res = DataManipulations.GetDataFromServer($"review/reviewsByGuid/{foundFaculties[index].FacultyGuid}/{(int)GuidType.FacultyGuid}");
+                var res = await dataManipulations.GetDataFromServer($"review/reviewsByGuid/{foundFaculties[index].FacultyGuid}/{(int)GuidType.FacultyGuid}");
                 if (res != null)
                 {
                     reviews = JsonConvert.DeserializeObject<List<Review>>(res);
@@ -77,14 +80,14 @@ namespace Objektinis
         {
             if (increment)
             {
-                if(++currentReviewIndex >= reviews.Count)
+                if (++currentReviewIndex >= reviews.Count)
                 {
                     currentReviewIndex--;
                 }
             }
             else
             {
-                if(--currentReviewIndex < 0)
+                if (--currentReviewIndex < 0)
                 {
                     currentReviewIndex++;
                 }
@@ -95,10 +98,10 @@ namespace Objektinis
 
 
         // returns list of universities that match the search phrase or null if there are no
-        public static List<string> GetUniversity(string name)
+        public static async Task<List<string>> GetUniversity(string name)
         {
             List<University> result = new List<University>();
-            string data = DataManipulations.GetDataFromServer($"university/{name}");
+            string data = await dataManipulations.GetDataFromServer($"university/{name}");
             if (data != null)
             {
                 foundUnis = JsonConvert.DeserializeObject<List<University>>(data);
@@ -110,10 +113,10 @@ namespace Objektinis
             return foundUnis.Select(uni => uni.Name).ToList();
         }
 
-        internal static void CheckCredentials(string username, string password, Form form)
+        internal static async Task CheckCredentials(string username, string password, Form form)
         {
-            var returnGuid = DataManipulations.GetDataFromServer($"account/login/{username}/{password}");
-            if(returnGuid == null)
+            var returnGuid = await dataManipulations.GetDataFromServer($"account/login/{username}/{password}");
+            if (returnGuid == null)
             {
                 ChangeForm(form, GetForm("login"));
             }
@@ -121,7 +124,7 @@ namespace Objektinis
             {
                 ChangeForm(form, GetForm("universities"));
             }
-            
+
         }
 
         // Opens form for selected University
@@ -146,19 +149,19 @@ namespace Objektinis
             switch (name)
             {
                 case "universities":
-                    form = new UniversitiesSearchForm();
+                    form = new UniversitySearchForm();
                     break;
                 case "login":
-                    form = new login(true);
+                    form = new LoginForm(true);
                     break;
                 case "university":
-                    form = new SelectedUniversity();
+                    form = new SelectedUniversityForm();
                     break;
                 case "writeReview":
-                    form = new reviewForm();
+                    form = new ReviewForm();
                     break;
                 case "readReview":
-                    form = new readReviewForm();
+                    form = new ReadReviewForm();
                     break;
                 default:
                     form = null;
@@ -167,24 +170,24 @@ namespace Objektinis
             return form;
         }
 
-        public static List<string> GetFaculties()
+        public static async Task<List<string>> GetFaculties()
         {
-            if(selectedUni != -1)
+            if (selectedUni != -1)
             {
-                var data = DataManipulations.GetDataFromServer($"faculty/{foundUnis[selectedUni].Guid}");
-                if(data != null)
+                var data = await dataManipulations.GetDataFromServer($"faculty/{foundUnis[selectedUni].Guid}");
+                if (data != null)
                 {
                     foundFaculties = JsonConvert.DeserializeObject<List<Faculty>>(data);
-                    return foundFaculties.Select(fac => fac.Name).ToList(); 
+                    return foundFaculties.Select(fac => fac.Name).ToList();
                 }
             }
             return null;
         }
 
         //what type this is supposed to be?
-       /* public static List<Review> GetUniReview(string name)
-        {
-            
-        }*/
+        /* public static List<Review> GetUniReview(string name)
+         {
+
+         }*/
     }
 }

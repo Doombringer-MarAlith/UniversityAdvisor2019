@@ -8,16 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Objektinis
+namespace App
 {
-    public partial class readReviewForm : Form
+    public partial class ReadReviewForm : Form
     {
-        public readReviewForm()
+        public ReadReviewForm()
         {
             InitializeComponent();
-            titleOfThing.Text = FormManager.GetNameOfReviewee();
-            reviewText.Text = FormManager.GetReviewText();
-
         }
 
         private void NextButton_Click(object sender, EventArgs e)
@@ -34,6 +31,12 @@ namespace Objektinis
         {
             // increment review Value? Points?
 
+        }
+
+        private void ReadReviewForm_Load(object sender, EventArgs e)
+        {
+            titleOfThing.Text = FormManager.GetNameOfReviewee();
+            reviewText.Text = FormManager.GetReviewText();
         }
     }
 }

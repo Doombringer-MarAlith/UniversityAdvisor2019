@@ -1,6 +1,8 @@
-﻿namespace Objektinis
+﻿using System.Threading.Tasks;
+
+namespace App
 {
-    partial class SelectedUniversity
+    partial class SelectedUniversityForm
     {
         /// <summary>
         /// Required designer variable.
