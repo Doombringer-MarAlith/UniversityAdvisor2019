@@ -22,6 +22,7 @@ namespace App
         static List<Review> reviews;
         static bool reviewingUni = true;
         static readonly DataManipulations dataManipulations = new DataManipulations(new HttpClient());
+        static bool reviewLoaded = true;
 
         enum GuidType
         {
@@ -31,7 +32,7 @@ namespace App
             UniProgramGuid
         }
 
-
+        // Returns Name of whatever is reviewed
         internal static string GetNameOfReviewee()
         {
             return reviewingUni ? foundUnis[selectedUni].Name : foundFaculties[facultyIndex].Name; // FIX THIS
@@ -40,16 +41,19 @@ namespace App
         // returns text of current review or empty string if the boundaries are reached
         internal static string GetReviewText()
         {
-            if (currentReviewIndex >= 0 && currentReviewIndex < reviews.Count)
+            if (reviewLoaded)
             {
-                return reviews[currentReviewIndex].Text;
+                if (currentReviewIndex >= 0 && currentReviewIndex < reviews.Count)
+                {
+                    return reviews[currentReviewIndex].Text;
+                }
             }
-            else
-            {
-                return "";
-            }
+            return "";
         }
 
+        /// <summary>
+        /// Loads reviews of what is selected
+        /// </summary>
         internal static async Task LoadReviewsOf(int index, Form form)
         {
             if (index == -1)
@@ -60,6 +64,10 @@ namespace App
                 {
                     reviews = JsonConvert.DeserializeObject<List<Review>>(res);
                 }
+                else
+                {
+                    reviewLoaded = false;
+                }
             }
             else
             {
@@ -68,6 +76,10 @@ namespace App
                 if (res != null)
                 {
                     reviews = JsonConvert.DeserializeObject<List<Review>>(res);
+                }
+                else
+                {
+                    reviewLoaded = false;
                 }
                 facultyIndex = index;
                 reviewingUni = false;
@@ -96,8 +108,11 @@ namespace App
         }
 
 
-
-        // returns list of universities that match the search phrase or null if there are no
+        /// <summary>
+        /// Returns list of universities that match the search phrase or null if there are no
+        /// </summary>
+        /// <param name="name">University name</param>
+        /// <returns></returns>
         public static async Task<List<string>> GetUniversity(string name)
         {
             List<University> result = new List<University>();
@@ -113,6 +128,7 @@ namespace App
             return foundUnis.Select(uni => uni.Name).ToList();
         }
 
+        // checks login details with db and opens application on successful login or relaunches login form
         internal static async Task CheckCredentials(string username, string password, Form form)
         {
             var returnGuid = await dataManipulations.GetDataFromServer($"account/login/{username}/{password}");
@@ -134,7 +150,7 @@ namespace App
             ChangeForm(form, GetForm("university"));
         }
 
-        // Closes {form} and opens form which has name {formName}
+        // Closes {form} and opens form {changeTo}
         public static void ChangeForm(Form form, Form changeTo)
         {
             form.Hide();
@@ -170,6 +186,7 @@ namespace App
             return form;
         }
 
+        // returns List of faculties names to display/Saves faculties for later use
         public static async Task<List<string>> GetFaculties()
         {
             if (selectedUni != -1)
