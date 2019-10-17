@@ -98,8 +98,9 @@
             this.selectUniButton.UseVisualStyleBackColor = true;
             this.selectUniButton.Click += new System.EventHandler(this.SelectUniButton_Click);
             // 
-            // universities
+            // UniversitySearchForm
             // 
+            this.AcceptButton = this.searchButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
@@ -109,7 +110,7 @@
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchBar);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "universities";
+            this.Name = "UniversitySearchForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

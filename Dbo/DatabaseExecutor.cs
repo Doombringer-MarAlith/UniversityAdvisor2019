@@ -132,7 +132,7 @@ namespace Dbo
                 bdoConnection.Open();
                 using (var command = new SqlCommand
                 (
-                    $"SELECT * FROM [UniReviews] WHERE {GuidType} = '{Guid}'",
+                    $"SELECT * FROM [Reviews] WHERE {GuidType} = '{Guid}'",
                     bdoConnection
                 ))
                 {

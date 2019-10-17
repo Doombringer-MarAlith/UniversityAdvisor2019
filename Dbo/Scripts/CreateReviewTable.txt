@@ -1,7 +1,10 @@
-﻿IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'UniReviews')
+﻿IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Reviews')
 begin
-CREATE TABLE [dbo].[UniReviews](
-	[UniGuid] [nvarchar](50) NOT NULL,
+CREATE TABLE [dbo].[Reviews](
+	[UniGuid] [nvarchar](50) NULL,
+	[FacultyGuid][nvarchar](50) NULL,
+	[LecturerGuid][nvarchar](50) NULL,
+	[CourseGuid][nvarchar](50) NULL,
 	[UserId] [nvarchar](50) NOT NULL,
 	[Text] [nvarchar](300) NOT NULL,
 	[Value] [nvarchar](1) NOT NULL,
