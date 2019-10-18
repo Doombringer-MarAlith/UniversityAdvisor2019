@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="ContainerBuilder.cs" />
     <Compile Include="FormManager.cs" />
+    <Compile Include="Helpers\Helper.cs" />
     <Compile Include="ILoginForm.cs" />
     <Compile Include="IReviewForm.cs" />
     <Compile Include="ISelectedUniversityForm.cs" />

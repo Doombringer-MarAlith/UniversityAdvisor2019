@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Text;
 using System;
+using App.Helpers;
 
 namespace App
 {
@@ -33,6 +34,13 @@ namespace App
             UniProgramGuid
         }
 
+        enum createUserReturn
+        {
+            Email_Taken = 0,
+            Username_Taken,
+            Success
+        }
+
         // Returns Name of whatever is reviewed
         internal static string GetNameOfReviewee()
         {
@@ -46,37 +54,37 @@ namespace App
 
         internal static async Task<int> CreateUser(string username, string email, string password)
         {
-            // check for existing email : return 0 if there is
+            // check for existing email
+            var data = await dataManipulations.GetDataFromServer($"account/checkByEmail/{email}/{true}");
+            if(!String.IsNullOrEmpty(data))
+            {
+                return (int)createUserReturn.Email_Taken;
+            }
+
+            // check for existing username
+            data = await dataManipulations.GetDataFromServer($"account/checkByUsername/{username}/{0}");
+            if(!String.IsNullOrEmpty(data))
+            {
+                return (int)createUserReturn.Username_Taken;
+            }
+
+            // check existing guid
             Account account = new Account()
             {
                 Name = username,
                 Email = email,
                 Password = password
             };
-            var data = await dataManipulations.GetDataFromServer($"account/checkByEmail/{JsonConvert.SerializeObject(email)}/{true}");
-            if(!String.IsNullOrEmpty(data))
-            {
-                return 0;
-            }
-
-            // check for existing username : return 1
-            data = await dataManipulations.GetDataFromServer($"account/checkByUsername/{JsonConvert.SerializeObject(username)}/{true}");
-            if(!String.IsNullOrEmpty(data))
-            {
-                return 1;
-            }
-
-            // check existing guid
             do
             {
-                account.Guid = GenerateRandomString(50);
+                account.Guid = Helper.GenerateRandomString(50);
                 data = await dataManipulations.GetDataFromServer($"account/{account.Guid}");
             }
             while (String.IsNullOrEmpty(data));
 
             // create Account
             await dataManipulations.PostDataToServer("account/create", JsonConvert.SerializeObject(account));
-            return 2; // success
+            return (int)createUserReturn.Success;
         }
 
         internal static void SuccessfulSignup(Form form)
@@ -260,17 +268,5 @@ namespace App
 
          }*/
 
-        public static string GenerateRandomString(int length)
-        {
-            Random random = new Random();
-            string characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-            StringBuilder result = new StringBuilder(length);
-            for (int i = 0; i < length; i++)
-            {
-                result.Append(characters[random.Next(characters.Length)]);
-            }
-
-            return result.ToString();
-        }
     }
 }
