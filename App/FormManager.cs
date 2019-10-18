@@ -6,8 +6,9 @@ using System.Windows.Forms;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-
-
+using System.Text;
+using System;
+using App.Helpers;
 
 namespace App
 {
@@ -23,6 +24,7 @@ namespace App
         static bool reviewingUni = true;
         static readonly DataManipulations dataManipulations = new DataManipulations(new HttpClient());
         static bool reviewLoaded = true;
+        static string currentUserGuid = null;
 
         enum GuidType
         {
@@ -32,10 +34,62 @@ namespace App
             UniProgramGuid
         }
 
+        enum createUserReturn
+        {
+            Email_Taken = 0,
+            Username_Taken,
+            Success
+        }
+
         // Returns Name of whatever is reviewed
         internal static string GetNameOfReviewee()
         {
-            return reviewingUni ? foundUnis[selectedUni].Name : foundFaculties[facultyIndex].Name; // FIX THIS
+            return reviewingUni ? foundUnis[selectedUni].Name : foundFaculties[facultyIndex].Name; // Will need not only faculty or uni
+        }
+
+        internal static void SignUpClicked(Form form)
+        {
+            ChangeForm(form, GetForm("SignUp"));
+        }
+
+        internal static async Task<int> CreateUser(string username, string email, string password)
+        {
+            // check for existing email
+            var data = await dataManipulations.GetDataFromServer($"account/checkByEmail/{email}/{true}");
+            if(!String.IsNullOrEmpty(data))
+            {
+                return (int)createUserReturn.Email_Taken;
+            }
+
+            // check for existing username
+            data = await dataManipulations.GetDataFromServer($"account/checkByUsername/{username}/{0}");
+            if(!String.IsNullOrEmpty(data))
+            {
+                return (int)createUserReturn.Username_Taken;
+            }
+
+            // check existing guid
+            Account account = new Account()
+            {
+                Name = username,
+                Email = email,
+                Password = password
+            };
+            do
+            {
+                account.Guid = Helper.GenerateRandomString(50);
+                data = await dataManipulations.GetDataFromServer($"account/{account.Guid}");
+            }
+            while (String.IsNullOrEmpty(data));
+
+            // create Account
+            await dataManipulations.PostDataToServer("account/create", JsonConvert.SerializeObject(account));
+            return (int)createUserReturn.Success;
+        }
+
+        internal static void SuccessfulSignup(Form form)
+        {
+            ChangeForm(form, GetForm("loginNoMessage"));
         }
 
         // returns text of current review or empty string if the boundaries are reached
@@ -128,11 +182,12 @@ namespace App
             return foundUnis.Select(uni => uni.Name).ToList();
         }
 
-        // checks login details with db and opens application on successful login or relaunches login form
-        internal static async Task CheckCredentials(string username, string password, Form form)
+        // Checks login details with db and opens application on successful login or relaunches login form
+        internal static async Task CheckCredentials(string email, string password, Form form)
         {
-            var returnGuid = await dataManipulations.GetDataFromServer($"account/login/{username}/{password}");
-            if (returnGuid == null)
+            var result = await dataManipulations.GetDataFromServer($"account/login/{email}/{password}");
+            currentUserGuid = result;
+            if (String.IsNullOrEmpty(result))
             {
                 ChangeForm(form, GetForm("login"));
             }
@@ -179,6 +234,12 @@ namespace App
                 case "readReview":
                     form = new ReadReviewForm();
                     break;
+                case "SignUp":
+                    form = new SignUpForm();
+                    break;
+                case "loginNoMessage":
+                    form = new LoginForm(false);
+                    break;
                 default:
                     form = null;
                     break;
@@ -206,5 +267,6 @@ namespace App
          {
 
          }*/
+
     }
 }

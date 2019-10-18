@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using Objektinis;
 
 namespace App
 {
@@ -11,25 +10,25 @@ namespace App
             InitializeComponent();
             if (displayMsg)
             {
-                MessageBox.Show("Wrong username or password");
+                MessageBox.Show("Wrong email or password");
             }
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
         }
 
         private async void LoginButton_Click(object sender, EventArgs e)
         {
-            if (usernameTextBox.Text.Length != 0 && passwordTextBox.Text.Length != 0)
+            if (!String.IsNullOrWhiteSpace(emailTextBox.Text) && !String.IsNullOrWhiteSpace(passwordTextBox.Text))
             {
-                await FormManager.CheckCredentials(usernameTextBox.Text, passwordTextBox.Text, this);
+                await FormManager.CheckCredentials(emailTextBox.Text, passwordTextBox.Text, this);
             }
             else
             {
                 MessageBox.Show("You have not entered username or password");
             }
+        }
+
+        private void SignUpButton_Click(object sender, EventArgs e)
+        {
+            FormManager.SignUpClicked(this);
         }
     }
 }
