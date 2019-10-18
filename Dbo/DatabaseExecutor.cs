@@ -45,6 +45,56 @@ namespace Dbo
                     );
         }
 
+        public string CheckAccountEmail(string email)
+        {
+            using (var bdoConnection = new SqlConnection(connectionString))
+            {
+                bdoConnection.Open();
+                using (var command = new SqlCommand
+                (
+                    $"SELECT * FROM [Account] WHERE Email='{email}'",
+                    bdoConnection
+                ))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            bdoConnection.Close();
+                            return reader["Guid"].ToString();
+                        }
+                    }
+                }
+            }
+            Logger.Log($"DatabaseExecutor.CheckAccountEmail({email}): CheckAccountEmail return value is null", Level.Warning);
+            return null;
+        }
+
+        public string CheckAccountUsername(string username)
+        {
+            using (var bdoConnection = new SqlConnection(connectionString))
+            {
+                bdoConnection.Open();
+                using (var command = new SqlCommand
+                (
+                    $"SELECT * FROM [Account] WHERE Name='{username}'",
+                    bdoConnection
+                ))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            bdoConnection.Close();
+                            return reader["Guid"].ToString();
+                        }
+                    }
+                }
+            }
+            Logger.Log($"DatabaseExecutor.CheckAccountUsername({username}): CheckAccountUsername return value is null", Level.Warning);
+            return null;
+        }
+
         public Account ReturnAccount(string id)
         {
             using (var bdoConnection = new SqlConnection(connectionString))
@@ -79,6 +129,7 @@ namespace Dbo
             return null;
         }
 
+
         public string ReturnAccountGuid(string email, string password)
         {
             using (var bdoConnection = new SqlConnection(connectionString))
@@ -92,10 +143,14 @@ namespace Dbo
                 {
                     using (var reader = command.ExecuteReader())
                     {
+                        string guid = null;
                         while (reader.Read())
                         {
-                            var guid = reader["Guid"].ToString();
-                            bdoConnection.Close();
+                            guid = reader["Guid"].ToString();
+                        }
+                        bdoConnection.Close();
+                        if (guid != null)
+                        {
                             return guid;
                         }
                     }

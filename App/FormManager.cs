@@ -6,8 +6,8 @@ using System.Windows.Forms;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-
-
+using System.Text;
+using System;
 
 namespace App
 {
@@ -36,7 +36,52 @@ namespace App
         // Returns Name of whatever is reviewed
         internal static string GetNameOfReviewee()
         {
-            return reviewingUni ? foundUnis[selectedUni].Name : foundFaculties[facultyIndex].Name; // FIX THIS
+            return reviewingUni ? foundUnis[selectedUni].Name : foundFaculties[facultyIndex].Name; // Will need not only faculty or uni
+        }
+
+        internal static void SignUpClicked(Form form)
+        {
+            ChangeForm(form, GetForm("SignUp"));
+        }
+
+        internal static async Task<int> CreateUser(string username, string email, string password)
+        {
+            // check for existing email : return 0 if there is
+            Account account = new Account()
+            {
+                Name = username,
+                Email = email,
+                Password = password
+            };
+            var data = await dataManipulations.GetDataFromServer($"account/checkByEmail/{JsonConvert.SerializeObject(email)}/{true}");
+            if(!String.IsNullOrEmpty(data))
+            {
+                return 0;
+            }
+
+            // check for existing username : return 1
+            data = await dataManipulations.GetDataFromServer($"account/checkByUsername/{JsonConvert.SerializeObject(username)}/{true}");
+            if(!String.IsNullOrEmpty(data))
+            {
+                return 1;
+            }
+
+            // check existing guid
+            do
+            {
+                account.Guid = GenerateRandomString(50);
+                data = await dataManipulations.GetDataFromServer($"account/{account.Guid}");
+            }
+            while (String.IsNullOrEmpty(data));
+
+            // create Account
+            await dataManipulations.PostDataToServer("account/create", JsonConvert.SerializeObject(account));
+            return 2; // success
+        }
+
+        internal static void SuccessfulSignup(Form form)
+        {
+            ChangeForm(form, GetForm("loginNoMessage"));
         }
 
         // returns text of current review or empty string if the boundaries are reached
@@ -129,11 +174,12 @@ namespace App
             return foundUnis.Select(uni => uni.Name).ToList();
         }
 
-        // checks login details with db and opens application on successful login or relaunches login form
-        internal static async Task CheckCredentials(string username, string password, Form form)
+        // Checks login details with db and opens application on successful login or relaunches login form
+        internal static async Task CheckCredentials(string email, string password, Form form)
         {
-            currentUserGuid = await dataManipulations.GetDataFromServer($"account/login/{username}/{password}");
-            if (currentUserGuid == null)
+            var result = await dataManipulations.GetDataFromServer($"account/login/{email}/{password}");
+            currentUserGuid = result;
+            if (String.IsNullOrEmpty(result))
             {
                 ChangeForm(form, GetForm("login"));
             }
@@ -180,6 +226,12 @@ namespace App
                 case "readReview":
                     form = new ReadReviewForm();
                     break;
+                case "SignUp":
+                    form = new SignUpForm();
+                    break;
+                case "loginNoMessage":
+                    form = new LoginForm(false);
+                    break;
                 default:
                     form = null;
                     break;
@@ -207,5 +259,18 @@ namespace App
          {
 
          }*/
+
+        public static string GenerateRandomString(int length)
+        {
+            Random random = new Random();
+            string characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            StringBuilder result = new StringBuilder(length);
+            for (int i = 0; i < length; i++)
+            {
+                result.Append(characters[random.Next(characters.Length)]);
+            }
+
+            return result.ToString();
+        }
     }
 }

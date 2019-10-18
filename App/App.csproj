@@ -99,6 +99,12 @@
     <Compile Include="SelectedUniversityForm.Designer.cs">
       <DependentUpon>SelectedUniversityForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UniversitySearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SelectedUniversityForm.resx">
       <DependentUpon>SelectedUniversityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UniversitySearchForm.resx">
       <DependentUpon>UniversitySearchForm.cs</DependentUpon>

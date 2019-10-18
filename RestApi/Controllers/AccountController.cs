@@ -29,6 +29,38 @@ namespace RestApi.Controllers
             }
         }
 
+        [HttpGet("checkByEmail/{email}/{whatever}")]
+        public ActionResult<string> Get(string email, bool whatever)
+        {
+            Logger.Log($"AccountController:Check({email})");
+
+            try
+            {
+                return _database.CheckAccountEmail(email);
+            }
+            catch (Exception exception)
+            {
+                Logger.Log($"AccountController.Check({email}): DomainError", Level.Error, exception);
+                throw;
+            }
+        }
+
+        [HttpGet("checkByUsername/{username}/{whatever}")]
+        public ActionResult<string> Get(string username, int whatever)
+        {
+            Logger.Log($"AccountController:Check({username})");
+
+            try
+            {
+                return _database.CheckAccountUsername(username);
+            }
+            catch (Exception exception)
+            {
+                Logger.Log($"AccountController.Check({username}): DomainError", Level.Error, exception);
+                throw;
+            }
+        }
+
         [HttpGet("login/{email}/{password}")]
         public ActionResult<string> Get(string email, string password)
         {
