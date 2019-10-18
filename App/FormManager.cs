@@ -23,6 +23,7 @@ namespace App
         static bool reviewingUni = true;
         static readonly DataManipulations dataManipulations = new DataManipulations(new HttpClient());
         static bool reviewLoaded = true;
+        static string currentUserGuid = null;
 
         enum GuidType
         {
@@ -131,8 +132,8 @@ namespace App
         // checks login details with db and opens application on successful login or relaunches login form
         internal static async Task CheckCredentials(string username, string password, Form form)
         {
-            var returnGuid = await dataManipulations.GetDataFromServer($"account/login/{username}/{password}");
-            if (returnGuid == null)
+            currentUserGuid = await dataManipulations.GetDataFromServer($"account/login/{username}/{password}");
+            if (currentUserGuid == null)
             {
                 ChangeForm(form, GetForm("login"));
             }
