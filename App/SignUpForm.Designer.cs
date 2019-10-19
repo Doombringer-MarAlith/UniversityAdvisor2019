@@ -35,10 +35,10 @@
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextbox = new System.Windows.Forms.TextBox();
             this.repeatPasswordTextbox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.passwordLabel2 = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -85,7 +85,6 @@
             this.emailTextBox.Size = new System.Drawing.Size(377, 15);
             this.emailTextBox.TabIndex = 2;
             this.emailTextBox.Text = "john@email.com";
-            this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
             // 
             // passwordTextbox
             // 
@@ -113,43 +112,41 @@
             this.repeatPasswordTextbox.Text = "*****";
             this.repeatPasswordTextbox.TextChanged += new System.EventHandler(this.RepeatPasswordTextbox_TextChanged);
             // 
-            // label1
+            // emailLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(164, 171);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 17);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Email";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Location = new System.Drawing.Point(164, 171);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(42, 17);
+            this.emailLabel.TabIndex = 10;
+            this.emailLabel.Text = "Email";
             // 
-            // label2
+            // passwordLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(137, 220);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Password";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Location = new System.Drawing.Point(137, 220);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(69, 17);
+            this.passwordLabel.TabIndex = 11;
+            this.passwordLabel.Text = "Password";
             // 
-            // label3
+            // passwordLabel2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(88, 267);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 17);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Repeat password";
+            this.passwordLabel2.AutoSize = true;
+            this.passwordLabel2.Location = new System.Drawing.Point(88, 267);
+            this.passwordLabel2.Name = "passwordLabel2";
+            this.passwordLabel2.Size = new System.Drawing.Size(118, 17);
+            this.passwordLabel2.TabIndex = 12;
+            this.passwordLabel2.Text = "Repeat password";
             // 
-            // label4
+            // nameLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(137, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 17);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "User name";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(137, 130);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(77, 17);
+            this.nameLabel.TabIndex = 13;
+            this.nameLabel.Text = "User name";
             // 
             // panel1
             // 
@@ -204,10 +201,10 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.passwordLabel2);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.repeatPasswordTextbox);
             this.Controls.Add(this.passwordTextbox);
@@ -231,10 +228,10 @@
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox passwordTextbox;
         private System.Windows.Forms.TextBox repeatPasswordTextbox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.Label passwordLabel;
+        private System.Windows.Forms.Label passwordLabel2;
+        private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
