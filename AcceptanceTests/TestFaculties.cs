@@ -6,7 +6,6 @@ namespace AcceptanceTests
 {
     class TestFaculties
     {
-      
-    }
 
+    }
 }

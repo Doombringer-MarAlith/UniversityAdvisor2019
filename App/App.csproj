@@ -82,11 +82,11 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="readReview.cs">
+    <Compile Include="ReadReview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="readReview.Designer.cs">
-      <DependentUpon>readReview.cs</DependentUpon>
+    <Compile Include="ReadReview.Designer.cs">
+      <DependentUpon>ReadReview.cs</DependentUpon>
     </Compile>
     <Compile Include="ReviewForm.cs">
       <SubType>Form</SubType>
@@ -127,8 +127,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="readReview.resx">
-      <DependentUpon>readReview.cs</DependentUpon>
+    <EmbeddedResource Include="ReadReview.resx">
+      <DependentUpon>ReadReview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReviewForm.resx">
       <DependentUpon>ReviewForm.cs</DependentUpon>

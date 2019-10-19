@@ -111,7 +111,7 @@
             this.Controls.Add(this.searchBar);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UniversitySearchForm";
-            this.Text = "Form1";
+            this.Text = "SearchUniversity";
             this.ResumeLayout(false);
             this.PerformLayout();
 

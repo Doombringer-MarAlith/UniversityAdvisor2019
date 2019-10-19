@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App
@@ -30,7 +23,7 @@ namespace App
         private async void CreateUserButton_Click(object sender, EventArgs e)
         {
             int answer = -1;
-            if (passwordTextbox.Text.Equals(repeatPasswordTextbox.Text) && passwordTextbox.Text.Length > 4)
+            if (passwordTextbox.Text.Equals(repeatPasswordTextbox.Text) && passwordTextbox.Text.Length > 4 && !String.IsNullOrWhiteSpace(passwordTextbox.Text))
             {
                 answer = await FormManager.CreateUser(usernameTextBox.Text, emailTextBox.Text, passwordTextbox.Text);
                 if (answer == 0)
