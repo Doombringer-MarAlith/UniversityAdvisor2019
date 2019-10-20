@@ -36,7 +36,7 @@ namespace App
         {
             if (universitiesList.SelectedItem != null)
             {
-                FormManager.OpenSelectedUniversity(universitiesList.SelectedIndex, this);
+                FormManager.OpenSelectedUniversityForm(universitiesList.SelectedIndex, this);
             }
             else
             {

@@ -16,11 +16,10 @@ namespace App
         static readonly DataManipulations dataManipulations = new DataManipulations(new HttpClient());
         static List<University> foundUniversities;
         static List<Faculty> foundFaculties;
-
         static List<Review> foundUniversityReviews;
         static List<Review> foundFacultyReviews;
 
-        static ReviewType currentReviewSubject;
+        static ReviewType currentReviewSubject = ReviewType.REVIEW_NONE;
         static int currentReviewIndex = 0;
 
         static University selectedUniversity;
@@ -56,7 +55,8 @@ namespace App
         enum ReviewType
         {
             REVIEW_UNIVERSITY = 0,
-            REVIEW_FACULTY
+            REVIEW_FACULTY,
+            REVIEW_NONE
         }
 
         internal static async Task TryToLogIn(string email, string password, Form loginForm)
@@ -118,12 +118,11 @@ namespace App
                 Value = value.ToString()
             };
 
-            // This part only works when we choose from University and Faculty review
-            if (selectedFaculty != null)
+            if (currentReviewSubject == ReviewType.REVIEW_FACULTY)
             {
                 review.FacultyGuid = selectedFaculty.FacultyGuid;
             }
-            else
+            else if (currentReviewSubject == ReviewType.REVIEW_UNIVERSITY)
             {
                 review.UniGuid = selectedUniversity.Guid;
             }
@@ -142,6 +141,7 @@ namespace App
         internal static void WriteReviewForSelectedFaculty(int selectedFacultyIndex, Form form)
         {
             selectedFaculty = foundFaculties[selectedFacultyIndex];
+            currentReviewSubject = ReviewType.REVIEW_FACULTY;
             ChangeForm(form, GetForm(FormType.FORM_REVIEW));
         }
 
@@ -151,7 +151,7 @@ namespace App
             ChangeForm(form, GetForm(FormType.FORM_REVIEW));
         }
 
-        // Returns Name of whatever is reviewed
+        // Returns the name of whatever is currently reviewed
         internal static string GetNameOfReviewee()
         {
             switch (currentReviewSubject)
@@ -213,13 +213,17 @@ namespace App
             ChangeForm(form, GetForm(FormType.FORM_READ_REVIEW));
         }
 
+        // Increments or decrements current review list, and updates the form
         internal static void LoadNextOrPreviousReview(bool next, Form form)
         {
             if (next)
             {
+                // Check if incremented index would exceed list count limit
                 if (++currentReviewIndex >= GetCurrentReviewListBySubject().Count)
                 {
                     currentReviewIndex--;
+                    MessageBox.Show("No more reviews to show!");
+                    return;
                 }
             }
             else
@@ -227,12 +231,15 @@ namespace App
                 if (--currentReviewIndex < 0)
                 {
                     currentReviewIndex++;
+                    MessageBox.Show("No more reviews to show!");
+                    return;
                 }
             }
 
             ChangeForm(form, GetForm(FormType.FORM_READ_REVIEW));
         }
 
+        // Returns fetched reviews for either universities or faculties
         internal static List<Review> GetCurrentReviewListBySubject()
         {
             switch (currentReviewSubject)
@@ -244,22 +251,6 @@ namespace App
                 default:
                     return null;
             }
-        }
-
-        internal static void OpenSelectedUniversity(int selectedUniversityIndex, Form form)
-        {
-            selectedUniversity = foundUniversities[selectedUniversityIndex];
-            ChangeForm(form, GetForm(FormType.FORM_SELECTED_UNIVERSITY));
-        }
-
-        internal static void CloseSelectedUniversity(Form form)
-        {
-            selectedUniversity = null;
-            selectedFaculty = null;
-            foundUniversityReviews = null;
-            foundFacultyReviews = null;
-            
-            ChangeForm(form, GetForm(FormType.FORM_UNIVERSITIES));
         }
 
         // Returns a list of universities that match the search phrase or null if there are none
@@ -294,6 +285,11 @@ namespace App
             return null;
         }
 
+        public static string GetSelectedUniversityName()
+        {
+            return selectedUniversity.Name;
+        }
+
         //what type this is supposed to be?
         /* public static List<Review> GetUniReview(string name)
          {
@@ -326,6 +322,32 @@ namespace App
                 default:
                     return null;
             }
+        }
+
+        internal static void OpenSelectedUniversityForm(int selectedUniversityIndex, Form form)
+        {
+            selectedUniversity = foundUniversities[selectedUniversityIndex];
+            ChangeForm(form, GetForm(FormType.FORM_SELECTED_UNIVERSITY));
+        }
+
+        internal static void CloseSelectedUniversityForm(Form form)
+        {
+            ResetSelectedFaculty();
+            ResetSelectedUniversity();
+
+            ChangeForm(form, GetForm(FormType.FORM_UNIVERSITIES));
+        }
+
+        internal static void ResetSelectedUniversity()
+        {
+            selectedUniversity = null;
+            foundUniversityReviews = null;
+        }
+
+        internal static void ResetSelectedFaculty()
+        {
+            selectedFaculty = null;
+            foundFacultyReviews = null;
         }
     }
 }

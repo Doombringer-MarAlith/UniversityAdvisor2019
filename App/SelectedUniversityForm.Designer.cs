@@ -40,9 +40,11 @@ namespace App
             // 
             // universityName
             // 
+            this.universityName.Enabled = false;
             this.universityName.Location = new System.Drawing.Point(106, 53);
             this.universityName.Margin = new System.Windows.Forms.Padding(2);
             this.universityName.Name = "universityName";
+            this.universityName.ReadOnly = true;
             this.universityName.Size = new System.Drawing.Size(378, 20);
             this.universityName.TabIndex = 0;
             // 

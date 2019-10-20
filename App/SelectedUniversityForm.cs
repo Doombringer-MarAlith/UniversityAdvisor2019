@@ -39,6 +39,8 @@ namespace App
 
         private async void SelectedUniversity_Load(object sender, EventArgs e)
         {
+            universityName.Text = FormManager.GetSelectedUniversityName();
+
             // Request server to get faculties of selected university and add them to listbox
             List<string> faculties = await FormManager.GetFaculties();
             if (faculties.Count != 0)
@@ -53,7 +55,7 @@ namespace App
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            FormManager.CloseSelectedUniversity(this);
+            FormManager.CloseSelectedUniversityForm(this);
         }
     }
 }

@@ -33,6 +33,7 @@ namespace App
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+            FormManager.ResetSelectedFaculty();
             FormManager.ChangeForm(this, FormManager.GetForm(FormManager.FormType.FORM_SELECTED_UNIVERSITY));
         }
     }

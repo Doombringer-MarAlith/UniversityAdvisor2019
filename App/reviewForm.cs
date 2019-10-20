@@ -32,7 +32,8 @@ namespace App
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            FormManager.ChangeForm(this, FormManager.GetForm(FormManager.FormType.FORM_REVIEW));
+            FormManager.ResetSelectedFaculty();
+            FormManager.ChangeForm(this, FormManager.GetForm(FormManager.FormType.FORM_SELECTED_UNIVERSITY));
         }
     }
 }
