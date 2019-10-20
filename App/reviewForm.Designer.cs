@@ -69,7 +69,6 @@
             this.numericReview.Name = "numericReview";
             this.numericReview.Size = new System.Drawing.Size(53, 21);
             this.numericReview.TabIndex = 2;
-            this.numericReview.SelectedIndexChanged += new System.EventHandler(this.NumericReview_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -93,7 +92,7 @@
             this.Controls.Add(this.reviewTextBox);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ReviewForm";
-            this.Text = "ReviewForm";
+            this.Text = "Review";
             this.ResumeLayout(false);
             this.PerformLayout();
 
