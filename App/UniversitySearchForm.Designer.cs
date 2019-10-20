@@ -34,7 +34,7 @@
             this.searchButton = new System.Windows.Forms.Button();
             this.universitiesList = new System.Windows.Forms.ListBox();
             this.all = new System.Windows.Forms.Label();
-            this.selectUniButton = new System.Windows.Forms.Button();
+            this.selectUniversityButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // searchBar
@@ -46,7 +46,6 @@
             this.searchBar.Size = new System.Drawing.Size(376, 20);
             this.searchBar.TabIndex = 0;
             this.searchBar.Text = "Enter university name";
-            this.searchBar.Click += new System.EventHandler(this.SearchBar_Click);
             // 
             // contextMenuStrip1
             // 
@@ -62,7 +61,7 @@
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(80, 24);
             this.searchButton.TabIndex = 2;
-            this.searchButton.Text = "search";
+            this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
@@ -86,17 +85,17 @@
             this.all.TabIndex = 4;
             this.all.Text = "All universities";
             // 
-            // selectUniButton
+            // selectUniversityButton
             // 
-            this.selectUniButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectUniButton.Location = new System.Drawing.Point(232, 316);
-            this.selectUniButton.Margin = new System.Windows.Forms.Padding(2);
-            this.selectUniButton.Name = "selectUniButton";
-            this.selectUniButton.Size = new System.Drawing.Size(80, 24);
-            this.selectUniButton.TabIndex = 5;
-            this.selectUniButton.Text = "select";
-            this.selectUniButton.UseVisualStyleBackColor = true;
-            this.selectUniButton.Click += new System.EventHandler(this.SelectUniButton_Click);
+            this.selectUniversityButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectUniversityButton.Location = new System.Drawing.Point(232, 316);
+            this.selectUniversityButton.Margin = new System.Windows.Forms.Padding(2);
+            this.selectUniversityButton.Name = "selectUniversityButton";
+            this.selectUniversityButton.Size = new System.Drawing.Size(80, 24);
+            this.selectUniversityButton.TabIndex = 5;
+            this.selectUniversityButton.Text = "Select";
+            this.selectUniversityButton.UseVisualStyleBackColor = true;
+            this.selectUniversityButton.Click += new System.EventHandler(this.SelectUniversityButton_Click);
             // 
             // UniversitySearchForm
             // 
@@ -104,7 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.selectUniButton);
+            this.Controls.Add(this.selectUniversityButton);
             this.Controls.Add(this.all);
             this.Controls.Add(this.universitiesList);
             this.Controls.Add(this.searchButton);
@@ -124,7 +123,7 @@
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.ListBox universitiesList;
         private System.Windows.Forms.Label all;
-        private System.Windows.Forms.Button selectUniButton;
+        private System.Windows.Forms.Button selectUniversityButton;
     }
 }
 

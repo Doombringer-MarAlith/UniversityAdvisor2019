@@ -3,20 +3,20 @@ using System.Windows.Forms;
 
 namespace App
 {
-    public partial class ReviewForm : Form, IReviewForm
+    public partial class WriteReviewForm : Form, IReviewForm
     {
-        public ReviewForm()
+        public WriteReviewForm()
         {
             InitializeComponent();
         }
 
         private async void SubmitButton_Click(object sender, EventArgs e)
         {
-            if(numericReview.SelectedItem != null)
+            if (numericReview.SelectedItem != null)
             {
                 if (!String.IsNullOrEmpty(reviewTextBox.Text) && reviewTextBox.Text.Length < 300)
                 {
-                    await FormManager.SubmitReview(reviewTextBox.Text, numericReview.SelectedIndex+1, this);
+                    await FormManager.SubmitReview(reviewTextBox.Text, numericReview.SelectedIndex + 1, this);
                     MessageBox.Show("Review submitted successfully.");
                 }
                 else
@@ -28,6 +28,12 @@ namespace App
             {
                 MessageBox.Show("Please select the rating you want to give from the dropdown menu.");
             }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            FormManager.ResetSelectedFaculty();
+            FormManager.ChangeForm(this, FormManager.GetForm(FormType.FORM_SELECTED_UNIVERSITY));
         }
     }
 }

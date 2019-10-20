@@ -13,38 +13,34 @@ namespace App
 
         private async void ReadButton_Click(object sender, EventArgs e)
         {
+            // If no faculty is selected, read reviews for current selected university
             if (facultiesListBox.SelectedItem == null)
             {
-                // new readReviewForm for uni
-                // FormManager opens it up, already has selected index
-                await FormManager.LoadReviewsOf(-1, this);
+                await FormManager.LoadReviewsForSelectedUniversity(this);
             }
             else
             {
-                // new readReviewForm to read reviews of selected faculty
-                // send index of selected Faculty
-                await FormManager.LoadReviewsOf(facultiesListBox.SelectedIndex, this);
+                await FormManager.LoadReviewsForSelectedFaculty(facultiesListBox.SelectedIndex, this);
             }
         }
 
         private void WriteReviewButton_Click(object sender, EventArgs e)
         {
+            // If no faculty is selected, write review for current selected university
             if (facultiesListBox.SelectedItem == null)
             {
-                // new reviewForm for uni
-                // FormManager opens it up, already has selected index
-                FormManager.WriteReview(-1, this);
+                FormManager.OpenWriteReviewFormForSelectedUniversity(this);
             }
             else
             {
-                // new reviewForm to write reviews of selected faculty
-                // send index of selected Faculty
-                FormManager.WriteReview(facultiesListBox.SelectedIndex, this);
+                FormManager.OpenWriteReviewFormForSelectedFaculty(facultiesListBox.SelectedIndex, this);
             }
         }
 
         private async void SelectedUniversity_Load(object sender, EventArgs e)
         {
+            universityName.Text = FormManager.GetSelectedUniversityName();
+
             // Request server to get faculties of selected university and add them to listbox
             List<string> faculties = await FormManager.GetFaculties();
             if (faculties.Count != 0)
@@ -55,6 +51,11 @@ namespace App
             {
                 MessageBox.Show("No faculties found for this university.");
             }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            FormManager.CloseSelectedUniversityForm(this);
         }
     }
 }

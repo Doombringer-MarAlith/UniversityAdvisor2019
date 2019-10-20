@@ -12,12 +12,12 @@ namespace App
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            FormManager.LoadReview(true, this);
+            FormManager.LoadNextOrPreviousReview(true, this);
         }
 
         private void PreviousButton_Click(object sender, EventArgs e)
         {
-            FormManager.LoadReview(false, this);
+            FormManager.LoadNextOrPreviousReview(false, this);
         }
 
         private void LikeButton_Click(object sender, EventArgs e)
@@ -29,6 +29,12 @@ namespace App
         {
             titleOfThing.Text = FormManager.GetNameOfReviewee();
             reviewText.Text = FormManager.GetReviewText();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            FormManager.ResetSelectedFaculty();
+            FormManager.ChangeForm(this, FormManager.GetForm(FormType.FORM_SELECTED_UNIVERSITY));
         }
     }
 }

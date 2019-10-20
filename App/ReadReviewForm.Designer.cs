@@ -34,7 +34,7 @@
             this.titleOfThing = new System.Windows.Forms.TextBox();
             this.nextButton = new System.Windows.Forms.Button();
             this.previousButton = new System.Windows.Forms.Button();
-            this.backButton = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.Button();
             this.LikeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -85,15 +85,16 @@
             this.previousButton.UseVisualStyleBackColor = true;
             this.previousButton.Click += new System.EventHandler(this.PreviousButton_Click);
             // 
-            // backButton
+            // BackButton
             // 
-            this.backButton.Location = new System.Drawing.Point(9, 10);
-            this.backButton.Margin = new System.Windows.Forms.Padding(2);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(57, 28);
-            this.backButton.TabIndex = 5;
-            this.backButton.Text = "Back";
-            this.backButton.UseVisualStyleBackColor = true;
+            this.BackButton.Location = new System.Drawing.Point(9, 10);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(2);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(78, 28);
+            this.BackButton.TabIndex = 5;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // LikeButton
             // 
@@ -112,14 +113,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.LikeButton);
-            this.Controls.Add(this.backButton);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.previousButton);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.titleOfThing);
             this.Controls.Add(this.reviewText);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ReadReviewForm";
-            this.Text = "ReadReview";
+            this.Text = "Review";
             this.Load += new System.EventHandler(this.ReadReviewForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -133,7 +134,7 @@
         private System.Windows.Forms.TextBox titleOfThing;
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Button previousButton;
-        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button LikeButton;
     }
 }
