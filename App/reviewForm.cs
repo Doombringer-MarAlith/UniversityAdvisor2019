@@ -19,14 +19,24 @@ namespace App
             InitializeComponent();
         }
 
-        private void NumericReview_SelectedIndexChanged(object sender, EventArgs e)
+        private async void SubmitButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void SubmitButton_Click(object sender, EventArgs e)
-        {
-
+            if(numericReview.SelectedItem != null)
+            {
+                if (!String.IsNullOrEmpty(reviewTextBox.Text) && reviewTextBox.Text.Length < 300)
+                {
+                    await FormManager.SubmitReview(reviewTextBox.Text, numericReview.SelectedIndex+1, this);
+                    MessageBox.Show("Review submitted successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Your text has to be not empty and less than 300 characters.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select the rating you want to give from the dropdown menu.");
+            }
         }
     }
 }

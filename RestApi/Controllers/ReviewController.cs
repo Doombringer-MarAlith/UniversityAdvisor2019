@@ -17,11 +17,27 @@ namespace RestApi.Controllers
         [HttpGet("reviewsByGuid/{Guid}/{guidType}")]
         public ActionResult<string> Get(string Guid, int guidType)
         {
-            Logger.Log($"ReviewController:Get({Guid})");
+            Logger.Log($"ReviewController:Get({Guid}, {guidType})");
 
             try
             {
                 return JsonConvert.SerializeObject(_database.ReturnReviews(Guid, guidType));
+            }
+            catch (Exception exception)
+            {
+                Logger.Log($"ReviewController.Get({Guid}, {guidType}): DomainError", Level.Error, exception);
+                throw;
+            }
+        }
+
+        [HttpGet("{Guid}")]
+        public ActionResult<string> Get(string Guid)
+        {
+            Logger.Log($"ReviewController:Get({Guid})");
+
+            try
+            {
+                return JsonConvert.SerializeObject(_database.ReturnReview(Guid));
             }
             catch (Exception exception)
             {
@@ -33,7 +49,7 @@ namespace RestApi.Controllers
         [HttpPost("{create}")]
         public void Post([FromBody] Review review)
         {
-            Logger.Log($"UniReviewController::Post(Create Review)");
+            Logger.Log($"ReviewController::Post(Create Review)");
 
             try
             {
@@ -41,7 +57,7 @@ namespace RestApi.Controllers
             }
             catch (Exception exception)
             {
-                Logger.Log($"UniReviewController.Post(Review): DomainError", Level.Error, exception);
+                Logger.Log($"ReviewController.Post(Review): DomainError", Level.Error, exception);
                 throw;
             }
         }

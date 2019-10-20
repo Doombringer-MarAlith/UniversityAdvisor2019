@@ -41,6 +41,48 @@ namespace App
             Success
         }
 
+        internal static async Task SubmitReview(string text, int value, Form reviewForm)
+        {
+            Review review = new Review()
+            {
+                UserId = currentUserGuid,
+                Text = text,
+                Value = value.ToString()
+            };
+            if(facultyIndex != -1) // this part only works when we choose from University and Faculty review
+            {
+                review.FacultyGuid = foundFaculties[facultyIndex].FacultyGuid;
+            }
+            else
+            {
+                review.UniGuid = foundUnis[selectedUni].Guid;
+            }
+            var data = "something";
+            do
+            {
+                review.ReviewGuid = Helper.GenerateRandomString(50);
+                data = await dataManipulations.GetDataFromServer($"review/{review.ReviewGuid}");
+            }
+            while (String.IsNullOrEmpty(data));
+
+            await dataManipulations.PostDataToServer($"review/create", JsonConvert.SerializeObject(review));
+        }
+
+        
+
+        internal static void WriteReview(int selectedFaculty, Form form)
+        {
+            if(selectedFaculty != -1)
+            {
+                facultyIndex = selectedFaculty;
+            }
+            else
+            {
+                reviewingUni = true;
+            }
+            ChangeForm(form, GetForm("writeReview"));
+        }
+
         // Returns Name of whatever is reviewed
         internal static string GetNameOfReviewee()
         {

@@ -33,11 +33,13 @@ namespace App
             {
                 // new reviewForm for uni
                 // FormManager opens it up, already has selected index
+                FormManager.WriteReview(-1, this);
             }
             else
             {
                 // new reviewForm to write reviews of selected faculty
                 // send index of selected Faculty
+                FormManager.WriteReview(facultiesListBox.SelectedIndex, this);
             }
         }
 
