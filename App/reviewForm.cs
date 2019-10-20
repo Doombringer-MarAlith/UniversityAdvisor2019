@@ -12,11 +12,11 @@ namespace App
 
         private async void SubmitButton_Click(object sender, EventArgs e)
         {
-            if(numericReview.SelectedItem != null)
+            if (numericReview.SelectedItem != null)
             {
                 if (!String.IsNullOrEmpty(reviewTextBox.Text) && reviewTextBox.Text.Length < 300)
                 {
-                    await FormManager.SubmitReview(reviewTextBox.Text, numericReview.SelectedIndex+1, this);
+                    await FormManager.SubmitReview(reviewTextBox.Text, numericReview.SelectedIndex + 1, this);
                     MessageBox.Show("Review submitted successfully.");
                 }
                 else
@@ -28,6 +28,11 @@ namespace App
             {
                 MessageBox.Show("Please select the rating you want to give from the dropdown menu.");
             }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            FormManager.ChangeForm(this, FormManager.GetForm(FormManager.FormType.FORM_REVIEW));
         }
     }
 }

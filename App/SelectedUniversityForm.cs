@@ -13,33 +13,27 @@ namespace App
 
         private async void ReadButton_Click(object sender, EventArgs e)
         {
+            // If no faculty is selected, read reviews for current selected university
             if (facultiesListBox.SelectedItem == null)
             {
-                // new readReviewForm for uni
-                // FormManager opens it up, already has selected index
-                await FormManager.LoadReviewsOf(-1, this);
+                await FormManager.LoadReviewsForSelectedUniversity(this);
             }
             else
             {
-                // new readReviewForm to read reviews of selected faculty
-                // send index of selected Faculty
-                await FormManager.LoadReviewsOf(facultiesListBox.SelectedIndex, this);
+                await FormManager.LoadReviewsForSelectedFaculty(facultiesListBox.SelectedIndex, this);
             }
         }
 
         private void WriteReviewButton_Click(object sender, EventArgs e)
         {
+            // If no faculty is selected, write review for current selected university
             if (facultiesListBox.SelectedItem == null)
             {
-                // new reviewForm for uni
-                // FormManager opens it up, already has selected index
-                FormManager.WriteReview(-1, this);
+                FormManager.WriteReviewForSelectedUniversity(this);
             }
             else
             {
-                // new reviewForm to write reviews of selected faculty
-                // send index of selected Faculty
-                FormManager.WriteReview(facultiesListBox.SelectedIndex, this);
+                FormManager.WriteReviewForSelectedFaculty(facultiesListBox.SelectedIndex, this);
             }
         }
 
@@ -59,7 +53,7 @@ namespace App
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            FormManager.ChangeForm(this, FormManager.GetForm(FormManager.FormType.FORM_UNIVERSITIES));
+            FormManager.CloseSelectedUniversity(this);
         }
     }
 }

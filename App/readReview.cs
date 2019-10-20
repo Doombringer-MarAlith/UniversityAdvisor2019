@@ -12,12 +12,12 @@ namespace App
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            FormManager.LoadReview(true, this);
+            FormManager.LoadNextOrPreviousReview(true, this);
         }
 
         private void PreviousButton_Click(object sender, EventArgs e)
         {
-            FormManager.LoadReview(false, this);
+            FormManager.LoadNextOrPreviousReview(false, this);
         }
 
         private void LikeButton_Click(object sender, EventArgs e)
