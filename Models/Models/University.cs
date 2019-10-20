@@ -17,7 +17,5 @@ namespace Models.Models
 
         [JsonProperty("FoundingDate")]
         public DateTime FoundingDate { get; set; }
-        
-
     }
 }

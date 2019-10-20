@@ -15,7 +15,9 @@ namespace App
     {
         static readonly DataManipulations dataManipulations = new DataManipulations(new HttpClient());
         static List<University> foundUniversities;
-        static int selectedUniversity = -1;
+
+        static int selectedUniversityIndex = -1;
+
         static int facultyIndex = -1;
         static List<Faculty> foundFaculties;
         static int currentReviewIndex = 0;
@@ -39,6 +41,16 @@ namespace App
             SUCCESS
         }
 
+        public enum FormType
+        {
+            FORM_LOGIN = 0,
+            FORM_SIGN_UP,
+            FORM_UNIVERSITIES,
+            FORM_SELECTED_UNIVERSITY,
+            FORM_REVIEW,
+            FORM_READ_REVIEW
+        }
+
         internal static async Task SubmitReview(string text, int value, Form reviewForm)
         {
             Review review = new Review()
@@ -47,14 +59,16 @@ namespace App
                 Text = text,
                 Value = value.ToString()
             };
-            if(facultyIndex != -1) // this part only works when we choose from University and Faculty review
+
+            if (facultyIndex != -1) // this part only works when we choose from University and Faculty review
             {
                 review.FacultyGuid = foundFaculties[facultyIndex].FacultyGuid;
             }
             else
             {
-                review.UniGuid = foundUniversities[selectedUniversity].Guid;
+                review.UniGuid = foundUniversities[selectedUniversityIndex].Guid;
             }
+
             var data = "something";
             do
             {
@@ -66,11 +80,9 @@ namespace App
             await dataManipulations.PostDataToServer($"review/create", JsonConvert.SerializeObject(review));
         }
 
-        
-
         internal static void WriteReview(int selectedFaculty, Form form)
         {
-            if(selectedFaculty != -1)
+            if (selectedFaculty != -1)
             {
                 facultyIndex = selectedFaculty;
             }
@@ -78,18 +90,14 @@ namespace App
             {
                 reviewingUniversity = true;
             }
-            ChangeForm(form, GetForm("writeReview"));
+
+            //ChangeForm(form, GetForm(FormType.));
         }
 
         // Returns Name of whatever is reviewed
         internal static string GetNameOfReviewee()
         {
-            return reviewingUniversity ? foundUniversities[selectedUniversity].Name : foundFaculties[facultyIndex].Name; // Will need not only faculty or uni
-        }
-
-        internal static void SignUpClicked(Form form)
-        {
-            ChangeForm(form, GetForm("SignUp"));
+            return reviewingUniversity ? foundUniversities[selectedUniversityIndex].Name : foundFaculties[facultyIndex].Name; // Will need not only faculty or uni
         }
 
         internal static async Task<int> CreateUser(string username, string email, string password)
@@ -128,11 +136,6 @@ namespace App
             return (int)CreateUserReturn.SUCCESS;
         }
 
-        internal static void SuccessfulSignup(Form form)
-        {
-            ChangeForm(form, GetForm("loginNoMessage"));
-        }
-
         // Returns text of current review or empty string if the boundaries are reached
         internal static string GetReviewText()
         {
@@ -155,7 +158,7 @@ namespace App
             if (index == -1)
             {
                 // reviews = GET reviews of selected UNI from db
-                var result = await dataManipulations.GetDataFromServer($"review/reviewsByGuid/{foundUniversities[selectedUniversity].Guid}/{(int)GuidType.UNIVERSITY_GUID}");
+                var result = await dataManipulations.GetDataFromServer($"review/reviewsByGuid/{foundUniversities[selectedUniversityIndex].Guid}/{(int)GuidType.UNIVERSITY_GUID}");
                 if (result != null)
                 {
                     reviews = JsonConvert.DeserializeObject<List<Review>>(result);
@@ -182,7 +185,7 @@ namespace App
                 reviewingUniversity = false;
             }
 
-            ChangeForm(form, GetForm("readReview"));
+            ChangeForm(form, GetForm(FormType.FORM_READ_REVIEW));
         }
 
         // Loads next review if there is one. Arg true = next, false = previous.
@@ -203,18 +206,17 @@ namespace App
                 }
             }
 
-            ChangeForm(form, GetForm("readReview"));
+            ChangeForm(form, GetForm(FormType.FORM_READ_REVIEW));
         }
 
 
         /// <summary>
-        /// Returns list of universities that match the search phrase or null if there are no
+        /// Returns list of universities that match the search phrase or null if there are none
         /// </summary>
         /// <param name="name">University name</param>
         /// <returns></returns>
-        public static async Task<List<string>> GetUniversity(string name)
+        public static async Task<List<string>> GetUniversities(string name)
         {
-            List<University> result = new List<University>();
             string data = await dataManipulations.GetDataFromServer($"university/{name}");
             if (data != null)
             {
@@ -228,30 +230,28 @@ namespace App
             return foundUniversities.Select(uni => uni.Name).ToList();
         }
 
-        // Checks login details with db and opens application on successful login or relaunches login form
-        internal static async Task CheckCredentials(string email, string password, Form form)
+        // Checks login details with database and opens application on successful login
+        internal static async Task TryToLogIn(string email, string password, Form loginForm)
         {
             var result = await dataManipulations.GetDataFromServer($"account/login/{email}/{password}");
-            currentUserGuid = result;
-
             if (String.IsNullOrEmpty(result))
             {
-                ChangeForm(form, GetForm("login"));
+                MessageBox.Show("Account with such credentials does not exist!");
             }
             else
             {
-                ChangeForm(form, GetForm("universities"));
+                currentUserGuid = result;
+                ChangeForm(loginForm, GetForm(FormType.FORM_UNIVERSITIES));
             }
         }
 
         // Opens form for selected University
-        internal static void OpenSelected(int selectedIndex, Form form)
+        internal static void OpenSelectedUniversity(int selectedIndex, Form form)
         {
-            selectedUniversity = selectedIndex;
-            ChangeForm(form, GetForm("university"));
+            selectedUniversityIndex = selectedIndex;
+            ChangeForm(form, GetForm(FormType.FORM_SELECTED_UNIVERSITY));
         }
 
-        // Closes {form} and opens form {changeTo}
         public static void ChangeForm(Form form, Form changeTo)
         {
             form.Hide();
@@ -259,25 +259,22 @@ namespace App
             changeTo.Show();
         }
 
-        // Returns new form of selected name or null if doesnt match
-        public static Form GetForm(string name)
+        public static Form GetForm(FormType formType)
         {
-            switch (name)
+            switch (formType)
             {
-                case "universities":
-                    return new UniversitySearchForm();
-                case "login":
-                    return new LoginForm(true);
-                case "university":
-                    return new SelectedUniversityForm();
-                case "writeReview":
-                    return new ReviewForm();
-                case "readReview":
-                    return new ReadReviewForm();
-                case "SignUp":
+                case FormType.FORM_LOGIN:
+                    return new LoginForm();
+                case FormType.FORM_SIGN_UP:
                     return new SignUpForm();
-                case "loginNoMessage":
-                    return new LoginForm(false);
+                case FormType.FORM_UNIVERSITIES:
+                    return new UniversitySearchForm();
+                case FormType.FORM_SELECTED_UNIVERSITY:
+                    return new SelectedUniversityForm();
+                case FormType.FORM_REVIEW:
+                    return new ReviewForm();
+                case FormType.FORM_READ_REVIEW:
+                    return new ReadReviewForm();
                 default:
                     return null;
             }
@@ -286,9 +283,9 @@ namespace App
         // returns List of faculties names to display/Saves faculties for later use
         public static async Task<List<string>> GetFaculties()
         {
-            if (selectedUniversity != -1)
+            if (selectedUniversityIndex != -1)
             {
-                var data = await dataManipulations.GetDataFromServer($"faculty/{foundUniversities[selectedUniversity].Guid}");
+                var data = await dataManipulations.GetDataFromServer($"faculty/{foundUniversities[selectedUniversityIndex].Guid}");
                 if (data != null)
                 {
                     foundFaculties = JsonConvert.DeserializeObject<List<Faculty>>(data);

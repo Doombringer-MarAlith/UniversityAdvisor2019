@@ -5,20 +5,16 @@ namespace App
 {
     public partial class LoginForm : Form, ILoginForm
     {
-        public LoginForm(bool displayMsg)
+        public LoginForm()
         {
             InitializeComponent();
-            if (displayMsg)
-            {
-                MessageBox.Show("Wrong email or password!");
-            }
         }
 
         private async void LoginButton_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrWhiteSpace(emailTextBox.Text) && !String.IsNullOrWhiteSpace(passwordTextBox.Text))
             {
-                await FormManager.CheckCredentials(emailTextBox.Text, passwordTextBox.Text, this);
+                await FormManager.TryToLogIn(emailTextBox.Text, passwordTextBox.Text, this);
             }
             else
             {
@@ -28,7 +24,7 @@ namespace App
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
-            FormManager.SignUpClicked(this);
+            FormManager.ChangeForm(this, FormManager.GetForm(FormManager.FormType.FORM_SIGN_UP));
         }
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)

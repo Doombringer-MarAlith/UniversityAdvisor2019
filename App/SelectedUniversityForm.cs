@@ -56,5 +56,10 @@ namespace App
                 MessageBox.Show("No faculties found for this university.");
             }
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            FormManager.ChangeForm(this, FormManager.GetForm(FormManager.FormType.FORM_UNIVERSITIES));
+        }
     }
 }

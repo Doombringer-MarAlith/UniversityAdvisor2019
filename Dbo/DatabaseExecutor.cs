@@ -129,7 +129,6 @@ namespace Dbo
             return null;
         }
 
-
         public string ReturnAccountGuid(string email, string password)
         {
             using (var bdoConnection = new SqlConnection(connectionString))
@@ -219,7 +218,6 @@ namespace Dbo
             Logger.Log($"DatabaseExecutor.ReturnReviews({Guid}): Reviews return value is null", Level.Warning);
             return null;
         }
-
 
         public void CreateUniversity(University university)
         {

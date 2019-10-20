@@ -13,7 +13,7 @@ namespace App
             container.AddSingleton<IDataManipulations, DataManipulations>();
             container.AddSingleton<HttpClient>();
             container.AddSingleton<IUniversitySearchForm,UniversitySearchForm>();
-            container.AddTransient<ILoginForm>(s => new LoginForm(false)); //container.AddSingleton<ILoginForm, LoginForm>();
+            container.AddTransient<ILoginForm>(s => new LoginForm()); //container.AddSingleton<ILoginForm, LoginForm>();
             container.AddSingleton<IReviewForm, ReviewForm>();
             container.AddSingleton<ISelectedUniversityForm, SelectedUniversityForm>();
             return container.BuildServiceProvider();

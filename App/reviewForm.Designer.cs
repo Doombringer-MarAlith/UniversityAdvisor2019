@@ -32,6 +32,7 @@
             this.submitButton = new System.Windows.Forms.Button();
             this.numericReview = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.BackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // reviewTextBox
@@ -81,11 +82,22 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Write your review";
             // 
+            // BackButton
+            // 
+            this.BackButton.Location = new System.Drawing.Point(12, 12);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(78, 28);
+            this.BackButton.TabIndex = 4;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // ReviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericReview);
             this.Controls.Add(this.submitButton);
@@ -104,5 +116,6 @@
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.ComboBox numericReview;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BackButton;
     }
 }

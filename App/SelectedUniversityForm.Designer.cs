@@ -35,6 +35,7 @@ namespace App
             this.writeReviewButton = new System.Windows.Forms.Button();
             this.readButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.BackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // universityName
@@ -89,11 +90,22 @@ namespace App
             this.label1.TabIndex = 4;
             this.label1.Text = "Select a faculty (optional)";
             // 
+            // BackButton
+            // 
+            this.BackButton.Location = new System.Drawing.Point(12, 12);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(78, 28);
+            this.BackButton.TabIndex = 5;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // SelectedUniversityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.readButton);
             this.Controls.Add(this.writeReviewButton);
@@ -115,5 +127,6 @@ namespace App
         private System.Windows.Forms.Button writeReviewButton;
         private System.Windows.Forms.Button readButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BackButton;
     }
 }
