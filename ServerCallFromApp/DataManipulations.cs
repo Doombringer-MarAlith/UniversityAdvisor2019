@@ -14,20 +14,22 @@ namespace ServerCallFromApp
             _client = client;
         }
 
+        ~DataManipulations()
+        {
+            _client.Dispose();
+        }
+
         public async Task<string> GetDataFromServer(string url)
         {
-            HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync(Url + url);
+            HttpResponseMessage response = await _client.GetAsync(Url + url);
 
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body.
                 var dataObjects = response.Content.ReadAsStringAsync().Result;
-                client.Dispose();
                 return dataObjects;
             }
 
-            client.Dispose();
             return null;
         }
 
@@ -36,7 +38,6 @@ namespace ServerCallFromApp
             var payload = data;
             HttpContent httpContent = new StringContent(payload, Encoding.UTF8, "application/json");
             await _client.PostAsync(Url + url, httpContent);
-            _client.Dispose();
         }
     }
 }
