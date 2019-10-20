@@ -149,7 +149,7 @@ namespace Dbo
                             guid = reader["Guid"].ToString();
                         }
                         bdoConnection.Close();
-                        if(guid != null)
+                        if (guid != null)
                         {
                             return guid;
                         }
