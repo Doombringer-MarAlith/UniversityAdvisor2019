@@ -29,6 +29,7 @@ namespace App
         {
             titleOfThing.Text = FormManager.GetNameOfReviewee();
             reviewText.Text = FormManager.GetReviewText();
+            textBoxNumber.Text = FormManager.GetReviewNumber();
         }
     }
 }

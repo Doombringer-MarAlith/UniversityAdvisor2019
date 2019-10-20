@@ -147,6 +147,19 @@ namespace App
             return "";
         }
 
+        internal static string GetReviewNumber()
+        {
+            if (reviewLoaded)
+            {
+                if (currentReviewIndex >= 0 && currentReviewIndex < reviews.Count)
+                {
+                    return reviews[currentReviewIndex].Value;
+                }
+            }
+
+            return "";
+        }
+
         /// <summary>
         /// Loads reviews of what is selected
         /// </summary>
