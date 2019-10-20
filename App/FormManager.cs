@@ -53,7 +53,7 @@ namespace App
             }
             else
             {
-                review.UniGuid = foundUnis[selectedUni].Guid;
+                review.UniGuid = foundUniversities[selectedUniversity].Guid;
             }
             var data = "something";
             do
@@ -76,7 +76,7 @@ namespace App
             }
             else
             {
-                reviewingUni = true;
+                reviewingUniversity = true;
             }
             ChangeForm(form, GetForm("writeReview"));
         }
