@@ -45,7 +45,7 @@ namespace App
 
         private async void SelectedUniversity_Load(object sender, EventArgs e)
         {
-            // request server to get faculties of selected university and add them to listbox
+            // Request server to get faculties of selected university and add them to listbox
             List<string> faculties = await FormManager.GetFaculties();
             if (faculties.Count != 0)
             {
@@ -53,7 +53,7 @@ namespace App
             }
             else
             {
-                MessageBox.Show("No faculties found for this university");
+                MessageBox.Show("No faculties found for this university.");
             }
         }
     }

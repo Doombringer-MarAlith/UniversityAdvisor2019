@@ -10,7 +10,7 @@ namespace App
             InitializeComponent();
             if (displayMsg)
             {
-                MessageBox.Show("Wrong email or password");
+                MessageBox.Show("Wrong email or password!");
             }
         }
 
@@ -22,13 +22,18 @@ namespace App
             }
             else
             {
-                MessageBox.Show("You have not entered username or password");
+                MessageBox.Show("Invalid username or password!");
             }
         }
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
             FormManager.SignUpClicked(this);
+        }
+
+        private void PasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            passwordTextBox.PasswordChar = '*';
         }
     }
 }
