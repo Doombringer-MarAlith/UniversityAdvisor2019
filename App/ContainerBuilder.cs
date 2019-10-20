@@ -14,7 +14,7 @@ namespace App
             container.AddSingleton<HttpClient>();
             container.AddSingleton<IUniversitySearchForm,UniversitySearchForm>();
             container.AddTransient<ILoginForm>(s => new LoginForm()); //container.AddSingleton<ILoginForm, LoginForm>();
-            container.AddSingleton<IReviewForm, ReviewForm>();
+            container.AddSingleton<IReviewForm, WriteReviewForm>();
             container.AddSingleton<ISelectedUniversityForm, SelectedUniversityForm>();
             return container.BuildServiceProvider();
         }

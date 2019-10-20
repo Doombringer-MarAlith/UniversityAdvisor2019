@@ -29,11 +29,11 @@ namespace App
             // If no faculty is selected, write review for current selected university
             if (facultiesListBox.SelectedItem == null)
             {
-                FormManager.WriteReviewForSelectedUniversity(this);
+                FormManager.OpenWriteReviewFormForSelectedUniversity(this);
             }
             else
             {
-                FormManager.WriteReviewForSelectedFaculty(facultiesListBox.SelectedIndex, this);
+                FormManager.OpenWriteReviewFormForSelectedFaculty(facultiesListBox.SelectedIndex, this);
             }
         }
 

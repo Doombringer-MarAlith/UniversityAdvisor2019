@@ -34,7 +34,7 @@ namespace App
                         break;
                     case 2:
                         MessageBox.Show("Account created successfully.");
-                        FormManager.ChangeForm(this, FormManager.GetForm(FormManager.FormType.FORM_LOGIN));
+                        FormManager.ChangeForm(this, FormManager.GetForm(FormType.FORM_LOGIN));
                         break;
                     default:
                         break;
@@ -48,7 +48,7 @@ namespace App
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            FormManager.ChangeForm(this, FormManager.GetForm(FormManager.FormType.FORM_LOGIN));
+            FormManager.ChangeForm(this, FormManager.GetForm(FormType.FORM_LOGIN));
         }
     }
 }

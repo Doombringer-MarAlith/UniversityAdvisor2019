@@ -1,6 +1,6 @@
 ﻿namespace App
 {
-    partial class ReviewForm
+    partial class WriteReviewForm
     {
         /// <summary>
         /// Required designer variable.
@@ -92,7 +92,7 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
-            // ReviewForm
+            // WriteReviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,7 +103,7 @@
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.reviewTextBox);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "ReviewForm";
+            this.Name = "WriteReviewForm";
             this.Text = "Review";
             this.ResumeLayout(false);
             this.PerformLayout();

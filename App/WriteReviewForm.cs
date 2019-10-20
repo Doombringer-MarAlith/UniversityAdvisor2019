@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace App
 {
-    public partial class ReviewForm : Form, IReviewForm
+    public partial class WriteReviewForm : Form, IReviewForm
     {
-        public ReviewForm()
+        public WriteReviewForm()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace App
         private void BackButton_Click(object sender, EventArgs e)
         {
             FormManager.ResetSelectedFaculty();
-            FormManager.ChangeForm(this, FormManager.GetForm(FormManager.FormType.FORM_SELECTED_UNIVERSITY));
+            FormManager.ChangeForm(this, FormManager.GetForm(FormType.FORM_SELECTED_UNIVERSITY));
         }
     }
 }

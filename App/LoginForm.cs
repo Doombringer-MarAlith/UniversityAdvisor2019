@@ -24,7 +24,7 @@ namespace App
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
-            FormManager.ChangeForm(this, FormManager.GetForm(FormManager.FormType.FORM_SIGN_UP));
+            FormManager.ChangeForm(this, FormManager.GetForm(FormType.FORM_SIGN_UP));
         }
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
