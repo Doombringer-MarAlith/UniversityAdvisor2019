@@ -14,6 +14,11 @@ namespace App
             }
         }
 
+        private void passwordTextbox_TextChanged(object sender, EventArgs e)
+        {
+            passwordTextBox.PasswordChar = '*';
+        }
+
         private async void LoginButton_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrWhiteSpace(emailTextBox.Text) && !String.IsNullOrWhiteSpace(passwordTextBox.Text))
