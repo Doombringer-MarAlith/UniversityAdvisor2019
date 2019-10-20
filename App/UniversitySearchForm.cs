@@ -15,7 +15,7 @@ namespace App
         {
             if (!String.IsNullOrWhiteSpace(searchBar.Text))
             {
-                List<string> result = await FormManager.GetUniversities(searchBar.Text);
+                List<string> result = await BaseFormManager.GetUniversities(searchBar.Text);
                 if (result.Count != 0)   
                 {
                     universitiesList.Items.Clear();
@@ -36,7 +36,7 @@ namespace App
         {
             if (universitiesList.SelectedItem != null)
             {
-                FormManager.OpenSelectedUniversityForm(universitiesList.SelectedIndex, this);
+                BaseFormManager.OpenSelectedUniversityForm(universitiesList.SelectedIndex, this);
             }
             else
             {

@@ -5,19 +5,23 @@ namespace App
 {
     public partial class ReadReviewForm : Form
     {
-        public ReadReviewForm()
+        private readonly ReadReviewFormManager _loginFormManager;
+
+        public ReadReviewForm(ReadReviewFormManager loginFormManager)
         {
+            _loginFormManager = loginFormManager;
+
             InitializeComponent();
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            FormManager.LoadNextOrPreviousReview(true, this);
+            _loginFormManager.LoadNextOrPreviousReview(true, this);
         }
 
         private void PreviousButton_Click(object sender, EventArgs e)
         {
-            FormManager.LoadNextOrPreviousReview(false, this);
+            _loginFormManager.LoadNextOrPreviousReview(false, this);
         }
 
         private void LikeButton_Click(object sender, EventArgs e)
@@ -27,14 +31,14 @@ namespace App
 
         private void ReadReviewForm_Load(object sender, EventArgs e)
         {
-            titleOfThing.Text = FormManager.GetNameOfReviewee();
-            reviewText.Text = FormManager.GetReviewText();
+            titleOfThing.Text = _loginFormManager.GetNameOfReviewee();
+            reviewText.Text = _loginFormManager.GetReviewText();
         }
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            FormManager.ResetSelectedFaculty();
-            FormManager.ChangeForm(this, FormManager.GetForm(FormType.FORM_SELECTED_UNIVERSITY));
+            _loginFormManager.ResetSelectedFaculty();
+            _loginFormManager.ChangeForm(this, _loginFormManager.GetForm(FormType.FORM_SELECTED_UNIVERSITY));
         }
     }
 }

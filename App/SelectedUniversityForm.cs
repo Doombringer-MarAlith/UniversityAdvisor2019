@@ -16,11 +16,11 @@ namespace App
             // If no faculty is selected, read reviews for current selected university
             if (facultiesListBox.SelectedItem == null)
             {
-                await FormManager.LoadReviewsForSelectedUniversity(this);
+                await BaseFormManager.LoadReviewsForSelectedUniversity(this);
             }
             else
             {
-                await FormManager.LoadReviewsForSelectedFaculty(facultiesListBox.SelectedIndex, this);
+                await BaseFormManager.LoadReviewsForSelectedFaculty(facultiesListBox.SelectedIndex, this);
             }
         }
 
@@ -29,20 +29,20 @@ namespace App
             // If no faculty is selected, write review for current selected university
             if (facultiesListBox.SelectedItem == null)
             {
-                FormManager.OpenWriteReviewFormForSelectedUniversity(this);
+                BaseFormManager.OpenWriteReviewFormForSelectedUniversity(this);
             }
             else
             {
-                FormManager.OpenWriteReviewFormForSelectedFaculty(facultiesListBox.SelectedIndex, this);
+                BaseFormManager.OpenWriteReviewFormForSelectedFaculty(facultiesListBox.SelectedIndex, this);
             }
         }
 
         private async void SelectedUniversity_Load(object sender, EventArgs e)
         {
-            universityName.Text = FormManager.GetSelectedUniversityName();
+            universityName.Text = BaseFormManager.GetSelectedUniversityName();
 
             // Request server to get faculties of selected university and add them to listbox
-            List<string> faculties = await FormManager.GetFaculties();
+            List<string> faculties = await BaseFormManager.GetFaculties();
             if (faculties.Count != 0)
             {
                 facultiesListBox.Items.AddRange(faculties.ToArray());
@@ -55,7 +55,7 @@ namespace App
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            FormManager.CloseSelectedUniversityForm(this);
+            BaseFormManager.CloseSelectedUniversityForm(this);
         }
     }
 }

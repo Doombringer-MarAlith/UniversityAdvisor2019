@@ -5,8 +5,12 @@ namespace App
 {
     public partial class LoginForm : Form, ILoginForm
     {
-        public LoginForm()
+        private readonly LoginFormManager _loginFormManager;
+
+        public LoginForm(LoginFormManager loginFormManager)
         {
+            _loginFormManager = loginFormManager;
+
             InitializeComponent();
         }
 
@@ -14,7 +18,7 @@ namespace App
         {
             if (!String.IsNullOrWhiteSpace(emailTextBox.Text) && !String.IsNullOrWhiteSpace(passwordTextBox.Text))
             {
-                await FormManager.TryToLogIn(emailTextBox.Text, passwordTextBox.Text, this);
+                await _loginFormManager.TryToLogIn(emailTextBox.Text, passwordTextBox.Text, this);
             }
             else
             {
@@ -24,7 +28,7 @@ namespace App
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
-            FormManager.ChangeForm(this, FormManager.GetForm(FormType.FORM_SIGN_UP));
+            _loginFormManager.ChangeForm(this, _loginFormManager.GetForm(FormType.FORM_SIGN_UP));
         }
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)

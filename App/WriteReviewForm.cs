@@ -16,7 +16,7 @@ namespace App
             {
                 if (!String.IsNullOrEmpty(reviewTextBox.Text) && reviewTextBox.Text.Length < 300)
                 {
-                    await FormManager.SubmitReview(reviewTextBox.Text, numericReview.SelectedIndex + 1, this);
+                    await BaseFormManager.SubmitReview(reviewTextBox.Text, numericReview.SelectedIndex + 1, this);
                     MessageBox.Show("Review submitted successfully.");
                 }
                 else
@@ -32,8 +32,8 @@ namespace App
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            FormManager.ResetSelectedFaculty();
-            FormManager.ChangeForm(this, FormManager.GetForm(FormType.FORM_SELECTED_UNIVERSITY));
+            BaseFormManager.ResetSelectedFaculty();
+            BaseFormManager.ChangeForm(this, BaseFormManager.GetForm(FormType.FORM_SELECTED_UNIVERSITY));
         }
     }
 }
