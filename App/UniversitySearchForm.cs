@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 
 namespace App
 {
@@ -15,23 +13,22 @@ namespace App
 
         private async void SearchButton_Click(object sender, EventArgs e)
         {
-            if(!String.IsNullOrWhiteSpace(searchBar.Text))
+            if (!String.IsNullOrWhiteSpace(searchBar.Text))
             {
                 List<string> result = await FormManager.GetUniversity(searchBar.Text);
-                if(result.Count != 0)   
+                if (result.Count != 0)   
                 {
                     universitiesList.Items.Clear();
                     universitiesList.Items.AddRange(result.ToArray());
                 }
                 else
                 {
-                    MessageBox.Show("No universities with that name");
+                    MessageBox.Show("No universities with that name.");
                 }
-
             }
             else
             {
-                MessageBox.Show("Please enter a university you want to search for");
+                MessageBox.Show("Please enter a university you want to search for.");
             }
         }
 
@@ -42,7 +39,7 @@ namespace App
 
         private void SelectUniButton_Click(object sender, EventArgs e)
         {
-            if(universitiesList.SelectedItem != null)
+            if (universitiesList.SelectedItem != null)
             {
                 FormManager.OpenSelected(universitiesList.SelectedIndex, this);
             }

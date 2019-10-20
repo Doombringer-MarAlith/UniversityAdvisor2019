@@ -342,6 +342,47 @@ namespace Dbo
             return null;
         }
 
+
+        public object ReturnReview(string Guid)
+        {
+            using (var bdoConnection = new SqlConnection(connectionString))
+            {
+                bdoConnection.Open();
+                using (var command = new SqlCommand
+                (
+                    $"SELECT * FROM [Reviews] WHERE ReviewGuid = '{Guid}'",
+                    bdoConnection
+                ))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        List<Review> reviews = new List<Review>();
+                        while (reader.Read())
+                        {
+                            var review = new Review
+                            {
+                                UserId = reader["UserId"].ToString(),
+                                UniGuid = reader["UniGuid"].ToString(),
+                                ReviewGuid = reader["ReviewGuid"].ToString(),
+                                Text = reader["Text"].ToString(),
+                                Value = reader["Value"].ToString()
+
+                            };
+                            reviews.Add(review);
+                        }
+                        bdoConnection.Close();
+                        if (reviews != null)
+                        {
+                            return reviews;
+                        }
+                    }
+                }
+            }
+
+            Logger.Log($"DatabaseExecutor.ReturnReview({Guid}): Review return value is null", Level.Warning);
+            return null;
+        }
+
         //might not work, didn't check
         public void CreateReview(Review review)
         {
@@ -351,7 +392,7 @@ namespace Dbo
 
                 using (var command = new SqlCommand
                 (
-                    $"INSERT INTO [UniReviews] VALUES ('{review.UniGuid}','{review.Text}', '{review.Value}', '{review.Value}', '{review.UserId}', '{review.ReviewGuid}')",
+                    $"INSERT INTO [Reviews](UniGuid, Text, Value, UserId, ReviewGuid, FacultyGuid, LecturerGuid, CourseGuid) VALUES ('{review.UniGuid}','{review.Text}', '{review.Value}', '{review.UserId}', '{review.ReviewGuid}', '{review.FacultyGuid}', '{review.LecturerGuid}', '{review.CourseGuid}')",
                     bdoConnection
                 ))
                 {
@@ -361,9 +402,9 @@ namespace Dbo
             }
 
             Logger.Log
-                    (
-                        $"DatabaseExecutor.CreateReview: university review is created with values ({review.UniGuid}, {review.Text}, {review.Value}, {review.UserId}, {review.ReviewGuid} )"
-                    );
+            (
+                $"DatabaseExecutor.CreateReview: review is created with values ({review.UniGuid}, {review.Text}, {review.Value}, {review.UserId}, {review.ReviewGuid} )"
+            );
         }
     }
 }

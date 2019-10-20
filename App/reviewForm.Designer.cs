@@ -37,7 +37,7 @@
             // reviewTextBox
             // 
             this.reviewTextBox.Location = new System.Drawing.Point(141, 76);
-            this.reviewTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reviewTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.reviewTextBox.Name = "reviewTextBox";
             this.reviewTextBox.Size = new System.Drawing.Size(314, 202);
             this.reviewTextBox.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             this.submitButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitButton.Location = new System.Drawing.Point(242, 297);
-            this.submitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.submitButton.Margin = new System.Windows.Forms.Padding(2);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(120, 46);
             this.submitButton.TabIndex = 1;
@@ -65,11 +65,10 @@
             "4",
             "5"});
             this.numericReview.Location = new System.Drawing.Point(506, 76);
-            this.numericReview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericReview.Margin = new System.Windows.Forms.Padding(2);
             this.numericReview.Name = "numericReview";
             this.numericReview.Size = new System.Drawing.Size(53, 21);
             this.numericReview.TabIndex = 2;
-            this.numericReview.SelectedIndexChanged += new System.EventHandler(this.NumericReview_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -91,9 +90,9 @@
             this.Controls.Add(this.numericReview);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.reviewTextBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ReviewForm";
-            this.Text = "reviewForm";
+            this.Text = "Review";
             this.ResumeLayout(false);
             this.PerformLayout();
 

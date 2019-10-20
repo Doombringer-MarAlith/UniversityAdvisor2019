@@ -12,6 +12,15 @@ namespace Models.Models
         [JsonProperty("UniGuid")]
         public string UniGuid { get; set; }
 
+        [JsonProperty("FacultyGuid")]
+        public string FacultyGuid { get; set; }
+
+        [JsonProperty("LecturerGuid")]
+        public string LecturerGuid { get; set; }
+
+        [JsonProperty("CourseGuid")]
+        public string CourseGuid { get; set; }
+        
         [JsonProperty("Text")]
          public string Text { get; set; }
 

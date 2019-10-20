@@ -40,7 +40,7 @@ namespace App
             // universityName
             // 
             this.universityName.Location = new System.Drawing.Point(106, 53);
-            this.universityName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.universityName.Margin = new System.Windows.Forms.Padding(2);
             this.universityName.Name = "universityName";
             this.universityName.Size = new System.Drawing.Size(378, 20);
             this.universityName.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace App
             // 
             this.facultiesListBox.FormattingEnabled = true;
             this.facultiesListBox.Location = new System.Drawing.Point(106, 126);
-            this.facultiesListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.facultiesListBox.Margin = new System.Windows.Forms.Padding(2);
             this.facultiesListBox.Name = "facultiesListBox";
             this.facultiesListBox.Size = new System.Drawing.Size(378, 173);
             this.facultiesListBox.TabIndex = 1;
@@ -58,7 +58,7 @@ namespace App
             // 
             this.writeReviewButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.writeReviewButton.Location = new System.Drawing.Point(355, 318);
-            this.writeReviewButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.writeReviewButton.Margin = new System.Windows.Forms.Padding(2);
             this.writeReviewButton.Name = "writeReviewButton";
             this.writeReviewButton.Size = new System.Drawing.Size(128, 28);
             this.writeReviewButton.TabIndex = 2;
@@ -70,7 +70,7 @@ namespace App
             // 
             this.readButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.readButton.Location = new System.Drawing.Point(106, 318);
-            this.readButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.readButton.Margin = new System.Windows.Forms.Padding(2);
             this.readButton.Name = "readButton";
             this.readButton.Size = new System.Drawing.Size(128, 28);
             this.readButton.TabIndex = 3;
@@ -89,7 +89,7 @@ namespace App
             this.label1.TabIndex = 4;
             this.label1.Text = "Select a faculty (optional)";
             // 
-            // SelectedUniversity
+            // SelectedUniversityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,9 +99,9 @@ namespace App
             this.Controls.Add(this.writeReviewButton);
             this.Controls.Add(this.facultiesListBox);
             this.Controls.Add(this.universityName);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "SelectedUniversity";
-            this.Text = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "SelectedUniversityForm";
+            this.Text = "SelectedUniversity";
             this.Load += new System.EventHandler(this.SelectedUniversity_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

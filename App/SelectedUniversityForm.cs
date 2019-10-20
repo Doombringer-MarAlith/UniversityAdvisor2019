@@ -33,17 +33,19 @@ namespace App
             {
                 // new reviewForm for uni
                 // FormManager opens it up, already has selected index
+                FormManager.WriteReview(-1, this);
             }
             else
             {
                 // new reviewForm to write reviews of selected faculty
                 // send index of selected Faculty
+                FormManager.WriteReview(facultiesListBox.SelectedIndex, this);
             }
         }
 
         private async void SelectedUniversity_Load(object sender, EventArgs e)
         {
-            // request server to get faculties of selected university and add them to listbox
+            // Request server to get faculties of selected university and add them to listbox
             List<string> faculties = await FormManager.GetFaculties();
             if (faculties.Count != 0)
             {
@@ -51,7 +53,7 @@ namespace App
             }
             else
             {
-                MessageBox.Show("No faculties found for this university");
+                MessageBox.Show("No faculties found for this university.");
             }
         }
     }
