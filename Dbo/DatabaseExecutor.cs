@@ -143,11 +143,14 @@ namespace Dbo
                 {
                     using (var reader = command.ExecuteReader())
                     {
-                        //string guid = null;
+                        string guid = null;
                         while (reader.Read())
                         {
-                            var guid = reader["Guid"].ToString();
-                            bdoConnection.Close();
+                            guid = reader["Guid"].ToString();
+                        }
+                        bdoConnection.Close();
+                        if(guid != null)
+                        {
                             return guid;
                         }
                     }
