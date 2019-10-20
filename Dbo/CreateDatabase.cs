@@ -10,7 +10,7 @@ namespace Dbo
 
         public static void Main(string[] args)
         {
-            SqlConnection sqlConnection = new SqlConnection(SqlConnectionString);
+            var sqlConnection = new SqlConnection(SqlConnectionString);
             var fileEntries = Directory.GetFiles("Scripts");
             foreach (var fileEntry in fileEntries)
             {
@@ -27,7 +27,7 @@ namespace Dbo
 
                 sqlConnection.Close();
             }
-            //AddJsonFiles.AddJsons(); // ADDED RANDOMLY. Needs better placement
+            AddJsonFiles.AddJsons(); // ADDED RANDOMLY. Needs better placement
             Console.WriteLine("Database is ready.");
         }
     }

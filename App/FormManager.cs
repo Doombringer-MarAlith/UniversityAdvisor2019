@@ -8,12 +8,13 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System;
 using App.Helpers;
+using ExternalDependencies;
 
 namespace App
 {
     public static class FormManager
     {
-        static readonly DataManipulations dataManipulations = new DataManipulations(new HttpClient());
+        static readonly DataManipulations dataManipulations = new DataManipulations(new HttpInternalClient());
         static List<University> foundUniversities;
         static List<Faculty> foundFaculties;
         static List<Review> foundUniversityReviews;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using ExternalDependencies;
 using Microsoft.Extensions.DependencyInjection;
 using ServerCallFromApp;
 
@@ -11,7 +12,7 @@ namespace App
         {
             var container = new ServiceCollection();
             container.AddSingleton<IDataManipulations, DataManipulations>();
-            container.AddSingleton<HttpClient>();
+            container.AddSingleton<IHttpInternalClient, HttpInternalClient>();
             container.AddSingleton<IUniversitySearchForm,UniversitySearchForm>();
             container.AddTransient<ILoginForm>(s => new LoginForm()); //container.AddSingleton<ILoginForm, LoginForm>();
             container.AddSingleton<IReviewForm, WriteReviewForm>();

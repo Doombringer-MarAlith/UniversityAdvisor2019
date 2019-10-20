@@ -24,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Dbo\Dbo.csproj" />
     <ProjectReference Include="..\Debugger\Debugger.csproj" />
+    <ProjectReference Include="..\ExternalDependencies\ExternalDependencies.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
     <ProjectReference Include="..\ServerCallFromApp\ServerCallFromApp.csproj" />
   </ItemGroup>

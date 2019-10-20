@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using ExternalDependencies;
 using Microsoft.Extensions.DependencyInjection;
 using ServerCallFromApp;
 
@@ -11,7 +12,7 @@ namespace RestApi
         {
             var container = new ServiceCollection();
             container.AddSingleton<IDataManipulations, DataManipulations>();
-            container.AddSingleton<HttpClient>();
+            container.AddSingleton<IHttpInternalClient,HttpInternalClient>();
             return container.BuildServiceProvider();
         }
     }
