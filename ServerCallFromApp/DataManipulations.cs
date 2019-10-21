@@ -1,33 +1,31 @@
 ﻿using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using ExternalDependencies;
 
 namespace ServerCallFromApp
 {
     public class DataManipulations : IDataManipulations
     {
         private const string Url = "https://localhost:44380/api/";
-        private readonly HttpClient _client;
+        private readonly IHttpInternalClient _client;
 
-        public DataManipulations(HttpClient client)
+        public DataManipulations(IHttpInternalClient client)
         {
             _client = client;
         }
 
         public async Task<string> GetDataFromServer(string url)
         {
-            HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync(Url + url);
+            HttpResponseMessage response = await _client.GetAsync(Url + url);
 
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body.
                 var dataObjects = response.Content.ReadAsStringAsync().Result;
-                client.Dispose();
                 return dataObjects;
             }
 
-            client.Dispose();
             return null;
         }
 
@@ -36,7 +34,6 @@ namespace ServerCallFromApp
             var payload = data;
             HttpContent httpContent = new StringContent(payload, Encoding.UTF8, "application/json");
             await _client.PostAsync(Url + url, httpContent);
-            _client.Dispose();
         }
     }
 }

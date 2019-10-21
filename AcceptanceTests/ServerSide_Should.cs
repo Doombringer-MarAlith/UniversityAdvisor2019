@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using ServerCallFromApp;
 using System.Net.Http;
 using System.Threading.Tasks;
+using ExternalDependencies;
 using Xunit;
 
 namespace AcceptanceTests
@@ -14,7 +15,7 @@ namespace AcceptanceTests
         [AutoMoqData]
         public async Task Create_Login_AndGetAccount(Account account)
         {
-            DataManipulations dataManipulations = new DataManipulations(new HttpClient());
+            DataManipulations dataManipulations = new DataManipulations(new HttpInternalClient());
 
             await dataManipulations.PostDataToServer("account/create", JsonConvert.SerializeObject(account));
             var returnGuid = await dataManipulations.GetDataFromServer($"account/login/{account.Email}/{account.Password}");

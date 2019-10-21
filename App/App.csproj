@@ -163,6 +163,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ExternalDependencies\ExternalDependencies.csproj">
+      <Project>{ECBE8326-8B1E-4377-98EA-FCCD01FC144B}</Project>
+      <Name>ExternalDependencies</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{9c5cb54e-e63d-484e-86cd-0b8f073da662}</Project>
       <Name>Models</Name>

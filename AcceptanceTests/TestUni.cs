@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using ExternalDependencies;
 using Xunit;
 
 namespace AcceptanceTests
@@ -16,7 +17,7 @@ namespace AcceptanceTests
         [AutoMoqData]
         public async Task Create_Uni_AndGetUni()
         {
-            DataManipulations dataManipulations = new DataManipulations(new HttpClient());
+            DataManipulations dataManipulations = new DataManipulations(new HttpInternalClient());
             string newGuid = Guid.NewGuid().ToString();
             var uni = new University()
             {
