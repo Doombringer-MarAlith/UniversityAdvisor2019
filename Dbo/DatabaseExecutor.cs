@@ -208,7 +208,7 @@ namespace Dbo
                             reviews.Add(review);
                         }
                         bdoConnection.Close();
-                        if (reviews.IsNullOrEmpty())
+                        if (!reviews.IsNullOrEmpty())
                         {
                             return reviews;
                         }
@@ -268,7 +268,7 @@ namespace Dbo
                             unis.Add(uni);
                         }
                         bdoConnection.Close();
-                        if (unis.IsNullOrEmpty())
+                        if (!unis.IsNullOrEmpty())
                         {
                             return unis;
                         }
@@ -329,7 +329,7 @@ namespace Dbo
                             facs.Add(fac);
                         }
                         bdoConnection.Close();
-                        if (facs.IsNullOrEmpty())
+                        if (!facs.IsNullOrEmpty())
                         {
                             return facs;
                         }
@@ -370,7 +370,7 @@ namespace Dbo
                             reviews.Add(review);
                         }
                         bdoConnection.Close();
-                        if (reviews.IsNullOrEmpty())
+                        if (!reviews.IsNullOrEmpty())
                         {
                             return reviews;
                         }
