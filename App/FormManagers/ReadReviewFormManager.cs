@@ -1,47 +1,27 @@
-﻿using App.Helpers;
-using ExternalDependencies;
-using Models.Models;
-using Newtonsoft.Json;
+﻿using Models.Models;
+using Objektinis;
 using ServerCallFromApp;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App
 {
-    public abstract class ReadReviewFormManager : BaseFormManager
+    public class ReadReviewFormManager : BaseFormManager, IReadReviewFormManager
     {
-        private readonly IDataManipulations _dataManipulations;
-        private  List<University> _foundUniversities;
-        private  List<Faculty> _foundFaculties;
-        private  List<Review> _foundUniversityReviews;
-        private  List<Review> _foundFacultyReviews;
-
-        private  ReviewType _currentReviewSubject = ReviewType.REVIEW_NONE;
-        private  int _currentReviewIndex = 0;
-
-        private  University _selectedUniversity;
-        private  Faculty _selectedFaculty;
-
-        private  string _currentUserGuid;
-
-        protected ReadReviewFormManager(IDataManipulations dataManipulations) : base(dataManipulations)
+        protected ReadReviewFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData) : base(dataManipulations, formManagerData)
         {
-            _dataManipulations = dataManipulations;
         }
 
         // Returns the name of whatever is currently reviewed
-        internal  string GetNameOfReviewee()
+        public string GetNameOfReviewee()
         {
-            switch (_currentReviewSubject)
+            switch (FormManagerData.CurrentReviewSubject)
             {
                 case ReviewType.REVIEW_UNIVERSITY:
-                    return _selectedUniversity.Name;
+                    return FormManagerData.SelectedUniversity.Name;
 
                 case ReviewType.REVIEW_FACULTY:
-                    return _selectedFaculty.Name;
+                    return FormManagerData.SelectedFaculty.Name;
 
                 default:
                     return "";
@@ -49,36 +29,36 @@ namespace App
         }
 
         // Returns text of current review or empty string if the boundaries are reached
-        internal  string GetReviewText()
+        public string GetReviewText()
         {
             List<Review> currentReviewList = GetCurrentReviewListBySubject();
 
-            if (_currentReviewIndex >= 0 && _currentReviewIndex < currentReviewList.Count)
+            if (FormManagerData.CurrentReviewIndex >= 0 && FormManagerData.CurrentReviewIndex < currentReviewList.Count)
             {
-                return currentReviewList[_currentReviewIndex].Text;
+                return currentReviewList[FormManagerData.CurrentReviewIndex].Text;
             }
 
             return "";
         }
 
         // Increments or decrements current review list, and updates the form
-        internal  void LoadNextOrPreviousReview(bool next, Form form)
+        public void LoadNextOrPreviousReview(bool next, Form form)
         {
             if (next)
             {
                 // Check if incremented index would exceed list count limit
-                if (++_currentReviewIndex >= GetCurrentReviewListBySubject().Count)
+                if (++FormManagerData.CurrentReviewIndex >= GetCurrentReviewListBySubject().Count)
                 {
-                    _currentReviewIndex--;
+                    FormManagerData.CurrentReviewIndex--;
                     MessageBox.Show("No more reviews to show!");
                     return;
                 }
             }
             else
             {
-                if (--_currentReviewIndex < 0)
+                if (--FormManagerData.CurrentReviewIndex < 0)
                 {
-                    _currentReviewIndex++;
+                    FormManagerData.CurrentReviewIndex++;
                     MessageBox.Show("No more reviews to show!");
                     return;
                 }
@@ -88,25 +68,25 @@ namespace App
         }
 
         // Returns fetched reviews for either universities or faculties
-        internal  List<Review> GetCurrentReviewListBySubject()
+        public List<Review> GetCurrentReviewListBySubject()
         {
-            switch (_currentReviewSubject)
+            switch (FormManagerData.CurrentReviewSubject)
             {
                 case ReviewType.REVIEW_UNIVERSITY:
-                    return _foundUniversityReviews;
+                    return FormManagerData.FoundUniversityReviews;
 
                 case ReviewType.REVIEW_FACULTY:
-                    return _foundFacultyReviews;
+                    return FormManagerData.FoundFacultyReviews;
 
                 default:
                     return null;
             }
         }
 
-        internal  void ResetSelectedFaculty()
+        public void ResetSelectedFaculty()
         {
-            _selectedFaculty = null;
-            _foundFacultyReviews = null;
+            FormManagerData.SelectedFaculty = null;
+            FormManagerData.FoundFacultyReviews = null;
         }
     }
 }

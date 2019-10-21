@@ -6,8 +6,11 @@ namespace App
 {
     public partial class SelectedUniversityForm : Form, ISelectedUniversityForm
     {
-        public SelectedUniversityForm()
+        private readonly SelectedUniversityFormManager _selectedUniversityFormManager;
+
+        public SelectedUniversityForm(SelectedUniversityFormManager selectedUniversityFormManager)
         {
+            _selectedUniversityFormManager = selectedUniversityFormManager;
             InitializeComponent();
         }
 
@@ -16,11 +19,11 @@ namespace App
             // If no faculty is selected, read reviews for current selected university
             if (facultiesListBox.SelectedItem == null)
             {
-                await BaseFormManager.LoadReviewsForSelectedUniversity(this);
+                await _selectedUniversityFormManager.LoadReviewsForSelectedUniversity(this);
             }
             else
             {
-                await BaseFormManager.LoadReviewsForSelectedFaculty(facultiesListBox.SelectedIndex, this);
+                await _selectedUniversityFormManager.LoadReviewsForSelectedFaculty(facultiesListBox.SelectedIndex, this);
             }
         }
 
@@ -29,20 +32,20 @@ namespace App
             // If no faculty is selected, write review for current selected university
             if (facultiesListBox.SelectedItem == null)
             {
-                BaseFormManager.OpenWriteReviewFormForSelectedUniversity(this);
+                _selectedUniversityFormManager.OpenWriteReviewFormForSelectedUniversity(this);
             }
             else
             {
-                BaseFormManager.OpenWriteReviewFormForSelectedFaculty(facultiesListBox.SelectedIndex, this);
+                _selectedUniversityFormManager.OpenWriteReviewFormForSelectedFaculty(facultiesListBox.SelectedIndex, this);
             }
         }
 
         private async void SelectedUniversity_Load(object sender, EventArgs e)
         {
-            universityName.Text = BaseFormManager.GetSelectedUniversityName();
+            universityName.Text = _selectedUniversityFormManager.GetSelectedUniversityName();
 
             // Request server to get faculties of selected university and add them to listbox
-            List<string> faculties = await BaseFormManager.GetFaculties();
+            List<string> faculties = await _selectedUniversityFormManager.GetFaculties();
             if (faculties.Count != 0)
             {
                 facultiesListBox.Items.AddRange(faculties.ToArray());
@@ -55,7 +58,7 @@ namespace App
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            BaseFormManager.CloseSelectedUniversityForm(this);
+            _selectedUniversityFormManager.CloseSelectedUniversityForm(this);
         }
     }
 }

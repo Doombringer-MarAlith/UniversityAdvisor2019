@@ -13,8 +13,7 @@ namespace AcceptanceTests
 {
     public class TestUni
     {
-        [Theory]
-        [AutoMoqData]
+        [Fact]
         public async Task Create_Uni_AndGetUni()
         {
             DataManipulations dataManipulations = new DataManipulations(new HttpInternalClient());

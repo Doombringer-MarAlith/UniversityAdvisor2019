@@ -5,8 +5,11 @@ namespace App
 {
     public partial class SignUpForm : Form
     {
-        public SignUpForm()
+        private readonly SignUpFormManager _signUpFormManager;
+
+        public SignUpForm( SignUpFormManager signUpFormManager)
         {
+            _signUpFormManager = signUpFormManager;
             InitializeComponent();
         }
 
@@ -24,7 +27,7 @@ namespace App
         {
             if (passwordTextbox.Text.Equals(repeatPasswordTextbox.Text) && passwordTextbox.Text.Length > 4 && !String.IsNullOrWhiteSpace(passwordTextbox.Text))
             {
-                switch (await BaseFormManager.CreateUser(usernameTextBox.Text, emailTextBox.Text, passwordTextbox.Text))
+                switch (await _signUpFormManager.CreateUser(usernameTextBox.Text, emailTextBox.Text, passwordTextbox.Text))
                 {
                     case 0:
                         MessageBox.Show("User with this email already exists!");
@@ -34,7 +37,7 @@ namespace App
                         break;
                     case 2:
                         MessageBox.Show("Account created successfully.");
-                        BaseFormManager.ChangeForm(this, BaseFormManager.GetForm(FormType.FORM_LOGIN));
+                        _signUpFormManager.ChangeForm(this, _signUpFormManager.GetForm(FormType.FORM_LOGIN));
                         break;
                     default:
                         break;
@@ -48,7 +51,7 @@ namespace App
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            BaseFormManager.ChangeForm(this, BaseFormManager.GetForm(FormType.FORM_LOGIN));
+            _signUpFormManager.ChangeForm(this, _signUpFormManager.GetForm(FormType.FORM_LOGIN));
         }
     }
 }

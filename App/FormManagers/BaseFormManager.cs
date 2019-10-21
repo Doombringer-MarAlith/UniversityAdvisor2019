@@ -2,16 +2,19 @@
 using ServerCallFromApp;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Objektinis;
 
 namespace App
 {
-    public abstract class BaseFormManager
+    public abstract class BaseFormManager : IBaseFormManager
     {
-        private readonly IDataManipulations _dataManipulations;
+        internal readonly IDataManipulations DataManipulations;
+        internal FormManagerData FormManagerData;
 
-        protected BaseFormManager(IDataManipulations dataManipulations)
+        protected BaseFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData)
         {
-            _dataManipulations = dataManipulations;
+            DataManipulations = dataManipulations;
+            this.FormManagerData = formManagerData;
         }
 
         public void ChangeForm(Form form, Form changeTo)
