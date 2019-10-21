@@ -1,23 +1,44 @@
 ﻿using System;
-using System.Net.Http;
+using App;
 using ExternalDependencies;
 using Microsoft.Extensions.DependencyInjection;
+using Objektinis.FormManagers;
 using ServerCallFromApp;
 
-namespace App
+namespace Objektinis
 {
-    public class ContainerBuilder
+    internal class ContainerBuilder
     {
+        readonly ServiceCollection _container = new ServiceCollection();
+
+        public ContainerBuilder()
+        {
+            _container.AddSingleton<IDataManipulations, DataManipulations>();
+            _container.AddSingleton<IHttpInternalClient, HttpInternalClient>();
+            _container.AddSingleton(x => new FormManagerData());
+
+            _container.AddSingleton<ILoginFormManager,LoginFormManager>();
+            _container.AddSingleton<IReadReviewFormManager,ReadReviewFormManager>();
+            _container.AddSingleton<ISelectedUniversityFormManager,SelectedUniversityFormManager>();
+            _container.AddSingleton<ISignUpFormManager,SignUpFormManager>();
+            _container.AddSingleton<IUniversitySearchFormManager,UniversitySearchFormManager>();
+            _container.AddSingleton<IWriteReviewFormManager,WriteReviewFormManager>();
+            //-----------------
+            _container.AddSingleton<IBaseFormManager, BaseFormManager>();
+            _container.AddSingleton<IUniversitySearchForm, UniversitySearchForm>();
+            _container.AddSingleton<ILoginForm, LoginForm>();
+            _container.AddSingleton<IWriteReviewForm, WriteReviewForm>();
+            _container.AddSingleton<ISelectedUniversityForm, SelectedUniversityForm>();
+            _container.AddSingleton<IReadReviewForm,ReadReviewForm>();
+            _container.AddSingleton<ISignUpForm, SignUpForm>();
+
+            //-----------------
+      
+            
+        }
         public IServiceProvider Build()
         {
-            var container = new ServiceCollection();
-            container.AddSingleton<IDataManipulations, DataManipulations>();
-            container.AddSingleton<IHttpInternalClient, HttpInternalClient>();
-            container.AddSingleton<IUniversitySearchForm,UniversitySearchForm>();
-            container.AddTransient<ILoginForm>(s => new LoginForm()); //container.AddSingleton<ILoginForm, LoginForm>();
-            container.AddSingleton<IReviewForm, WriteReviewForm>();
-            container.AddSingleton<ISelectedUniversityForm, SelectedUniversityForm>();
-            return container.BuildServiceProvider();
+            return _container.BuildServiceProvider();
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Dbo
 {
     public class AddJsonFiles
     {
-        private static readonly string SqlConnectionString = DatabaseExecutor.connectionString;
+        private static readonly string SqlConnectionString = DatabaseExecutor.ConnectionString;
 
         private static readonly DatabaseExecutor db = new DatabaseExecutor();
 

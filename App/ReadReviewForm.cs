@@ -1,23 +1,28 @@
 ﻿using System;
 using System.Windows.Forms;
+using Objektinis.FormManagers;
 
 namespace App
 {
-    public partial class ReadReviewForm : Form
+    public partial class ReadReviewForm : Form, IReadReviewForm
     {
-        public ReadReviewForm()
+        private readonly IReadReviewFormManager _readReviewFormManager;
+
+        public ReadReviewForm(IReadReviewFormManager readReviewFormManager)
         {
+            _readReviewFormManager = readReviewFormManager;
+
             InitializeComponent();
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            FormManager.LoadNextOrPreviousReview(true, this);
+            _readReviewFormManager.LoadNextOrPreviousReview(true, this);
         }
 
         private void PreviousButton_Click(object sender, EventArgs e)
         {
-            FormManager.LoadNextOrPreviousReview(false, this);
+            _readReviewFormManager.LoadNextOrPreviousReview(false, this);
         }
 
         private void LikeButton_Click(object sender, EventArgs e)
@@ -27,14 +32,14 @@ namespace App
 
         private void ReadReviewForm_Load(object sender, EventArgs e)
         {
-            titleOfThing.Text = FormManager.GetNameOfReviewee();
-            reviewText.Text = FormManager.GetReviewText();
+            titleOfThing.Text = _readReviewFormManager.GetNameOfReview();
+            reviewText.Text = _readReviewFormManager.GetReviewText();
         }
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            FormManager.ResetSelectedFaculty();
-            FormManager.ChangeForm(this, FormManager.GetForm(FormType.FORM_SELECTED_UNIVERSITY));
+            _readReviewFormManager.ResetSelectedFaculty();
+            _readReviewFormManager.ChangeForm(this, _readReviewFormManager.GetForm(FormType.FormSelectedUniversity));
         }
     }
 }

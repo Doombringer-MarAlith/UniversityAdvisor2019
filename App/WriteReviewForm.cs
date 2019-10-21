@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Windows.Forms;
+using Objektinis.FormManagers;
 
 namespace App
 {
-    public partial class WriteReviewForm : Form, IReviewForm
+    public partial class WriteReviewForm : Form, IWriteReviewForm
     {
-        public WriteReviewForm()
+        private readonly IWriteReviewFormManager _writeReviewFormManager;
+
+        public WriteReviewForm(IWriteReviewFormManager writeReviewFormManager)
         {
+            _writeReviewFormManager = writeReviewFormManager;
             InitializeComponent();
         }
 
@@ -16,7 +20,7 @@ namespace App
             {
                 if (!String.IsNullOrEmpty(reviewTextBox.Text) && reviewTextBox.Text.Length < 300)
                 {
-                    await FormManager.SubmitReview(reviewTextBox.Text, numericReview.SelectedIndex + 1, this);
+                    await _writeReviewFormManager.SubmitReview(reviewTextBox.Text, numericReview.SelectedIndex + 1, this);
                     MessageBox.Show("Review submitted successfully.");
                 }
                 else
@@ -32,8 +36,8 @@ namespace App
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            FormManager.ResetSelectedFaculty();
-            FormManager.ChangeForm(this, FormManager.GetForm(FormType.FORM_SELECTED_UNIVERSITY));
+            _writeReviewFormManager.ResetSelectedFaculty();
+            _writeReviewFormManager.ChangeForm(this, _writeReviewFormManager.GetForm(FormType.FormSelectedUniversity));
         }
     }
 }

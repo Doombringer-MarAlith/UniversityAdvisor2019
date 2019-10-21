@@ -69,13 +69,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormManagerData.cs" />
+    <Compile Include="FormManagers\IBaseFormManager.cs" />
+    <Compile Include="FormManagers\ILoginFormManager.cs" />
+    <Compile Include="FormManagers\IReadReviewFormManager.cs" />
+    <Compile Include="FormManagers\ISelectedUniversityFormManager.cs" />
+    <Compile Include="FormManagers\ISignUpFormManager.cs" />
+    <Compile Include="FormManagers\IUniversitySearchFormManager.cs" />
+    <Compile Include="FormManagers\IWriteReviewFormManager.cs" />
+    <Compile Include="FormManagers\SelectedUniversityFormManager.cs" />
+    <Compile Include="FormManagers\WriteReviewFormManager.cs" />
+    <Compile Include="FormManagers\UniversitySearchFormManager.cs" />
+    <Compile Include="FormManagers\SignUpFormManager.cs" />
+    <Compile Include="FormManagers\ReadReviewFormManager.cs" />
+    <Compile Include="FormManagers\LoginFormManager.cs" />
     <Compile Include="ContainerBuilder.cs" />
-    <Compile Include="FormManager.cs" />
-    <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="FormManagers\BaseFormManager.cs" />
     <Compile Include="ILoginForm.cs" />
-    <Compile Include="IReviewForm.cs" />
+    <Compile Include="IReadReviewForm.cs" />
     <Compile Include="ISelectedUniversityForm.cs" />
+    <Compile Include="ISignUpForm.cs" />
     <Compile Include="IUniversitySearchForm.cs" />
+    <Compile Include="IWriteReviewForm.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

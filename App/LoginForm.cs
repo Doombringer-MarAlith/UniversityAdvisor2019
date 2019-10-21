@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Windows.Forms;
+using App;
+using Objektinis.FormManagers;
 
-namespace App
+namespace Objektinis
 {
     public partial class LoginForm : Form, ILoginForm
     {
-        public LoginForm()
+        private readonly ILoginFormManager _loginFormManager;
+
+        public LoginForm(ILoginFormManager loginFormManager)
         {
+            _loginFormManager = loginFormManager;
+
             InitializeComponent();
         }
 
@@ -14,7 +20,7 @@ namespace App
         {
             if (!String.IsNullOrWhiteSpace(emailTextBox.Text) && !String.IsNullOrWhiteSpace(passwordTextBox.Text))
             {
-                await FormManager.TryToLogIn(emailTextBox.Text, passwordTextBox.Text, this);
+                await _loginFormManager.TryToLogIn(emailTextBox.Text, passwordTextBox.Text, this);
             }
             else
             {
@@ -24,7 +30,7 @@ namespace App
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
-            FormManager.ChangeForm(this, FormManager.GetForm(FormType.FORM_SIGN_UP));
+            _loginFormManager.ChangeForm(this, _loginFormManager.GetForm(FormType.FormSignUp));
         }
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)

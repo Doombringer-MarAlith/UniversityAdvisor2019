@@ -6,7 +6,7 @@ namespace Dbo
 {
     internal class CreateDatabase
     {
-        private static readonly string SqlConnectionString = DatabaseExecutor.connectionString;
+        private static readonly string SqlConnectionString = DatabaseExecutor.ConnectionString;
 
         public static void Main(string[] args)
         {
@@ -27,7 +27,7 @@ namespace Dbo
 
                 sqlConnection.Close();
             }
-            AddJsonFiles.AddJsons(); // ADDED RANDOMLY. Needs better placement
+           // AddJsonFiles.AddJsons(); // ADDED RANDOMLY. Needs better placement
             Console.WriteLine("Database is ready.");
         }
     }
