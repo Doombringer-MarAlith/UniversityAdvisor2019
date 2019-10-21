@@ -25,7 +25,7 @@ namespace App
             }
             else
             {
-                return null;
+                return new List<string>();
             }
 
             return FormManagerData.FoundUniversities.Select(uni => uni.Name).ToList();

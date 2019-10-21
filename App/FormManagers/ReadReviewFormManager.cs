@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Windows.Forms;
-using App;
+﻿using App;
 using Models.Models;
 using ServerCallFromApp;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace Objektinis.FormManagers
 {
@@ -14,7 +14,7 @@ namespace Objektinis.FormManagers
 
         // Returns the name of whatever is currently reviewed
         public string GetNameOfReview()
-        { 
+        {
             switch (FormManagerData.CurrentReviewSubject)
             {
                 case ReviewType.REVIEW_UNIVERSITY:
@@ -79,7 +79,7 @@ namespace Objektinis.FormManagers
                     return FormManagerData.FoundFacultyReviews;
 
                 default:
-                    return null;
+                    return new List<Review>();
             }
         }
 

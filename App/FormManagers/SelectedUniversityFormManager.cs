@@ -76,7 +76,7 @@ namespace App
                 }
             }
 
-            return null;
+            return new List<string>();
         }
 
         public string GetSelectedUniversityName()

@@ -32,7 +32,7 @@ namespace Objektinis.FormManagers
                 review.UniGuid = FormManagerData.SelectedUniversity.Guid;
             }
 
-            var data = "something";
+            string data;
             do
             {
                 review.ReviewGuid = Guid.NewGuid().ToString();

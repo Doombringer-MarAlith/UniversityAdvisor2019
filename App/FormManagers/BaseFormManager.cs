@@ -1,11 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using ServerCallFromApp;
-using System;
-using System.ComponentModel.Design;
-using System.Net.Http;
-using System.Windows.Forms;
 using Objektinis;
 using Objektinis.FormManagers;
+using ServerCallFromApp;
+using System;
+using System.Windows.Forms;
 
 namespace App
 {
@@ -29,11 +27,10 @@ namespace App
 
         public Form GetForm(FormType formType)
         {
-
             switch (formType)
             {
                 case FormType.FormLogin:
-                    return (Form) Program.Container.GetService<ILoginForm>();
+                    return (Form)Program.Container.GetService<ILoginForm>();
 
                 case FormType.FormSignUp:
                     return (Form)Program.Container.GetService<ISignUpForm>();

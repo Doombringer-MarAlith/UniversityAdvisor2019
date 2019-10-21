@@ -6,23 +6,23 @@ namespace App
 {
     public partial class ReadReviewForm : Form, IReadReviewForm
     {
-        private readonly IReadReviewFormManager _loginFormManager;
+        private readonly IReadReviewFormManager _readReviewFormManager;
 
-        public ReadReviewForm(IReadReviewFormManager loginFormManager)
+        public ReadReviewForm(IReadReviewFormManager readReviewFormManager)
         {
-            _loginFormManager = loginFormManager;
+            _readReviewFormManager = readReviewFormManager;
 
             InitializeComponent();
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            _loginFormManager.LoadNextOrPreviousReview(true, this);
+            _readReviewFormManager.LoadNextOrPreviousReview(true, this);
         }
 
         private void PreviousButton_Click(object sender, EventArgs e)
         {
-            _loginFormManager.LoadNextOrPreviousReview(false, this);
+            _readReviewFormManager.LoadNextOrPreviousReview(false, this);
         }
 
         private void LikeButton_Click(object sender, EventArgs e)
@@ -32,14 +32,14 @@ namespace App
 
         private void ReadReviewForm_Load(object sender, EventArgs e)
         {
-            titleOfThing.Text = _loginFormManager.GetNameOfReview();
-            reviewText.Text = _loginFormManager.GetReviewText();
+            titleOfThing.Text = _readReviewFormManager.GetNameOfReview();
+            reviewText.Text = _readReviewFormManager.GetReviewText();
         }
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            _loginFormManager.ResetSelectedFaculty();
-            _loginFormManager.ChangeForm(this, _loginFormManager.GetForm(FormType.FormSelectedUniversity));
+            _readReviewFormManager.ResetSelectedFaculty();
+            _readReviewFormManager.ChangeForm(this, _readReviewFormManager.GetForm(FormType.FormSelectedUniversity));
         }
     }
 }

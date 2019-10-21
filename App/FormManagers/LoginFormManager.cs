@@ -1,14 +1,13 @@
-﻿using System;
+﻿using App;
+using ServerCallFromApp;
+using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using App;
-using ServerCallFromApp;
 
 namespace Objektinis.FormManagers
 {
     public class LoginFormManager : BaseFormManager, ILoginFormManager
     {
-
         public LoginFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData) : base(dataManipulations, formManagerData)
         {
         }

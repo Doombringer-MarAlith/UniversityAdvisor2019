@@ -4,12 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Globalization;
+using Castle.Core.Internal;
 
 namespace Dbo
 {
     public class DatabaseExecutor
     {
-        internal static string connectionString =
+        internal static string ConnectionString =
             @"Server=(localdb)\madder;Database=UniversityAdvisor;Trusted_Connection=True;";
 
         enum GuidEnum
@@ -24,7 +25,7 @@ namespace Dbo
 
         public void CreateAccount(Account account)
         {
-            using (var bdoConnection = new SqlConnection(connectionString))
+            using (var bdoConnection = new SqlConnection(ConnectionString))
             {
                 bdoConnection.Open();
 
@@ -47,7 +48,7 @@ namespace Dbo
 
         public string CheckAccountEmail(string email)
         {
-            using (var bdoConnection = new SqlConnection(connectionString))
+            using (var bdoConnection = new SqlConnection(ConnectionString))
             {
                 bdoConnection.Open();
                 using (var command = new SqlCommand
@@ -72,7 +73,7 @@ namespace Dbo
 
         public string CheckAccountUsername(string username)
         {
-            using (var bdoConnection = new SqlConnection(connectionString))
+            using (var bdoConnection = new SqlConnection(ConnectionString))
             {
                 bdoConnection.Open();
                 using (var command = new SqlCommand
@@ -97,7 +98,7 @@ namespace Dbo
 
         public Account ReturnAccount(string id)
         {
-            using (var bdoConnection = new SqlConnection(connectionString))
+            using (var bdoConnection = new SqlConnection(ConnectionString))
             {
                 bdoConnection.Open();
                 using (var command = new SqlCommand
@@ -131,7 +132,7 @@ namespace Dbo
 
         public string ReturnAccountGuid(string email, string password)
         {
-            using (var bdoConnection = new SqlConnection(connectionString))
+            using (var bdoConnection = new SqlConnection(ConnectionString))
             {
                 bdoConnection.Open();
                 using (var command = new SqlCommand
@@ -162,7 +163,7 @@ namespace Dbo
 
         public void DeleteAccount(string id)
         {
-            using (var bdoConnection = new SqlConnection(connectionString))
+            using (var bdoConnection = new SqlConnection(ConnectionString))
             {
                 bdoConnection.Open();
                 using (var command = new SqlCommand
@@ -181,7 +182,7 @@ namespace Dbo
         public object ReturnReviews(string Guid, int guidType)
         {
             string GuidType = ((GuidEnum)guidType).ToString();
-            using (var bdoConnection = new SqlConnection(connectionString))
+            using (var bdoConnection = new SqlConnection(ConnectionString))
             {
                 bdoConnection.Open();
                 using (var command = new SqlCommand
@@ -207,7 +208,7 @@ namespace Dbo
                             reviews.Add(review);
                         }
                         bdoConnection.Close();
-                        if (reviews != null)
+                        if (reviews.IsNullOrEmpty())
                         {
                             return reviews;
                         }
@@ -221,7 +222,7 @@ namespace Dbo
 
         public void CreateUniversity(University university)
         {
-            using (var bdoConnection = new SqlConnection(connectionString))
+            using (var bdoConnection = new SqlConnection(ConnectionString))
             {
                 bdoConnection.Open();
 
@@ -245,7 +246,7 @@ namespace Dbo
 
         public List<University> ReturnUniversities(string name)
         {
-            using (var bdoConnection = new SqlConnection(connectionString))
+            using (var bdoConnection = new SqlConnection(ConnectionString))
             {
                 bdoConnection.Open();
                 using (var command = new SqlCommand
@@ -267,7 +268,7 @@ namespace Dbo
                             unis.Add(uni);
                         }
                         bdoConnection.Close();
-                        if (unis != null)
+                        if (unis.IsNullOrEmpty())
                         {
                             return unis;
                         }
@@ -281,7 +282,7 @@ namespace Dbo
 
         public void CreateFaculty(Faculty faculty)
         {
-            using (var bdoConnection = new SqlConnection(connectionString))
+            using (var bdoConnection = new SqlConnection(ConnectionString))
             {
                 bdoConnection.Open();
 
@@ -305,7 +306,7 @@ namespace Dbo
 
         public List<Faculty> ReturnFaculties(string guid)
         {
-            using (var bdoConnection = new SqlConnection(connectionString))
+            using (var bdoConnection = new SqlConnection(ConnectionString))
             {
                 bdoConnection.Open();
                 using (var command = new SqlCommand
@@ -328,7 +329,7 @@ namespace Dbo
                             facs.Add(fac);
                         }
                         bdoConnection.Close();
-                        if (facs != null)
+                        if (facs.IsNullOrEmpty())
                         {
                             return facs;
                         }
@@ -343,7 +344,7 @@ namespace Dbo
 
         public object ReturnReview(string Guid)
         {
-            using (var bdoConnection = new SqlConnection(connectionString))
+            using (var bdoConnection = new SqlConnection(ConnectionString))
             {
                 bdoConnection.Open();
                 using (var command = new SqlCommand
@@ -369,7 +370,7 @@ namespace Dbo
                             reviews.Add(review);
                         }
                         bdoConnection.Close();
-                        if (reviews != null)
+                        if (reviews.IsNullOrEmpty())
                         {
                             return reviews;
                         }
@@ -384,7 +385,7 @@ namespace Dbo
         //might not work, didn't check
         public void CreateReview(Review review)
         {
-            using (var bdoConnection = new SqlConnection(connectionString))
+            using (var bdoConnection = new SqlConnection(ConnectionString))
             {
                 bdoConnection.Open();
 
