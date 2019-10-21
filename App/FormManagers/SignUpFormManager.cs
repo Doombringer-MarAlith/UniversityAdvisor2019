@@ -9,7 +9,7 @@ namespace App
 {
     public class SignUpFormManager : BaseFormManager, ISignUpFormManager
     {
-        protected SignUpFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData) : base(dataManipulations, formManagerData)
+        public SignUpFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData) : base(dataManipulations, formManagerData)
         {
         }
 

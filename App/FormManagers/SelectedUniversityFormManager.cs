@@ -11,7 +11,7 @@ namespace App
 {
     public class SelectedUniversityFormManager : BaseFormManager, ISelectedUniversityFormManager
     {
-        protected SelectedUniversityFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData) : base(dataManipulations, formManagerData)
+        public SelectedUniversityFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData) : base(dataManipulations, formManagerData)
         {
         }
 
@@ -19,13 +19,13 @@ namespace App
         {
             FormManagerData.SelectedFaculty = FormManagerData.FoundFaculties[selectedFacultyIndex];
             FormManagerData.CurrentReviewSubject = ReviewType.REVIEW_FACULTY;
-            ChangeForm(form, GetForm(FormType.FORM_WRITE_REVIEW));
+            ChangeForm(form, GetForm(FormType.FormWriteReview));
         }
 
         public void OpenWriteReviewFormForSelectedUniversity(Form form)
         {
             FormManagerData.CurrentReviewSubject = ReviewType.REVIEW_UNIVERSITY;
-            ChangeForm(form, GetForm(FormType.FORM_WRITE_REVIEW));
+            ChangeForm(form, GetForm(FormType.FormWriteReview));
         }
 
         // Loads reviews of current selected university and opens review reading form
@@ -35,14 +35,14 @@ namespace App
 
             if (FormManagerData.SelectedUniversity != null)
             {
-                var result = await DataManipulations.GetDataFromServer($"review/reviewsByGuid/{FormManagerData.SelectedUniversity.Guid}/{(int)GuidType.UNIVERSITY_GUID}");
+                var result = await DataManipulations.GetDataFromServer($"review/reviewsByGuid/{FormManagerData.SelectedUniversity.Guid}/{(int)GuidType.UniversityGuid}");
                 if (result != null)
                 {
                     FormManagerData.FoundUniversityReviews = JsonConvert.DeserializeObject<List<Review>>(result);
                 }
             }
 
-            ChangeForm(form, GetForm(FormType.FORM_READ_REVIEW));
+            ChangeForm(form, GetForm(FormType.FormReadReview));
         }
 
         // Loads reviews of current selected faculty and opens review reading form
@@ -53,14 +53,14 @@ namespace App
 
             if (FormManagerData.SelectedFaculty != null)
             {
-                var result = await DataManipulations.GetDataFromServer($"review/reviewsByGuid/{FormManagerData.SelectedFaculty.FacultyGuid}/{(int)GuidType.FACULTY_GUID}");
+                var result = await DataManipulations.GetDataFromServer($"review/reviewsByGuid/{FormManagerData.SelectedFaculty.FacultyGuid}/{(int)GuidType.FacultyGuid}");
                 if (result != null)
                 {
                     FormManagerData.FoundFacultyReviews = JsonConvert.DeserializeObject<List<Review>>(result);
                 }
             }
 
-            ChangeForm(form, GetForm(FormType.FORM_READ_REVIEW));
+            ChangeForm(form, GetForm(FormType.FormReadReview));
         }
 
         // Returns a list of faculty names to display and saves faculties for later use
@@ -89,7 +89,7 @@ namespace App
             ResetSelectedFaculty();
             ResetSelectedUniversity();
 
-            ChangeForm(form, GetForm(FormType.FORM_UNIVERSITIES));
+            ChangeForm(form, GetForm(FormType.FormUniversities));
         }
 
         public void ResetSelectedUniversity()

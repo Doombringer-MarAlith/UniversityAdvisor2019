@@ -6,9 +6,9 @@ namespace App
 {
     public partial class UniversitySearchForm : Form, IUniversitySearchForm
     {
-        private readonly UniversitySearchFormManager _universitySearchFormManager;
+        private readonly IUniversitySearchFormManager _universitySearchFormManager;
 
-        public UniversitySearchForm(UniversitySearchFormManager universitySearchFormManager)
+        public UniversitySearchForm(IUniversitySearchFormManager universitySearchFormManager)
         {
             _universitySearchFormManager = universitySearchFormManager;
             InitializeComponent();

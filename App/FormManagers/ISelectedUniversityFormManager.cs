@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Objektinis.FormManagers;
 
 namespace App
 {
-    public interface ISelectedUniversityFormManager
+    public interface ISelectedUniversityFormManager : IBaseFormManager
     {
         void OpenWriteReviewFormForSelectedFaculty(int selectedFacultyIndex, Form form);
         void OpenWriteReviewFormForSelectedUniversity(Form form);

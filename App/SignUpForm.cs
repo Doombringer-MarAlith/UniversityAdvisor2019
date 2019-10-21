@@ -3,11 +3,11 @@ using System.Windows.Forms;
 
 namespace App
 {
-    public partial class SignUpForm : Form
+    public partial class SignUpForm : Form, ISignUpForm
     {
-        private readonly SignUpFormManager _signUpFormManager;
+        private readonly ISignUpFormManager _signUpFormManager;
 
-        public SignUpForm( SignUpFormManager signUpFormManager)
+        public SignUpForm(ISignUpFormManager signUpFormManager)
         {
             _signUpFormManager = signUpFormManager;
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace App
                         break;
                     case 2:
                         MessageBox.Show("Account created successfully.");
-                        _signUpFormManager.ChangeForm(this, _signUpFormManager.GetForm(FormType.FORM_LOGIN));
+                        _signUpFormManager.ChangeForm(this, _signUpFormManager.GetForm(FormType.FormLogin));
                         break;
                     default:
                         break;
@@ -51,7 +51,7 @@ namespace App
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            _signUpFormManager.ChangeForm(this, _signUpFormManager.GetForm(FormType.FORM_LOGIN));
+            _signUpFormManager.ChangeForm(this, _signUpFormManager.GetForm(FormType.FormLogin));
         }
     }
 }

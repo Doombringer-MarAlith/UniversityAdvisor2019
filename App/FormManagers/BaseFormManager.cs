@@ -1,12 +1,15 @@
-﻿using Models.Models;
+﻿using Microsoft.Extensions.DependencyInjection;
 using ServerCallFromApp;
-using System.Collections.Generic;
+using System;
+using System.ComponentModel.Design;
+using System.Net.Http;
 using System.Windows.Forms;
 using Objektinis;
+using Objektinis.FormManagers;
 
 namespace App
 {
-    public abstract class BaseFormManager : IBaseFormManager
+    public class BaseFormManager : IBaseFormManager
     {
         internal readonly IDataManipulations DataManipulations;
         internal FormManagerData FormManagerData;
@@ -14,7 +17,7 @@ namespace App
         protected BaseFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData)
         {
             DataManipulations = dataManipulations;
-            this.FormManagerData = formManagerData;
+            FormManagerData = formManagerData;
         }
 
         public void ChangeForm(Form form, Form changeTo)
@@ -26,48 +29,49 @@ namespace App
 
         public Form GetForm(FormType formType)
         {
+
             switch (formType)
             {
-                case FormType.FORM_LOGIN:
-                    return new LoginForm();
+                case FormType.FormLogin:
+                    return (Form) Program.Container.GetService<ILoginForm>();
 
-                case FormType.FORM_SIGN_UP:
-                    return new SignUpForm();
+                case FormType.FormSignUp:
+                    return (Form)Program.Container.GetService<ISignUpForm>();
 
-                case FormType.FORM_UNIVERSITIES:
-                    return new UniversitySearchForm();
+                case FormType.FormUniversities:
+                    return (Form)Program.Container.GetService<IUniversitySearchForm>();
 
-                case FormType.FORM_SELECTED_UNIVERSITY:
-                    return new SelectedUniversityForm();
+                case FormType.FormSelectedUniversity:
+                    return (Form)Program.Container.GetService<ISelectedUniversityForm>();
 
-                case FormType.FORM_WRITE_REVIEW:
-                    return new WriteReviewForm();
+                case FormType.FormWriteReview:
+                    return (Form)Program.Container.GetService<IWriteReviewForm>();
 
-                case FormType.FORM_READ_REVIEW:
-                    return new ReadReviewForm();
+                case FormType.FormReadReview:
+                    return (Form)Program.Container.GetService<IReadReviewForm>();
 
                 default:
-                    return null;
+                    throw new ArgumentException("Could not create form");
             }
         }
     }
 
     public enum FormType
     {
-        FORM_LOGIN,
-        FORM_SIGN_UP,
-        FORM_UNIVERSITIES,
-        FORM_SELECTED_UNIVERSITY,
-        FORM_WRITE_REVIEW,
-        FORM_READ_REVIEW
+        FormLogin,
+        FormSignUp,
+        FormUniversities,
+        FormSelectedUniversity,
+        FormWriteReview,
+        FormReadReview
     }
 
     internal enum GuidType
     {
-        UNIVERSITY_GUID,
-        FACULTY_GUID,
-        LECTURER_GUID,
-        UNIVERSITY_PROGRAMME_GUID
+        UniversityGuid,
+        FacultyGuid,
+        LecturerGuid,
+        UniversityProgrammeGuid
     }
 
     internal enum CreateUserReturn

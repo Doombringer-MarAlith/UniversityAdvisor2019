@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Windows.Forms;
+using App;
+using Objektinis.FormManagers;
 
-namespace App
+namespace Objektinis
 {
     public partial class LoginForm : Form, ILoginForm
     {
-        private readonly LoginFormManager _loginFormManager;
+        private readonly ILoginFormManager _loginFormManager;
 
-        public LoginForm(LoginFormManager loginFormManager)
+        public LoginForm(ILoginFormManager loginFormManager)
         {
             _loginFormManager = loginFormManager;
 
@@ -28,7 +30,7 @@ namespace App
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
-            _loginFormManager.ChangeForm(this, _loginFormManager.GetForm(FormType.FORM_SIGN_UP));
+            _loginFormManager.ChangeForm(this, _loginFormManager.GetForm(FormType.FormSignUp));
         }
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)

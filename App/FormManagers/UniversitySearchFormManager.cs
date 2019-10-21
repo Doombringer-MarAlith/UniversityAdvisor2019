@@ -11,7 +11,7 @@ namespace App
 {
     public class UniversitySearchFormManager : BaseFormManager, IUniversitySearchFormManager
     {
-        protected UniversitySearchFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData) : base(dataManipulations, formManagerData)
+        public UniversitySearchFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData) : base(dataManipulations, formManagerData)
         {
         }
 
@@ -34,7 +34,7 @@ namespace App
         public void OpenSelectedUniversityForm(int selectedUniversityIndex, Form form)
         {
             FormManagerData.SelectedUniversity = FormManagerData.FoundUniversities[selectedUniversityIndex];
-            ChangeForm(form, GetForm(FormType.FORM_SELECTED_UNIVERSITY));
+            ChangeForm(form, GetForm(FormType.FormSelectedUniversity));
         }
     }
 }

@@ -1,15 +1,15 @@
-﻿using ServerCallFromApp;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Objektinis;
+using App;
+using ServerCallFromApp;
 
-namespace App
+namespace Objektinis.FormManagers
 {
     public class LoginFormManager : BaseFormManager, ILoginFormManager
     {
 
-        protected LoginFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData) : base(dataManipulations, formManagerData)
+        public LoginFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData) : base(dataManipulations, formManagerData)
         {
         }
 
@@ -23,7 +23,7 @@ namespace App
             else
             {
                 FormManagerData.CurrentUserGuid = result;
-                ChangeForm(loginForm, GetForm(FormType.FORM_UNIVERSITIES));
+                ChangeForm(loginForm, GetForm(FormType.FormUniversities));
             }
         }
     }

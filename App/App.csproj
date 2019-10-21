@@ -86,9 +86,11 @@
     <Compile Include="ContainerBuilder.cs" />
     <Compile Include="FormManagers\BaseFormManager.cs" />
     <Compile Include="ILoginForm.cs" />
-    <Compile Include="IReviewForm.cs" />
+    <Compile Include="IReadReviewForm.cs" />
     <Compile Include="ISelectedUniversityForm.cs" />
+    <Compile Include="ISignUpForm.cs" />
     <Compile Include="IUniversitySearchForm.cs" />
+    <Compile Include="IWriteReviewForm.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

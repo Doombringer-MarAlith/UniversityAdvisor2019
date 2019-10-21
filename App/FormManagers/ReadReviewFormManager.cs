@@ -1,20 +1,20 @@
-﻿using Models.Models;
-using Objektinis;
-using ServerCallFromApp;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
+using App;
+using Models.Models;
+using ServerCallFromApp;
 
-namespace App
+namespace Objektinis.FormManagers
 {
     public class ReadReviewFormManager : BaseFormManager, IReadReviewFormManager
     {
-        protected ReadReviewFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData) : base(dataManipulations, formManagerData)
+        public ReadReviewFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData) : base(dataManipulations, formManagerData)
         {
         }
 
         // Returns the name of whatever is currently reviewed
-        public string GetNameOfReviewee()
-        {
+        public string GetNameOfReview()
+        { 
             switch (FormManagerData.CurrentReviewSubject)
             {
                 case ReviewType.REVIEW_UNIVERSITY:
@@ -64,7 +64,7 @@ namespace App
                 }
             }
 
-            ChangeForm(form, GetForm(FormType.FORM_READ_REVIEW));
+            ChangeForm(form, GetForm(FormType.FormReadReview));
         }
 
         // Returns fetched reviews for either universities or faculties

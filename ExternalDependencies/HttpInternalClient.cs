@@ -6,12 +6,7 @@ namespace ExternalDependencies
 {
     public class HttpInternalClient : IHttpInternalClient, IDisposable
     {
-        private readonly HttpClient _client;
-
-        public HttpInternalClient()
-        {
-            _client = new HttpClient();
-        }
+        private readonly HttpClient _client = new HttpClient();
 
         public async Task<HttpResponseMessage> PostAsync(string uri, HttpContent content)
         {

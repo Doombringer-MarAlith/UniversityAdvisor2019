@@ -1,16 +1,16 @@
-﻿using Models.Models;
-using Newtonsoft.Json;
-using Objektinis;
-using ServerCallFromApp;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using App;
+using Models.Models;
+using Newtonsoft.Json;
+using ServerCallFromApp;
 
-namespace App
+namespace Objektinis.FormManagers
 {
-    public abstract class WriteReviewFormManager : BaseFormManager, IWriteReviewFormManager
+    public class WriteReviewFormManager : BaseFormManager, IWriteReviewFormManager
     {
-        protected WriteReviewFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData) : base(dataManipulations, formManagerData)
+        public WriteReviewFormManager(IDataManipulations dataManipulations, FormManagerData formManagerData) : base(dataManipulations, formManagerData)
         {
         }
 

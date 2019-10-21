@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
+using Objektinis.FormManagers;
 
 namespace App
 {
-    public partial class ReadReviewForm : Form
+    public partial class ReadReviewForm : Form, IReadReviewForm
     {
-        private readonly ReadReviewFormManager _loginFormManager;
+        private readonly IReadReviewFormManager _loginFormManager;
 
-        public ReadReviewForm(ReadReviewFormManager loginFormManager)
+        public ReadReviewForm(IReadReviewFormManager loginFormManager)
         {
             _loginFormManager = loginFormManager;
 
@@ -31,14 +32,14 @@ namespace App
 
         private void ReadReviewForm_Load(object sender, EventArgs e)
         {
-            titleOfThing.Text = _loginFormManager.GetNameOfReviewee();
+            titleOfThing.Text = _loginFormManager.GetNameOfReview();
             reviewText.Text = _loginFormManager.GetReviewText();
         }
 
         private void BackButton_Click(object sender, EventArgs e)
         {
             _loginFormManager.ResetSelectedFaculty();
-            _loginFormManager.ChangeForm(this, _loginFormManager.GetForm(FormType.FORM_SELECTED_UNIVERSITY));
+            _loginFormManager.ChangeForm(this, _loginFormManager.GetForm(FormType.FormSelectedUniversity));
         }
     }
 }

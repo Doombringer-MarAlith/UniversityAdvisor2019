@@ -6,9 +6,9 @@ namespace App
 {
     public partial class SelectedUniversityForm : Form, ISelectedUniversityForm
     {
-        private readonly SelectedUniversityFormManager _selectedUniversityFormManager;
+        private readonly ISelectedUniversityFormManager _selectedUniversityFormManager;
 
-        public SelectedUniversityForm(SelectedUniversityFormManager selectedUniversityFormManager)
+        public SelectedUniversityForm(ISelectedUniversityFormManager selectedUniversityFormManager)
         {
             _selectedUniversityFormManager = selectedUniversityFormManager;
             InitializeComponent();

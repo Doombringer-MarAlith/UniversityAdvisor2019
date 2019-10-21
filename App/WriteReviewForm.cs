@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
+using Objektinis.FormManagers;
 
 namespace App
 {
-    public partial class WriteReviewForm : Form, IReviewForm
+    public partial class WriteReviewForm : Form, IWriteReviewForm
     {
-        private readonly WriteReviewFormManager _writeReviewFormManager;
+        private readonly IWriteReviewFormManager _writeReviewFormManager;
 
-        public WriteReviewForm(WriteReviewFormManager writeReviewFormManager)
+        public WriteReviewForm(IWriteReviewFormManager writeReviewFormManager)
         {
             _writeReviewFormManager = writeReviewFormManager;
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace App
         private void BackButton_Click(object sender, EventArgs e)
         {
             _writeReviewFormManager.ResetSelectedFaculty();
-            _writeReviewFormManager.ChangeForm(this, _writeReviewFormManager.GetForm(FormType.FORM_SELECTED_UNIVERSITY));
+            _writeReviewFormManager.ChangeForm(this, _writeReviewFormManager.GetForm(FormType.FormSelectedUniversity));
         }
     }
 }
