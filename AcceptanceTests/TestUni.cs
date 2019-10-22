@@ -1,12 +1,10 @@
-﻿using AcceptanceTests.TestHelpers;
+﻿using ExternalDependencies;
 using Models.Models;
 using Newtonsoft.Json;
 using ServerCallFromApp;
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
 using System.Threading.Tasks;
-using ExternalDependencies;
 using Xunit;
 
 namespace AcceptanceTests
@@ -20,7 +18,7 @@ namespace AcceptanceTests
             string newGuid = Guid.NewGuid().ToString();
             var uni = new University()
             {
-                Name = "Vilniaus Universitetas",
+                Name = Guid.NewGuid().ToString(),
                 Guid = newGuid
             };
 

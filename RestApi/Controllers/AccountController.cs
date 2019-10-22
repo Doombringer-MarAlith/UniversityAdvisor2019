@@ -11,7 +11,12 @@ namespace RestApi.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly DatabaseExecutor _database = new DatabaseExecutor();
+        private readonly IDatabaseExecutor _database;
+
+        public AccountController(IDatabaseExecutor database)
+        {
+            _database = database;
+        }
 
         [HttpGet("{id}")]
         public ActionResult<string> Get(string id)

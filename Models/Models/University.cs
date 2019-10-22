@@ -9,6 +9,9 @@ namespace Models.Models
         [JsonProperty("Name")]
         public string Name { get; set; }
 
+        [JsonProperty("Description")]
+        public string Description { get; set; }
+
         [JsonProperty("Guid")]
         public string Guid { get; set; }
         

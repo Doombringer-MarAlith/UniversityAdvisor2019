@@ -11,7 +11,12 @@ namespace RestApi.Controllers
     [ApiController]
     public class UniversityController : ControllerBase
     {
-        private readonly DatabaseExecutor _database = new DatabaseExecutor();
+        private readonly IDatabaseExecutor _database;
+
+        public UniversityController(IDatabaseExecutor database)
+        {
+            _database = database;
+        }
 
         [HttpGet("{name}")]
         public ActionResult<string> Get(string name)
