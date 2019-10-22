@@ -12,7 +12,7 @@ namespace Dbo
     {
         private static readonly string SqlConnectionString = DatabaseExecutor.ConnectionString;
 
-        private static readonly DatabaseExecutor Db = new DatabaseExecutor();
+        private static readonly DatabaseExecutor Database = new DatabaseExecutor();
 
         public static void AddJsons()
         {
@@ -31,7 +31,7 @@ namespace Dbo
                             List<Account> accounts = JsonConvert.DeserializeObject<List<Account>>(json);
                             foreach (var account in accounts)
                             {
-                                Db.CreateAccount(account);
+                                Database.CreateAccount(account);
                             }
                         }
                         Console.WriteLine("PAVYkO");
