@@ -18,8 +18,13 @@ namespace App
         /// </summary>
         [STAThread]
         private static void Main()
-        { 
-            
+        {
+
+            var a = Container.GetService<FormManagerData>();
+            var aa = Container.GetService<FormManagerData>();
+            a.CurrentReviewIndex = 5;
+            var g = a.CurrentReviewIndex;
+            var ga = aa.CurrentReviewIndex;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run((Form) Container.GetService<ILoginForm>()); // IUniversitySearchForm

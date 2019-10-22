@@ -12,7 +12,12 @@ namespace RestApi.Controllers
     [ApiController]
     public class FacultyController : Controller
     {
-        private readonly DatabaseExecutor _database = new DatabaseExecutor();
+        private readonly IDatabaseExecutor _database;
+
+        public FacultyController(IDatabaseExecutor database)
+        {
+            _database = database;
+        }
 
         [HttpGet("{uniGuid}")]
         public ActionResult<string> Get(string uniGuid)

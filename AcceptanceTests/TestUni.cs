@@ -20,7 +20,7 @@ namespace AcceptanceTests
             string newGuid = Guid.NewGuid().ToString();
             var uni = new University()
             {
-                Name = "Vilniaus Universitetas",
+                Name = Guid.NewGuid().ToString(),
                 Guid = newGuid
             };
 

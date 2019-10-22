@@ -8,7 +8,7 @@ using Castle.Core.Internal;
 
 namespace Dbo
 {
-    public class DatabaseExecutor
+    public class DatabaseExecutor : IDatabaseExecutor
     {
         internal static string ConnectionString =
             @"Server=(localdb)\madder;Database=UniversityAdvisor;Trusted_Connection=True;";
@@ -228,7 +228,7 @@ namespace Dbo
 
                 using (var command = new SqlCommand
                 (
-                    $"INSERT INTO [University] VALUES ('{university.Guid}','{university.Name}')",
+                    $"INSERT INTO [University] VALUES ('{university.Guid}','{university.Name}' , '{university.Description}' , '{university.FoundingDate.Year.ToString()}')",
 
                     bdoConnection
                 ))

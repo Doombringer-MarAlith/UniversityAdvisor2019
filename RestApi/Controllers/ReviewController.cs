@@ -12,7 +12,12 @@ namespace RestApi.Controllers
     [ApiController]
     public class ReviewController : ControllerBase
     {
-        private readonly DatabaseExecutor _database = new DatabaseExecutor();
+        private readonly IDatabaseExecutor _database;
+
+        public ReviewController(IDatabaseExecutor database)
+        {
+            _database = database;
+        }
 
         [HttpGet("reviewsByGuid/{Guid}/{guidType}")]
         public ActionResult<string> Get(string Guid, int guidType)
