@@ -4,6 +4,7 @@ using Debugger;
 using Models.Models;
 using Newtonsoft.Json;
 using System;
+using System.Threading.Tasks;
 
 namespace RestApi.Controllers
 {
@@ -19,13 +20,19 @@ namespace RestApi.Controllers
         }
 
         [HttpGet("{name}")]
-        public ActionResult<string> Get(string name)
+        public async Task<IActionResult> Get(string name)
         {
             Logger.Log($"UniversityController:Get({name})");
 
             try
             {
-                return JsonConvert.SerializeObject(_database.ReturnUniversities(name));
+                var universities = _database.ReturnUniversities(name);
+                if (universities != null)
+                {
+                    return Ok(JsonConvert.SerializeObject(universities));
+                }
+
+                return NotFound();
             }
             catch (Exception exception)
             {
