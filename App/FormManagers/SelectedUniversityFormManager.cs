@@ -36,9 +36,13 @@ namespace App
             if (FormManagerData.SelectedUniversity != null)
             {
                 var result = await DataManipulations.GetDataFromServer($"review/reviewsByGuid/{FormManagerData.SelectedUniversity.Guid}/{(int)GuidType.UniversityGuid}");
-                if (result != null)
+                if (!string.IsNullOrEmpty(result))
                 {
                     FormManagerData.FoundUniversityReviews = JsonConvert.DeserializeObject<List<Review>>(result);
+                }
+                else
+                {
+                    FormManagerData.FoundUniversityReviews = new List<Review>();
                 }
             }
 
@@ -54,9 +58,13 @@ namespace App
             if (FormManagerData.SelectedFaculty != null)
             {
                 var result = await DataManipulations.GetDataFromServer($"review/reviewsByGuid/{FormManagerData.SelectedFaculty.FacultyGuid}/{(int)GuidType.FacultyGuid}");
-                if (result != null)
+                if (!string.IsNullOrEmpty(result))
                 {
                     FormManagerData.FoundFacultyReviews = JsonConvert.DeserializeObject<List<Review>>(result);
+                }
+                else
+                {
+                    FormManagerData.FoundFacultyReviews = new List<Review>();
                 }
             }
 
@@ -69,7 +77,7 @@ namespace App
             if (FormManagerData.SelectedUniversity != null)
             {
                 var data = await DataManipulations.GetDataFromServer($"faculty/{FormManagerData.SelectedUniversity.Guid}");
-                if (data != null)
+                if (!string.IsNullOrEmpty(data))
                 {
                     FormManagerData.FoundFaculties = JsonConvert.DeserializeObject<List<Faculty>>(data);
                     return FormManagerData.FoundFaculties.Select(fac => fac.Name).ToList();

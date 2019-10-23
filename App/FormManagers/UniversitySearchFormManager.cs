@@ -18,8 +18,8 @@ namespace App
         // Returns a list of universities that match the search phrase or null if there are none
         public async Task<List<string>> GetUniversities(string name)
         {
-            string data = await DataManipulations.GetDataFromServer($"university/{name}");
-            if (data != null)
+            var data = await DataManipulations.GetDataFromServer($"university/{name}");
+            if (!string.IsNullOrEmpty(data))
             {
                 FormManagerData.FoundUniversities = JsonConvert.DeserializeObject<List<University>>(data);
             }

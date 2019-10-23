@@ -26,7 +26,13 @@ namespace RestApi.Controllers
 
             try
             {
-                return JsonConvert.SerializeObject(_database.ReturnReviews(Guid, guidType));
+                var reviews = _database.ReturnReviews(Guid, guidType);
+                if (reviews != null)
+                {
+                    return Ok(JsonConvert.SerializeObject(reviews));
+                }
+
+                return NoContent();
             }
             catch (Exception exception)
             {
@@ -42,7 +48,13 @@ namespace RestApi.Controllers
 
             try
             {
-                return JsonConvert.SerializeObject(_database.ReturnReview(Guid));
+                var review = _database.ReturnReview(Guid);
+                if (review != null)
+                {
+                    return Ok(JsonConvert.SerializeObject(review));
+                }
+
+                return NoContent();
             }
             catch (Exception exception)
             {
@@ -66,6 +78,5 @@ namespace RestApi.Controllers
                 throw;
             }
         }
-
     }
 }

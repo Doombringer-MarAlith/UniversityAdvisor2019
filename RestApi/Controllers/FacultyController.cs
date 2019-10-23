@@ -26,7 +26,13 @@ namespace RestApi.Controllers
 
             try
             {
-                return JsonConvert.SerializeObject(_database.ReturnFaculties(uniGuid));
+                var faculties = _database.ReturnFaculties(uniGuid);
+                if (faculties != null)
+                {
+                    return Ok(JsonConvert.SerializeObject(faculties));
+                }
+
+                return NoContent();
             }
             catch (Exception exception)
             {

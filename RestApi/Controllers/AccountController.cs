@@ -25,7 +25,13 @@ namespace RestApi.Controllers
 
             try
             {
-                return JsonConvert.SerializeObject(_database.ReturnAccount(id));
+                var account = _database.ReturnAccount(id);
+                if (account != null)
+                {
+                    return Ok(JsonConvert.SerializeObject(account));
+                }
+
+                return NoContent();
             }
             catch (Exception exception)
             {
@@ -41,7 +47,13 @@ namespace RestApi.Controllers
 
             try
             {
-                return _database.CheckAccountEmail(email);
+                var guid = _database.CheckAccountEmail(email);
+                if (guid != null)
+                {
+                    return Ok(guid);
+                }
+
+                return NoContent();
             }
             catch (Exception exception)
             {
@@ -57,7 +69,13 @@ namespace RestApi.Controllers
 
             try
             {
-                return _database.CheckAccountUsername(username);
+                var guid = _database.CheckAccountUsername(username);
+                if (guid != null)
+                {
+                    return Ok(guid);
+                }
+
+                return NoContent(); 
             }
             catch (Exception exception)
             {
@@ -73,7 +91,13 @@ namespace RestApi.Controllers
 
             try
             {
-                return _database.ReturnAccountGuid(email, password);
+                var guid = _database.ReturnAccountGuid(email, password);
+                if (guid != null)
+                {
+                    return Ok(guid);
+                }
+
+                return NoContent(); 
             }
             catch (Exception exception)
             {

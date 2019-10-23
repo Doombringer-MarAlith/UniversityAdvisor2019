@@ -38,7 +38,7 @@ namespace Objektinis.FormManagers
                 review.ReviewGuid = Guid.NewGuid().ToString();
                 data = await DataManipulations.GetDataFromServer($"review/{review.ReviewGuid}");
             }
-            while (String.IsNullOrEmpty(data));
+            while (!String.IsNullOrEmpty(data));
 
             await DataManipulations.PostDataToServer($"review/create", JsonConvert.SerializeObject(review));
         }
