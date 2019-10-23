@@ -27,6 +27,12 @@ namespace App
         {
             if (passwordTextbox.Text.Equals(repeatPasswordTextbox.Text) && passwordTextbox.Text.Length > 4 && !String.IsNullOrWhiteSpace(passwordTextbox.Text))
             {
+                if (!_signUpFormManager.IsEmailValid(emailTextBox.Text))
+                {
+                    MessageBox.Show("Invalid email!");
+                    return;
+                }
+
                 switch (await _signUpFormManager.CreateUser(usernameTextBox.Text, emailTextBox.Text, passwordTextbox.Text))
                 {
                     case 0:

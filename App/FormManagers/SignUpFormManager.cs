@@ -4,6 +4,7 @@ using Objektinis;
 using ServerCallFromApp;
 using System;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace App
 {
@@ -47,6 +48,15 @@ namespace App
             // Create an account
             await DataManipulations.PostDataToServer("account/create", JsonConvert.SerializeObject(account));
             return (int)CreateUserReturn.SUCCESS;
+        }
+
+        public bool IsEmailValid(string email)
+        {
+            Regex regex = new Regex("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
+                RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+            MatchCollection matches = regex.Matches(email);
+            return matches.Count > 0;
         }
     }
 }
