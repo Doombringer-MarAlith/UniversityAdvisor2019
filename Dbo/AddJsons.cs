@@ -28,8 +28,8 @@ namespace Dbo
                         using (StreamReader r = new StreamReader(fileEntry))
                         {
                             string json = r.ReadToEnd();
-                            List<Account> accounts = JsonConvert.DeserializeObject<List<Account>>(json);
-                            foreach (var account in accounts)
+                            JsonArray accounts = JsonConvert.DeserializeObject<JsonArray>(json);
+                            foreach (var account in accounts.accounts)
                             {
                                 Database.CreateAccount(account);
                             }
@@ -44,4 +44,12 @@ namespace Dbo
             }
         }
     }
+
+    [JsonObject]
+    internal class JsonArray
+    {
+        [JsonProperty("accounts")]
+        public List<Account> accounts;
+    }
+
 }
