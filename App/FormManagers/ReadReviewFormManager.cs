@@ -88,5 +88,10 @@ namespace Objektinis.FormManagers
             FormManagerData.SelectedFaculty = null;
             FormManagerData.FoundFacultyReviews = null;
         }
+
+        public void ResetReviewIndex()
+        {
+            FormManagerData.CurrentReviewIndex = 0;
+        }
     }
 }

@@ -111,6 +111,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UniversitySearchForm";
             this.Text = "SearchUniversity";
+            this.VisibleChanged += new System.EventHandler(this.UniversitySearchForm_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

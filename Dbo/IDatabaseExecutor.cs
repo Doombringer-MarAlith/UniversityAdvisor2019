@@ -11,12 +11,12 @@ namespace Dbo
         Account ReturnAccount(string id);
         string ReturnAccountGuid(string email, string password);
         void DeleteAccount(string id);
-        object ReturnReviews(string Guid, int guidType);
+        List<Review> ReturnReviews(string Guid, int guidType);
         void CreateUniversity(University university);
         List<University> ReturnUniversities(string name);
         void CreateFaculty(Faculty faculty);
         List<Faculty> ReturnFaculties(string guid);
-        object ReturnReview(string Guid);
+        Review ReturnReview(string Guid);
         void CreateReview(Review review);
     }
 }

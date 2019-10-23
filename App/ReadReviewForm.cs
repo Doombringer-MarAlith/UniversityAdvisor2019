@@ -30,16 +30,23 @@ namespace App
             // increment review Value? Points?
         }
 
-        private void ReadReviewForm_Load(object sender, EventArgs e)
-        {
-            titleOfThing.Text = _readReviewFormManager.GetNameOfReview();
-            reviewText.Text = _readReviewFormManager.GetReviewText();
-        }
-
         private void BackButton_Click(object sender, EventArgs e)
         {
+            _readReviewFormManager.ResetReviewIndex();
             _readReviewFormManager.ResetSelectedFaculty();
             _readReviewFormManager.ChangeForm(this, _readReviewFormManager.GetForm(FormType.FormSelectedUniversity));
+        }
+
+        private void ReadReviewForm_VisibleChanged(object sender, EventArgs e)
+        {
+            Form form = sender as Form;
+            if (!form.Visible)
+            {
+                return;
+            }
+
+            titleOfThing.Text = _readReviewFormManager.GetNameOfReview();
+            reviewText.Text = _readReviewFormManager.GetReviewText();
         }
     }
 }

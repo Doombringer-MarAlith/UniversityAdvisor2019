@@ -15,5 +15,7 @@ namespace Objektinis.FormManagers
         List<Review> GetCurrentReviewListBySubject();
 
         void ResetSelectedFaculty();
+
+        void ResetReviewIndex();
     }
 }

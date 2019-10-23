@@ -116,7 +116,7 @@ namespace App
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SelectedUniversityForm";
             this.Text = "SelectedUniversity";
-            this.Load += new System.EventHandler(this.SelectedUniversity_Load);
+            this.VisibleChanged += new System.EventHandler(this.SelectedUniversityForm_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

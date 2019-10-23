@@ -309,7 +309,7 @@ namespace Dbo
             return null;
         }
 
-        public object ReturnReviews(string Guid, int guidType)
+        public List<Review> ReturnReviews(string Guid, int guidType)
         {
             string GuidType = ((GuidEnum)guidType).ToString();
             using (var bdoConnection = new SqlConnection(ConnectionString))
@@ -333,7 +333,6 @@ namespace Dbo
                                 ReviewGuid = reader["ReviewGuid"].ToString(),
                                 Text = reader["Text"].ToString(),
                                 Value = reader["Value"].ToString()
-
                             };
 
                             reviews.Add(review);
@@ -341,7 +340,7 @@ namespace Dbo
 
                         bdoConnection.Close();
 
-                        if (!reviews.IsNullOrEmpty())
+                        if (reviews.Count > 0)
                         {
                             return reviews;
                         }
@@ -353,7 +352,7 @@ namespace Dbo
             return null;
         }
 
-        public object ReturnReview(string Guid)
+        public Review ReturnReview(string Guid)
         {
             using (var bdoConnection = new SqlConnection(ConnectionString))
             {
@@ -366,28 +365,19 @@ namespace Dbo
                 {
                     using (var reader = command.ExecuteReader())
                     {
-                        List<Review> reviews = new List<Review>();
                         while (reader.Read())
                         {
-                            var review = new Review
+                            return new Review
                             {
                                 UserId = reader["UserId"].ToString(),
                                 UniGuid = reader["UniGuid"].ToString(),
                                 ReviewGuid = reader["ReviewGuid"].ToString(),
                                 Text = reader["Text"].ToString(),
                                 Value = reader["Value"].ToString()
-
                             };
-
-                            reviews.Add(review);
                         }
 
                         bdoConnection.Close();
-
-                        if (!reviews.IsNullOrEmpty())
-                        {
-                            return reviews;
-                        }
                     }
                 }
             }

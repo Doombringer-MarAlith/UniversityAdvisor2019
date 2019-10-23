@@ -121,7 +121,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ReadReviewForm";
             this.Text = "Review";
-            this.Load += new System.EventHandler(this.ReadReviewForm_Load);
+            this.VisibleChanged += new System.EventHandler(this.ReadReviewForm_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

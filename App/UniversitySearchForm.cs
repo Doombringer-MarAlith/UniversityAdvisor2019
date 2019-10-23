@@ -46,5 +46,17 @@ namespace App
                 MessageBox.Show("Please select a university from the list first!");
             }
         }
+
+        private void UniversitySearchForm_VisibleChanged(object sender, EventArgs e)
+        {
+            Form form = sender as Form;
+            if (!form.Visible)
+            {
+                return;
+            }
+
+            universitiesList.ClearSelected();
+            universitiesList.Items.Clear();
+        }
     }
 }
