@@ -28,7 +28,7 @@ namespace App
                 return new List<string>();
             }
 
-            return FormManagerData.FoundUniversities.Select(uni => uni.Name).ToList();
+            return FormManagerData.FoundUniversities?.Select(uni => uni.Name).ToList();
         }
 
         public void OpenSelectedUniversityForm(int selectedUniversityIndex, Form form)

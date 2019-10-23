@@ -19,7 +19,7 @@ namespace App
             if (!String.IsNullOrWhiteSpace(searchBar.Text))
             {
                 List<string> result = await _universitySearchFormManager.GetUniversities(searchBar.Text);
-                if (result.Count != 0)   
+                if (result!=null && result.Count != 0)   
                 {
                     universitiesList.Items.Clear();
                     universitiesList.Items.AddRange(result.ToArray());
