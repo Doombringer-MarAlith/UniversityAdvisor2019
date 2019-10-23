@@ -7,7 +7,7 @@ namespace ServerCallFromApp
 {
     public class DataManipulations : IDataManipulations
     {
-        private const string Url = "https://localhost:44312/api/";
+        private const string Url = "https://localhost:44380/api/";
         private readonly IHttpInternalClient _client;
 
         public DataManipulations(IHttpInternalClient client)
