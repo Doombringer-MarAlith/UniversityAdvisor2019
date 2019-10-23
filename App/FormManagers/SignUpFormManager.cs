@@ -43,7 +43,7 @@ namespace App
                 account.Guid = Guid.NewGuid().ToString();
                 data = await DataManipulations.GetDataFromServer($"account/{account.Guid}");
             }
-            while (String.IsNullOrEmpty(data));
+            while (!String.IsNullOrEmpty(data));
 
             // Create an account
             await DataManipulations.PostDataToServer("account/create", JsonConvert.SerializeObject(account));
