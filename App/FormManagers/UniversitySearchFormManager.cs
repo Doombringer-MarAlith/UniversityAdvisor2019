@@ -19,7 +19,7 @@ namespace App
         public async Task<List<string>> GetUniversities(string name)
         {
             var data = await DataManipulations.GetDataFromServer($"university/{name}");
-            if (data != null)
+            if (!string.IsNullOrEmpty(data))
             {
                 FormManagerData.FoundUniversities = JsonConvert.DeserializeObject<List<University>>(data);
             }

@@ -67,6 +67,7 @@ namespace Dbo
                     }
                 }
             }
+
             Logger.Log($"DatabaseExecutor.CheckAccountEmail({email}): CheckAccountEmail return value is null", Level.Warning);
             return null;
         }
@@ -148,7 +149,9 @@ namespace Dbo
                         {
                             guid = reader["Guid"].ToString();
                         }
+
                         bdoConnection.Close();
+
                         if (guid != null)
                         {
                             return guid;
@@ -178,47 +181,6 @@ namespace Dbo
         }
 
         // Account END
-
-        public object ReturnReviews(string Guid, int guidType)
-        {
-            string GuidType = ((GuidEnum)guidType).ToString();
-            using (var bdoConnection = new SqlConnection(ConnectionString))
-            {
-                bdoConnection.Open();
-                using (var command = new SqlCommand
-                (
-                    $"SELECT * FROM [Reviews] WHERE {GuidType} = '{Guid}'",
-                    bdoConnection
-                ))
-                {
-                    using (var reader = command.ExecuteReader())
-                    {
-                        List<Review> reviews = new List<Review>();
-                        while (reader.Read())
-                        {
-                            var review = new Review
-                            {
-                                UserId = reader["UserId"].ToString(),
-                                UniGuid = reader["UniGuid"].ToString(),
-                                ReviewGuid = reader["ReviewGuid"].ToString(),
-                                Text = reader["Text"].ToString(),
-                                Value = reader["Value"].ToString()
-
-                            };
-                            reviews.Add(review);
-                        }
-                        bdoConnection.Close();
-                        if (!reviews.IsNullOrEmpty())
-                        {
-                            return reviews;
-                        }
-                    }
-                }
-            }
-
-            Logger.Log($"DatabaseExecutor.ReturnReviews({Guid}): Reviews return value is null", Level.Warning);
-            return null;
-        }
 
         public void CreateUniversity(University university)
         {
@@ -257,20 +219,23 @@ namespace Dbo
                 {
                     using (var reader = command.ExecuteReader())
                     {
-                        List<University> unis = new List<University>();
+                        List<University> universities = new List<University>();
                         while (reader.Read())
                         {
-                            var uni = new University
+                            var university = new University
                             {
                                 Name = reader["Name"].ToString(), // add more fields
                                 Guid = reader["Guid"].ToString()
                             };
-                            unis.Add(uni);
+
+                            universities.Add(university);
                         }
+
                         bdoConnection.Close();
-                        if (!unis.IsNullOrEmpty())
+
+                        if (!universities.IsNullOrEmpty())
                         {
-                            return unis;
+                            return universities;
                         }
                     }
                 }
@@ -317,21 +282,24 @@ namespace Dbo
                 {
                     using (var reader = command.ExecuteReader())
                     {
-                        List<Faculty> facs = new List<Faculty>();
+                        List<Faculty> faculties = new List<Faculty>();
                         while (reader.Read())
                         {
-                            var fac = new Faculty
+                            var faculty = new Faculty
                             {
                                 Name = reader["Name"].ToString(), // add more fields
                                 UniGuid = reader["UniGuid"].ToString(),
                                 FacultyGuid = reader["FacultyGuid"].ToString()
                             };
-                            facs.Add(fac);
+
+                            faculties.Add(faculty);
                         }
+
                         bdoConnection.Close();
-                        if (!facs.IsNullOrEmpty())
+
+                        if (!faculties.IsNullOrEmpty())
                         {
-                            return facs;
+                            return faculties;
                         }
                     }
                 }
@@ -341,6 +309,49 @@ namespace Dbo
             return null;
         }
 
+        public object ReturnReviews(string Guid, int guidType)
+        {
+            string GuidType = ((GuidEnum)guidType).ToString();
+            using (var bdoConnection = new SqlConnection(ConnectionString))
+            {
+                bdoConnection.Open();
+                using (var command = new SqlCommand
+                (
+                    $"SELECT * FROM [Reviews] WHERE {GuidType} = '{Guid}'",
+                    bdoConnection
+                ))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        List<Review> reviews = new List<Review>();
+                        while (reader.Read())
+                        {
+                            var review = new Review
+                            {
+                                UserId = reader["UserId"].ToString(),
+                                UniGuid = reader["UniGuid"].ToString(),
+                                ReviewGuid = reader["ReviewGuid"].ToString(),
+                                Text = reader["Text"].ToString(),
+                                Value = reader["Value"].ToString()
+
+                            };
+
+                            reviews.Add(review);
+                        }
+
+                        bdoConnection.Close();
+
+                        if (!reviews.IsNullOrEmpty())
+                        {
+                            return reviews;
+                        }
+                    }
+                }
+            }
+
+            Logger.Log($"DatabaseExecutor.ReturnReviews({Guid}): Reviews return value is null", Level.Warning);
+            return null;
+        }
 
         public object ReturnReview(string Guid)
         {
@@ -367,9 +378,12 @@ namespace Dbo
                                 Value = reader["Value"].ToString()
 
                             };
+
                             reviews.Add(review);
                         }
+
                         bdoConnection.Close();
+
                         if (!reviews.IsNullOrEmpty())
                         {
                             return reviews;

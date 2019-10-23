@@ -32,7 +32,7 @@ namespace RestApi.Controllers
                     return Ok(JsonConvert.SerializeObject(universities));
                 }
 
-                return NotFound();
+                return NoContent();
             }
             catch (Exception exception)
             {
