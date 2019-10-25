@@ -1,8 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Objektinis;
 using System;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
+[assembly: InternalsVisibleTo("AppUnitTests")]
 namespace App
 {
     internal static class Program
