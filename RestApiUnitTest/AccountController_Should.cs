@@ -14,19 +14,17 @@ using System.Net;
 
 namespace RestApiUnitTest
 {
-	public class AccountController_Should
-	{
-		[Theory]
-		[AutoMoqData]
-		public void Get_Return_CorrectValue(string id,[Frozen] Mock<ILogger> logger ,  [Frozen] Account account,  [Frozen] Mock<IDatabaseExecutor> database, AccountController sut)
-		{
-			//setup
-			var serializedaccount = JsonConvert.SerializeObject(account);
-			database.Setup(x => x.ReturnAccount(id)).Returns(account);
-			//Act
-			var response = sut.Get(id);
-			//Assert
-			Assert.NotNull(response);
-		}
-	}
+    public class AccountController_Should
+    {
+        [Theory]
+        [AutoMoqData]
+        public void Get_Return_CorrectValue(string id, [Frozen] Mock<ILogger> logger, [Frozen] Account account, [Frozen] Mock<IDatabaseExecutor> database, AccountController controller)
+        {
+            var serializedAccount = JsonConvert.SerializeObject(account);
+            database.Setup(x => x.ReturnAccount(id)).Returns(account);
+            var response = controller.Get(id);
+
+            Assert.NotNull(response);
+        }
+    }
 }

@@ -13,18 +13,18 @@ namespace RestApi.Controllers
     public class ReviewController : ControllerBase
     {
         private readonly IDatabaseExecutor _database;
-		private readonly ILogger _logger;
+        private readonly ILogger _logger;
 
-		public ReviewController(IDatabaseExecutor database , ILogger logger)
+        public ReviewController(IDatabaseExecutor database , ILogger logger)
         {
             _database = database;
-			_logger = logger;
+            _logger = logger;
         }
 
         [HttpGet("reviewsByGuid/{Guid}/{guidType}")]
         public ActionResult<string> Get(string Guid, int guidType)
         {
-			_logger.Log($"ReviewController:Get({Guid}, {guidType})");
+            _logger.Log($"ReviewController:Get({Guid}, {guidType})");
 
             try
             {
@@ -38,7 +38,7 @@ namespace RestApi.Controllers
             }
             catch (Exception exception)
             {
-				_logger.Log($"ReviewController.Get({Guid}, {guidType}): DomainError", Level.Error, exception);
+                _logger.Log($"ReviewController.Get({Guid}, {guidType}): DomainError", Level.Error, exception);
                 throw;
             }
         }
@@ -46,7 +46,7 @@ namespace RestApi.Controllers
         [HttpGet("{Guid}")]
         public ActionResult<string> Get(string Guid)
         {
-			_logger.Log($"ReviewController:Get({Guid})");
+            _logger.Log($"ReviewController:Get({Guid})");
 
             try
             {
@@ -60,7 +60,7 @@ namespace RestApi.Controllers
             }
             catch (Exception exception)
             {
-				_logger.Log($"ReviewController.Get({Guid}): DomainError", Level.Error, exception);
+                _logger.Log($"ReviewController.Get({Guid}): DomainError", Level.Error, exception);
                 throw;
             }
         }
@@ -68,7 +68,7 @@ namespace RestApi.Controllers
         [HttpPost("{create}")]
         public void Post([FromBody] Review review)
         {
-			_logger.Log($"ReviewController::Post(Create Review)");
+            _logger.Log($"ReviewController::Post(Create Review)");
 
             try
             {
@@ -76,7 +76,7 @@ namespace RestApi.Controllers
             }
             catch (Exception exception)
             {
-				_logger.Log($"ReviewController.Post(Review): DomainError", Level.Error, exception);
+                _logger.Log($"ReviewController.Post(Review): DomainError", Level.Error, exception);
                 throw;
             }
         }

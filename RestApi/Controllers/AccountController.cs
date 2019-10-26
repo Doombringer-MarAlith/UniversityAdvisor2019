@@ -12,12 +12,12 @@ namespace RestApi.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IDatabaseExecutor _database;
-		private readonly ILogger _logger;
+        private readonly ILogger _logger;
 
         public AccountController(IDatabaseExecutor database , ILogger logger)
         {
             _database = database;
-			_logger = logger;
+            _logger = logger;
         }
 
         [HttpGet("{id}")]
@@ -37,7 +37,7 @@ namespace RestApi.Controllers
             }
             catch (Exception exception)
             {
-				_logger.Log($"AccountController.Get({id}): DomainError", Level.Error, exception);
+                _logger.Log($"AccountController.Get({id}): DomainError", Level.Error, exception);
                 throw;
             }
         }
@@ -45,7 +45,7 @@ namespace RestApi.Controllers
         [HttpGet("checkByEmail/{email}/{whatever}")]
         public ActionResult<string> Get(string email, bool whatever)
         {
-			_logger.Log($"AccountController:Check({email})");
+            _logger.Log($"AccountController:Check({email})");
 
             try
             {
@@ -59,7 +59,7 @@ namespace RestApi.Controllers
             }
             catch (Exception exception)
             {
-				_logger.Log($"AccountController.Check({email}): DomainError", Level.Error, exception);
+                _logger.Log($"AccountController.Check({email}): DomainError", Level.Error, exception);
                 throw;
             }
         }
@@ -67,7 +67,7 @@ namespace RestApi.Controllers
         [HttpGet("checkByUsername/{username}/{whatever}")]
         public ActionResult<string> Get(string username, int whatever)
         {
-			_logger.Log($"AccountController:Check({username})");
+            _logger.Log($"AccountController:Check({username})");
 
             try
             {
@@ -81,7 +81,7 @@ namespace RestApi.Controllers
             }
             catch (Exception exception)
             {
-				_logger.Log($"AccountController.Check({username}): DomainError", Level.Error, exception);
+                _logger.Log($"AccountController.Check({username}): DomainError", Level.Error, exception);
                 throw;
             }
         }
@@ -89,7 +89,7 @@ namespace RestApi.Controllers
         [HttpGet("login/{email}/{password}")]
         public ActionResult<string> Get(string email, string password)
         {
-			_logger.Log($"AccountController.Get({email} ,  {password}) ");
+            _logger.Log($"AccountController.Get({email} ,  {password}) ");
 
             try
             {
@@ -103,7 +103,7 @@ namespace RestApi.Controllers
             }
             catch (Exception exception)
             {
-				_logger.Log($"AccountController::Get(): DomainError", Level.Error, exception);
+                _logger.Log($"AccountController::Get(): DomainError", Level.Error, exception);
                 throw;
             }
         }
@@ -111,7 +111,7 @@ namespace RestApi.Controllers
         [HttpPost("create")]
         public void Post([FromBody] Account account)
         {
-			_logger.Log($"AccountController::Post(Create Account)");
+            _logger.Log($"AccountController::Post(Create Account)");
 
             try
             {
@@ -119,7 +119,7 @@ namespace RestApi.Controllers
             }
             catch (Exception exception)
             {
-				_logger.Log($"AccountController.Post(Account): DomainError", Level.Error, exception);
+                _logger.Log($"AccountController.Post(Account): DomainError", Level.Error, exception);
                 throw;
             }
         }

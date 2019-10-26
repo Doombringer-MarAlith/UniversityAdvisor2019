@@ -33,7 +33,7 @@ namespace RestApi
             services.AddSingleton<IDataManipulations, DataManipulations>();
             services.AddSingleton<IHttpInternalClient, HttpInternalClient>();
             services.AddSingleton<IDatabaseExecutor, DatabaseExecutor>();
-			services.AddSingleton<ILogger, Logger>();
+            services.AddSingleton<ILogger, Logger>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
