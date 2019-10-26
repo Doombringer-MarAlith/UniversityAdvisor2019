@@ -12,7 +12,7 @@ namespace Dbo
     {
         internal static string ConnectionString =
             @"Server=(localdb)\madder;Database=UniversityAdvisor;Trusted_Connection=True;";
-
+		private readonly ILogger _logger;
         enum GuidEnum
         {
             UniGuid,
@@ -21,6 +21,10 @@ namespace Dbo
             UniProgramGuid
         }
 
+		public DatabaseExecutor(ILogger logger)
+		{
+			_logger = logger;
+		}
         // Account START
 
         public void CreateAccount(Account account)
@@ -40,7 +44,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log
+			_logger.Log
                     (
                         $"DatabaseExecutor.CreateAccount: Account is created with values ({account.Name} , {account.Password} , {account.Email} , {account.Guid} )"
                     );
@@ -68,7 +72,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.CheckAccountEmail({email}): CheckAccountEmail return value is null", Level.Warning);
+			_logger.Log($"DatabaseExecutor.CheckAccountEmail({email}): CheckAccountEmail return value is null", Level.Warning);
             return null;
         }
 
@@ -93,7 +97,7 @@ namespace Dbo
                     }
                 }
             }
-            Logger.Log($"DatabaseExecutor.CheckAccountUsername({username}): CheckAccountUsername return value is null", Level.Warning);
+			_logger.Log($"DatabaseExecutor.CheckAccountUsername({username}): CheckAccountUsername return value is null", Level.Warning);
             return null;
         }
 
@@ -127,7 +131,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.ReturnAccount({id}): Account return value is null", Level.Warning);
+			_logger.Log($"DatabaseExecutor.ReturnAccount({id}): Account return value is null", Level.Warning);
             return null;
         }
 
@@ -160,7 +164,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.ReturnAccountGuid({email}  ,  {password}): Account guid return value is null", Level.Warning);
+			_logger.Log($"DatabaseExecutor.ReturnAccountGuid({email}  ,  {password}): Account guid return value is null", Level.Warning);
             return null;
         }
 
@@ -200,7 +204,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log
+			_logger.Log
                     (
                         $"DatabaseExecutor.CreateUniversity: university is created with values ({university.Guid}, {university.Name})"
                     );
@@ -241,7 +245,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.ReturnUniversityGuid({name}): University guid return value is null", Level.Warning);
+			_logger.Log($"DatabaseExecutor.ReturnUniversityGuid({name}): University guid return value is null", Level.Warning);
             return null;
         }
 
@@ -263,7 +267,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log
+			_logger.Log
                     (
                         $"DatabaseExecutor.CreateFaculty: faculty is created with values ({faculty.UniGuid}, {faculty.Name}, {faculty.FacultyGuid})"
                     );
@@ -305,7 +309,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.ReturnFaculties({guid}): Faculties return value is null", Level.Warning);
+			_logger.Log($"DatabaseExecutor.ReturnFaculties({guid}): Faculties return value is null", Level.Warning);
             return null;
         }
 
@@ -348,7 +352,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.ReturnReviews({Guid}): Reviews return value is null", Level.Warning);
+			_logger.Log($"DatabaseExecutor.ReturnReviews({Guid}): Reviews return value is null", Level.Warning);
             return null;
         }
 
@@ -382,7 +386,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.ReturnReview({Guid}): Review return value is null", Level.Warning);
+			_logger.Log($"DatabaseExecutor.ReturnReview({Guid}): Review return value is null", Level.Warning);
             return null;
         }
 
@@ -404,7 +408,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log
+			_logger.Log
             (
                 $"DatabaseExecutor.CreateReview: review is created with values ({review.UniGuid}, {review.Text}, {review.Value}, {review.UserId}, {review.ReviewGuid} )"
             );

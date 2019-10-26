@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
 using System.Text;
+using Debugger;
 using Models.Models;
 using Newtonsoft.Json;
 
@@ -12,7 +13,7 @@ namespace Dbo
     {
         private static readonly string SqlConnectionString = DatabaseExecutor.ConnectionString;
 
-        private static readonly DatabaseExecutor Database = new DatabaseExecutor();
+        private static readonly DatabaseExecutor Database = new DatabaseExecutor(new Logger());
 
         public static void AddJsons()
         {
