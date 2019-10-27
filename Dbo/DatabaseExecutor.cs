@@ -1,9 +1,7 @@
 ﻿using Debugger;
 using Models.Models;
-using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Globalization;
 using Castle.Core.Internal;
 
 namespace Dbo
@@ -13,12 +11,19 @@ namespace Dbo
         internal static string ConnectionString =
             @"Server=(localdb)\madder;Database=UniversityAdvisor;Trusted_Connection=True;";
 
+        private readonly ILogger _logger;
+
         enum GuidEnum
         {
             UniGuid,
             FacultyGuid,
             LecturerGuid,
             UniProgramGuid
+        }
+
+        public DatabaseExecutor(ILogger logger)
+        {
+            _logger = logger;
         }
 
         // Account START
@@ -40,10 +45,10 @@ namespace Dbo
                 }
             }
 
-            Logger.Log
-                    (
-                        $"DatabaseExecutor.CreateAccount: Account is created with values ({account.Name} , {account.Password} , {account.Email} , {account.Guid} )"
-                    );
+            _logger.Log
+            (
+                $"DatabaseExecutor.CreateAccount: Account is created with values ({account.Name}, {account.Password}, {account.Email}, {account.Guid})"
+            );
         }
 
         public string CheckAccountEmail(string email)
@@ -53,7 +58,7 @@ namespace Dbo
                 bdoConnection.Open();
                 using (var command = new SqlCommand
                 (
-                    $"SELECT * FROM [Account] WHERE Email='{email}'",
+                    $"SELECT * FROM [Account] WHERE Email = '{email}'",
                     bdoConnection
                 ))
                 {
@@ -68,7 +73,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.CheckAccountEmail({email}): CheckAccountEmail return value is null", Level.Warning);
+            _logger.Log($"DatabaseExecutor.CheckAccountEmail({email}): CheckAccountEmail return value is null", Level.Warning);
             return null;
         }
 
@@ -79,7 +84,7 @@ namespace Dbo
                 bdoConnection.Open();
                 using (var command = new SqlCommand
                 (
-                    $"SELECT * FROM [Account] WHERE Name='{username}'",
+                    $"SELECT * FROM [Account] WHERE Name = '{username}'",
                     bdoConnection
                 ))
                 {
@@ -93,7 +98,8 @@ namespace Dbo
                     }
                 }
             }
-            Logger.Log($"DatabaseExecutor.CheckAccountUsername({username}): CheckAccountUsername return value is null", Level.Warning);
+
+            _logger.Log($"DatabaseExecutor.CheckAccountUsername({username}): CheckAccountUsername return value is null", Level.Warning);
             return null;
         }
 
@@ -104,7 +110,7 @@ namespace Dbo
                 bdoConnection.Open();
                 using (var command = new SqlCommand
                 (
-                    $"SELECT * FROM [Account] WHERE Guid='{id}'",
+                    $"SELECT * FROM [Account] WHERE Guid = '{id}'",
                     bdoConnection
                 ))
                 {
@@ -127,7 +133,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.ReturnAccount({id}): Account return value is null", Level.Warning);
+            _logger.Log($"DatabaseExecutor.ReturnAccount({id}): Account return value is null", Level.Warning);
             return null;
         }
 
@@ -138,7 +144,7 @@ namespace Dbo
                 bdoConnection.Open();
                 using (var command = new SqlCommand
                 (
-                    $"SELECT * FROM [Account] WHERE Email='{email}' AND Password='{password}'",
+                    $"SELECT * FROM [Account] WHERE Email = '{email}' AND Password = '{password}'",
                     bdoConnection
                 ))
                 {
@@ -160,7 +166,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.ReturnAccountGuid({email}  ,  {password}): Account guid return value is null", Level.Warning);
+            _logger.Log($"DatabaseExecutor.ReturnAccountGuid({email}, {password}): Account guid return value is null", Level.Warning);
             return null;
         }
 
@@ -171,7 +177,7 @@ namespace Dbo
                 bdoConnection.Open();
                 using (var command = new SqlCommand
                 (
-                    $"DELETE FROM [Account] WHERE Guid={id}",
+                    $"DELETE FROM [Account] WHERE Guid = {id}",
                     bdoConnection
                 ))
                 {
@@ -190,8 +196,7 @@ namespace Dbo
 
                 using (var command = new SqlCommand
                 (
-                    $"INSERT INTO [University] VALUES ('{university.Guid}','{university.Name}' , '{university.Description}' , '{university.FoundingDate.Year.ToString()}')",
-
+                    $"INSERT INTO [University] VALUES ('{university.Guid}', '{university.Name}', '{university.Description}', '{university.FoundingDate.Year.ToString()}')",
                     bdoConnection
                 ))
                 {
@@ -200,10 +205,10 @@ namespace Dbo
                 }
             }
 
-            Logger.Log
-                    (
-                        $"DatabaseExecutor.CreateUniversity: university is created with values ({university.Guid}, {university.Name})"
-                    );
+            _logger.Log
+            (
+                $"DatabaseExecutor.CreateUniversity: university is created with values ({university.Guid}, {university.Name})"
+            );
         }
 
         public List<University> ReturnUniversities(string name)
@@ -241,7 +246,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.ReturnUniversityGuid({name}): University guid return value is null", Level.Warning);
+            _logger.Log($"DatabaseExecutor.ReturnUniversityGuid({name}): University guid return value is null", Level.Warning);
             return null;
         }
 
@@ -253,8 +258,7 @@ namespace Dbo
 
                 using (var command = new SqlCommand
                 (
-                    $"INSERT INTO [Faculties] VALUES ('{faculty.UniGuid}','{faculty.Name}', '{faculty.FacultyGuid}')",
-
+                    $"INSERT INTO [Faculties] VALUES ('{faculty.UniGuid}', '{faculty.Name}', '{faculty.FacultyGuid}')",
                     bdoConnection
                 ))
                 {
@@ -263,10 +267,10 @@ namespace Dbo
                 }
             }
 
-            Logger.Log
-                    (
-                        $"DatabaseExecutor.CreateFaculty: faculty is created with values ({faculty.UniGuid}, {faculty.Name}, {faculty.FacultyGuid})"
-                    );
+            _logger.Log
+            (
+                $"DatabaseExecutor.CreateFaculty: faculty is created with values ({faculty.UniGuid}, {faculty.Name}, {faculty.FacultyGuid})"
+            );
         }
 
         public List<Faculty> ReturnFaculties(string guid)
@@ -305,7 +309,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.ReturnFaculties({guid}): Faculties return value is null", Level.Warning);
+            _logger.Log($"DatabaseExecutor.ReturnFaculties({guid}): Faculties return value is null", Level.Warning);
             return null;
         }
 
@@ -348,7 +352,7 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.ReturnReviews({Guid}): Reviews return value is null", Level.Warning);
+            _logger.Log($"DatabaseExecutor.ReturnReviews({Guid}): Reviews return value is null", Level.Warning);
             return null;
         }
 
@@ -382,11 +386,10 @@ namespace Dbo
                 }
             }
 
-            Logger.Log($"DatabaseExecutor.ReturnReview({Guid}): Review return value is null", Level.Warning);
+            _logger.Log($"DatabaseExecutor.ReturnReview({Guid}): Review return value is null", Level.Warning);
             return null;
         }
 
-        //might not work, didn't check
         public void CreateReview(Review review)
         {
             using (var bdoConnection = new SqlConnection(ConnectionString))
@@ -395,7 +398,7 @@ namespace Dbo
 
                 using (var command = new SqlCommand
                 (
-                    $"INSERT INTO [Reviews](UniGuid, Text, Value, UserId, ReviewGuid, FacultyGuid, LecturerGuid, CourseGuid) VALUES ('{review.UniGuid}','{review.Text}', '{review.Value}', '{review.UserId}', '{review.ReviewGuid}', '{review.FacultyGuid}', '{review.LecturerGuid}', '{review.CourseGuid}')",
+                    $"INSERT INTO [Reviews](UniGuid, Text, Value, UserId, ReviewGuid, FacultyGuid, LecturerGuid, CourseGuid) VALUES ('{review.UniGuid}', '{review.Text}', '{review.Value}', '{review.UserId}', '{review.ReviewGuid}', '{review.FacultyGuid}', '{review.LecturerGuid}', '{review.CourseGuid}')",
                     bdoConnection
                 ))
                 {
@@ -404,9 +407,9 @@ namespace Dbo
                 }
             }
 
-            Logger.Log
+            _logger.Log
             (
-                $"DatabaseExecutor.CreateReview: review is created with values ({review.UniGuid}, {review.Text}, {review.Value}, {review.UserId}, {review.ReviewGuid} )"
+                $"DatabaseExecutor.CreateReview: review is created with values ({review.UniGuid}, {review.Text}, {review.Value}, {review.UserId}, {review.ReviewGuid})"
             );
         }
     }

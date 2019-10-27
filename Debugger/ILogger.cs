@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Debugger
 {
-    interface ILogger
+    public interface ILogger
     {
+        void Log(string message, Level level = Level.Info, Exception exception = null);
     }
 }

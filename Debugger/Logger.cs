@@ -6,9 +6,9 @@ namespace Debugger
 {
     public class Logger : ILogger
     {
-        internal static string connectionString = @"Server=(localdb)\madder;Database=UniversityAdvisor;Trusted_Connection=True;";
+        internal string connectionString = @"Server=(localdb)\madder;Database=UniversityAdvisor;Trusted_Connection=True;";
 
-        public static void Log(string message, Level level = Level.Info, Exception exception = null)
+        public void Log(string message, Level level = Level.Info, Exception exception = null)
         {
             using (var bdoConnection = new SqlConnection(connectionString))
             {

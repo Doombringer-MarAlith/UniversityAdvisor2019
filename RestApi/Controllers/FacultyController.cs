@@ -13,16 +13,18 @@ namespace RestApi.Controllers
     public class FacultyController : Controller
     {
         private readonly IDatabaseExecutor _database;
+        private readonly ILogger _logger;
 
-        public FacultyController(IDatabaseExecutor database)
+        public FacultyController(IDatabaseExecutor database , ILogger logger)
         {
             _database = database;
+            _logger = logger;
         }
 
         [HttpGet("{uniGuid}")]
         public ActionResult<string> Get(string uniGuid)
         {
-            Logger.Log($"FacultyController:Get({uniGuid})");
+            _logger.Log($"FacultyController:Get({uniGuid})");
 
             try
             {
@@ -36,7 +38,7 @@ namespace RestApi.Controllers
             }
             catch (Exception exception)
             {
-                Logger.Log($"FacultyController.Get({uniGuid}): DomainError", Level.Error, exception);
+                _logger.Log($"FacultyController.Get({uniGuid}): DomainError", Level.Error, exception);
                 throw;
             }
         }
@@ -44,7 +46,7 @@ namespace RestApi.Controllers
         [HttpPost("{create}")]
         public void Post([FromBody] Faculty faculty)
         {
-            Logger.Log($"FacultyController::Post(Create Faculties)");
+            _logger.Log($"FacultyController::Post(Create Faculties)");
 
             try
             {
@@ -52,7 +54,7 @@ namespace RestApi.Controllers
             }
             catch (Exception exception)
             {
-                Logger.Log($"FacultyController.Post(Faculties): DomainError", Level.Error, exception);
+                _logger.Log($"FacultyController.Post(Faculties): DomainError", Level.Error, exception);
                 throw;
             }
 
