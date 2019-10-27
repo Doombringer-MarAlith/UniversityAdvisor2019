@@ -11,9 +11,8 @@ namespace AppUnitTests
     { 
         [Theory]
         [AutoMoqData]
-         public async void TestUserIsCreated(SignUpFormManager signUpFormManager)
+         public async void TestUserIsCreated(SignUpFormManager signUpFormManager, string name)
         {
-           string name = StringGenerator.RandomString(4);
            string email = StringGenerator.RandomEmail();
                   
            Assert.Equal((int)CreateUserReturn.SUCCESS, await signUpFormManager.CreateUser(name, email, StringGenerator.RandomString(6)));                            //successful
