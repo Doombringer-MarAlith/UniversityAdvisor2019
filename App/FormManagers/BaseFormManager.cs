@@ -1,11 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Objektinis;
-using Objektinis.FormManagers;
 using ServerCallFromApp;
 using System;
 using System.Windows.Forms;
 
-namespace App
+namespace App.FormManagers
 {
     public class BaseFormManager : IBaseFormManager
     {

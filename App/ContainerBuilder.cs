@@ -1,11 +1,10 @@
 ﻿using System;
-using App;
 using ExternalDependencies;
 using Microsoft.Extensions.DependencyInjection;
-using Objektinis.FormManagers;
+using App.FormManagers;
 using ServerCallFromApp;
 
-namespace Objektinis
+namespace App
 {
     internal class ContainerBuilder
     {

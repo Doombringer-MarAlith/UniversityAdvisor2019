@@ -1,13 +1,12 @@
 ﻿using Models.Models;
 using Newtonsoft.Json;
-using Objektinis;
 using ServerCallFromApp;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace App
+namespace App.FormManagers
 {
     public class UniversitySearchFormManager : BaseFormManager, IUniversitySearchFormManager
     {

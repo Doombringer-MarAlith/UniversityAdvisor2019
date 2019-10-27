@@ -1,12 +1,11 @@
 ﻿using Models.Models;
 using Newtonsoft.Json;
-using Objektinis;
 using ServerCallFromApp;
 using System;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace App
+namespace App.FormManagers
 {
     public class SignUpFormManager : BaseFormManager, ISignUpFormManager
     {

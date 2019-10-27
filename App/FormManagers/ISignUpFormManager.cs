@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
-using Objektinis.FormManagers;
 
-namespace App
+namespace App.FormManagers
 {
     public interface ISignUpFormManager : IBaseFormManager
     {

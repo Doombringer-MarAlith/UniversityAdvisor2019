@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Objektinis.FormManagers
+namespace App.FormManagers
 {
     public interface ILoginFormManager : IBaseFormManager
     {

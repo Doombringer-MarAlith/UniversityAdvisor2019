@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace App
+﻿namespace App
 {
     partial class SelectedUniversityForm
     {

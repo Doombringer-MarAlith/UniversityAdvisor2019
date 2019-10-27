@@ -1,10 +1,9 @@
-﻿using App;
-using Models.Models;
+﻿using Models.Models;
 using ServerCallFromApp;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace Objektinis.FormManagers
+namespace App.FormManagers
 {
     public class ReadReviewFormManager : BaseFormManager, IReadReviewFormManager
     {

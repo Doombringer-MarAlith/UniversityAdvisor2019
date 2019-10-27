@@ -1,4 +1,4 @@
-﻿namespace Objektinis
+﻿namespace App
 {
     public interface ILoginForm
     {
