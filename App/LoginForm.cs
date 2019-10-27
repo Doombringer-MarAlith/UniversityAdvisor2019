@@ -1,9 +1,8 @@
-﻿using System;
+﻿using App.FormManagers;
+using System;
 using System.Windows.Forms;
-using App;
-using Objektinis.FormManagers;
 
-namespace Objektinis
+namespace App
 {
     public partial class LoginForm : Form, ILoginForm
     {

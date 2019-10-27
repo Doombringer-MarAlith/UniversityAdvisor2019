@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Objektinis.FormManagers;
 
-namespace App
+namespace App.FormManagers
 {
     public interface ISelectedUniversityFormManager : IBaseFormManager
     {

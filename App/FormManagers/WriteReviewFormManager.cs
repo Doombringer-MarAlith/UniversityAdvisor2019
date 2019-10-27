@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using App;
 using Models.Models;
 using Newtonsoft.Json;
 using ServerCallFromApp;
 
-namespace Objektinis.FormManagers
+namespace App.FormManagers
 {
     public class WriteReviewFormManager : BaseFormManager, IWriteReviewFormManager
     {

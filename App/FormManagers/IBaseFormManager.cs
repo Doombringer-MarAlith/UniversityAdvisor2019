@@ -1,7 +1,6 @@
-﻿using App;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
-namespace Objektinis.FormManagers
+namespace App.FormManagers
 {
     public interface IBaseFormManager
     {

@@ -1,8 +1,8 @@
-﻿using App;
+﻿using App.FormManagers;
 using Models.Models;
 using System.Collections.Generic;
 
-namespace Objektinis
+namespace App
 {
     public class FormManagerData
     {

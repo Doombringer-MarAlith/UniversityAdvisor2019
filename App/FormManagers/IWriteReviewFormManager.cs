@@ -1,8 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Windows.Forms;
-using App;
 
-namespace Objektinis.FormManagers
+namespace App.FormManagers
 {
     public interface IWriteReviewFormManager : IBaseFormManager
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace Objektinis.FormManagers
+namespace App.FormManagers
 {
     public interface IReadReviewFormManager : IBaseFormManager
     {
