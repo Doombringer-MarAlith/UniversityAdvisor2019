@@ -11,6 +11,7 @@ using RestApiUnitTest.TestHelpers;
 using Moq;
 using RestApi.Controllers;
 using System.Net;
+using Microsoft.VisualBasic;
 
 namespace RestApiUnitTest
 {
@@ -23,7 +24,7 @@ namespace RestApiUnitTest
             var serializedAccount = JsonConvert.SerializeObject(account);
             database.Setup(x => x.ReturnAccount(id)).Returns(account);
             var response = controller.Get(id);
-
+            database.Verify(x=>x.ReturnAccount(id),Times.Once);
             Assert.NotNull(response);
         }
     }

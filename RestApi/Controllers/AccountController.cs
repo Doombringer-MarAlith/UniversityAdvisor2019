@@ -32,7 +32,7 @@ namespace RestApi.Controllers
                 {
                     return Ok(JsonConvert.SerializeObject(account));
                 }
-
+                _logger.Log($"AccountController:Get({id}): noContent", Level.Warning);
                 return NoContent();
             }
             catch (Exception exception)
