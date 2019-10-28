@@ -13,11 +13,15 @@ using Xunit;
 
 namespace AppUnitTests
 {
-    public class BaseFormManager_Should
+    public class UniversitySearchFormManager_Should
     {
         [Theory]
         [AutoMoqData]
-        public async Task GetUniversities_IfExist(List<University> universities, string name, [Frozen] Mock<IDataManipulations> dataManipulations, [Frozen] Mock<FormManagerData> formManagerData, UniversitySearchFormManager sut)
+        public async Task GetUniversities_IfExist(
+            List<University> universities, string name,
+            [Frozen] Mock<IDataManipulations> dataManipulations,
+            [Frozen] Mock<FormManagerData> formManagerData,
+            UniversitySearchFormManager sut)
         {
             string jsonString = JsonConvert.SerializeObject(universities);
             string url = $"university/{name}";
@@ -29,7 +33,11 @@ namespace AppUnitTests
 
         [Theory]
         [AutoMoqData]
-        public async Task GetUniversities_IfNotExist(List<University> universities, string name, [Frozen] Mock<IDataManipulations> dataManipulations, [Frozen] Mock<FormManagerData> formManagerData, UniversitySearchFormManager sut)
+        public async Task GetUniversities_IfNotExist(List<University> universities,
+            string name,
+            [Frozen] Mock<IDataManipulations> dataManipulations,
+            [Frozen] Mock<FormManagerData> formManagerData,
+            UniversitySearchFormManager sut)
         {
             string jsonString = JsonConvert.SerializeObject(universities);
             string url = $"university/{name}";
@@ -42,7 +50,11 @@ namespace AppUnitTests
 
         [Theory]
         [AutoMoqData]
-        public async Task GetUniversities_IfUnexpectedReturnObject_DoNotCrash(List<University> universities, string name, [Frozen] Mock<IDataManipulations> dataManipulations, [Frozen] Mock<FormManagerData> formManagerData, UniversitySearchFormManager sut)
+        public async Task GetUniversities_IfUnexpectedReturnObject_DoNotCrash(List<University> universities,
+            string name,
+            [Frozen] Mock<IDataManipulations> dataManipulations,
+            [Frozen] Mock<FormManagerData> formManagerData,
+            UniversitySearchFormManager sut)
         {
             string jsonString = JsonConvert.SerializeObject(universities);
             string url = $"university/{name}";
