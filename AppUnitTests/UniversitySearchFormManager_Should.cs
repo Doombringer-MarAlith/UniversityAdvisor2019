@@ -1,4 +1,5 @@
-﻿using App.FormManagers;
+﻿using App;
+using App.FormManagers;
 using AppUnitTests.TestHelpers;
 using AutoFixture.Xunit2;
 using Models.Models;
@@ -12,75 +13,54 @@ using Xunit;
 
 namespace AppUnitTests
 {
-    public class SelectedUniversityFormManager_Should
+    public class UniversitySearchFormManager_Should
     {
         [Theory]
         [AutoMoqData]
-        public async Task GetFaculties_IfExist
-        (
-            List<Faculty> faculties,
-            University university,
+        public async Task GetUniversities_IfExist(
+            List<University> universities, string name,
             [Frozen] Mock<IDataManipulations> dataManipulations,
-            SelectedUniversityFormManager sut
-        )
+            [Frozen] Mock<FormManagerData> formManagerData,
+            UniversitySearchFormManager sut)
         {
-            string jsonString = JsonConvert.SerializeObject(faculties);
-            string url = $"faculty/{university.Guid}";
-
+            string jsonString = JsonConvert.SerializeObject(universities);
+            string url = $"university/{name}";
             dataManipulations.Setup(x => x.GetDataFromServer(It.IsAny<string>())).ReturnsAsync(jsonString);
-
-            sut.FormManagerData.SelectedUniversity = university;
-            var response = await sut.GetFaculties();
-
+            var response = await sut.GetUniversities(name);
             dataManipulations.Verify(x => x.GetDataFromServer(It.Is<string>(y => y.Equals(url))), Times.Once);
-
-            Assert.Equal(faculties.Select(faculty => faculty.Name).ToList(), response);
+            Assert.Equal(universities.Select(uni => uni.Name).ToList(), response);
         }
 
         [Theory]
         [AutoMoqData]
-        public async Task GetFaculties_IfNotExist
-        (
-            List<Faculty> faculties,
-            University university,
+        public async Task GetUniversities_IfNotExist(List<University> universities,
+            string name,
             [Frozen] Mock<IDataManipulations> dataManipulations,
-            SelectedUniversityFormManager sut
-        )
+            [Frozen] Mock<FormManagerData> formManagerData,
+            UniversitySearchFormManager sut)
         {
-            string jsonString = JsonConvert.SerializeObject(faculties);
-            string url = $"faculty/{university.Guid}";
-            string nullString = null;
-
-            dataManipulations.Setup(x => x.GetDataFromServer(It.IsAny<string>())).ReturnsAsync(nullString);
-
-            sut.FormManagerData.SelectedUniversity = university;
-            var response = await sut.GetFaculties();
-
+            string jsonString = JsonConvert.SerializeObject(universities);
+            string url = $"university/{name}";
+            string ur = null;
+            dataManipulations.Setup(x => x.GetDataFromServer(It.IsAny<string>())).ReturnsAsync(ur);
+            var response = await sut.GetUniversities(name);
             dataManipulations.Verify(x => x.GetDataFromServer(It.Is<string>(y => y.Equals(url))), Times.Once);
-
             Assert.Equal(new List<string>(), response);
         }
 
         [Theory]
         [AutoMoqData]
-        public async Task GetFaculties_IfUnexpectedReturnObject_DoNotCrash
-        (
-            List<Faculty> faculties,
-            University university,
+        public async Task GetUniversities_IfUnexpectedReturnObject_DoNotCrash(List<University> universities,
+            string name,
             [Frozen] Mock<IDataManipulations> dataManipulations,
-            SelectedUniversityFormManager sut
-        )
+            [Frozen] Mock<FormManagerData> formManagerData,
+            UniversitySearchFormManager sut)
         {
-            string jsonString = JsonConvert.SerializeObject(faculties);
-            string url = $"faculty/{university.Guid}";
-
+            string jsonString = JsonConvert.SerializeObject(universities);
+            string url = $"university/{name}";
             dataManipulations.Setup(x => x.GetDataFromServer(It.IsAny<string>())).ReturnsAsync("");
-
-            sut.FormManagerData.SelectedUniversity = university;
-            var response = await sut.GetFaculties();
-
+            var response = await sut.GetUniversities(name);
             dataManipulations.Verify(x => x.GetDataFromServer(It.Is<string>(y => y.Equals(url))), Times.Once);
-
             Assert.Equal(new List<string>(), response);
         }
     }
