@@ -43,7 +43,7 @@ namespace RestApiUnitTest
         [InlineData("rw                                                     qf0")]
         [InlineData("few0")]
         [InlineData("____________________________________")]
-        [InlineData("few0")]
+        [InlineData("few0totallyrandomstring")]
         [InlineData("rwqe0")]
         [InlineData("ewqfewfq0")]
         [InlineData("/////////////////////////////")]
