@@ -181,25 +181,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Debugger\Debugger.csproj">
-      <Project>{d3acbcbc-201f-4d23-8c24-daa78cbaafc8}</Project>
-      <Name>Debugger</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ExternalDependencies\ExternalDependencies.csproj">
-      <Project>{ECBE8326-8B1E-4377-98EA-FCCD01FC144B}</Project>
-      <Name>ExternalDependencies</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{9c5cb54e-e63d-484e-86cd-0b8f073da662}</Project>
-      <Name>Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ServerCallFromApp\ServerCallFromApp.csproj">
-      <Project>{eebc0ca4-6e17-4cc5-b55c-1f9654fbcda5}</Project>
-      <Name>ServerCallFromApp</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

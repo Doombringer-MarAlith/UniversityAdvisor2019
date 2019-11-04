@@ -4,8 +4,8 @@ using Debugger;
 using Models.Models;
 using Moq;
 using Newtonsoft.Json;
-using RestApi.Controllers;
 using RestApiUnitTest.TestHelpers;
+using WebApp.Controllers;
 using Xunit;
 
 namespace RestApiUnitTest
