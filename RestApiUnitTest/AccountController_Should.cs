@@ -1,11 +1,12 @@
 ﻿using AutoFixture.Xunit2;
 using Dbo;
+using DboExecutor;
 using Debugger;
 using Models.Models;
 using Moq;
 using Newtonsoft.Json;
 using RestApiUnitTest.TestHelpers;
-using WebApp.Controllers;
+using WebScripts;
 using Xunit;
 
 namespace RestApiUnitTest
@@ -18,7 +19,7 @@ namespace RestApiUnitTest
         {
             var serializedAccount = JsonConvert.SerializeObject(account);
             database.Setup(x => x.ReturnAccount(id)).Returns(account);
-            var response = controller.Get(id);
+            var response = controller.GetAccount(id);
             database.Verify(x => x.ReturnAccount(id), Times.Once);
             Assert.NotNull(response);
         }
@@ -61,8 +62,8 @@ namespace RestApiUnitTest
             var serializedAccount = JsonConvert.SerializeObject(account);
 
             database.Setup(x => x.ReturnAccount(id)).Returns(account);
-            var response = controller.Get(id);
-            Assert.NotNull(response);
+            var response = controller.GetAccount(id);
+            Assert.Null(response);
         }
     }
 }

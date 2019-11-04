@@ -7,9 +7,7 @@ using Newtonsoft.Json;
 
 namespace WebScripts
 {
-    [Route("api/university")]
-    [ApiController]
-    public class UniversityController : ControllerBase
+    public class UniversityController
     {
         private readonly IDatabaseExecutor _database;
         private readonly ILogger _logger;
@@ -20,8 +18,7 @@ namespace WebScripts
             _logger = logger;
         }
 
-        [HttpGet("{name}")]
-        public async Task<IActionResult> Get(string name)
+        public async Task<string> Get(string name)
         {
             _logger.Log($"UniversityController:Get({name})");
 
@@ -30,10 +27,10 @@ namespace WebScripts
                 var universities = _database.ReturnUniversities(name);
                 if (universities != null)
                 {
-                    return Ok(JsonConvert.SerializeObject(universities));
+                    return JsonConvert.SerializeObject(universities);
                 }
 
-                return NoContent();
+                return null;
             }
             catch (Exception exception)
             {
@@ -58,8 +55,8 @@ namespace WebScripts
             }
         }
         */
-        [HttpPost("{create}")]
-        public void Post([FromBody] University university)
+
+        public void Post(University university)
         {
             _logger.Log($"UniversityController::Post(Create University)");
 

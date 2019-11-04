@@ -1,4 +1,5 @@
 ﻿using System;
+using DboExecutor;
 using Debugger;
 using Models.Models;
 using Newtonsoft.Json;
@@ -6,9 +7,7 @@ using Newtonsoft.Json;
 namespace WebScripts
 {
 
-    [Route("api/faculty")]
-    [ApiController]
-    public class FacultyController : Controller
+    public class FacultyController
     {
         private readonly IDatabaseExecutor _database;
         private readonly ILogger _logger;
@@ -18,9 +17,7 @@ namespace WebScripts
             _database = database;
             _logger = logger;
         }
-
-        [HttpGet("{uniGuid}")]
-        public ActionResult<string> Get(string uniGuid)
+        public string Get(string uniGuid)
         {
             _logger.Log($"FacultyController:Get({uniGuid})");
 
@@ -29,10 +26,10 @@ namespace WebScripts
                 var faculties = _database.ReturnFaculties(uniGuid);
                 if (faculties != null)
                 {
-                    return Ok(JsonConvert.SerializeObject(faculties));
+                    return JsonConvert.SerializeObject(faculties);
                 }
 
-                return NoContent();
+                return null;
             }
             catch (Exception exception)
             {
@@ -41,8 +38,7 @@ namespace WebScripts
             }
         }
 
-        [HttpPost("{create}")]
-        public void Post([FromBody] Faculty faculty)
+        public void Post(Faculty faculty)
         {
             _logger.Log($"FacultyController::Post(Create Faculties)");
 

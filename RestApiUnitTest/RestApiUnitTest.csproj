@@ -28,6 +28,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Dbo\Dbo.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\WebScripts\WebScripts.csproj" />
   </ItemGroup>
 
 </Project>

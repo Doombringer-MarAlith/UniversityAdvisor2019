@@ -1,67 +1,65 @@
-﻿using System;
+﻿using DboExecutor;
+using Debugger;
+using Models.Models;
+using Newtonsoft.Json;
+using System;
 
 namespace WebScripts
 {
-
-    [Route("api/review")]
-    [ApiController]
-    public class ReviewController : ControllerBase
+    public class ReviewController
     {
         private readonly IDatabaseExecutor _database;
         private readonly ILogger _logger;
 
-        public ReviewController(IDatabaseExecutor database , ILogger logger)
+        public ReviewController(IDatabaseExecutor database, ILogger logger)
         {
             _database = database;
             _logger = logger;
         }
 
-        [HttpGet("reviewsByGuid/{Guid}/{guidType}")]
-        public ActionResult<string> Get(string Guid, int guidType)
+        public string Get(string guid, int guidType)
         {
-            _logger.Log($"ReviewController:Get({Guid}, {guidType})");
+            _logger.Log($"ReviewController:Get({guid}, {guidType})");
 
             try
             {
-                var reviews = _database.ReturnReviews(Guid, guidType);
+                var reviews = _database.ReturnReviews(guid, guidType);
                 if (reviews != null)
                 {
-                    return Ok(JsonConvert.SerializeObject(reviews));
+                    return JsonConvert.SerializeObject(reviews);
                 }
 
-                return NoContent();
+                return null;
             }
             catch (Exception exception)
             {
-                _logger.Log($"ReviewController.Get({Guid}, {guidType}): DomainError", Level.Error, exception);
+                _logger.Log($"ReviewController.Get({guid}, {guidType}): DomainError", Level.Error, exception);
                 throw;
             }
         }
 
-        [HttpGet("{Guid}")]
-        public ActionResult<string> Get(string Guid)
+        public string Get(string guid)
         {
-            _logger.Log($"ReviewController:Get({Guid})");
+            _logger.Log($"ReviewController:Get({guid})");
 
             try
             {
-                var review = _database.ReturnReview(Guid);
+                var review = _database.ReturnReview(guid);
                 if (review != null)
                 {
-                    return Ok(JsonConvert.SerializeObject(review));
+                    return JsonConvert.SerializeObject(review);
                 }
 
-                return NoContent();
+                return null;
             }
             catch (Exception exception)
             {
-                _logger.Log($"ReviewController.Get({Guid}): DomainError", Level.Error, exception);
+                _logger.Log($"ReviewController.Get({guid}): DomainError", Level.Error, exception);
                 throw;
             }
         }
 
-        [HttpPost("{create}")]
-        public void Post([FromBody] Review review)
+        public void Post(Review review)
         {
             _logger.Log($"ReviewController::Post(Create Review)");
 
