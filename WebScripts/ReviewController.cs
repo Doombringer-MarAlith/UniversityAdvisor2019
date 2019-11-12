@@ -6,7 +6,7 @@ using System;
 
 namespace WebScripts
 {
-    public class ReviewController
+    public class ReviewController : IReviewController
     {
         private readonly IDatabaseExecutor _database;
         private readonly ILogger _logger;

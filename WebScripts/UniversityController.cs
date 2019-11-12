@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace WebScripts
 {
-    public class UniversityController
+    public class UniversityController : IUniversityController
     {
         private readonly IDatabaseExecutor _database;
         private readonly ILogger _logger;
