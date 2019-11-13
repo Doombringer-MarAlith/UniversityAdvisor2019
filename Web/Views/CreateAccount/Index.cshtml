@@ -1,4 +1,4 @@
-﻿@using (Html.BeginForm("Index", "CreateAccount", FormMethod.Post, new {id = "CreateAccount", novalidate = ""}))
+﻿@using (Html.BeginForm("CreateAccount", "CreateAccount", FormMethod.Post, new {id = "CreateAccount", novalidate = ""}))
 {
     @Html.AntiForgeryToken()
 
@@ -25,7 +25,7 @@
                 <input type="text" id="Password" name="Password" placeholder="********">
             </div>
             <div>
-                <label for="RepeatPassword">RepeatPassword</label>
+                <label for="RepeatPassword">@ViewBag.CreateAccount</label>
             </div>
             <div>
                 <input type="text" id="RepeatPassword" name="RepeatPassword" placeholder="********">
