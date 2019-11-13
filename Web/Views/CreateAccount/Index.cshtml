@@ -1,34 +1,39 @@
-﻿<div class="text-center">
-    <h1>Enter your info</h1>
+﻿@using (Html.BeginForm("CreateAccount", "CreateAccount", FormMethod.Post, new {id = "CreateAccount", novalidate = ""}))
+{
+    @Html.AntiForgeryToken()
 
-    <div>
+    <div class="text-center">
+        <h1>Enter your info</h1>
+
         <div>
-            <label for="fname">First Name</label>
+            <div>
+                <label for="fname">First Name</label>
+            </div>
+            <div>
+                <input type="text" id="fname" name="User Name" placeholder="Your name..">
+            </div>
+            <div>
+                <label for="email">Last Name</label>
+            </div>
+            <div>
+                <input type="text" id="email" name="Email" placeholder="Your last name..">
+            </div>
+            <div>
+                <label for="Password">Password</label>
+            </div>
+            <div>
+                <input type="text" id="Password" name="Password" placeholder="********">
+            </div>
+            <div>
+                <label for="RepeatPassword">@ViewBag.CreateAccount</label>
+            </div>
+            <div>
+                <input type="text" id="RepeatPassword" name="RepeatPassword" placeholder="********">
+            </div>
         </div>
-        <div>
-            <input type="text" id="fname" name="User Name" placeholder="Your name..">
-        </div>
-        <div>
-            <label for="email">Last Name</label>
-        </div>
-        <div>
-            <input type="text" id="email" name="Email" placeholder="Your last name..">
-        </div>
-        <div>
-            <label for="Password">Password</label>
-        </div>
-        <div>
-            <input type="text" id="Password" name="Password" placeholder="********">
-        </div>
-        <div>
-            <label for="RepeatPassword">RepeatPassword</label>
-        </div>
-        <div>
-            <input type="text" id="RepeatPassword" name="RepeatPassword" placeholder="********">
-        </div>
+        <br>
+        <button id="CreateAccount"type="submit">
+            Create Account
+        </button>
     </div>
-    <br>
-    <button>
-        Create Account
-    </button>
-</div>
+}

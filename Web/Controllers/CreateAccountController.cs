@@ -12,5 +12,11 @@ namespace Web.Controllers
         {
             return View();
         }
+
+        public IActionResult CreateAccount()
+        {
+            ViewBag.CreateAccount = "as";
+            return View("Index");
+        }
     }
 }
