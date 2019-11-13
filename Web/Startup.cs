@@ -2,12 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DboExecutor;
+using Debugger;
+using ExternalDependencies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ServerCallFromApp;
+using WebScripts;
+using AccountController = Web.Controllers.AccountController;
 
 namespace Web
 {
@@ -24,6 +30,11 @@ namespace Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddSingleton<IDataManipulations, DataManipulations>();
+            services.AddSingleton<IDatabaseExecutor, DatabaseExecutor>();
+            services.AddSingleton<ILogger, Logger>();
+            services.AddSingleton<IHttpInternalClient, HttpInternalClient>();
+            services.AddSingleton<IAccountController,WebScripts.AccountController>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

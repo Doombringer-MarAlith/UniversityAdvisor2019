@@ -6,6 +6,9 @@
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.3.1" />
+    <PackageReference Include="Microsoft.AspNet.Razor" Version="3.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
       <PrivateAssets>all</PrivateAssets>
@@ -17,6 +20,16 @@
 
   <ItemGroup>
     <Folder Include="Pages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DboExecutor\DboExecutor.csproj" />
+    <ProjectReference Include="..\Dbo\Dbo.csproj" />
+    <ProjectReference Include="..\Debugger\Debugger.csproj" />
+    <ProjectReference Include="..\ExternalDependencies\ExternalDependencies.csproj" />
+    <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\ServerCallFromApp\ServerCallFromApp.csproj" />
+    <ProjectReference Include="..\WebScripts\WebScripts.csproj" />
   </ItemGroup>
 
 </Project>

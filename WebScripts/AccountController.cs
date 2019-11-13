@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace WebScripts
 {
-    public class AccountController
+    public class AccountController : IAccountController
     {
         private readonly IDatabaseExecutor _database;
         private readonly ILogger _logger;
