@@ -12,11 +12,18 @@ namespace WebScraper
         static List<University> scrapedUniversities = new List<University>();
         static List<Faculty> faculties = new List<Faculty>();
 
+        // gets universities from WHED.net website.
+        // Feed it html source file of uni search by country and it will gather Uni names + Faculties
+
+        // Subjects for faculties to be added
+        // Will need to incorporate adding items straight to database
+        // HTML also has 'History' that could be used as description
+
         static void Main(string[] args)
         {
             var files = Directory.GetFiles("ScrapeFiles");
             List<List<string>> universityLinks = new List<List<string>>();
-            int currentUni = 0;
+            int currentUniversity = 0;
             foreach(var file in files)
             {
                 File.OpenRead(file);
@@ -33,39 +40,38 @@ namespace WebScraper
                     {
                         string htmlCode = client.DownloadString("https://www.whed.net/" + link);
                         scrapedUniversities.Add(ScrapeUniversity(htmlCode));
-                        Console.WriteLine(scrapedUniversities[scrapedUniversities.Count - 1].Name);
+                        Console.WriteLine(scrapedUniversities[scrapedUniversities.Count - 1].Name); // part below in these foreaches is only for debug
 
-                        for (int i = currentUni; i < faculties.Count; i++)
+                        for (int i = currentUniversity; i < faculties.Count; i++)
                         {
                             Console.WriteLine(faculties[i].Name);
                         }
-                        currentUni = faculties.Count;
+                        currentUniversity = faculties.Count;
                         Console.WriteLine("\r\n");
-
                     }
                 }
                 Console.WriteLine("\r\n");
             }
         }
 
-        // Find links to all universities
+        // Find links to all universities in given HTML file text
         static List<string> ScrapeUniversityLinks(string text)
         {
-            int ans = 0;
+            int answer = 0;
             int endIndex;
-            List<string> uniLinks = new List<string>();
+            List<string> universityLinks = new List<string>();
             string link;
             do
             {
-                ans = text.IndexOf("detail_institution.php", ans, text.Length-ans-1)+1;
-                if (ans != 0)
+                answer = text.IndexOf("detail_institution.php", answer, text.Length-answer-1)+1;
+                if (answer != 0)
                 {
-                    endIndex = text.IndexOf("\"", ans, text.Length - ans - 1);
-                    link = text.Substring(ans - 1, endIndex - ans + 1);
-                    uniLinks.Add(link);
+                    endIndex = text.IndexOf("\"", answer, text.Length - answer - 1);
+                    link = text.Substring(answer - 1, endIndex - answer + 1);
+                    universityLinks.Add(link);
                 }
-            } while (ans != 0);
-            return uniLinks;
+            } while (answer != 0);
+            return universityLinks;
         }
 
         // Find the name of university and it's divisions'(faculties) names
@@ -81,7 +87,6 @@ namespace WebScraper
             // Read Divisions (Faculties)
             start = 0;
             string facultyName;
-
             do
             {
                 start = text.IndexOf("Faculty : ", start);
@@ -95,7 +100,6 @@ namespace WebScraper
             } while (start != -1); // Po sito pridet Fields of study (courses) listus
 
             Console.WriteLine(faculties.Count);
-
             return university;
         }
     }
