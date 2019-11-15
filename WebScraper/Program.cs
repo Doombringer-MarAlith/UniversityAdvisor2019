@@ -3,6 +3,8 @@ using System.IO;
 using Models.Models;
 using System.Collections.Generic;
 using System.Net;
+using System.Collections;
+using System.Linq;
 
 namespace WebScraper
 {
@@ -82,23 +84,46 @@ namespace WebScraper
             // Read University name
             int start = text.IndexOf("<h2>")+4; // 4 length
             int end = text.IndexOf("<span", start);
-            university.Name = text.Substring(start, end - start).Replace("\n", "").Replace("\t", "");
+            university.Name = text.Substring(start, end - start).Replace("\n", "").Replace("\t", ""); // Generate University Guid and save
 
             // Read Divisions (Faculties)
             start = 0;
             string facultyName;
+            int nextFaculty, nextFOS;
             do
             {
+                List<string> fields = new List<string>();
+                List<Programme> programmes = new List<Programme>();
                 start = text.IndexOf("Faculty : ", start);
+                string facultyGuid = Guid.NewGuid().ToString();
                 if (start != -1)
                 {
                     start += 10;
                     end = text.IndexOf("</p>", start);
                     facultyName = text.Substring(start, end - start);
-                    faculties.Add(new Faculty() { Name = facultyName });
-                }
-            } while (start != -1); // Po sito pridet Fields of study (courses) listus
 
+                    // while(notNewFacultyGuid) DO {generate new guid}
+                    faculties.Add(new Faculty() { Name = facultyName }); // Add Guid(and save) and University Guid from above
+
+                    // Searching for fields of study
+                    nextFaculty = text.IndexOf("Faculty : ", start) > 0 ? text.IndexOf("Faculty : ", start) + 10 : text.Length; //doesn't exist -> good too
+                    nextFOS = text.IndexOf("Fields of study:", start) + 45;
+                    if(nextFaculty > nextFOS && nextFOS != 44) // 44 as in returned -1(not found) + 45 line above
+                    {
+                        end = text.IndexOf("</span>", nextFOS);
+                        fields = text.Substring(nextFOS, end - nextFOS).Split(", ").ToList();
+
+                        foreach (var field in fields)
+                        {
+                            programmes.Add(new Programme() { Name = field }); // Guid create needed. Also add Faculty's above Guid
+                            Console.Write(field + " ");
+                        }
+                        Console.WriteLine("\r\n");
+                    }
+
+                }
+            } while (start != -1);
+            
             Console.WriteLine(faculties.Count);
             return university;
         }
