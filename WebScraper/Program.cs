@@ -41,12 +41,20 @@ namespace WebScraper
                 {
                     using (WebClient client = new WebClient())
                     {
-                        string htmlCode = client.DownloadString("https://www.whed.net/" + link);
-                        scrapedUniversities.Add(ScrapeUniversity(htmlCode));
+                        try
+                        {
+                            string htmlCode = client.DownloadString("https://www.whed.net/" + link);
+                            scrapedUniversities.Add(ScrapeUniversity(htmlCode));
+                        }
+                        catch (WebException e)
+                        {
+                            Console.WriteLine(e.StackTrace);
+                        }
 
                         // part below in these foreaches is only for debug
+                        
+                        // Console.WriteLine(scrapedUniversities[scrapedUniversities.Count - 1].Name); 
                         /*
-                        Console.WriteLine(scrapedUniversities[scrapedUniversities.Count - 1].Name); 
                         for (int i = currentUniversity; i < faculties.Count; i++)
                         {
                             Console.WriteLine(faculties[i].Name);
