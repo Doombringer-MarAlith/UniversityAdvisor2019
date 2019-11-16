@@ -43,16 +43,15 @@ namespace WebScraper
                     {
                         string htmlCode = client.DownloadString("https://www.whed.net/" + link);
                         scrapedUniversities.Add(ScrapeUniversity(htmlCode));
-                        
-                        Console.WriteLine(scrapedUniversities[scrapedUniversities.Count - 1].Name); // part below in these foreaches is only for debug
 
+                        // part below in these foreaches is only for debug
+                        Console.WriteLine(scrapedUniversities[scrapedUniversities.Count - 1].Name); 
                         for (int i = currentUniversity; i < faculties.Count; i++)
                         {
                             Console.WriteLine(faculties[i].Name);
                         }
                         currentUniversity = faculties.Count;
                         Console.WriteLine("\r\n");
-                        
                     }
                 }
                 Console.WriteLine("\r\n");
@@ -63,20 +62,20 @@ namespace WebScraper
         // Find links to all universities in given HTML file text
         static List<string> ScrapeUniversityLinks(string text)
         {
-            int answer = 0;
+            int startIndex = 0;
             int endIndex;
             List<string> universityLinks = new List<string>();
             string link;
             do
             {
-                answer = text.IndexOf("detail_institution.php", answer, text.Length-answer-1)+1;
-                if (answer != 0)
+                startIndex = text.IndexOf("detail_institution.php", startIndex, text.Length-startIndex-1) + 1;
+                if (startIndex != 0)
                 {
-                    endIndex = text.IndexOf("\"", answer, text.Length - answer - 1);
-                    link = text.Substring(answer - 1, endIndex - answer + 1);
+                    endIndex = text.IndexOf("\"", startIndex, text.Length - startIndex - 1);
+                    link = text.Substring(startIndex - 1, endIndex - startIndex + 1);
                     universityLinks.Add(link);
                 }
-            } while (answer != 0);
+            } while (startIndex != 0);
             return universityLinks;
         }
 
@@ -86,11 +85,20 @@ namespace WebScraper
             University university = new University();
 
             // Read University name
-            int start = text.IndexOf("<h2>")+4; // 4 length
+            int start = text.IndexOf("<h2>") + 4; // 4 length
             int end = text.IndexOf("<span", start);
 
             // while(notNewUniversityGuid) DO {generate new guid}
             university.Name = text.Substring(start, end - start).Replace("\n", "").Replace("\t", ""); // Generate University Guid and save
+
+            // Read University description
+            start = text.IndexOf("<span class=\"dt\">History") + 83;
+            if (start != 82)
+            {
+                end = text.IndexOf("</sp", start);
+                university.Description = text.Substring(start, end - start);
+                Console.WriteLine(university.Description + "\r\n");
+            }
 
             // Read Divisions (Faculties)
             start = 0;
@@ -123,15 +131,14 @@ namespace WebScraper
                         {
                             // while(notNewProgrammeGuid) DO {generate new guid}
                             programmes.Add(new Programme() { Name = field }); // Guid create needed. Also add Faculty's above Guid
-                            Console.Write(field + " ");
+                            //Console.Write(field + " ");
                         }
-                        Console.WriteLine("\r\n");
+                        //Console.WriteLine("\r\n");
                         programmeSum += programmes.Count;
                     }
-
                 }
             } while (start != -1);
-            
+
             Console.WriteLine(faculties.Count);
             return university;
         }
