@@ -49,6 +49,7 @@ namespace WebScraper
                         catch (WebException e)
                         {
                             Console.WriteLine(e.StackTrace);
+                            Console.WriteLine("https://www.whed.net/" + link);
                         }
 
                         // part below in these foreaches is only for debug
