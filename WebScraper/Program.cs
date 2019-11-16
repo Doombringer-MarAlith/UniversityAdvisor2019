@@ -15,6 +15,8 @@ namespace WebScraper
         static List<Faculty> faculties = new List<Faculty>();
         static int programmeSum = 0;
 
+        // UNCOMMENT Console.writeline lines to see results
+
         // gets universities from WHED.net website.
         // Feed it html source file of uni search by country and it will gather Uni names + Faculties
 
@@ -45,6 +47,7 @@ namespace WebScraper
                         scrapedUniversities.Add(ScrapeUniversity(htmlCode));
 
                         // part below in these foreaches is only for debug
+                        /*
                         Console.WriteLine(scrapedUniversities[scrapedUniversities.Count - 1].Name); 
                         for (int i = currentUniversity; i < faculties.Count; i++)
                         {
@@ -52,11 +55,12 @@ namespace WebScraper
                         }
                         currentUniversity = faculties.Count;
                         Console.WriteLine("\r\n");
+                        */
                     }
                 }
-                Console.WriteLine("\r\n");
+                //Console.WriteLine("\r\n");
             }
-            Console.WriteLine(programmeSum);
+            //Console.WriteLine(programmeSum);
         }
 
         // Find links to all universities in given HTML file text
@@ -97,7 +101,7 @@ namespace WebScraper
             {
                 end = text.IndexOf("</sp", start);
                 university.Description = text.Substring(start, end - start);
-                Console.WriteLine(university.Description + "\r\n");
+                // Console.WriteLine(university.Description + "\r\n");
             }
 
             // Read Divisions (Faculties)
@@ -139,7 +143,7 @@ namespace WebScraper
                 }
             } while (start != -1);
 
-            Console.WriteLine(faculties.Count);
+            // Console.WriteLine(faculties.Count);
             return university;
         }
     }
