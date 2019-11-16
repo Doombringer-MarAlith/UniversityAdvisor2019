@@ -18,11 +18,9 @@ namespace WebScraper
         // UNCOMMENT Console.writeline lines to see results
 
         // gets universities from WHED.net website.
-        // Feed it html source file of uni search by country and it will gather Uni names + Faculties
+        // Feed it html source file of uni search by country and it will gather Uni names + Uni descriptions + Faculties + Faculty programmes
 
-        // Subjects for faculties to be added
         // Will need to incorporate adding items straight to database
-        // HTML also has 'History' that could be used as description
 
         static void Main(string[] args)
         {
@@ -104,7 +102,7 @@ namespace WebScraper
                 // Console.WriteLine(university.Description + "\r\n");
             }
 
-            // Read Divisions (Faculties)
+            // Read Faculties
             start = 0;
             string facultyName;
             int nextFaculty, nextFOS;
@@ -126,7 +124,7 @@ namespace WebScraper
                     // Searching for fields of study
                     nextFaculty = text.IndexOf("Faculty : ", start) > 0 ? text.IndexOf("Faculty : ", start) + 10 : text.Length; //doesn't exist -> good too
                     nextFOS = text.IndexOf("Fields of study:", start) + 45;
-                    if(nextFaculty > nextFOS && nextFOS != 44) // 44 as in returned -1(not found) + 45 line above
+                    if(nextFaculty > nextFOS && nextFOS != 44) // 44 as in returned -1(not found) + 45 (line above)
                     {
                         end = text.IndexOf("</span>", nextFOS);
                         fields = text.Substring(nextFOS, end - nextFOS).Split(", ").ToList();
