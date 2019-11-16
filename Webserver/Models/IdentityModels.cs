@@ -21,7 +21,7 @@ namespace Webserver.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base(@"Server = (localdb)\madder; Database=UniversityAdvisor;Trusted_Connection=True;", throwIfV1Schema: false)
+            : base(@"Server = (localdb)\madder; Database=UniAdv;Trusted_Connection=True;", throwIfV1Schema: false)
         {
         }
 
