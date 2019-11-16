@@ -5,8 +5,8 @@ class Login extends Component {
         super(props);
         this.submitForm = this.submitForm.bind(this);
         this.state = {
-            email: null,
-            password: null,
+            email: '',
+            password: '',
             validateEmailMsg: '',
             validatePasswordMsg: '',
             emailReadOnly: true,
@@ -14,9 +14,23 @@ class Login extends Component {
         };
     }
 
+    loginUser() {
+        const { email, password } = this.state;
+
+        //TODO: POST to LoginController
+    }
+
     submitForm(e) {
         e.preventDefault();
         this.validateForm();
+
+        const { emailMsg, passwordMsg } = this.state;
+
+        if (emailMsg == '' || passwordMsg == '') {
+            return;
+        }
+
+        this.loginUser();
     }
 
     handleUserInput(e) {
@@ -26,8 +40,8 @@ class Login extends Component {
     }
 
     validateForm() {
-        let errorEmailText = !this.state.email ? <span className="text-danger">*Email field is required!</span> : ""
-            let errorPasswordText = !this.state.password ? <span className="text-danger">*Password field is required!</span> : ""
+        let errorEmailText = !this.state.email ? <span className="text-danger">*Email field is required!</span> : ''
+            let errorPasswordText = !this.state.password ? <span className="text-danger">*Password field is required!</span> : ''
         this.setState({ validateEmailMsg: errorEmailText, validatePasswordMsg: errorPasswordText })
     }
 
