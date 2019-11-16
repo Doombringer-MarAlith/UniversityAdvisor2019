@@ -22,9 +22,10 @@ namespace Webserver.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Created by Julius, Rytis, Tomas and Dovile";
 
             return View();
         }
+
     }
 }
