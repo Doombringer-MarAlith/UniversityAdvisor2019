@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Threading.Tasks;
 using System.Net;
 using System.Web.Mvc;
@@ -31,7 +32,7 @@ namespace Webserver.Controllers
             }
 
             var universityList = await _dbContext.Universities.ToListAsync();
-            return View("Index", universityList.FindAll(uni => uni.Name.Contains(text)));
+            return View("Index", universityList.FindAll(uni => uni.Name.ToLower().Contains(text.ToLower())));
         }
 
         // GET: Universities/Details/5
