@@ -2,7 +2,6 @@ using System.Web.Mvc;
 using Unity;
 using Unity.Mvc5;
 using Webserver.Data;
-using Webserver.Repositories;
 
 namespace Webserver
 {
@@ -10,7 +9,7 @@ namespace Webserver
     {
         public static void RegisterComponents()
         {
-			var container = new UnityContainer();
+            var container = new UnityContainer();
 
             container.RegisterType<ApplicationDbContext, ApplicationDbContext>();
 
