@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Israel')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Israel)">
+	    <input type="hidden" class="envoi" name="total" value="42">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Israel">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">42 results found for <strong>(Country=Israel)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100" selected>100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 42 of 42</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-001076&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="1076"><input class="case" type="checkbox" onClick="Coche(1076,0);" name="result[]" id="1076" value="1076"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result1076" id="result1076" title="Expand result">
+		    <span>Expand result for </span>Ariel University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_1076_logo.jpg" /></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+				  <a title="http://www.ariel.ac.il" href="images/IAUMembers/1076_1.jpg" class="fancybox" rel="gallery1076"><img class="img" src="images/IAUMembers/s_1076_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ariel.ac.il" href="images/IAUMembers/1076_2.jpg" class="fancybox" rel="gallery1076"><img class="img" src="images/IAUMembers/s_1076_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ariel.ac.il" href="images/IAUMembers/1076_3.jpg" class="fancybox" rel="gallery1076"><img class="img" src="images/IAUMembers/s_1076_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Yehuda Danon (Head) &ndash; Michael Zinigrad (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Communications; Engineering; Health Sciences; Natural Sciences; Social Sciences and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sM2BXLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016239&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="16239"><input class="case" type="checkbox" onClick="Coche(16239,0);" name="result[]" id="16239" value="16239"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result16239" id="result16239" title="Expand result">
+		    <span>Expand result for </span>Technion-Israel Institute of Technology</a></h3>
+		  <p class="i_name">
+		Technion-Machon Technologi Le' Israel		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Peretz Lavie (Head) &ndash; Danny Shapiro (Senior Administrative Officer) &ndash; Anat Rafaeli (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Studies in Science and Technology
+; Aerospace Engineering; Architecture and Town Planning; Biology; Biomedical Engineering; Biotechnology and Food Engineering; Chemical Engineering; Chemistry; Civil and Environmental Engineering; Computer Science; Continuing Education and External Studies; Education in Technology and Science; Electrical Engineering; Enviromental Engineering; Humanities and Arts; Industrial Engineering and Management; Materials Engineering; Mathematics; Mechanical Engineering; Medical Sciences Research
+; Medicine; Nanothechnology; National Building Research; Physics; Pre-University Education; Quality Assurance and Reliability; Solid State
+; Space Research
+; Transportation Research
+; Water Research</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhSLFNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023048&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23048"><input class="case" type="checkbox" onClick="Coche(23048,0);" name="result[]" id="23048" value="23048"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result23048" id="result23048" title="Expand result">
+		    <span>Expand result for </span>Achva Academic College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alean Al-Krenawi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Graduate Studies; Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxQLSNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016478&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16478"><input class="case" type="checkbox" onClick="Coche(16478,0);" name="result[]" id="16478" value="16478"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result16478" id="result16478" title="Expand result">
+		    <span>Expand result for </span>Azrieli College of Engineering Jerusalem</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Avi Domb (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhULVNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001455&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1455"><input class="case" type="checkbox" onClick="Coche(1455,0);" name="result[]" id="1455" value="1455"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result1455" id="result1455" title="Expand result">
+		    <span>Expand result for </span>Bar-Ilan University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Daniel Hershkowitz (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Technology; Advanced Torah Studies
+; Advancement of Religious Education; Alzheimer's Disease; American Literature; Assyriology; Cancer, AIDS and Immunology; Cell Scan for the Early Detection of Cancer; Commercial Law
+; Comparative Law
+; Computerized Data in Jewish Studies; Defence and Peace Economics; Dyslexia and Reading Disorders; Economic Structures of Jewish Communities; Economics; Economy of Israel; European Community; Exact Sciences; Family; History of Jewish Bible; History of Oriental Jewry; History of the Land of Israel and its Settlements; Holocaust Literature; Humanities; International Policy and Communications; Israel-Diaspora Relations; Israeli Economy and Society; Jerusalem Studies; Jewish Education in the Diaspora; Jewish Studies; Jewish Thought; Land of Israel Studies; Latin American Development; Law; Lexicography; Life Sciences; Life Sciences Applied Research; Literature of the People of Israel; Mathematical Sciences; Medical Diagnostics; Midrasha for Women; Nuclear Magnetic Resonance; Post-Talmudic Halakhic; Public Communications; Religious Anthropology; Religious Zionism; Shoah; Social Sciences; Sociology of Ethnic Groups
+; Strategic Studies; Study and Dissemination of Oral Law; Study of Developmental Disorders in Infants and Young Children; Study of Mountainous Areas in Judea and the Etzion Bloc; Study of Women in Judaism; Teaching of Sciences; Yiddish Culture</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzBVLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001542&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1542"><input class="case" type="checkbox" onClick="Coche(1542,0);" name="result[]" id="1542" value="1542"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result1542" id="result1542" title="Expand result">
+		    <span>Expand result for </span>Beit-Berl Academic College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tamar Ariav (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Academic Institute for the Training of Arab Teachers; Art; Education; Government and Social Policy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRULEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001578&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1578"><input class="case" type="checkbox" onClick="Coche(1578,0);" name="result[]" id="1578" value="1578"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result1578" id="result1578" title="Expand result">
+		    <span>Expand result for </span>Ben-Gurion University of the Negev</a></h3>
+		  <p class="i_name">
+		Universitat Ben Gurion Ba-Negev (BGU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rivka Carmi (Head) &ndash; David Bareket (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Desert Studies; Advanced Graduate Studies; Business and Management; Continuing Education; Desert Research; Engineering Sciences; Health Sciences; Humanities and Social Sciences; Natural Sciences; Study of Israel and Zionism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRXLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001636&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1636"><input class="case" type="checkbox" onClick="Coche(1636,0);" name="result[]" id="1636" value="1636"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result1636" id="result1636" title="Expand result">
+		    <span>Expand result for </span>Bezalel Academy of Art and Design</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Adi Stern (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Ceramic and Glass Design; Fine Arts; History and Theory; Industrial Design; Jewelry and Fashion; Photography, Video and Computerized Imaging; Screen Based Art; Visual Communication</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzhTLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016409&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16409"><input class="case" type="checkbox" onClick="Coche(16409,0);" name="result[]" id="16409" value="16409"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result16409" id="result16409" title="Expand result">
+		    <span>Expand result for </span>Center for Academic Studies in Or Yehuda</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Boleslav Goldman (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhULCNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003015&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3015"><input class="case" type="checkbox" onClick="Coche(3015,0);" name="result[]" id="3015" value="3015"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result3015" id="result3015" title="Expand result">
+		    <span>Expand result for </span>College of Management Academic Studies</a></h3>
+		  <p class="i_name">
+		Hamaslool Ha'akademi shel Hamichlala Leminhal (COMAS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Asher Tishler (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Economics; Behavioural Sciences; Business; Business Studies; Computer Science; Conflict Resolution and Mediation; Design; Economics; Human Factors in Road Safety; Law; Media Studies; Psychology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sU2BRLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003588&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3588"><input class="case" type="checkbox" onClick="Coche(3588,0);" name="result[]" id="3588" value="3588"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result3588" id="result3588" title="Expand result">
+		    <span>Expand result for </span>David Yellin College of Education</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zmira Mevarech (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUzRYLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023050&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23050"><input class="case" type="checkbox" onClick="Coche(23050,0);" name="result[]" id="23050" value="23050"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result23050" id="result23050" title="Expand result">
+		    <span>Expand result for </span>Hadassah Academic College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Bertold Fridlender (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Sciences; Design and Communication; Government and Social Sciences; Health and Life Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxQLTNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007521&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="7521"><input class="case" type="checkbox" onClick="Coche(7521,0);" name="result[]" id="7521" value="7521"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result7521" id="result7521" title="Expand result">
+		    <span>Expand result for </span>Holon Institute of Technology</a></h3>
+		  <p class="i_name">
+		 (HIT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Eduard Yakubov (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Design; Engineering; Instructional Technologies; Management of Technology; Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzRSLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023055&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23055"><input class="case" type="checkbox" onClick="Coche(23055,0);" name="result[]" id="23055" value="23055"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result23055" id="result23055" title="Expand result">
+		    <span>Expand result for </span>JCT Lev Academic Center</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sukenik Chaim (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering and Computer Science; Life and Health Sciences; Management; Religious Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxQLTM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010344&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10344"><input class="case" type="checkbox" onClick="Coche(10344,0);" name="result[]" id="10344" value="10344"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result10344" id="result10344" title="Expand result">
+		    <span>Expand result for </span>Kibbutzim College of Education, Technology and Arts - The School of Arts and Technology</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BTLSMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011132&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11132"><input class="case" type="checkbox" onClick="Coche(11132,0);" name="result[]" id="11132" value="11132"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result11132" id="result11132" title="Expand result">
+		    <span>Expand result for </span>Lander Institute</a></h3>
+		  <p class="i_name">
+		Machon Lander		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Jewish Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRRLFMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010920&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10920"><input class="case" type="checkbox" onClick="Coche(10920,0);" name="result[]" id="10920" value="10920"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result10920" id="result10920" title="Expand result">
+		    <span>Expand result for </span>Levinsky College of Education</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Lea Kacen (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BZLENgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012600&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="12600"><input class="case" type="checkbox" onClick="Coche(12600,0);" name="result[]" id="12600" value="12600"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result12600" id="result12600" title="Expand result">
+		    <span>Expand result for </span>Netanya Academic College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zvi Arad (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Banking and Finance; Behavioural Sciences; Business Administration; Communications and Media; Computer Science and Mathematics; Insurance and Business Administration; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhWLCNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013091&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13091"><input class="case" type="checkbox" onClick="Coche(13091,0);" name="result[]" id="13091" value="13091"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result13091" id="result13091" title="Expand result">
+		    <span>Expand result for </span>Ono Academic College</a></h3>
+		  <p class="i_name">
+		 (OAC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Moshe Ben Horin (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Health Professions; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxQLjMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013099&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="13099"><input class="case" type="checkbox" onClick="Coche(13099,0);" name="result[]" id="13099" value="13099"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result13099" id="result13099" title="Expand result">
+		    <span>Expand result for </span>Open University of Israel</a></h3>
+		  <p class="i_name">
+		Ha'Universita Ha'Petuha		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kobi Metzer (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education and Psychology; History, Philosophy and Judaic Studies; Literature, Language and Arts; Management and Economics; Mathematics and Computer Science; Natural Sciences; Sociology, Political Science and Communication</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxQLjNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013107&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13107"><input class="case" type="checkbox" onClick="Coche(13107,0);" name="result[]" id="13107" value="13107"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result13107" id="result13107" title="Expand result">
+		    <span>Expand result for </span>Oranim, The School of Education of the Kibbutz Movement</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Yaarah Bar-On (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities and Social Science; Community Leadership; Graduate Studies; Science Education; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxRLCM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013133&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="13133"><input class="case" type="checkbox" onClick="Coche(13133,0);" name="result[]" id="13133" value="13133"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result13133" id="result13133" title="Expand result">
+		    <span>Expand result for </span>Orot Israel College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Neriah Rabbi Gutel (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Rabbinical Literature</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxRLFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013433&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13433"><input class="case" type="checkbox" onClick="Coche(13433,0);" name="result[]" id="13433" value="13433"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result13433" id="result13433" title="Expand result">
+		    <span>Expand result for </span>Peres Academic Center</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ron Shapira (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Behavioral Sciences; Law; Management; Nutritional Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxULFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-014136&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="14136"><input class="case" type="checkbox" onClick="Coche(14136,0);" name="result[]" id="14136" value="14136"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result14136" id="result14136" title="Expand result">
+		    <span>Expand result for </span>Ruppin Academic Center</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Shosh Arad (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Business Administration; Engineering; Marine Sciences; Social and Community Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzBRLFM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006965&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="6965"><input class="case" type="checkbox" onClick="Coche(6965,0);" name="result[]" id="6965" value="6965"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result6965" id="result6965" title="Expand result">
+		    <span>Expand result for </span>Sami Shamoon College of Engineering</a></h3>
+		  <p class="i_name">
+		Hamikhlalah Ha'academit Lehandassah Sami Shamoon		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jehuda Haddad (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Chemical Engineering and Biotechnology; Civil Engineering; Electrical and Electronic Engineering; Industrial Engineering and Management; Mechanical Engineering; Software Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQ0RWLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016543&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16543"><input class="case" type="checkbox" onClick="Coche(16543,0);" name="result[]" id="16543" value="16543"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result16543" id="result16543" title="Expand result">
+		    <span>Expand result for </span>Sapir Academic College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Omri Yadlin (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Practical Engineering and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhVLSMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-014556&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="14556"><input class="case" type="checkbox" onClick="Coche(14556,0);" name="result[]" id="14556" value="14556"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result14556" id="result14556" title="Expand result">
+		    <span>Expand result for </span>Schechter Institute of Jewish Studies</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>David Golinkin (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Jewish Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzBVLTM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015207&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="15207"><input class="case" type="checkbox" onClick="Coche(15207,0);" name="result[]" id="15207" value="15207"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result15207" id="result15207" title="Expand result">
+		    <span>Expand result for </span>Sha'arei Mishpat - The College of Legal Studies</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRSLCM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015298&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="15298"><input class="case" type="checkbox" onClick="Coche(15298,0);" name="result[]" id="15298" value="15298"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result15298" id="result15298" title="Expand result">
+		    <span>Expand result for </span>Shenkar College of Engineering and Design</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Yuli Tamir (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Design; Engineering; Multidisciplinary Art</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRSLjNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016310&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16310"><input class="case" type="checkbox" onClick="Coche(16310,0);" name="result[]" id="16310" value="16310"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result16310" id="result16310" title="Expand result">
+		    <span>Expand result for </span>Tel Aviv University</a></h3>
+		  <p class="i_name">
+		Universitat Tel Aviv		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Joseph Klafter (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Dentistry; Education; Engineering; Environmental Studies; Exact Sciences; Humanities; Law; Life Sciences; Management; Medicine; Social Sciences; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhTLDNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016311&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16311"><input class="case" type="checkbox" onClick="Coche(16311,0);" name="result[]" id="16311" value="16311"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result16311" id="result16311" title="Expand result">
+		    <span>Expand result for </span>Tel-Hai College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Yona  Chen (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Humanities and Social Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhTLDMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023062&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23062"><input class="case" type="checkbox" onClick="Coche(23062,0);" name="result[]" id="23062" value="23062"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result23062" id="result23062" title="Expand result">
+		    <span>Expand result for </span>The Academic College of Israel in Ramat-Gan</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Educational Counseling; Health Management; Management Information Systems; Nursing; Public Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxQLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023059&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23059"><input class="case" type="checkbox" onClick="Coche(23059,0);" name="result[]" id="23059" value="23059"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result23059" id="result23059" title="Expand result">
+		    <span>Expand result for </span>The Academic College of Social Sciences and Art</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Amia Lieblich (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Therapy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxQLTNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016370&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16370"><input class="case" type="checkbox" onClick="Coche(16370,0);" name="result[]" id="16370" value="16370"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result16370" id="result16370" title="Expand result">
+		    <span>Expand result for </span>The Academic College of Tel Aviv, Yaffo</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Shlomo Biderman (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Behavioural Sciences; Computer Science; Government and Society; Management and Economics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhTLVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016441&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16441"><input class="case" type="checkbox" onClick="Coche(16441,0);" name="result[]" id="16441" value="16441"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result16441" id="result16441" title="Expand result">
+		    <span>Expand result for </span>The College of Sakhnin for Teacher Education</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhULSMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016461&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16461"><input class="case" type="checkbox" onClick="Coche(16461,0);" name="result[]" id="16461" value="16461"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result16461" id="result16461" title="Expand result">
+		    <span>Expand result for </span>The Hebrew University of Jerusalem</a></h3>
+		  <p class="i_name">
+		Ha'Universita Ha'Ivrit Bi'Yerushalayim		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Asher Cohen (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Studies; Advancement of Peace; Agricultural Economy; Agriculture; Agriculture, Food and Environment; Bee; Business Administration; Citizenship, Democracy and Civil Education; Communication; Computer Science and Engineering; Computer Sciences; Dead Sea Scrolls and Associated Literature; Dental Implant; Dental Materials and Aesthetics in Dentistry; Dental Science; Dentistry; Diabetes; Dutch Jewry; Economic, Social and  Political Research; Education; Environmental Studies; European Studies; Experimental Medicine and Cancer; Folklore; General and Tumour Immunology; Geographical Information Systems; German History; Germania-Judaica; Groundwater; Herbarium of Middle Eastern Flora; History and Culture of Polish Jews; History and Philosophy of Science, Technology and Medicine; History of Hebrew; Humanities; Industrial Development; Innovation in Education; International; International Relations; International Retail and Marketing; Islamic Studies; Jewish Art; Jewish History; Jewish Law; Jewish Music; Jewish Oral Traditions; Jewish Studies; Jewish Studies in Russian; Law; Legislative Research and Comparative Law; Marine Biogeochemistry; Medicine; Molecular Dynamics; Nanoscience and Nanotechnology; Neural Computation; Neurodegenerative Disease; Nursing; Nutritional Sciences; Occupational Therapy; Pharmacy; Photosynthesis Research; Psychobiology; Public Health and Community Medicine; Romanian Jewry; Russian and East European Jewry; Science; Social Sciences; Social Work and Social Welfare; Studies of Visual Transduction; Study and Research in Psycholanalysis; Study and Treatment of Alzheimer's Disease and Related Topics; Study of Antisemitism; Study of Christianity; Study of German Culture and Literature; Study of Infectious and Tropical Diseases; Study of Jewish Communities in the East; Study of Jewish Languages and Literature; Study of Light Speed Included Processes; Study of Normal Child and Adolescent Development; Study of Pain; Study of Sephardi and Oriental Jewry; Study of Zionism, the Yishuv and the History of Israel; The Hebrew University Bible Project; Trauma; University Teaching of Jewish Civilization; Veterinary Medicine; Women's Studies; Zigi and Lisa Daniel Swiss</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhULUMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016473&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16473"><input class="case" type="checkbox" onClick="Coche(16473,0);" name="result[]" id="16473" value="16473"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result16473" id="result16473" title="Expand result">
+		    <span>Expand result for </span>The Interdisciplinary Center</a></h3>
+		  <p class="i_name">
+		 (IDC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Uriel Reichman (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Communications; Computer Science; English as a Foreign Language; Government, Diplomacy and Strategy; International Studies; Law; Psychology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhULVMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016477&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16477"><input class="case" type="checkbox" onClick="Coche(16477,0);" name="result[]" id="16477" value="16477"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result16477" id="result16477" title="Expand result">
+		    <span>Expand result for </span>The Jerusalem  Academy of Music and Dance</a></h3>
+		  <p class="i_name">
+		Ha'Akademia Lemusica  ve Lmachol Byerushalyim		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Yinam Leef (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Composition, Conducting and Music Education; Dance; Performing Arts</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhULVM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016481&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16481"><input class="case" type="checkbox" onClick="Coche(16481,0);" name="result[]" id="16481" value="16481"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result16481" id="result16481" title="Expand result">
+		    <span>Expand result for </span>The Kaye College of Education</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Lea Kozminsky (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Studies; Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhULiMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016626&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16626"><input class="case" type="checkbox" onClick="Coche(16626,0);" name="result[]" id="16626" value="16626"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result16626" id="result16626" title="Expand result">
+		    <span>Expand result for </span>The Zinman College of Physical Education and Sport Sciences at the Wingate Institute</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ronnie Lidor (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhWLEM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020177&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="20177"><input class="case" type="checkbox" onClick="Coche(20177,0);" name="result[]" id="20177" value="20177"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result20177" id="result20177" title="Expand result">
+		    <span>Expand result for </span>University of Haifa</a></h3>
+		  <p class="i_name">
+		Universitat Haifa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Amos Shapira (Head) &ndash; David Faraggi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Education; Graduate Studies; Humanities; Law
+; Marine Sciences; Natural Sciences; Physical Education; Social Sciences; Social Welfare and Health Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BRLVM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011133&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11133"><input class="case" type="checkbox" onClick="Coche(11133,0);" name="result[]" id="11133" value="11133"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Israel</p>
+				  <h3>
+		    <a href="#result11133" id="result11133" title="Expand result">
+		    <span>Expand result for </span>Weizmann Institute of Science</a></h3>
+		  <p class="i_name">
+		Machon Weizmann Lemada		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Daniel Zajfman (Head) &ndash; Shulamit Geri (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biochemistry
+; Biology
+; Chemistry
+; Graduate; Mathematics and Computer Science; Physics
+; Science Teaching</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRRLFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 42 of 42</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel" selected>Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<div id="accord" class="cookie">
+	<form action="accord_cookie.php" method="post">
+		<input type="hidden" name="url" value="home.php" />
+		This portal uses cookies. By using this portal, you accept to receive cookies&nbsp;: <input class="bouton" type="submit" value="OK" />  <a href="Terms_of_use.html" target="_top">Terms of use</a>
+	</form>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>
