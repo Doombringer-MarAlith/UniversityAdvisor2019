@@ -15,7 +15,6 @@ namespace WebScraper
         static List<University> ScrapedUniversities = new List<University>();
         static List<Faculty> _faculties = new List<Faculty>();
         const string websiteLink = "https://www.whed.net/";
-        delegate University ScrapeDeleg(string text);
 
         // gets universities from WHED.net website.
         // Feed it html source file of uni search by country and it will gather Uni names + Uni descriptions + Faculties + Faculty programmes
@@ -65,11 +64,9 @@ namespace WebScraper
                     {
                         try
                         {
-                            //Console.WriteLine("Z");
                             string htmlCode = client.DownloadString(websiteLink + link);
-                            //Console.WriteLine("B");
-                            //Thread t = 
                             Console.WriteLine("START:" + DateTime.Now);
+
                             if (current % 3 == 0)
                             {
                                 t = new Thread(() => ScrapeUniversity(htmlCode));
