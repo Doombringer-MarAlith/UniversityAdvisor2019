@@ -1,26 +1,41 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.Owin;
+using System;
 using System.Data.Entity;
 using System.Threading.Tasks;
 using System.Net;
+using System.Web;
 using System.Web.Mvc;
 using Webserver.Data;
 using Webserver.Models;
 
 namespace Webserver.Controllers
 {
+    [Authorize]
     public class UniversitiesController : Controller
     {
-        private ApplicationDbContext _dbContext { get; set; }
+        private ApplicationDbContext _dbContext;
 
-        public UniversitiesController(ApplicationDbContext dbContext)
+        public ApplicationDbContext DbContext
         {
-            _dbContext = dbContext;
+            get
+            {
+                return _dbContext ?? HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            }
+            private set
+            {
+                _dbContext = value;
+            }
+        }
+
+        public UniversitiesController()
+        {
+
         }
 
         // GET: Universities
         public async Task<ActionResult> Index()
         {
-            return View(await _dbContext.Universities.ToListAsync());
+            return View(await DbContext.Universities.ToListAsync());
         }
 
         // GET: Universities/Search/{text}
@@ -31,7 +46,7 @@ namespace Webserver.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            var universityList = await _dbContext.Universities.ToListAsync();
+            var universityList = await DbContext.Universities.ToListAsync();
             return View("Index", universityList.FindAll(uni => uni.Name.ToLower().Contains(text.ToLower())));
         }
 
@@ -43,7 +58,7 @@ namespace Webserver.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            University university = await _dbContext.Universities.FindAsync(id);
+            University university = await DbContext.Universities.FindAsync(id);
             if (university == null)
             {
                 return HttpNotFound();
@@ -54,9 +69,10 @@ namespace Webserver.Controllers
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing)
+            if (disposing && _dbContext != null)
             {
                 _dbContext.Dispose();
+                _dbContext = null;
             }
 
             base.Dispose(disposing);

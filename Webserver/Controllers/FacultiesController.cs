@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.Owin;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -16,6 +17,23 @@ namespace Webserver.Controllers
     {
         private ApplicationDbContext _dbContext;
 
+        public ApplicationDbContext DbContext
+        {
+            get
+            {
+                return _dbContext ?? HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            }
+            private set
+            {
+                _dbContext = value;
+            }
+        }
+
+        public FacultiesController()
+        {
+
+        }
+
         public FacultiesController(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
@@ -24,7 +42,7 @@ namespace Webserver.Controllers
         // GET: Faculties
         public async Task<ActionResult> Index()
         {
-            return View(await _dbContext.Faculties.ToListAsync());
+            return View(await DbContext.Faculties.ToListAsync());
         }
 
         // GET: Faculties/Details/5
@@ -35,7 +53,7 @@ namespace Webserver.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Faculty faculty = await _dbContext.Faculties.FindAsync(id);
+            Faculty faculty = await DbContext.Faculties.FindAsync(id);
             if (faculty == null)
             {
                 return HttpNotFound();
@@ -46,9 +64,10 @@ namespace Webserver.Controllers
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing)
+            if (disposing && _dbContext != null)
             {
                 _dbContext.Dispose();
+                _dbContext = null;
             }
 
             base.Dispose(disposing);

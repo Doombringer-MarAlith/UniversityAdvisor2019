@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.Owin;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -16,6 +17,23 @@ namespace Webserver.Controllers
     {
         private ApplicationDbContext _dbContext;
 
+        public ApplicationDbContext DbContext
+        {
+            get
+            {
+                return _dbContext ?? HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            }
+            private set
+            {
+                _dbContext = value;
+            }
+        }
+
+        public ReviewsController()
+        {
+
+        }
+
         public ReviewsController(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
@@ -24,7 +42,7 @@ namespace Webserver.Controllers
         // GET: Reviews
         public async Task<ActionResult> Index()
         {
-            return View(await _dbContext.Reviews.ToListAsync());
+            return View(await DbContext.Reviews.ToListAsync());
         }
 
         // GET: Reviews/Details/5
@@ -35,7 +53,7 @@ namespace Webserver.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Review review = await _dbContext.Reviews.FindAsync(id);
+            Review review = await DbContext.Reviews.FindAsync(id);
             if (review == null)
             {
                 return HttpNotFound();
@@ -46,9 +64,10 @@ namespace Webserver.Controllers
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing)
+            if (disposing && _dbContext != null)
             {
                 _dbContext.Dispose();
+                _dbContext = null;
             }
 
             base.Dispose(disposing);
