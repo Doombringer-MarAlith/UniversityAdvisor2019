@@ -12,7 +12,7 @@ namespace Webserver.Data
         public DbSet<Faculty> Faculties { get; set; }
 
         public ApplicationDbContext()
-            : base(@"Server = (localdb)\madder; Database=UniAdv;Trusted_Connection=True;")
+            : base(@"Server = (localdb)\madder; Database=MyAbstractDatabase;Trusted_Connection=True;")
         {
             DataFixture.Initialize(this);
         }
