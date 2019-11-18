@@ -29,6 +29,13 @@
 
     </dl>
 </div>
+
 <p>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("See Programmes", "Index")
+</p>
+<p>
+    @Html.ActionLink("Check Reviews", "Faculty", "Reviews", new { id = ViewBag.FacultyId }, null)
+</p>
+<p>
+    @Html.ActionLink("Back to Faculty List", "Index", "Faculties", new { universityId = ViewBag.UniversityId }, null)
 </p>
