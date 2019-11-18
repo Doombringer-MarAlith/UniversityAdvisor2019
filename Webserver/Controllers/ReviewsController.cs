@@ -39,7 +39,7 @@ namespace Webserver.Controllers
             _dbContext = dbContext;
         }
 
-        // GET: Reviews/University/5
+        // GET: Reviews/University/{id}
         public async Task<ActionResult> University(string id)
         {
             University university = await DbContext.Universities.FindAsync(id);
@@ -53,7 +53,7 @@ namespace Webserver.Controllers
             return View(reviews);
         }
 
-        // GET: Reviews/Faculty/5
+        // GET: Reviews/Faculty/{id}
         public async Task<ActionResult> Faculty(string id)
         {
             Faculty university = await DbContext.Faculties.FindAsync(id);
@@ -67,7 +67,7 @@ namespace Webserver.Controllers
             return View(reviews);
         }
 
-        // GET: Reviews/Details/5
+        // GET: Reviews/Details/{id}
         public async Task<ActionResult> Details(string id)
         {
             if (id == null)
