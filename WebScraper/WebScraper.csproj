@@ -60,6 +60,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ScrapeFiles\AustriaUniversities.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ScrapeFiles\IsraelUniversities.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -18,7 +18,6 @@ namespace WebScraper
 
         // gets universities from WHED.net website.
         // Feed it html source file of uni search by country and it will gather Uni names + Uni descriptions + Faculties + Faculty programmes
-
         // Will need to incorporate adding items straight to database
 
         static void Main(string[] args)
@@ -55,9 +54,11 @@ namespace WebScraper
             Thread t;
             Thread t2;
             int current;
+            int currentCountryNum = 1;
             foreach (var linksList in universityLinks)
             {
                 current = 0;
+                Console.Write("COUNTRY {0:d}/{1:d} ", currentCountryNum, universityLinks.Count);
                 foreach (var link in linksList)
                 {
                     using (WebClient client = new WebClient())
@@ -65,17 +66,25 @@ namespace WebScraper
                         try
                         {
                             string htmlCode = client.DownloadString(websiteLink + link);
-                            Console.WriteLine("START:" + DateTime.Now);
+                            Console.WriteLine("UNIVERSITY {0:d}/{1:d} START:" + DateTime.Now, current+1, linksList.Count);
 
                             if (current % 3 == 0)
                             {
                                 t = new Thread(() => ScrapeUniversity(htmlCode));
                                 t.Start();
+                                if(current == linksList.Count - 1)
+                                {
+                                    t.Join();
+                                }
                             }
                             else if(current % 2 == 0)
                             {
                                 t2 = new Thread(() => ScrapeUniversity(htmlCode));
                                 t2.Start();
+                                if (current == linksList.Count - 1)
+                                {
+                                    t2.Join();
+                                }
                             }
                             else
                             {
@@ -90,6 +99,7 @@ namespace WebScraper
                     }
                     current++;
                 }
+                currentCountryNum++;
             }
             Console.WriteLine("FINISHED in " + (DateTime.Now - startTime).TotalSeconds);
             Console.ReadLine();
