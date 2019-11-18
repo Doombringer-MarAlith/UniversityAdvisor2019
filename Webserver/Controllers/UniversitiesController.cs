@@ -50,7 +50,7 @@ namespace Webserver.Controllers
             return View("Index", universityList.FindAll(uni => uni.Name.ToLower().Contains(text.ToLower())));
         }
 
-        // GET: Universities/Details/5
+        // GET: Universities/Details/{id}
         public async Task<ActionResult> Details(string id)
         {
             if (id == null)
@@ -63,6 +63,9 @@ namespace Webserver.Controllers
             {
                 return HttpNotFound();
             }
+
+            // Set current university id so that front-end can navigate back to details
+            ViewBag.UniversityId = id;
 
             return View(university);
         }
