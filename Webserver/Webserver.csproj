@@ -253,9 +253,10 @@
     <Content Include="Views\Universities\Details.cshtml" />
     <Content Include="Views\Universities\Index.cshtml" />
     <Content Include="Views\Reviews\Details.cshtml" />
-    <Content Include="Views\Reviews\Index.cshtml" />
     <Content Include="Views\Faculties\Details.cshtml" />
     <Content Include="Views\Faculties\Index.cshtml" />
+    <Content Include="Views\Reviews\Faculty.cshtml" />
+    <Content Include="Views\Reviews\University.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

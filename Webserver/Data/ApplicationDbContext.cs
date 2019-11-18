@@ -11,8 +11,7 @@ namespace Webserver.Data
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Faculty> Faculties { get; set; }
 
-        public ApplicationDbContext()
-            : base(@"Server = (localdb)\madder; Database=MyAbstractDatabase;Trusted_Connection=True;")
+        public ApplicationDbContext() : base("DefaultConnection")
         {
             DataFixture.Initialize(this);
         }

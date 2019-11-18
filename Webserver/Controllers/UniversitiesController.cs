@@ -64,6 +64,9 @@ namespace Webserver.Controllers
                 return HttpNotFound();
             }
 
+            // Set current university id so that front-end can navigate back to details
+            ViewBag.UniversityId = id;
+
             return View(university);
         }
 

@@ -39,10 +39,32 @@ namespace Webserver.Controllers
             _dbContext = dbContext;
         }
 
-        // GET: Reviews
-        public async Task<ActionResult> Index()
+        // GET: Reviews/University/5
+        public async Task<ActionResult> University(string id)
         {
-            return View(await DbContext.Reviews.ToListAsync());
+            University university = await DbContext.Universities.FindAsync(id);
+            if (university == null)
+            {
+                return HttpNotFound();
+            }
+
+            ViewBag.UniversityId = id;
+            IEnumerable<Review> reviews = DbContext.Reviews.Where(review => review.UniGuid == id);
+            return View(reviews);
+        }
+
+        // GET: Reviews/Faculty/5
+        public async Task<ActionResult> Faculty(string id)
+        {
+            Faculty university = await DbContext.Faculties.FindAsync(id);
+            if (university == null)
+            {
+                return HttpNotFound();
+            }
+
+            ViewBag.FacultyId = id;
+            IEnumerable<Review> reviews = DbContext.Reviews.Where(review => review.FacultyGuid == id);
+            return View(reviews);
         }
 
         // GET: Reviews/Details/5
@@ -59,6 +81,7 @@ namespace Webserver.Controllers
                 return HttpNotFound();
             }
 
+            ViewBag.FacultyId = id;
             return View(review);
         }
 
