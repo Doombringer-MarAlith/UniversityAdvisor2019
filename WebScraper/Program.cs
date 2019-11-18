@@ -144,7 +144,6 @@ namespace WebScraper
                 end = text.IndexOf("</sp", start);
                 university.Description = text.Substring(start, end - start);
             }
-
             ScrapedUniversities.Add(university);
             ReadFaculties(text, "fakeID");
         }
