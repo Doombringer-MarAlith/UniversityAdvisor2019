@@ -1,9 +1,0 @@
-﻿IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Debug')
-begin
-CREATE TABLE [dbo].[Debug](
-	[Level] [nchar](10) NULL,
-	[Message] [nvarchar](max) NULL,
-	[Time] [nvarchar](50) NULL,
-	[StackTrace] [nvarchar](max) NULL
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-end
