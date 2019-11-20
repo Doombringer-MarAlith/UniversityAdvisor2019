@@ -25,14 +25,14 @@ namespace Webserver
             PasswordValidator = new PasswordValidator
             {
                 RequiredLength = 6,
-                RequireNonLetterOrDigit = false,
+                RequireNonLetterOrDigit = true,
                 RequireDigit = true,
                 RequireLowercase = true,
                 RequireUppercase = true,
             };
 
             // Configure user lockout defaults
-            UserLockoutEnabledByDefault = false;
+            UserLockoutEnabledByDefault = true;
             DefaultAccountLockoutTimeSpan = TimeSpan.FromMinutes(5);
             MaxFailedAccessAttemptsBeforeLockout = 5;
 
