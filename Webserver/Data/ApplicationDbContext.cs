@@ -20,5 +20,10 @@ namespace Webserver.Data
         {
             return new ApplicationDbContext();
         }
+
+        public void Commit()
+        {
+            SaveChanges();
+        }
     }
 }
