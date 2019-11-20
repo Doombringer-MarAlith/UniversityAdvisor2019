@@ -187,9 +187,16 @@
     <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Controllers\UniversitiesController.cs" />
     <Compile Include="Data\ApplicationDbContext.cs" />
+    <Compile Include="Data\Infrastructure\DatabaseFactory.cs" />
+    <Compile Include="Data\Infrastructure\IDatabaseFactory.cs" />
     <Compile Include="Data\Models\DataFixture.cs" />
+    <Compile Include="Data\Repositories\ApplicationUserRepository.cs" />
+    <Compile Include="Data\Repositories\FacultyRepository.cs" />
+    <Compile Include="Data\Repositories\IFacultyRepository.cs" />
     <Compile Include="Data\Repositories\IRepository.cs" />
+    <Compile Include="Data\Repositories\IReviewRepository.cs" />
     <Compile Include="Data\Repositories\RepositoryBase.cs" />
+    <Compile Include="Data\Repositories\ReviewRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

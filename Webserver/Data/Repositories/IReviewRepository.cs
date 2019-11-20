@@ -2,7 +2,7 @@
 
 namespace Webserver.Data.Repositories
 {
-    public interface IUniversityRepository : IRepository<University>
+    public interface IReviewRepository : IRepository<Review>
     {
 
     }

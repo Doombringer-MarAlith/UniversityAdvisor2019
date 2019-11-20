@@ -1,34 +1,23 @@
-﻿using Microsoft.AspNet.Identity.Owin;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
-using System.Net;
-using System.Web.Mvc;
-using Webserver.Data;
-using Webserver.Models;
+using Webserver.Data.Infrastructure;
 
 namespace Webserver.Data.Repositories
 {
     public abstract class RepositoryBase<T> where T : class
     {
-        #region Properties
-        private ApplicationDbContext _dbContext;
+        private readonly ApplicationDbContext _dbContext;
         private readonly IDbSet<T> _dbSet;
 
-        #endregion
-
-        protected RepositoryBase(ApplicationDbContext dbContext)
+        protected RepositoryBase(IDatabaseFactory dbFactory)
         {
-            _dbContext = dbContext;
+            _dbContext = dbFactory.Initialize();
             _dbSet = _dbContext.Set<T>();
         }
 
-        #region Implementation
         public virtual void Add(T entity)
         {
             _dbSet.Add(entity);
@@ -54,7 +43,7 @@ namespace Webserver.Data.Repositories
             }
         }
 
-        public virtual T GetById(int id)
+        public virtual T GetById(string id)
         {
             return _dbSet.Find(id);
         }
@@ -74,6 +63,9 @@ namespace Webserver.Data.Repositories
             return _dbSet.Where(where).FirstOrDefault<T>();
         }
 
-        #endregion
+        public async void Commit()
+        {
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }
