@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Linq;
-using Webserver.Models;
 
 namespace Webserver.Data.Models
 {
@@ -31,70 +31,70 @@ namespace Webserver.Data.Models
                 dbContext.Faculties.Add(new Faculty
                 {
                     Name = "MIF",
-                    UniGuid = "1",
+                    UniversityId = "1",
                     Id = "10"
                 });
 
                 dbContext.Faculties.Add(new Faculty
                 {
                     Name = "FIM",
-                    UniGuid = "1",
+                    UniversityId = "1",
                     Id = "11"
                 });
 
                 dbContext.Faculties.Add(new Faculty
                 {
                     Name = "KTU Faculty #1",
-                    UniGuid = "2",
+                    UniversityId = "2",
                     Id = "12"
                 });
 
                 dbContext.Faculties.Add(new Faculty
                 {
                     Name = "KTU Faculty #2",
-                    UniGuid = "2",
+                    UniversityId = "2",
                     Id = "13"
                 });
 
                 dbContext.Reviews.Add(new Review
                 {
                     Text = "Perfect Uni!",
-                    UniGuid = "1",
+                    UniversityId = "1",
                     Id = "100"
                 });
 
                 dbContext.Reviews.Add(new Review
                 {
                     Text = "Perfect KTUni!",
-                    UniGuid = "2",
+                    UniversityId = "2",
                     Id = "101"
                 });
 
                 dbContext.Reviews.Add(new Review
                 {
                     Text = "Perfect Faculty!",
-                    FacultyGuid = "10",
+                    FacultyId = "10",
                     Id = "102"
                 });
 
                 dbContext.Reviews.Add(new Review
                 {
                     Text = "Perfect VU Faculty!",
-                    FacultyGuid = "11",
+                    FacultyId = "11",
                     Id = "103"
                 });
 
                 dbContext.Reviews.Add(new Review
                 {
                     Text = "Nice!",
-                    FacultyGuid = "12",
+                    FacultyId = "12",
                     Id = "104"
                 });
 
                 dbContext.Reviews.Add(new Review
                 {
                     Text = "Legit!",
-                    FacultyGuid = "13",
+                    FacultyId = "13",
                     Id = "105"
                 });
             }

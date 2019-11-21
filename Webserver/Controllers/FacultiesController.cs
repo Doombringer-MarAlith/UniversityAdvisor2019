@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Models;
+using System.Collections.Generic;
 using System.Net;
 using System.Web.Mvc;
 using Webserver.Data.Repositories;
-using Webserver.Models;
 
 namespace Webserver.Controllers
 {
@@ -24,7 +24,7 @@ namespace Webserver.Controllers
             }
 
             ViewBag.UniversityId = universityId;
-            IEnumerable<Faculty> faculties = _repository.GetMany(faculty => faculty.UniGuid == universityId);
+            IEnumerable<Faculty> faculties = _repository.GetMany(faculty => faculty.UniversityId == universityId);
 
             return View(faculties);
         }
@@ -44,7 +44,7 @@ namespace Webserver.Controllers
             }
 
             ViewBag.FacultyId = id;
-            ViewBag.UniversityId = faculty.UniGuid;
+            ViewBag.UniversityId = faculty.UniversityId;
             return View(faculty);
         }
     }

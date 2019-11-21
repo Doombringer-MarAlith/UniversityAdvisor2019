@@ -1,13 +1,13 @@
-﻿using System.Net;
+﻿using Models;
+using System.Net;
 using System.Web.Mvc;
 using Webserver.Data.Repositories;
-using Webserver.Models;
 
 namespace Webserver.Controllers
 {
     public class UniversitiesController : Controller
     {
-        private IUniversityRepository _repository;
+        private readonly IUniversityRepository _repository;
 
         public UniversitiesController(IUniversityRepository repository)
         {

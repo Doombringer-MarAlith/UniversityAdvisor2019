@@ -1,4 +1,4 @@
-﻿using Webserver.Models;
+﻿using Models;
 
 namespace Webserver.Data.Repositories
 {

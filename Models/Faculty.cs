@@ -1,12 +1,7 @@
-﻿using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
-
-namespace Webserver.Models
+﻿namespace Models
 {
-    [JsonObject]
     public class Faculty
     {
-        [JsonProperty("Name")]
         public string Name { get; set; }
 
        /* [JsonProperty("Location")]
@@ -15,11 +10,8 @@ namespace Webserver.Models
         [JsonProperty("StudentCount")]
         public string StudentCount { get; set; }*/
 
-        [JsonProperty("UniGuid")]
-        public string UniGuid { get; set; }
+        public string UniversityId { get; set; }
 
-        [Key]
-        [JsonProperty("Id")]
         public string Id { get; set; }
     }
 }

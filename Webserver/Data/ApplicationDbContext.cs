@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using Models;
 using System.Data.Entity;
+using Webserver.Data.Configuration;
 using Webserver.Data.Models;
 using Webserver.Models;
 
@@ -14,6 +16,13 @@ namespace Webserver.Data
         public ApplicationDbContext() : base("DefaultConnection")
         {
             DataFixture.Initialize(this);
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new UniversityConfiguration());
+            modelBuilder.Configurations.Add(new FacultyConfiguration());
+            modelBuilder.Configurations.Add(new ReviewConfiguration());
         }
     }
 }
