@@ -15,14 +15,20 @@ namespace Webserver.Data
 
         public ApplicationDbContext() : base("DefaultConnection")
         {
-            DataFixture.Initialize(this);
+
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Configurations.Add(new UniversityConfiguration());
             modelBuilder.Configurations.Add(new FacultyConfiguration());
             modelBuilder.Configurations.Add(new ReviewConfiguration());
+        }
+
+        public void Initialize()
+        {
+            DataFixture.Initialize(this);
         }
     }
 }

@@ -13,7 +13,6 @@ namespace Webserver.Data.Infrastructure
                 _dbContext = new ApplicationDbContext();
             }
 
-            DataFixture.Initialize(_dbContext);
             return _dbContext;
         }
     }

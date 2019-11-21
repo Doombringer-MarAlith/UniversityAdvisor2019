@@ -12,6 +12,6 @@ namespace Models
 
         public DateTime FoundingDate { get; set; }
 
-        public string Id { get; set; }
+        public int Id { get; set; }
     }
 }

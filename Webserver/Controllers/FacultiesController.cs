@@ -16,13 +16,8 @@ namespace Webserver.Controllers
         }
 
         // GET: Faculties/{universityId}
-        public ActionResult Index(string universityId)
+        public ActionResult Index(int universityId)
         {
-            if (universityId == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
             ViewBag.UniversityId = universityId;
             IEnumerable<Faculty> faculties = _repository.GetMany(faculty => faculty.UniversityId == universityId);
 
@@ -30,13 +25,8 @@ namespace Webserver.Controllers
         }
 
         // GET: Faculties/Details/{id}
-        public ActionResult Details(string id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
             Faculty faculty = _repository.GetById(id);
             if (faculty == null)
             {

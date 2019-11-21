@@ -10,8 +10,8 @@
         [JsonProperty("StudentCount")]
         public string StudentCount { get; set; }*/
 
-        public string UniversityId { get; set; }
+        public int UniversityId { get; set; }
 
-        public string Id { get; set; }
+        public int Id { get; set; }
     }
 }

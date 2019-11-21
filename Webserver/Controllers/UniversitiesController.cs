@@ -33,13 +33,8 @@ namespace Webserver.Controllers
         }
 
         // GET: Universities/Details/{id}
-        public ActionResult Details(string id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
             University university = _repository.GetById(id);
             if (university == null)
             {
