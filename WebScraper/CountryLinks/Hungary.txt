@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Hungary')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Hungary)">
+	    <input type="hidden" class="envoi" name="total" value="48">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Hungary">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">48 results found for <strong>(Country=Hungary)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 48 of 48</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-001813&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="1813"><input class="case" type="checkbox" onClick="Coche(1813,0);" name="result[]" id="1813" value="1813"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result1813" id="result1813" title="Expand result">
+		    <span>Expand result for </span>Budapest Business School</a></h3>
+		  <p class="i_name">
+		Budapesti Gazdasági Egyetem &ndash; Budapest Business School - University of Applied Science (BGE)		  </p>
+		 <p class="gallery">
+				  <a title="https://uni-bge.hu" href="images/IAUMembers/1813_1.jpg" class="fancybox" rel="gallery1813"><img class="img" src="images/IAUMembers/s_1813_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Balázs Heidrich (Head) &ndash; Zoltán Szabó (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Commerce, Hospitality and Tourism; Finance and Accountancy; International Management and Business</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sM0BRLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010558&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="10558"><input class="case" type="checkbox" onClick="Coche(10558,0);" name="result[]" id="10558" value="10558"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result10558" id="result10558" title="Expand result">
+		    <span>Expand result for </span>Central European University</a></h3>
+		  <p class="i_name">
+		Kozep-Europai Egyetem (CEU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>John Shattuck (Head) &ndash; Liviu Matei (Senior Administrative Officer) &ndash; Ildikó Moran (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Cognitive Science; Economics; Environmental Sciences and Policy; Gender Studies; History; International Relations and European Studies; Legal Studies; Mathematics and its Applications; Medieval Studies; Nationalism Studies; Philosophy; Political Science; Public Policy; Sociology and Social Anthropology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BVLTNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001812&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="1812"><input class="case" type="checkbox" onClick="Coche(1812,0);" name="result[]" id="1812" value="1812"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result1812" id="result1812" title="Expand result">
+		    <span>Expand result for </span>Corvinus University of Budapest</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_1812_logo.gif" /></h3>
+		  <p class="i_name">
+		Budapesti Corvinus Egyetem		  </p>
+		 <p class="gallery">
+				  <a title="http://www.uni-corvinus.hu" href="images/IAUMembers/1812_1.jpg" class="fancybox" rel="gallery1812"><img class="img" src="images/IAUMembers/s_1812_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>András Lánczi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Economics; Food Science; Horticultural Science; Landscape Architecture; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sM0BRLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-022919&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="22919"><input class="case" type="checkbox" onClick="Coche(22919,0);" name="result[]" id="22919" value="22919"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result22919" id="result22919" title="Expand result">
+		    <span>Expand result for </span>National University of Public Service</a></h3>
+		  <p class="i_name">
+		Nemzeti Közszolgálati Egyetem		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>András Koltay (Head) &ndash; József Horváth (Senior Administrative Officer) &ndash; László Odrobina (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Disaster Management; Executive Training and Continuing Education; International and European Studies; International Studies; Law Enforcement; Military Sciences and Officer Training; National Security; Public Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyhZLDNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015153&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="15153"><input class="case" type="checkbox" onClick="Coche(15153,0);" name="result[]" id="15153" value="15153"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result15153" id="result15153" title="Expand result">
+		    <span>Expand result for </span>Semmelweis University</a></h3>
+		  <p class="i_name">
+		Semmelweis Egyetem (SE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Agoston Szél (Head) &ndash; Mária Judit Molnár (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Doctoral Studies; Health and Public Services; Health Sciences; Medicine; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRRLTMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013411&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="13411"><input class="case" type="checkbox" onClick="Coche(13411,0);" name="result[]" id="13411" value="13411"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result13411" id="result13411" title="Expand result">
+		    <span>Expand result for </span>University of Pécs</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_13411_logo.jpg" /></h3>
+		  <p class="i_name">
+		Pécsi Tudományegyetem (PTE)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.pte.hu" href="images/IAUMembers/13411_1.jpg" class="fancybox" rel="gallery13411"><img class="img" src="images/IAUMembers/s_13411_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.pte.hu" href="images/IAUMembers/13411_2.jpg" class="fancybox" rel="gallery13411"><img class="img" src="images/IAUMembers/s_13411_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Attila Miseta (Head) &ndash; István Tarrósy (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Adult Education and Human Resources Development; Asia; Balkan Studies; Business and Economics; Engineering and Information Technology; European Studies; Francophone; Health Sciences; Humanities; Latin American; Law; Medicine; Music and Visual Arts; Sciences; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxULDMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000962&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="962"><input class="case" type="checkbox" onClick="Coche(962,0);" name="result[]" id="962" value="962"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result962" id="result962" title="Expand result">
+		    <span>Expand result for </span>Andrássy University Budapest</a></h3>
+		  <p class="i_name">
+		Andrássy Universität Budapest		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Dietmar Meyer (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Diplomacy; Economics; History and Cultural Studies; Law; Political sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0uMzhSCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001027&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1027"><input class="case" type="checkbox" onClick="Coche(1027,0);" name="result[]" id="1027" value="1027"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result1027" id="result1027" title="Expand result">
+		    <span>Expand result for </span>Apor Vilmos Catholic College</a></h3>
+		  <p class="i_name">
+		Apor Vilmos Katolikus Főiskola (AVKF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mary Woods (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Physical Education; Church Music and Music; Educational Sciences and Psychology; Languages and Literature</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sM2BSLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001811&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1811"><input class="case" type="checkbox" onClick="Coche(1811,0);" name="result[]" id="1811" value="1811"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result1811" id="result1811" title="Expand result">
+		    <span>Expand result for </span>Budapest Contemporary Dance Academy</a></h3>
+		  <p class="i_name">
+		Budapest Kortárstánc Főiskola (BKTF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Iván Angelus (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dance</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sM0BRLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001814&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1814"><input class="case" type="checkbox" onClick="Coche(1814,0);" name="result[]" id="1814" value="1814"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result1814" id="result1814" title="Expand result">
+		    <span>Expand result for </span>Budapest Metropolitan University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		Budapesti Metropolitan Főiskola (MET)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>László Vass (Head) &ndash; Jolán Róka (International Relations Officer) &ndash; Denissza Blanár (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Business; Communication Studies; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sM0BRLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-026565&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="26565"><input class="case" type="checkbox" onClick="Coche(26565,0);" name="result[]" id="26565" value="26565"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result26565" id="result26565" title="Expand result">
+		    <span>Expand result for </span>Budapest University of Jewish Studies</a></h3>
+		  <p class="i_name">
+		Országos Rabbiképző – Zsidó Egyetem		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vajda Károly (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Cultural History; Dcotoral Studies; History; Judaic Studies; Scripture and Talmud; Social Work and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzhVLUM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001815&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1815"><input class="case" type="checkbox" onClick="Coche(1815,0);" name="result[]" id="1815" value="1815"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result1815" id="result1815" title="Expand result">
+		    <span>Expand result for </span>Budapest University of Technology and Economics</a></h3>
+		  <p class="i_name">
+		Budapesti Műszaki és Gazdaságtudományi Egyetem (BME)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gábor Péceli (Head) &ndash; Tibor Szabó (Senior Administrative Officer) &ndash; László Dvorszki (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Chemical Technology and Biotechnology; Civil Engineering; Economic and Social Sciences; Electrical Engineering and Informatics; International Education; Mechanical Engineering; Natural Sciences; Transportation Engineering and Vehicle Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sM0BRLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003928&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3928"><input class="case" type="checkbox" onClick="Coche(3928,0);" name="result[]" id="3928" value="3928"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result3928" id="result3928" title="Expand result">
+		    <span>Expand result for </span>College of Dunaújváros</a></h3>
+		  <p class="i_name">
+		Dunaújvárosi Főiskola (DF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>István András (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Andragogy; Business Administration; Communication and Media Sciences; Computer Engineering; Engineering Business Management; Engineering Teacher; Materials Engineering; Mechanical Engineering; Technology Education; Vocational Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sU0RSLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012935&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="12935"><input class="case" type="checkbox" onClick="Coche(12935,0);" name="result[]" id="12935" value="12935"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result12935" id="result12935" title="Expand result">
+		    <span>Expand result for </span>College of Nyiregyháza</a></h3>
+		  <p class="i_name">
+		Nyíreghyházi Főiskola (NYF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zoltán Jánosi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Engineering; Arts; Economics and Social Studies; Science and Information Technology; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhZLFM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016052&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16052"><input class="case" type="checkbox" onClick="Coche(16052,0);" name="result[]" id="16052" value="16052"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result16052" id="result16052" title="Expand result">
+		    <span>Expand result for </span>College of Szolnok</a></h3>
+		  <p class="i_name">
+		Szolnoki Főiskola (SZF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Imre Túróczi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Foreign Language; Technical and Agricultural</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhQLTMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006556&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="6556"><input class="case" type="checkbox" onClick="Coche(6556,0);" name="result[]" id="6556" value="6556"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result6556" id="result6556" title="Expand result">
+		    <span>Expand result for </span>Dennis Gabor College</a></h3>
+		  <p class="i_name">
+		Gábor Dénes Főiskola (GDF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sarolta Zárda (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Basic Science and Technology; Economics and Social Sciences; Information Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQzRVLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000006&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="6"><input class="case" type="checkbox" onClick="Coche(6,0);" name="result[]" id="6" value="6"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result6" id="result6" title="Expand result">
+		    <span>Expand result for </span>Dharma Gate Budapest Buddhist University</a></h3>
+		  <p class="i_name">
+		A Tan Kapuya Buddhista Főiskola (TKBF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Janos Jelen (Head) &ndash; Attiláné Kovács (Senior Administrative Officer) &ndash; Tamás Agócs (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Buddhist Studies; Chinese and Japanese; Classical Tibetan; Oriental Studies and Philosophy; Pali; Sanskrit</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?JDo2MF0tQGBgCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007036&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7036"><input class="case" type="checkbox" onClick="Coche(7036,0);" name="result[]" id="7036" value="7036"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result7036" id="result7036" title="Expand result">
+		    <span>Expand result for </span>Edutus College</a></h3>
+		  <p class="i_name">
+		Edutus Foiskola		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jandala Csilla (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Management; Crafts and Trades; Electronic Imaging; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tU2BTLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004505&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4505"><input class="case" type="checkbox" onClick="Coche(4505,0);" name="result[]" id="4505" value="4505"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result4505" id="result4505" title="Expand result">
+		    <span>Expand result for </span>Eötvös József College</a></h3>
+		  <p class="i_name">
+		Eötvös József Főiskola (EJF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zoltán Melicz (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Pedagogy; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRQLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004506&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4506"><input class="case" type="checkbox" onClick="Coche(4506,0);" name="result[]" id="4506" value="4506"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result4506" id="result4506" title="Expand result">
+		    <span>Expand result for </span>Eötvös Loránd University</a></h3>
+		  <p class="i_name">
+		Eötvös Loránd Tudományegyetem (ELTE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mezey Barna (Head) &ndash; Gyula Scheuer (Senior Administrative Officer) &ndash; Nóra Gaál (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education and Psychology; Humanities; Informatics; Law and Political Science; Primary and Pre-school Education; Science; Social Sciences; Special Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRQLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004831&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4831"><input class="case" type="checkbox" onClick="Coche(4831,0);" name="result[]" id="4831" value="4831"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result4831" id="result4831" title="Expand result">
+		    <span>Expand result for </span>Eszterházy Károly  College</a></h3>
+		  <p class="i_name">
+		Eszterházy Károly Főiskola (EKF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kálmán Csaba Liptai (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Social Sciences; Humanities; Natural Sciences; Teacher Training and Knowledge Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tI0BTLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006564&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="6564"><input class="case" type="checkbox" onClick="Coche(6564,0);" name="result[]" id="6564" value="6564"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result6564" id="result6564" title="Expand result">
+		    <span>Expand result for </span>Gál Ferenc College of Szeged</a></h3>
+		  <p class="i_name">
+		Gál Ferenc Főiskola (GFHF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kozma Gábor (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Cultural Studies; Foreign Languages; Hungarian Language and Literature; Mathematics and Sciences; Music and Ethics; Physical Education; Slovak; Social and Religious Studies; Sociology and Pedagogy; Visual Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQzRWLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011162&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11162"><input class="case" type="checkbox" onClick="Coche(11162,0);" name="result[]" id="11162" value="11162"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result11162" id="result11162" title="Expand result">
+		    <span>Expand result for </span>Hungarian Dance Academy</a></h3>
+		  <p class="i_name">
+		Magyar Táncmüvészeti Főiskola (MTF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>György Szakály (Head) &ndash; Béláné Melis (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Choreography and Dance Theory; Classical Ballet; Dance Pedagogy; Folk Dance; Theoretical; Training Choreographers; Training Pedagogues</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRRLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007706&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7706"><input class="case" type="checkbox" onClick="Coche(7706,0);" name="result[]" id="7706" value="7706"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result7706" id="result7706" title="Expand result">
+		    <span>Expand result for </span>International Business School</a></h3>
+		  <p class="i_name">
+		IBS Nemzetkozi Uzleti Főiskola (IBS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Istvánedek Tamás (Head) &ndash; László Lang (Senior Administrative Officer) &ndash; László Lendvai (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts Management; Business Administration; Economics; Finance; Foreign Languages; Human Resources; International Relations; Management; Marketing; Quantitative Methodology and IT; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzxQLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010123&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10123"><input class="case" type="checkbox" onClick="Coche(10123,0);" name="result[]" id="10123" value="10123"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result10123" id="result10123" title="Expand result">
+		    <span>Expand result for </span>Kaposvár University</a></h3>
+		  <p class="i_name">
+		Kaposvári Egyetem (KE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ferenc Szávai (Head) &ndash; Zoltán Gál (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural and Environmental Sciences; Arts; Economics; Forage Science; Pedagogy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BRLEMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010154&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10154"><input class="case" type="checkbox" onClick="Coche(10154,0);" name="result[]" id="10154" value="10154"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result10154" id="result10154" title="Expand result">
+		    <span>Expand result for </span>Károli Gáspár University of the Hungarian Reformed Church, Budapest</a></h3>
+		  <p class="i_name">
+		Károli Gáspár Református Egyetem (KRE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Péter Balla (Head) &ndash; Niké Szkárosi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Humanities; Law; Teacher Training; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BRLTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010156&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10156"><input class="case" type="checkbox" onClick="Coche(10156,0);" name="result[]" id="10156" value="10156"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result10156" id="result10156" title="Expand result">
+		    <span>Expand result for </span>Károly Róbert University College</a></h3>
+		  <p class="i_name">
+		Károly Róbert Föiskola (KRF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ilona Eszter Helgertné Szabó (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Management; Business Development; Finance and Accounting; Management and Leadership; Tourism-Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BRLTM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010259&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10259"><input class="case" type="checkbox" onClick="Coche(10259,0);" name="result[]" id="10259" value="10259"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result10259" id="result10259" title="Expand result">
+		    <span>Expand result for </span>Kecskemét College</a></h3>
+		  <p class="i_name">
+		Kecskeméti Főiskola (KF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ailer Piroska (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Horticulture; Mechanical Engineering and Automation; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BSLTNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021860&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="21860"><input class="case" type="checkbox" onClick="Coche(21860,0);" name="result[]" id="21860" value="21860"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result21860" id="result21860" title="Expand result">
+		    <span>Expand result for </span>King Sigismund Business School</a></h3>
+		  <p class="i_name">
+		Zsigmond Király Főiskola (ZSKF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>József Bayer (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Management Studies; Communication and Media Studies; Foreign Languages; International and Political Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRYLUNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010440&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10440"><input class="case" type="checkbox" onClick="Coche(10440,0);" name="result[]" id="10440" value="10440"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result10440" id="result10440" title="Expand result">
+		    <span>Expand result for </span>Kodolányi János University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		Kodolányi János Főiskola (KJF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Péter Szabó (Head) &ndash; Éva Horvati (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Cultural, Communication and Media Studies; Social Sciences and Liberal Arts; Tourism and Business Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULSNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010463&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10463"><input class="case" type="checkbox" onClick="Coche(10463,0);" name="result[]" id="10463" value="10463"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result10463" id="result10463" title="Expand result">
+		    <span>Expand result for </span>Kölcsey Ferenc Teacher Training College of the Reformed Church</a></h3>
+		  <p class="i_name">
+		Kölcsey Ferenc Református Tanítóképző Főiskola (KTIF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zoltán Völgyesi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Christian Education; Communication and Media Sciences ; Library and Computer Science; Liturgical Music; Teacher Training; Youth Assistance</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULUMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011007&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11007"><input class="case" type="checkbox" onClick="Coche(11007,0);" name="result[]" id="11007" value="11007"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result11007" id="result11007" title="Expand result">
+		    <span>Expand result for </span>Liszt Ferenc Academy of Music in Budapest</a></h3>
+		  <p class="i_name">
+		Liszt Ferenc Zeneművészeti Egyetem (LFZE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Andrea Vigh (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Chamber Music; Church Music; Composition; Conducting; Folk Music; Jazz; Keyboard and Harp; Musicology and Music Theory; Pedagogical; Strings; Vocal and Opera Studies; Woodwinds and Brass; Young Talents</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRQLCM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012010&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12010"><input class="case" type="checkbox" onClick="Coche(12010,0);" name="result[]" id="12010" value="12010"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result12010" id="result12010" title="Expand result">
+		    <span>Expand result for </span>Moholy-Nagy University of Arts and Design, Budapest</a></h3>
+		  <p class="i_name">
+		Moholy-Nagy Művészeti Egyetem (MOME)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>József Fülöp (Head) &ndash; Zsombor Nagy (Senior Administrative Officer) &ndash; Zsolt Petri (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Design; Liberal Arts; Media; Theoretical Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhQLDNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012962&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="12962"><input class="case" type="checkbox" onClick="Coche(12962,0);" name="result[]" id="12962" value="12962"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result12962" id="result12962" title="Expand result">
+		    <span>Expand result for </span>Obuda University</a></h3>
+		  <p class="i_name">
+		Óbudai Egyetem		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>János Fodor (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Management; Electrical Engineering; Engineering Education; Informatics; Light Industry and Environmental Protection Engineering; Mechanical and Safety Engineering; Technical</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhZLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013408&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13408"><input class="case" type="checkbox" onClick="Coche(13408,0);" name="result[]" id="13408" value="13408"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result13408" id="result13408" title="Expand result">
+		    <span>Expand result for </span>Pázmány Péter Catholic University, Budapest</a></h3>
+		  <p class="i_name">
+		Pázmány Péter Katolikus Egyetem (PPKE/PPCU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Szabolcs Anzelm Szuromi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Canon Law; Humanities; Information Technology; Italian Interuniversity; Law and Political Science; Teacher Training; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxULCNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013970&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="13970"><input class="case" type="checkbox" onClick="Coche(13970,0);" name="result[]" id="13970" value="13970"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result13970" id="result13970" title="Expand result">
+		    <span>Expand result for </span>Police Officer Training College</a></h3>
+		  <p class="i_name">
+		Rendőrtiszti Főiskola (RTF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>István Sárkány (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Police Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxZLVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016040&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16040"><input class="case" type="checkbox" onClick="Coche(16040,0);" name="result[]" id="16040" value="16040"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result16040" id="result16040" title="Expand result">
+		    <span>Expand result for </span>Széchenyi István University</a></h3>
+		  <p class="i_name">
+		Széchenyi István Egyetem (SZE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Péter Földesi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Engineering Sciences; Health and Social Sciences; Law and Political Sciences; Musical Art</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhQLSNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016042&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16042"><input class="case" type="checkbox" onClick="Coche(16042,0);" name="result[]" id="16042" value="16042"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result16042" id="result16042" title="Expand result">
+		    <span>Expand result for </span>Szent István University</a></h3>
+		  <p class="i_name">
+		Szent István Egyetem (SZIE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>János Tőzsér (Head) &ndash; István Szabó (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural and Environmental Studies; Applied Arts and Pedagogy; Architecture and Civil Engineering; Economics and Social Sciences; Economics,  Agriculture and Health Studies; Health Care and Environmental Sanitation Studies; Mechanical Engineering; Veterinary Science; Water and Environmental Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhQLSMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012209&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12209"><input class="case" type="checkbox" onClick="Coche(12209,0);" name="result[]" id="12209" value="12209"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result12209" id="result12209" title="Expand result">
+		    <span>Expand result for </span>The András Pető College</a></h3>
+		  <p class="i_name">
+		Pető András Foïskola (MPANNI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Franz Schaffhauser (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Conductive Education; Conductive Teaching and Education for Children; Education and Social Sciences; Foreign Languages; Medical Biology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhSLCNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011160&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11160"><input class="case" type="checkbox" onClick="Coche(11160,0);" name="result[]" id="11160" value="11160"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result11160" id="result11160" title="Expand result">
+		    <span>Expand result for </span>The Hungarian University of Fine Arts, Budapest</a></h3>
+		  <p class="i_name">
+		Magyar Képzőművészeti Egyetem (MKE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tibor Somorjai-Kiss (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Art History; Art Restoration; Art Theory; Artistic Anatomy and Geometry and Projection; Conservation; Graphic Design; Graphics; Intermedia; Painting; Printmaking; Scenography; Sculpture; Visual Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRRLUNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016759&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16759"><input class="case" type="checkbox" onClick="Coche(16759,0);" name="result[]" id="16759" value="16759"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result16759" id="result16759" title="Expand result">
+		    <span>Expand result for </span>Tomori Pál College</a></h3>
+		  <p class="i_name">
+		Tomori Pál Főiskola (TPF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rózsa Meszlényi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Economics; Finance and Accountancy; Management; Regional Economy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhXLTNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003615&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3615"><input class="case" type="checkbox" onClick="Coche(3615,0);" name="result[]" id="3615" value="3615"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result3615" id="result3615" title="Expand result">
+		    <span>Expand result for </span>University of Debrecen</a></h3>
+		  <p class="i_name">
+		Debreceni Egyetem (DE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zoltán Szilvássy (Head) &ndash; József Mészáros (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural and Food Sciences and Environmental Management; Child and Special Needs Education; Dentistry; Economics and Business; Engineering; Health; Humanities; Informatics; Law; Medicine; Music; Pharmacy; Public Health; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUzhRLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011949&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11949"><input class="case" type="checkbox" onClick="Coche(11949,0);" name="result[]" id="11949" value="11949"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result11949" id="result11949" title="Expand result">
+		    <span>Expand result for </span>University of Miskolc</a></h3>
+		  <p class="i_name">
+		Miskolci Egyetem (UM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>András Torma (Head) &ndash; Viktor Kovács (Senior Administrative Officer) &ndash; Edit Szőke (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Confucius; Earth Sciences and Engineering; Economics; Health Care; Law; Materials Science and Engineering; Mechanical Engineering and Informatics; Music</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRZLSNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013332&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="13332"><input class="case" type="checkbox" onClick="Coche(13332,0);" name="result[]" id="13332" value="13332"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result13332" id="result13332" title="Expand result">
+		    <span>Expand result for </span>University of Pannonia</a></h3>
+		  <p class="i_name">
+		Pannon Egyetem (PE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Andras Gelencser (Head) &ndash; Angéla Bognár Sabjanics (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Engineering; Georgikon; Information Technology; Modern Philology and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxTLFMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016041&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16041"><input class="case" type="checkbox" onClick="Coche(16041,0);" name="result[]" id="16041" value="16041"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result16041" id="result16041" title="Expand result">
+		    <span>Expand result for </span>University of Szeged</a></h3>
+		  <p class="i_name">
+		Szegedi Tudományegyetem (SZTE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gabor Szabo (Head) &ndash; György Pálfi (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Arts; Dentistry; Economics and Business Administration; Engineering; Health Sciences and Social Studies; Law and Political Sciences; Medicine; Music; Pharmacy; Science and Informatics; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhQLSMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016043&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16043"><input class="case" type="checkbox" onClick="Coche(16043,0);" name="result[]" id="16043" value="16043"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result16043" id="result16043" title="Expand result">
+		    <span>Expand result for </span>University of Theatre and Film Arts Budapest</a></h3>
+		  <p class="i_name">
+		Szinház-és Filmművészeti Egyetem (SZFE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tamás Ascher (Head) &ndash; Sylvia Huszár (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Film and Television; Theatre</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhQLSMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012937&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12937"><input class="case" type="checkbox" onClick="Coche(12937,0);" name="result[]" id="12937" value="12937"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result12937" id="result12937" title="Expand result">
+		    <span>Expand result for </span>University of West Hungary</a></h3>
+		  <p class="i_name">
+		Nyugat-Magyarországi Egyetem (NyME)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sándor Faragó (Head) &ndash; Mária Merényi (Senior Administrative Officer) &ndash; Judit Engelmann-Kékesi (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Food Science; Arts; Economics; Forestry; Geoinformatics; Natural Sciences; Pedagogy; Teacher Training; Visual Arts and Music, Education and Sport ; Wood Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhZLFM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021169&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="21169"><input class="case" type="checkbox" onClick="Coche(21169,0);" name="result[]" id="21169" value="21169"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Hungary</p>
+				  <h3>
+		    <a href="#result21169" id="result21169" title="Expand result">
+		    <span>Expand result for </span>Wekerle Business School</a></h3>
+		  <p class="i_name">
+		Wekerle Sándor Üzleti Főiskola		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Attila Borbély (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRRLUNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 48 of 48</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary" selected>Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

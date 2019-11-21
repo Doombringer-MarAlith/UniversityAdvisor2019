@@ -7,6 +7,9 @@ using System.Linq;
 using WebScraper.Models;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System.Text;
 
 namespace WebScraper
 {
@@ -15,6 +18,10 @@ namespace WebScraper
         static List<University> ScrapedUniversities = new List<University>();
         static List<Faculty> _faculties = new List<Faculty>();
         const string websiteLink = "https://www.whed.net/";
+        private static readonly HttpClient client = new HttpClient();
+        const int readThisMany = 880;
+        static string CountryLinksPath = "CountryLinks";
+
 
         // gets universities from WHED.net website.
         // Feed it html source file of uni search by country and it will gather Uni names + Uni descriptions + Faculties + Faculty programmes
@@ -27,7 +34,7 @@ namespace WebScraper
             string[] files = null;
             try
             {
-                files = Directory.GetFiles("ScrapeFiles");
+                files = Directory.GetFiles(CountryLinksPath); // CountryLinksPath  
             }
             catch (Exception e)
             {
@@ -66,18 +73,18 @@ namespace WebScraper
                         try
                         {
                             string htmlCode = client.DownloadString(websiteLink + link);
-                            Console.WriteLine("UNIVERSITY {0:d}/{1:d} START:" + DateTime.Now, current+1, linksList.Count);
+                            Console.WriteLine("UNIVERSITY {0:d}/{1:d} START:" + DateTime.Now, current + 1, linksList.Count);
 
                             if (current % 3 == 0)
                             {
                                 t = new Thread(() => ScrapeUniversity(htmlCode));
                                 t.Start();
-                                if(current == linksList.Count - 1)
+                                if (current == linksList.Count - 1)
                                 {
                                     t.Join();
                                 }
                             }
-                            else if(current % 2 == 0)
+                            else if (current % 2 == 0)
                             {
                                 t2 = new Thread(() => ScrapeUniversity(htmlCode));
                                 t2.Start();
@@ -156,10 +163,10 @@ namespace WebScraper
             int nextFaculty, nextFOS;
             do
             {
-                List<string> fields = new List<string>();
+                List<string> fields;
                 List<Programme> programmes = new List<Programme>();
                 start = text.IndexOf("Faculty : ", start);
-                string facultyGuid = Guid.NewGuid().ToString();
+                string facultyGuid;
                 if (start != -1)
                 {
                     start += 10;
@@ -185,6 +192,46 @@ namespace WebScraper
                     }
                 }
             } while (start != -1);
+        }
+
+        // gets country's university's link list
+        static async Task<int> Scrape(string country, int readThisMany, int offset)
+        {
+            var values = new Dictionary<string, string>
+            {
+            { "Chp1", country },
+            { "membre", "0" },
+            { "nbr_ref_pge", readThisMany.ToString() },
+            { "debut", offset.ToString() }
+            };
+
+            var content = new FormUrlEncodedContent(values);
+
+            var response = await client.PostAsync(websiteLink + "results_institutions.php", content);
+
+            var responseString = await response.Content.ReadAsStringAsync();
+
+            using (StreamWriter outputFile = new StreamWriter(@"C:\Users\nihilistic\Desktop\countryLinks\" + country + ".txt")) // CountryLinksPath + "\\" + country + ".txt"
+            {
+                outputFile.Write(responseString);
+            }
+            return FindUniversityCount(responseString);
+        }
+
+        static int FindUniversityCount(string text)
+        {
+            int start = text.IndexOf("total") + 14;
+            if (start == 13)
+            {
+                return -1;
+            }
+            int endIndex = text.IndexOf("\">", start);
+            if (endIndex - start < 1)
+            {
+                return -1;
+            }
+            string txt = text.Substring(start, endIndex - start);
+            return Int32.Parse(txt);
         }
     }
 }

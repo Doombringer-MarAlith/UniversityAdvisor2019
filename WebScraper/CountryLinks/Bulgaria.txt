@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Bulgaria')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Bulgaria)">
+	    <input type="hidden" class="envoi" name="total" value="47">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Bulgaria">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">47 results found for <strong>(Country=Bulgaria)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 47 of 47</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-016833&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="16833"><input class="case" type="checkbox" onClick="Coche(16833,0);" name="result[]" id="16833" value="16833"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result16833" id="result16833" title="Expand result">
+		    <span>Expand result for </span>Trakia University</a></h3>
+		  <p class="i_name">
+		Trakiyski universitet		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ivan Vashin (Head) &ndash; Tsonka Kasnakova (Senior Administrative Officer) &ndash; Veselina Gadjeva (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Economics; Education; Haskovo; Information and In-service Teacher Training; Medicine; Technology; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhYLFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-014139&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="14139"><input class="case" type="checkbox" onClick="Coche(14139,0);" name="result[]" id="14139" value="14139"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result14139" id="result14139" title="Expand result">
+		    <span>Expand result for </span>"Angel Kančev" University of Ruse</a></h3>
+		  <p class="i_name">
+		Rusenski universitet "Angel Kančev" (RU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hristo Beloev (Head) &ndash; Tania Grozeva (Senior Administrative Officer) &ndash; Todorka Todorova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agro-industry; Business and Management; Electrical and Electronic Engineering and Automation; Law; Mechanical and Manufacturing Engineering; Natural Sciences and Education; Public Health and Health Care; Transport</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzBRLFNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020831&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="20831"><input class="case" type="checkbox" onClick="Coche(20831,0);" name="result[]" id="20831" value="20831"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result20831" id="result20831" title="Expand result">
+		    <span>Expand result for </span>"Chernorizets Hrabar"  Free University of Varna</a></h3>
+		  <p class="i_name">
+		Varnenski svoboden universitet "Chernorizeth Hrarbar" (VFU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Anna Nedyalkova (Head) &ndash; Galya Gercheva (Senior Administrative Officer) &ndash; Nikolay Dragoev (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Foreign Language Teaching; International Economics and Administration; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BYLFMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015892&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="15892"><input class="case" type="checkbox" onClick="Coche(15892,0);" name="result[]" id="15892" value="15892"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result15892" id="result15892" title="Expand result">
+		    <span>Expand result for </span>"D.A. Tsenov" Academy of Economics - Svishtov</a></h3>
+		  <p class="i_name">
+		Stopanska akademija "D.A. Čenov" - Svištov		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ivan Rashkov Marchevski (Head) &ndash; Marusya Ivanova Smokova-Stefanova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economic Accounting; Finance; Industrial and Commercial Business; Management and Marketing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRYLjMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015944&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="15944"><input class="case" type="checkbox" onClick="Coche(15944,0);" name="result[]" id="15944" value="15944"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result15944" id="result15944" title="Expand result">
+		    <span>Expand result for </span>"Konstantin Preslavski" Shumen University</a></h3>
+		  <p class="i_name">
+		Šumenski universitet "Episcop Konstantin Preslavski"		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Margarita Georgieva (Head) &ndash; Zhivko Zhekov (Senior Administrative Officer) &ndash; Rumyana Todorova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Astronomy; Dobrich; Education; Humanities; Information Qualification and Lifelong Learning; Mathematics and Computer Science; Natural Sciences; Technical Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRZLSMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012280&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12280"><input class="case" type="checkbox" onClick="Coche(12280,0);" name="result[]" id="12280" value="12280"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result12280" id="result12280" title="Expand result">
+		    <span>Expand result for </span>"Krustyo Sarafov" National Academy for Theatre and Film Arts</a></h3>
+		  <p class="i_name">
+		Nacionalna akademia za teatralno i filmovo izkustvo "Krustyo Sarafov" (NATFIZ/NATFA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Lubomir Halatchev (Head) &ndash; Aneliya Tsvetkova (Senior Administrative Officer) &ndash; Krasimira Ivanova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Performing Arts; Screen Arts</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhSLiNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020915&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="20915"><input class="case" type="checkbox" onClick="Coche(20915,0);" name="result[]" id="20915" value="20915"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result20915" id="result20915" title="Expand result">
+		    <span>Expand result for </span>"Lyuben Karavelov" University of Structural Engineering and Architecture</a></h3>
+		  <p class="i_name">
+		Vische stroitelno utchilichte "Juben Karavelov" (VSU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Radan Ivanovo (Head) &ndash; Margarita Nikolova Khamova (Senior Administrative Officer) &ndash; Neli Yordanova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Construction Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BZLDM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021750&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="21750"><input class="case" type="checkbox" onClick="Coche(21750,0);" name="result[]" id="21750" value="21750"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result21750" id="result21750" title="Expand result">
+		    <span>Expand result for </span>"Neofit Rilski" South-West University</a></h3>
+		  <p class="i_name">
+		Yugo-zapaden universitet "Neofit Rilski" (SWU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ivan Mirchev (Head) &ndash; Trayan Popkochev (Senior Administrative Officer) &ndash; Georgieva Dobrinka (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Economics; Law and History; Mathematics and Natural Sciences; Pedagogy; Philology; Philosophy; Public Health and Sports; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRXLTNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013537&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="13537"><input class="case" type="checkbox" onClick="Coche(13537,0);" name="result[]" id="13537" value="13537"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result13537" id="result13537" title="Expand result">
+		    <span>Expand result for </span>"Paissii Hilendarsk" University of Plovdiv</a></h3>
+		  <p class="i_name">
+		Plovdivski universitet "Paisii Hilendarski" (PU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zapryan Kozlydzov (Head) &ndash; Zhorheta Cholakova (Senior Administrative Officer) &ndash; Nadya Kaneva (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biology; Chemistry; Economics and Social Sciences; History and Philosophy; Khardzali; Law; Mathematics and Computer Science; Pedagogy; Philology; Physics; Smolyan; Smolyan Technical</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxVLFM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019871&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19871"><input class="case" type="checkbox" onClick="Coche(19871,0);" name="result[]" id="19871" value="19871"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result19871" id="result19871" title="Expand result">
+		    <span>Expand result for </span>"Prof. Dr. Assen Zlatarov" University - Burgas</a></h3>
+		  <p class="i_name">
+		Universitet "Prof. Dr. Assen Zlatarov" - Burgas (BTU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Petko Petkov Stoyanov (Head) &ndash; Pertanka Pipeva Todorova Dimitrova (Senior Administrative Officer) &ndash; Magdalena Sabeva Mitkova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Medicine; Natural Sciences; Research; Social Sciences; Teaching of Foreign Languages; Technical Sciences; Technical Studies; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLVMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011517&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11517"><input class="case" type="checkbox" onClick="Coche(11517,0);" name="result[]" id="11517" value="11517"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result11517" id="result11517" title="Expand result">
+		    <span>Expand result for </span>"Prof. Dr. Paraskev Stoyanov" Medical University - Varna</a></h3>
+		  <p class="i_name">
+		Medicinski universitet "Prof. Dr. Paraskev Stoyanov" - Varna (Medical University of Varna)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Krasimir Ivanov (Head) &ndash; Albena Kerekovska (Senior Administrative Officer) &ndash; Aneta Dokova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Medicine; Pharmacy; Public Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRVLDM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012567&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12567"><input class="case" type="checkbox" onClick="Coche(12567,0);" name="result[]" id="12567" value="12567"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result12567" id="result12567" title="Expand result">
+		    <span>Expand result for </span>"Prof. Pančo Vladigerov" National Academy of Music</a></h3>
+		  <p class="i_name">
+		Natsionalna muzikalna akademija "Prof. Pančo Vladigerov" (NMA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Dimitar Momtchilov (Head) &ndash; Pravda Atanasova Goranova (Senior Administrative Officer) &ndash; Petya Kissimova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Instruments; Theory, Composition and Conducting; Vocal Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhVLUM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011931&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11931"><input class="case" type="checkbox" onClick="Coche(11931,0);" name="result[]" id="11931" value="11931"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result11931" id="result11931" title="Expand result">
+		    <span>Expand result for </span>"St. Ivan Rilski" University of Mining and Geology</a></h3>
+		  <p class="i_name">
+		Minno-geoložki universitet "Sv. Ivan Rilski" (MGU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Lyuben Ivanov Totev (Head) &ndash; Vyara Georgieva Pozhidaeva (Senior Administrative Officer) &ndash; Stefka Dimitrova Pristavova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Geoexploration; Humanities; Mining Electromechanics; Mining Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRZLFMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015509&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="15509"><input class="case" type="checkbox" onClick="Coche(15509,0);" name="result[]" id="15509" value="15509"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result15509" id="result15509" title="Expand result">
+		    <span>Expand result for </span>"St. Kliment Ohridski"  University of Sofia</a></h3>
+		  <p class="i_name">
+		Sofiiski universitet "Sv. Kliment Ohridski" (SU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ivan Ilchev (Head) &ndash; Milena Stefanova (Senior Administrative Officer) &ndash; Tatyana Tsaneva (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biology; Chemistry and Pharmacy; Classical and Modern Philology; Economics and Business Administration; Education; Geology and Geography; History; Information and In-Service Training of Teachers; Journalism and Mass Communication; Language Learning; Law; Mathematics and Informatics; Medicine; Philosophy; Physics; Preschool and  Primary School Education; Slavic Studies; Sports; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRVLCNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020916&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="20916"><input class="case" type="checkbox" onClick="Coche(20916,0);" name="result[]" id="20916" value="20916"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result20916" id="result20916" title="Expand result">
+		    <span>Expand result for </span>"Todor Kableshkov" University of Transport</a></h3>
+		  <p class="i_name">
+		Vische transportno utchilichte "Todor Kablechkov"		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Peter Kolev Kolev (Head) &ndash; Rumen Kostadinov Uluchev (Senior Administrative Officer) &ndash; Daniela Dimitrova Todorova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Machinery and Construction Technologies in Transport; Telecommunications and Electrical Equipment in Transport; Transport Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BZLDM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012282&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12282"><input class="case" type="checkbox" onClick="Coche(12282,0);" name="result[]" id="12282" value="12282"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result12282" id="result12282" title="Expand result">
+		    <span>Expand result for </span>"Vassil Levski" National Sports Academy</a></h3>
+		  <p class="i_name">
+		Nacionalna sportna akademija "Vassil Levski" (NSA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Pencho Geshev (Head) &ndash; Nikolay Izov (Senior Administrative Officer) &ndash; Daniela Dasheva (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Coaches; Physiotherapy; Teachers</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhSLiMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000717&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="717"><input class="case" type="checkbox" onClick="Coche(717,0);" name="result[]" id="717" value="717"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result717" id="result717" title="Expand result">
+		    <span>Expand result for </span>Academy of Music, Dance and Fine Arts</a></h3>
+		  <p class="i_name">
+		Akademija za muzikalno i tanzovo izkustvo (ADMFA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vasilev Milcho (Head) &ndash; Julia Kuyumdzhieva (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Fine Arts; Music Education; Musical Folklore and Choreograpy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0tUyRXCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-022551&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="22551"><input class="case" type="checkbox" onClick="Coche(22551,0);" name="result[]" id="22551" value="22551"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result22551" id="result22551" title="Expand result">
+		    <span>Expand result for </span>Academy of the Ministry of Interior - Sofia</a></h3>
+		  <p class="i_name">
+		MVR Akademia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Lazarov Stoichev Nedelcho (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Adminstration and Security</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyhVLTMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000176&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="176"><input class="case" type="checkbox" onClick="Coche(176,0);" name="result[]" id="176" value="176"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result176" id="result176" title="Expand result">
+		    <span>Expand result for </span>Agricultural University</a></h3>
+		  <p class="i_name">
+		Agraren Universitet (AU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hristina Yancheva (Head) &ndash; Velichko Rodopski (Senior Administrative Officer) &ndash; Nelly Nencheva (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Economics; Horticulture and Viticulture; Languages and Sport; Plant Protection and Agroecology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0sMzxWCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000930&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="930"><input class="case" type="checkbox" onClick="Coche(930,0);" name="result[]" id="930" value="930"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result930" id="result930" title="Expand result">
+		    <span>Expand result for </span>American University in Bulgaria</a></h3>
+		  <p class="i_name">
+		Amerikanski universitet v Bulgaria (AUBG)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kevin J. Aspegren (Head) &ndash; Tanya Markova (Senior Administrative Officer) &ndash; Pavlina Pavlova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts, Languages and Literature; Business; Computer Science; Economics; History and Civilizations; Journalism and Mass Communication; Mathematics and Science; Political Science and European Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0uMyxQCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001843&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1843"><input class="case" type="checkbox" onClick="Coche(1843,0);" name="result[]" id="1843" value="1843"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result1843" id="result1843" title="Expand result">
+		    <span>Expand result for </span>Burgas Free University</a></h3>
+		  <p class="i_name">
+		Burgaski svoboden universitet (BFU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Galya Hristozova (Head) &ndash; Evelina Dineva (Senior Administrative Officer) &ndash; Valya Pavlova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Studies; Computer Science and Engineering; Humanities; Legal Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sM0BULFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004906&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4906"><input class="case" type="checkbox" onClick="Coche(4906,0);" name="result[]" id="4906" value="4906"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result4906" id="result4906" title="Expand result">
+		    <span>Expand result for </span>European Higher School of Economics and Management</a></h3>
+		  <p class="i_name">
+		Evropejsko vische utchilichte po ikonomika i mendjmunt (ECEM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tsvetan Kotzev (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tI0RQLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004862&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4862"><input class="case" type="checkbox" onClick="Coche(4862,0);" name="result[]" id="4862" value="4862"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result4862" id="result4862" title="Expand result">
+		    <span>Expand result for </span>European Polytechnic University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ivan Petkov (Head) &ndash; Nikolay Andreev (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architectural Design, Theory and History of Architecture; Communication and Computer Technology; Construction of Buildings and Facilities, Building Materials and Technology; Economics, Management and Administration; Green Energetics; Mechanics and Mathematics; Psychology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tI0BWLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024480&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24480"><input class="case" type="checkbox" onClick="Coche(24480,0);" name="result[]" id="24480" value="24480"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result24480" id="result24480" title="Expand result">
+		    <span>Expand result for </span>Higher School of Management - Varna</a></h3>
+		  <p class="i_name">
+		Vische utchilichte po mendjmunt – Varna		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Todor Radev (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Marketing; Computer Sciences; Hospitality and Tourism Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBULiNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024479&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24479"><input class="case" type="checkbox" onClick="Coche(24479,0);" name="result[]" id="24479" value="24479"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result24479" id="result24479" title="Expand result">
+		    <span>Expand result for </span>Higher School of Security and Economics – Plovdiv</a></h3>
+		  <p class="i_name">
+		Vische utchilichte po sigurnost i ikonomika - Plovdiv		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Georgi Manolov (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accounting; Economics; Finance; Marketing; Security Studies; Tourism Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBULVNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010470&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10470"><input class="case" type="checkbox" onClick="Coche(10470,0);" name="result[]" id="10470" value="10470"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result10470" id="result10470" title="Expand result">
+		    <span>Expand result for </span>Higher School of Telecommunications and Post</a></h3>
+		  <p class="i_name">
+		Vische utchilichte po telekomunikatsii i pochti		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Dimitar Radev (Head) &ndash; Rositsa Chobanova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Information Technology and Modeling; Management in Communications; Telecommunication Technologies; Wireless Communications and Broadcasting</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011608&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11608"><input class="case" type="checkbox" onClick="Coche(11608,0);" name="result[]" id="11608" value="11608"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result11608" id="result11608" title="Expand result">
+		    <span>Expand result for </span>International Business School</a></h3>
+		  <p class="i_name">
+		Meždunarodno vische biznes učiliše (IBS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ruslan Penchev (Head) &ndash; Teodora Georgieva (Senior Administrative Officer) &ndash; Nadya Gaydarska-Kirilova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Accountancy and Audit; Business Administration; Business Finance; Entrepreneurship and Innovation; Health Care Management; Information Management; International Economic Relations; Internet Marketing; Logistics; Marketing and Communications; Music Business; Project Management; Public Sector Management; Taxation and Management; Tourism; Tourism Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRWLCNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011518&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11518"><input class="case" type="checkbox" onClick="Coche(11518,0);" name="result[]" id="11518" value="11518"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result11518" id="result11518" title="Expand result">
+		    <span>Expand result for </span>Medical University - Pleven</a></h3>
+		  <p class="i_name">
+		Medicinski universitet - Pleven (MUPL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Slavcho Tomov (Head) &ndash; Margarita Alexandrova (Senior Administrative Officer) &ndash; Savelina Popovska (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health Care; Language and Specialized Training; Medical Sciences; Medicine; Public Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRVLDNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011519&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11519"><input class="case" type="checkbox" onClick="Coche(11519,0);" name="result[]" id="11519" value="11519"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result11519" id="result11519" title="Expand result">
+		    <span>Expand result for </span>Medical University - Plovdiv</a></h3>
+		  <p class="i_name">
+		Medicinski Universitet - Plovdiv		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Stefan Stoilov Kostianev (Head) &ndash; Maria Petrova Kukleva (Senior Administrative Officer) &ndash; Mariana Atanasova Murdjeva (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Languages and Specialized Training; Medicine; Pharmacy; Public Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRVLDNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011520&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11520"><input class="case" type="checkbox" onClick="Coche(11520,0);" name="result[]" id="11520" value="11520"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result11520" id="result11520" title="Expand result">
+		    <span>Expand result for </span>Medical University - Sofia</a></h3>
+		  <p class="i_name">
+		Medicinski universitet - Sofia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vanyo Mitev (Head) &ndash; Carolina Doshev Lubomirova (Senior Administrative Officer) &ndash; Radomir Ljubomirov Ugrinov (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Languages and Student Sports; Medicine; Pharmacy; Public Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRVLENgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012281&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="12281"><input class="case" type="checkbox" onClick="Coche(12281,0);" name="result[]" id="12281" value="12281"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result12281" id="result12281" title="Expand result">
+		    <span>Expand result for </span>National Academy of Arts</a></h3>
+		  <p class="i_name">
+		Nacionalna hudojestvena akademija (NAA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Antoaneta Markova (Head) &ndash; Svilena Mateeva (Senior Administrative Officer) &ndash; Mitko Dinev (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Arts; Fine Arts</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhSLiMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012896&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12896"><input class="case" type="checkbox" onClick="Coche(12896,0);" name="result[]" id="12896" value="12896"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result12896" id="result12896" title="Expand result">
+		    <span>Expand result for </span>New Bulgarian University</a></h3>
+		  <p class="i_name">
+		Nov Bulgarski Universitet (NBU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Plamen Bochkov (Head) &ndash; George Tekev (Senior Administrative Officer) &ndash; Alisa Stoynova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Anthropology; Archaeology; Architecture; Art Studies and History of Culture; Business Administration; Cinema, Advertising and Show Business; Cognitive Science and Psychology; Design; Economics; English Studies; Fine Arts; Health and Social Work; History; Human Relations; Informatics; Law; Mass Communication; Mediterranean and Eastern Studies; Modern Bulgarian Studies; Music; National and International Security; Natural Sciences; Philosophy and Sociology; Political Science; Public Administration; Romanic studies and German studies; Semiotic Studies; Social Practices; Telecommunications; Theatre</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhYLjM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020849&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="20849"><input class="case" type="checkbox" onClick="Coche(20849,0);" name="result[]" id="20849" value="20849"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result20849" id="result20849" title="Expand result">
+		    <span>Expand result for </span>St. Cyril and St. Methodius University of Véliko Tarnovo</a></h3>
+		  <p class="i_name">
+		Vélikoturnovski universitet Sv. Sv. Kiril i Metodi &ndash; University of Véliko Turnovo (VTU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Khristo Bondjolov (Head) &ndash; Stoyan Panaiotov Burov (Senior Administrative Officer) &ndash; Dimitr Yordanov Dimitroc (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Education; Fine Arts; History; Law; Mathematics and Informatics; Modern Languages; Orthodox Theology; Philosophy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BYLSNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016300&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16300"><input class="case" type="checkbox" onClick="Coche(16300,0);" name="result[]" id="16300" value="16300"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result16300" id="result16300" title="Expand result">
+		    <span>Expand result for </span>Technical University of Gabrovo</a></h3>
+		  <p class="i_name">
+		Tehničeski universitet Gabrovo (TUG)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Raycho Todorov Ilarionov (Head) &ndash; Petar Kolev Petrov (Senior Administrative Officer) &ndash; Tsvetelina Alexandrova Gankova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Electrical Engineering and Electronics; Language and Specialized Training; Mechanical and Precision Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhTLCNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016301&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16301"><input class="case" type="checkbox" onClick="Coche(16301,0);" name="result[]" id="16301" value="16301"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result16301" id="result16301" title="Expand result">
+		    <span>Expand result for </span>Technical University of Sofia</a></h3>
+		  <p class="i_name">
+		Tehničeski universitet Sofija (TUS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Georgi Slavchev Mihov (Head) &ndash; Valentin Dimitrov (Senior Administrative Officer) &ndash; Valeri Markov Mladenov (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Mathematics and Informatics; Applied Physics; Automatics; Computer Systems and Control; Electrical Engineering; Electronic Engineering and Technology; Electronics and Automation - Plovdiv; Engineering; Engineering and Pedagogy - Sliven; Engineering Education and Industrial Management; Foreign Languages and Applied Linguistics; Industrial Technology; Management; Mechanical Engineering; Mechanical Engineering - Plovdiv; Physical Education and Sports; Power Engineering and Power Machines; Telecommunications; Transport</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhTLCMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016301-016302&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16302"><input class="case" type="checkbox" onClick="Coche(16302,0);" name="result[]" id="16302" value="16302"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result16302" id="result16302" title="Expand result">
+		    <span>Expand result for </span>Technical University of Sofia &ndash; Plovdiv Branch</a></h3>
+		  <p class="i_name">
+		Tehničeski universitet Sofija		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Michail Petrov (Head) &ndash; Valyo Nikolov (Senior Administrative Officer) &ndash; Lalka Boteva (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Electronics and Automatics; Mechanical Engineering; Special Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhTLCMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016301-016303&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16303"><input class="case" type="checkbox" onClick="Coche(16303,0);" name="result[]" id="16303" value="16303"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result16303" id="result16303" title="Expand result">
+		    <span>Expand result for </span>Technical University of Sofia &ndash; Sliven Branch</a></h3>
+		  <p class="i_name">
+		Tehničeski universitet Sofija		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Milko Yordanov (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering and Pedagogy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhTLCMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016304&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16304"><input class="case" type="checkbox" onClick="Coche(16304,0);" name="result[]" id="16304" value="16304"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result16304" id="result16304" title="Expand result">
+		    <span>Expand result for </span>Technical University of Varna</a></h3>
+		  <p class="i_name">
+		Tehničeski universitet Varna (TU-VARNA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rosen Vassilev (Head) &ndash; Maria Marinova (Senior Administrative Officer) &ndash; Hristo Skulev (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Automation and Computing; Electrical Engineering; Electronic Engineering; Marine Sciences and Ecology; Mathematics and Foreign Languages; Mechanical Engineering; Shipbuilding; Technical Studies; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhTLCMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021816&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="21816"><input class="case" type="checkbox" onClick="Coche(21816,0);" name="result[]" id="21816" value="21816"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result21816" id="result21816" title="Expand result">
+		    <span>Expand result for </span>University of Agribusiness and Rural Development</a></h3>
+		  <p class="i_name">
+		Visshe uchilishte po agrobiznes i razvitie na regionite (UARD)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Dimitar Dimitrov (Head) &ndash; Mariana Ivanova (Senior Administrative Officer) &ndash; Miglena Kazashka (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agribusiness and General Science; Economics and Management; Regional Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRYLDM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019880&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19880"><input class="case" type="checkbox" onClick="Coche(19880,0);" name="result[]" id="19880" value="19880"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result19880" id="result19880" title="Expand result">
+		    <span>Expand result for </span>University of Architecture, Civil Engineering and Geodesy</a></h3>
+		  <p class="i_name">
+		Universitet po Arhitektura, Stroitelstvo i Geodezia (UACEG)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Krasimir Petrov (Head) &ndash; Nedyalko Ivanov Bonchev (Senior Administrative Officer) &ndash; Boyan Milchev Georgiev (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Linguistics and Physical Education; Architecture; Geodesy; Hydraulic Engineering; Open and Continuing Education; Structural Engineering; Transportation Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLiNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007337&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7337"><input class="case" type="checkbox" onClick="Coche(7337,0);" name="result[]" id="7337" value="7337"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result7337" id="result7337" title="Expand result">
+		    <span>Expand result for </span>University of Chemical Technology and Metallurgy</a></h3>
+		  <p class="i_name">
+		Himiko-tehnologičen i metalurgičen universitet (UCTM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mitko Georgiev (Head) &ndash; Nikolai Dishovski (Senior Administrative Officer) &ndash; Margarita Koleva (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Chemical Sciences; Chemical Systems Engineering; Chemical Technology; Humanitarian Sciences; Metallurgy and Material Sciences; Physics-mathematical and Tehnical sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUyxTLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007725&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="7725"><input class="case" type="checkbox" onClick="Coche(7725,0);" name="result[]" id="7725" value="7725"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result7725" id="result7725" title="Expand result">
+		    <span>Expand result for </span>University of Economics - Varna</a></h3>
+		  <p class="i_name">
+		Ikonomičeski universitet - Varna (UE-Varna)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Plamen Blagov Iliev (Head) &ndash; Evgeni Petrov Stanimirov (Senior Administrative Officer) &ndash; Violeta Janeva Dimitrova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Finance and Accountancy; Foreign Languages; Information Technologies; Management; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzxSLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020917&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="20917"><input class="case" type="checkbox" onClick="Coche(20917,0);" name="result[]" id="20917" value="20917"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result20917" id="result20917" title="Expand result">
+		    <span>Expand result for </span>University of Finance, Business and Entrepreneurship</a></h3>
+		  <p class="i_name">
+		Vische utchilichte po zastrahovane i finansi (VUZF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Grigorii Vazov (Head) &ndash; Radostin Vazov (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Audit and Risk Management; Banking; Corporate Social Responsibility and Financial Management; Entrepreneurship and Finance; Finance; Financial Management and Marketing; Leadership, Management and Finance</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BZLDM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019881&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19881"><input class="case" type="checkbox" onClick="Coche(19881,0);" name="result[]" id="19881" value="19881"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result19881" id="result19881" title="Expand result">
+		    <span>Expand result for </span>University of Food Technologies</a></h3>
+		  <p class="i_name">
+		Universitet po hranitelni technologii (UFT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kolyo Dinkov (Head) &ndash; Albena Stoyanova (Senior Administrative Officer) &ndash; Nikolay Menkov (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Francophone Training; Language Training; Physical Education and Sports; Scientific Research; Technical; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLiMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010913&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10913"><input class="case" type="checkbox" onClick="Coche(10913,0);" name="result[]" id="10913" value="10913"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result10913" id="result10913" title="Expand result">
+		    <span>Expand result for </span>University of Forestry - Sofia</a></h3>
+		  <p class="i_name">
+		Lesotehničeski universitet - Sofia (LTU/UF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vesselin Stamenov Brezin (Head) &ndash; Ivan Paligorov (Senior Administrative Officer) &ndash; Petar Stoyanov Zhelev (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Business Administration; Ecology and Landscape Architecture; Forest Industry; Forestry; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BZLDMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015686&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="15686"><input class="case" type="checkbox" onClick="Coche(15686,0);" name="result[]" id="15686" value="15686"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result15686" id="result15686" title="Expand result">
+		    <span>Expand result for </span>University of Library Studies and Information Technologies - Sofia</a></h3>
+		  <p class="i_name">
+		Universitet po Bibliotekoznanie i Informacionni Technologii - Sofia (ULSIT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Stoyan Denchev (Head) &ndash; Ivanka Pavlova (Senior Administrative Officer) &ndash; Irena Peteva (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Information Sciences; Library Studies and Cultural Heritage</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRWLiM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019884&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19884"><input class="case" type="checkbox" onClick="Coche(19884,0);" name="result[]" id="19884" value="19884"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Bulgaria</p>
+				  <h3>
+		    <a href="#result19884" id="result19884" title="Expand result">
+		    <span>Expand result for </span>University of National and World Economy</a></h3>
+		  <p class="i_name">
+		Universitet za nacionalno i svetovno stopanstvo (UNWE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Statty Stattev (Head) &ndash; Ognian Georgiev Simeonov (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Informatics and Statistics; Business; Economics of Infrastructure; Finance and Accountancy; General Economics; International Economics and Politics; Law; Management and Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLiMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 47 of 47</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria" selected>Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

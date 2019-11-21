@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Mongolia')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Mongolia)">
+	    <input type="hidden" class="envoi" name="total" value="52">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Mongolia">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">52 results found for <strong>(Country=Mongolia)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 52 of 52</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-007629&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="7629"><input class="case" type="checkbox" onClick="Coche(7629,0);" name="result[]" id="7629" value="7629"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result7629" id="result7629" title="Expand result">
+		    <span>Expand result for </span>University of the Humanities</a></h3>
+		  <p class="i_name">
+		Humuunlegiin Uhaanii Ih Surguuli		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Chuluundorj Begz (Head) &ndash; Battuvshin Chuluundorj (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>BILIG; Business; Information and Communication; International Relations and Social Sciences; Language and Culture</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzhSLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025525&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25525"><input class="case" type="checkbox" onClick="Coche(25525,0);" name="result[]" id="25525" value="25525"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25525" id="result25525" title="Expand result">
+		    <span>Expand result for </span>Ach Medical University</a></h3>
+		  <p class="i_name">
+		ACH MU (AMU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nachin Baasanjav (Head) &ndash; Bold Sharav (Senior Administrative Officer) &ndash; Otgonbayar Damdinbazar (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Family Medicine and Medical Management; General Science; Internal Medicine and Neurology; Microbiology and Infectious Diseases; Morphology; Nursing; Obstetrics and Gynecology; Ophthalmology; Otorhinolaryngology; Pathology; Pediatrics; Physiology, Molecular Biology; Surgery; Traditional Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLEM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025544&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25544"><input class="case" type="checkbox" onClick="Coche(25544,0);" name="result[]" id="25544" value="25544"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25544" id="result25544" title="Expand result">
+		    <span>Expand result for </span>Avarga Institute</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>B. Bolormaa (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Physical Education; Physical Therapy; Sports Coach</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLSMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025533&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25533"><input class="case" type="checkbox" onClick="Coche(25533,0);" name="result[]" id="25533" value="25533"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25533" id="result25533" title="Expand result">
+		    <span>Expand result for </span>Billig Institute, University of Humanities</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Law; Modern Languages</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025539&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25539"><input class="case" type="checkbox" onClick="Coche(25539,0);" name="result[]" id="25539" value="25539"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25539" id="result25539" title="Expand result">
+		    <span>Expand result for </span>Chinggis Khaan University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>H. Lkhagvasuren (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLFNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025529&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25529"><input class="case" type="checkbox" onClick="Coche(25529,0);" name="result[]" id="25529" value="25529"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25529" id="result25529" title="Expand result">
+		    <span>Expand result for </span>City University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>T. Baigalmaa (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Engineering; Art; Beauty; Business; Design; Humanities; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLENEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025534&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25534"><input class="case" type="checkbox" onClick="Coche(25534,0);" name="result[]" id="25534" value="25534"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25534" id="result25534" title="Expand result">
+		    <span>Expand result for </span>Dalaivan University, University of Humanities</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLFMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-022215&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="22215"><input class="case" type="checkbox" onClick="Coche(22215,0);" name="result[]" id="22215" value="22215"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result22215" id="result22215" title="Expand result">
+		    <span>Expand result for </span>Dornod Institute</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Undarmaa Enkhjargal (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Humanities and Social Sciences; Natural Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyhSLDM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025521&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25521"><input class="case" type="checkbox" onClick="Coche(25521,0);" name="result[]" id="25521" value="25521"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25521" id="result25521" title="Expand result">
+		    <span>Expand result for </span>Etugen University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>B. Batsereedene (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Management; Engineering; Graduate Studies; Medicine; Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLEMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025538&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25538"><input class="case" type="checkbox" onClick="Coche(25538,0);" name="result[]" id="25538" value="25538"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25538" id="result25538" title="Expand result">
+		    <span>Expand result for </span>Gurvan Erdene Pedagogical University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ch. Jachin (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Foreign Language Teachers; Mongolian Language Teachers - Professional Teachers; Preschool Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLFNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025570&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25570"><input class="case" type="checkbox" onClick="Coche(25570,0);" name="result[]" id="25570" value="25570"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25570" id="result25570" title="Expand result">
+		    <span>Expand result for </span>Gurvan Tamir College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accounting and Research; Business Administration; General Academic</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025552&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25552"><input class="case" type="checkbox" onClick="Coche(25552,0);" name="result[]" id="25552" value="25552"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25552" id="result25552" title="Expand result">
+		    <span>Expand result for </span>Huree University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Civil Engineering; Biotechnology and Food Science; Business Administration and Information Technology; Modern Languages and Mutlimedia; Natural Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLTMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-022214&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="22214"><input class="case" type="checkbox" onClick="Coche(22214,0);" name="result[]" id="22214" value="22214"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result22214" id="result22214" title="Expand result">
+		    <span>Expand result for </span>Ikh Zasag International University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Namsrain Nyam-Osor (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Erdem; Finance and Economics; Fine Arts, Design and Technology; Foreign Languages and Cultural Studies; International Relations; International School; Law; National Engineering and Technology; Royal; Theatre and Art; Vocational Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyhSLDMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025554&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25554"><input class="case" type="checkbox" onClick="Coche(25554,0);" name="result[]" id="25554" value="25554"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25554" id="result25554" title="Expand result">
+		    <span>Expand result for </span>Institute of Engineering and Technology</a></h3>
+		  <p class="i_name">
+		 (IET)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>M. Sergelen (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Higher Education Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025547&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25547"><input class="case" type="checkbox" onClick="Coche(25547,0);" name="result[]" id="25547" value="25547"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25547" id="result25547" title="Expand result">
+		    <span>Expand result for </span>Institute of International Studies</a></h3>
+		  <p class="i_name">
+		 (IIS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>D. Dashpurev (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Postgraduate Studies; Undergraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLSM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025514&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25514"><input class="case" type="checkbox" onClick="Coche(25514,0);" name="result[]" id="25514" value="25514"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25514" id="result25514" title="Expand result">
+		    <span>Expand result for </span>Institute of Technology</a></h3>
+		  <p class="i_name">
+		 (ITECH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>B. Baramsay (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering; Food Technology; General Academic Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLDMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017012&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17012"><input class="case" type="checkbox" onClick="Coche(17012,0);" name="result[]" id="17012" value="17012"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result17012" id="result17012" title="Expand result">
+		    <span>Expand result for </span>International University of Ulaanbaatar</a></h3>
+		  <p class="i_name">
+		 (IUU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nahm Gi Young (Head) &ndash; Junjhu Yun (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Forestry; Basic Education; Business Administration; Communication and Information Technology; Design; Economics; Education Studies; Family Studies; Foreign Languages; International Studies; Legal Affairs; Nursing; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxQLDMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025548&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25548"><input class="case" type="checkbox" onClick="Coche(25548,0);" name="result[]" id="25548" value="25548"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25548" id="result25548" title="Expand result">
+		    <span>Expand result for </span>Khangai Institute</a></h3>
+		  <p class="i_name">
+		Hangai Institute		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ts. Tsend-Ayush (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Information Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLSNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-022212&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="22212"><input class="case" type="checkbox" onClick="Coche(22212,0);" name="result[]" id="22212" value="22212"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result22212" id="result22212" title="Expand result">
+		    <span>Expand result for </span>Khovd University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>V. Sainbayar (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Bayan-Ulgii Province; Foreign Languages and Culture; Natural Sciences and Technology; Social Science and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyhSLDMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025550&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25550"><input class="case" type="checkbox" onClick="Coche(25550,0);" name="result[]" id="25550" value="25550"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25550" id="result25550" title="Expand result">
+		    <span>Expand result for </span>Language and Civilisation Institute</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Chinese Language Teaching; English Language Teaching; Japanese Language Teaching; Mongolian Language and Literature Teaching; Preschool Education; Primary Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLTNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025502&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25502"><input class="case" type="checkbox" onClick="Coche(25502,0);" name="result[]" id="25502" value="25502"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25502" id="result25502" title="Expand result">
+		    <span>Expand result for </span>Mandakh University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gombojav Nanjid (Head) &ndash; Sangijantsan Ulziibat (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accounting and Finance; Economics and Business Administration; Foreign Language; Information Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLCMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025551&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25551"><input class="case" type="checkbox" onClick="Coche(25551,0);" name="result[]" id="25551" value="25551"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25551" id="result25551" title="Expand result">
+		    <span>Expand result for </span>Mon-Altius Institute</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>M. Munkhbayar (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLTMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025515&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25515"><input class="case" type="checkbox" onClick="Coche(25515,0);" name="result[]" id="25515" value="25515"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25515" id="result25515" title="Expand result">
+		    <span>Expand result for </span>Mongolia International University</a></h3>
+		  <p class="i_name">
+		 (MIU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Oh-Moon Kwon (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biotechnology and Food Science; Computer Science; Energy Resource and Environment Technology; English Education; Fashion Design; General Education; Hotel Management; International Business Management; Media and Communication; Music Education; Tourism Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLDM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025545&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25545"><input class="case" type="checkbox" onClick="Coche(25545,0);" name="result[]" id="25545" value="25545"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25545" id="result25545" title="Expand result">
+		    <span>Expand result for </span>Mongolian Labour and Social Relations Institute</a></h3>
+		  <p class="i_name">
+		 (MLSRI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Mongolian Labour and Social Relations Institute</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLSM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023174&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23174"><input class="case" type="checkbox" onClick="Coche(23174,0);" name="result[]" id="23174" value="23174"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result23174" id="result23174" title="Expand result">
+		    <span>Expand result for </span>Mongolian National University</a></h3>
+		  <p class="i_name">
+		 (MNU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Dashdolgor Bayarsukh (Head) &ndash; Zolzaya Purvee (Senior Administrative Officer) &ndash; Kevin Trzcinski (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Design; Civil Engineering; Economics and Business Management; Education; Information Technology and Graphic Design; Law; Medicine; Mining and Engineering; Tourism and Land Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxRLVMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004521&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4521"><input class="case" type="checkbox" onClick="Coche(4521,0);" name="result[]" id="4521" value="4521"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result4521" id="result4521" title="Expand result">
+		    <span>Expand result for </span>Mongolian National University of Medical Sciences</a></h3>
+		  <p class="i_name">
+		 (MNUMS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Batbaatar Gunchin (Head) &ndash; Amarsaikhan Bazar (Senior Administrative Officer) &ndash; Tsengel Ganbold (International Relations Officer) &ndash; Enkhtuya Vankhuu (International Relations Officer) &ndash; Urantuya Bayanjargal (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biomedicine; Darkhan-Uul Medical College; Dentistry; Dornogobi Medical College; Gobi Altai Medical College; Medicine; Nursing; Pharmacy; Public Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRSLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025557&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25557"><input class="case" type="checkbox" onClick="Coche(25557,0);" name="result[]" id="25557" value="25557"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25557" id="result25557" title="Expand result">
+		    <span>Expand result for </span>Mongolian State Music and Dance Conservatory</a></h3>
+		  <p class="i_name">
+		Mongolian Conservatory		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dance; Music</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLTM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012034&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12034"><input class="case" type="checkbox" onClick="Coche(12034,0);" name="result[]" id="12034" value="12034"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result12034" id="result12034" title="Expand result">
+		    <span>Expand result for </span>Mongolian State University of Arts and Culture</a></h3>
+		  <p class="i_name">
+		Mongol Ulsyn Soyel Urlagyn Ikh Surguuli (MSUAC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>E. Sonintogos (Head) &ndash; Bayaraa Baasan Dorjiin (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Broadcasting and Media Arts; Culture; Culture and Art Research Institute; Dance Arts; Fine Arts and Design; Foreign Language; High School of the Arts, Badmaarag; Music and Dance; Music Arts; Short-term Training; Theatre Arts</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhQLFMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012031&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="12031"><input class="case" type="checkbox" onClick="Coche(12031,0);" name="result[]" id="12031" value="12031"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result12031" id="result12031" title="Expand result">
+		    <span>Expand result for </span>Mongolian State University of Education</a></h3>
+		  <p class="i_name">
+		Mongol Ulsyn Bolovsroliin Ikh Surguuli (MSUE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Badrakh Jadamba (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Educational Studies; Fine Arts and Technology; Humanities and Social Sciences; Mathematics and Natural Sciences; Physical Education; Preschool Education; Secondary Education; Teachers Education; Teachers Education, Arkhangai Province</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhQLFMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010339&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10339"><input class="case" type="checkbox" onClick="Coche(10339,0);" name="result[]" id="10339" value="10339"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result10339" id="result10339" title="Expand result">
+		    <span>Expand result for </span>Mongolian University of Life Sciences</a></h3>
+		  <p class="i_name">
+		Khodoo Aj Akhuin Ikh Surguuli (MULS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tumurbaatar Kheruuga (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agroecology; Animal Science and Biotechnology; Ecology,Technology and Development; Economics and Business; Engineering and Technology; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BTLFNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012033&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="12033"><input class="case" type="checkbox" onClick="Coche(12033,0);" name="result[]" id="12033" value="12033"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result12033" id="result12033" title="Expand result">
+		    <span>Expand result for </span>Mongolian University of Science and Technology</a></h3>
+		  <p class="i_name">
+		Mongol Ulsyn Shinkleh Ukhaan Tekhnologiin Ikh Surguuli (MUST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Baatar Ochirbat (Head) &ndash; Khaltar Enkhjargal (Senior Administrative Officer) &ndash; Purvee Jargaltuya (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Sciences; Business; Business Administration and Humanities; Civil Engineering and Architecture; E-Open Institute; Foreign Languages; Geology and Mining Engineering; Industrial Technology; Information Technology and Telecommunication Engineering; Mechanical Engineering and Transportation; Power Engineering; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhQLFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025543&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25543"><input class="case" type="checkbox" onClick="Coche(25543,0);" name="result[]" id="25543" value="25543"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25543" id="result25543" title="Expand result">
+		    <span>Expand result for </span>National Institute of Economics</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Human Development; Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLSMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025527&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25527"><input class="case" type="checkbox" onClick="Coche(25527,0);" name="result[]" id="25527" value="25527"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25527" id="result25527" title="Expand result">
+		    <span>Expand result for </span>National Technical University</a></h3>
+		  <p class="i_name">
+		 (NTU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>N. Sarantuya (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Construction Engineering; Mining Operation Technology; Road Construction Engineering; Thermal Power Plant Engineering; Tourism Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLEM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012032&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12032"><input class="case" type="checkbox" onClick="Coche(12032,0);" name="result[]" id="12032" value="12032"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result12032" id="result12032" title="Expand result">
+		    <span>Expand result for </span>National University of Mongolia</a></h3>
+		  <p class="i_name">
+		Mongol Ulsyn Ikh Surguuli (NUM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ya. Tumurbaatar (Head) &ndash; Dashzend Ariunaa (Senior Administrative Officer) &ndash; Shuurai Mendbayar (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Sciences; Business; Engineering and Applied Sciences; Erdenet School; International Relations and Public Administration; Law; Zavkhan School</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhQLFMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025531&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25531"><input class="case" type="checkbox" onClick="Coche(25531,0);" name="result[]" id="25531" value="25531"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25531" id="result25531" title="Expand result">
+		    <span>Expand result for </span>New Medical University</a></h3>
+		  <p class="i_name">
+		 (NCM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>B. Sarantsetseg (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Clinical Medicine; Family Medicine; General Academic Education; Morpho-physiology; NCM Medical Department; Reincarnation; Traditional Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLFMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013126&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13126"><input class="case" type="checkbox" onClick="Coche(13126,0);" name="result[]" id="13126" value="13126"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result13126" id="result13126" title="Expand result">
+		    <span>Expand result for </span>Orkhon University</a></h3>
+		  <p class="i_name">
+		 (OU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Dawn Dekle (Head) &ndash; Yagaan Mijid (Senior Administrative Officer) &ndash; Dashdorj Yagaan (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Business Administration; Humanities; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxRLEM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013192&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="13192"><input class="case" type="checkbox" onClick="Coche(13192,0);" name="result[]" id="13192" value="13192"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result13192" id="result13192" title="Expand result">
+		    <span>Expand result for </span>Otgontenger University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Namsraijav Enkhzaya (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economic and Business Administration; Humanities; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxRLjMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025512&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25512"><input class="case" type="checkbox" onClick="Coche(25512,0);" name="result[]" id="25512" value="25512"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25512" id="result25512" title="Expand result">
+		    <span>Expand result for </span>Otoch Manramba University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>D. Natsagdorj (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>General Physician of Traditional Medicine; Nurse in Traditional Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLDMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025532&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25532"><input class="case" type="checkbox" onClick="Coche(25532,0);" name="result[]" id="25532" value="25532"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25532" id="result25532" title="Expand result">
+		    <span>Expand result for </span>San University</a></h3>
+		  <p class="i_name">
+		San Institute		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Banking Economics; Finance; Human Resources Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLFMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025501&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25501"><input class="case" type="checkbox" onClick="Coche(25501,0);" name="result[]" id="25501" value="25501"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25501" id="result25501" title="Expand result">
+		    <span>Expand result for </span>Shihihutug University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Commercial Law; Law; Lawyer Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLCMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025541&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25541"><input class="case" type="checkbox" onClick="Coche(25541,0);" name="result[]" id="25541" value="25541"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25541" id="result25541" title="Expand result">
+		    <span>Expand result for </span>Shine Irgenshil Institute</a></h3>
+		  <p class="i_name">
+		New Civilization Institute (NCI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Galya Khalzan (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Banking and Finance; Economics and Management; General Academic Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLSMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015678&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="15678"><input class="case" type="checkbox" onClick="Coche(15678,0);" name="result[]" id="15678" value="15678"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result15678" id="result15678" title="Expand result">
+		    <span>Expand result for </span>Soyol-Erdem College</a></h3>
+		  <p class="i_name">
+		Soyol-Erdem Institute		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>S. Tumur-Ochir (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer and Software Engineering; International Economics; International Journalism; Japanese Language; Nature Tourism; Tourism Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRWLVNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025540&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25540"><input class="case" type="checkbox" onClick="Coche(25540,0);" name="result[]" id="25540" value="25540"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25540" id="result25540" title="Expand result">
+		    <span>Expand result for </span>Sutai University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>D. Altangerel (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Business Administration; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLSNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025513&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25513"><input class="case" type="checkbox" onClick="Coche(25513,0);" name="result[]" id="25513" value="25513"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25513" id="result25513" title="Expand result">
+		    <span>Expand result for </span>Transportation Institute</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>P. Purevsuren (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Railway Transport</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLDMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025556&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25556"><input class="case" type="checkbox" onClick="Coche(25556,0);" name="result[]" id="25556" value="25556"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25556" id="result25556" title="Expand result">
+		    <span>Expand result for </span>Tsetsee Goun Management Institute</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>G. Naranbat (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accounting; Business Administration; Computer and Software Engineering; Educational Management; English Teacher and Translator; Finance Management; Human Resources Management; Japanese Teacher and Translator; Marketing Management; Public Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLTM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025546&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25546"><input class="case" type="checkbox" onClick="Coche(25546,0);" name="result[]" id="25546" value="25546"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25546" id="result25546" title="Expand result">
+		    <span>Expand result for </span>Tushee Institute</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>B. Haliyaa (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLSM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025509&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25509"><input class="case" type="checkbox" onClick="Coche(25509,0);" name="result[]" id="25509" value="25509"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25509" id="result25509" title="Expand result">
+		    <span>Expand result for </span>Ulaanbaatar State University</a></h3>
+		  <p class="i_name">
+		 (USU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>S. Baigalsaikhan (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Archaeology; Biology; Chemistry; Chinese; Eastern Studies; General Education; History; Humanities; Japanese; Korean; Mathematics and Software; Mongolian, Literature and Journalism; Physics and Electronics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLCNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025520&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25520"><input class="case" type="checkbox" onClick="Coche(25520,0);" name="result[]" id="25520" value="25520"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25520" id="result25520" title="Expand result">
+		    <span>Expand result for </span>Ulaanbaatar-Erdem University</a></h3>
+		  <p class="i_name">
+		 (UBEU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Engineering; Graduate Studies; Social Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLENgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-022213&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="22213"><input class="case" type="checkbox" onClick="Coche(22213,0);" name="result[]" id="22213" value="22213"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result22213" id="result22213" title="Expand result">
+		    <span>Expand result for </span>University of Law Enforcement</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Chingis Rentsendorj (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyhSLDMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025523&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25523"><input class="case" type="checkbox" onClick="Coche(25523,0);" name="result[]" id="25523" value="25523"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result25523" id="result25523" title="Expand result">
+		    <span>Expand result for </span>University of Pharmaceutical Science</a></h3>
+		  <p class="i_name">
+		Monos University		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luvsandorj Tserendulam (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Training; Graduate Studies; Traditional Medicine; Undergraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRVLEMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021813&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="21813"><input class="case" type="checkbox" onClick="Coche(21813,0);" name="result[]" id="21813" value="21813"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result21813" id="result21813" title="Expand result">
+		    <span>Expand result for </span>Zasagt Khan Institute</a></h3>
+		  <p class="i_name">
+		Zasagt Khan Deed Surguuli		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Altangerel Sambuu (Head) &ndash; Yunden Yadamjav (Senior Administrative Officer) &ndash; Enkhnasan Namjiljav (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Business Administration; Public Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRYLDMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021858&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="21858"><input class="case" type="checkbox" onClick="Coche(21858,0);" name="result[]" id="21858" value="21858"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Mongolia</p>
+				  <h3>
+		    <a href="#result21858" id="result21858" title="Expand result">
+		    <span>Expand result for </span>Zokhiomj University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tsogtbayar Byamba (Head) &ndash; Enkhjin Dulamjav (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Business Administration; Educational Studies; Journalism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRYLTNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 52 of 52</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia" selected>Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

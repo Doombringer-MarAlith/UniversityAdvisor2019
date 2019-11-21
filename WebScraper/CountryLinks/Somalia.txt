@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Somalia')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Somalia)">
+	    <input type="hidden" class="envoi" name="total" value="41">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Somalia">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">41 results found for <strong>(Country=Somalia)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 41 of 41</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-024709&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="24709"><input class="case" type="checkbox" onClick="Coche(24709,0);" name="result[]" id="24709" value="24709"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result24709" id="result24709" title="Expand result">
+		    <span>Expand result for </span>Jazeera University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_24709_logo.jpg" /></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+				  <a title="http://jazeerauniversity.com" href="images/IAUMembers/24709_1.png" class="fancybox" rel="gallery24709"><img class="img" src="images/IAUMembers/s_24709_1.png" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://jazeerauniversity.com" href="images/IAUMembers/24709_2.png" class="fancybox" rel="gallery24709"><img class="img" src="images/IAUMembers/s_24709_2.png" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Salad Fidow (Head) &ndash; Abdullahi Shaba (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agro-Veterinary Science; Business and Economics; Computer Science and Information Technology; Education; Engineering and Technology; Geology; Health Sciences; Medicine and Surgery; Public Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBXLCNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023536&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="23536"><input class="case" type="checkbox" onClick="Coche(23536,0);" name="result[]" id="23536" value="23536"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result23536" id="result23536" title="Expand result">
+		    <span>Expand result for </span>Somali National University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_23536_logo.gif" /></h3>
+		  <p class="i_name">
+		Jaamacadda Ummadda Soomaaliyeed (SNU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Ahmed Jimale (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Environmental Science; Economics and Management Science; Education and Social Science; Engineering; Law; Medicine and Health Sciences; Veterinary Science and Animal Husbandry</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxVLFM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024905&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24905"><input class="case" type="checkbox" onClick="Coche(24905,0);" name="result[]" id="24905" value="24905"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24905" id="result24905" title="Expand result">
+		    <span>Expand result for </span>Alpha University College</a></h3>
+		  <p class="i_name">
+		 (AUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdirahman Mohamed Maal (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Economics; Computer Science and ICT; Engineering; Health Sciences; Law; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBZLCM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024904&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24904"><input class="case" type="checkbox" onClick="Coche(24904,0);" name="result[]" id="24904" value="24904"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24904" id="result24904" title="Expand result">
+		    <span>Expand result for </span>Amoud University</a></h3>
+		  <p class="i_name">
+		Jaamacada Camuud		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Suleiman Ahmed Gulaid (Head) &ndash; Suleiman Hassan Ali (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Environment; Business and Public Administration; Computing and ICT; Economics and Political Science; Education; Engineering; Health sciences; Post Graduate Studies and Research; Shari’a and Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBZLCMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024705&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24705"><input class="case" type="checkbox" onClick="Coche(24705,0);" name="result[]" id="24705" value="24705"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24705" id="result24705" title="Expand result">
+		    <span>Expand result for </span>Beder International University</a></h3>
+		  <p class="i_name">
+		 (BIU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdilqan Hussein Mohamed (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Islamic Banking and Finance</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBXLCM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001579&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1579"><input class="case" type="checkbox" onClick="Coche(1579,0);" name="result[]" id="1579" value="1579"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result1579" id="result1579" title="Expand result">
+		    <span>Expand result for </span>Benadir University</a></h3>
+		  <p class="i_name">
+		 (BU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdirisak Ahmed Dalmar (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Computer Science and Information Technology; Dentistry; Economics and Management; Education; Engineering; Geo-Science; Health Science; Medicine and Surgery ; Sharia and Law; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRXLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024684&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24684"><input class="case" type="checkbox" onClick="Coche(24684,0);" name="result[]" id="24684" value="24684"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24684" id="result24684" title="Expand result">
+		    <span>Expand result for </span>Dar Al-Ulum University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdul Rashid Hassan (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arabic and Islamic Studies; Computer Science; Coran; Economic and Administration; Education; Health Sciences; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLiMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024714&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24714"><input class="case" type="checkbox" onClick="Coche(24714,0);" name="result[]" id="24714" value="24714"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24714" id="result24714" title="Expand result">
+		    <span>Expand result for </span>Darulhikmah University</a></h3>
+		  <p class="i_name">
+		 (DHU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Yusuf Ahmed Hirabe (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture Science; Computer Science and Information Technology; Economics and Management Science; Health Sciences; Islamic Science; Marine Science; Medicine and Surgery</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBXLDMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003937&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3937"><input class="case" type="checkbox" onClick="Coche(3937,0);" name="result[]" id="3937" value="3937"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result3937" id="result3937" title="Expand result">
+		    <span>Expand result for </span>East Africa University</a></h3>
+		  <p class="i_name">
+		 (EAU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Aadam Sheikhdon Ali (Head) &ndash; Maxamed Maxamuud Ciise (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Community Development; Computer Science; Economics; Education; Engineering; Galkayo; Law; Medicine; Sharia; Veterinary</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sU0RTLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024687&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24687"><input class="case" type="checkbox" onClick="Coche(24687,0);" name="result[]" id="24687" value="24687"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24687" id="result24687" title="Expand result">
+		    <span>Expand result for </span>Eelo University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamud H. Egeh (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Computer Science and Information technology; Earth Science; Engineering; Health Sciences; Management Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLiM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024697&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24697"><input class="case" type="checkbox" onClick="Coche(24697,0);" name="result[]" id="24697" value="24697"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24697" id="result24697" title="Expand result">
+		    <span>Expand result for </span>Galkayo International University</a></h3>
+		  <p class="i_name">
+		 (GIU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdikadir Mohamed Shirwa (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Economics; Human Resource Managemnet; Information Technology; Shari’a And Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLjM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024708&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24708"><input class="case" type="checkbox" onClick="Coche(24708,0);" name="result[]" id="24708" value="24708"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24708" id="result24708" title="Expand result">
+		    <span>Expand result for </span>Garowe Teachers Education College</a></h3>
+		  <p class="i_name">
+		 (GTEC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdirahman Sheikhdon Ali (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education in Science and Arts; Primary Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBXLCNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024685&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24685"><input class="case" type="checkbox" onClick="Coche(24685,0);" name="result[]" id="24685" value="24685"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24685" id="result24685" title="Expand result">
+		    <span>Expand result for </span>Gollis University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Saeed Ahmed Hassan (Head) &ndash; Mohamed Abdi Mohamed (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Business; Education; Engineering; Geology; Information Technology; Islamic Law; Languages; Medicine and Allied Health; Social and Behavioural Science; Veterinary Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLiM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024694&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24694"><input class="case" type="checkbox" onClick="Coche(24694,0);" name="result[]" id="24694" value="24694"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24694" id="result24694" title="Expand result">
+		    <span>Expand result for </span>Hope University</a></h3>
+		  <p class="i_name">
+		 (HU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Najib Sheikh Abdulkarim (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Clinical Laboratory Science; Development Studies; Education Science; Health Services Management; International Relation; Medicine; Public Administration; Social Sciences; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLjMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024711&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24711"><input class="case" type="checkbox" onClick="Coche(24711,0);" name="result[]" id="24711" value="24711"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24711" id="result24711" title="Expand result">
+		    <span>Expand result for </span>Hormuud University</a></h3>
+		  <p class="i_name">
+		 (UoH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Adam Shidane Guled (Head) &ndash; Abdimahad Abshir Arale (Senior Administrative Officer) &ndash; Mohamed Husein Mohamud (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Veterinary Medicine; Arts and Social Sciences; Computer Science and Information Technology; Economics and Management Sciences; Engineering; Karaama Center for Research and Development.</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBXLDMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024696&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24696"><input class="case" type="checkbox" onClick="Coche(24696,0);" name="result[]" id="24696" value="24696"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24696" id="result24696" title="Expand result">
+		    <span>Expand result for </span>Horn International University</a></h3>
+		  <p class="i_name">
+		Jaamacada Horn International (HIUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health Sciences; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLjM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024699&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24699"><input class="case" type="checkbox" onClick="Coche(24699,0);" name="result[]" id="24699" value="24699"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24699" id="result24699" title="Expand result">
+		    <span>Expand result for </span>Horn of Africa University</a></h3>
+		  <p class="i_name">
+		 (HAU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; English; Health Sciences; information Technology; Mass Media; Natural Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLjNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024693&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24693"><input class="case" type="checkbox" onClick="Coche(24693,0);" name="result[]" id="24693" value="24693"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24693" id="result24693" title="Expand result">
+		    <span>Expand result for </span>Horseed International University</a></h3>
+		  <p class="i_name">
+		 (HIU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Economics and Management Science; Health Science; Information Technology; International Relations; Public Administration; Sharia and law; Veterinary Medicine and Animal Husbandry</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLjMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024679&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24679"><input class="case" type="checkbox" onClick="Coche(24679,0);" name="result[]" id="24679" value="24679"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24679" id="result24679" title="Expand result">
+		    <span>Expand result for </span>Indian Ocean University</a></h3>
+		  <p class="i_name">
+		 (IOU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Samawade Moh'ed Ali-Dahir (Head) &ndash; Abdulkadir Mohamud Mohamed (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Business Administration; Economics; English Language and Literature; Journalism; Nursing; Political Sciences; Public Administration; Public Relations</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLVNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024691&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24691"><input class="case" type="checkbox" onClick="Coche(24691,0);" name="result[]" id="24691" value="24691"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24691" id="result24691" title="Expand result">
+		    <span>Expand result for </span>Islamic University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamud Issa Mohamud (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer sciences and Information Technology; Economic and Administration; Education; Sharia</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLjMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024702&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24702"><input class="case" type="checkbox" onClick="Coche(24702,0);" name="result[]" id="24702" value="24702"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24702" id="result24702" title="Expand result">
+		    <span>Expand result for </span>Jamhuriya University of Science and Technology</a></h3>
+		  <p class="i_name">
+		 (JUST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamud Ahmed Jimale (Head) &ndash; Mohamed Ahmed Mohamud (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer and Information Technology; Economics and Management; Engineering; Medicine and Health Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBXLCMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024710&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24710"><input class="case" type="checkbox" onClick="Coche(24710,0);" name="result[]" id="24710" value="24710"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24710" id="result24710" title="Expand result">
+		    <span>Expand result for </span>Jobkey University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdiaziz Agane Abdisamed (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Veterinary Science; Business and Management; Computer Science and Technology; Law and Social Sciences; Medicine and Health Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBXLDNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024707&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24707"><input class="case" type="checkbox" onClick="Coche(24707,0);" name="result[]" id="24707" value="24707"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24707" id="result24707" title="Expand result">
+		    <span>Expand result for </span>Kismayo University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohammed Abdi Aden (Head) &ndash; Abdikadir Sheikh Mohamed (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Studies; Economics and Management Science; Education; Medicine and Health Sciences; Research and Community Development; Sharia</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBXLCM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024712&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24712"><input class="case" type="checkbox" onClick="Coche(24712,0);" name="result[]" id="24712" value="24712"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24712" id="result24712" title="Expand result">
+		    <span>Expand result for </span>Maakhir University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zakaria Haji Said (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Management and Entrepreneurship; Computer Technology and Electronic Services; Education; Engineering; Environmental and Natural Resources; Fisheries and Marine Sciences; Health Sciences and Technology; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBXLDMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024698&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24698"><input class="case" type="checkbox" onClick="Coche(24698,0);" name="result[]" id="24698" value="24698"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24698" id="result24698" title="Expand result">
+		    <span>Expand result for </span>Modern University for Science and Technology</a></h3>
+		  <p class="i_name">
+		Jaamacadda Modern (MUST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Economics; Engineering; Health Science; Public Administration and Governemental System</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLjNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009732&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9732"><input class="case" type="checkbox" onClick="Coche(9732,0);" name="result[]" id="9732" value="9732"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result9732" id="result9732" title="Expand result">
+		    <span>Expand result for </span>Mogadishu University</a></h3>
+		  <p class="i_name">
+		Jaamacadda Muqdisho (MU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ibrahim Mohamed Mursal (Head) &ndash; Ali Hassan Mohamed (Senior Administrative Officer) &ndash; Adam Ahmed Hussein (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Community Service; Computer Science and Information Technology; Economics and Management Science; Education; Engineering; Languages; Medicine and Surgery; Non-Degree Studies; Nursing and Healh Science; Political Science and Journalism; Postgraduate Studies; Sharia and Law; Somali studies; Water</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxTLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024703&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24703"><input class="case" type="checkbox" onClick="Coche(24703,0);" name="result[]" id="24703" value="24703"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24703" id="result24703" title="Expand result">
+		    <span>Expand result for </span>New Generation University</a></h3>
+		  <p class="i_name">
+		 (NGUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Economics; Computer and Information Technology; Engineering; Health Science; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBXLCMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024688&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24688"><input class="case" type="checkbox" onClick="Coche(24688,0);" name="result[]" id="24688" value="24688"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24688" id="result24688" title="Expand result">
+		    <span>Expand result for </span>Nugaal University</a></h3>
+		  <p class="i_name">
+		Jaamacadda Nugaal		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdirizak Lafole (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Basic Bussiness Administration; Business and Administration; Community Development; Computerized Accounting; ComputerScience; Education; English and Arabic Languages; Shariah and Islamic Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLiNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024686&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24686"><input class="case" type="checkbox" onClick="Coche(24686,0);" name="result[]" id="24686" value="24686"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24686" id="result24686" title="Expand result">
+		    <span>Expand result for </span>Plasma University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hassan Mohamed Hassan (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Veterinary; Business and Economics; Engineering and Technology; Health Sciences; Humanities and Social Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLiM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013785&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="13785"><input class="case" type="checkbox" onClick="Coche(13785,0);" name="result[]" id="13785" value="13785"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result13785" id="result13785" title="Expand result">
+		    <span>Expand result for </span>Puntland State University</a></h3>
+		  <p class="i_name">
+		 (PSU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mahamud Hamid Mohamed (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Economics; Computer Science; English and Arabic Languages; Health Sciences; Sharia and  Law; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxXLiM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024695&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24695"><input class="case" type="checkbox" onClick="Coche(24695,0);" name="result[]" id="24695" value="24695"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24695" id="result24695" title="Expand result">
+		    <span>Expand result for </span>Puntland University of Science and Technology</a></h3>
+		  <p class="i_name">
+		 (PUST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Computer Science; Education; Language; Medicine; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLjM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024713&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24713"><input class="case" type="checkbox" onClick="Coche(24713,0);" name="result[]" id="24713" value="24713"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24713" id="result24713" title="Expand result">
+		    <span>Expand result for </span>Salaam University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdulkadir Black (Head) &ndash; Abdi Aden Osman (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Health Sciences; Health Systems and Public Health; Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBXLDMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-022096&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="22096"><input class="case" type="checkbox" onClick="Coche(22096,0);" name="result[]" id="22096" value="22096"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result22096" id="result22096" title="Expand result">
+		    <span>Expand result for </span>Simad University</a></h3>
+		  <p class="i_name">
+		 (SU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Dahir Hassan Arab (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computing; Economics; Education; Engineering; Law and Sharia; Management Sciences; Medicine and Health Sciences; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyhQLjM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024690&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24690"><input class="case" type="checkbox" onClick="Coche(24690,0);" name="result[]" id="24690" value="24690"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24690" id="result24690" title="Expand result">
+		    <span>Expand result for </span>Somali International University</a></h3>
+		  <p class="i_name">
+		Jaamacadda Caalamiga Soomaaliya (SIU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Yahye Ali Ibrahim (Head) &ndash; Andrew Okello (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Social Sciences; Business and Economics; Education; Engineering and Computer Technology; Medicine and Health Sciences; Sharia and Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLjNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024706&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24706"><input class="case" type="checkbox" onClick="Coche(24706,0);" name="result[]" id="24706" value="24706"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24706" id="result24706" title="Expand result">
+		    <span>Expand result for </span>Tima-ade University</a></h3>
+		  <p class="i_name">
+		JaamacadaTimacade		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Business Administration; Civil Engineering; Economics; Education; General Medicine and Surgery; Information Technology; Islamic Studies; Public Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBXLCM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024692&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24692"><input class="case" type="checkbox" onClick="Coche(24692,0);" name="result[]" id="24692" value="24692"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24692" id="result24692" title="Expand result">
+		    <span>Expand result for </span>University of Bosaso</a></h3>
+		  <p class="i_name">
+		Jaamacadda Bosaaso		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdhrahman Guhaad (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Commerce and Management; Computer Science; Education; Health Sciences; Islamic Studies; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLjMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009731&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9731"><input class="case" type="checkbox" onClick="Coche(9731,0);" name="result[]" id="9731" value="9731"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result9731" id="result9731" title="Expand result">
+		    <span>Expand result for </span>University of Burao</a></h3>
+		  <p class="i_name">
+		Jaamacadda Burco		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Suleiman Dirir Abdi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Research and Development; Animal Science and Agriculture; Business Administration and ICT; Community Development; Education; Medicine and Nursing; Sharia and Law; Somali Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxTLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-022350&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="22350"><input class="case" type="checkbox" onClick="Coche(22350,0);" name="result[]" id="22350" value="22350"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result22350" id="result22350" title="Expand result">
+		    <span>Expand result for </span>University of Hargeisa</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamud Yousuf Muse (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Veterinary Studies; Applied and Natural Science; Business and Public Administration; Computer Science and Information Technology; Economics; Education; Engineering; Islamic Studies and Arabic; Islamic Studies and Arabic Language; Law; Medicine and Health Science; Peace and Conflict Studies; Social Science and Humanities; Somali Studies and Literature</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyhTLTNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024704&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24704"><input class="case" type="checkbox" onClick="Coche(24704,0);" name="result[]" id="24704" value="24704"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24704" id="result24704" title="Expand result">
+		    <span>Expand result for </span>University of Health Sciences Bosaso</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Clinical Medicine; Medical Laboratory; Medicine; Midwifery; Nursing; Nutrition; Pharmacy; Public Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBXLCMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024682&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24682"><input class="case" type="checkbox" onClick="Coche(24682,0);" name="result[]" id="24682" value="24682"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24682" id="result24682" title="Expand result">
+		    <span>Expand result for </span>University of Somalia</a></h3>
+		  <p class="i_name">
+		 (UNISO)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ismail Ali Siad (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Veterinary Science; Business Administration; Engineering and Computer Science; Health Sciences; Humanities and Social Science; Sharia and Islamic Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBWLiMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024701&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24701"><input class="case" type="checkbox" onClick="Coche(24701,0);" name="result[]" id="24701" value="24701"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Somalia</p>
+				  <h3>
+		    <a href="#result24701" id="result24701" title="Expand result">
+		    <span>Expand result for </span>University of Southern Somalia</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Ali Clay. (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Health Sciences; Information Technology; Islamic Studies; Management and Economics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBXLCMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 41 of 41</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia" selected>Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>
