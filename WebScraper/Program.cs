@@ -2,14 +2,12 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Net;
-using System.Collections;
 using System.Linq;
-using WebScraper.Models;
+using Models;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Text;
 
 namespace WebScraper
 {
@@ -21,7 +19,6 @@ namespace WebScraper
         private static readonly HttpClient client = new HttpClient();
         const int readThisMany = 880;
         static string CountryLinksPath = "CountryLinks";
-
 
         // gets universities from WHED.net website.
         // Feed it html source file of uni search by country and it will gather Uni names + Uni descriptions + Faculties + Faculty programmes
