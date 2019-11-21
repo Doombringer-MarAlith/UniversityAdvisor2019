@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Models;
+using System.Collections.Generic;
 using System.Net;
 using System.Web.Mvc;
 using Webserver.Data.Repositories;
-using Webserver.Models;
 
 namespace Webserver.Controllers
 {
@@ -16,27 +16,17 @@ namespace Webserver.Controllers
         }
 
         // GET: Faculties/{universityId}
-        public ActionResult Index(string universityId)
+        public ActionResult Index(int universityId)
         {
-            if (universityId == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
             ViewBag.UniversityId = universityId;
-            IEnumerable<Faculty> faculties = _repository.GetMany(faculty => faculty.UniGuid == universityId);
+            IEnumerable<Faculty> faculties = _repository.GetMany(faculty => faculty.UniversityId == universityId);
 
             return View(faculties);
         }
 
         // GET: Faculties/Details/{id}
-        public ActionResult Details(string id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
             Faculty faculty = _repository.GetById(id);
             if (faculty == null)
             {
@@ -44,7 +34,7 @@ namespace Webserver.Controllers
             }
 
             ViewBag.FacultyId = id;
-            ViewBag.UniversityId = faculty.UniGuid;
+            ViewBag.UniversityId = faculty.UniversityId;
             return View(faculty);
         }
     }

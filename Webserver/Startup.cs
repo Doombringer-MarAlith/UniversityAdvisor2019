@@ -1,16 +1,17 @@
-﻿using Microsoft.Owin;
-using Owin;
-using Webserver.Data;
-using Webserver.Data.Repositories;
-using Webserver.Models;
-using Webserver.Data.Infrastructure;
-using Autofac;
+﻿using Autofac;
 using Autofac.Integration.Mvc;
+using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.DataProtection;
+using Microsoft.Owin;
+using Owin;
 using System.Web;
 using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
+using Webserver.Data;
+using Webserver.Data.Infrastructure;
+using Webserver.Data.Models;
+using Webserver.Data.Repositories;
+using Webserver.Models;
 
 [assembly: OwinStartupAttribute(typeof(Webserver.Startup))]
 namespace Webserver
@@ -21,7 +22,7 @@ namespace Webserver
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<ApplicationDbContext>().AsSelf().SingleInstance();
+            builder.RegisterType<ApplicationDbContext>().AsSelf().SingleInstance().OnActivated(x => x.Instance.Initialize());
             builder.RegisterType<ApplicationUserRepository>().As<IUserStore<ApplicationUser>>().InstancePerRequest();
             builder.RegisterType<UniversityRepository>().As<IUniversityRepository>().InstancePerRequest();
             builder.RegisterType<FacultyRepository>().As<IFacultyRepository>().InstancePerRequest();

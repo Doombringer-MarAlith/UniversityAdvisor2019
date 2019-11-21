@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Linq;
-using Webserver.Models;
 
 namespace Webserver.Data.Models
 {
@@ -15,8 +15,7 @@ namespace Webserver.Data.Models
                     Name = "Vilnius University",
                     Description = "Decent",
                     Location = "Unknown",
-                    FoundingDate = DateTime.Now,
-                    Id = "1"
+                    FoundingDate = DateTime.Now
                 });
 
                 dbContext.Universities.Add(new University
@@ -24,82 +23,83 @@ namespace Webserver.Data.Models
                     Name = "KTU",
                     Description = "Decent",
                     Location = "Unknown",
-                    FoundingDate = DateTime.Now,
-                    Id = "2"
+                    FoundingDate = DateTime.Now
                 });
 
                 dbContext.Faculties.Add(new Faculty
                 {
                     Name = "MIF",
-                    UniGuid = "1",
-                    Id = "10"
+                    UniversityId = 1
                 });
 
                 dbContext.Faculties.Add(new Faculty
                 {
                     Name = "FIM",
-                    UniGuid = "1",
-                    Id = "11"
+                    UniversityId = 1
                 });
 
                 dbContext.Faculties.Add(new Faculty
                 {
                     Name = "KTU Faculty #1",
-                    UniGuid = "2",
-                    Id = "12"
+                    UniversityId = 2
                 });
 
                 dbContext.Faculties.Add(new Faculty
                 {
                     Name = "KTU Faculty #2",
-                    UniGuid = "2",
-                    Id = "13"
+                    UniversityId = 2
                 });
 
                 dbContext.Reviews.Add(new Review
                 {
                     Text = "Perfect Uni!",
-                    UniGuid = "1",
-                    Id = "100"
+                    UniversityId = 1,
+                    UserId = "1",
+                    Value = "5"
                 });
 
                 dbContext.Reviews.Add(new Review
                 {
                     Text = "Perfect KTUni!",
-                    UniGuid = "2",
-                    Id = "101"
+                    UniversityId = 2,
+                    UserId = "1",
+                    Value = "5"
                 });
 
                 dbContext.Reviews.Add(new Review
                 {
                     Text = "Perfect Faculty!",
-                    FacultyGuid = "10",
-                    Id = "102"
+                    FacultyId = 1,
+                    UserId = "1",
+                    Value = "5"
                 });
 
                 dbContext.Reviews.Add(new Review
                 {
                     Text = "Perfect VU Faculty!",
-                    FacultyGuid = "11",
-                    Id = "103"
+                    FacultyId = 2,
+                    UserId = "1",
+                    Value = "5"
                 });
 
                 dbContext.Reviews.Add(new Review
                 {
                     Text = "Nice!",
-                    FacultyGuid = "12",
-                    Id = "104"
+                    FacultyId = 3,
+                    UserId = "1",
+                    Value = "5"
                 });
 
                 dbContext.Reviews.Add(new Review
                 {
                     Text = "Legit!",
-                    FacultyGuid = "13",
-                    Id = "105"
+                    FacultyId = 4,
+                    UserId = "1",
+                    Value = "5"
                 });
-            }
 
-            dbContext.SaveChanges();
+                dbContext.SaveChanges();
+            }
         }
     }
 }

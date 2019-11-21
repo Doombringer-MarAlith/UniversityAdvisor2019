@@ -1,13 +1,13 @@
-﻿using System.Net;
+﻿using Models;
+using System.Net;
 using System.Web.Mvc;
 using Webserver.Data.Repositories;
-using Webserver.Models;
 
 namespace Webserver.Controllers
 {
     public class UniversitiesController : Controller
     {
-        private IUniversityRepository _repository;
+        private readonly IUniversityRepository _repository;
 
         public UniversitiesController(IUniversityRepository repository)
         {
@@ -33,13 +33,8 @@ namespace Webserver.Controllers
         }
 
         // GET: Universities/Details/{id}
-        public ActionResult Details(string id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
             University university = _repository.GetById(id);
             if (university == null)
             {

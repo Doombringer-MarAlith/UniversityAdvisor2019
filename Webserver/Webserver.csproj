@@ -187,6 +187,9 @@
     <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Controllers\UniversitiesController.cs" />
     <Compile Include="Data\ApplicationDbContext.cs" />
+    <Compile Include="Data\Configuration\FacultyConfiguration.cs" />
+    <Compile Include="Data\Configuration\ReviewConfiguration.cs" />
+    <Compile Include="Data\Configuration\UniversityConfiguration.cs" />
     <Compile Include="Data\Infrastructure\DatabaseFactory.cs" />
     <Compile Include="Data\Infrastructure\IDatabaseFactory.cs" />
     <Compile Include="Data\Models\DataFixture.cs" />
@@ -201,11 +204,21 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ApplicationUser.cs" />
-    <Compile Include="Models\ViewModels\AccountViewModels.cs" />
-    <Compile Include="Models\Faculty.cs" />
-    <Compile Include="Models\ViewModels\ManageViewModels.cs" />
-    <Compile Include="Models\Review.cs" />
-    <Compile Include="Models\University.cs" />
+    <Compile Include="Models\ViewModels\Account\ExternalLoginConfirmationViewModel.cs" />
+    <Compile Include="Models\ViewModels\Account\ExternalLoginListViewModel.cs" />
+    <Compile Include="Models\ViewModels\Account\ForgotPasswordViewModel.cs" />
+    <Compile Include="Models\ViewModels\Account\ForgotViewModel.cs" />
+    <Compile Include="Models\ViewModels\Account\LoginViewModel.cs" />
+    <Compile Include="Models\ViewModels\Account\RegisterViewModel.cs" />
+    <Compile Include="Models\ViewModels\Account\ResetPasswordViewModel.cs" />
+    <Compile Include="Models\ViewModels\Account\SendCodeViewModel.cs" />
+    <Compile Include="Models\ViewModels\Account\VerifyCodeViewModel.cs" />
+    <Compile Include="Models\ViewModels\Manage\ChangePasswordViewModel.cs" />
+    <Compile Include="Models\ViewModels\Manage\ConfigureTwoFactorViewModel.cs" />
+    <Compile Include="Models\ViewModels\Manage\FactorViewModel.cs" />
+    <Compile Include="Models\ViewModels\Manage\IndexViewModel.cs" />
+    <Compile Include="Models\ViewModels\Manage\ManageLoginsViewModel.cs" />
+    <Compile Include="Models\ViewModels\Manage\SetPasswordViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\Repositories\IUniversityRepository.cs" />
     <Compile Include="Data\Repositories\UniversityRepository.cs" />
@@ -262,12 +275,10 @@
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />
     <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
     <Content Include="Views\Manage\ChangePassword.cshtml" />
     <Content Include="Views\Manage\Index.cshtml" />
     <Content Include="Views\Manage\ManageLogins.cshtml" />
     <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\package-lock.json" />
@@ -283,8 +294,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="dist\" />
-    <Folder Include="Views\Application\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -298,6 +307,12 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{58d4dbde-7f0a-4114-8273-bf5d988a07be}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

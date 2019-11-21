@@ -1,5 +1,5 @@
-﻿using Webserver.Data.Infrastructure;
-using Webserver.Models;
+﻿using Models;
+using Webserver.Data.Infrastructure;
 
 namespace Webserver.Data.Repositories
 {
