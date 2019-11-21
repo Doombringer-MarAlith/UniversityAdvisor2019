@@ -4,7 +4,7 @@ using Webserver.Models;
 
 namespace Webserver.Data.Models
 {
-    public class DataFixture
+    public static class DataFixture
     {
         public static void Initialize(ApplicationDbContext dbContext)
         {
