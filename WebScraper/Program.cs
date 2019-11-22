@@ -13,12 +13,12 @@ namespace WebScraper
 {
     class Program
     {
-        static List<University> ScrapedUniversities = new List<University>();
-        static List<Faculty> _faculties = new List<Faculty>();
         const string websiteLink = "https://www.whed.net/";
         private static readonly HttpClient client = new HttpClient();
         const int readThisMany = 880;
         static string CountryLinksPath = "CountryLinks";
+        const int StandardTimeout = 15000;
+        static int UniversityId = 1;
 
         // gets universities from WHED.net website.
         // Feed it html source file of uni search by country and it will gather Uni names + Uni descriptions + Faculties + Faculty programmes
@@ -55,8 +55,8 @@ namespace WebScraper
                 }
             }
 
-            Thread t;
-            Thread t2;
+            Thread t = new Thread(() => StartThreadWithTimeout("", StandardTimeout));
+            Thread t2 = new Thread(() => StartThreadWithTimeout("", StandardTimeout));
             int current;
             int currentCountryNum = 1;
             foreach (var linksList in universityLinks)
@@ -71,28 +71,42 @@ namespace WebScraper
                         {
                             string htmlCode = client.DownloadString(websiteLink + link);
                             Console.WriteLine("UNIVERSITY {0:d}/{1:d} START:" + DateTime.Now, current + 1, linksList.Count);
-
-                            if (current % 3 == 0)
+                            
+                            if (UniversityId % 2 == 0)
                             {
-                                t = new Thread(() => ScrapeUniversity(htmlCode));
-                                t.Start();
+                                if (!t.IsAlive)
+                                {
+                                    t = new Thread(() => StartThreadWithTimeout(htmlCode, StandardTimeout));
+                                    t.Start();
+                                }
+                                else
+                                {
+                                    StartThreadWithTimeout(htmlCode, StandardTimeout);
+                                }
                                 if (current == linksList.Count - 1)
                                 {
                                     t.Join();
                                 }
                             }
-                            else if (current % 2 == 0)
+                            else
                             {
-                                t2 = new Thread(() => ScrapeUniversity(htmlCode));
-                                t2.Start();
+                                if (!t2.IsAlive)
+                                {
+                                    t2 = new Thread(() => StartThreadWithTimeout(htmlCode, StandardTimeout));
+                                    t2.Start();
+                                }
+                                else
+                                {
+                                    StartThreadWithTimeout(htmlCode, StandardTimeout);
+                                }
                                 if (current == linksList.Count - 1)
                                 {
                                     t2.Join();
                                 }
-                            }
-                            else
-                            {
-                                ScrapeUniversity(htmlCode);
+                                if(t.IsAlive)
+                                    t.Join();
+                                if (t2.IsAlive)
+                                    t2.Join();
                             }
                         }
                         catch (WebException e)
@@ -102,6 +116,7 @@ namespace WebScraper
                         }
                     }
                     current++;
+                    UniversityId++;
                 }
                 currentCountryNum++;
             }
@@ -148,11 +163,11 @@ namespace WebScraper
                 end = text.IndexOf("</sp", start);
                 university.Description = text.Substring(start, end - start);
             }
-            ScrapedUniversities.Add(university);
-            ReadFaculties(text, "fakeID");
+            //ScrapedUniversities.Add(university);
+            ReadFaculties(text);
         }
 
-        static void ReadFaculties(string text, string universityId)
+        static void ReadFaculties(string text)
         {
             int start = 0;
             int end;
@@ -161,17 +176,16 @@ namespace WebScraper
             do
             {
                 List<string> fields;
-                List<Programme> programmes = new List<Programme>();
+                //List<Programme> programmes = new List<Programme>();
                 start = text.IndexOf("Faculty : ", start);
-                string facultyGuid;
+                int facultyId;
                 if (start != -1)
                 {
                     start += 10;
                     end = text.IndexOf("</p>", start);
                     facultyName = text.Substring(start, end - start);
-
                     // while(notNewFacultyGuid) DO {generate new guid}
-                    _faculties.Add(new Faculty() { Name = facultyName }); // Add Guid(and save) and University Guid from above
+                    // Add Faculty to db here, facultyName, create new faculty Id, use UniversityId
 
                     // Searching for fields of study
                     nextFaculty = text.IndexOf("Faculty : ", start) > 0 ? text.IndexOf("Faculty : ", start) + 10 : text.Length; //doesn't exist -> good too
@@ -184,7 +198,7 @@ namespace WebScraper
                         foreach (var field in fields)
                         {
                             // while(notNewProgrammeGuid) DO {generate new guid}
-                            programmes.Add(new Programme() { Name = field }); // Guid create needed. Also add Faculty's from above Guid
+                            //programmes.Add(new Programme() { Name = field }); // Guid create needed. Also add Faculty's from above Guid
                         }
                     }
                 }
@@ -229,6 +243,31 @@ namespace WebScraper
             }
             string txt = text.Substring(start, endIndex - start);
             return Int32.Parse(txt);
+        }
+
+        static void StartThreadWithTimeout(string text, int timeout)
+        {
+            Thread t = new Thread(() => ScrapeUniversity(text));
+            t.Start();
+            DateTime current = DateTime.Now;
+            while (t.IsAlive)
+            {
+                if((DateTime.Now - current).TotalMilliseconds > timeout)
+                    break;
+            }
+            if (t.IsAlive)
+            {
+                Console.WriteLine("Thread aborted");
+                t.Abort();
+            }
+        }
+
+        static void WriteToFile(string txt, string path)
+        {
+            using (StreamWriter writetext = File.AppendText(path))
+            {
+                writetext.WriteLine(txt);
+            }
         }
     }
 }
