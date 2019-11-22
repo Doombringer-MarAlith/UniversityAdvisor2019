@@ -178,13 +178,11 @@ namespace WebScraper
                 List<string> fields;
                 //List<Programme> programmes = new List<Programme>();
                 start = text.IndexOf("Faculty : ", start);
-                int facultyId;
                 if (start != -1)
                 {
                     start += 10;
                     end = text.IndexOf("</p>", start);
                     facultyName = text.Substring(start, end - start);
-                    // while(notNewFacultyGuid) DO {generate new guid}
                     // Add Faculty to db here, facultyName, create new faculty Id, use UniversityId
 
                     // Searching for fields of study
@@ -197,7 +195,6 @@ namespace WebScraper
 
                         foreach (var field in fields)
                         {
-                            // while(notNewProgrammeGuid) DO {generate new guid}
                             //programmes.Add(new Programme() { Name = field }); // Guid create needed. Also add Faculty's from above Guid
                         }
                     }

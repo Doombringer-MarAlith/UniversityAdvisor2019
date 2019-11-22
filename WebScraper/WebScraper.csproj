@@ -664,6 +664,10 @@
       <Project>{58d4dbde-7f0a-4114-8273-bf5d988a07be}</Project>
       <Name>Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Webserver\Webserver.csproj">
+      <Project>{1466cd87-ad28-4b56-8030-93aa0c471501}</Project>
+      <Name>Webserver</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
