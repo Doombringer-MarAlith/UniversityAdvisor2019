@@ -291,6 +291,9 @@
     <Content Include="Views\Reviews\Faculty.cshtml" />
     <Content Include="Views\Reviews\University.cshtml" />
     <Content Include="Views\AddReview\Index.cshtml" />
+    <Content Include="Views\AddReview\FacultyReview.cshtml" />
+    <Content Include="Views\AddReview\ProgrammeReview.cshtml" />
+    <Content Include="Views\AddReview\UniversityReview.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
