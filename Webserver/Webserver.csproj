@@ -188,6 +188,7 @@
     <Compile Include="Controllers\UniversitiesController.cs" />
     <Compile Include="Data\ApplicationDbContext.cs" />
     <Compile Include="Data\Configuration\FacultyConfiguration.cs" />
+    <Compile Include="Data\Configuration\ProgrammeConfiguration.cs" />
     <Compile Include="Data\Configuration\ReviewConfiguration.cs" />
     <Compile Include="Data\Configuration\UniversityConfiguration.cs" />
     <Compile Include="Data\Infrastructure\DatabaseFactory.cs" />
