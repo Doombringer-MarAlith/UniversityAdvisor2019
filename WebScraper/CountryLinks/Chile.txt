@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Chile')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Chile)">
+	    <input type="hidden" class="envoi" name="total" value="64">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Chile">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">64 results found for <strong>(Country=Chile)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 64 of 64</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-017116&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17116"><input class="case" type="checkbox" onClick="Coche(17116,0);" name="result[]" id="17116" value="17116"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17116" id="result17116" title="Expand result">
+		    <span>Expand result for </span>Adolfo Ibáñez University</a></h3>
+		  <p class="i_name">
+		Universidad Adolfo Ibáñez (UAI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Harald Beyer (Head) &ndash; Gísela Escobar (Senior Administrative Officer) &ndash; María Soledad Arellano (Senior Administrative Officer) &ndash; Rafael Macherone (Senior Administrative Officer) &ndash; María José de las Heras (Senior Administrative Officer) &ndash; Carlos Ramírez (International Relations Officer) &ndash; Paula Rojas Saperas (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Communication and Journalism; Design Lab; Engineering and Sciences; Government; Law; Liberal Arts; Psychology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxRLDM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017119&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17119"><input class="case" type="checkbox" onClick="Coche(17119,0);" name="result[]" id="17119" value="17119"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17119" id="result17119" title="Expand result">
+		    <span>Expand result for </span>Adventist University of Chile</a></h3>
+		  <p class="i_name">
+		Universidad Adventista de Chile (UnACh)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ricardo A. González (Head) &ndash; Ramón Pérez (Senior Administrative Officer) &ndash; Uziel Alvarado (Senior Administrative Officer) &ndash; Antonio Parra (Senior Administrative Officer) &ndash; Lilian Schmied (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education and Social Sciences; Engineering and Trade; Health Sciences; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxRLDNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008832&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8832"><input class="case" type="checkbox" onClick="Coche(8832,0);" name="result[]" id="8832" value="8832"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8832" id="result8832" title="Expand result">
+		    <span>Expand result for </span>Agricultural Training Institute Adolfo Matthei</a></h3>
+		  <p class="i_name">
+		Instituto Profesional Agrario Adolfo Matthei		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luis Momberg Bórquez (Head) &ndash; Alfredo Matthei Neumann (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Business; Agricultural Engineering; Agricultural Technology; Forestry</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BTLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008833&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8833"><input class="case" type="checkbox" onClick="Coche(8833,0);" name="result[]" id="8833" value="8833"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8833" id="result8833" title="Expand result">
+		    <span>Expand result for </span>AIEP Professional Institute</a></h3>
+		  <p class="i_name">
+		Instituto Profesional AIEP		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fernando Martínez Santana (Head) &ndash; Carlos Silva Sánchez (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Aesthetics; Business; Communication Studies; Construction and Civil Works; Costume Design; Design and Advertising; Food, Hospitality and Tourism; Health Sciences; Information Technology; Social Development; Sound Engineering and  Television; Sports</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BTLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017130&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17130"><input class="case" type="checkbox" onClick="Coche(17130,0);" name="result[]" id="17130" value="17130"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17130" id="result17130" title="Expand result">
+		    <span>Expand result for </span>Alberto Hurtado University</a></h3>
+		  <p class="i_name">
+		Universidad Alberto Hurtado (UAH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fernando Montes Matte, S.J. (Head) &ndash; José Miguel Burmeiste (Senior Administrative Officer) &ndash; Sebastián Kaufmann (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Business; Education; Law; Philosophy and Humanities; Psychology; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxRLFNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017161&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17161"><input class="case" type="checkbox" onClick="Coche(17161,0);" name="result[]" id="17161" value="17161"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17161" id="result17161" title="Expand result">
+		    <span>Expand result for </span>Andrés Bello University</a></h3>
+		  <p class="i_name">
+		Universidad Andrés Bello		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jose Rodriguez Perez (Head) &ndash; Fernando Castro Azofeifa (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Design; Dentistry; Ecology and Natural Resources; Economics and Trade; Engineering; Humanities and Education; Law; Liberal Arts; Medicine; Nursing; Rehabilitation Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxRLUMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008843&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8843"><input class="case" type="checkbox" onClick="Coche(8843,0);" name="result[]" id="8843" value="8843"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8843" id="result8843" title="Expand result">
+		    <span>Expand result for </span>ARCOS Professional Institute</a></h3>
+		  <p class="i_name">
+		Instituto Profesional ARCOS		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Sanfuentes (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Cinema and Audiovisual Communication; Communication and Cultural Studies; Design and Multimedia; Photography; Sound; Theatre</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BULFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017174&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17174"><input class="case" type="checkbox" onClick="Coche(17174,0);" name="result[]" id="17174" value="17174"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17174" id="result17174" title="Expand result">
+		    <span>Expand result for </span>Arturo Prat University</a></h3>
+		  <p class="i_name">
+		Universidad Arturo Prat		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gustavo Soto Bringas (Head) &ndash; Veronica Maria Frias Pistono (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Antofagasta; Arica; Arts and Humanities; Business Administration; Calama; Engineering and Architecture; Health Sciences; Law and Political Sciences; Natural and Renewable Resources; Santiago; Victoria</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxRLVMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017200&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17200"><input class="case" type="checkbox" onClick="Coche(17200,0);" name="result[]" id="17200" value="17200"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17200" id="result17200" title="Expand result">
+		    <span>Expand result for </span>Autonomous University of Chile</a></h3>
+		  <p class="i_name">
+		Universidad Autónoma de Chile (UAS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Teodoro Ribera Neumann (Head) &ndash; Jaime Torralba Cubillos (Senior Administrative Officer) &ndash; Osvaldo Ramírez Castro (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Contruction; Business Administration; Education; Engineering; Health Sciences; Law; Social Sciences and Humanity</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxSLCNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017251&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17251"><input class="case" type="checkbox" onClick="Coche(17251,0);" name="result[]" id="17251" value="17251"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17251" id="result17251" title="Expand result">
+		    <span>Expand result for </span>Bernardo O'Higgins University</a></h3>
+		  <p class="i_name">
+		Universidad Bernardo O'Higgins (UBO)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Claudio Ruff Escobar (Head) &ndash; Virginie Delalande (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering; Faculty of Health, Sport and Recreation; Human Sciences and Education; Law and Social Communication</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxSLTMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008837&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8837"><input class="case" type="checkbox" onClick="Coche(8837,0);" name="result[]" id="8837" value="8837"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8837" id="result8837" title="Expand result">
+		    <span>Expand result for </span>Carlos Casanueva Professional Institute</a></h3>
+		  <p class="i_name">
+		Instituto Profesional Carlos Casanueva (ICC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maria Josefina  Bilbao Mendezona (Head) &ndash; Víctor Aguilera Vásquez (Head) &ndash; María del Carmen González Urroz (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Early Childhood Education; Health Sciences; Human and Social Development; Library Science and Information Management; Naturopathy; Nursing; Psychopedagogy; Risks Prevention; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BTLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013652&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13652"><input class="case" type="checkbox" onClick="Coche(13652,0);" name="result[]" id="13652" value="13652"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result13652" id="result13652" title="Expand result">
+		    <span>Expand result for </span>Catholic University of Chile</a></h3>
+		  <p class="i_name">
+		Pontificia Universidad Católica de Chile (UC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ignacio Sánchez Diaz (Head) &ndash; Juan Agustín Larraín Correa (Senior Administrative Officer) &ndash; María Elena Pimstein (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy and Forestry Engineering; Architecture, Design and Urban Studies; Arts and Humanities; Biological Sciences; Chemistry; Communication Studies; Economics and Administration; Education; Engineering; History, Geography, and Political Science; Law; Letters; Mathematics; Medicine; Philosophy; Physics; Social Sciences; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxWLTMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017310&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17310"><input class="case" type="checkbox" onClick="Coche(17310,0);" name="result[]" id="17310" value="17310"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17310" id="result17310" title="Expand result">
+		    <span>Expand result for </span>Catholic University of Maule</a></h3>
+		  <p class="i_name">
+		Universidad Católica del Maule		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Diego Durán Jara (Head) &ndash; Patrick Gatica Mandiola (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agrarian Sciences and Forestry; Basic Sciences; Education; Engineering; General Studies; Health Sciences; Medicine; Religious and Philosophical Sciences; Social Sciences and Economics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLDNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017307&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17307"><input class="case" type="checkbox" onClick="Coche(17307,0);" name="result[]" id="17307" value="17307"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17307" id="result17307" title="Expand result">
+		    <span>Expand result for </span>Catholic University of Temuco</a></h3>
+		  <p class="i_name">
+		Universidad Católica de Temuco		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Aliro Bórquez Ramirez (Head) &ndash; Marcela Alarcón Momberg (Senior Administrative Officer) &ndash; David Figueroa Hernández (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Education; Engineering; Health Sciences; Law; Natural Resources; Social and Cultural Studies; Social Sciences; Sustainable Development; Technology; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLCM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017295&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17295"><input class="case" type="checkbox" onClick="Coche(17295,0);" name="result[]" id="17295" value="17295"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17295" id="result17295" title="Expand result">
+		    <span>Expand result for </span>Catholic University of the Holy Conception</a></h3>
+		  <p class="i_name">
+		Universidad Católica de la Santísima Concepción (UCSC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Christian Schmitz Vaccaro (Head) &ndash; Teresa Lobos del Fierro (Senior Administrative Officer) &ndash; Alfredo Garcia Luarte (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Communication, History and Social Sciences; Economics and Management; Education; Engineering; Law; Medicine; Science; Technology; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxSLjM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017311&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17311"><input class="case" type="checkbox" onClick="Coche(17311,0);" name="result[]" id="17311" value="17311"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17311" id="result17311" title="Expand result">
+		    <span>Expand result for </span>Catholic University of the North</a></h3>
+		  <p class="i_name">
+		Universidad Católica del Norte (UCN)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jorge Tabilo (Head) &ndash; Fernando Orellana (Senior Administrative Officer) &ndash; Rodrigo Alda (Senior Administrative Officer) &ndash; Maria Cecilia Hernández (Senior Administrative Officer) &ndash; Jacqueline Fuentes (Senior Administrative Officer) &ndash; Francisco Correa (Senior Administrative Officer) &ndash; Dania Trista (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Economics; Archeological Research; Architecture, Civil Construction and Civil Engineering; Astronomy; Commercial Engineering; Distance Education; Economics and Administration; Engineering and Geological Science; Humanities; Journalism; Law; Marine Science; Medicine; Psychology; Science; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLDMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013656&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="13656"><input class="case" type="checkbox" onClick="Coche(13656,0);" name="result[]" id="13656" value="13656"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result13656" id="result13656" title="Expand result">
+		    <span>Expand result for </span>Catholic University of Valparaíso</a></h3>
+		  <p class="i_name">
+		Pontificia Universidad Católica de Valparaíso (UCV)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Claudio Raffo Elórtegui (Head) &ndash; Juan Carlos Morales Gentina (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy and Food Science; Architecture and Town Planning; Economics and Administration; Engineering; Law; Marine Science and Geography; Philosophy and Education; Science; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxWLTM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017330&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17330"><input class="case" type="checkbox" onClick="Coche(17330,0);" name="result[]" id="17330" value="17330"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17330" id="result17330" title="Expand result">
+		    <span>Expand result for </span>Central University of Chile</a></h3>
+		  <p class="i_name">
+		Universidad Central de Chile		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Santiago Gonzalez Larrain (Head) &ndash; Omar Ahumada Mora (Senior Administrative Officer) &ndash; Eliana Abad (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture, Urban Planning and Landscape Architecture; Cognitive Development; Communication Studies; Economics and Public Administration; Educational Sciences; Elementary Education; Law and Social Sciences; Physics and Mathematics; Political Science and Public Administration; Public Management; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLFNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008841&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8841"><input class="case" type="checkbox" onClick="Coche(8841,0);" name="result[]" id="8841" value="8841"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8841" id="result8841" title="Expand result">
+		    <span>Expand result for </span>CIISA Technological Institute</a></h3>
+		  <p class="i_name">
+		Instituto de Ciencias Tecnológicas CIISA		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Arturo Fuentes Espinosa (Head) &ndash; Christian Quezada Ruíz (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Automation; Computer Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BULDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017724&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17724"><input class="case" type="checkbox" onClick="Coche(17724,0);" name="result[]" id="17724" value="17724"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17724" id="result17724" title="Expand result">
+		    <span>Expand result for </span>Diego Portales University</a></h3>
+		  <p class="i_name">
+		Universidad Diego Portales (UDP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Carlos Peña (Head) &ndash; Cristóbal Marín Correa (Senior Administrative Officer) &ndash; Gabriel Libedinsky (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture, Design and Fine Arts; Communication and Literature; Economics and Business Administration; Education; Engineering; Health Sciences and Dentistry; Law; Medicine; Psychology; Social Sciences and History</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxXLEMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008851&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8851"><input class="case" type="checkbox" onClick="Coche(8851,0);" name="result[]" id="8851" value="8851"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8851" id="result8851" title="Expand result">
+		    <span>Expand result for </span>Dr. Virginio Gómez Professional Institute</a></h3>
+		  <p class="i_name">
+		Instituto Profesional Dr. Virginio Gómez (IPVG)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>René Lagos Cuitiño (Head) &ndash; Cristian Véjar Iturra (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Basic Sciences and Humanities; Construction and Risk Prevention; Health and Education; Industrial Technology; Management and Information Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BVLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008852&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8852"><input class="case" type="checkbox" onClick="Coche(8852,0);" name="result[]" id="8852" value="8852"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8852" id="result8852" title="Expand result">
+		    <span>Expand result for </span>DuocUC Professional Institute</a></h3>
+		  <p class="i_name">
+		Instituto Profesional DuocUC (DuocUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ricardo Paredes Molina (Head) &ndash; Andrés Villela C. (Senior Administrative Officer) &ndash; Rodrigo Nuñez R. (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Administration; Communication Studies; Construction Engineering; Design; Engineering; Health Sciences; Information Technology and Telecommunications; Natural Resources; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BVLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008853&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8853"><input class="case" type="checkbox" onClick="Coche(8853,0);" name="result[]" id="8853" value="8853"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8853" id="result8853" title="Expand result">
+		    <span>Expand result for </span>EATRI Professional Institute</a></h3>
+		  <p class="i_name">
+		Instituto Profesional EATRI		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Violeta Morgado Segura (Head) &ndash; Max Guillermo Colillán Martínez (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Translation and Interpretation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BVLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008858&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8858"><input class="case" type="checkbox" onClick="Coche(8858,0);" name="result[]" id="8858" value="8858"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8858" id="result8858" title="Expand result">
+		    <span>Expand result for </span>ESUCOMEX Professional Institute</a></h3>
+		  <p class="i_name">
+		Instituto Profesional ESUCOMEX		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Cristóbal Silva Labbé (Head) &ndash; Oscar Iriani Montes (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration; Construction Engineering; Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BVLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018366&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18366"><input class="case" type="checkbox" onClick="Coche(18366,0);" name="result[]" id="18366" value="18366"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result18366" id="result18366" title="Expand result">
+		    <span>Expand result for </span>Federico Santa María Technical University</a></h3>
+		  <p class="i_name">
+		Universidad Técnica Federico Santa María		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Darcy Fuenzalida (Head) &ndash; Jerome Mac Auliffe (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Aeronautics; Architecture; Business and Commerce; Chemical and Enviromental Engineering; Chemistry; Civil Engineering; Computer Engineering; Concepción; Electrical Engineering; Electronic Engineering; Guayaquil; Humanities; Industrial Engineering; Mathematics; Mechanical Engineering; Metallurgical and Materials Engineering; Physical Education, Sports and Recreation; Physics; Product Design; Rancagua; San Joaquín; Santiago; Viña del Mar; Vitacura</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BTLUM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017776&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17776"><input class="case" type="checkbox" onClick="Coche(17776,0);" name="result[]" id="17776" value="17776"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17776" id="result17776" title="Expand result">
+		    <span>Expand result for </span>FinisTerrae University</a></h3>
+		  <p class="i_name">
+		Universidad FinisTerrae (UFT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Cristian Nazer A. (Head) &ndash; Roberto Salim-Hanna S. (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Design; Arts; Business Administration and Economics; Civil Engineering; Communication Studies and Humanities; Dentistry; Education and Family Studies; Law; Medicine; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxXLVM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008859&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8859"><input class="case" type="checkbox" onClick="Coche(8859,0);" name="result[]" id="8859" value="8859"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8859" id="result8859" title="Expand result">
+		    <span>Expand result for </span>Guillermo Subercaseaux Institute of Banking Studies</a></h3>
+		  <p class="i_name">
+		Instituto de Estudios Bancarios Guillermo Subercaseaux		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mario Merino G. Merino G. (Head) &ndash; Fernando Saavedra D. (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Business Administration; Finance</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BVLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023274&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23274"><input class="case" type="checkbox" onClick="Coche(23274,0);" name="result[]" id="23274" value="23274"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result23274" id="result23274" title="Expand result">
+		    <span>Expand result for </span>IPG Professional Institute</a></h3>
+		  <p class="i_name">
+		Instituto Profesional IPG		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ricardo Sobarzo Zambrano (Head) &ndash; Ulises Toledo Nickels (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education, Sports and Society; Health Sciences; Management and Communication; Technology and Industrial Process</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxSLVMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008861&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8861"><input class="case" type="checkbox" onClick="Coche(8861,0);" name="result[]" id="8861" value="8861"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8861" id="result8861" title="Expand result">
+		    <span>Expand result for </span>La Araucana Professional Institute</a></h3>
+		  <p class="i_name">
+		Instituto Profesional La Araucana		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Edmundo Durán Vallejos (Head) &ndash; Isabel Gómez Rojas (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Healh Sciences; Humanities and Social Science; Production and Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BWLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008862&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8862"><input class="case" type="checkbox" onClick="Coche(8862,0);" name="result[]" id="8862" value="8862"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8862" id="result8862" title="Expand result">
+		    <span>Expand result for </span>Latin American Professional Institute of Foreign Trade</a></h3>
+		  <p class="i_name">
+		Instituto Profesional Latinoamericano de Comercio Exterior (IPLATEX)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gonzalo Tomarelli Tomarelli (Head) &ndash; Giovanni Pinedo (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Trade; Computer Science; Construction Engineering; Education; Health Sciences; Social Sciences; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BWLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008863&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8863"><input class="case" type="checkbox" onClick="Coche(8863,0);" name="result[]" id="8863" value="8863"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8863" id="result8863" title="Expand result">
+		    <span>Expand result for </span>Liberator of the Andes Professional Institute</a></h3>
+		  <p class="i_name">
+		Instituto Profesional Libertador de Los Andes		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Lazcano (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration and Human Resource; Computer Engineering; Early Childhood Education; Environmental and Safety Engineering; Psychopedagogy; Public Administration; Social Services</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BWLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008864&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8864"><input class="case" type="checkbox" onClick="Coche(8864,0);" name="result[]" id="8864" value="8864"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8864" id="result8864" title="Expand result">
+		    <span>Expand result for </span>Los Leones Professional Institute</a></h3>
+		  <p class="i_name">
+		Instituto Profesional Los Leones		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fernando Vicencio Silva (Head) &ndash; Emilio Gautier (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Advertising and Publicity; Business Administration; Construction Engineering; Graphic Design; Marketing; Photography; Psychopedagogy; Public Relations; Social Services; Theatre</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BWLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017950&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17950"><input class="case" type="checkbox" onClick="Coche(17950,0);" name="result[]" id="17950" value="17950"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17950" id="result17950" title="Expand result">
+		    <span>Expand result for </span>Mayor University</a></h3>
+		  <p class="i_name">
+		Universidad Mayor		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rubén Covarrubias Giordano (Head) &ndash; René Salamé Martín (Senior Administrative Officer) &ndash; René Lara (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Forestry; Architecture, Design and Contruction; Art; Art and Audiovisual Technology; Communication and New Technology; Dentistry; Economics and Business Administration; Education; Engineering; Law and Social Sciences; Medicine; Music; Public Administration; Science; Sociology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxZLTNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017967&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17967"><input class="case" type="checkbox" onClick="Coche(17967,0);" name="result[]" id="17967" value="17967"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17967" id="result17967" title="Expand result">
+		    <span>Expand result for </span>Metropolitan University of Educational Sciences</a></h3>
+		  <p class="i_name">
+		Universidad Metropolitana de Ciencias de la Educación (UMCE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jaime Espinoza Araya (Head) &ndash; Ramiro Baldomar Aguilar (Senior Administrative Officer) &ndash; José Martínez Armesto (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Physical Education; Basic Sciences; History, Geography, and Letters; Philosophy and Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxZLUM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018459&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18459"><input class="case" type="checkbox" onClick="Coche(18459,0);" name="result[]" id="18459" value="18459"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result18459" id="result18459" title="Expand result">
+		    <span>Expand result for </span>Metropolitan University of Technology</a></h3>
+		  <p class="i_name">
+		Universidad Tecnológica Metropolitana (UTEM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luis Pinto Faverio (Head) &ndash; Patricio Bastías Román (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration and Economics; Construction and Regional Planning; Engineering; Humanities and Social Communication Technology; Natural Sciences, Mathematics and Environmental Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BULTNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008856&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8856"><input class="case" type="checkbox" onClick="Coche(8856,0);" name="result[]" id="8856" value="8856"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8856" id="result8856" title="Expand result">
+		    <span>Expand result for </span>Professional Institute Modern School of Music and Dance</a></h3>
+		  <p class="i_name">
+		Instituto Profesional Escuela Moderna de Música y Danza		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vivien Wurman Shapiro (Head) &ndash; Guillermo S. Rifo (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dance; Music</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BVLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008844&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8844"><input class="case" type="checkbox" onClick="Coche(8844,0);" name="result[]" id="8844" value="8844"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8844" id="result8844" title="Expand result">
+		    <span>Expand result for </span>Professional Institute of Chile</a></h3>
+		  <p class="i_name">
+		Instituto Profesional de Chile (IPCHILE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jorge Narbona Lemus (Head) &ndash; Anamari Martínez Elortegui (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanity; Business Administration; Communication; Education; Engineering; Health and Physical Activities; Mining</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BULWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008855&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8855"><input class="case" type="checkbox" onClick="Coche(8855,0);" name="result[]" id="8855" value="8855"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8855" id="result8855" title="Expand result">
+		    <span>Expand result for </span>Professional Institute School of Chartered Accountants of Santiago</a></h3>
+		  <p class="i_name">
+		Instituto Profesional Escuela de Contadores Auditores de Santiago		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rodrigo Cerón Prandi (Head) &ndash; Alicia Navarro Cabeza (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Administration; Auditing; Computer Science; Finance and Economics; Law; Mathematics; Social Sciences; Sports; Statistics; Taxation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BVLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008866&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8866"><input class="case" type="checkbox" onClick="Coche(8866,0);" name="result[]" id="8866" value="8866"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8866" id="result8866" title="Expand result">
+		    <span>Expand result for </span>Saint Thomas Professional Institute and Technical Training Centre</a></h3>
+		  <p class="i_name">
+		Instituto Profesional y Centro de Formación Técnica Santo Tomás		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Pablo Guzmán Aldunate (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration; Communication Studies; Computer Science; Dentistry; Design; Education; Engineering and Construction; Health Sciences; Law; Mining Engineering; Natural Resources; Social Sciences; Sports; Tourism and Gastronomy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BWLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018333&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18333"><input class="case" type="checkbox" onClick="Coche(18333,0);" name="result[]" id="18333" value="18333"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result18333" id="result18333" title="Expand result">
+		    <span>Expand result for </span>San Sebastián University</a></h3>
+		  <p class="i_name">
+		Universidad San Sebastián (USS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hugo Lavados Montes (Head) &ndash; Luis Camilo De la Maza De la Maza (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Art; Dentistry; Economics and Business; Education Sciences; Engineering and Technology; Health Sciences; Law; Medicine; Nursing; Physical Education; Psychology; Science; Social Sciences and Humanity; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BTLFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018339&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18339"><input class="case" type="checkbox" onClick="Coche(18339,0);" name="result[]" id="18339" value="18339"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result18339" id="result18339" title="Expand result">
+		    <span>Expand result for </span>Santo Tomás University</a></h3>
+		  <p class="i_name">
+		Universidad Santo Tomás (UST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jaime Vatter Gutiérrez (Head) &ndash; Patricio Cepeda Silva (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Communication Studies; Economics and Business; Education; Engineering; Health Sciences; Law; Natural Resouces and Veterinary Science; Science; Social Sciences; Sports</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BTLFNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017323&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17323"><input class="case" type="checkbox" onClick="Coche(17323,0);" name="result[]" id="17323" value="17323"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17323" id="result17323" title="Expand result">
+		    <span>Expand result for </span>Silva Henríquez Catholic University</a></h3>
+		  <p class="i_name">
+		Universidad Católica Silva Henríquez (UCSH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jorge Baeza Correa (Head) &ndash; Guillermo Escobar Alaniz (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Health Sciences; Religious Studies and Philisophy; Social Science, Law and Economics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLEMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017181&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17181"><input class="case" type="checkbox" onClick="Coche(17181,0);" name="result[]" id="17181" value="17181"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17181" id="result17181" title="Expand result">
+		    <span>Expand result for </span>Southern University of Chile</a></h3>
+		  <p class="i_name">
+		Universidad Austral de Chile (UACh)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Óscar Galindo Villarroel (Head) &ndash; Patricia Burgos H. (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Arts and Architecture; Economics and Administration; Engineering; Forestry and Natural Resources; Law and Social Sciences; Medicine; Patagonia; Philosophy and Humanities; Puerto Montt; Science; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxRLiMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018386&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18386"><input class="case" type="checkbox" onClick="Coche(18386,0);" name="result[]" id="18386" value="18386"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result18386" id="result18386" title="Expand result">
+		    <span>Expand result for </span>Technological University of Chile INACAP</a></h3>
+		  <p class="i_name">
+		Universidad Tecnológica de Chile INACAP		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gonzalo Vargas Otte (Head) &ndash; Luis Eduardo Prieto Fernandez de Castro (Senior Administrative Officer) &ndash; José Joaquín Valenzuela P. (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities and Education; Business and Administration; Construction Engineering; Electrical and Electronical Engineering; Health Sciences; Industrial Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BTLiM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017115&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17115"><input class="case" type="checkbox" onClick="Coche(17115,0);" name="result[]" id="17115" value="17115"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17115" id="result17115" title="Expand result">
+		    <span>Expand result for </span>University Academy of Christian Humanism</a></h3>
+		  <p class="i_name">
+		Universidad Academia de Humanismo Cristiano		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Bengoa Cabello (Head) &ndash; Luis Rivera Contreras (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Arts; Commercial Engineering; Computer Engineering; Education; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxRLDM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017649&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17649"><input class="case" type="checkbox" onClick="Coche(17649,0);" name="result[]" id="17649" value="17649"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17649" id="result17649" title="Expand result">
+		    <span>Expand result for </span>University for Development</a></h3>
+		  <p class="i_name">
+		Universidad del Desarrollo (UDD)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Federico Valdés Lafontaine (Head) &ndash; Gonzalo Rioseco Martínez (Senior Administrative Officer) &ndash; Carla Jiménez (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Art; Communications; Economics and Business; Education; Engineering; Government; Humanities; Law; Medicine; Psychology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLSNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017392&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17392"><input class="case" type="checkbox" onClick="Coche(17392,0);" name="result[]" id="17392" value="17392"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17392" id="result17392" title="Expand result">
+		    <span>Expand result for </span>University of Antofagasta</a></h3>
+		  <p class="i_name">
+		Universidad de Antofagasta (UA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luis Alberto Loyola Morales (Head) &ndash; Hernán Sagua Franco (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Anthropology; Basic Sciences; Education; Engineering; Health Sciences; Judicial Sciences; Marine Studies and Natural Resources; Medicine and Dentistry; Natural Sciences; Renewable Natural Resources; Social Sciences, Art and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLjMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017402&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17402"><input class="case" type="checkbox" onClick="Coche(17402,0);" name="result[]" id="17402" value="17402"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17402" id="result17402" title="Expand result">
+		    <span>Expand result for </span>University of Atacama</a></h3>
+		  <p class="i_name">
+		Universidad de Atacama (UDA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Celso Arias Mora (Head) &ndash; Jorge Valdivia D. (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering; Health Sciences; Humanities and Education; Law; Natural Sciences; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULCMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017638&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17638"><input class="case" type="checkbox" onClick="Coche(17638,0);" name="result[]" id="17638" value="17638"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17638" id="result17638" title="Expand result">
+		    <span>Expand result for </span>University of Bío Bío</a></h3>
+		  <p class="i_name">
+		Universidad del Bío Bío (UBB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Héctor Gaete Feres (Head) &ndash; Gloria Gómez Vera (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture, Construction and Design; Business Administration; Education and Humanities; Engineering; Health and Food Science; Nursing; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLFNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017419&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17419"><input class="case" type="checkbox" onClick="Coche(17419,0);" name="result[]" id="17419" value="17419"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17419" id="result17419" title="Expand result">
+		    <span>Expand result for </span>University of Chile</a></h3>
+		  <p class="i_name">
+		Universidad de Chile		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ennio Vivaldi Véjar (Head) &ndash; Rosa Devés Alessandri (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Architecture and Town Planning; Arts; Chemistry and Pharmacy; Communication and Image; Dentistry; Economics and Administration; Forestry and Nature Conservation; International Studies; Law; Medicine; Nutrition and Food Technology; Philosophy and Humanities; Physics and Mathematics; Public Affairs; Science; Social Sciences; Veterinary Medicine and Stockraising</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULDNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017433&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17433"><input class="case" type="checkbox" onClick="Coche(17433,0);" name="result[]" id="17433" value="17433"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17433" id="result17433" title="Expand result">
+		    <span>Expand result for </span>University of Concepción</a></h3>
+		  <p class="i_name">
+		Universidad de Concepción		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sergio Lavanchy Merino (Head) &ndash; Rodolfo Walter Diaz (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Academic; Agricultural Engineering; Agronomy; Architecture, Town Planning and Geography; Arts and Humanities; Biological Sciences; Chemistry; Dentistry; Economics and Administration; Education; Engineering; Environmental Sciences; Forestry; Law and Social Sciences; Medicine; Oceanography and Natural Sciences; Pharmacy; Physics and Mathematics; Social Sciences; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017496&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17496"><input class="case" type="checkbox" onClick="Coche(17496,0);" name="result[]" id="17496" value="17496"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17496" id="result17496" title="Expand result">
+		    <span>Expand result for </span>University of La Serena</a></h3>
+		  <p class="i_name">
+		Universidad de La Serena (ULS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nibaldo Avilés Pizarro (Head) &ndash; Calixto Veas Gaz (Senior Administrative Officer) &ndash; Jorge Catalán Ahumada (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Social Sciences; Engineering; Humanities; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULjM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017528&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17528"><input class="case" type="checkbox" onClick="Coche(17528,0);" name="result[]" id="17528" value="17528"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17528" id="result17528" title="Expand result">
+		    <span>Expand result for </span>University of Magallanes</a></h3>
+		  <p class="i_name">
+		Universidad de Magallanes (UMAG)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Oyarzo Pérez (Head) &ndash; José Maripani Maripani (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Law; Engineering; Humanities, Health and Social Sciences; Patagonia; Science; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLENAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017578&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17578"><input class="case" type="checkbox" onClick="Coche(17578,0);" name="result[]" id="17578" value="17578"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17578" id="result17578" title="Expand result">
+		    <span>Expand result for </span>University of Playa Ancha</a></h3>
+		  <p class="i_name">
+		Universidad de Playa Ancha (UPLA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Patricio Sanhueza Vivanco (Head) &ndash; Jorge Sánchez Valencia (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Adult Education; Educational Sciences; Engineering; Fine Arts; Health Sciences; Humanities; Natural and Exact Sciences; Physical Education and Sports</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLVNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017609&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17609"><input class="case" type="checkbox" onClick="Coche(17609,0);" name="result[]" id="17609" value="17609"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17609" id="result17609" title="Expand result">
+		    <span>Expand result for </span>University of Santiago de Chile</a></h3>
+		  <p class="i_name">
+		Universidad de Santiago de Chile (USaCh)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Manuel Zolezzi Cid (Head) &ndash; Gustavo Robles (Senior Administrative Officer) &ndash; María Fernanda Contreras (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration and Economics; Architecture; Chemistry and Biology; Engineering; Humanities; Medical Sciences; Sciences; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLCNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017616&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17616"><input class="case" type="checkbox" onClick="Coche(17616,0);" name="result[]" id="17616" value="17616"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17616" id="result17616" title="Expand result">
+		    <span>Expand result for </span>University of Talca</a></h3>
+		  <p class="i_name">
+		Universidad de Talca (UTALCA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Álvaro Rojas Marín (Head) &ndash; María Fernanda Vásquez Palma (Senior Administrative Officer) &ndash; Carolina Torres Del Campo (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Architecture, Music and Design; Chemlstry of Natural Resources; Economics and Business; Educational Sciences; Engineering; Forestry; Health Sciences; Humanities; Law and Social Sciences; Mathematics and Physics; Psychology; Technological; Vegetal Biology and Biotechnology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLDM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017617&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17617"><input class="case" type="checkbox" onClick="Coche(17617,0);" name="result[]" id="17617" value="17617"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17617" id="result17617" title="Expand result">
+		    <span>Expand result for </span>University of Tarapacá</a></h3>
+		  <p class="i_name">
+		Universidad de Tarapacá (UTA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Arturo Flores Franuliĉ (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Business Administration; Education and Humanities; Electrical and Electronic Engineering; Engineering; Health Sciences; Industrial, Computer and Systems Engineering; Mechanical Engineering; Sciences; Social Sciences And Law; Virtual Technology Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLDM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017520&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17520"><input class="case" type="checkbox" onClick="Coche(17520,0);" name="result[]" id="17520" value="17520"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17520" id="result17520" title="Expand result">
+		    <span>Expand result for </span>University of the Andes</a></h3>
+		  <p class="i_name">
+		Universidad de los Andes (UANDES)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Antonio Guzmán C. (Head) &ndash; Luis Alejandro Silva I. (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Communication Studies; Economics and Business Administration; Education; Engineering and Applied Science; Family Studies; History; Law; Medicine; Nursing; Nursing and Obstetrics; Odontology; Philosophy and Humanities; Psychology; Service Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLENgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017481&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17481"><input class="case" type="checkbox" onClick="Coche(17481,0);" name="result[]" id="17481" value="17481"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17481" id="result17481" title="Expand result">
+		    <span>Expand result for </span>University of the Frontier</a></h3>
+		  <p class="i_name">
+		Universidad de la Frontera (UFRO)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sergio Bravo Escobar (Head) &ndash; Rubén Leal Riquelme (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agro-industry; Agronomy and Forestry; Computer Education; Dentistry; Education, Social Sciences and Humanities; Engineering and Science; Environmental Studies; Law and Business; Local and Regional Development; Malleco; Medicine; Native Studies; Pucon</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULiMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017525&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17525"><input class="case" type="checkbox" onClick="Coche(17525,0);" name="result[]" id="17525" value="17525"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17525" id="result17525" title="Expand result">
+		    <span>Expand result for </span>University of the Lakes</a></h3>
+		  <p class="i_name">
+		Universidad de Los Lagos		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Óscar Garrido Álvarez (Head) &ndash; Diana Kiss de Alejandro (Senior Administrative Officer) &ndash; Julio E. Crespo (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration and Economics; Aquaculture and Marine Resources; Architecture and Design; Basic Sciences; Computer Science; Education; English Translation; Exact Sciences; Food Science and Technology; Government and Business; Health Sciences; Humanities and Fine Arts; Limnology; Music; Natural Resources and Environment; Physical Education; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLEM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017677&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17677"><input class="case" type="checkbox" onClick="Coche(17677,0);" name="result[]" id="17677" value="17677"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17677" id="result17677" title="Expand result">
+		    <span>Expand result for </span>University of the Pacific</a></h3>
+		  <p class="i_name">
+		Universidad del Pacífico (UPACIFICO)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gilberto Zárate Barrera (Head) &ndash; Pablo Ortúzar Muñoz (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Business and Management; Communication Studies; Design; Health Science; Humanities and Education; Technical Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLVM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017623&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17623"><input class="case" type="checkbox" onClick="Coche(17623,0);" name="result[]" id="17623" value="17623"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17623" id="result17623" title="Expand result">
+		    <span>Expand result for </span>University of Valparaíso</a></h3>
+		  <p class="i_name">
+		Universidad de Valparaíso (UV)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Aldo Valle Acevedo (Head) &ndash; Osvaldo Corrales Jorquera (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Dentistry; Economics and Administration; Engineering; Humanities; Law and Social Sciences; Marine Science and Natural Resources; Medicine; Pharmacy; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLEMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017625&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17625"><input class="case" type="checkbox" onClick="Coche(17625,0);" name="result[]" id="17625" value="17625"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result17625" id="result17625" title="Expand result">
+		    <span>Expand result for </span>Viña del Mar University</a></h3>
+		  <p class="i_name">
+		Universidad de Viña del Mar (UVM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Pablo Prieto Cox (Head) &ndash; Paz Valenzuela Céspedes (Senior Administrative Officer) &ndash; Carlos Ramírez Sánchez (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Sciences; Architecture and Design; Business Administration; Communications; Education; Engineering; Health Sciences; Law and Social Sciences; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLEM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008834&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8834"><input class="case" type="checkbox" onClick="Coche(8834,0);" name="result[]" id="8834" value="8834"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Chile</p>
+				  <h3>
+		    <a href="#result8834" id="result8834" title="Expand result">
+		    <span>Expand result for </span>Wilhelm von Humboldt German Professional Institute</a></h3>
+		  <p class="i_name">
+		Instituto Profesional Alemán Wilhelm von Humboldt		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alban Schraut (Head) &ndash; Tanja Olbrich (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BTLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 64 of 64</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile" selected>Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

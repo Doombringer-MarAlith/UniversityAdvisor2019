@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Guatemala')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Guatemala)">
+	    <input type="hidden" class="envoi" name="total" value="59">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Guatemala">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">59 results found for <strong>(Country=Guatemala)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 59 of 59</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-023783&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23783"><input class="case" type="checkbox" onClick="Coche(23783,0);" name="result[]" id="23783" value="23783"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23783" id="result23783" title="Expand result">
+		    <span>Expand result for </span>Da Vinci University of Guatemala</a></h3>
+		  <p class="i_name">
+		Universidad Da Vinci de Guatemala		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Cyrano Ruiz Cabarrús (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration and Commerce; Auditing and Finance; Educational Sciences; Engineering; Health Sciences; Humanities; Law, Social Sciences and International Relations</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxXLiMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017781&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17781"><input class="case" type="checkbox" onClick="Coche(17781,0);" name="result[]" id="17781" value="17781"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result17781" id="result17781" title="Expand result">
+		    <span>Expand result for </span>Francisco Marroquín University</a></h3>
+		  <p class="i_name">
+		Universidad Francisco Marroquín (UFM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gabriel Calzada (Head) &ndash; Ricardo Castillo (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Business; Cinema and Visual Arts; Dentistry; Economics; Law; Medicine; Nutrition; Political Science and International Relations</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxXLiMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017787&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17787"><input class="case" type="checkbox" onClick="Coche(17787,0);" name="result[]" id="17787" value="17787"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result17787" id="result17787" title="Expand result">
+		    <span>Expand result for </span>Galileo University</a></h3>
+		  <p class="i_name">
+		Universidad Galileo		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Eduardo Suger Cofiño (Head) &ndash; Mayra Roldán de Ramírez (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration; Arts; Biology, Chemistry and Pharmacy; Communication Studies; Construction Engineering; Continuing Education; Diplomacy and International Relations; Earth Sciences and Astrology Research; Education; Energy Resources; Family Studies; Health Sciences; Open Education; Professional Development; Science, Technology and Industry; Security Studies; Sports; Sustainable Development; Systems Engineering, Informatics and Computer Science; Technical; Von Neumann</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxXLiM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17944"><input class="case" type="checkbox" onClick="Coche(17944,0);" name="result[]" id="17944" value="17944"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result17944" id="result17944" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alvaro R. Torres Moss (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration; Architecture; Civil Engineering; Economics; Law and Social Sciences; Odontology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxZLSMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023944&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23944"><input class="case" type="checkbox" onClick="Coche(23944,0);" name="result[]" id="23944" value="23944"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23944" id="result23944" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Alta Verapaz Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Alta Verapaz		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Business Administration; Clinical Psychology; Computer Engineering; Hotel Management, Tourism and Gastronomy; Law and Social Sciences; Medicine and Health Sciences; Nursing; Pedagogy and Educational Sciences; Primary Education; Public Accountancy and Auditing; Public Administration; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLSMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023947&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23947"><input class="case" type="checkbox" onClick="Coche(23947,0);" name="result[]" id="23947" value="23947"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23947" id="result23947" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Antigua Guatemala Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Antigua Guatemala		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration; Architecture; Computer Engineering; Education; Hotel Management, Tourism and Gastronomy; Interior Design; Law and Social Sciences; Public Accountancy and Auditing; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLSM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023935&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23935"><input class="case" type="checkbox" onClick="Coche(23935,0);" name="result[]" id="23935" value="23935"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23935" id="result23935" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Baja Verapaz Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Baja Verapaz		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Social Sciences and Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLFM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023936&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23936"><input class="case" type="checkbox" onClick="Coche(23936,0);" name="result[]" id="23936" value="23936"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23936" id="result23936" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Chimaltenango Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Chimaltenango		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Julieta de Obregón (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Clinical Psychology; Computer Engineering; Educational Management; Gynaecology and Obstetrics; Law and Social Sciences; Public Accountancy and Auditing; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLFM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023954&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23954"><input class="case" type="checkbox" onClick="Coche(23954,0);" name="result[]" id="23954" value="23954"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23954" id="result23954" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Chinautla Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Chinautla		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Computer Engineering; Education; Law and Social Sciences; Public Accountancy and Auditing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023939&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23939"><input class="case" type="checkbox" onClick="Coche(23939,0);" name="result[]" id="23939" value="23939"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23939" id="result23939" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Chiquimula Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Chiquimula		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Clinical Psychology; Computer Engineering; Human Resource Management; Law and Social Sciences; Marketing; Pre-school Education; Social Work; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLFNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023946&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23946"><input class="case" type="checkbox" onClick="Coche(23946,0);" name="result[]" id="23946" value="23946"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23946" id="result23946" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Chiquimulilla Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Chiquimulilla		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration; Computer Engineering; Law and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLSM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023951&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23951"><input class="case" type="checkbox" onClick="Coche(23951,0);" name="result[]" id="23951" value="23951"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23951" id="result23951" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Coatepeque Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Coatepeque		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Clinical Psychology; Computer Engineering; Educational Management; Law and Social Sciences; Nursing; Public Accountancy and Auditing; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLTMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023945&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23945"><input class="case" type="checkbox" onClick="Coche(23945,0);" name="result[]" id="23945" value="23945"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23945" id="result23945" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Cuilapa Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Cuilapa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration; Business Administration; Clinical Psychology; Computer Engineering; Education; Law and Social Sciences; Public Accountancy and Auditing; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLSM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023943&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23943"><input class="case" type="checkbox" onClick="Coche(23943,0);" name="result[]" id="23943" value="23943"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23943" id="result23943" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; El Progreso Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede El Progreso		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration; Computer Engineering; Law and Social Sciences; Pedagogy and Educational Management; Public Accountancy and Auditing; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLSMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023937&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23937"><input class="case" type="checkbox" onClick="Coche(23937,0);" name="result[]" id="23937" value="23937"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23937" id="result23937" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Escuintla Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Escuintla		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Clinical Psychology; Computer Engineering; Education; Educational Management; Industrial Engineering; Law and Social Sciences; Public Accountancy and Auditing; Social Work; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLFM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023952&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23952"><input class="case" type="checkbox" onClick="Coche(23952,0);" name="result[]" id="23952" value="23952"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23952" id="result23952" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Huehuetenango Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Huehuetenango		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration; Architecture; Computer Engineering; Criminology; Education; Hotel Management, Tourism and Gastronomy; Law and Social Sciences; Medicine and Health Sciences; Public Accountancy and Auditing; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLTMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023948&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23948"><input class="case" type="checkbox" onClick="Coche(23948,0);" name="result[]" id="23948" value="23948"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23948" id="result23948" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Jalapa Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Jalapa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Clinical Psychology; Computer Engineering; Education; Human Resource Management; Law and Social Sciences; Public Accountancy and Auditing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLSNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023955&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23955"><input class="case" type="checkbox" onClick="Coche(23955,0);" name="result[]" id="23955" value="23955"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23955" id="result23955" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Jutiapa Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Jutiapa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Business Administration; Clinical Psychology; Computer Engineering; Education; Educational Management; Industrial Engineering; Law and Social Sciences; Medicine and Health Sciences; Public Accountancy and Auditing; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLTM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023949&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23949"><input class="case" type="checkbox" onClick="Coche(23949,0);" name="result[]" id="23949" value="23949"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23949" id="result23949" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Mazatenango Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Mazatenango		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Computer Engineering; Industrial Engineering; Law and Social Sciences; Pedagogy and Educational Management; Public Accountancy and Auditing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLSNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023957&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23957"><input class="case" type="checkbox" onClick="Coche(23957,0);" name="result[]" id="23957" value="23957"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23957" id="result23957" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Petén Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Petén		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Clinical Psychology; Computer Engineering; Law and Social Sciences; Nursing; Public Accountancy and Auditing; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLTM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023963&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23963"><input class="case" type="checkbox" onClick="Coche(23963,0);" name="result[]" id="23963" value="23963"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23963" id="result23963" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Puerto Barrios Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Puerto Barrios		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration; Clinical Psychology; Computer Engineering; Education; Educational Management; Industrial Engineering; Law and Social Sciences; Public Accountancy and Auditing; Public Administration; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLUMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023950&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23950"><input class="case" type="checkbox" onClick="Coche(23950,0);" name="result[]" id="23950" value="23950"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23950" id="result23950" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Sede Quetzaltenango Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Quetzaltenango		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Business Administration; Civil Engineering; Clinical Psychology; Computer Engineering; Education; Educational Management; Industrial Engineering; Law and Social Sciences; Medical and Health Sciences; Nursing; Psychology; Public Accountancy and Auditing; Radiology; Social Work; Stomatology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLTNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023960&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23960"><input class="case" type="checkbox" onClick="Coche(23960,0);" name="result[]" id="23960" value="23960"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23960" id="result23960" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Quiché Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Quiché		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Clinical Psychology; Computer Engineering; Education; Law and Social Sciences; Public Accountancy and Auditing; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLUNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023961&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23961"><input class="case" type="checkbox" onClick="Coche(23961,0);" name="result[]" id="23961" value="23961"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23961" id="result23961" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Solola Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Sololá		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Clinical Psychology; Computer Engineering; Education; Law and Social Sciences; Public Accountancy and Auditing; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLUMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023878&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23878"><input class="case" type="checkbox" onClick="Coche(23878,0);" name="result[]" id="23878" value="23878"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23878" id="result23878" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Villa Nueva Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Villa Nueva		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Business Administration; Engineering; Languages; Law and Social Sciences; Psychology; Public Accountancy; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLVNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017944-023962&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23962"><input class="case" type="checkbox" onClick="Coche(23962,0);" name="result[]" id="23962" value="23962"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23962" id="result23962" title="Expand result">
+		    <span>Expand result for </span>Mariano Gálvez University of Guatemala &ndash; Zacapa Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mariano Gálvez de Guatemala &ndash; Sede Zacapa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Business Administration; Clinical Psychology; Computer Engineering; Law and Social Sciences; Nursing; Physical Education, Sports and Recreation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017955&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17955"><input class="case" type="checkbox" onClick="Coche(17955,0);" name="result[]" id="17955" value="17955"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result17955" id="result17955" title="Expand result">
+		    <span>Expand result for </span>Mesoamerican University</a></h3>
+		  <p class="i_name">
+		Universidad Mesoaméricana		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Félix Javier Serrano Ursúa (Head) &ndash; Ana Cristina Estrada Quintero (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Engineering; Humanities and Social Sciences; Law and Social Sciences; Social Communication</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxZLTM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017955-023885&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23885"><input class="case" type="checkbox" onClick="Coche(23885,0);" name="result[]" id="23885" value="23885"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23885" id="result23885" title="Expand result">
+		    <span>Expand result for </span>Mesoamerican University &ndash; Amatitlán Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mesoaméricana &ndash; Sede Amatitlán		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Educational Management; Pedagogy and Educational Sciences; Public Accountancy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLiM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017955-023887&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23887"><input class="case" type="checkbox" onClick="Coche(23887,0);" name="result[]" id="23887" value="23887"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23887" id="result23887" title="Expand result">
+		    <span>Expand result for </span>Mesoamerican University &ndash; Quezaltenango Branch</a></h3>
+		  <p class="i_name">
+		Universidad Mesoaméricana &ndash; Sede Quezaltenango		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Economics; Engineering; Law; Medicine; Odontology; Pedagogy; Social Communication</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLiM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018152&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18152"><input class="case" type="checkbox" onClick="Coche(18152,0);" name="result[]" id="18152" value="18152"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result18152" id="result18152" title="Expand result">
+		    <span>Expand result for </span>Panamerican University</a></h3>
+		  <p class="i_name">
+		Universidad Panamericana		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mynor Augusto Herrera Lemus (Head) &ndash; Alba Aracely Rodríguez de González (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Sciences; Communication Studies; Economics; Education; Law and Justice; Medicine and Health Sciences; Psychology; Social Sciences; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BRLTMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018305&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18305"><input class="case" type="checkbox" onClick="Coche(18305,0);" name="result[]" id="18305" value="18305"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result18305" id="result18305" title="Expand result">
+		    <span>Expand result for </span>Rafael Landívar University</a></h3>
+		  <p class="i_name">
+		Universidad Rafael Landívar		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Eduardo Valdés Barría (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural and Environmental Sciences; Architecture and Design; Economics and Business Administration; Engineering; Health Sciences; Huehuetenango; Humanities; La Verapaz; Law and Social Sciences; Political and Social Sciences; Quetzaltenango; Quiché; Theology; Zacapa</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BTLCM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018305-023845&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23845"><input class="case" type="checkbox" onClick="Coche(23845,0);" name="result[]" id="23845" value="23845"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23845" id="result23845" title="Expand result">
+		    <span>Expand result for </span>Rafael Landívar University &ndash; Escuintla Branch</a></h3>
+		  <p class="i_name">
+		Universidad Rafael Landívar &ndash; Sede Escuintla		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rodolfo Rubio Pérez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Environmental Studies; Economics and Business Studies; Health Sciences; Humanities; Political and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLSM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018305-023846&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23846"><input class="case" type="checkbox" onClick="Coche(23846,0);" name="result[]" id="23846" value="23846"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23846" id="result23846" title="Expand result">
+		    <span>Expand result for </span>Rafael Landívar University &ndash; Jutiapa Branch</a></h3>
+		  <p class="i_name">
+		Universidad Rafael Landívar &ndash; Sede Jutiapa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Carlos Pereira Quan (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Environmental Studies; Economics and Business Administration; Health Sciences; Humanities; Political and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLSM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018305-023844&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23844"><input class="case" type="checkbox" onClick="Coche(23844,0);" name="result[]" id="23844" value="23844"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23844" id="result23844" title="Expand result">
+		    <span>Expand result for </span>Rafael Landívar University &ndash; La Antigua Guatemala Branch</a></h3>
+		  <p class="i_name">
+		Universidad Rafael Landívar &ndash; Sede La Antigua Guatemala		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jorge Mario Carranza Corzo (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Clinical Psychology; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLSMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018317&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18317"><input class="case" type="checkbox" onClick="Coche(18317,0);" name="result[]" id="18317" value="18317"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result18317" id="result18317" title="Expand result">
+		    <span>Expand result for </span>Rural University of Guatemala</a></h3>
+		  <p class="i_name">
+		Universidad Rural de Guatemala		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fidel Reyes Lee (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Educational Sciences; Law and Social Sciences; Natural and Environmental Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BTLDM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023740&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23740"><input class="case" type="checkbox" onClick="Coche(23740,0);" name="result[]" id="23740" value="23740"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23740" id="result23740" title="Expand result">
+		    <span>Expand result for </span>San Pablo of Guatemala University</a></h3>
+		  <p class="i_name">
+		Universidad San Pablo de Guatemala		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Harold Caballeros L. (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Studies; Escuintla; Humanities; Law and Justice</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxXLSNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17601"><input class="case" type="checkbox" onClick="Coche(17601,0);" name="result[]" id="17601" value="17601"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result17601" id="result17601" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Murphy Olympo Paiz Recinos (Head) &ndash; Santiago Torres (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Architecture; Art; Chemistry and Pharmacy; Communication Studies; Dentistry; Economics; Engineering; History; Humanities; Law and Social Sciences; Linguistics; Medical Sciences; Political Science; Psychology; Social Work; Teacher Training; Veterinary Science and Zoology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLCMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023915&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23915"><input class="case" type="checkbox" onClick="Coche(23915,0);" name="result[]" id="23915" value="23915"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23915" id="result23915" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of Baja Verapaz</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario de Baja Verapaz		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Edgar Guillermo Ruiz Recinos (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Business Administration; Law; Pedagogy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLDM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023917&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23917"><input class="case" type="checkbox" onClick="Coche(23917,0);" name="result[]" id="23917" value="23917"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23917" id="result23917" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of Chimaltenango</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario de Chimaltenango		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rudy Cheguen (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Auditing; Business Administration; Law and Social Sciences; Pedagogy and Educational Management; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLDM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023933&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23933"><input class="case" type="checkbox" onClick="Coche(23933,0);" name="result[]" id="23933" value="23933"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23933" id="result23933" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of El Progreso</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario de El Progreso		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Edwin Emili García (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Business Administration; Industrial Engineering; Law; Pedagogy and Educational Management; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023923&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23923"><input class="case" type="checkbox" onClick="Coche(23923,0);" name="result[]" id="23923" value="23923"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23923" id="result23923" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of Izabal</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario de Izabal		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juana Isabel Galdámez Mendoza (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Auditing; Business Administration; Environmental Management; Law and Social Sciences; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLEMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023919&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23919"><input class="case" type="checkbox" onClick="Coche(23919,0);" name="result[]" id="23919" value="23919"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23919" id="result23919" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of Jutiapa</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario de Jutiapa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Walter Reyes Sanabria (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Auditing; Business Administration; Law and Social Sciences; Pedagogy and Educational Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLDNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023932&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23932"><input class="case" type="checkbox" onClick="Coche(23932,0);" name="result[]" id="23932" value="23932"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23932" id="result23932" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of the North-West</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario de Nor-occidente		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Otto Gabriel Salguero Vásquez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Forestry; Law and Social Sciences; Pedagogy and Educational Management; Social Work; Teacher Training; Zoology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLFMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023920&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23920"><input class="case" type="checkbox" onClick="Coche(23920,0);" name="result[]" id="23920" value="23920"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23920" id="result23920" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of the West</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario de Occidente		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>María del Rosario Paz Cabrera (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Dentistry; Economics; Engineering; Health Sciences; Humanities; Law and Social Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLENgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023916&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23916"><input class="case" type="checkbox" onClick="Coche(23916,0);" name="result[]" id="23916" value="23916"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23916" id="result23916" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of the East</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario de Oriente		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nery Galdámez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Business Administration; Communication Studies; Economics; Engineering; Law and Notary Studies; Medicine and Surgery; Teacher Training; Zoology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLDM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023928&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23928"><input class="case" type="checkbox" onClick="Coche(23928,0);" name="result[]" id="23928" value="23928"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23928" id="result23928" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of Peten</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario de Petén		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Byron Agusto Milian (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Archaeology; Communication Sciences; Environmental Education; Forestry; Land Management; Law and Social Sciences; Pedagogy and Educational Sciences; Social Work; Tourism Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLENAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023924&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23924"><input class="case" type="checkbox" onClick="Coche(23924,0);" name="result[]" id="23924" value="23924"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23924" id="result23924" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of Quiché</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario de Quiché		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Marco de la Rosa (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Business Administration; Law and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLEMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023926&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23926"><input class="case" type="checkbox" onClick="Coche(23926,0);" name="result[]" id="23926" value="23926"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23926" id="result23926" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of the South-East</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario de Sur Oriente		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Otto René Solís Méndez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Business Administration; Law and Social Sciences; Pedagogy; Social Work; Zoology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLEM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023922&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23922"><input class="case" type="checkbox" onClick="Coche(23922,0);" name="result[]" id="23922" value="23922"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23922" id="result23922" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of Totonicapán</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario de Totonicapán		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Eduardo . Abril Gálvez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Forestry; Law and Social Sciences; Pedagogy and Educational Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLEMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023930&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23930"><input class="case" type="checkbox" onClick="Coche(23930,0);" name="result[]" id="23930" value="23930"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23930" id="result23930" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of Zacapa</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario de Zacapa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Auditing; Agro-Industry and Forestry; Agronomy; Law and Social Sciences; Psychology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLFNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023913&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23913"><input class="case" type="checkbox" onClick="Coche(23913,0);" name="result[]" id="23913" value="23913"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23913" id="result23913" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of the North</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario del Norte		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fredy Giovani Macz Choc (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Geology; Social Work; Zoology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLDMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023918&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23918"><input class="case" type="checkbox" onClick="Coche(23918,0);" name="result[]" id="23918" value="23918"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23918" id="result23918" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of the South</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario del Sur		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Auditing; Agro-industrial Engineering; Business Administration; Law and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLDNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023925&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23925"><input class="case" type="checkbox" onClick="Coche(23925,0);" name="result[]" id="23925" value="23925"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23925" id="result23925" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of the South-West</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario del Sur Occidente		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alba Ruth Maldonado (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Food Technology; Law and Social Sciences; Local Environmental Management; Pedagogy and Educational Management; Social Work; Tropical Agronomy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLEM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023921&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23921"><input class="case" type="checkbox" onClick="Coche(23921,0);" name="result[]" id="23921" value="23921"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23921" id="result23921" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; San Marcos University Centre</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario San Marcos		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Eugenia Elizabeth Makepeace Alfaro (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Business Administration; Law and Social Sciences; Medicine; Pedagogy and Educational Sciences; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLEMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023931&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23931"><input class="case" type="checkbox" onClick="Coche(23931,0);" name="result[]" id="23931" value="23931"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23931" id="result23931" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of Santa Rosa</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario Santa Rosa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Élmer Álvarez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Law and Social Sciences; Pedagogy and Educational Management; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLFMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017601-023942&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23942"><input class="case" type="checkbox" onClick="Coche(23942,0);" name="result[]" id="23942" value="23942"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23942" id="result23942" title="Expand result">
+		    <span>Expand result for </span>University of San Carlos of Guatemala &ndash; University Centre of Solala</a></h3>
+		  <p class="i_name">
+		Universidad de San Carlos de Guatemala &ndash; Centro Universitario Solalá		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hector Fernandez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Bilingual Primary Education; Law and Social Sciences; Physical Education; Public Accountancy and Auditing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxZLSMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017661&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17661"><input class="case" type="checkbox" onClick="Coche(17661,0);" name="result[]" id="17661" value="17661"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result17661" id="result17661" title="Expand result">
+		    <span>Expand result for </span>University of the Isthmus</a></h3>
+		  <p class="i_name">
+		Universidad del Istmo (UNIS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Manuel Angel Pérez Lara (Head) &ndash; Linda Yolanda Paz Quezada (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Design; Business; Communication; Economics and Business Administration; Education; Engineering; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLUMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017712&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17712"><input class="case" type="checkbox" onClick="Coche(17712,0);" name="result[]" id="17712" value="17712"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result17712" id="result17712" title="Expand result">
+		    <span>Expand result for </span>University of the Valley of Guatemala</a></h3>
+		  <p class="i_name">
+		Universidad del Valle de Guatemala		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Roberto Moreno Godoy (Head) &ndash; Victoria Eugenia Rosales (Senior Administrative Officer) &ndash; Mónica de Andrade (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Altiplano; Education; Engineering; Science and Humanities; Social Sciences; Sur</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxXLDMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023785&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23785"><input class="case" type="checkbox" onClick="Coche(23785,0);" name="result[]" id="23785" value="23785"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Guatemala</p>
+				  <h3>
+		    <a href="#result23785" id="result23785" title="Expand result">
+		    <span>Expand result for </span>University of the West</a></h3>
+		  <p class="i_name">
+		Universidad de Occidente		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ottavio Benfatto Buggin (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Economics; Educational Sciences; Engineering; Law and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxXLiM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 59 of 59</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala" selected>Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

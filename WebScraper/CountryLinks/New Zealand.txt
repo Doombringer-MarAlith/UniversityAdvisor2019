@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'New Zealand')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=New Zealand)">
+	    <input type="hidden" class="envoi" name="total" value="29">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="New Zealand">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">29 results found for <strong>(Country=New Zealand)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 29 of 29</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-002787&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="2787"><input class="case" type="checkbox" onClick="Coche(2787,0);" name="result[]" id="2787" value="2787"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result2787" id="result2787" title="Expand result">
+		    <span>Expand result for </span>Ara Institute of Canterbury</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_2787_logo.png" /></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+				  <a title="http://www.ara.ac.nz" href="images/IAUMembers/2787_1.jpg" class="fancybox" rel="gallery2787"><img class="img" src="images/IAUMembers/s_2787_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ara.ac.nz" href="images/IAUMembers/2787_2.jpg" class="fancybox" rel="gallery2787"><img class="img" src="images/IAUMembers/s_2787_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ara.ac.nz" href="images/IAUMembers/2787_3.jpg" class="fancybox" rel="gallery2787"><img class="img" src="images/IAUMembers/s_2787_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tony Gray (Head) &ndash; Elizabeth Knowles (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Commerce; Creative Industries; Health, Humanities and Science; Maori; Trades and Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzxYLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015613&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="15613"><input class="case" type="checkbox" onClick="Coche(15613,0);" name="result[]" id="15613" value="15613"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result15613" id="result15613" title="Expand result">
+		    <span>Expand result for </span>Southern Institute of Technology</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_15613_logo.png" /></h3>
+		  <p class="i_name">
+		Southern Institute of Technology - Te Whare Wananga o Murihiku (SIT)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.sit.ac.nz" href="images/IAUMembers/15613_1.jpg" class="fancybox" rel="gallery15613"><img class="img" src="images/IAUMembers/s_15613_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.sit.ac.nz" href="images/IAUMembers/15613_2.jpg" class="fancybox" rel="gallery15613"><img class="img" src="images/IAUMembers/s_15613_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.sit.ac.nz" href="images/IAUMembers/15613_1.png" class="fancybox" rel="gallery15613"><img class="img" src="images/IAUMembers/s_15613_1.png" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Penny Simmonds (Head) &ndash; Julian Galt (Senior Administrative Officer) &ndash; Bharat Guha (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health, Humanities and Computing; New Media, Arts and Business; SIT2LRN; Trades and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRWLDMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017086&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="17086"><input class="case" type="checkbox" onClick="Coche(17086,0);" name="result[]" id="17086" value="17086"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result17086" id="result17086" title="Expand result">
+		    <span>Expand result for </span>Unitec Institute of Technology</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_17086_logo.jpg" /></h3>
+		  <p class="i_name">
+		Unitec Institute of Technology - Te Whare Wananga o Wairaka &ndash; Unitec New Zealand		  </p>
+		 <p class="gallery">
+				  <a title="http://www.unitec.ac.nz" href="images/IAUMembers/17086_1.jpg" class="fancybox" rel="gallery17086"><img class="img" src="images/IAUMembers/s_17086_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.unitec.ac.nz" href="images/IAUMembers/17086_2.jpg" class="fancybox" rel="gallery17086"><img class="img" src="images/IAUMembers/s_17086_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.unitec.ac.nz" href="images/IAUMembers/17086_3.jpg" class="fancybox" rel="gallery17086"><img class="img" src="images/IAUMembers/s_17086_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rick Ede (Head) &ndash; Wendy Horne (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Creative Industries and Business; Social and Health Sciences; Technology and Built Environment</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxQLiM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017105&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="17105"><input class="case" type="checkbox" onClick="Coche(17105,0);" name="result[]" id="17105" value="17105"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result17105" id="result17105" title="Expand result">
+		    <span>Expand result for </span>Universal College of Learning</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_17105_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universal College of Learning - Kareti a Iwi		  </p>
+		 <p class="gallery">
+				  <a title="http://www.ucol.ac.nz" href="images/IAUMembers/17105_1.jpg" class="fancybox" rel="gallery17105"><img class="img" src="images/IAUMembers/s_17105_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ucol.ac.nz" href="images/IAUMembers/17105_2.jpg" class="fancybox" rel="gallery17105"><img class="img" src="images/IAUMembers/s_17105_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Leeza Boyce (Head) &ndash; Arthur Chin (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering and Applied Technologies; Health and Science; Humanities and Business</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxRLCM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000216&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="216"><input class="case" type="checkbox" onClick="Coche(216,0);" name="result[]" id="216" value="216"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result216" id="result216" title="Expand result">
+		    <span>Expand result for </span>AIS St Helens</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Richard Goodall (Head) &ndash; Richard Smith (Senior Administrative Officer) &ndash; Anatole Bogatski (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>English Language Centre; Hospitality, Tourism, Arts; Information Technology; International Business; Master of Business Administration; Research in International Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0sQyRWCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001276&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1276"><input class="case" type="checkbox" onClick="Coche(1276,0);" name="result[]" id="1276" value="1276"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result1276" id="result1276" title="Expand result">
+		    <span>Expand result for </span>Auckland University of Technology</a></h3>
+		  <p class="i_name">
+		Auckland University of Technology / Te Wananga Aronui o Tamaki Makau Rau (AUT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Derek McCormack (Head) &ndash; John Williams (Senior Administrative Officer) &ndash; Des Graydon (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Humanities; Business; Design and Creative Technologies; Health and Environmental Services; Law; Te Ara Poutama (Maori Education)</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMyhXLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-002139&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="2139"><input class="case" type="checkbox" onClick="Coche(2139,0);" name="result[]" id="2139" value="2139"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result2139" id="result2139" title="Expand result">
+		    <span>Expand result for </span>Centre for Higher Learning of Ngati Raukawa, Ngatitoa and Te Atiawa Tribes</a></h3>
+		  <p class="i_name">
+		Centre for Higher Learning of Ngati Raukawa, Ngatitoa and Te Atiawa Tribes / Te Wananga o Raukawa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mereana Selby (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration; Art and Design; Environmental Studies; Hapu Development; Health Studies; Language Studies; Law and Philosophy; Matauranga Maori</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQyRTLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003962&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3962"><input class="case" type="checkbox" onClick="Coche(3962,0);" name="result[]" id="3962" value="3962"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result3962" id="result3962" title="Expand result">
+		    <span>Expand result for </span>Eastern Institute of Technology</a></h3>
+		  <p class="i_name">
+		Eastern Institute of Technology /Te Whare Takiura o Kohungunu (EIT Hawke's Bay)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Chris Collins (Head) &ndash; Kerry Marshall (Senior Administrative Officer) &ndash; Helen Kemp (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Science, Business and Computing; Health and Sports Science; Humanities, Arts and Trades; Maori Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sU0RWLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007577&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="7577"><input class="case" type="checkbox" onClick="Coche(7577,0);" name="result[]" id="7577" value="7577"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result7577" id="result7577" title="Expand result">
+		    <span>Expand result for </span>House for Higher Learning of Awanuiarangi</a></h3>
+		  <p class="i_name">
+		House for Higher Learning of Awanuiarangi / Te Whare Wananga o Awanuiarangi		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Graham Smith (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Indiginous Graduate Studies; Iwi Development; Undergraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzRXLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009566&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9566"><input class="case" type="checkbox" onClick="Coche(9566,0);" name="result[]" id="9566" value="9566"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result9566" id="result9566" title="Expand result">
+		    <span>Expand result for </span>International Pacific College</a></h3>
+		  <p class="i_name">
+		 (IPC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ken Cunningham (Head) &ndash; Minoru Kasuya (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>International Studies; Japanese; Sports</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzRWLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010987&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10987"><input class="case" type="checkbox" onClick="Coche(10987,0);" name="result[]" id="10987" value="10987"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result10987" id="result10987" title="Expand result">
+		    <span>Expand result for </span>Lincoln University</a></h3>
+		  <p class="i_name">
+		Lincoln University / Te Whare Wanaka o Aoraki		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Robin Pollard (Head) &ndash; John Clark (Senior Administrative Officer) &ndash; Melanie O'Toole (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy, Education and Research; Advanced Bio-Protection Technologies; Advanced Computational Solutions; Agribusiness and Economics; Agriculture and Life Sciences; Commerce; Environment, Society and Design; Environmental Toxicology; Mountain Studies; Natural Resources Engineering; Nature Conservation; Soil and Environmental Quality; Soil and Physical Sciences; Tourism, Recreation Research and Education; Viticulture and Oenology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BZLiM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011453&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11453"><input class="case" type="checkbox" onClick="Coche(11453,0);" name="result[]" id="11453" value="11453"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result11453" id="result11453" title="Expand result">
+		    <span>Expand result for </span>Massey University</a></h3>
+		  <p class="i_name">
+		Massey University / Te Kunenga ki Purehuroa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Steve Maharey (Head) &ndash; Stuart Morriss (Senior Administrative Officer) &ndash; John Raine (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Creative Arts; Education; Humanities and Social Sciences; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRULTMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011453-011454&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11454"><input class="case" type="checkbox" onClick="Coche(11454,0);" name="result[]" id="11454" value="11454"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result11454" id="result11454" title="Expand result">
+		    <span>Expand result for </span>Massey University &ndash; Albany Campus</a></h3>
+		  <p class="i_name">
+		Massey University / Te Kunenga ki Purehuroa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>John Raine (Head)</strong></p> -->
+		  <p class="divisions"></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRULTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011453-011451&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11451"><input class="case" type="checkbox" onClick="Coche(11451,0);" name="result[]" id="11451" value="11451"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result11451" id="result11451" title="Expand result">
+		    <span>Expand result for </span>Massey University &ndash; Palmerston North Campus</a></h3>
+		  <p class="i_name">
+		Massey University / Te Kunenga ki Purehuroa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sandi Shillington (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Horticulture; Life Sciences; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRULTMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011453-011452&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11452"><input class="case" type="checkbox" onClick="Coche(11452,0);" name="result[]" id="11452" value="11452"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result11452" id="result11452" title="Expand result">
+		    <span>Expand result for </span>Massey University &ndash; Wellington Campus</a></h3>
+		  <p class="i_name">
+		Massey University / Te Kunenga ki Purehuroa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Andrea McIlroy (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Information Systems; Design; Educational Development; Engineering and Construction; Food, Nutrition and Human Health; Health Sciences; Information Sciences and Technology; Language Studies; Maori Studies; Psychology; Public Health Research; Sleep/Wake Research; Social Work and Social Policy; Technology and Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRULTMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025085&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25085"><input class="case" type="checkbox" onClick="Coche(25085,0);" name="result[]" id="25085" value="25085"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result25085" id="result25085" title="Expand result">
+		    <span>Expand result for </span>Medical Research Institute of New Zealand</a></h3>
+		  <p class="i_name">
+		 (MRINZ)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Richard Beasley (Head) &ndash; Joanna Read (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRQLiM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012597&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12597"><input class="case" type="checkbox" onClick="Coche(12597,0);" name="result[]" id="12597" value="12597"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result12597" id="result12597" title="Expand result">
+		    <span>Expand result for </span>Nelson Marlborough Institute of Technology</a></h3>
+		  <p class="i_name">
+		Nelson Marlborough Institute of Technology - Te Whare Wananga o Te Tau Imu (NMIT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Liam Sloan (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Business; Aviation; Business Services; Creative Industries; Health; Hospitality and Wellbeing; Maritime; Primary Industries; Trades</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhVLjM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012648&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="12648"><input class="case" type="checkbox" onClick="Coche(12648,0);" name="result[]" id="12648" value="12648"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result12648" id="result12648" title="Expand result">
+		    <span>Expand result for </span>New Zealand Drama School</a></h3>
+		  <p class="i_name">
+		New Zealand Drama School / Te Kura Toi Whakaari o Aotearoa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Christian Penny (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Drama</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhWLSNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-022102&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="22102"><input class="case" type="checkbox" onClick="Coche(22102,0);" name="result[]" id="22102" value="22102"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result22102" id="result22102" title="Expand result">
+		    <span>Expand result for </span>New Zealand Tertiary College</a></h3>
+		  <p class="i_name">
+		 (NZTC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Selena Fox (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyhRLCMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013186&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="13186"><input class="case" type="checkbox" onClick="Coche(13186,0);" name="result[]" id="13186" value="13186"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result13186" id="result13186" title="Expand result">
+		    <span>Expand result for </span>Otago Polytechnic</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Phil Ker (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Business; Architecture, Building and Engineering; Art; Design; Educational Development; Hospitality; Information Technology; Midwifery; Natural Resources; Nursing; Occupational Therapy; Social Services; Sport and Adventure; Veterinary Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxRLiM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013233&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13233"><input class="case" type="checkbox" onClick="Coche(13233,0);" name="result[]" id="13233" value="13233"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result13233" id="result13233" title="Expand result">
+		    <span>Expand result for </span>Pacific International Hotel Management School</a></h3>
+		  <p class="i_name">
+		 (PIHMS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Flora Gilkinson (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Hotel Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxSLFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016559&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16559"><input class="case" type="checkbox" onClick="Coche(16559,0);" name="result[]" id="16559" value="16559"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result16559" id="result16559" title="Expand result">
+		    <span>Expand result for </span>The University of Auckland</a></h3>
+		  <p class="i_name">
+		The University of Auckland - Te Whare Wananga o Tamaki Makaurau &ndash; Te Waananga O Waipapa (UoA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Stuart N. McCutcheon (Head) &ndash; Timothy P. Greville (Senior Administrative Officer) &ndash; Christopher Tremewan (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Business; Creative Arts and Industries; Education; Engineering; Law; Liggins ; Medical and Health Sciences; Psychology; Science; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhVLTNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016617&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16617"><input class="case" type="checkbox" onClick="Coche(16617,0);" name="result[]" id="16617" value="16617"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result16617" id="result16617" title="Expand result">
+		    <span>Expand result for </span>The University of Waikato</a></h3>
+		  <p class="i_name">
+		The University of Waikato - Te Whare Wananga o Waikato		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Roy Crawford (Head) &ndash; Helen Pridmore (Senior Administrative Officer) &ndash; Ed Weymes (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Animal Behaviour and Welfare Research; Antarctic Research; Arts and Social Sciences; Carbon Dating; Co-operative Education; Coastal Oceanography and Marine Geology; Computing and Mathematical Science; Computing and Mathematical Sciences; Education; Executive Education; Geo-chronology Research; Honey Research; Labour and Trade Union Studies; Language; Law; Management; Maori and Pacific Development; Maori Studies and Research; Science and Technology; Science, Mathematics and Technology,  Education Research; Teaching and Learning Development; Thermophile and Microbial Biochemistry and Biotechnology; Waikato Stable Isotope; Water Research</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhWLDM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021112&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="21112"><input class="case" type="checkbox" onClick="Coche(21112,0);" name="result[]" id="21112" value="21112"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result21112" id="result21112" title="Expand result">
+		    <span>Expand result for </span>Toi Ohomai Institute of Technology</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Leon Fourie (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Commerce and Tourism; Education; Forestry and Technology; Health and Social Sciences; Sciences and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRRLDMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020102&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="20102"><input class="case" type="checkbox" onClick="Coche(20102,0);" name="result[]" id="20102" value="20102"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result20102" id="result20102" title="Expand result">
+		    <span>Expand result for </span>University of Canterbury</a></h3>
+		  <p class="i_name">
+		University of Canterbury / Te Whare Wananga o Waitaha		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rod Carr (Head) &ndash; Alan Hayward (Senior Administrative Officer) &ndash; Bob Kirk (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Business and Economics; Education; Engineering; Forestry; Law; Music; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BRLCMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020367&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="20367"><input class="case" type="checkbox" onClick="Coche(20367,0);" name="result[]" id="20367" value="20367"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result20367" id="result20367" title="Expand result">
+		    <span>Expand result for </span>University of Otago</a></h3>
+		  <p class="i_name">
+		University of Otago - Te Whare Wananga o Otago		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Harlene Hayne (Head) &ndash; Sarah Todd (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Commerce; Health Sciences; Humanities; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BTLUM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020871&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="20871"><input class="case" type="checkbox" onClick="Coche(20871,0);" name="result[]" id="20871" value="20871"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result20871" id="result20871" title="Expand result">
+		    <span>Expand result for </span>Victoria University of Wellington</a></h3>
+		  <p class="i_name">
+		Victoria University of Wellington / Te Whare Wananga o te Upoko o te Ika a Maui		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Grant Guilford (Head) &ndash; Rob Rabel (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Design; Commerce and Administration; Education; Humanities and Social Sciences; Law; Nursing, Midwifery and Health; Science; Te Kawa a Maui; Te Kura Maori</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BYLVMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021113&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="21113"><input class="case" type="checkbox" onClick="Coche(21113,0);" name="result[]" id="21113" value="21113"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result21113" id="result21113" title="Expand result">
+		    <span>Expand result for </span>Waikato Institute of Technology</a></h3>
+		  <p class="i_name">
+		Waikato Institute of Technology / Te Kuratini o Waikato (Wintec)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mark Flowers (Head) &ndash; Terry Barnett (Senior Administrative Officer) &ndash; Irene Robb (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Education; Engineering, Science and Primary Industries; Health; Information Technology; International Tourism, Hospitality and Events; Media Arts; Social Development; Sport and Exercise Science; Trades</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRRLDMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021252&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="21252"><input class="case" type="checkbox" onClick="Coche(21252,0);" name="result[]" id="21252" value="21252"></label>
+		</div>
+		<div class="details">
+		  <p class="country">New Zealand</p>
+				  <h3>
+		    <a href="#result21252" id="result21252" title="Expand result">
+		    <span>Expand result for </span>Whitecliffe College of Arts and Design</a></h3>
+		  <p class="i_name">
+		Whitecliffe College of Arts and Design / Te Whare Takiura o Wikiriwhi		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Michelle Whitecliffe (Head) &ndash; Fionna Scott-Milligan (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Art Therapy; Arts Management; Fine Arts</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRSLTMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 29 of 29</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand" selected>New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

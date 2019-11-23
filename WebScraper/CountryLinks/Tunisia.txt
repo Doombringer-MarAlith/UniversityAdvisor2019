@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Tunisia')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Tunisia)">
+	    <input type="hidden" class="envoi" name="total" value="41">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Tunisia">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">41 results found for <strong>(Country=Tunisia)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 41 of 41</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-019530&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19530"><input class="case" type="checkbox" onClick="Coche(19530,0);" name="result[]" id="19530" value="19530"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19530" id="result19530" title="Expand result">
+		    <span>Expand result for </span>Central University</a></h3>
+		  <p class="i_name">
+		Université Centrale		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Slah Ben Turkia (Head) &ndash; Shihab Amjad (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Law and Management - Centrale DG; Letters, Art and Communication Studies - Centrale Com; Paramedical and Health Sciences - Centrale Santé; Polytechnic - Centrale Polytech</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLFNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007940&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="7940"><input class="case" type="checkbox" onClick="Coche(7940,0);" name="result[]" id="7940" value="7940"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result7940" id="result7940" title="Expand result">
+		    <span>Expand result for </span>Institute of Advanced Studies in Tunis</a></h3>
+		  <p class="i_name">
+		Institut des Hautes Etudes à Tunis (IHET)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Slaheddine Hellara (Head) &ndash; Chedly Ben Mustapha (Senior Administrative Officer) &ndash; Hichem Novaari (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Postgraduate; Undergraduate</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tU0RULGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019571&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19571"><input class="case" type="checkbox" onClick="Coche(19571,0);" name="result[]" id="19571" value="19571"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19571" id="result19571" title="Expand result">
+		    <span>Expand result for </span>University of Carthage</a></h3>
+		  <p class="i_name">
+		Université de Carthage		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Olfa ben Ouda (Head) &ndash; Jalel Meftah (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Business Studies; Agriculture; Agronomy; Applied Languages and Computer Science; Applied Sciences and Technology; Architecture and Town Planning; Audio-visual Studies and Cinema; Biology and Geology; Childhood Studies; Commerce and Accountancy; Communications; Economics and Management; Engineering Studies - Bizerte; Engineering Studies - Nabeul; Environmental Sciences and Technologies; Environmental, Town Planning and Building Technologies; Fine Arts; Fishery and Aquaculture; Food Industries; Labour and Social Studies; Languages; Law, Political and Social Sciences; Polytechnic; Research in Rural, Water and Forestry Engineering; Science; Sciences and Technology of Environment - Borj Cedria; Scientific and Technical Studies - La Marsa; Statistics and Information Analysis; Technology and Computer Science; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLVMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019501&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19501"><input class="case" type="checkbox" onClick="Coche(19501,0);" name="result[]" id="19501" value="19501"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19501" id="result19501" title="Expand result">
+		    <span>Expand result for </span>Arab University of Sciences</a></h3>
+		  <p class="i_name">
+		Université arabe des Sciences (UAS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mourad Ben Turkia (Head) &ndash; Hamadi Znaidi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering - ESIET; Law, Social Sciences, Economics and Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLCMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024096&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24096"><input class="case" type="checkbox" onClick="Coche(24096,0);" name="result[]" id="24096" value="24096"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result24096" id="result24096" title="Expand result">
+		    <span>Expand result for </span>Avicenne Private Business School</a></h3>
+		  <p class="i_name">
+		 (APBS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kamel Sellaoui (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLjM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024245&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24245"><input class="case" type="checkbox" onClick="Coche(24245,0);" name="result[]" id="24245" value="24245"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result24245" id="result24245" title="Expand result">
+		    <span>Expand result for </span>EPI Sousse</a></h3>
+		  <p class="i_name">
+		Ecole privée d’Ingénieur Sousse - EPI Sousse		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed-Sassi Radhouani (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture - EPI-Arch; Engineering - EPI-Polytec; Management - EPI-Ma</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBSLSM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024097&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24097"><input class="case" type="checkbox" onClick="Coche(24097,0);" name="result[]" id="24097" value="24097"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result24097" id="result24097" title="Expand result">
+		    <span>Expand result for </span>ESTIM University</a></h3>
+		  <p class="i_name">
+		ESTIM Université &ndash; Ecole Supérieure Privée des Technologies d'Informatique et de Management (ESTIM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nader El Arbi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLjM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019716&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19716"><input class="case" type="checkbox" onClick="Coche(19716,0);" name="result[]" id="19716" value="19716"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19716" id="result19716" title="Expand result">
+		    <span>Expand result for </span>Ezzitouna University</a></h3>
+		  <p class="i_name">
+		Université Ezzitouna		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hichem Grissa (Head) &ndash; Wiam Zahi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Islamic Law; Islamic Studies and Islamic Civilisation; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLDM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019820&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19820"><input class="case" type="checkbox" onClick="Coche(19820,0);" name="result[]" id="19820" value="19820"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19820" id="result19820" title="Expand result">
+		    <span>Expand result for </span>Ibn Khaldoun Private University</a></h3>
+		  <p class="i_name">
+		Université privée Ibn Khaldoun (UIK)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Lotfi Cherif (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Business English; Computer Science; Design; Law; Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLENgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008121&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8121"><input class="case" type="checkbox" onClick="Coche(8121,0);" name="result[]" id="8121" value="8121"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result8121" id="result8121" title="Expand result">
+		    <span>Expand result for </span>Institute of Advanced Studies of Sousse</a></h3>
+		  <p class="i_name">
+		Institut des Hautes Etudes à Sousse (IHE Sousse)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Computing; Commerce; Computer Science and Multimedia; Finance and Banking; Law; Management; Private Law; Public Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uIyRSLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024091&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24091"><input class="case" type="checkbox" onClick="Coche(24091,0);" name="result[]" id="24091" value="24091"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result24091" id="result24091" title="Expand result">
+		    <span>Expand result for </span>Institute of Paramedical and Nursing Sciences of Sousse</a></h3>
+		  <p class="i_name">
+		Institut supérieur des Etudes paramédicales et Sciences Infirmières de Sousse (ISEPSI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLjMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024100&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24100"><input class="case" type="checkbox" onClick="Coche(24100,0);" name="result[]" id="24100" value="24100"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result24100" id="result24100" title="Expand result">
+		    <span>Expand result for </span>International Institute of Technology</a></h3>
+		  <p class="i_name">
+		Ecole superieur Internationale privée de Technologie / Sfax (IIT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Chafik Abid (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Business Administration; Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBRLCNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004324&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4324"><input class="case" type="checkbox" onClick="Coche(4324,0);" name="result[]" id="4324" value="4324"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result4324" id="result4324" title="Expand result">
+		    <span>Expand result for </span>International School of Business Management - Sfax</a></h3>
+		  <p class="i_name">
+		Ecole supérieure des Etudes Administratives et Commerciales (ESEAC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fredj Zrelli (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Computing; Commercial Law; Economics and Management; Finance; International Business; Marketing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyxSLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019819&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19819"><input class="case" type="checkbox" onClick="Coche(19819,0);" name="result[]" id="19819" value="19819"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19819" id="result19819" title="Expand result">
+		    <span>Expand result for </span>Mediterranean School of Business</a></h3>
+		  <p class="i_name">
+		Ecole Méditerranéenne supérieure privée des Affaires		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mahmoud Triki (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLDNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019772&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19772"><input class="case" type="checkbox" onClick="Coche(19772,0);" name="result[]" id="19772" value="19772"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19772" id="result19772" title="Expand result">
+		    <span>Expand result for </span>Mediterranean University of Tunis</a></h3>
+		  <p class="i_name">
+		Université Méditerranéenne privée de Tunis		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Essaied Laatar (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Nabeul; Polytechnic Mediterranean; Tunis</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLVMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024094&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24094"><input class="case" type="checkbox" onClick="Coche(24094,0);" name="result[]" id="24094" value="24094"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result24094" id="result24094" title="Expand result">
+		    <span>Expand result for </span>Polytechnical School of Sousse</a></h3>
+		  <p class="i_name">
+		Ecole Polytechnique de Sousse &ndash; Polytechnique Sousse		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Engineering; Preparatory</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLjMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004366&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4366"><input class="case" type="checkbox" onClick="Coche(4366,0);" name="result[]" id="4366" value="4366"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result4366" id="result4366" title="Expand result">
+		    <span>Expand result for </span>Private Higher School of Engineering and Technology</a></h3>
+		  <p class="i_name">
+		Ecole supérieure privée d'Ingénierie et de Technologie (ESPRIT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tahar Ben Lakhdar (Head) &ndash; Hatem Elloumi (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering; Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyxWLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019847&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19847"><input class="case" type="checkbox" onClick="Coche(19847,0);" name="result[]" id="19847" value="19847"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19847" id="result19847" title="Expand result">
+		    <span>Expand result for </span>Private School of Applied Science and Technology of Gabes</a></h3>
+		  <p class="i_name">
+		Ecole supérieure privée des Sciences Appliquées et de la Technologie de Gabès (ESSAT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Lotfi Mezhoudi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Sciences and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLSM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019817&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19817"><input class="case" type="checkbox" onClick="Coche(19817,0);" name="result[]" id="19817" value="19817"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19817" id="result19817" title="Expand result">
+		    <span>Expand result for </span>Private School of Technology and Management</a></h3>
+		  <p class="i_name">
+		École supérieure privée de Technologie et de Management (SUPTECH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nejib Bel Habib (Head) &ndash; Hayet Bel Habib (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLDM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019815&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19815"><input class="case" type="checkbox" onClick="Coche(19815,0);" name="result[]" id="19815" value="19815"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19815" id="result19815" title="Expand result">
+		    <span>Expand result for </span>Private University of Science and Technology Studies of Mégrine</a></h3>
+		  <p class="i_name">
+		Université privée des études scientifiques et technologiques de Mégrine		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelatif Khamassi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Business Administration; Computer Science; Computer Science Applied to Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLDM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019816&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19816"><input class="case" type="checkbox" onClick="Coche(19816,0);" name="result[]" id="19816" value="19816"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19816" id="result19816" title="Expand result">
+		    <span>Expand result for </span>Private University of Sousse</a></h3>
+		  <p class="i_name">
+		Université privée de Sousse (UPS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ridha Rejeb (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Engineering and Research; Applied Sciences and Technology; Economics and Management; Engineering, Science and Technology - SupTech; Vocational Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLDM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019766&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19766"><input class="case" type="checkbox" onClick="Coche(19766,0);" name="result[]" id="19766" value="19766"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19766" id="result19766" title="Expand result">
+		    <span>Expand result for </span>Private University of the South</a></h3>
+		  <p class="i_name">
+		Université libre du Sud (ULS-IPSAS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Law and Management - IPSM; Polytechnique - IPSAS</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLUM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019762&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19762"><input class="case" type="checkbox" onClick="Coche(19762,0);" name="result[]" id="19762" value="19762"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19762" id="result19762" title="Expand result">
+		    <span>Expand result for </span>Private University of Tunis</a></h3>
+		  <p class="i_name">
+		Université libre de Tunis (ULT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Boussaïri Bouebdelli (Head) &ndash; Sadok Belaid (Head) &ndash; Madeleine Pithoud (Senior Administrative Officer) &ndash; Mehdi Bouebdelli (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Correspondence Education and Training; Economics and Management; Law; Polytechnic</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019673&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19673"><input class="case" type="checkbox" onClick="Coche(19673,0);" name="result[]" id="19673" value="19673"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19673" id="result19673" title="Expand result">
+		    <span>Expand result for </span>School of Architecture, Audiovisual and Design</a></h3>
+		  <p class="i_name">
+		Ecole supérieure d'Architecture d'Audiovisuel et de Design &ndash; Université des Arts et du Design (ESAD)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Karim Mimita (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Audiovisual and Cinema; Design; Photography</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLVMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016677&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16677"><input class="case" type="checkbox" onClick="Coche(16677,0);" name="result[]" id="16677" value="16677"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result16677" id="result16677" title="Expand result">
+		    <span>Expand result for </span>TIME Private Higher School</a></h3>
+		  <p class="i_name">
+		TIME Université &ndash; Ecole Supérieure Privée des Technologies de l’information et de Management de l’Entreprise (TIME- ESP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Damak (Head) &ndash; Said Damak (Senior Administrative Officer) &ndash; Dorra Belhaouene (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Networks and Telecommunications Engineering - ESI-TIME; E-Learning; Economics and Management - ESM-Time; Software Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhWLVM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019821&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19821"><input class="case" type="checkbox" onClick="Coche(19821,0);" name="result[]" id="19821" value="19821"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19821" id="result19821" title="Expand result">
+		    <span>Expand result for </span>Tunis Carthage University</a></h3>
+		  <p class="i_name">
+		Université Tunis Carthage (UTC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Khaldoun Ben Taarit (Head) &ndash; Béchir Chourou (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Science and Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLEMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024095&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24095"><input class="case" type="checkbox" onClick="Coche(24095,0);" name="result[]" id="24095" value="24095"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result24095" id="result24095" title="Expand result">
+		    <span>Expand result for </span>Tunis Dauphine Private Institute</a></h3>
+		  <p class="i_name">
+		Institut supérieur privé Tunis Dauphine		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Amina Bouzguenda-Zeghal (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Finance; Human Resources; Marketing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLjM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019740&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19740"><input class="case" type="checkbox" onClick="Coche(19740,0);" name="result[]" id="19740" value="19740"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19740" id="result19740" title="Expand result">
+		    <span>Expand result for </span>Tunis International University</a></h3>
+		  <p class="i_name">
+		Université internationale privée de Tunis (UIT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hela Ennaifer Tébourbi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Journalism; Law; Polytechnic; Vatel Business School</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLSNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004225&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4225"><input class="case" type="checkbox" onClick="Coche(4225,0);" name="result[]" id="4225" value="4225"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result4225" id="result4225" title="Expand result">
+		    <span>Expand result for </span>University College of Aviation and Technology</a></h3>
+		  <p class="i_name">
+		Ecole supérieure d'Aéronautique et des Technologies &ndash; ESAT University (ESAT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abderrazek Ben Amara (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Aviation and Transport Technology; Preparatory Cycle; Telecommunications</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyhSLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019585&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19585"><input class="case" type="checkbox" onClick="Coche(19585,0);" name="result[]" id="19585" value="19585"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19585" id="result19585" title="Expand result">
+		    <span>Expand result for </span>University of Gabes</a></h3>
+		  <p class="i_name">
+		Université de Gabès (UNIVGB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Mars (Head) &ndash; Adel Arroum (Senior Administrative Officer) &ndash; Abderrazk Souai (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Biology; Applied Sciences and Technology; Applied Studies in the Humanities; Arts and Crafts; Computer Science; Computer Science and Multimedia; Engineering; Industrial Systems; Languages; Law; Management; Nursing; Science; Water Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLiM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019586&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19586"><input class="case" type="checkbox" onClick="Coche(19586,0);" name="result[]" id="19586" value="19586"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19586" id="result19586" title="Expand result">
+		    <span>Expand result for </span>University of Gafsa</a></h3>
+		  <p class="i_name">
+		Université de Gafsa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Imam Alaoui (Head) &ndash; Ridha Beltaifa (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Science and Technology; Applied Studies in the Humanities - Gafsa; Applied Studies in the Humanities - Tozeur; Arts and Crafts; Business Administration; Science; Science and Energy Engineering; Sports and Physical Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLiM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019590&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19590"><input class="case" type="checkbox" onClick="Coche(19590,0);" name="result[]" id="19590" value="19590"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19590" id="result19590" title="Expand result">
+		    <span>Expand result for </span>University of Jendouba</a></h3>
+		  <p class="i_name">
+		Université de Jendouba		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hassen Bacha (Head) &ndash; Zina Ounissi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Applied Languages and Computer Science; Applied Studies in the Humanities; Arts and Crafts; Biotechnology; Computer Science; Forestry; Humanities; Law, Economics and Management; Music and Drama; Nursing; Rural Engineering; Sports and Physical Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLjNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019591&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19591"><input class="case" type="checkbox" onClick="Coche(19591,0);" name="result[]" id="19591" value="19591"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19591" id="result19591" title="Expand result">
+		    <span>Expand result for </span>University of Kairouan</a></h3>
+		  <p class="i_name">
+		Université de Kairouan		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Omran (Head) &ndash; Ali Selmi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Mathematics and Computer Science; Applied Sciences and Technology; Arts and Crafts; Computer Science and Management; Law and Political Science; Literature Arts and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLjMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019600&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19600"><input class="case" type="checkbox" onClick="Coche(19600,0);" name="result[]" id="19600" value="19600"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19600" id="result19600" title="Expand result">
+		    <span>Expand result for </span>University of Manouba</a></h3>
+		  <p class="i_name">
+		Université de La Manouba		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Choikr Mabkhout (Head) &ndash; Imed Hidri (Senior Administrative Officer) &ndash; Jouhaina Gherib (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Business Administration; Arts and Humanities; Biotechnology; Commerce; Computer Science; Design Science and Technology; Digital Economy; Documentation; History of the National Movement; Multimedia Arts; Physical Education and Sports; Press and Communication Sciences; Promotion of the Disabled; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLCNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019620&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19620"><input class="case" type="checkbox" onClick="Coche(19620,0);" name="result[]" id="19620" value="19620"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19620" id="result19620" title="Expand result">
+		    <span>Expand result for </span>University of Monastir</a></h3>
+		  <p class="i_name">
+		Université de Monastir		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mahjoub El Ouni (Head) &ndash; Abderrazek Hachana (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Sciences and Technology; Applied Studies in the Humanities; Arts and Crafts; Biotechnology; Computer Science; Computer Science and Mathematics; Dentistry; Economics and Management; Engineering; Fashion Design; Health Sciences and Techniques; Languages for Business and Tourism; Medicine; Pharmacy; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLENgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019814&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19814"><input class="case" type="checkbox" onClick="Coche(19814,0);" name="result[]" id="19814" value="19814"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19814" id="result19814" title="Expand result">
+		    <span>Expand result for </span>University of Montplaisir Tunisia</a></h3>
+		  <p class="i_name">
+		Université Montplaisir Tunis (UMT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fethi Farhat (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Computer Science; Economics and Management; Engineering; Finance; Law; Marketing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLDMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019647&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19647"><input class="case" type="checkbox" onClick="Coche(19647,0);" name="result[]" id="19647" value="19647"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19647" id="result19647" title="Expand result">
+		    <span>Expand result for </span>University of Sfax</a></h3>
+		  <p class="i_name">
+		Université de Sfax		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelwahid Mokni (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Crafts; Biotechnology; Business Administration; Commerce; Commercial Studies; Computer Science and Multimedia; Economics and Management; Electronics and Communication; Engineering; Health Sciences and Techniques; Industrial Management; Languages and Arts and Humanities; Law; Medicine; Music; Nursing; Science; Sports and Physical Education; Zitouna</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLSM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019649&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19649"><input class="case" type="checkbox" onClick="Coche(19649,0);" name="result[]" id="19649" value="19649"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19649" id="result19649" title="Expand result">
+		    <span>Expand result for </span>University of Sousse</a></h3>
+		  <p class="i_name">
+		Université de Sousse		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fayçal  Mansouri (Head) &ndash; Bechir Bel Hadj Yahia (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Applied Sciences and Technology; Arts and Humanities; Commerce; Computer Science and Communication Techniques; Economics and Management; Engineering; Finance and Fiscality; Fine Arts; Health Sciences and Techniques; Law and Political Science; Management; Medicine; Music; Nursing; Science and Technology; Transport and Logistics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLSNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019661&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19661"><input class="case" type="checkbox" onClick="Coche(19661,0);" name="result[]" id="19661" value="19661"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19661" id="result19661" title="Expand result">
+		    <span>Expand result for </span>University of Tunis</a></h3>
+		  <p class="i_name">
+		Université de Tunis		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hmaïd Ben Aziza (Head) &ndash; Adel Maaref (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Studies in the Humanities; Business; Cultural Studies; Economics and Commerce; Education and Continuing Education; Engineering; Fine Arts; Heritage; Humanities and Social Sciences; Literature and Arts and Humanities Studies; Management; Music; Teacher Training; Theatre; Youth and Culture</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLUMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019662&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19662"><input class="case" type="checkbox" onClick="Coche(19662,0);" name="result[]" id="19662" value="19662"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19662" id="result19662" title="Expand result">
+		    <span>Expand result for </span>University of Tunis El Manar</a></h3>
+		  <p class="i_name">
+		Université de Tunis El Manar		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fethi Sellaouti (Head) &ndash; Kamel Maazaoui (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Biological Sciences; Computer Science; Economics and Management; Engineering; Health Sciences and Techniques; Human Sciences; Law and Political Science; Mathematics, Physics and Natural Sciences; Medical Technology; Medicine; Modern Languages; Nursing; Pasteur; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019851&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19851"><input class="case" type="checkbox" onClick="Coche(19851,0);" name="result[]" id="19851" value="19851"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Tunisia</p>
+				  <h3>
+		    <a href="#result19851" id="result19851" title="Expand result">
+		    <span>Expand result for </span>Virtual University of Tunis</a></h3>
+		  <p class="i_name">
+		Université Virtuelle de Tunis (UVT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jilani Lamloumi (Head) &ndash; Lamjed Massouss (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Arts and Humanities; Business Administration; Chemistry and Biochemistry; Commerce; Computer Science; Economics and Management; Health Sciences; Information and Communication Sciences; Law; Life and Earth Sciences; Science and Technology; Sociology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLTMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 41 of 41</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia" selected>Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

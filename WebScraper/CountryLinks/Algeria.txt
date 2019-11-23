@@ -1,0 +1,2185 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Algeria')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Algeria)">
+	    <input type="hidden" class="envoi" name="total" value="92">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Algeria">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">92 results found for <strong>(Country=Algeria)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 92 of 92</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-019477&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19477"><input class="case" type="checkbox" onClick="Coche(19477,0);" name="result[]" id="19477" value="19477"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19477" id="result19477" title="Expand result">
+		    <span>Expand result for </span>20 August 1955 University of Skikda</a></h3>
+		  <p class="i_name">
+		Université 20 août 1955 de Skikda		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Salim Haddad (Head) &ndash; Khaled Boudjellal (Senior Administrative Officer) &ndash; Nardjes Boughrara (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering; Law and Political Sciences; Literature and Languages; Management and Economics; Science; Social Sciences and Human Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RULVM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019478&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19478"><input class="case" type="checkbox" onClick="Coche(19478,0);" name="result[]" id="19478" value="19478"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19478" id="result19478" title="Expand result">
+		    <span>Expand result for </span>8 May 1945 University of Guelma</a></h3>
+		  <p class="i_name">
+		Université 8 mai 1945 de Guelma		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Nemamcha (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Humanities and Social Sciences; Languages and Letters; Law and Political Science; Matter Sciences, Mathematics,  and Computing Science; Natural and Life Sciences and Earth and Universe Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RULVNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019479&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19479"><input class="case" type="checkbox" onClick="Coche(19479,0);" name="result[]" id="19479" value="19479"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19479" id="result19479" title="Expand result">
+		    <span>Expand result for </span>Abbès Laghrour University of Khenchela</a></h3>
+		  <p class="i_name">
+		Université Abbès Laghrour de Khenchela		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Laiche Abdellaziz (Head) &ndash; Djamel Nassah (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce  and Management; Law and Administration; Literature and Languages; Natural and Life Sciences; Science and Technology; Social Science and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RULVNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-002170&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="2170"><input class="case" type="checkbox" onClick="Coche(2170,0);" name="result[]" id="2170" value="2170"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result2170" id="result2170" title="Expand result">
+		    <span>Expand result for </span>Abdelhafid Boussouf University Centre of Mila</a></h3>
+		  <p class="i_name">
+		Centre Universitaire Abdelhafid Boussouf de Mila		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelouahab Chemmame (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Literature and Languages; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQyRXLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019480&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19480"><input class="case" type="checkbox" onClick="Coche(19480,0);" name="result[]" id="19480" value="19480"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19480" id="result19480" title="Expand result">
+		    <span>Expand result for </span>Abdelhamid Ibn Badis University of Mostaganem</a></h3>
+		  <p class="i_name">
+		Université Abdelhamid Ibn Badis de Mostaganem		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mostefa Belhakem (Head) &ndash; Abid Charef Ounassa (Senior Administrative Officer) &ndash; Abdelhamid Kridaech (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities and Arabic Language; Economics, Commerce and Management; Exact and Computer Science; Law and Political Science; Medicine; Natural and Life Sciences; Natural Sciences; Physical Training and Sports; Science and Technology; Social Sciences; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RULiNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019540&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19540"><input class="case" type="checkbox" onClick="Coche(19540,0);" name="result[]" id="19540" value="19540"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19540" id="result19540" title="Expand result">
+		    <span>Expand result for </span>Abdelhamid Mehri University of Constantine  2</a></h3>
+		  <p class="i_name">
+		Université Abdelhamid Mehri Constantine 2		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed El Hadi Latrèche (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Humanities and Social Sciences; Information and Communication Technology; Library Science; Physical Education and Sports; Psychology and Educational Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLSNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004147&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4147"><input class="case" type="checkbox" onClick="Coche(4147,0);" name="result[]" id="4147" value="4147"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4147" id="result4147" title="Expand result">
+		    <span>Expand result for </span>Abdellah Arbaoui National School of Hydraulic Engineering</a></h3>
+		  <p class="i_name">
+		Ecole nationale supérieure d'Hydraulique Abdellah Arbaoui (ENSH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sahli Belkacem (Head) &ndash; Fatah Kebir (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Hydraulic Engineering and Environment; Irrigation and Draining; Non-conventional Water Re-use; Urban Hydraulics; Urban Techniques</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRULVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019483&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19483"><input class="case" type="checkbox" onClick="Coche(19483,0);" name="result[]" id="19483" value="19483"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19483" id="result19483" title="Expand result">
+		    <span>Expand result for </span>Abderahmane Mira University of Béjaïa</a></h3>
+		  <p class="i_name">
+		Université Abderrahmane Mira de Béjaïa &ndash; Université de Béjaïa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Boualem Saidani (Head) &ndash; Mouloud Boukerrou (Senior Administrative Officer) &ndash; Aida Ban Hamida (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Exact Sciences; Humanities; Law; Letters and Languages; Medicine; Natural and Life Sciences; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RULiMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019711&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19711"><input class="case" type="checkbox" onClick="Coche(19711,0);" name="result[]" id="19711" value="19711"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19711" id="result19711" title="Expand result">
+		    <span>Expand result for </span>Abou Elkacem Saâdallah University of Algiers 2</a></h3>
+		  <p class="i_name">
+		Université Abou Elkacem Saâdallah d’Alger 2		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Khemissi Hamidi (Head) &ndash; Ratiba Guidoum (Senior Administrative Officer) &ndash; Djamel Belghoul (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Archaeology; Human and Social Sciences; Literature and Modern Languages; Translation and Interpretation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLDMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004261&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4261"><input class="case" type="checkbox" onClick="Coche(4261,0);" name="result[]" id="4261" value="4261"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4261" id="result4261" title="Expand result">
+		    <span>Expand result for </span>Advanced School of Commerce</a></h3>
+		  <p class="i_name">
+		Ecole supérieure de Commerce (ESC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelaziz Sebboua (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Finance; Management; Marketing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyhWLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019561&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19561"><input class="case" type="checkbox" onClick="Coche(19561,0);" name="result[]" id="19561" value="19561"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19561" id="result19561" title="Expand result">
+		    <span>Expand result for </span>Ahmed Ben Bella University of Oran 1</a></h3>
+		  <p class="i_name">
+		Université Ahmed Ben Bella d'Oran 1		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Larbi Chahed (Head) &ndash; A.Z. Fouatih (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Earth Sciences, Geography and Regional Planning; Economics, Management and Commerce; Exact and Applied Science; Humanities and Islamic Civilization; Languages and Arts; Law and Political Science; Medicine; Natural and Life Science; Social Sciences; Traduction</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLUMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-002173&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="2173"><input class="case" type="checkbox" onClick="Coche(2173,0);" name="result[]" id="2173" value="2173"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result2173" id="result2173" title="Expand result">
+		    <span>Expand result for </span>Ahmed Ben Yahia El Wancharissi University Centre of Tissemsilt</a></h3>
+		  <p class="i_name">
+		Centre Universitaire Ahmed Ben Yahia El Wancharissi de Tissemsilt		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Laatiki (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Law and Administration; Literature and Languages; Physical Education; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQyRXLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019494&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19494"><input class="case" type="checkbox" onClick="Coche(19494,0);" name="result[]" id="19494" value="19494"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19494" id="result19494" title="Expand result">
+		    <span>Expand result for </span>Ahmed Draya University of Adrar</a></h3>
+		  <p class="i_name">
+		Université Ahmed Draïa d'Adrar		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Salah Hamlil (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Languages; Economics, Commerce and Management; Law and Political Sciences; Science and Technology; Social Sciences and Islamic Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RULjMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-002172&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="2172"><input class="case" type="checkbox" onClick="Coche(2172,0);" name="result[]" id="2172" value="2172"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result2172" id="result2172" title="Expand result">
+		    <span>Expand result for </span>Ahmed Zabana University Centre of Rélizane</a></h3>
+		  <p class="i_name">
+		Centre Universitaire Ahmed Zabana de Rélizane		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Slimane Soufiane (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Exact, Natural and Life Sciences; Law and Administration; Literature and Languages; Science and Technology; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQyRXLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019495&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19495"><input class="case" type="checkbox" onClick="Coche(19495,0);" name="result[]" id="19495" value="19495"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19495" id="result19495" title="Expand result">
+		    <span>Expand result for </span>Akli Mohand Oulhad University of Bouira</a></h3>
+		  <p class="i_name">
+		Université Akli Mohand Oulhadj de Bouira		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kamel Baddari (Head) &ndash; Djamel  Eddine Boushaki (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Law and Political Science; Litterature and Modern Languages; Natural, Life and Earth Sciences; Physical Education; Social Sciences and Humanities; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RULjM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004222&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4222"><input class="case" type="checkbox" onClick="Coche(4222,0);" name="result[]" id="4222" value="4222"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4222" id="result4222" title="Expand result">
+		    <span>Expand result for </span>Algerian Business School</a></h3>
+		  <p class="i_name">
+		Ecole supérieure algérienne des Affaires		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Patrick Micheletti (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyhSLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007886&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7886"><input class="case" type="checkbox" onClick="Coche(7886,0);" name="result[]" id="7886" value="7886"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result7886" id="result7886" title="Expand result">
+		    <span>Expand result for </span>Algerian Petroleum Institute</a></h3>
+		  <p class="i_name">
+		Institut algérien du Pétrole		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arzew (EAZ); Boumerdès; Hassi Messaoud; Skikda</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tU0BYLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019499&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19499"><input class="case" type="checkbox" onClick="Coche(19499,0);" name="result[]" id="19499" value="19499"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19499" id="result19499" title="Expand result">
+		    <span>Expand result for </span>Amar Telidji University of Laghouat</a></h3>
+		  <p class="i_name">
+		Université Amar Telidji de Laghouat (UATL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Djamal Ben Bertal (Head) &ndash; Khelifa Magoussi (Senior Administrative Officer) &ndash; Mokhtaria Mesri Merad (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Engineering; Law and Political Science; Letters and Languages; Medicine; Physical Education and Sport; Science; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RULjNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-002166&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="2166"><input class="case" type="checkbox" onClick="Coche(2166,0);" name="result[]" id="2166" value="2166"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result2166" id="result2166" title="Expand result">
+		    <span>Expand result for </span>Amine Elokkal El Hadj Moussa Egakhamouk University Centre of Tamanrasset</a></h3>
+		  <p class="i_name">
+		Centre Universitaire Amine Elokkal El Hadj Moussa Egakhamouk de Tamanrasset		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Bakadi Mohammed. (Head) &ndash; Chinoune Ramdhane (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Humanities and Social Sciences; Law and Political Science; Litterature and Languages; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQyRWLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004197&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4197"><input class="case" type="checkbox" onClick="Coche(4197,0);" name="result[]" id="4197" value="4197"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4197" id="result4197" title="Expand result">
+		    <span>Expand result for </span>Assia Djebar Teacher Training School of Constantine</a></h3>
+		  <p class="i_name">
+		Ecole normale supérieure Assia Djebar de Constantine (ENSC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mahmoud Boushaba (Head) &ndash; Cherif Touami (Senior Administrative Officer) &ndash; Azzouz Dilmi (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arabic Language and Literature; English; Exact Science; French; History and Geography; Mathematics and Computer Science; Natural Science; Philosophy; Physics and Chemistry</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRZLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019502&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19502"><input class="case" type="checkbox" onClick="Coche(19502,0);" name="result[]" id="19502" value="19502"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19502" id="result19502" title="Expand result">
+		    <span>Expand result for </span>Badji Mokhtar University of Annaba</a></h3>
+		  <p class="i_name">
+		Université Badji Mokhtar Annaba (UBMA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ammar Haiahem (Head) &ndash; Ahmad Hamdaou (Senior Administrative Officer) &ndash; Feriel Boukheroufa-Sakraoui (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities and Social Sciences; Earth Sciences; Economics and Management; Engineering; Entrepreneurial Training; Environment; Industrial Health; Law; Materials Science; Medicine; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLCMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-002167&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="2167"><input class="case" type="checkbox" onClick="Coche(2167,0);" name="result[]" id="2167" value="2167"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result2167" id="result2167" title="Expand result">
+		    <span>Expand result for </span>Belhadj Bouchaib University Centre of Ain Témouchent</a></h3>
+		  <p class="i_name">
+		Centre Universitaire Belhadj Bouchaib de Ain Témouchent		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kebir Boucherit (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Literature and Languages; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQyRWLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019544&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19544"><input class="case" type="checkbox" onClick="Coche(19544,0);" name="result[]" id="19544" value="19544"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19544" id="result19544" title="Expand result">
+		    <span>Expand result for </span>Benyoucef Benkhedda University of Algiers 1</a></h3>
+		  <p class="i_name">
+		Université Benyoucef Benkhedda d'Alger 1		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hamid Bencheniti (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Islamic Studies; Law; Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLSMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019558&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19558"><input class="case" type="checkbox" onClick="Coche(19558,0);" name="result[]" id="19558" value="19558"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19558" id="result19558" title="Expand result">
+		    <span>Expand result for </span>Chadli Bendjedid University of El Tarf</a></h3>
+		  <p class="i_name">
+		Université Chadli Bendjedid El Tarf		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rachid Siab (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Languages and Literature; Law and Political Sciences; Natural and Life Sciences; Science and Technology; Social Sciences and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLTNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019558-019612&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19612"><input class="case" type="checkbox" onClick="Coche(19612,0);" name="result[]" id="19612" value="19612"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19612" id="result19612" title="Expand result">
+		    <span>Expand result for </span>Chadli Bendjedid University of El Tarf &ndash; Mohamed Boudiaf University M'sila</a></h3>
+		  <p class="i_name">
+		Université Chadli Bendjedid El Tarf &ndash; Université Mohamed Boudiaf M'sila (UMBM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Boutarfaia (Head) &ndash; Djamel Khaldoune (Senior Administrative Officer) &ndash; Lakhdar Kharchi (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Social Sciences; Economics, Management and Commerce; Law; Mathematics and Computer Science; Physical Education and Sports; Science; Technology; Town Planning</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLDMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019593&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19593"><input class="case" type="checkbox" onClick="Coche(19593,0);" name="result[]" id="19593" value="19593"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19593" id="result19593" title="Expand result">
+		    <span>Expand result for </span>Djilali Bounaama University of Khemis Miliana</a></h3>
+		  <p class="i_name">
+		Université Djilali Bounaama Khemis Miliana		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Bezzina (Head) &ndash; Bendjilali Fella (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Law and Political Science; Letters and Languages; Natural, Life and Earth Sciences; Physical Education and Sports; Science and Technology; Social Sciences and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLjMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019690&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19690"><input class="case" type="checkbox" onClick="Coche(19690,0);" name="result[]" id="19690" value="19690"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19690" id="result19690" title="Expand result">
+		    <span>Expand result for </span>Djillali Liabes University of Sidi Bel Abbès</a></h3>
+		  <p class="i_name">
+		Université Djillali Liabes de Sidi Bel Abbès		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ali Khalfi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Management and Commerce; Exact Sciences; Humanities ans Social Sciences; Law and Political Sciences; Literature, Languages and Arts; Medicine; Natural and Life Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLjNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019691&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19691"><input class="case" type="checkbox" onClick="Coche(19691,0);" name="result[]" id="19691" value="19691"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19691" id="result19691" title="Expand result">
+		    <span>Expand result for </span>Dr Tahar Moulay University of Saïda</a></h3>
+		  <p class="i_name">
+		Université Dr Tahar Moulay de Saïda		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fethallah Tebboune (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Humanities and Social Sciences; Law and Political Science; Literature, Languages and Arts; Sciences; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLjMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019692&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19692"><input class="case" type="checkbox" onClick="Coche(19692,0);" name="result[]" id="19692" value="19692"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19692" id="result19692" title="Expand result">
+		    <span>Expand result for </span>Dr Yahia Farès University of Medea</a></h3>
+		  <p class="i_name">
+		Université Dr Yahia Farès de Médéa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Zaghdar (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Law; Literature and Modern Languages; Science and Technology; Social Sciences and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLjMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019557&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19557"><input class="case" type="checkbox" onClick="Coche(19557,0);" name="result[]" id="19557" value="19557"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19557" id="result19557" title="Expand result">
+		    <span>Expand result for </span>El Oued University</a></h3>
+		  <p class="i_name">
+		Université d'El Oued		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Omar Ferhati (Head) &ndash; Chaouki Medalel (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Law and Political Sciences; Literature and Languages; Natural and Life Sciences; Sciences and Technology; Social Sciences and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLTM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019685&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19685"><input class="case" type="checkbox" onClick="Coche(19685,0);" name="result[]" id="19685" value="19685"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19685" id="result19685" title="Expand result">
+		    <span>Expand result for </span>Emir Abdelkader University of  Islamic Sciences</a></h3>
+		  <p class="i_name">
+		Université des Sciences Islamiques Emir Abdelkader		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Saïd Derradji (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Islamic civilization; Law and Economics; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLiM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019717&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19717"><input class="case" type="checkbox" onClick="Coche(19717,0);" name="result[]" id="19717" value="19717"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19717" id="result19717" title="Expand result">
+		    <span>Expand result for </span>Ferhat Abbas University of Sétif 1</a></h3>
+		  <p class="i_name">
+		Université Ferhat Abbas de Sétif 1 (UFAS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelmadjid Djenane (Head) &ndash; Brahim Zaarour (Senior Administrative Officer) &ndash; Noureddine Messahel (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Earth Sciences; Arts and Languages; Economics, Commerce and Management; Humanities and Social Sciences; Law and Political Science; Medicine; Natural and Life Sciences; Optics and Precision Mechanics; Science; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLDM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019539&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19539"><input class="case" type="checkbox" onClick="Coche(19539,0);" name="result[]" id="19539" value="19539"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19539" id="result19539" title="Expand result">
+		    <span>Expand result for </span>Frères Mentouri University of Constantine</a></h3>
+		  <p class="i_name">
+		Université des Frères Mentouri de Constantine &ndash; Université Constantine 1		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelhamid Djekoun (Head) &ndash; Foudil Belaouira (Senior Administrative Officer) &ndash; Farida Hobar (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Earth Sciences, Geography and Regional Planning; Economics and Management; Exact Sciences; Humanities and Social Sciences; Languages and Literature; Law; Medicine; Natural and Life Sciences; Nutrition and Food Technology; Science and Technology; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLFNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019731&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19731"><input class="case" type="checkbox" onClick="Coche(19731,0);" name="result[]" id="19731" value="19731"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19731" id="result19731" title="Expand result">
+		    <span>Expand result for </span>Hassiba Ben Bouali University of Chlef</a></h3>
+		  <p class="i_name">
+		Université Hassiba Ben Bouali de Chlef		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelkader Hocine (Head) &ndash; Hacene Mahmoudi (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Civil Engineering and Architecture; Economics, Commerce and Management; Humanities and Social Sciences; Law and Political Science; Literature and Languages; Physical Education and Sports; Science; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLFMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019681&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19681"><input class="case" type="checkbox" onClick="Coche(19681,0);" name="result[]" id="19681" value="19681"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19681" id="result19681" title="Expand result">
+		    <span>Expand result for </span>Houari Boumediène University of Science and Technology</a></h3>
+		  <p class="i_name">
+		Université des Sciences et de la Technologie Houari Boumediène (USTHB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Saidi (Head) &ndash; Fawzia Chafa-Mekideche (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biological Sciences; Chemistry; Civil Engineering; Earth Sciences, Geography and Regional Planning; Electronic  and Computer Science; Mathematics; Mechanical and Process Engineering; Physics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLiMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019732&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19732"><input class="case" type="checkbox" onClick="Coche(19732,0);" name="result[]" id="19732" value="19732"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19732" id="result19732" title="Expand result">
+		    <span>Expand result for </span>Ibn Khaldoun University of Tiaret</a></h3>
+		  <p class="i_name">
+		Université Ibn Khaldoun de Tiaret (UIKT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Khalladi Mederbal (Head) &ndash; Khaled Chahda (Senior Administrative Officer) &ndash; Djamel Turki (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Science; Economics, Commerce and Management; Humanities and Social Sciences; Law and Political Science; Literature and Languages; Mathematics and Computer Science; Natural and Life Sciences; Science of Matter; Technology; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLFMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004123&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4123"><input class="case" type="checkbox" onClick="Coche(4123,0);" name="result[]" id="4123" value="4123"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4123" id="result4123" title="Expand result">
+		    <span>Expand result for </span>Kasdi Merbah National School of Agronomy</a></h3>
+		  <p class="i_name">
+		Ecole nationale supérieure Agronomique Kasdi Merbah (ENSA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Lakhedar Khelifi (Head) &ndash; Fatima Brabez (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Engineering; Animal Production; Botany; Food Technology; Forestry; Plant Production; Rural Economics; Soil Science; Zoology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRSLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019747&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19747"><input class="case" type="checkbox" onClick="Coche(19747,0);" name="result[]" id="19747" value="19747"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19747" id="result19747" title="Expand result">
+		    <span>Expand result for </span>Kasdi Merbah University of Ouargla</a></h3>
+		  <p class="i_name">
+		Université Kasdi Merbah Ouargla		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Boutarfaia (Head) &ndash; Abdelhakim Senouss (Senior Administrative Officer) &ndash; Salah Khennour (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Sciences; Economics, Management and Commerce; Humanities and Social Sciences; Hydrocarbons, Renewable Energy, Universe and Earth Sciences; Information Technology and Communication Studies; Law and Political Sciences; Literature and Languages; Mathematics and Science of Matters; Medicine; Natural and Life Sciences; Physical Education and Sport; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLSM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019752&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19752"><input class="case" type="checkbox" onClick="Coche(19752,0);" name="result[]" id="19752" value="19752"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19752" id="result19752" title="Expand result">
+		    <span>Expand result for </span>Larbi Ben M'hidi University Oum-El Bouaghi</a></h3>
+		  <p class="i_name">
+		Université Larbi Ben M'hidi de Oum-El Bouaghi		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Bouras (Head) &ndash; Mohamed Belkadi (Senior Administrative Officer) &ndash; Haddoun Abd el Hakim (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Law and Political Sciences; Literature and  Languages; Natural Sciences; Physican Education; Science and Applied Sciences; Social Sciences and Humanities; Urban Technical Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLTMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019753&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19753"><input class="case" type="checkbox" onClick="Coche(19753,0);" name="result[]" id="19753" value="19753"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19753" id="result19753" title="Expand result">
+		    <span>Expand result for </span>Larbi Tebessi University of Tebessa</a></h3>
+		  <p class="i_name">
+		Université Larbi Tebessi de Tebessa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Said Fekra (Head) &ndash; Bachir Kardi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Business Administration; Exact Sciences, Natural and Life Sciences; Law and Political Science; Literature, Humanities and Social Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLTMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024021&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24021"><input class="case" type="checkbox" onClick="Coche(24021,0);" name="result[]" id="24021" value="24021"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24021" id="result24021" title="Expand result">
+		    <span>Expand result for </span>Lounici Ali University of Blida 2</a></h3>
+		  <p class="i_name">
+		Université Lounici Ali de Blida 2 &ndash; Université d'El Affroun		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Chaâlal (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Humanities and Social Sciences; Law and Political Sciences; Literature and Modern Languages</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLEMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019770&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19770"><input class="case" type="checkbox" onClick="Coche(19770,0);" name="result[]" id="19770" value="19770"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19770" id="result19770" title="Expand result">
+		    <span>Expand result for </span>M'Hamed Bougara University of Boumerdès</a></h3>
+		  <p class="i_name">
+		Université M'Hamed Bougara de Boumerdès (UMBB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelhakim Bentellis (Head) &ndash; Djamila Rabia (Senior Administrative Officer) &ndash; Abdelaziz Tairi (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Management and Commerce; Electrical and Electronic Engineering; Engineering; Hydrocarburates and Chemistry; Law; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024037&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24037"><input class="case" type="checkbox" onClick="Coche(24037,0);" name="result[]" id="24037" value="24037"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24037" id="result24037" title="Expand result">
+		    <span>Expand result for </span>Mohamed Ben Ahmed University of Oran 2</a></h3>
+		  <p class="i_name">
+		Université Mohamed Ben Ahmed d'Oran 2		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Seddik Amroun (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Earth Sciences; Economics, Management and Commerce; Foreign Languages; Law and Political Science; Maintenance Technology; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLFM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019680&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19680"><input class="case" type="checkbox" onClick="Coche(19680,0);" name="result[]" id="19680" value="19680"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19680" id="result19680" title="Expand result">
+		    <span>Expand result for </span>Mohamed Boudiaf University of Science and Technology of Oran</a></h3>
+		  <p class="i_name">
+		Université des Sciences et de la Technologie d'Oran Mohamed Boudiaf (USTOMB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nassira Benharrats (Head) &ndash; Rachid Kessas (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Materials Sciences; Mathematics and Computer Science; Natural and Life Science; Physical Education; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLiNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019774&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19774"><input class="case" type="checkbox" onClick="Coche(19774,0);" name="result[]" id="19774" value="19774"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19774" id="result19774" title="Expand result">
+		    <span>Expand result for </span>Mohamed Chérif Messaadia University of Souk-Ahras</a></h3>
+		  <p class="i_name">
+		Université Mohamed Chérif Messaadia de Souk-Ahras		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zoubir Bouzebda (Head) &ndash; Mostafa Tebib (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy and Veterinary Science; Arab Literature and Foreign Languages; Economics, Commerce and Management; Law and Administration; Natural and Life Sciences; Physical Education and Sport; Science and Technology; Social Science and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLVMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019777&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19777"><input class="case" type="checkbox" onClick="Coche(19777,0);" name="result[]" id="19777" value="19777"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19777" id="result19777" title="Expand result">
+		    <span>Expand result for </span>Mohamed El Bachir El Ibrahimi University of Bordj Bou Arreridj</a></h3>
+		  <p class="i_name">
+		Université Mohamed El Bachir El Ibrahimi de Bordj Bou Arréridj		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelkrim Beniaiche (Head) &ndash; Abdelmadjid Benainessemene (Senior Administrative Officer) &ndash; Zouina Benfradj (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Law and Political Science; Literature and Languages; Mathematics and Computer Science; Natural, Life, Earth and Universe Sciences; Science and Technology; Social Sciences and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLVM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019778&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19778"><input class="case" type="checkbox" onClick="Coche(19778,0);" name="result[]" id="19778" value="19778"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19778" id="result19778" title="Expand result">
+		    <span>Expand result for </span>Mohamed Khider University of Biskra</a></h3>
+		  <p class="i_name">
+		Université Mohamed Khider de Biskra		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Belkacem Selatnia (Head) &ndash; Nacer Ghamri (Senior Administrative Officer) &ndash; Brahim Mezerdi (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Exact, Natural and Life Sciences; Humanities and Sociology; Law and Political Science; Literature and Languages; Physical Education and Sport; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLVNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019646&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19646"><input class="case" type="checkbox" onClick="Coche(19646,0);" name="result[]" id="19646" value="19646"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19646" id="result19646" title="Expand result">
+		    <span>Expand result for </span>Mohamed Lamine Debaghine University of Setif 2</a></h3>
+		  <p class="i_name">
+		Université Mohamed Lamine Debaghine de Sétif 2		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>El Khier Guechi (Head) &ndash; Khaled Hadna (Senior Administrative Officer) &ndash; Naoual Mami (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Humanities and Social Sciences; Law and Political Sciences; Literature and Languages</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLSM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019779&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19779"><input class="case" type="checkbox" onClick="Coche(19779,0);" name="result[]" id="19779" value="19779"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19779" id="result19779" title="Expand result">
+		    <span>Expand result for </span>Mohamed Seddik Ben Yahia University of Jijel</a></h3>
+		  <p class="i_name">
+		Université Mohamed Seddik Ben Yahia de Jijel		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Salah Kaouache (Head) &ndash; Omar Bouhali (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Science; Economics, Commerce and Management; Human and Social Sciences; Law and Political Sciences; Letters, Languages and Social Sciences; Natural and Life Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLVNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019787&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19787"><input class="case" type="checkbox" onClick="Coche(19787,0);" name="result[]" id="19787" value="19787"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19787" id="result19787" title="Expand result">
+		    <span>Expand result for </span>Mouloud Mammeri University of Tizi-Ouzou</a></h3>
+		  <p class="i_name">
+		Université Mouloud Mammeri de Tizi-Ouzou (UMMTO)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Said Ouerdane (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Amazighes Languages and Literature; Arabic Languages and Literature; Earth Science; Economics, Commerce and Management; Humanities and Social Sciences; Law and Political Sciences; Life and Natural Sciences; Literature and Modern Languages; Mathematics and Computer Science; Medicine; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLiM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019617&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19617"><input class="case" type="checkbox" onClick="Coche(19617,0);" name="result[]" id="19617" value="19617"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19617" id="result19617" title="Expand result">
+		    <span>Expand result for </span>Mustapha Stambouli  University of Mascara</a></h3>
+		  <p class="i_name">
+		Université Mustapha Stambouli de Mascara		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelkader Khaldi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Exact Science; Humanities and Social Sciences; Law and Administration; Literature and Languages; Natural and Life Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLDM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004157&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4157"><input class="case" type="checkbox" onClick="Coche(4157,0);" name="result[]" id="4157" value="4157"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4157" id="result4157" title="Expand result">
+		    <span>Expand result for </span>National Graduate School of Political Science</a></h3>
+		  <p class="i_name">
+		Ecole nationale supérieure de Sciences politiques		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mhand Berkouk (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Military and Strategic Studies; Political Sociology and International Relations; Public Policy; Regional Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRVLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008066&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8066"><input class="case" type="checkbox" onClick="Coche(8066,0);" name="result[]" id="8066" value="8066"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result8066" id="result8066" title="Expand result">
+		    <span>Expand result for </span>National Institute of Post, Information and Communication Technologies</a></h3>
+		  <p class="i_name">
+		Institut national de la Poste et des Technologies de l'Information et de la Communication (INPTIC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Saad Boukers (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Communication; Telecommunications and Computer Networks</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI2BWLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008084&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8084"><input class="case" type="checkbox" onClick="Coche(8084,0);" name="result[]" id="8084" value="8084"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result8084" id="result8084" title="Expand result">
+		    <span>Expand result for </span>National Institute of Telecommunications and Information and Communication Technologies</a></h3>
+		  <p class="i_name">
+		Institut National des Télécommunications et des Technologies de l'Information et de la Communication (INTTIC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rachid Nourine (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Information and Communications Technology; Telecommunications Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI2BYLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004172&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4172"><input class="case" type="checkbox" onClick="Coche(4172,0);" name="result[]" id="4172" value="4172"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4172" id="result4172" title="Expand result">
+		    <span>Expand result for </span>National Marine Science and Coastal Management School</a></h3>
+		  <p class="i_name">
+		Ecole nationale supérieure des Sciences de la Mer et de l'Aménagement du Littoral (ENSSMAL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Boualem Hamdi (Head) &ndash; Djamel Bouslimane (Senior Administrative Officer) &ndash; Souhila Alouache (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Environmental Studies and Coastal Planning; Living Resources</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRXLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004122&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4122"><input class="case" type="checkbox" onClick="Coche(4122,0);" name="result[]" id="4122" value="4122"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4122" id="result4122" title="Expand result">
+		    <span>Expand result for </span>National Polytechnic of Oran</a></h3>
+		  <p class="i_name">
+		Ecole nationale polytechnique d'Oran (ENPO)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelbaki Benziane (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Civil Engineering; Electrical Engineering; Languages; Management; Mathematics and Computer Science; Mechanical Engineering; Physics and Chemistry</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRSLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004121&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4121"><input class="case" type="checkbox" onClick="Coche(4121,0);" name="result[]" id="4121" value="4121"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4121" id="result4121" title="Expand result">
+		    <span>Expand result for </span>National Polytechnic School</a></h3>
+		  <p class="i_name">
+		Ecole nationale polytechnique (ENP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohammed Debyèche (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Automation; Chemical Engineering; Civil Engineering; Electrical Engineering; Electronics; Environmental Engineering; Hydraulic Engineering; Industrial Engineering; Languages; Mechanical Engineering; Metallurgical Engineering; Mining Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRSLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024061&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24061"><input class="case" type="checkbox" onClick="Coche(24061,0);" name="result[]" id="24061" value="24061"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24061" id="result24061" title="Expand result">
+		    <span>Expand result for </span>National Polytechnic School of Constantine</a></h3>
+		  <p class="i_name">
+		Ecole nationale polytechnique de Constantine		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Djamel Hamana (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Electronic, Electrotechnic and Automatic Engineering; Materials Engineering; Mechanical Engineering; Process Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLUMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004071&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4071"><input class="case" type="checkbox" onClick="Coche(4071,0);" name="result[]" id="4071" value="4071"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4071" id="result4071" title="Expand result">
+		    <span>Expand result for </span>National School of Administration</a></h3>
+		  <p class="i_name">
+		Ecole nationale d'administration (ENA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelhak Saihi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Finance; International Institutions; Law; Public Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tI2BXLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024063&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24063"><input class="case" type="checkbox" onClick="Coche(24063,0);" name="result[]" id="24063" value="24063"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24063" id="result24063" title="Expand result">
+		    <span>Expand result for </span>National School of Biotechnology</a></h3>
+		  <p class="i_name">
+		Ecole nationale supérieure de Biotechnologie (ENSB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hacène Bousseboua (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biotechnology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLUMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004173&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4173"><input class="case" type="checkbox" onClick="Coche(4173,0);" name="result[]" id="4173" value="4173"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4173" id="result4173" title="Expand result">
+		    <span>Expand result for </span>National School of Civil Engineering</a></h3>
+		  <p class="i_name">
+		Ecole nationale supérieure des Travaux publics (ENSTP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mahmoud Bensaibi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Civil Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRXLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004148&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4148"><input class="case" type="checkbox" onClick="Coche(4148,0);" name="result[]" id="4148" value="4148"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4148" id="result4148" title="Expand result">
+		    <span>Expand result for </span>National School of Computer Science</a></h3>
+		  <p class="i_name">
+		Ecole nationale supérieure d'Informatique (ESI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mouloud Koudil (Head) &ndash; M. Darterki (Senior Administrative Officer) &ndash; A. R. Ghomari (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRULmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024064&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24064"><input class="case" type="checkbox" onClick="Coche(24064,0);" name="result[]" id="24064" value="24064"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24064" id="result24064" title="Expand result">
+		    <span>Expand result for </span>National School of Computer Science Sidi Bel Abbès</a></h3>
+		  <p class="i_name">
+		Ecole nationale supérieure d'Informatique de Sidi Bel Abbès (ENSI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sidi Mohamed Benslimane (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLUMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024060&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24060"><input class="case" type="checkbox" onClick="Coche(24060,0);" name="result[]" id="24060" value="24060"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24060" id="result24060" title="Expand result">
+		    <span>Expand result for </span>National School of Journalism and Information Sciences</a></h3>
+		  <p class="i_name">
+		Ecole nationale supérieure de Journalisme et des Sciences de l'information (ENSJSI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdeslam Bezaoui (Head) &ndash; Fella Bourenane (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Journalism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLUNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004155&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4155"><input class="case" type="checkbox" onClick="Coche(4155,0);" name="result[]" id="4155" value="4155"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4155" id="result4155" title="Expand result">
+		    <span>Expand result for </span>National School of Management</a></h3>
+		  <p class="i_name">
+		Ecole nationale supérieure de Management		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hasna Amina Messaîd (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRVLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024062&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24062"><input class="case" type="checkbox" onClick="Coche(24062,0);" name="result[]" id="24062" value="24062"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24062" id="result24062" title="Expand result">
+		    <span>Expand result for </span>National School of of Mining and Metallurgy</a></h3>
+		  <p class="i_name">
+		Ecole nationale supérieure des Mines et de la Métallurgie (ENSMM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hacene Chadli (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Mining Engineering; Science and Materials Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008065&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8065"><input class="case" type="checkbox" onClick="Coche(8065,0);" name="result[]" id="8065" value="8065"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result8065" id="result8065" title="Expand result">
+		    <span>Expand result for </span>National School of Statistics and Applied Economics</a></h3>
+		  <p class="i_name">
+		École nationale supérieure de Statistique et d'Économie appliquée		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Zakane (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Planning and Statistics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI2BWLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004162&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4162"><input class="case" type="checkbox" onClick="Coche(4162,0);" name="result[]" id="4162" value="4162"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4162" id="result4162" title="Expand result">
+		    <span>Expand result for </span>National School of Technology</a></h3>
+		  <p class="i_name">
+		Ecole nationale supérieure de Technologie (ENST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tahar Benabid (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Electrical Engineering and Industrial Computing; Industrial Engineering and Maintenance; Logistics and Transport Engineering; Mechanical and Production Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRWLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004186&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4186"><input class="case" type="checkbox" onClick="Coche(4186,0);" name="result[]" id="4186" value="4186"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4186" id="result4186" title="Expand result">
+		    <span>Expand result for </span>National School of Veterinary Science</a></h3>
+		  <p class="i_name">
+		Ecole nationale supérieure vétérinaire d'Alger (ENSV)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Badis Bendeddouche (Head) &ndash; Imène Ilès (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRYLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024020&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24020"><input class="case" type="checkbox" onClick="Coche(24020,0);" name="result[]" id="24020" value="24020"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24020" id="result24020" title="Expand result">
+		    <span>Expand result for </span>Nour Bachir University Centre of El Bayadh</a></h3>
+		  <p class="i_name">
+		Centre Universitaire Nour Bachir d'El Bayadh (CUNB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Bouziani Merahi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Human and Social Sciences; Law and Political Sciences; Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLENgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004179&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4179"><input class="case" type="checkbox" onClick="Coche(4179,0);" name="result[]" id="4179" value="4179"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4179" id="result4179" title="Expand result">
+		    <span>Expand result for </span>Rachid Harraïgue Dely Ibrahim National School of Sports Science</a></h3>
+		  <p class="i_name">
+		Ecole nationale supérieure en Sciences et Technologie du Sport Rachid Harraïgue Dely Ibrahim (ENS/STS "Rachid Harraïgue")		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdenacer Bentoumi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Sports</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRXLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019830&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19830"><input class="case" type="checkbox" onClick="Coche(19830,0);" name="result[]" id="19830" value="19830"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19830" id="result19830" title="Expand result">
+		    <span>Expand result for </span>Saad Dahlab University of Blida</a></h3>
+		  <p class="i_name">
+		Université Saad Dahlab de Blida (USDB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tahar Abadlia (Head) &ndash; Saliha Oukid-Khouas (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Aeronautical and Aerospace Engineering; Architecture and Town Planning; Life and Natural Sciences; Medicine; Sciences; Technology; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLFNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024019&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24019"><input class="case" type="checkbox" onClick="Coche(24019,0);" name="result[]" id="24019" value="24019"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24019" id="result24019" title="Expand result">
+		    <span>Expand result for </span>Salhi Ahmed University centre of Naama</a></h3>
+		  <p class="i_name">
+		Centre Universitaire Salhi Ahmed de Naama		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abderrazak Marouf (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Law and Political Sciences; Modern Languages and Literature; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLDNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004207&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4207"><input class="case" type="checkbox" onClick="Coche(4207,0);" name="result[]" id="4207" value="4207"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4207" id="result4207" title="Expand result">
+		    <span>Expand result for </span>School of Architecture and Town Planning</a></h3>
+		  <p class="i_name">
+		Ecole polytechnique d'Architecture et d'Urbanisme (EPAU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Salah Zerouala (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Town Planning</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyhQLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004258&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4258"><input class="case" type="checkbox" onClick="Coche(4258,0);" name="result[]" id="4258" value="4258"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4258" id="result4258" title="Expand result">
+		    <span>Expand result for </span>School of Banking</a></h3>
+		  <p class="i_name">
+		Ecole supérieure de Banque (ESB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nadia Temmar (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Banking</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyhVLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004023&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4023"><input class="case" type="checkbox" onClick="Coche(4023,0);" name="result[]" id="4023" value="4023"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4023" id="result4023" title="Expand result">
+		    <span>Expand result for </span>School of Commerce</a></h3>
+		  <p class="i_name">
+		Ecole des Hautes Etudes Commerciales (HEC Alger)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nacer Dadi-Addoun (Head) &ndash; Abderrahmane Benmadi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accounting and Audit; Business Management; Enterprise Management; Human Resources and Communication; International Business; Management; Marketing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tI2BSLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004104&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4104"><input class="case" type="checkbox" onClick="Coche(4104,0);" name="result[]" id="4104" value="4104"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4104" id="result4104" title="Expand result">
+		    <span>Expand result for </span>School of Health Management and Administration</a></h3>
+		  <p class="i_name">
+		Ecole nationale de Management et de l'Administration de la Santé (ENMAS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Djemai (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRQLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004292&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4292"><input class="case" type="checkbox" onClick="Coche(4292,0);" name="result[]" id="4292" value="4292"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4292" id="result4292" title="Expand result">
+		    <span>Expand result for </span>School of Magistracy</a></h3>
+		  <p class="i_name">
+		Ecole supérieure de la Magistrature (ESM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mabrouk Hocine (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyhZLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019565&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19565"><input class="case" type="checkbox" onClick="Coche(19565,0);" name="result[]" id="19565" value="19565"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19565" id="result19565" title="Expand result">
+		    <span>Expand result for </span>Tahri Mohammed Béchar University</a></h3>
+		  <p class="i_name">
+		Université Tahri Mohammed Béchar		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Boudjemaa Abbaci (Head) &ndash; Lahcen Djamaai (Senior Administrative Officer) &ndash; Mohammed Djarmane (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Management and Commerce; Electrical Engineering; Exact Sciences; Humanities and Social Sciences; Law and Political Science; Life and Natural Sciences; Literature and Languages; Medicine; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLUM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024065&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24065"><input class="case" type="checkbox" onClick="Coche(24065,0);" name="result[]" id="24065" value="24065"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24065" id="result24065" title="Expand result">
+		    <span>Expand result for </span>Teacher Training School of  Bouzaréah</a></h3>
+		  <p class="i_name">
+		Ecole normale supérieure de Bouzaréah		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arabic; English; French; History and Geography; Philosophy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLUM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004198&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4198"><input class="case" type="checkbox" onClick="Coche(4198,0);" name="result[]" id="4198" value="4198"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result4198" id="result4198" title="Expand result">
+		    <span>Expand result for </span>Teacher Training School of Kouba</a></h3>
+		  <p class="i_name">
+		Ecole normale supérieure de Kouba (ENS-Kouba)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelhamid Meraghni (Head) &ndash; Omar Guenane (Senior Administrative Officer) &ndash; Abdelmalek Bouzari (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Chemistry; Computer Science; Distance Education; Educational Sciences; Mathematics; Music; Natural Sciences; Physics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyRZLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024071&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24071"><input class="case" type="checkbox" onClick="Coche(24071,0);" name="result[]" id="24071" value="24071"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24071" id="result24071" title="Expand result">
+		    <span>Expand result for </span>Teacher Training School of Laghouat</a></h3>
+		  <p class="i_name">
+		Ecole normale supérieure de Laghouat		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Khaled Bouzayna (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arabic and Philosopy; English; French; Mathematics; Physics; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLVMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024077&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24077"><input class="case" type="checkbox" onClick="Coche(24077,0);" name="result[]" id="24077" value="24077"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24077" id="result24077" title="Expand result">
+		    <span>Expand result for </span>Teacher Training School of Mostaganem</a></h3>
+		  <p class="i_name">
+		Ecole normale supérieure de Mostaganem (ENS Mostaganem)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelkader Mazari (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arabic; Exact Sciences; French</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLVM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024072&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24072"><input class="case" type="checkbox" onClick="Coche(24072,0);" name="result[]" id="24072" value="24072"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24072" id="result24072" title="Expand result">
+		    <span>Expand result for </span>Technical and Teacher Training School of Skikda</a></h3>
+		  <p class="i_name">
+		Ecole normale supérieure d'enseignement technologique de Skikda (ENSET Skikda)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Civil Engineering; Electronic Engineering; Mathematics and Computer Science; Mechanical Engineering; Natural Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLVMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019485&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19485"><input class="case" type="checkbox" onClick="Coche(19485,0);" name="result[]" id="19485" value="19485"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19485" id="result19485" title="Expand result">
+		    <span>Expand result for </span>University Aboubekr Belkaid of Tlemcen</a></h3>
+		  <p class="i_name">
+		Université Aboubekr Belkaid de Tlemcen		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Djafour Mustapha (Head) &ndash; Tewfik Benghabrit Mohamed (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Humanities and Social Sciences; Law and Political Science; Letters and Languages; Medicine; Natural and Life Sciences, Earth and Universe Sciences; Sciences; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RULiM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019543&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19543"><input class="case" type="checkbox" onClick="Coche(19543,0);" name="result[]" id="19543" value="19543"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19543" id="result19543" title="Expand result">
+		    <span>Expand result for </span>University of Algiers 3</a></h3>
+		  <p class="i_name">
+		Université d'Alger 3		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rabah  Cheriet (Head) &ndash; Ali Abdullah (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Business and Management; Information Sciences and Communication Studies; Physical Education and Sports; Political Sciences and International Relations</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLSMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019726&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19726"><input class="case" type="checkbox" onClick="Coche(19726,0);" name="result[]" id="19726" value="19726"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19726" id="result19726" title="Expand result">
+		    <span>Expand result for </span>University of Batna 1</a></h3>
+		  <p class="i_name">
+		Université de Batna 1 &ndash; Hadj Lakhdar		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdeslam Dif (Head) &ndash; Samir Chaabane (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Town Planning; Economics, Commerce and Management; Humanities and Social Sciences; Islamic Studies; Law and Political Sciences; Literature, Languages and Arts; Medicine; Science; Technology; Veterinary Science and Agronomy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLEM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024028&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24028"><input class="case" type="checkbox" onClick="Coche(24028,0);" name="result[]" id="24028" value="24028"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24028" id="result24028" title="Expand result">
+		    <span>Expand result for </span>University of Batna 2</a></h3>
+		  <p class="i_name">
+		Université de Batna 2		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tayeb Bouzid (Head) &ndash; Mabrouk Khireddine (Senior Administrative Officer) &ndash; Kamel Lebchek (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering; Hygiene and Safety Engineering; Literature and Foreign Languages; Mathematics and Computer Science; Medicine; Natural and Life Science; Physical Education and Sports; Universe and Earth Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLENAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024027&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24027"><input class="case" type="checkbox" onClick="Coche(24027,0);" name="result[]" id="24027" value="24027"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24027" id="result24027" title="Expand result">
+		    <span>Expand result for </span>University of Constantine 3</a></h3>
+		  <p class="i_name">
+		Université de Constantine 3		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>H. Boukerzaza (Head) &ndash; Abdelhamid Zella (Senior Administrative Officer) &ndash; Chawki Benabbes (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Town Planning; Fine Arts and Culture; Information Science, Communication and Audiovisual; Materials Engineering; Medicine; Political Sciences; Urban Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLEM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024024&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24024"><input class="case" type="checkbox" onClick="Coche(24024,0);" name="result[]" id="24024" value="24024"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result24024" id="result24024" title="Expand result">
+		    <span>Expand result for </span>University of Continuing Education</a></h3>
+		  <p class="i_name">
+		Université de la Formation Continue (UFC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Houd Mouissa Djamel (Head) &ndash; Souad Boulahia (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Postgraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLEMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019588&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19588"><input class="case" type="checkbox" onClick="Coche(19588,0);" name="result[]" id="19588" value="19588"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19588" id="result19588" title="Expand result">
+		    <span>Expand result for </span>University of Ghardaia</a></h3>
+		  <p class="i_name">
+		Université de Ghardaia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Belkheir Dadda-Moussa (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Law and Political Science; Literatures and Languages; Natural, Life and Earth Sciences; Science and Technology; Social Sciences and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLiNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019855&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19855"><input class="case" type="checkbox" onClick="Coche(19855,0);" name="result[]" id="19855" value="19855"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Algeria</p>
+				  <h3>
+		    <a href="#result19855" id="result19855" title="Expand result">
+		    <span>Expand result for </span>Ziane Achour University of Djelfa</a></h3>
+		  <p class="i_name">
+		Université Ziane Achour de Djelfa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ali Choukri (Head) &ndash; Mohamed Teta (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Commerce and Management; Law and Political Sciences; Modern Languages and Literature; Natural and Life Sciences; Physical Education; Science and Media Studies; Science and Technology; Social Sciences and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLTM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 92 of 92</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria" selected>Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

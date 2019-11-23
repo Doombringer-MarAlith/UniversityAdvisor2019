@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Malaysia')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Malaysia)">
+	    <input type="hidden" class="envoi" name="total" value="80">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Malaysia">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">80 results found for <strong>(Country=Malaysia)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 80 of 80</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-008103&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="8103"><input class="case" type="checkbox" onClick="Coche(8103,0);" name="result[]" id="8103" value="8103"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result8103" id="result8103" title="Expand result">
+		    <span>Expand result for </span>AIMST University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_8103_logo.jpg" /></h3>
+		  <p class="i_name">
+		Asian Institute of Medical, Science and Technology (AIMST)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.aimst.edu.my" href="images/IAUMembers/8103_1.jpg" class="fancybox" rel="gallery8103"><img class="img" src="images/IAUMembers/s_8103_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.aimst.edu.my" href="images/IAUMembers/8103_2.jpg" class="fancybox" rel="gallery8103"><img class="img" src="images/IAUMembers/s_8103_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.aimst.edu.my" href="images/IAUMembers/8103_3.jpg" class="fancybox" rel="gallery8103"><img class="img" src="images/IAUMembers/s_8103_3.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.aimst.edu.my" href="images/IAUMembers/8103_4.jpg" class="fancybox" rel="gallery8103"><img class="img" src="images/IAUMembers/s_8103_4.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ravichandran Manickam (Head) &ndash; Megat Nazahar Bin Megat Shuib (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Allied Health Professions; Applied Sciences; Business and Management; Dentistry; Engineering and Computer Technology; Medicine; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uIyRQLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019935&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19935"><input class="case" type="checkbox" onClick="Coche(19935,0);" name="result[]" id="19935" value="19935"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19935" id="result19935" title="Expand result">
+		    <span>Expand result for </span>Islamic Science University of Malaysia</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19935_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universiti Sains Islam Malaysia &ndash; Jami'ah Al'Ulum Al Islamiyyah Al Malasiyyah (USIM)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.usim.edu.my" href="images/IAUMembers/19935_1.jpg" class="fancybox" rel="gallery19935"><img class="img" src="images/IAUMembers/s_19935_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.usim.edu.my" href="images/IAUMembers/19935_2.jpg" class="fancybox" rel="gallery19935"><img class="img" src="images/IAUMembers/s_19935_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Musa Ahmad Fasc (Head) &ndash; Zulkiple Abd Ghani (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Economics and Muamalat; Engineering and Built Environment; Graduate Studies; Leadership and Management; Major Language Studies; Medicine and Health Sciences; Quranic and Sunnah Studies; Science and Technology; Shariah and Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLFM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010477&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="10477"><input class="case" type="checkbox" onClick="Coche(10477,0);" name="result[]" id="10477" value="10477"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result10477" id="result10477" title="Expand result">
+		    <span>Expand result for </span>Lincoln University College</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_10477_logo.png" /></h3>
+		  <p class="i_name">
+		Kolej Universiti Lincoln		  </p>
+		 <p class="gallery">
+				  <a title="http://www.lincoln.edu.my" href="images/IAUMembers/10477_2.jpg" class="fancybox" rel="gallery10477"><img class="img" src="images/IAUMembers/s_10477_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.lincoln.edu.my" href="images/IAUMembers/10477_1.jpg" class="fancybox" rel="gallery10477"><img class="img" src="images/IAUMembers/s_10477_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hajjah Bibi Florina Abdullah (Head) &ndash; Amiya Bhaumik (Senior Administrative Officer) &ndash; Norman Madsen (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Allied Health Science; Business, Acounting, and Hospitality Management; Information Technology and Enginerring; Medicine and Dentistry; Pharmacy; Postgraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULVM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025038&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="25038"><input class="case" type="checkbox" onClick="Coche(25038,0);" name="result[]" id="25038" value="25038"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result25038" id="result25038" title="Expand result">
+		    <span>Expand result for </span>Quest International University Perak</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_25038_logo.jpg" /></h3>
+		  <p class="i_name">
+		 (QIUP)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.qiup.edu.my" href="images/IAUMembers/25038_2.jpg" class="fancybox" rel="gallery25038"><img class="img" src="images/IAUMembers/s_25038_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.qiup.edu.my" href="images/IAUMembers/25038_3.jpg" class="fancybox" rel="gallery25038"><img class="img" src="images/IAUMembers/s_25038_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Raman Narayanasamy (Head) &ndash; Noor Aisyah Mohd Yusuff (Senior Administrative Officer) &ndash; Nicholas Goh (Senior Administrative Officer) &ndash; Muhammad Omar (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Management; Centre for Angiogenesis and Natural Product Research; Centre for Infectious Diseases and Parasitology Research; Centre for Pharmaceutical Research; Centre for Professional and Continuing Education; Data Ecosystem Research and Development Centre; English Language; Medicine; Pharmacy; Research and Innovation; Science and Technology; Social Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRQLFNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019939&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19939"><input class="case" type="checkbox" onClick="Coche(19939,0);" name="result[]" id="19939" value="19939"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19939" id="result19939" title="Expand result">
+		    <span>Expand result for </span>Technical University Malaysia Melaka</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19939_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universiti Teknikal Malaysia Melaka (UTeM)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.utem.edu.my" href="images/IAUMembers/19939_1.jpg" class="fancybox" rel="gallery19939"><img class="img" src="images/IAUMembers/s_19939_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.utem.edu.my" href="images/IAUMembers/19939_2.jpg" class="fancybox" rel="gallery19939"><img class="img" src="images/IAUMembers/s_19939_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Raha Abdul Rahim (Head) &ndash; Mohd Razali Bin Muhamad (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Electrical Engineering; Electronics and Computer Engineering; Engineering Technology; Graduate Studies; Information and Communication Technology; Languages and Human Development; Manufacturing Engineering; Mechanical Engineering; Technology Management and Technopreneurship</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLFNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019923&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19923"><input class="case" type="checkbox" onClick="Coche(19923,0);" name="result[]" id="19923" value="19923"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19923" id="result19923" title="Expand result">
+		    <span>Expand result for </span>University of Malaya</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19923_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universiti Malaya (UM)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.um.edu.my" href="images/IAUMembers/19923_1.jpg" class="fancybox" rel="gallery19923"><img class="img" src="images/IAUMembers/s_19923_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.um.edu.my" href="images/IAUMembers/19923_2.jpg" class="fancybox" rel="gallery19923"><img class="img" src="images/IAUMembers/s_19923_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.um.edu.my" href="images/IAUMembers/19923_3.jpg" class="fancybox" rel="gallery19923"><img class="img" src="images/IAUMembers/s_19923_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdul Rahim Hashim (Head) &ndash; Yong Zulina Zubairi (Senior Administrative Officer) &ndash; Noorsaadah Abdul Rahman (Senior Administrative Officer) &ndash; Kamila Ghazali (International Relations Officer) &ndash; Yvonne Lim Ai Lian (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Social Sciences; Asia-Europe; Built Environment; Business and Accountancy; China Studies; Civilization Dialogue; Computer Science and Information Technology; Culture; Dentistry; Economics and Administration; Education; Engineering; Foundation Studies in Science; Graduate Studies; Islamic Studies; Languages and Linguistics; Law; Malay Studies; Medicine; Principalship Studies; Public Policy and Management; Research Management and Consultancy; Science; Sports</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLEMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019918&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19918"><input class="case" type="checkbox" onClick="Coche(19918,0);" name="result[]" id="19918" value="19918"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19918" id="result19918" title="Expand result">
+		    <span>Expand result for </span>University of Selangor</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19918_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universiti Selangor (UNISEL)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.unisel.edu.my" href="images/IAUMembers/19918_1.jpg" class="fancybox" rel="gallery19918"><img class="img" src="images/IAUMembers/s_19918_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.unisel.edu.my" href="images/IAUMembers/19918_2.jpg" class="fancybox" rel="gallery19918"><img class="img" src="images/IAUMembers/s_19918_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.unisel.edu.my" href="images/IAUMembers/19918_3.jpg" class="fancybox" rel="gallery19918"><img class="img" src="images/IAUMembers/s_19918_3.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.unisel.edu.my" href="images/IAUMembers/19918_4.jpg" class="fancybox" rel="gallery19918"><img class="img" src="images/IAUMembers/s_19918_4.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohammad Redzuan Othman (Head) &ndash; Mohd Nor bin Nawawi (Senior Administrative Officer) &ndash; Eric Buantai (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Accountancy; Communication, Visual Art and Computing; Education and Social Sciences; Engineering and Life Sciences; Foundation and General Studies; Graduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLDNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019940&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19940"><input class="case" type="checkbox" onClick="Coche(19940,0);" name="result[]" id="19940" value="19940"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19940" id="result19940" title="Expand result">
+		    <span>Expand result for </span>University of Technology Malaysia</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19940_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universiti Teknologi Malaysia (UTM)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.utm.my" href="images/IAUMembers/19940_1.jpg" class="fancybox" rel="gallery19940"><img class="img" src="images/IAUMembers/s_19940_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Wahid bin Omar (Head) &ndash; Zawawi bin Wan Abd. Rahman (Senior Administrative Officer) &ndash; Mohd. Ismail Bin Abdul Aziz (International Relations Officer) &ndash; Zainuddin Abdul Manan (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Informatics (AIS); Advanced Informatics Studies (AIS); Azman Hashim International Business School (IBS); Biosciences and Medical Engineering; Built Environment; Chemical and Energy Engineering; Civil Engineering; Computer Science; Education; Electrical Engineering; Graduate Studies; Islamic Civilization; Language; Malaysia-Japan International Institute of Technology (MJIIT); Management; Mechanical Engineering; Perdana School of Science Technology and Innovation Policy; Professional and Continuing Education (SPACE); Razak School of Engineering and Advanced Technology; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLSNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019933&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19933"><input class="case" type="checkbox" onClick="Coche(19933,0);" name="result[]" id="19933" value="19933"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19933" id="result19933" title="Expand result">
+		    <span>Expand result for </span>University Putra Malaysia</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19933_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universiti Putra Malaysia (UPM)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.upm.edu.my" href="images/IAUMembers/19933_1.jpg" class="fancybox" rel="gallery19933"><img class="img" src="images/IAUMembers/s_19933_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.upm.edu.my" href="images/IAUMembers/19933_2.jpg" class="fancybox" rel="gallery19933"><img class="img" src="images/IAUMembers/s_19933_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Aini Ideris Ideris (Head) &ndash; Iqbal Saripan (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Technology; Agricultural and Food Policy Studies; Agriculture; Agriculture and Food Sciences (UPMKB); Bioscience; Biotechnology and Biomolecular Sciences; Business; Computer Science and Information Technology; Design and Architecture; Economics and Management; Educational Studies; Engineering; Environmental Studies; Food Science and Technology; Forestry; Foundation Studies for Agricultural Science; Gerontology; Graduate Studies; Halal Product Research; Human Ecology; Mathematical Research; Medicine and Health Sciences; Modern Languages and Communication; Science; Social Science Studies; Sports; Tropical Agriculture; Tropical Forestry and Forest Product; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019936&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19936"><input class="case" type="checkbox" onClick="Coche(19936,0);" name="result[]" id="19936" value="19936"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19936" id="result19936" title="Expand result">
+		    <span>Expand result for </span>University Sains Malaysia</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19936_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universiti Sains Malaysia (USM)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.usm.my" href="images/IAUMembers/19936_1.jpg" class="fancybox" rel="gallery19936"><img class="img" src="images/IAUMembers/s_19936_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.usm.my" href="images/IAUMembers/19936_2.jpg" class="fancybox" rel="gallery19936"><img class="img" src="images/IAUMembers/s_19936_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.usm.my" href="images/IAUMembers/19936_3.jpg" class="fancybox" rel="gallery19936"><img class="img" src="images/IAUMembers/s_19936_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Asma Ismail (Head) &ndash; Musa Ali (Senior Administrative Officer) &ndash; Anees Janee Ali (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Archaeological Research; Arts; Biological Sciences; Chemical Sciences; Communication; Computer Science; Distance Education; Drug Research; Educational Studies; Engineering; Health; Higher Education Research; Housing, Building and Planning; Humanities; Industrial Technology; Information Technology; Instructional Technology and Media; Islamic Centre; Languages, Literacies and Translation; Management; Marine and Coastal Studies; Mathematical Sciences; Pharmaceutical Sciences; Physics; Policy Research and International Studies; Research in Molecular Medicine; Social Sciences; Women's Studies and Youth Development</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLFM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000785&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="785"><input class="case" type="checkbox" onClick="Coche(785,0);" name="result[]" id="785" value="785"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result785" id="result785" title="Expand result">
+		    <span>Expand result for </span>Al-Madinah International University</a></h3>
+		  <p class="i_name">
+		 (MEDIU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohammad Khalifa Al-Tamimi (Head) &ndash; Khalid Mahamat Idriss Ahmat (Senior Administrative Officer) &ndash; Ahmed Al-Shiha (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer and Information Technology; Education; Engineering; Finance and Administrative Sciences; Islamic Sciences; Languages; Postgraduate Studies; Preparatory Studies and Languages</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0tU0BVCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001127&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1127"><input class="case" type="checkbox" onClick="Coche(1127,0);" name="result[]" id="1127" value="1127"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result1127" id="result1127" title="Expand result">
+		    <span>Expand result for </span>Asia e University</a></h3>
+		  <p class="i_name">
+		 (AeU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Dato Ansary Ahmed (Head) &ndash; Mak Chai (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts, Humanities and Social Sciences; Education; Graduate Studies; Information and Communication Technology; Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMyRSLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025365&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25365"><input class="case" type="checkbox" onClick="Coche(25365,0);" name="result[]" id="25365" value="25365"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25365" id="result25365" title="Expand result">
+		    <span>Expand result for </span>Asia Metropolitan University</a></h3>
+		  <p class="i_name">
+		 (AMU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mahmood Nazar Mohamed (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Information Technology; Foundation Studies; Medicine; Nursing; Pharmacy; Postgraduate Studies; Therapeutic Healthcare</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLUM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001130&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1130"><input class="case" type="checkbox" onClick="Coche(1130,0);" name="result[]" id="1130" value="1130"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result1130" id="result1130" title="Expand result">
+		    <span>Expand result for </span>Asia Pacific University of Technology and Innovation</a></h3>
+		  <p class="i_name">
+		 (APU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ron Edwards (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business, Management, Marketing, Tourism and Media; Computing, Technology and Games Development; Engineering; Postgraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMyRTLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025426&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25426"><input class="case" type="checkbox" onClick="Coche(25426,0);" name="result[]" id="25426" value="25426"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25426" id="result25426" title="Expand result">
+		    <span>Expand result for </span>BERJAYA University College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Walter Wong (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Culinary Arts; Liberal Arts; Professional Development</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRULEM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001669&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1669"><input class="case" type="checkbox" onClick="Coche(1669,0);" name="result[]" id="1669" value="1669"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result1669" id="result1669" title="Expand result">
+		    <span>Expand result for </span>Binary University of Management and Entrepreneurship</a></h3>
+		  <p class="i_name">
+		 (BUME)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Joseph Adaikalam (Head) &ndash; Rohini Devi Sinnadurai (Senior Administrative Officer) &ndash; Gilbert Alvin (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Finance; Business Administration; Entrepreneurship Development; Postgraduate; Technology Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzhWLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025366&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25366"><input class="case" type="checkbox" onClick="Coche(25366,0);" name="result[]" id="25366" value="25366"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25366" id="result25366" title="Expand result">
+		    <span>Expand result for </span>City University</a></h3>
+		  <p class="i_name">
+		 (City U)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Noridah Ibrahim (Head) &ndash; Rosnizah Shaari (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Allied Health Sciences; Architecture and Built Environment; Art and Design; Business; CCSP (City Career Specialist Programme); City Graduate School; Education and Liberal Studies; Engineering; Foundation Studies; Hospitality and Tourism; Information Technology; Online Distance Learning (ODL)</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLUM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003439&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3439"><input class="case" type="checkbox" onClick="Coche(3439,0);" name="result[]" id="3439" value="3439"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result3439" id="result3439" title="Expand result">
+		    <span>Expand result for </span>Cyberjaya University College of Medical Sciences</a></h3>
+		  <p class="i_name">
+		 (CUCMS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamad Abdul Razak (Head) &ndash; Abdul Latiff Mohamed (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Allied Health Sciences; Business and Management; Medicine; Pharmacy; Traditional and Complimentary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUzBTLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025367&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25367"><input class="case" type="checkbox" onClick="Coche(25367,0);" name="result[]" id="25367" value="25367"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25367" id="result25367" title="Expand result">
+		    <span>Expand result for </span>GlobalNxt University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Wing Lam (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Banking and Finance; Business Administration; Information Technology Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLUM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019917&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19917"><input class="case" type="checkbox" onClick="Coche(19917,0);" name="result[]" id="19917" value="19917"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19917" id="result19917" title="Expand result">
+		    <span>Expand result for </span>HELP University</a></h3>
+		  <p class="i_name">
+		Universiti HELP (HU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Paul Tuck Hoong Chan (Head) &ndash; Kim Hoong Khong (Senior Administrative Officer) &ndash; Trille Siow (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Sciences and Multimedia; Behavioural Sciences; Business, Economics and Accounting; Crime and Criminology; Education; HELP Graduate School; Hospitality and Tourism ; Humanities and Social Sciences; Law and Government; Psychology and Counseling</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLDM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010474&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10474"><input class="case" type="checkbox" onClick="Coche(10474,0);" name="result[]" id="10474" value="10474"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result10474" id="result10474" title="Expand result">
+		    <span>Expand result for </span>Infrastructure University Kuala Lumpur</a></h3>
+		  <p class="i_name">
+		Universiti Infrastruktur Kuala Lumpur (IKUL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Roslan Zainal Abidin (Head) &ndash; Christiantine Della (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Science and Foundation Studies; Architecture and Built Environment; Arts, Communication and Education; Business and Accounting; Creative Media and Innovative Technology; Engineering and Technology Infrastructure; Postgraduate Studies (CPS); Research Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULVMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010475&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10475"><input class="case" type="checkbox" onClick="Coche(10475,0);" name="result[]" id="10475" value="10475"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result10475" id="result10475" title="Expand result">
+		    <span>Expand result for </span>INSANIAH University College</a></h3>
+		  <p class="i_name">
+		Kolej Universiti INSANIAH (KUIN)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fakhrudin bin Abdul Mukti (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arabic; Business Administration; Engineering and Information Technology; Hospitality and Halal Services; Koran; Law and Islamic Law; Medicine and Surgery; Usuluddin</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULVM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009536&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9536"><input class="case" type="checkbox" onClick="Coche(9536,0);" name="result[]" id="9536" value="9536"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result9536" id="result9536" title="Expand result">
+		    <span>Expand result for </span>International Centre for Education in Islamic Finance</a></h3>
+		  <p class="i_name">
+		 (INCEIF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zeti Akhtar Abd Aziz (Head) &ndash; Azmi Omar (Senior Administrative Officer) &ndash; Muhammad Joydip Lahiri Abdullah (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Islamic Finance</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzRTLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019919&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19919"><input class="case" type="checkbox" onClick="Coche(19919,0);" name="result[]" id="19919" value="19919"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19919" id="result19919" title="Expand result">
+		    <span>Expand result for </span>International Islamic University Malaysia</a></h3>
+		  <p class="i_name">
+		Universiti Islam Antarabangsa Malaysia (IIUM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Dzulkifli Abdul Razak (Head) &ndash; Mohd. Hilmi Wan Kamal (Senior Administrative Officer) &ndash; Abdelaziz Berghout (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Environmental Design; Economics and Management; Education; Engineering; Information and Communication Technology; Islamic Revealed Knowledge and Human Sciences; Islamic Thought and Civilization; Law; Medicine and Healthcare; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLDNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019932&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19932"><input class="case" type="checkbox" onClick="Coche(19932,0);" name="result[]" id="19932" value="19932"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19932" id="result19932" title="Expand result">
+		    <span>Expand result for </span>International Medical University</a></h3>
+		  <p class="i_name">
+		Universiti Perubatan Antarabangsa (IMU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdul Aziz Baba (Head) &ndash; Noraidah Yusoff (Senior Administrative Officer) &ndash; Toh Chooi Gait (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Health Sciences; Medicine; Pharmacy; Postgraduate Studies and Research ; Pre-University</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLFMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009582&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9582"><input class="case" type="checkbox" onClick="Coche(9582,0);" name="result[]" id="9582" value="9582"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result9582" id="result9582" title="Expand result">
+		    <span>Expand result for </span>International University College of Technology Twintech</a></h3>
+		  <p class="i_name">
+		 (TWINTECH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tengku Abdul Aziz bin Tengku Zainal (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Built Environment; Business and Finance; Hospitality and Applied Management; Optometry</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzRYLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025368&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25368"><input class="case" type="checkbox" onClick="Coche(25368,0);" name="result[]" id="25368" value="25368"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25368" id="result25368" title="Expand result">
+		    <span>Expand result for </span>International University of Malaya-Wales</a></h3>
+		  <p class="i_name">
+		 (IUMW)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Datin Adib Muliyani binti Mohd Amin (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Business and Law; Foundation Studies; Health and Social Science; Language and Malaysia Studies; Science, Technology, Engineering and Mathematics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLUNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010472&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10472"><input class="case" type="checkbox" onClick="Coche(10472,0);" name="result[]" id="10472" value="10472"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result10472" id="result10472" title="Expand result">
+		    <span>Expand result for </span>Inti International University</a></h3>
+		  <p class="i_name">
+		Universiti Antarabangsa Inti		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Allan Fisher (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Art and Design; Biotechnology and Life Sciences; Computing and Information Technology; Engineering; Health Sciences; Hospitality; Law; Postgraduate</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULVMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025377&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25377"><input class="case" type="checkbox" onClick="Coche(25377,0);" name="result[]" id="25377" value="25377"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25377" id="result25377" title="Expand result">
+		    <span>Expand result for </span>Islamic University of Malaysia</a></h3>
+		  <p class="i_name">
+		Universiti Islam Malaysia (UIM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohd Yusof Noor (Head) &ndash; Muhamad Haitamin Ishak (Senior Administrative Officer) &ndash; Muhammad Muda (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Hertigae and Civilization; Law and Siaryah; Management and Finance; Well Being</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLVM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025427&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25427"><input class="case" type="checkbox" onClick="Coche(25427,0);" name="result[]" id="25427" value="25427"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25427" id="result25427" title="Expand result">
+		    <span>Expand result for </span>KDU University College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Pang Leang Hiew (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Communication and Creative Arts; Computing and Creative Media; Engineering; English Language; Hospitality, Tourism and Culinary Arts; Postgraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRULEM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025429&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25429"><input class="case" type="checkbox" onClick="Coche(25429,0);" name="result[]" id="25429" value="25429"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25429" id="result25429" title="Expand result">
+		    <span>Expand result for </span>KPJ Healthcare University College</a></h3>
+		  <p class="i_name">
+		 (KPJUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Lokman bin Saim (Head) &ndash; Mohd Helmi Daud (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Management; Global Professional and Social Development; Medicine; Nursing; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRULENEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010471&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10471"><input class="case" type="checkbox" onClick="Coche(10471,0);" name="result[]" id="10471" value="10471"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result10471" id="result10471" title="Expand result">
+		    <span>Expand result for </span>Kuala Lumpur Metropolitan University College</a></h3>
+		  <p class="i_name">
+		 (KLMUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdul Rahim Abdul Rahman (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Design and Creativity; Engineering and Applied Technology; Hospitality, Tourism and Wellness; Languages, Education and General Studies; Management and Business Technology; Media Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULVMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010975&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10975"><input class="case" type="checkbox" onClick="Coche(10975,0);" name="result[]" id="10975" value="10975"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result10975" id="result10975" title="Expand result">
+		    <span>Expand result for </span>Limkokwing University of Creative Technology</a></h3>
+		  <p class="i_name">
+		 (LUCT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Lim Kok Wing (Head) &ndash; Jayles Ah Leong Yeoh (Senior Administrative Officer) &ndash; Hamidah Binti Mohd Yusoff (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Built Environment; Business Management and Globalisation; Communication, Media and Broadcasting; Design Innovation ; Fashion and Lifestyle Creativity; Information and Communication Technology; Limkokwing Sound and Music Design Academy; Multimedia Creativity; Postgraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BZLVM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025431&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25431"><input class="case" type="checkbox" onClick="Coche(25431,0);" name="result[]" id="25431" value="25431"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25431" id="result25431" title="Expand result">
+		    <span>Expand result for </span>Linton University College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kamis Awang (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied and Visual Arts; Built Environment; Business and Accounting; Engineering and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRULFMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025369&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25369"><input class="case" type="checkbox" onClick="Coche(25369,0);" name="result[]" id="25369" value="25369"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25369" id="result25369" title="Expand result">
+		    <span>Expand result for </span>MAHSA University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Khairul Anuar bin Abdullah (Head) &ndash; Stella Lau Kah Wai (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business, Finance and Hospitality; Dentistry; Engineering and Information Technology; Health and Sports Sciences; Medicine and Biomedical Science; Nursing and Midwifery; Pharmacy; Pre-University Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLUNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025370&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25370"><input class="case" type="checkbox" onClick="Coche(25370,0);" name="result[]" id="25370" value="25370"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25370" id="result25370" title="Expand result">
+		    <span>Expand result for </span>Malaysia Institute for Supply Chain Innovation</a></h3>
+		  <p class="i_name">
+		 (MISI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>David Gonsalvez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Supply Chain Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019934&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19934"><input class="case" type="checkbox" onClick="Coche(19934,0);" name="result[]" id="19934" value="19934"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19934" id="result19934" title="Expand result">
+		    <span>Expand result for </span>Malaysia University of Science and Technology</a></h3>
+		  <p class="i_name">
+		Universiti Sains dan Teknologi Malaysia (MUST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Premkumar Rajagopal (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Management; Construction Engineering and Management; Energy and Environment; Information Technology; System Engineering and Management; Transportation and Logistics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLFMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019931&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19931"><input class="case" type="checkbox" onClick="Coche(19931,0);" name="result[]" id="19931" value="19931"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19931" id="result19931" title="Expand result">
+		    <span>Expand result for </span>Management and Science University</a></h3>
+		  <p class="i_name">
+		Universiti Pengurusan Dan Sains (MSU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohd Shukri Ab Yajid (Head) &ndash; Junainah Abd Hamid (Senior Administrative Officer) &ndash; Asbi Ali (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration and Professional Studies; Education and Social Sciences; Foundation Studies; Graduate Studies; Health and Life Sciences; Information Sciences and Engineering; Management; Medicine; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLFMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025371&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25371"><input class="case" type="checkbox" onClick="Coche(25371,0);" name="result[]" id="25371" value="25371"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25371" id="result25371" title="Expand result">
+		    <span>Expand result for </span>Manipal International University</a></h3>
+		  <p class="i_name">
+		 (MIU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Franco Gandolfi (Head) &ndash; Mohd. Shah Abdullah (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Foundation and Language Studies; Management and Business; Science and Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLVMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012219&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="12219"><input class="case" type="checkbox" onClick="Coche(12219,0);" name="result[]" id="12219" value="12219"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result12219" id="result12219" title="Expand result">
+		    <span>Expand result for </span>Multimedia University</a></h3>
+		  <p class="i_name">
+		 (MMU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmad Rafi Mohamad Eshaq (Head) &ndash; Nur Azurah Rezo (Senior Administrative Officer) &ndash; Hishamuddin Ismail (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Communication; Business; Cinematic Arts; Computing and Informatics; Creative Multimedia; Engineering; Engineering and Technology; Information Science and Technology; Law; Management; MMU Business Schhol (B-SCHOOL); Postgraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhSLDNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025364&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25364"><input class="case" type="checkbox" onClick="Coche(25364,0);" name="result[]" id="25364" value="25364"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25364" id="result25364" title="Expand result">
+		    <span>Expand result for </span>National Defence University of Malaysia</a></h3>
+		  <p class="i_name">
+		Universiti Pertahanan Nasional Malaysia (UPNM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdul Halim bin Hj Jalal (Head) &ndash; Tengku Mohd Bin Tengku Sembok (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Defence Studies and Management; Defense and Science Technology; Engineering; Medicine and Defence Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLUMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019921&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19921"><input class="case" type="checkbox" onClick="Coche(19921,0);" name="result[]" id="19921" value="19921"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19921" id="result19921" title="Expand result">
+		    <span>Expand result for </span>National University of Malaysia</a></h3>
+		  <p class="i_name">
+		Universiti Kebangsaan Malaysia (UKM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohd Hamdi Abd Shukor (Head) &ndash; Abd Razak bin Hussin (Senior Administrative Officer) &ndash; Yazrina Yahya (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Climate Change (IPI); Dentistry; Ear, Hearing and Speech (INSTITUTE-HEARS); Economics and Management; Education; Engineering and Built Environment; Environment and Development (LESTARI); Ethnic Studies (KITA); Fuel Cell (SELFUEL); Health Sciences; Information Science and Technology; Islam Hadhari (HADHARI); Islamic Studies; Law; Malay World and Civilization (ATMA); Malaysian and International Studies (IKMAS); Medical Molecular Biology (UMBI); Medicine; Microengineering and Nanoelectronics (IMEN); Pusat PERMATApintar Negara; Science and Technology; Social Sciences and Humanities; Solar Energy (SERI); Systems Biology (INBIOSIS); UKM-GBS Graduate School; Visual Informatics (IVI)</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLEMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024011&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24011"><input class="case" type="checkbox" onClick="Coche(24011,0);" name="result[]" id="24011" value="24011"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result24011" id="result24011" title="Expand result">
+		    <span>Expand result for </span>Nilai University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sothi Rachagan (Head) &ndash; Ambihabathy Ratnam (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Sciences; Business; Engineering and Technology; Foundation Studies; Hospitality and Tourism; Humanities and Social Sciences; Postgraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLDMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019960&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19960"><input class="case" type="checkbox" onClick="Coche(19960,0);" name="result[]" id="19960" value="19960"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19960" id="result19960" title="Expand result">
+		    <span>Expand result for </span>Northern University of Malaysia</a></h3>
+		  <p class="i_name">
+		Universiti Utara Malaysia (UUM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Mustafa Ishak (Head) &ndash; Baharuddin bin Yaacob (Senior Administrative Officer) &ndash; Mohamad Farizal B. Rajemi (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Applied Psychology, Social Work and Policy; Arts and Science; Arts and Sciences; Business; Business Management; Computing; Creative Industry Management and Performing Arts; Economics, Finance and Banking; Education and Modern Languages; Government; International Studies; Islamic Business; Law; Law, Government and International Studies; Multimedia Technology and Communication; Quantitative Sciences; Technology Management and Logistics; Tourism, Hospitality and Event Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLUNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013097&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13097"><input class="case" type="checkbox" onClick="Coche(13097,0);" name="result[]" id="13097" value="13097"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result13097" id="result13097" title="Expand result">
+		    <span>Expand result for </span>Open University Malaysia</a></h3>
+		  <p class="i_name">
+		 (OUM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mansor Fadzil (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Social Sciences; Business; Education and Languages; Graduate Studies; Information Technology and Multimedia Communication; Nursing and Allied Health Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxQLjM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025372&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25372"><input class="case" type="checkbox" onClick="Coche(25372,0);" name="result[]" id="25372" value="25372"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25372" id="result25372" title="Expand result">
+		    <span>Expand result for </span>Perdana University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zabidi Azhar bin Mohd Hussin (Head) &ndash; Norpisah Mat Isa (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Data Sciences; Foundation Studies; Medicine; Occupational Therapy; Perdana University and Royal College of Surgeons in Ireland (PU-RCSI) School of Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLVMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019954&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19954"><input class="case" type="checkbox" onClick="Coche(19954,0);" name="result[]" id="19954" value="19954"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19954" id="result19954" title="Expand result">
+		    <span>Expand result for </span>Petronas Technological University</a></h3>
+		  <p class="i_name">
+		Universiti Teknologi Petronas (UTP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Ibrahim bin Abdul Mutalib (Head) &ndash; Azra'i bin Abdullah (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering; Foundation Studies (CFS); Geosciences and Petroleum Engineering; Management and Humanities; Science and Information Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025373&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25373"><input class="case" type="checkbox" onClick="Coche(25373,0);" name="result[]" id="25373" value="25373"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25373" id="result25373" title="Expand result">
+		    <span>Expand result for </span>Putra Business School</a></h3>
+		  <p class="i_name">
+		 (PBS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zulkornain Yusop (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLVMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025374&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25374"><input class="case" type="checkbox" onClick="Coche(25374,0);" name="result[]" id="25374" value="25374"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25374" id="result25374" title="Expand result">
+		    <span>Expand result for </span>Raffles University Iskandar</a></h3>
+		  <p class="i_name">
+		 (RUI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Graeme Britton (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Applied Psychology; Business Administration; Fashion Design; Graphic Design; Interior Design; Multimedia Design; Supply Chain Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLVMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025375&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25375"><input class="case" type="checkbox" onClick="Coche(25375,0);" name="result[]" id="25375" value="25375"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25375" id="result25375" title="Expand result">
+		    <span>Expand result for </span>SEGi University and Colleges</a></h3>
+		  <p class="i_name">
+		 (SEGi)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Patrick Kee Peng Kong (Head) &ndash; Hafidz Nasir (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Allied Health Sciences; American Degree Programme; Business and Accounting; Communication Studies; Creative Arts and Design; Early Childhood Care and Education; Engineering and the Built Environment; English and Public Relations; Health Sciences; Hospitality and Tourism; Law; Postgraduate Studies; Pre U / Foundation; Professional Studies; Psychology; Technology and Innovation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLVM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010476&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10476"><input class="case" type="checkbox" onClick="Coche(10476,0);" name="result[]" id="10476" value="10476"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result10476" id="result10476" title="Expand result">
+		    <span>Expand result for </span>Selangor International Islamic University College</a></h3>
+		  <p class="i_name">
+		Kolej Universiti Islam Antarabangsa Selangor (KUIS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Halim Bin Tamuri (Head) &ndash; Mohamad Shukri Abdul Rahm (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Education; Islamic Civilisations and Studies; Science and Information Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULVM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025432&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25432"><input class="case" type="checkbox" onClick="Coche(25432,0);" name="result[]" id="25432" value="25432"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25432" id="result25432" title="Expand result">
+		    <span>Expand result for </span>Southern University College</a></h3>
+		  <p class="i_name">
+		Southern UC		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kiah Wah Thock (Head) &ndash; Yoon Wah Wong (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Art and Design; Business and Management; Chinese Medicine; Education and Public Welfare; Engineering and Information Technology; English Promotion Committee; Excellent Teaching and Learning; Foundation Studies; General Studies; Humanities and Social Sciences; Modern Language; Professional and Continuing Education (SPACE); Sim Mow Yu Chinese Education and Teacher Training Centre; Southern Institute of Technical Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRULFMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025380&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25380"><input class="case" type="checkbox" onClick="Coche(25380,0);" name="result[]" id="25380" value="25380"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25380" id="result25380" title="Expand result">
+		    <span>Expand result for </span>Sultan Azlan Shah University</a></h3>
+		  <p class="i_name">
+		Universiti Sultan Azlan Shah (USAS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nordin Kardi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Islamic Studies; Languages and Foundation Studies; Management and Information Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLiNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019930&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19930"><input class="case" type="checkbox" onClick="Coche(19930,0);" name="result[]" id="19930" value="19930"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19930" id="result19930" title="Expand result">
+		    <span>Expand result for </span>Sultan Idris University of Education</a></h3>
+		  <p class="i_name">
+		Universiti Pendidikan Sultan Idris (UPSI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohammad Shatar bin Sabran (Head) &ndash; Mohd Sahandri Gani bin Hamzah (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Art, Computing and Creative Industry; Graduate Studies; Human Development; Human Sciences; Languages and Communications; Management and Economics; Music and Performing Arts; Sciences and Mathematics; Sports Science and Coaching; Technical and Vocational Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLFNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-022326&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="22326"><input class="case" type="checkbox" onClick="Coche(22326,0);" name="result[]" id="22326" value="22326"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result22326" id="result22326" title="Expand result">
+		    <span>Expand result for </span>Sultan Zainal Abidin University</a></h3>
+		  <p class="i_name">
+		Universiti Sultan Zainal Abidin (UniSZA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hassan Basri bin Awang Mat Dahan (Head) &ndash; Kamarul Shukri bin Mat Teh (Senior Administrative Officer) &ndash; Anuar McAfee (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Social Sciences; Bioresources and Food Industry; Economics and Management Sciences; General Studies and Advanced Education; Health Sciences; Informatics and Computing; Inovative Design and Technology; Islamic Contemporary Studies; Language and Communication; Law and International Relations; Medicine; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyhTLEM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015966&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="15966"><input class="case" type="checkbox" onClick="Coche(15966,0);" name="result[]" id="15966" value="15966"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result15966" id="result15966" title="Expand result">
+		    <span>Expand result for </span>Sunway University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Graeme Wilkinson (Head) &ndash; Peter Heard (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>American Education; Arts; Business; English Language Studies; Healthcare and Medical Sciences; Hospitality; Mathematical Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRZLUM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025433&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25433"><input class="case" type="checkbox" onClick="Coche(25433,0);" name="result[]" id="25433" value="25433"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25433" id="result25433" title="Expand result">
+		    <span>Expand result for </span>TATI University College</a></h3>
+		  <p class="i_name">
+		 (TATIUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohd Zamri bin Ibrahim (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Chemical Engineering Technology; Computer, Media and Technology Management; Electrical and Automation Engineering Technology; Manufacturing Engineering Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRULFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016187&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16187"><input class="case" type="checkbox" onClick="Coche(16187,0);" name="result[]" id="16187" value="16187"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result16187" id="result16187" title="Expand result">
+		    <span>Expand result for </span>Taylor's University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Michael J. Driscoll (Head) &ndash; Pradeep Nair (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture, Building and Design; Bioscience; Business; Communication; Computing and Information Technology; Continuing Professional Education; Design; Education; Engineering; Hospitality, Tourism and Culinary Arts; Languages; Law; Medicine; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhRLiM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019955&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19955"><input class="case" type="checkbox" onClick="Coche(19955,0);" name="result[]" id="19955" value="19955"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19955" id="result19955" title="Expand result">
+		    <span>Expand result for </span>Tenaga National University</a></h3>
+		  <p class="i_name">
+		Universiti Tenaga Nasional (UNITEN)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nasharuddin bin Mustapha (Head) &ndash; Ibrahim Hussein (Senior Administrative Officer) &ndash; Uthman Khalaf Bin Mohd. Nor (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration and Accountancy; Computer Science and Information Technology; Energy Business and Economics; Engineering; Foundation and Diploma Studies; Graduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLTM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019957&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19957"><input class="case" type="checkbox" onClick="Coche(19957,0);" name="result[]" id="19957" value="19957"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19957" id="result19957" title="Expand result">
+		    <span>Expand result for </span>Tun Abdul Razak University</a></h3>
+		  <p class="i_name">
+		Universiti Tun Abdul Razak		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Samsinar Md. Sidin (Head) &ndash; Rosnah Mohamad Romli (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Business and Entrepreneurship; English Language; Executive Education; Fondation Studies; Government; Languages and Malaysian Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLTM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019958&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19958"><input class="case" type="checkbox" onClick="Coche(19958,0);" name="result[]" id="19958" value="19958"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19958" id="result19958" title="Expand result">
+		    <span>Expand result for </span>Tun Hussein Onn University of Malaysia</a></h3>
+		  <p class="i_name">
+		Universiti Tun Hussein Onn Malaysia (UTHM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Wahid bin Razzaly (Head) &ndash; Ismail Bin Abd. Rahman (International Relations Officer) &ndash; Abdul Halim bin Abdul Rahman (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Sciences and Technology; Civil and Environmental Engineering; Computer Science and Information Technology; Diploma Studies; Electrical and Electronic Engineering; Engineering Technology; Graduate Studies; Mechanical and Manufacturing Engineering; Technical and Vocational Education; Technology Management and Business</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLTNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019959&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19959"><input class="case" type="checkbox" onClick="Coche(19959,0);" name="result[]" id="19959" value="19959"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19959" id="result19959" title="Expand result">
+		    <span>Expand result for </span>Tunku Abdul Rahman University</a></h3>
+		  <p class="i_name">
+		Universiti Tunku Abdul Rahman (UTAR)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Chuah Hean Teik (Head) &ndash; Ewe Hong Tat (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Management; Arts and Social Sciences; Business and Finance; Chinese Studies; Creative Industries; Engineering and Green Technology; Engineering and Science; Information and Communication Technology; Management and Leadership Development; Medicine and Health Sciences; Postgraduate Studies and Research; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLTNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025434&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25434"><input class="case" type="checkbox" onClick="Coche(25434,0);" name="result[]" id="25434" value="25434"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25434" id="result25434" title="Expand result">
+		    <span>Expand result for </span>Tunku Abdul Rahman University College</a></h3>
+		  <p class="i_name">
+		TAR University College (TAR UC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Chik Heok Tan (Head) &ndash; Shu Luan Ooi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy, Finance and Business; Applied Sciences; Built Environment; Business Incubation and Entrepreneurial Ventures; Communication and Creative Industries; Computing and Information Technology; Continuing and Professional Education; Engineering and Technology; Postgraduate Studies and Research; Pre-University Studies; Social Science and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRULFMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010473&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10473"><input class="case" type="checkbox" onClick="Coche(10473,0);" name="result[]" id="10473" value="10473"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result10473" id="result10473" title="Expand result">
+		    <span>Expand result for </span>UCSI University</a></h3>
+		  <p class="i_name">
+		Kolej Universiti Antarabangsa Sedaya (UCSI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Khalid Yusoff (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Sciences; Business and Information Science; Creative Arts and Design; Engineering, Technology and Built Environment; Hospitality and Tourism Management; Languages; Medicine and Health Sciences; Music; Pharmaceutical Sciences; Pre-U Studies; Social Sciences and Liberal Arts</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULVMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017085&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17085"><input class="case" type="checkbox" onClick="Coche(17085,0);" name="result[]" id="17085" value="17085"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result17085" id="result17085" title="Expand result">
+		    <span>Expand result for </span>UNITAR International University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Noor Raihan Ab Hamid (Head) &ndash; Wan Ahmad Saifuddin Wan Ahmad Radzi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration and Information Technology; Early Childhood Studies; Education and Social Sciences; Foundation and General Studies; Graduate Studies; Hospitality and Tourism Management; Information Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxQLiM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025435&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25435"><input class="case" type="checkbox" onClick="Coche(25435,0);" name="result[]" id="25435" value="25435"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25435" id="result25435" title="Expand result">
+		    <span>Expand result for </span>University College Bestari</a></h3>
+		  <p class="i_name">
+		UC Bestari		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ab Aziz bin Yusof (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agro Science; Economics and Management; Information Technology and Computer Science; Islamic Studies; Social Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRULFM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025436&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25436"><input class="case" type="checkbox" onClick="Coche(25436,0);" name="result[]" id="25436" value="25436"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25436" id="result25436" title="Expand result">
+		    <span>Expand result for </span>University College of Agroscience Malaysia</a></h3>
+		  <p class="i_name">
+		Kolej Universiti Agrosains Malaysia (UCAM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Faridah Hanam Binti Mohd Rashid (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agro Science; Business Administration; Computer Science; Malaysian Certificate of Excellence; Social Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRULFM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025437&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25437"><input class="case" type="checkbox" onClick="Coche(25437,0);" name="result[]" id="25437" value="25437"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25437" id="result25437" title="Expand result">
+		    <span>Expand result for </span>University College of Islam Melaka</a></h3>
+		  <p class="i_name">
+		 (KUIM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohd Taib bin Hj. Dora (Head) &ndash; Siti Hajar binti Abu Kassim (Senior Administrative Officer) &ndash; Noor Jeffri bin Abdul Wahab (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Innovation and Accountancy; Hospitality Management; Islamic Studies; Languages ​​and Education; Law, Governance and International Relations; Nursing and Health Sciences; Postgraduate Studies; Science and Technology; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRULFM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025438&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25438"><input class="case" type="checkbox" onClick="Coche(25438,0);" name="result[]" id="25438" value="25438"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25438" id="result25438" title="Expand result">
+		    <span>Expand result for </span>University College of Technology Sarawak</a></h3>
+		  <p class="i_name">
+		 (UCTS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Khairuddin bin Ab. Hamid (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Built Environment; Business and Management; Computing; Engineering and Technology; Foundation Studies; Postgraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRULFNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025382&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25382"><input class="case" type="checkbox" onClick="Coche(25382,0);" name="result[]" id="25382" value="25382"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25382" id="result25382" title="Expand result">
+		    <span>Expand result for </span>University Malaysia of Computer Science and Engineering</a></h3>
+		  <p class="i_name">
+		Universiti Malaysia Sains Komputer dan Kejuruteraan (UNIMY)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ramli Ismail (Head) &ndash; Hasni Haldi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration (Management Information Systems); Computer Science; Computing Science and Engineering; Software Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRTLiMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019929&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19929"><input class="case" type="checkbox" onClick="Coche(19929,0);" name="result[]" id="19929" value="19929"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19929" id="result19929" title="Expand result">
+		    <span>Expand result for </span>University Malaysia Terengganu</a></h3>
+		  <p class="i_name">
+		Universiti Malaysia Terengganu (UMT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nor Aieni Binti Haji Mokhtar (Head) &ndash; Noor Azhar bin Mohamed Shazili (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Fisheries and Aquaculture Sciences; Food Science and Technology; Foundation and Liberal Education; Fundamental Sciences; Informatics and Applied Mathematics; Knowledge Transfer and Industrial Linkages; Marine and Environmental Sciences; Marine Biotechnology; Maritime Business and Management; Ocean Engineering; Oceanography and Environment; Oceanography and Environmental Studies; Research Management; Social and Economic Development; Tropical Aquaculture; Tropical Biodiversity and Sustainable Development</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLENEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019922&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19922"><input class="case" type="checkbox" onClick="Coche(19922,0);" name="result[]" id="19922" value="19922"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19922" id="result19922" title="Expand result">
+		    <span>Expand result for </span>University of Kuala Lumpur</a></h3>
+		  <p class="i_name">
+		Universiti Kuala Lumpur (UNIKL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mazliham Mohd Su'ud (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Aviation Technology; British Malaysian; Business; Chemical and Bioengineering Technology; Industrial Technology; Information Technology; Malaysia-France; Malaysian Spanish; Marine Engineering Technology; Medical Science Technology; Medicine; Postgraduate Studies; Preparatory Studies (CPS); Product Design and Manufacturing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLEMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019924&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19924"><input class="case" type="checkbox" onClick="Coche(19924,0);" name="result[]" id="19924" value="19924"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19924" id="result19924" title="Expand result">
+		    <span>Expand result for </span>University of Malaysia Kelantan</a></h3>
+		  <p class="i_name">
+		Universiti Malaysia Kelantan (UMK)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Husaini Omar (Head) &ndash; Pauzi Bin Pak Chu (Senior Administrative Officer) &ndash; Mohd Hassan bin Mohd Osman (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agro-Based Industry; Architecture and Ekistics; Bioengineering and Technology; Creative Technology and Heritage; Earth Science; Entrepreneurship and Business; External Education; Hospitality, Tourism and Wellness; Language Studies and Generic Development; Postgraduate Studies; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLEMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019925&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19925"><input class="case" type="checkbox" onClick="Coche(19925,0);" name="result[]" id="19925" value="19925"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19925" id="result19925" title="Expand result">
+		    <span>Expand result for </span>University of Malaysia Pahang</a></h3>
+		  <p class="i_name">
+		Universiti Malaysia Pahang (UMP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Daing Nasir Ibrahim (Head) &ndash; Abd. Hamid bin Majid (Senior Administrative Officer) &ndash; Suhaida binti Sulaiman (International Relations Officer) &ndash; Rosli Bin Mohd Yunus (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Chemical and Natural Resources Engineering; Civil Engineering and Earth Resources; Computer Systems and Software Engineering; Electrical and Electronics Engineering; Engineering Technology; German Academic and Career; Industrial Management; Industrial Sciences and Technology; Mandarin Languages and Culture; Manufacturing Engineering; Mechanical Engineering; Modern Languages and Human Sciences; Postgraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLEM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019926&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19926"><input class="case" type="checkbox" onClick="Coche(19926,0);" name="result[]" id="19926" value="19926"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19926" id="result19926" title="Expand result">
+		    <span>Expand result for </span>University of Malaysia Perlis</a></h3>
+		  <p class="i_name">
+		Universiti Malaysia Perlis (UniMAP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zul Azhar Zahid Jamal (Head) &ndash; Zul Azhar Zahid Jamal (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Bioprocess Engineering; Business Innovation and Technopreneurship; Computer and Communication Engineering; Diploma Studies; Electrical Systems Engineering; Engineering Technology; Environmental Engineering; Human Development and Techno-Communication; Manufacturing Engineering; Materials Engineering; Mechatronic Engineering; Microelectronic Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLEM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019927&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19927"><input class="case" type="checkbox" onClick="Coche(19927,0);" name="result[]" id="19927" value="19927"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19927" id="result19927" title="Expand result">
+		    <span>Expand result for </span>University of Malaysia Sabah</a></h3>
+		  <p class="i_name">
+		Universiti Malaysia Sabah (UMS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Taufiq Yap Yun Hin (Head) &ndash; Vina Zahriani Yusof (Senior Administrative Officer) &ndash; Rasid Mail (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Artificial Intelligence; Biotechnology; Borneo Heritage (BOHRu); Borneo Marine Studies; Borneo Tourism; Business, Economics and Accountancy; Computing and Informatics; Endangered Marine Species (UEMS); Engineering; Entrepreneurship Research and Development; Ethnography and Development; Food Safety and Quality; Food Science and Nutrition; Harmful Algal Bloom UHABS; Humanities, Arts and Heritage; International Finance; Medicine and Health Sciences; Mineral And Material; Orchid Studies; Promotion of Knowledge and Language Learning; Psychology and Education; Psychology and Social Health; Remote Sensing and GIS; Research and Innovation; Rural Education Research; Sabah Strategic and Security Research; Science and Natural Resources; Small Island; Sustainable Agriculture; Sustainable Palm Oil; The Development and Health Research Unit (DHRU); Tropical Biology and Conservation; Tuberculosis; Water</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLEM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019928&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19928"><input class="case" type="checkbox" onClick="Coche(19928,0);" name="result[]" id="19928" value="19928"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19928" id="result19928" title="Expand result">
+		    <span>Expand result for </span>University of Malaysia Sarawak</a></h3>
+		  <p class="i_name">
+		Universiti Malaysia Sarawak (UNIMAS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamad Kadim bin Suaidi (Head) &ndash; Fatimah binti Abang (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied and Creative Arts; Biodiversity and Environmental Conservation; Borneo Studies; Cognitive Sciences and Human Development; Computer Science and Information Technology; Economics and Business; Engineering; Health and Community Medicine; Language and Communication; Medicine and Health Sciences; Research and Innovation; Resource Science and Technology; Social Informatics and Technological Innovations; Social Sciences; Technology Transfer and Consultancy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLENAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019942&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19942"><input class="case" type="checkbox" onClick="Coche(19942,0);" name="result[]" id="19942" value="19942"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19942" id="result19942" title="Expand result">
+		    <span>Expand result for </span>University of Technology MARA</a></h3>
+		  <p class="i_name">
+		Universiti Teknologi MARA		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hassan Said (Head) &ndash; Mohamad Kamal Haji Harun (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Administration and Policy Studies; Applied Sciences; Architecture, Planning and Surveying; Arshad Ayub Graduate Business School (AAGBS); Art and Design; Business and Management; Chemical Engineering; Civil Engineering; Communication and Media Studies; Computer and Mathematical Sciences; Contemporary Islamic Studies (ACIS); Dentistry; Education; Electrical Engineering; Film, Theatre and Animation; Foundation Studies (CFS); Graduate Studies (IPSiS); Health Sciences; Hotel and Tourism Management; Information Management; Islamic Thought and Understanding; Johor; Kedah; Kelantan; Language Studies (APB); Law; Mechanical Engineering; Medicine; Melaka; Music; Negeri Sembilan; NEO Education (iNED); Pahang; Perak; Perlis; Pharmacy; Plantation and Agrotechnology; Pulau Pinang; Sabah; Sarawak; Sports Science and Recreation; Terengganu; UiTM-PDRM Academy of Police</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLSMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025439&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="25439"><input class="case" type="checkbox" onClick="Coche(25439,0);" name="result[]" id="25439" value="25439"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result25439" id="result25439" title="Expand result">
+		    <span>Expand result for </span>Veritas University College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Penang Campus; Petaling Jaya Campus</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRULFNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019956&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19956"><input class="case" type="checkbox" onClick="Coche(19956,0);" name="result[]" id="19956" value="19956"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Malaysia</p>
+				  <h3>
+		    <a href="#result19956" id="result19956" title="Expand result">
+		    <span>Expand result for </span>Wawasan Open University</a></h3>
+		  <p class="i_name">
+		Universiti Terbuka Wawasan (WOU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zoraini Wati Abas (Head) &ndash; Andrew Joseph (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Administration; Education, Languages and Communication; Graduate Studies; Humanities and Social Sciences; Institute for Research and Innovation; Professional Development and Continuing Education; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RZLTM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 80 of 80</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia" selected>Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Belarus')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Belarus)">
+	    <input type="hidden" class="envoi" name="total" value="51">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Belarus">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">51 results found for <strong>(Country=Belarus)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 51 of 51</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-001547&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="1547"><input class="case" type="checkbox" onClick="Coche(1547,0);" name="result[]" id="1547" value="1547"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result1547" id="result1547" title="Expand result">
+		    <span>Expand result for </span>Belarusian National Technical University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_1547_logo.gif" /></h3>
+		  <p class="i_name">
+		Belaruski Nacyjanal'ny Tehnichny Universitet (BNTU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Boris Mikhailavich Khroustalev (Head) &ndash; Fiodar I. Pantsialeyenka (Senior Administrative Officer) &ndash; Julian J. Jarmak (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Automotive and Tractor; Civil Engineering; Distance Education; Engineering and Pedagogy; Improvement of Professional Skills and Staff Retraining on New Directions of Engineering; Information Technologies and Robotics; Innovative Technologies; Instrument Making; International Relations; Management Technology and Humanities; Marketing, Management and Entrepreneurship; Mechanical and Technological Engineering; Mechanical Engineering; Military Engineering; Mining Engineering and Engineering Ecology; Power Engineering; Power Plant Construction and Engineering Services; Soligorsk; Sports; Staff Training and Retraining on Management and Personnel Development; Transport Communication</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRULVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011982&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="11982"><input class="case" type="checkbox" onClick="Coche(11982,0);" name="result[]" id="11982" value="11982"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result11982" id="result11982" title="Expand result">
+		    <span>Expand result for </span>International University "MITSO"</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_11982_logo.png" /></h3>
+		  <p class="i_name">
+		Mižnarodny Universitet "MITSO"		  </p>
+		 <p class="gallery">
+				  <a title="http://mitso.by/" href="images/IAUMembers/11982_1.jpg" class="fancybox" rel="gallery11982"><img class="img" src="images/IAUMembers/s_11982_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Stanislav Knyazev (Head) &ndash; Gennady Podgorny (Senior Administrative Officer) &ndash; Elena A. Kulago (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>International Economic Relations and Management; Law; Pre-University Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRZLiMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000700&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="700"><input class="case" type="checkbox" onClick="Coche(700,0);" name="result[]" id="700" value="700"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result700" id="result700" title="Expand result">
+		    <span>Expand result for </span>Academy of Public Administration under the Aegis of the President of the Republic of Belarus</a></h3>
+		  <p class="i_name">
+		Akademija Kiravannja pry Prezidence Respubliki Belarus		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Marat Zhylinski (Head) &ndash; Ihar Hancharonak (Senior Administrative Officer) &ndash; Tatsiana Samasiuk (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Academic and Methodological; Civil Service; Managerial Education; Theory and Practice of Public Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0tU2BQCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000705&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="705"><input class="case" type="checkbox" onClick="Coche(705,0);" name="result[]" id="705" value="705"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result705" id="result705" title="Expand result">
+		    <span>Expand result for </span>Academy of the Ministry of Internal Affairs of the Republic of Belarus</a></h3>
+		  <p class="i_name">
+		Akademija Ministerstva Unutrannyh Sprau Respubliki Belarus (AMIA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vladimir Bachila (Head) &ndash; Alexander Podupeyko (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Studies and Retraining; Criminal and Executive Activities; Extra-mural Studies; Investigation and Legal Expertise; Law; Police Training; Scientific and Pedagogical Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0tU2BVCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001456&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1456"><input class="case" type="checkbox" onClick="Coche(1456,0);" name="result[]" id="1456" value="1456"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1456" id="result1456" title="Expand result">
+		    <span>Expand result for </span>Baranovichi State University</a></h3>
+		  <p class="i_name">
+		Baranavickij Dzjaržauny Universitet (BarSU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vassily Ivanovich Kochurko (Head) &ndash; Pavel Popko (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Distance Education; Economics and Law; Education and Psychology; Engineering; Pre-University Training; Refresher Training and Re-Training; Slavic and Germanic Languages; Turkish Language and Culture</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzBVLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001548&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1548"><input class="case" type="checkbox" onClick="Coche(1548,0);" name="result[]" id="1548" value="1548"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1548" id="result1548" title="Expand result">
+		    <span>Expand result for </span>Belarus State Agrarian and Technical University</a></h3>
+		  <p class="i_name">
+		Belaruskij Dzjaržauny Agrarny Tehničny Universitet (BSATU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ivan Shyla (Head) &ndash; Mikalai Ramaniuk (Senior Administrative Officer) &ndash; Mikhail Hurnovich (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agro-Mechanical Engineering; Agro-Power Engineering; Business Administration and Management; Electrification (Extramural Education); Engineering and Technology; Farm Machinery; Mechanization (Extramural Education); Professional Development and Retraining of Agribusiness Specialists</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRULmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001549&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1549"><input class="case" type="checkbox" onClick="Coche(1549,0);" name="result[]" id="1549" value="1549"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1549" id="result1549" title="Expand result">
+		    <span>Expand result for </span>Belarus State Economics University</a></h3>
+		  <p class="i_name">
+		Belaruskij Dzjaržauny Ekanamičny Universitet (BSEU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vladimir Nikolaievich Shimov (Head) &ndash; Viktor Sadovs (Senior Administrative Officer) &ndash; Natalia Skriba (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accounting and Economics; Bobruisk; Business and Management; Commerce,  Economics and Management; Finance and Banking; International Business Communication; International Economic Relations; Law; Management; Marketing and Logistics; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRULjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001675&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1675"><input class="case" type="checkbox" onClick="Coche(1675,0);" name="result[]" id="1675" value="1675"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1675" id="result1675" title="Expand result">
+		    <span>Expand result for </span>Belarusian Institute of Law</a></h3>
+		  <p class="i_name">
+		BIP-Instytut Pravaznaustva (BIP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>V. Golovanov (Head) &ndash; Stepan Sokol (Senior Administrative Officer) &ndash; Vasiliy Bonko (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Law; Foreign Languages; Grodno; International Law and Legal Psychology; Law; Mogilev; Physical Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzhXLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001544&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1544"><input class="case" type="checkbox" onClick="Coche(1544,0);" name="result[]" id="1544" value="1544"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1544" id="result1544" title="Expand result">
+		    <span>Expand result for </span>Belarusian State Academy of Arts</a></h3>
+		  <p class="i_name">
+		Belaruskaja Dzjaržaunaja Akademija Mastastvau (BSAA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mikhail Barazna (Head) &ndash; Bohan Elena (Senior Administrative Officer) &ndash; Ekaterina Kenigsberg (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Design and Decorative Arts and Applied Arts; Film-Making; Fine Arts; Further Training and Retraining; General Disciplines Studies; Theatre</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRULWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001545&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1545"><input class="case" type="checkbox" onClick="Coche(1545,0);" name="result[]" id="1545" value="1545"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1545" id="result1545" title="Expand result">
+		    <span>Expand result for </span>Belarusian State Academy of Music</a></h3>
+		  <p class="i_name">
+		Belaruskaja Dzjaržaunaja Akademija Muzyki (BGAM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ekaterina Nikolaevna Dulova (Head) &ndash; Pyotr F. Dudarenko (Senior Administrative Officer) &ndash; Aleksandra Vitalievna Makarova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Folk Instruments; Interdepartmental Studies; Mogilyov Branch; Orchestra; Piano, Musicology and Composition; Preparatory Education; Vocal and Choir; Vocational Training and Retraining</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRULTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001546&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1546"><input class="case" type="checkbox" onClick="Coche(1546,0);" name="result[]" id="1546" value="1546"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1546" id="result1546" title="Expand result">
+		    <span>Expand result for </span>Belarusian State Agricultural Academy</a></h3>
+		  <p class="i_name">
+		Belaruskaja Dzjaržaunaja Sel'skagaspadarčaja Akademija (BSAA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Pavel A. Saskevich (Head) &ndash; Sergei Gudkov (Senior Administrative Officer) &ndash; Svetlana Naskova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Agribusiness; Agro-Ecology; Agronomy; Business and Law; Economics; Farm Mechanization; Land Reclamation; Land Use and Planning; Zoo Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRULUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001550&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1550"><input class="case" type="checkbox" onClick="Coche(1550,0);" name="result[]" id="1550" value="1550"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1550" id="result1550" title="Expand result">
+		    <span>Expand result for </span>Belarusian State Medical University</a></h3>
+		  <p class="i_name">
+		Belaruskij Dzjaržauny Medycynski Universitet (BSMU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Anatol Sikorski (Head) &ndash; Siarhei Zhavaranak (Senior Administrative Officer) &ndash; Boyko Varvara Vadimovna (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Career Guidance and pre-University Training; Dentistry; General Medicine; Medical Studiesl for International Students; Military Medicine; Paediatrics; Pharmacy; Preventive Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRVLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001551&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1551"><input class="case" type="checkbox" onClick="Coche(1551,0);" name="result[]" id="1551" value="1551"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1551" id="result1551" title="Expand result">
+		    <span>Expand result for </span>Belarusian State Pedagogical University named after Maxim Tank</a></h3>
+		  <p class="i_name">
+		Belaruskij Dzjaržauny Pedagogiskij Universitet imja Maksima Tanka (BSPU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alexander Zhuk (Head) &ndash; Alexander Andaraí (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Aesthetic and Communications; Belarus and Russian Philology; History; Mathematics; Natural Sciences; Physical Education; Physics; Pre-University Training; Preschool Education and Communications; Primary Education and Communications; Psychology; Socio-pedagogical Technologies; Special Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRVLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001552&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1552"><input class="case" type="checkbox" onClick="Coche(1552,0);" name="result[]" id="1552" value="1552"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1552" id="result1552" title="Expand result">
+		    <span>Expand result for </span>Belarusian State Technological University</a></h3>
+		  <p class="i_name">
+		Belaruskij Dzjaržauny Tehnalagičny Universitet (BSTU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ivan Zharski (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Chemical Technology and Engineering; Economic Engineering; Forestry; Forestry Engineering and Wood Technology; Information Technology; Organic Substances Technology; Printing and Publishing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRVLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001553&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1553"><input class="case" type="checkbox" onClick="Coche(1553,0);" name="result[]" id="1553" value="1553"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1553" id="result1553" title="Expand result">
+		    <span>Expand result for </span>Belarusian State University</a></h3>
+		  <p class="i_name">
+		Belaruskij Dzjaržauny Universitet (BSU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sergey V. Ablameyko (Head) &ndash; Vladimir V. Rogovitsky (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Mathematics and Computer Science; Biology; Business and Management of Technology; Chemistry; Economics; Geography; History; International Relations; Journalism; Law; Liberal Education; Management and Social Technologies; Mathematics and Mechanics; Military Faculty; Philology; Philosophy and Social Studies; Physics; Pre-University Education; Radiophysics and Computer Technology; Theology named after Sts. Cyril and Methodius</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRVLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001556&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1556"><input class="case" type="checkbox" onClick="Coche(1556,0);" name="result[]" id="1556" value="1556"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1556" id="result1556" title="Expand result">
+		    <span>Expand result for </span>Belarusian State University of Culture and Arts</a></h3>
+		  <p class="i_name">
+		Belaruskij Dzjaržauny Universitet Kul'tury I Mastatstvau (BUK)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Yuri P. Cooper (Head) &ndash; Nasenov Vladimir Selivestrovich (Senior Administrative Officer) &ndash; Vadim V. Kryshtanosav (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Culturology and Socio-Cultural Activity; Further Education; Information and Documentary Communications; Musical Art; Part-time Training (FPT); Traditional Belarusian Culture and Contemporary Art</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRVLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001555&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1555"><input class="case" type="checkbox" onClick="Coche(1555,0);" name="result[]" id="1555" value="1555"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1555" id="result1555" title="Expand result">
+		    <span>Expand result for </span>Belarusian State University of Informatics and Radioelectronics</a></h3>
+		  <p class="i_name">
+		Belaruskij Dzjaržauny Universitet Informatyki i Radyjoelektroniki (BSUIR)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mikhail Paylavich Batura (Head) &ndash; Anatoly Osipov (Senior Administrative Officer) &ndash; Anna Titovich (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Systems and Networks; Computer-Aided Design; Continuous and Distance Training; Engineering and Economics; Extra-mural Training; Information Technology and Control; Military; Pre-University Preparation; Radioengineering and Electronics; Telecommunication</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRVLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001554&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1554"><input class="case" type="checkbox" onClick="Coche(1554,0);" name="result[]" id="1554" value="1554"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1554" id="result1554" title="Expand result">
+		    <span>Expand result for </span>Belarusian State University of Physical Education</a></h3>
+		  <p class="i_name">
+		Belaruskij Dzjaržauny Universitet Fizičnaj Kul'tury (BSUPC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gregory P. Kosyachenko (Head) &ndash; Elena Filgina (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Physical Education and Tourism; Pre-Master; Sport and Education - Mass Sports; Sport and Education - Sports and Martial Arts; Tourism; Training and Retraining</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRVLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001557&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1557"><input class="case" type="checkbox" onClick="Coche(1557,0);" name="result[]" id="1557" value="1557"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1557" id="result1557" title="Expand result">
+		    <span>Expand result for </span>Belarusian State University of Transport</a></h3>
+		  <p class="i_name">
+		Belaruskij Dzjaržauny Universitet Transpartu (BeLGUT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Benjamin I. Senko (Head) &ndash; Viktor Negrej (Senior Administrative Officer) &ndash; Nikolai Volkov (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Brakes Rolling Stock (O'Neill TSPS); Complex Transport Problems (NC QFT); Construction; Design; Electric Power Supply of Transport (NFI SET); Electrical Engineering; Environmental Security and Energy Efficiency in Transport (SIC EiET); Estimation of Rolling Stock Units; Extramural Education; Foreign Students; Humanities and Economics; Industrial and Civil Engineering; Master Training and Guidance; Mechanical Engineering; Military Transport; Railway Transport; Safety and Electromagnetical Compatibility of Technical Means; Soil, Base and Foundation Mechanics; Structural and Tribological Materials (NFI KTM); Surface and Thin Films Physics; Track Studies; Traffic Control (NFI SCP); Transport Communications (SRL TC); Transport Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRVLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001558&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1558"><input class="case" type="checkbox" onClick="Coche(1558,0);" name="result[]" id="1558" value="1558"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1558" id="result1558" title="Expand result">
+		    <span>Expand result for </span>Belarusian Trade and Economics University of Consumer Cooperatives</a></h3>
+		  <p class="i_name">
+		Belaruskij Gandljova-Ekanamičny Universitet Spažyveckaj Kaaperacyi &ndash; Gomelski kaaperatyvny instytut Belkaapsayuza (BTEU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Svetlana Lebedeva (Head) &ndash; Ludmila V. Misnikova (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Finance; Commerce; Economics and Management; Training and Retraining</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRVLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003934&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3934"><input class="case" type="checkbox" onClick="Coche(3934,0);" name="result[]" id="3934" value="3934"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result3934" id="result3934" title="Expand result">
+		    <span>Expand result for </span>Belarusian-Russian University</a></h3>
+		  <p class="i_name">
+		Belaruska-Rasijskij Universitet (BRU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Igor Sergeevich Sazonov (Head) &ndash; Komar Viktor Leonidovich (Senior Administrative Officer) &ndash; Alexander Korotkevich (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Studies and Retraining; Architecture and Civil Engineering; Automotive Engineering; Construction Engineering; Economics; Electrical Engineering; Engineering; Engineering and Economics; Humanities; Physical Education and Sports</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sU0RTLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001757&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1757"><input class="case" type="checkbox" onClick="Coche(1757,0);" name="result[]" id="1757" value="1757"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1757" id="result1757" title="Expand result">
+		    <span>Expand result for </span>Brest State Technical University</a></h3>
+		  <p class="i_name">
+		Brestskij Gosudarstvennyj Tehnicheskij Universitet (BSTU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Piotr S. Poyta (Head) &ndash; Vecheslav I. Dragan (Senior Administrative Officer) &ndash; Liana I. Kholodar (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Civil Engineering; Economics; Electronics Information Systems; Engineering Systems and Ecology Faculty; Extra-Mural Studies; Innovation, Management and Finance; Mechanical Engineering; Pre-University Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzxVLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001756&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1756"><input class="case" type="checkbox" onClick="Coche(1756,0);" name="result[]" id="1756" value="1756"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result1756" id="result1756" title="Expand result">
+		    <span>Expand result for </span>Brest State University named after A.S. Pushkin</a></h3>
+		  <p class="i_name">
+		Brestskij Dzjaržauny Universitet imja  A.S. Puškina (BrSU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mechyslau Edvardavich Chasnouski (Head) &ndash; Stanislav Grigor'evich Rachevky (Senior Administrative Officer) &ndash; Vladimir Stanislavovich Sekerzickij (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biology; Fizpraktikum; Foreign Languages; Geography; History; Law; Philology; Physical Education and Sports; Physics and Mathematics; Pre-University Education; Psychology and Pedagogy; Sociology and  Pedagogy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzxVLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010071&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10071"><input class="case" type="checkbox" onClick="Coche(10071,0);" name="result[]" id="10071" value="10071"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result10071" id="result10071" title="Expand result">
+		    <span>Expand result for </span>Command and Engineering Institute of the Ministry of Emergency Situations</a></h3>
+		  <p class="i_name">
+		Kamandna-Inžynerny Instytut MNS Respubliki Belarus'		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ivan Polevoda (Head) &ndash; Dmitry Petrovich Lukyanchikov (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Commanding; Distance Learning; Engineering; Fire and Industrial Safety; Graduate Studies; Retraining and Professional Development</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BQLVMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006703&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="6703"><input class="case" type="checkbox" onClick="Coche(6703,0);" name="result[]" id="6703" value="6703"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result6703" id="result6703" title="Expand result">
+		    <span>Expand result for </span>Francisk Skorina Gomel State University</a></h3>
+		  <p class="i_name">
+		Gomel'skij Dzjaržauny Universitet imja Franciska Skarany &ndash; Gomelski gosudarstvenny universitet im. Franciska Skoriny (GSU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>A.V. Rogachev (Head) &ndash; Yuri Kulazhenko (Senior Administrative Officer) &ndash; Ludmila Protchenko (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biology; Distance Education; Economics; Foreign Languages; Geology and Geography; History; Law; Management; Marketing (MRC); Mathematics; Philology; Physical Education; Physics; Preparatory Education for Teaching and Learning of Foreign Students; Professional Skills Development; Psychology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQzxQLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006704&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="6704"><input class="case" type="checkbox" onClick="Coche(6704,0);" name="result[]" id="6704" value="6704"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result6704" id="result6704" title="Expand result">
+		    <span>Expand result for </span>Gomel Engineering Institute of the Ministry of Emergency Situations</a></h3>
+		  <p class="i_name">
+		Gomel'skij Inžynerny Instytut MNS Respubliki Belarus'		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Andrei V. Borodako (Head) &ndash; Igor I. Sutorma (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Automatic Fire Safety Systems; Emergency Protection Management; Emergency Response; Fire and Industrial Safety; Fire and Rescue Equipment; Fire Rescue and Physical Training; Humanities; Modern Languages; Natural Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQzxQLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006701&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="6701"><input class="case" type="checkbox" onClick="Coche(6701,0);" name="result[]" id="6701" value="6701"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result6701" id="result6701" title="Expand result">
+		    <span>Expand result for </span>Gomel State Medical University</a></h3>
+		  <p class="i_name">
+		Gomel'skij Dzjaržauny Medycynski Universitet		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Anatoliy N. Lizikov (Head) &ndash; Alexander Kozlovsky (Senior Administrative Officer) &ndash; Vladimir V. Aničkin (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Medical and Diagnostic Studies; Pre-university Training and Vocational Guidance; Specialists Training for Foreign Countries; Therapy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQzxQLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006797&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="6797"><input class="case" type="checkbox" onClick="Coche(6797,0);" name="result[]" id="6797" value="6797"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result6797" id="result6797" title="Expand result">
+		    <span>Expand result for </span>Grodno State Agrarian University</a></h3>
+		  <p class="i_name">
+		Grodnenskij Dzjarzhauny Agrarny Universitet (GrSAU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vitold Kazimirovitch Pestis (Head) &ndash; Alexander Duduk (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accounting; Agronomy; Biotechnology; Economics; Engineering and Technology; Management; Plant Protection; Preparatory Education for International Students; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQzxZLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006795&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="6795"><input class="case" type="checkbox" onClick="Coche(6795,0);" name="result[]" id="6795" value="6795"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result6795" id="result6795" title="Expand result">
+		    <span>Expand result for </span>Grodno State Medical University</a></h3>
+		  <p class="i_name">
+		Grodnenskij Dzjaržauny Medycynski Universitet (GrMSU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Viktor A. Snerzhitskiy (Head) &ndash; Zhanna Motylevich (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Central Research; General Medicine; Hepatology; Medical Diagnostics; Medical Studies for International Students; Mental Health Medicine; Narcotics; Paediatrics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQzxZLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021070&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="21070"><input class="case" type="checkbox" onClick="Coche(21070,0);" name="result[]" id="21070" value="21070"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result21070" id="result21070" title="Expand result">
+		    <span>Expand result for </span>Higher State College of Communications</a></h3>
+		  <p class="i_name">
+		Vyšejšy Dzjaržauny Kaledž Suvjazi (UO VGKS/HSCC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Andrey O. Zenevih (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering and Technology Communication; Telecommunication</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRQLVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009503&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9503"><input class="case" type="checkbox" onClick="Coche(9503,0);" name="result[]" id="9503" value="9503"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result9503" id="result9503" title="Expand result">
+		    <span>Expand result for </span>Institute of Entrepreneurial Activity</a></h3>
+		  <p class="i_name">
+		Instytut Pradprymal'nickaj Dzejnasci		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Viktor L. Tsybovsky (Head) &ndash; Vladimir V. Sheverdov (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Business; Foreign Economic Activity and Entrepreneurship</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzRQLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003985&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3985"><input class="case" type="checkbox" onClick="Coche(3985,0);" name="result[]" id="3985" value="3985"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result3985" id="result3985" title="Expand result">
+		    <span>Expand result for </span>Institute of Management and Business</a></h3>
+		  <p class="i_name">
+		Častnij Instytut Kiravannja i Pradprymal'nictva &ndash; Private Institute of Management and Entrepreneurship		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alexander Semeshko (Head) &ndash; Michael I. Ovseets (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Law; Personnel Retraining</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sU0RYLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009504&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9504"><input class="case" type="checkbox" onClick="Coche(9504,0);" name="result[]" id="9504" value="9504"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result9504" id="result9504" title="Expand result">
+		    <span>Expand result for </span>Institute of Modern Knowledge</a></h3>
+		  <p class="i_name">
+		Instytut Sučasnyh Vedau		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>A.L. Kapilov (Head) &ndash; Valentina Rostovtcev (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Art; Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzRQLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009502&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9502"><input class="case" type="checkbox" onClick="Coche(9502,0);" name="result[]" id="9502" value="9502"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result9502" id="result9502" title="Expand result">
+		    <span>Expand result for </span>Institute of Parliamentarism and Entrepreneurship</a></h3>
+		  <p class="i_name">
+		Instytut Parlamentaryzma i Pradprymal'nictva (IPE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alexander Gorelik (Head) &ndash; Markov Andrei Viktorovich (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Management; Journalism; Political Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzRQLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011981&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11981"><input class="case" type="checkbox" onClick="Coche(11981,0);" name="result[]" id="11981" value="11981"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result11981" id="result11981" title="Expand result">
+		    <span>Expand result for </span>International Humanitarian and Economics Institute</a></h3>
+		  <p class="i_name">
+		Mižnarodny Gumanitarna-Ekanamičny Instytut (IHEI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alexander N. Alpeev (Head) &ndash; Tamara M. Alpeev (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accounting and Audit; Economics and Management; Finances and Credit; International Economics; International Law; International Relations; Law; Political Science; Psychology; Sociology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRZLiMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011980&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11980"><input class="case" type="checkbox" onClick="Coche(11980,0);" name="result[]" id="11980" value="11980"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result11980" id="result11980" title="Expand result">
+		    <span>Expand result for </span>International Sakharov Environmental University</a></h3>
+		  <p class="i_name">
+		Mižnarodny Dzjaržauny Ekalagičny Universitet imja A.D. Saharova (ISEU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sergey L. Kabak (Head) &ndash; Vladimir I. Krasouski (Senior Administrative Officer) &ndash; Nikolay N. Vayzekhovitch (Senior Administrative Officer) &ndash; Helen Alexeichik (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Training and Staff Re-training; Correspondent Education; Environmental Medicine; Environmental Monitoring and Management; Pre-university Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRZLiNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011937&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11937"><input class="case" type="checkbox" onClick="Coche(11937,0);" name="result[]" id="11937" value="11937"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result11937" id="result11937" title="Expand result">
+		    <span>Expand result for </span>Minsk Institute of Management</a></h3>
+		  <p class="i_name">
+		Minskij Instytut Kiravannja (MIM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nikolay Vasilyevich Susha (Head) &ndash; Branislau A. Hedranovich (Senior Administrative Officer) &ndash; Valiantsina V. Hedranovich (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Training and Retraining; Economics; Engineering and Information; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRZLFM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011935&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11935"><input class="case" type="checkbox" onClick="Coche(11935,0);" name="result[]" id="11935" value="11935"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result11935" id="result11935" title="Expand result">
+		    <span>Expand result for </span>Minsk State Higher Aviation College</a></h3>
+		  <p class="i_name">
+		Minski Dzjaržauny Vyšejšy Avijacyjny Kaledž (MSHAC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alexander A. Laptsevich (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Civil Aviation; Distance Learning; Military Aviation; Secondary Special Education; Training and Retraining</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRZLFM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011936&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11936"><input class="case" type="checkbox" onClick="Coche(11936,0);" name="result[]" id="11936" value="11936"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result11936" id="result11936" title="Expand result">
+		    <span>Expand result for </span>Minsk State Higher Radio-Engineering College</a></h3>
+		  <p class="i_name">
+		Minski Dzjaržauny Vyšejšy Radiotehničny Kaledž		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sergey N. Ankuda (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Programming; Distance Education; Electronics; Radio Engineering; Vocational Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRZLFM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011934&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11934"><input class="case" type="checkbox" onClick="Coche(11934,0);" name="result[]" id="11934" value="11934"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result11934" id="result11934" title="Expand result">
+		    <span>Expand result for </span>Minsk State Linguistics University</a></h3>
+		  <p class="i_name">
+		Minski Dzjaržauny Lingvistyčny Universitet (MSLU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Natalia Petrovna Baranova (Head) &ndash; Anatoly M. Gorlatov (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>English; French; German; Intercultural Communication; Retraining and Teacher Development; Russian as a Foreign Language; Spanish; Translation and Interpreting</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRZLFMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011152&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11152"><input class="case" type="checkbox" onClick="Coche(11152,0);" name="result[]" id="11152" value="11152"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result11152" id="result11152" title="Expand result">
+		    <span>Expand result for </span>Mogilev State University named after A.A.Kuleshov</a></h3>
+		  <p class="i_name">
+		Magiljouski Dzjaržauny Universitet imja A.A. Kuljašova (MSU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Konstantin Bondarenko (Head) &ndash; Dmitry Lavrinovich (Senior Administrative Officer) &ndash; Sergej Machekin (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Law; Elementary Education; Foreign Languages; History; Natural Sciences; Pedagogy and Childhood Psychology; Physical Education; Physics and Mathematics; Slavonic Philology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRRLTMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011151&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11151"><input class="case" type="checkbox" onClick="Coche(11151,0);" name="result[]" id="11151" value="11151"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result11151" id="result11151" title="Expand result">
+		    <span>Expand result for </span>Mogilev State University of Food Technology</a></h3>
+		  <p class="i_name">
+		Magiljouski Dzjaržauny Universitet Harčavannja (MSFU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vyacheslav A. Sharshunov (Head) &ndash; Nosikov Alexander Stepanovich (Senior Administrative Officer) &ndash; Igor Davidovich (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Studies and Retraining; Chemical Engineering; Correspondence; Economics; Mechanical Engineering; Preparatory Education; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRRLTMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012210&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12210"><input class="case" type="checkbox" onClick="Coche(12210,0);" name="result[]" id="12210" value="12210"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result12210" id="result12210" title="Expand result">
+		    <span>Expand result for </span>Mozyr State Pedagogical University named after I.P. Shamyakin</a></h3>
+		  <p class="i_name">
+		Mozyrskij Dzjaržauny Pedagogičny Universitet imja I. P. Shamyakin &ndash; Mozyrskiy gosudarstvennyj pedagogičeskiy universitet (MDPI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Valentin V. Valetoff (Head) &ndash; Valery S. Bolbas (Senior Administrative Officer) &ndash; Tatsiana N. Chechko (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biology; Engineering and Pedagogy; Philology; Physical Education; Physics and Mathematics; Pre-school and Primary Education; Pre-university Tuition and Professional Guidance; Professional Development and Retraining; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhSLDNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013275&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="13275"><input class="case" type="checkbox" onClick="Coche(13275,0);" name="result[]" id="13275" value="13275"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result13275" id="result13275" title="Expand result">
+		    <span>Expand result for </span>Polessky State University</a></h3>
+		  <p class="i_name">
+		Palesskij Dzjaržauny Universitet		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Konstantin K. Shebeko (Head) &ndash; Lidiya S. Tsvirko (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Banking; Biotechnology; Economics; Healthy Lifestyle; Preparatory Studies; Retraining and Qualification Upgrading</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxSLVM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013555&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13555"><input class="case" type="checkbox" onClick="Coche(13555,0);" name="result[]" id="13555" value="13555"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result13555" id="result13555" title="Expand result">
+		    <span>Expand result for </span>Polotsk State University</a></h3>
+		  <p class="i_name">
+		Polatskij Dzjaržauny Universitet (PSU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Dmitry M. Lazovsky (Head) &ndash; Vasily Boulakh (Senior Administrative Officer) &ndash; Sergey Peshkun (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Civil Engineering; Engineering Technology; Finance and Economics; Geodesy; History and Philology; Information Technology; Law; Machine Building; Physical Education; Pre-university Training; Radio Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxVLTM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006702&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="6702"><input class="case" type="checkbox" onClick="Coche(6702,0);" name="result[]" id="6702" value="6702"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result6702" id="result6702" title="Expand result">
+		    <span>Expand result for </span>Sukhoi State Technical University of Gomel</a></h3>
+		  <p class="i_name">
+		Gomel'skij Dzjaržauny Tehničny Universitet imja P.O. Suhogo (GSTU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sergei Timoshin (Head) &ndash; Oleg D. Asenchik (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Automation and Information Systems; Correspondence; Economics and Humanities; Mechanical Engineering; Physical Training and Sports; Power Engineering; Pre-University Studies; Technology; Upgrading and Retraining</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQzxQLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020953&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="20953"><input class="case" type="checkbox" onClick="Coche(20953,0);" name="result[]" id="20953" value="20953"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result20953" id="result20953" title="Expand result">
+		    <span>Expand result for </span>Vitebsk State Academy of Veterinary Medicine</a></h3>
+		  <p class="i_name">
+		Vitebskaja Dzjaržaunaja Akademija Veterynarnaj Medycyny (VSAVM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Anton Ivanovič Yatusevich (Head) &ndash; Rostislav G. Kuzmich (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accounting and Finance; Animal Science; Engineering and Agroengineering; Environmental Engineering; Humanitarian Affairs and Communications; Professional Retraining; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BZLTMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020954&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="20954"><input class="case" type="checkbox" onClick="Coche(20954,0);" name="result[]" id="20954" value="20954"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result20954" id="result20954" title="Expand result">
+		    <span>Expand result for </span>Vitebsk State Medical University</a></h3>
+		  <p class="i_name">
+		Vitebskij Dzjaržauny Medycynski Universitet (VSMU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Valery P. Deykalo (Head) &ndash; Natalia Yurievna Konevalova (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Training and Personnel Development; Advanced Training in Pedagogics and Psychology; Medicine; Overseas Students Training; Pharmacy; Professional Orientation and Preparatory Training (FOPT); Stomatology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BZLTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020955&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="20955"><input class="case" type="checkbox" onClick="Coche(20955,0);" name="result[]" id="20955" value="20955"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result20955" id="result20955" title="Expand result">
+		    <span>Expand result for </span>Vitebsk State Technological University</a></h3>
+		  <p class="i_name">
+		Vitebskij Dzjaržauny Tehnalagičny Universitet (VSTU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Valeriy S. Bashmetov (Head) &ndash; Sergeij Ivanovich Malashenkov (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Artistic Design and Technology; Correspondence; Design and Technology; Economics; Mechanics and Technology; Pre-university Training and Vocational Guidance; Qualifications Improvement and Staff Retraining</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BZLTM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020956&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="20956"><input class="case" type="checkbox" onClick="Coche(20956,0);" name="result[]" id="20956" value="20956"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result20956" id="result20956" title="Expand result">
+		    <span>Expand result for </span>Vitebsk State University named after P.M. Masherov</a></h3>
+		  <p class="i_name">
+		Vitebskij Dzjaržauny Universitet imja P.M. Mašerova (VSU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alexandr P. Solodkov (Head) &ndash; Oksana Anatolieva Tulinova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Art and Graphics; Belarusian Philology and Culture; Biology; History; Law; Mathematics; Pedagogy; Philology; Physical Education and Sports; Physics; Preliminary Training; Social Pedagogy and Psychology; Staff Upgrading and Retraining</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BZLTM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006796&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="6796"><input class="case" type="checkbox" onClick="Coche(6796,0);" name="result[]" id="6796" value="6796"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Belarus</p>
+				  <h3>
+		    <a href="#result6796" id="result6796" title="Expand result">
+		    <span>Expand result for </span>Yanka Kupala State University of Grodno</a></h3>
+		  <p class="i_name">
+		Grodnenskij Dzjaržauny Universitet imja Janki Kupaly &ndash; Grodno State University named after Yanka Kupala (YKSUG)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Andrei Karol (Head) &ndash; Sviatlana Ahiyavets (Senior Administrative Officer) &ndash; Olga Minova (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Design; Biology and Ecology; Economics and Management; Engineering and Construction; History, Communications and Tourism; Innovative Mechanic Engineering; Law; Mathematics and Informatics; Military Science; Pedagogy; Philology; Physical Education; Physico-technical Studies; Pre-University Training; Psychology; Socio-Humanitarian</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQzxZLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 51 of 51</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus" selected>Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

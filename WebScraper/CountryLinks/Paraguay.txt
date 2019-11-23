@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Paraguay')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Paraguay)">
+	    <input type="hidden" class="envoi" name="total" value="67">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Paraguay">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">67 results found for <strong>(Country=Paraguay)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 67 of 67</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-023860&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23860"><input class="case" type="checkbox" onClick="Coche(23860,0);" name="result[]" id="23860" value="23860"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23860" id="result23860" title="Expand result">
+		    <span>Expand result for </span>Advanced Professional Institute</a></h3>
+		  <p class="i_name">
+		Instituto Superior Profesional Avanzado (ISPA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLUNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023848&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23848"><input class="case" type="checkbox" onClick="Coche(23848,0);" name="result[]" id="23848" value="23848"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23848" id="result23848" title="Expand result">
+		    <span>Expand result for </span>Adventist  University of Paraguay</a></h3>
+		  <p class="i_name">
+		Univerdidad Adventista del Paraguay (UNAPY)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Martín Rubén Llano Domecq (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration and Accountancy; Health Sciences; Humanities, Social Sciences and Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLSNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017145&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17145"><input class="case" type="checkbox" onClick="Coche(17145,0);" name="result[]" id="17145" value="17145"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17145" id="result17145" title="Expand result">
+		    <span>Expand result for </span>American University</a></h3>
+		  <p class="i_name">
+		Universidad Americana (UA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Beranger (Head) &ndash; Milner German Romero (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Communication, Arts and Technology; Economics and Administration; Law, Political and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxRLSM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017186&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17186"><input class="case" type="checkbox" onClick="Coche(17186,0);" name="result[]" id="17186" value="17186"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17186" id="result17186" title="Expand result">
+		    <span>Expand result for </span>Autonomous University of Asunción</a></h3>
+		  <p class="i_name">
+		Universidad Autónoma de Asunción (UAA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kitty Gaona Franco (Head) &ndash; Juan de Dios Garbett (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration and Economics; Distance Education; Health Sciences; Law, Political Sciences and Communication Studies; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxRLiM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023817&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23817"><input class="case" type="checkbox" onClick="Coche(23817,0);" name="result[]" id="23817" value="23817"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23817" id="result23817" title="Expand result">
+		    <span>Expand result for </span>Autonomus University of Encarnación</a></h3>
+		  <p class="i_name">
+		Universidad Autónoma de Encarnación (UNAE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nadia Czeraniuk (Head) &ndash; Helmut Schaefer (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Divina Esperanza; Fine Arts, Science and Technology; Law, Arts and Humanities and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLDM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023786&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23786"><input class="case" type="checkbox" onClick="Coche(23786,0);" name="result[]" id="23786" value="23786"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23786" id="result23786" title="Expand result">
+		    <span>Expand result for </span>Autonomus University of Luque</a></h3>
+		  <p class="i_name">
+		Universidad Autónoma de Luque		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Antonio Galeano (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Business Administration; Commercial Engineering; Educational Sciences; Law; Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxXLiM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023805&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23805"><input class="case" type="checkbox" onClick="Coche(23805,0);" name="result[]" id="23805" value="23805"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23805" id="result23805" title="Expand result">
+		    <span>Expand result for </span>Autonomus University of San Sebastian</a></h3>
+		  <p class="i_name">
+		Universidad Autónoma San Sebastián		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fullgencio Samudio Ozuna (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Economics and Business Administration; Education and Arts and Humanities; Health Sciences; Law and Social Sciences; Medicine; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLCM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023818&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23818"><input class="case" type="checkbox" onClick="Coche(23818,0);" name="result[]" id="23818" value="23818"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23818" id="result23818" title="Expand result">
+		    <span>Expand result for </span>Autonomus University of the South</a></h3>
+		  <p class="i_name">
+		Universidad Autónoma del Sur (UNASUR)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Arnaldo Lataza (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture, Veterinary Science and Environmental Studies; Business Administration; Education and Humanities; Heath Sciences; Law and Social Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLDNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023828&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23828"><input class="case" type="checkbox" onClick="Coche(23828,0);" name="result[]" id="23828" value="23828"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23828" id="result23828" title="Expand result">
+		    <span>Expand result for </span>Baptist Medical Center University</a></h3>
+		  <p class="i_name">
+		Universidad Centro Médico Bautista		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ernesto Simari (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Business Administration; Health Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLENAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023862&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23862"><input class="case" type="checkbox" onClick="Coche(23862,0);" name="result[]" id="23862" value="23862"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23862" id="result23862" title="Expand result">
+		    <span>Expand result for </span>Center for Criminal Science and Criminal Policy</a></h3>
+		  <p class="i_name">
+		Centro de Ciencias Penales y Política Criminal		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Wolfgang Schöne (Head) &ndash; Claudia Carolina Criscioni Ferreira (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023803&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23803"><input class="case" type="checkbox" onClick="Coche(23803,0);" name="result[]" id="23803" value="23803"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23803" id="result23803" title="Expand result">
+		    <span>Expand result for </span>Central University of Paraguay</a></h3>
+		  <p class="i_name">
+		Universidad Central del Paraguay		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luis Alberto López Zayas (Head) &ndash; Hermes Escolar (Senior Administrative Officer) &ndash; Khalid Asslami (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Business Administration; Engineering; Health Sciences; Law and Social Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLCMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017360&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17360"><input class="case" type="checkbox" onClick="Coche(17360,0);" name="result[]" id="17360" value="17360"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17360" id="result17360" title="Expand result">
+		    <span>Expand result for </span>Columbia University of Paraguay</a></h3>
+		  <p class="i_name">
+		Universidad Columbia del Paraguay		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Roberto Elías Canese (Head) &ndash; María Elena Urbieta (Senior Administrative Officer) &ndash; Teresa Riveros (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Agricultural Engineering; Agricultural Management; Architecture and Design; Business Administration; Cinema; Commerce; Computer Engineering; Graphic Design; Hotel and Tourism; International Business; Law; Marketing; Marketing Engineering; Psychology; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLUNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017363&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17363"><input class="case" type="checkbox" onClick="Coche(17363,0);" name="result[]" id="17363" value="17363"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17363" id="result17363" title="Expand result">
+		    <span>Expand result for </span>Comunera University</a></h3>
+		  <p class="i_name">
+		Universidad Comunera (UCOM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Evelio Fernández Arévalos (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Administration; Business Administration; Computer Science; Law; Public Administration; Public Relations; Social Economics; Tourism and Environment</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLUMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023842&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23842"><input class="case" type="checkbox" onClick="Coche(23842,0);" name="result[]" id="23842" value="23842"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23842" id="result23842" title="Expand result">
+		    <span>Expand result for </span>Del Chaco University</a></h3>
+		  <p class="i_name">
+		Universidad del Chaco (UNICHACO)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Reinaldo Barreto Medina (Head) &ndash; Geladio Zelada Valinotti (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration and Economics; Criminalistics and Forensic Science; Ecology; Health Sciences; Law and Social Sciences; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLSMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023855&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23855"><input class="case" type="checkbox" onClick="Coche(23855,0);" name="result[]" id="23855" value="23855"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23855" id="result23855" title="Expand result">
+		    <span>Expand result for </span>Don Bosco Salesian Institute of Philosophical Studies</a></h3>
+		  <p class="i_name">
+		Instituto Superior Salesiano de Estudios Filosófico Don Bosco (ISSEF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Francesco Cereda (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Modern Languages; Religion; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLTM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008980&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8980"><input class="case" type="checkbox" onClick="Coche(8980,0);" name="result[]" id="8980" value="8980"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result8980" id="result8980" title="Expand result">
+		    <span>Expand result for </span>Dr. Raúl Peña Institute of Education</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Educación Dr. Raúl Peña		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>María Victoria Zavala (Head) &ndash; Myiriam Segovia Martínez (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0RYLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017764&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17764"><input class="case" type="checkbox" onClick="Coche(17764,0);" name="result[]" id="17764" value="17764"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17764" id="result17764" title="Expand result">
+		    <span>Expand result for </span>Evangelical University of Paraguay</a></h3>
+		  <p class="i_name">
+		Universidad Evangélica del Paraguay (UEP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alfred Neufeld Friesen (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy, Administration and Economics; Education; Educational Sciences and Humanities; Health Sciences; Modern Languages; Music; Psychology and Human Development; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxXLUMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023804&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23804"><input class="case" type="checkbox" onClick="Coche(23804,0);" name="result[]" id="23804" value="23804"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23804" id="result23804" title="Expand result">
+		    <span>Expand result for </span>Fine Arts Institute</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Bellas Artes (ISBA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jorge Carlos Fernández Alonzo (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Postgraduate Studies; Undergraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLCMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023847&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23847"><input class="case" type="checkbox" onClick="Coche(23847,0);" name="result[]" id="23847" value="23847"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23847" id="result23847" title="Expand result">
+		    <span>Expand result for </span>Great Assumption University</a></h3>
+		  <p class="i_name">
+		Universidad Gran Asunción (UNIGRAN)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Antonio Denis Pintos (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration and Technology; Health Sciences; Law, Humanities and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLSM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017802&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17802"><input class="case" type="checkbox" onClick="Coche(17802,0);" name="result[]" id="17802" value="17802"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17802" id="result17802" title="Expand result">
+		    <span>Expand result for </span>Iberoamerican University</a></h3>
+		  <p class="i_name">
+		Universidad Iberoamericana		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sanie Romero de Velásquez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Art Education; Basis Sciences; Business Administration; Computer Engineering; Educational Sciences; Graphic Design; International Business; Journalism; Languagues and Literature; Law; Marketing and Advertising; Mathematics; Notary Studies; Nursing; Nutrition; Psychology; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxYLCMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023864&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23864"><input class="case" type="checkbox" onClick="Coche(23864,0);" name="result[]" id="23864" value="23864"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23864" id="result23864" title="Expand result">
+		    <span>Expand result for </span>Institute of Advanced Dentistry</a></h3>
+		  <p class="i_name">
+		Instituto de Odontología Avanzada (IOA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Aldo Otazu (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dentisry</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLUMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023861&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23861"><input class="case" type="checkbox" onClick="Coche(23861,0);" name="result[]" id="23861" value="23861"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23861" id="result23861" title="Expand result">
+		    <span>Expand result for </span>Institute of Taxation and Business Studies</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Formación Tributaria y Empresarial (FOTRIEM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nora Ruoti Cosp (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Taxation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLUMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023851&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23851"><input class="case" type="checkbox" onClick="Coche(23851,0);" name="result[]" id="23851" value="23851"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23851" id="result23851" title="Expand result">
+		    <span>Expand result for </span>Interamerican University</a></h3>
+		  <p class="i_name">
+		Universidad Interamericana		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Livian Floria Fernádez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Administration, Accountancy; Educational Sciences; Health Sciences; Humanities; Law, Political and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLTMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018454&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18454"><input class="case" type="checkbox" onClick="Coche(18454,0);" name="result[]" id="18454" value="18454"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result18454" id="result18454" title="Expand result">
+		    <span>Expand result for </span>Intercontinental University of Technology</a></h3>
+		  <p class="i_name">
+		Universidad Tecnológica Intercontinental (UTIC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hugo Ferreira González (Head) &ndash; Abelardo Montiel (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Business Administration; Computer Engineering; Health Sciences; Law and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BULTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023859&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23859"><input class="case" type="checkbox" onClick="Coche(23859,0);" name="result[]" id="23859" value="23859"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23859" id="result23859" title="Expand result">
+		    <span>Expand result for </span>Interregional Institute of Health Sciences</a></h3>
+		  <p class="i_name">
+		Instituto Superior Interregional en Ciencias de la Salud		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ricardo Verón Romero (Head) &ndash; Marta Elisabeth Cantero Zarza (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLTNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023822&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23822"><input class="case" type="checkbox" onClick="Coche(23822,0);" name="result[]" id="23822" value="23822"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23822" id="result23822" title="Expand result">
+		    <span>Expand result for </span>Leonardo Da Vinci University</a></h3>
+		  <p class="i_name">
+		Universidad Leonardo Da Vinci (ULDV)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nery Ramón Ríos Ojeda (Head) &ndash; Rodrigo Torreani (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Educational Sciences; Environmental Sciences; Health Sciences; Law and Social Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLEMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023819&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23819"><input class="case" type="checkbox" onClick="Coche(23819,0);" name="result[]" id="23819" value="23819"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23819" id="result23819" title="Expand result">
+		    <span>Expand result for </span>Maria Auxiliadora University</a></h3>
+		  <p class="i_name">
+		Universidad María Auxiliadora (UMAX)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Javier Quiñonez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health Sciences; Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLDNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023824&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23824"><input class="case" type="checkbox" onClick="Coche(23824,0);" name="result[]" id="23824" value="23824"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23824" id="result23824" title="Expand result">
+		    <span>Expand result for </span>Maria Serrana University</a></h3>
+		  <p class="i_name">
+		Universidad Maria Serrana		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Norma Aquino (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Health Sciences; Medicine; Science and Technology; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLEMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017965&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17965"><input class="case" type="checkbox" onClick="Coche(17965,0);" name="result[]" id="17965" value="17965"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17965" id="result17965" title="Expand result">
+		    <span>Expand result for </span>Metropolitan University of Asunción</a></h3>
+		  <p class="i_name">
+		Universidad Metropolitana de Asunción		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>María Liz García de Arnold (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration and Economics; Health Sciences; Humanities; Law, Political and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxZLUM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018014&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18014"><input class="case" type="checkbox" onClick="Coche(18014,0);" name="result[]" id="18014" value="18014"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result18014" id="result18014" title="Expand result">
+		    <span>Expand result for </span>National University of Asunción</a></h3>
+		  <p class="i_name">
+		Universidad Nacional de Asunción (UNA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abel Bernal Castillo (Head) &ndash; Héctor Amilcar Rojas (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Sciences; Architecture, Design and Art; Art; Chemistry; Dentistry; Dr. Andrés Barbero; Economics; Engineering; Exact and Natural Sciences; Health Sciences; Law and Social Sciences; Medicine; Modern Languages; Paraguay-Brazil; Philosophy; Polytechnic; Social Work; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BQLDMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023728&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23728"><input class="case" type="checkbox" onClick="Coche(23728,0);" name="result[]" id="23728" value="23728"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23728" id="result23728" title="Expand result">
+		    <span>Expand result for </span>National University of Caaguazú</a></h3>
+		  <p class="i_name">
+		Universidad Nacional del Caaguazú		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hugo Ramón Giménez Barboza (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Economics; Health Sciences; Ondontology; Production Science; Science and Technology; Social and Political Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxXLENAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023849&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23849"><input class="case" type="checkbox" onClick="Coche(23849,0);" name="result[]" id="23849" value="23849"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23849" id="result23849" title="Expand result">
+		    <span>Expand result for </span>National University of Canindeyú</a></h3>
+		  <p class="i_name">
+		Universidad Nacional de Canindeyú (UNICAN)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mariano Adolfo Pacher Morel (Head) &ndash; Martinez Mercado (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Enviromnental Studies; Economics and Business Administration; Health Sciences; Law and Social Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLSNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023729&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23729"><input class="case" type="checkbox" onClick="Coche(23729,0);" name="result[]" id="23729" value="23729"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23729" id="result23729" title="Expand result">
+		    <span>Expand result for </span>National University of Concepción</a></h3>
+		  <p class="i_name">
+		Universidad Nacional de Concepción		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Clarito Rojas Marín (Head) &ndash; Luis Gilberto Romero Rojas (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Arts and Humanities and Educational Sciences; Dentistry; Economics and Administration; Exact Sciences and Technology; Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxXLENEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018037&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18037"><input class="case" type="checkbox" onClick="Coche(18037,0);" name="result[]" id="18037" value="18037"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result18037" id="result18037" title="Expand result">
+		    <span>Expand result for </span>National University of Itapúa</a></h3>
+		  <p class="i_name">
+		Universidad Nacional de Itapúa (UNI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hildegardo González Irala (Head) &ndash; Yilda Agüero de Talavera: (Senior Administrative Officer) &ndash; Victoria Teres (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Forestry; Economics and Administration; Engineering; Humanities, Social Sciences and Guarani Studies; Law; Medicine; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BQLFM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018054&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18054"><input class="case" type="checkbox" onClick="Coche(18054,0);" name="result[]" id="18054" value="18054"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result18054" id="result18054" title="Expand result">
+		    <span>Expand result for </span>National University of Pilar</a></h3>
+		  <p class="i_name">
+		Universidad Nacional de Pilar (UNP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Víctor Ríos Ojeda (Head) &ndash; Adolfo Villasboa Romañach (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy, Administration and Economics; Agriculture and Rural Development; Applied Sciences; Biomedical Sciences; Humanities and Educational Sciences; Law and Political and Social Sciences; Science, Technology and Arts</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BQLTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018084&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18084"><input class="case" type="checkbox" onClick="Coche(18084,0);" name="result[]" id="18084" value="18084"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result18084" id="result18084" title="Expand result">
+		    <span>Expand result for </span>National University of the East</a></h3>
+		  <p class="i_name">
+		Universidad Nacional del Este (UNE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gerónimo Laviosa González (Head) &ndash; Julio Cesar Meaurio (Senior Administrative Officer) &ndash; Rosa Elizabeth Medina Pavon (Senior Administrative Officer) &ndash; Rolando Segovia Páez (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Engineering; Bellas Arte; Cruce Itakyry; Economics; Fine Arts; Health Sciences; Law and Social Sciences; Philosophy; Polytechnic; Salto del Guairá</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BQLiMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023739&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23739"><input class="case" type="checkbox" onClick="Coche(23739,0);" name="result[]" id="23739" value="23739"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23739" id="result23739" title="Expand result">
+		    <span>Expand result for </span>National University of Villarica of the Holy Spirit</a></h3>
+		  <p class="i_name">
+		Universidad Nacional de Villarrica del Espíritu Santo		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Simón Benítez OrtÍz (Head) &ndash; Luz María Benítez (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Architecture and Engineering; Arts and Cultural Studies; Economics; Gastronomy, Hotel Management and Tourism; Health Sciences; Law, Political and Social Sciences; Philosophy and Arts and Humanities; Physics, Chemistry and Mathematics; Polytechnic; Science - Caazapa; Science - Carapegua; Science - Paraguarí; Science - Yuty; Science-Pedro Juan Caballero</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxXLFNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023823&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23823"><input class="case" type="checkbox" onClick="Coche(23823,0);" name="result[]" id="23823" value="23823"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23823" id="result23823" title="Expand result">
+		    <span>Expand result for </span>Nihon Gakko University</a></h3>
+		  <p class="i_name">
+		Universidad Nihon Gakko		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Dionisio Ortega (Head) &ndash; Hermelinda A. de Ortega (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Health Sciences; Humanities and Educational Sciences; Law and Social Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLEMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023810&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23810"><input class="case" type="checkbox" onClick="Coche(23810,0);" name="result[]" id="23810" value="23810"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23810" id="result23810" title="Expand result">
+		    <span>Expand result for </span>Northeastern University of Paraguay</a></h3>
+		  <p class="i_name">
+		Universidad Nordeste Del Paraguay (UNDP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Darío Zárate Arellano (Head) &ndash; Lea del Puerto de Zorrilla (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Agricultural Management; Agriculture Engineering; Business Administration; Commercial Enginnering; Computer Engineering; Educational Psychology; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLDNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017273&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17273"><input class="case" type="checkbox" onClick="Coche(17273,0);" name="result[]" id="17273" value="17273"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17273" id="result17273" title="Expand result">
+		    <span>Expand result for </span>Our Lady of the Assumption Catholic University</a></h3>
+		  <p class="i_name">
+		Universidad Católica Nuestra Señora de la Asunción (UC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Narciso Velázquez Ferreira (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business, Administration and Accountancy; Law and Diplomatic Studies; Music; Philosophy and Human Sciences; Science and Technology; Theology; Theology and Pastoral Action</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxSLVMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017273-017269&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17269"><input class="case" type="checkbox" onClick="Coche(17269,0);" name="result[]" id="17269" value="17269"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17269" id="result17269" title="Expand result">
+		    <span>Expand result for </span>Our Lady of the Assumption Catholic University &ndash; Alto Paraná Campus</a></h3>
+		  <p class="i_name">
+		Universidad Católica Nuestra Señora de la Asunción &ndash; Campus Alto Paraná		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Petrona Vázquez de Cardozo (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Administration; Health Sciences; Law; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxSLUNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017273-017270&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17270"><input class="case" type="checkbox" onClick="Coche(17270,0);" name="result[]" id="17270" value="17270"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17270" id="result17270" title="Expand result">
+		    <span>Expand result for </span>Our Lady of the Assumption Catholic University &ndash; Concepción Campus</a></h3>
+		  <p class="i_name">
+		Universidad Católica Nuestra Señora de la Asunción &ndash; Campus Concepción		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>María Victoria Coelho de Souza (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Educational Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxSLVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017273-017271&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17271"><input class="case" type="checkbox" onClick="Coche(17271,0);" name="result[]" id="17271" value="17271"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17271" id="result17271" title="Expand result">
+		    <span>Expand result for </span>Our Lady of the Assumption Catholic University &ndash; Guairá Branch</a></h3>
+		  <p class="i_name">
+		Universidad Católica Nuestra Señora de la Asunción &ndash; Campus Guairá		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Modesto Escobar (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business, Administration and Accountancy; Chemistry; Dentistry; Educational Sciences; Engineering; Law; Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxSLVMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017273-017272&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17272"><input class="case" type="checkbox" onClick="Coche(17272,0);" name="result[]" id="17272" value="17272"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17272" id="result17272" title="Expand result">
+		    <span>Expand result for </span>Our Lady of the Assumption Catholic University &ndash; Itapúa Campus</a></h3>
+		  <p class="i_name">
+		Universidad Católica Nuestra Señora de la Asunción &ndash; Campus Itapúa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rosa Esther Encine Fretes (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Arts and Humanity and Philosopy; Economics; Educational Sciences; Health Sciences; Law; Sciences and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxSLVMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017238&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17238"><input class="case" type="checkbox" onClick="Coche(17238,0);" name="result[]" id="17238" value="17238"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17238" id="result17238" title="Expand result">
+		    <span>Expand result for </span>Pierre Fauchard Autonomous University of Paraguay</a></h3>
+		  <p class="i_name">
+		Universidad Autónoma del Paraguay Pierre Fauchard (UAP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ángel Lird Olmedo (Head) &ndash; Reinaldo Barreto Medina (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Business Administration; Dental Prosthesis; Dentistry; Marketing and Advertising; Nutrition; Optical Technology; Physical Therapy and Podology; Psychology; Speech Therapy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxSLFNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018254&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18254"><input class="case" type="checkbox" onClick="Coche(18254,0);" name="result[]" id="18254" value="18254"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result18254" id="result18254" title="Expand result">
+		    <span>Expand result for </span>Polytechnic and Arts University of Paraguay</a></h3>
+		  <p class="i_name">
+		Universidad Politécnica y Artística del Paraguay		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gerardo Fogel Pedrozo (Head) &ndash; Verónica Viedma (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Technology; Business Studies; Health Science; Law; Social Sciences, Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BSLTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023806&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23806"><input class="case" type="checkbox" onClick="Coche(23806,0);" name="result[]" id="23806" value="23806"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23806" id="result23806" title="Expand result">
+		    <span>Expand result for </span>Private University of Guairá</a></h3>
+		  <p class="i_name">
+		Universidad Privada del Guairá		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Arístides Gaspar Fernández Bittar (Head) &ndash; Silvia Godoy Cubilla (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Environmental Studies; Arts, Modern Languages and Communication Studies; Biology and Health Sciences; Educational Sciences; Law and Political Sciences; Social Sciences and Humanities; Sports; Technology and Exact Sciences; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLCM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018286&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18286"><input class="case" type="checkbox" onClick="Coche(18286,0);" name="result[]" id="18286" value="18286"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result18286" id="result18286" title="Expand result">
+		    <span>Expand result for </span>Private University of the East</a></h3>
+		  <p class="i_name">
+		Universidad Privada del Este (UPE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Bautista González (Head) &ndash; Nicolás Flores González (Senior Administrative Officer) &ndash; Nathalia Soria (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration and Accountancy; Agriculture; Architecture and Town Planning; Computer Engineering; Dentistry; Educational Sciences; Environmental Studies; Health Sciences; Law, Political and Social Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BSLiM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017676&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17676"><input class="case" type="checkbox" onClick="Coche(17676,0);" name="result[]" id="17676" value="17676"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17676" id="result17676" title="Expand result">
+		    <span>Expand result for </span>Private University of the Pacific</a></h3>
+		  <p class="i_name">
+		Universidad del Pacífico Privada		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>María Elena Piscoya Cabrejos (Head) &ndash; Rubén Darío Romero Astete (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Cattle Breeding; Arts and Communication; Business Administration; Dentistry; Health Sciences; Law and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLVM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023858&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23858"><input class="case" type="checkbox" onClick="Coche(23858,0);" name="result[]" id="23858" value="23858"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23858" id="result23858" title="Expand result">
+		    <span>Expand result for </span>San Agustín Institute</a></h3>
+		  <p class="i_name">
+		Instituto Superior San Agustín		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLTNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023814&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23814"><input class="case" type="checkbox" onClick="Coche(23814,0);" name="result[]" id="23814" value="23814"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23814" id="result23814" title="Expand result">
+		    <span>Expand result for </span>San Carlos University</a></h3>
+		  <p class="i_name">
+		Universidad San Carlos		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ronaldo Eno Dietze (Head) &ndash; Arturo Villate (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture Business and Agricultural Management; Agronomy; Animal Husbandry; Biology, Biochemistry and Soil Science; Environmental Studies; Food Technology; Forestry; Genetics, Nutrition and Veterinary Science; Mathematics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLDMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023856&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23856"><input class="case" type="checkbox" onClick="Coche(23856,0);" name="result[]" id="23856" value="23856"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23856" id="result23856" title="Expand result">
+		    <span>Expand result for </span>San Francisco Javier Institute for Humanist and Philosophical Studies</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Estudios Humanísticos y Filosóficos San Francisco Javier (ISEHF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gabriel Insaurralde (Head) &ndash; Mariana Gómez (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Philosophy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLTM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023798&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23798"><input class="case" type="checkbox" onClick="Coche(23798,0);" name="result[]" id="23798" value="23798"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23798" id="result23798" title="Expand result">
+		    <span>Expand result for </span>San Ignacio de Loyola University</a></h3>
+		  <p class="i_name">
+		Universidad San Ignacio de Loyola (USIL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>María del Rocío Robledo Yugueros (Head) &ndash; Fernando Acosta (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Economics; Finance; International Business; Marketing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxXLjNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023816&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23816"><input class="case" type="checkbox" onClick="Coche(23816,0);" name="result[]" id="23816" value="23816"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23816" id="result23816" title="Expand result">
+		    <span>Expand result for </span>San Lorenzo University</a></h3>
+		  <p class="i_name">
+		Universidad San Lorenzo (UNISAL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Elva Cogorno De Veron (Head) &ndash; Cecilia Santos de Medina (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration, Arts and Technology; Law  Political Sciences, Education and Humanities; Sports and Health Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLDM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023837&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23837"><input class="case" type="checkbox" onClick="Coche(23837,0);" name="result[]" id="23837" value="23837"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23837" id="result23837" title="Expand result">
+		    <span>Expand result for </span>Santa Clara de Asis University</a></h3>
+		  <p class="i_name">
+		Universidad Santa Clara de Asis (USCA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Esmerita Sanchez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Educational Sciences; Health Sciences; Law and Political Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLFM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023863&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23863"><input class="case" type="checkbox" onClick="Coche(23863,0);" name="result[]" id="23863" value="23863"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23863" id="result23863" title="Expand result">
+		    <span>Expand result for </span>Santa Rosa Mistica Institute of Health Sciences</a></h3>
+		  <p class="i_name">
+		Instituto Superior en Ciencias de la Salud Santa Rosa Mistica		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Health Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLUMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023840&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23840"><input class="case" type="checkbox" onClick="Coche(23840,0);" name="result[]" id="23840" value="23840"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23840" id="result23840" title="Expand result">
+		    <span>Expand result for </span>South American University</a></h3>
+		  <p class="i_name">
+		Universidad Sudamericana		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Euclides Acevedo (Head) &ndash; Gustavo Becker (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Chemistry and Pharmacy; Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLSNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023820&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23820"><input class="case" type="checkbox" onClick="Coche(23820,0);" name="result[]" id="23820" value="23820"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23820" id="result23820" title="Expand result">
+		    <span>Expand result for </span>Spanish University</a></h3>
+		  <p class="i_name">
+		Universidad Española (UE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Audit; Business Administration; Educational Sciences; Graphic Design; Law; Marketing; Psychology; Systems Analysis</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLENgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023784&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23784"><input class="case" type="checkbox" onClick="Coche(23784,0);" name="result[]" id="23784" value="23784"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23784" id="result23784" title="Expand result">
+		    <span>Expand result for </span>Technical University of Marketing and Development</a></h3>
+		  <p class="i_name">
+		Universidad Técnica de Comercialización y Desarrollo (UTCD)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rubén Fretes Ventre (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Communication Science; Economics; Educational Sciences; Environmental Studies; Health Sciences; Law; Polytechnic; Psychology; Social Sciences; Sports; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxXLiMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023788&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23788"><input class="case" type="checkbox" onClick="Coche(23788,0);" name="result[]" id="23788" value="23788"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23788" id="result23788" title="Expand result">
+		    <span>Expand result for </span>Three Frontiers International University</a></h3>
+		  <p class="i_name">
+		Universidad Internacional Tres Fronteras (UNINTER)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gustavo Duarte (Head) &ndash; Nancy Romero (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Business Administration; Health Sciences; Science and Technology; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxXLiNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023800&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23800"><input class="case" type="checkbox" onClick="Coche(23800,0);" name="result[]" id="23800" value="23800"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23800" id="result23800" title="Expand result">
+		    <span>Expand result for </span>University of Peace</a></h3>
+		  <p class="i_name">
+		Universidad de la Paz (UNIPAZ)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>María Riart de Manzini (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Administration; Educational Sciences; Health Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLCNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023812&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23812"><input class="case" type="checkbox" onClick="Coche(23812,0);" name="result[]" id="23812" value="23812"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23812" id="result23812" title="Expand result">
+		    <span>Expand result for </span>University of Sustainable Development</a></h3>
+		  <p class="i_name">
+		Universidad de Desarrollo Sustentable (UDS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ladilslao Nagy Ferrari (Head) &ndash; Miguel Nagy M. (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Computer Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLDMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017486&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17486"><input class="case" type="checkbox" onClick="Coche(17486,0);" name="result[]" id="17486" value="17486"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17486" id="result17486" title="Expand result">
+		    <span>Expand result for </span>University of the Integration of the Americas</a></h3>
+		  <p class="i_name">
+		Universidad de la Integración de las Américas (UNIDA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Embajadora Leila Rachid Lichi (Head) &ndash; Alvaro Barcel (Senior Administrative Officer) &ndash; Ursula López (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering; Health Sciences; Law; Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULiM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017671&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17671"><input class="case" type="checkbox" onClick="Coche(17671,0);" name="result[]" id="17671" value="17671"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17671" id="result17671" title="Expand result">
+		    <span>Expand result for </span>University of the North</a></h3>
+		  <p class="i_name">
+		Universidad del Norte (UniNorte)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Manuel Marcos (Head) &ndash; Max Fraenkel (Senior Administrative Officer) &ndash; María José Peña (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Studies; Chemistry; Education and Humanities; Engineering; Health Sciences; Law and Political Sciences; Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLVMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023853&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23853"><input class="case" type="checkbox" onClick="Coche(23853,0);" name="result[]" id="23853" value="23853"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23853" id="result23853" title="Expand result">
+		    <span>Expand result for </span>University of the South</a></h3>
+		  <p class="i_name">
+		Universidad del Sol (UNADES)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gladys Petrona Morales (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Humanities and Social Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLTMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017648&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17648"><input class="case" type="checkbox" onClick="Coche(17648,0);" name="result[]" id="17648" value="17648"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result17648" id="result17648" title="Expand result">
+		    <span>Expand result for </span>University of the Southern Cone of the Americas</a></h3>
+		  <p class="i_name">
+		Universidad del Cono Sur de las Américas (UCSA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luis Alberto Lima Morra (Head) &ndash; Carolina Scholz Loppacher (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Studies; Computer Engineering; Engineering; Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLSNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023857&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23857"><input class="case" type="checkbox" onClick="Coche(23857,0);" name="result[]" id="23857" value="23857"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Paraguay</p>
+				  <h3>
+		    <a href="#result23857" id="result23857" title="Expand result">
+		    <span>Expand result for </span>VIA Pro Development Institute of Postgraduate Studies</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Estudios de Posgrados VIA Pro Desarrollo		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Elizabeth Ynsfrán Segovia (Head) &ndash; Ruben Dario Robadin Armadans (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Auditing; Economics and Business Administration; Environmental Management; Governement and Public Administration; Hospiital Management; Human Resources; Social Policy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxYLTM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 67 of 67</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay" selected>Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>
