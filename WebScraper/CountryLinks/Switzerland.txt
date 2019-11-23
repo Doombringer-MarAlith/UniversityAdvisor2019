@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Switzerland')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Switzerland)">
+	    <input type="hidden" class="envoi" name="total" value="37">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Switzerland">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">37 results found for <strong>(Country=Switzerland)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 37 of 37</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-004210&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="4210"><input class="case" type="checkbox" onClick="Coche(4210,0);" name="result[]" id="4210" value="4210"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result4210" id="result4210" title="Expand result">
+		    <span>Expand result for </span>Swiss Federal Institute of Technology of Lausanne</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_4210_logo.jpg" /></h3>
+		  <p class="i_name">
+		Ecole polytechnique fédérale de Lausanne &ndash; Eidgenössische Technische Hochschule Lausanne (EPFL)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.epfl.ch" href="images/IAUMembers/4210_1.jpg" class="fancybox" rel="gallery4210"><img class="img" src="images/IAUMembers/s_4210_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.epfl.ch" href="images/IAUMembers/4210_2.jpg" class="fancybox" rel="gallery4210"><img class="img" src="images/IAUMembers/s_4210_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.epfl.ch" href="images/IAUMembers/4210_3.jpg" class="fancybox" rel="gallery4210"><img class="img" src="images/IAUMembers/s_4210_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Martin Vetterli (Head) &ndash; Philippe Gillet (Senior Administrative Officer) &ndash; Antoine Fromentin (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture, Civil and Environmental Engineering; Basic Sciences; Computer and Communication Sciences; Engineering; Humanities; Life Sciences; Technology Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyhRLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004439&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="4439"><input class="case" type="checkbox" onClick="Coche(4439,0);" name="result[]" id="4439" value="4439"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result4439" id="result4439" title="Expand result">
+		    <span>Expand result for </span>Swiss Federal Institute of Technology Zürich</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_4439_logo.png" /></h3>
+		  <p class="i_name">
+		Eidgenössische Technische Hochschule Zürich (ETH Zurich)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.ethz.ch" href="images/IAUMembers/4439_1.png" class="fancybox" rel="gallery4439"><img class="img" src="images/IAUMembers/s_4439_1.png" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ethz.ch" href="images/IAUMembers/4439_1.jpg" class="fancybox" rel="gallery4439"><img class="img" src="images/IAUMembers/s_4439_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ethz.ch" href="images/IAUMembers/4439_2.jpg" class="fancybox" rel="gallery4439"><img class="img" src="images/IAUMembers/s_4439_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sarah Springman (Head) &ndash; Joël Mesot (Head) &ndash; Anders Hagström (International Relations Officer) &ndash; Jürg Brunnschweiler (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Food Science; Architecture; Architecture and Civil Engineering; Biological and Life Sciences; Chemistry and Applied Biosciences; Civil, Environmental and Geomatics Engineering; Computer Science; Earth Sciences; Engineering; Environmental Sciences; Humanities, Social and Political Sciences; Information Technology and Electrical Engineering; Management and Social Sciences; Management, Technology and Economics; Materials; Mathematics; Mechanical and Process Engineering; Natural Sciences and Mathematics; Physics; System-Oriented Natural Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzBTLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019316&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19316"><input class="case" type="checkbox" onClick="Coche(19316,0);" name="result[]" id="19316" value="19316"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19316" id="result19316" title="Expand result">
+		    <span>Expand result for </span>University of Bern</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19316_logo.png" /></h3>
+		  <p class="i_name">
+		Universität Bern &ndash; Université de Berne		  </p>
+		 <p class="gallery">
+				  <a title="http://www.unibe.ch" href="images/IAUMembers/19316_1.jpg" class="fancybox" rel="gallery19316"><img class="img" src="images/IAUMembers/s_19316_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Christian Leumann (Head) &ndash; Markus Brönnimann (Senior Administrative Officer) &ndash; Ellen Krause (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business, Economics and Social Sciences; Human Sciences; Humanities; Law; Medicine; Natural Sciences; Theology; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLDM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019584&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19584"><input class="case" type="checkbox" onClick="Coche(19584,0);" name="result[]" id="19584" value="19584"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19584" id="result19584" title="Expand result">
+		    <span>Expand result for </span>University of Fribourg</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19584_logo.jpg" /></h3>
+		  <p class="i_name">
+		Université de Fribourg - Universität Freiburg		  </p>
+		 <p class="gallery">
+				  <a title="http://www.unifr.ch" href="images/IAUMembers/19584_1.jpg" class="fancybox" rel="gallery19584"><img class="img" src="images/IAUMembers/s_19584_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.unifr.ch" href="images/IAUMembers/19584_2.jpg" class="fancybox" rel="gallery19584"><img class="img" src="images/IAUMembers/s_19584_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Astrid Epiney (Head) &ndash; Fabian Amschwand (Senior Administrative Officer) &ndash; Marielle de Dardel (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Economics and Social Sciences; Law; Science; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLiMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019587&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19587"><input class="case" type="checkbox" onClick="Coche(19587,0);" name="result[]" id="19587" value="19587"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19587" id="result19587" title="Expand result">
+		    <span>Expand result for </span>University of Geneva</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19587_logo.jpg" /></h3>
+		  <p class="i_name">
+		Université de Genève		  </p>
+		 <p class="gallery">
+				  <a title="http://www.unige.ch" href="images/IAUMembers/19587_1.jpg" class="fancybox" rel="gallery19587"><img class="img" src="images/IAUMembers/s_19587_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.unige.ch" href="images/IAUMembers/19587_2.jpg" class="fancybox" rel="gallery19587"><img class="img" src="images/IAUMembers/s_19587_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.unige.ch" href="images/IAUMembers/19587_3.jpg" class="fancybox" rel="gallery19587"><img class="img" src="images/IAUMembers/s_19587_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Yves Flückiger (Head) &ndash; Stéphane Berthet (Senior Administrative Officer) &ndash; Pierre Willa (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Affective Sciences; Bioethics and Social Sciences in Medicine; Bioinformatics; Computer Science; Economics and Management; Ecumenical Studies; Environmental Sciences; French language and Civilization; Genetics and Genomics; Geneva Finance; Gerontology and Vulnerability; Global Studies; History; History of the Reformation; Humanities; International and Development Studies; Law; Medicine; Movement Sciences and Sports Medicine; Neurosciences; Psychology and Educational Sciences; Sciences; Social Science and Economics; Social Sciences; Theology; Translation and Interpretation; University Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLiM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019606&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19606"><input class="case" type="checkbox" onClick="Coche(19606,0);" name="result[]" id="19606" value="19606"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19606" id="result19606" title="Expand result">
+		    <span>Expand result for </span>University of Lausanne</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19606_logo.png" /></h3>
+		  <p class="i_name">
+		Université de Lausanne (UNIL)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.unil.ch" href="images/IAUMembers/19606_1.jpg" class="fancybox" rel="gallery19606"><img class="img" src="images/IAUMembers/s_19606_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.unil.ch" href="images/IAUMembers/19606_2.jpg" class="fancybox" rel="gallery19606"><img class="img" src="images/IAUMembers/s_19606_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.unil.ch" href="images/IAUMembers/19606_3.jpg" class="fancybox" rel="gallery19606"><img class="img" src="images/IAUMembers/s_19606_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nouria Hernandez (Head) &ndash; Marc De Perrot (Senior Administrative Officer) &ndash; Denis Dafflon (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Biology and Medicine; Business and Economics; Criminal Justice; French as a Foreign Language; Geosciences and Environment; Law, Criminal Justice and Public Administration; Pharmacy; Social and Political Sciences; Swiss Public Administration; Theology and Religious Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLCM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019628&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19628"><input class="case" type="checkbox" onClick="Coche(19628,0);" name="result[]" id="19628" value="19628"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19628" id="result19628" title="Expand result">
+		    <span>Expand result for </span>University of Neuchâtel</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19628_logo.png" /></h3>
+		  <p class="i_name">
+		Université de Neuchâtel		  </p>
+		 <p class="gallery">
+				  <a title="http://www.unine.ch" href="images/IAUMembers/19628_1.jpg" class="fancybox" rel="gallery19628"><img class="img" src="images/IAUMembers/s_19628_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.unine.ch" href="images/IAUMembers/19628_2.jpg" class="fancybox" rel="gallery19628"><img class="img" src="images/IAUMembers/s_19628_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kilian Stoffel (Head) &ndash; Martine Rahier (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Economics and Business; Law; Science; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RWLENAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019377&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19377"><input class="case" type="checkbox" onClick="Coche(19377,0);" name="result[]" id="19377" value="19377"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19377" id="result19377" title="Expand result">
+		    <span>Expand result for </span>University of Zurich</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19377_logo.png" /></h3>
+		  <p class="i_name">
+		Universität Zürich (UZH)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.uzh.ch/" href="images/IAUMembers/19377_1.jpg" class="fancybox" rel="gallery19377"><img class="img" src="images/IAUMembers/s_19377_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.uzh.ch/" href="images/IAUMembers/19377_2.jpg" class="fancybox" rel="gallery19377"><img class="img" src="images/IAUMembers/s_19377_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.uzh.ch/" href="images/IAUMembers/19377_3.jpg" class="fancybox" rel="gallery19377"><img class="img" src="images/IAUMembers/s_19377_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Michael Hengartner (Head) &ndash; Stefan Schnyder (Senior Administrative Officer) &ndash; Yasmine Inauen (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Economics, Business Administration and Information Technology; Law; Medicine; Science; Theology; Vetsuisse</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLVM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007928&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="7928"><input class="case" type="checkbox" onClick="Coche(7928,0);" name="result[]" id="7928" value="7928"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result7928" id="result7928" title="Expand result">
+		    <span>Expand result for </span>Graduate Institute of International and Development Studies</a></h3>
+		  <p class="i_name">
+		Institut de hautes études internationales et du développement &ndash; The Graduate Institute, Geneva		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Philippe Burrin (Head) &ndash; Michal Sela (Senior Administrative Officer) &ndash; Bruno Chatagnat (Senior Administrative Officer) &ndash; Eliane Minassian (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Anthropology and Sociology of Development; Development Studies; International Affairs; International Economics; International History; International Law; International Relations and Political Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tU0RSLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007927&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7927"><input class="case" type="checkbox" onClick="Coche(7927,0);" name="result[]" id="7927" value="7927"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result7927" id="result7927" title="Expand result">
+		    <span>Expand result for </span>Graduate School Of Public Administration</a></h3>
+		  <p class="i_name">
+		Institut de hautes Etudes en Administration (IDHEAP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Martial PASQUIER (Head) &ndash; Antoinette Charon Wauters (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Human Resources; Information Systems; Institutional Policies; Local Policies and Evaluation; Public Finance; Public Law; Public Marketing; Public Policies and Sustainability; Social Policies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tU0RSLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010055&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10055"><input class="case" type="checkbox" onClick="Coche(10055,0);" name="result[]" id="10055" value="10055"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result10055" id="result10055" title="Expand result">
+		    <span>Expand result for </span>Kalaidos University of Applied Sciences Switzerland</a></h3>
+		  <p class="i_name">
+		Kalaidos Fachhochschule Schweiz (FHS/UAS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jakob Limacher (Head) &ndash; Kerstin Windhövel (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Controlling; Banking and Finance; Business and Management; Business Information Technology; Fiduciary; General Business Administration; Health; International Management; Leadership and Relationship Management; Music; Taxation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BQLTM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008310&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8310"><input class="case" type="checkbox" onClick="Coche(8310,0);" name="result[]" id="8310" value="8310"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result8310" id="result8310" title="Expand result">
+		    <span>Expand result for </span>Kurt Bösch University Institute</a></h3>
+		  <p class="i_name">
+		Institut Universitaire Kurt Bösch (IUKB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Philip D. Jaffé (Head) &ndash; Nicole Roux (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Children's Rights; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uIyxRLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010909&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10909"><input class="case" type="checkbox" onClick="Coche(10909,0);" name="result[]" id="10909" value="10909"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result10909" id="result10909" title="Expand result">
+		    <span>Expand result for </span>Les Roches-Gruyère University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		 (LRG-UAS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Deborah Prince (Head) &ndash; Alexia Robinet (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Hospitality Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BZLCNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007444&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7444"><input class="case" type="checkbox" onClick="Coche(7444,0);" name="result[]" id="7444" value="7444"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result7444" id="result7444" title="Expand result">
+		    <span>Expand result for </span>Lucerne University of Applied Sciences and Arts - Fachhochschule Zentralschweiz</a></h3>
+		  <p class="i_name">
+		Hochschule Luzern (FHZ/HSLU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Markus Hodel (Head) &ndash; Xaver Büeler (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Art and Design; Business Administration; Computer Sciences; Engineering and Architecture; Languages; Music; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzBULWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013243&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13243"><input class="case" type="checkbox" onClick="Coche(13243,0);" name="result[]" id="13243" value="13243"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result13243" id="result13243" title="Expand result">
+		    <span>Expand result for </span>School for Teacher Education - University of Applied Sciences St. Gallen</a></h3>
+		  <p class="i_name">
+		Pädagogische Hochschule des Kantons St. Gallen (PHS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Erwin Beck (Head) &ndash; Lucy Forster (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Primary Education; Secondary Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxSLSMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004440&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4440"><input class="case" type="checkbox" onClick="Coche(4440,0);" name="result[]" id="4440" value="4440"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result4440" id="result4440" title="Expand result">
+		    <span>Expand result for </span>Swiss Federal Institute for Vocational Education and Training</a></h3>
+		  <p class="i_name">
+		Eidgenössisches Hochschulinstitut für Berufsbildung &ndash; Institut fédéral des hautes études en formation professionnelle		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Cornelia Oertle (Head) &ndash; Hans-Ulrich Herrmann (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzBULGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001615&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1615"><input class="case" type="checkbox" onClick="Coche(1615,0);" name="result[]" id="1615" value="1615"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result1615" id="result1615" title="Expand result">
+		    <span>Expand result for </span>University of Applied Sciences - Berner Fachhochschule</a></h3>
+		  <p class="i_name">
+		Berner Fachhochschule (BFH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Georges Bindschedler (Head) &ndash; Felix Mäder (Senior Administrative Officer) &ndash; Peter Eigenmann (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture, Forestry and Life Sciences; Architecture, Wood and Civil Engineering; Business, Health and Social Work; Design, Music, Theatre and other Arts; Engineering and Information Technology; Sports</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzhRLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007097&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7097"><input class="case" type="checkbox" onClick="Coche(7097,0);" name="result[]" id="7097" value="7097"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result7097" id="result7097" title="Expand result">
+		    <span>Expand result for </span>University of Applied Sciences - Haute Ecole Spécialisée de Suisse Occidentale</a></h3>
+		  <p class="i_name">
+		Haute Ecole spécialisée de Suisse Occidentale (HES-SO)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luciana Vaccaro (Head) &ndash; Sarah Kopse-Scholberg (Senior Administrative Officer) &ndash; Luna Lacopini (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business, Management and Services; Design and Fine Arts; Engineering and Architecture; Health Sciences; Music and Theatre; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tU2BZLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021864&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="21864"><input class="case" type="checkbox" onClick="Coche(21864,0);" name="result[]" id="21864" value="21864"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result21864" id="result21864" title="Expand result">
+		    <span>Expand result for </span>University of Applied Sciences - Zürcher Fachhochschule</a></h3>
+		  <p class="i_name">
+		Zürcher Fachhochschule (ZFH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Silvia Steiner (Head) &ndash; Sebastian Brändli (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRYLUMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021864-024251&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24251"><input class="case" type="checkbox" onClick="Coche(24251,0);" name="result[]" id="24251" value="24251"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result24251" id="result24251" title="Expand result">
+		    <span>Expand result for </span>University of Applied Sciences - Zürcher Fachhochschule &ndash; University of Applied Sciences in Business Administration Zurich</a></h3>
+		  <p class="i_name">
+		Zürcher Fachhochschule &ndash; Hochschule für Wirtschaft Zürich (FH-HWZ)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jacques F. Bischoff (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Business Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBSLTMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021864-013258&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13258"><input class="case" type="checkbox" onClick="Coche(13258,0);" name="result[]" id="13258" value="13258"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result13258" id="result13258" title="Expand result">
+		    <span>Expand result for </span>University of Applied Sciences - Zürcher Fachhochschule &ndash; University of Teacher Education - Zürich</a></h3>
+		  <p class="i_name">
+		Zürcher Fachhochschule &ndash; Pädagogische Hochschule Zürich &ndash; PH Zürich (PHZH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Heinz Rhyn (Head) &ndash; Roger Meier (Senior Administrative Officer) &ndash; Friederike Hoch (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Career Choice and Training; Communication; Design and Technology; Development and professional Identity; Education for Sustainable Development; Educational Psychology; English; French, Italian, Romance Languages; Geography; German and German as a second Language; Health Promotion and Prevention / Home Economics; History / Political Science; Mathematics; Media Studies; Movement and Sports; Music; Religion and Cultural Studies; School Organisation; Science and Technology; Socialization and Differential; Special Education; Theater, Rhythm, Dance; Visual Arts</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxSLTNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021864-024255&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24255"><input class="case" type="checkbox" onClick="Coche(24255,0);" name="result[]" id="24255" value="24255"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result24255" id="result24255" title="Expand result">
+		    <span>Expand result for </span>University of Applied Sciences - Zürcher Fachhochschule &ndash; Zurich University of the Arts</a></h3>
+		  <p class="i_name">
+		Zürcher Fachhochschule &ndash; Zürcher Hochschule der Künste (ZHdK)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Thomas D. Meier (Head) &ndash; Verena Schmid (Senior Administrative Officer) &ndash; Bettina Ganz (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Art and Media; Cultural Analysis; Design; Music; Performing Arts and Film</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBSLTM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021864-024254&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24254"><input class="case" type="checkbox" onClick="Coche(24254,0);" name="result[]" id="24254" value="24254"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result24254" id="result24254" title="Expand result">
+		    <span>Expand result for </span>University of Applied Sciences - Zürcher Fachhochschule &ndash; Zurich University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		Zürcher Fachhochschule &ndash; Zürcher Hochschule für Angewandte Wissenschaften (ZHAW)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jean-Marc Piveteau (Head) &ndash; Reto Schnellmann (Senior Administrative Officer) &ndash; Susan Bergen (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Linguistics; Applied Psychology; Architecture, Design and Civil Engineering; Engineering; Health Professions; Life Sciences and Facility Management; Management and Law; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBSLTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004959&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4959"><input class="case" type="checkbox" onClick="Coche(4959,0);" name="result[]" id="4959" value="4959"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result4959" id="result4959" title="Expand result">
+		    <span>Expand result for </span>University of Applied Sciences and Arts Northwestern Switzerland</a></h3>
+		  <p class="i_name">
+		Fachhochschule Nordwestschweiz (FHNW)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Crispino Bergamaschi (Head) &ndash; Karin Hiltwein Agnetti (Senior Administrative Officer) &ndash; Christoph Holliger (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Psychology; Architecture, Civil Engineering and Geomatics; Art and Design; Business; Engineering; Life Sciences; Music; Social Work; Teacher Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tI0RVLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-014590&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="14590"><input class="case" type="checkbox" onClick="Coche(14590,0);" name="result[]" id="14590" value="14590"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result14590" id="result14590" title="Expand result">
+		    <span>Expand result for </span>University of Applied Sciences and Arts of Southern Switzerland</a></h3>
+		  <p class="i_name">
+		Scuola Universitaria Professionale della Svizzera Italiana (SUPSI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Franco Gervasoni (Head) &ndash; Germana D'Alessio (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Social Sciences; Distant Education; Education and Training; Environmental Construction and Design; Health Sciences; Innovative Technologies; Music; Theatre</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzBVLjNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004960&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4960"><input class="case" type="checkbox" onClick="Coche(4960,0);" name="result[]" id="4960" value="4960"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result4960" id="result4960" title="Expand result">
+		    <span>Expand result for </span>University of Applied Sciences of Eastern Switzerland</a></h3>
+		  <p class="i_name">
+		Fachhochschule Ostschweiz (FHO)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Stefan Kölliker (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Management; Construction and Planning; Health Sciences; Social Work; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tI0RWLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009517&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9517"><input class="case" type="checkbox" onClick="Coche(9517,0);" name="result[]" id="9517" value="9517"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result9517" id="result9517" title="Expand result">
+		    <span>Expand result for </span>University of Applied Sciences of Special Needs Education</a></h3>
+		  <p class="i_name">
+		Interkantonale Hochschule für Heilpädagogik Zürich (HfH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Urs Strasser (Head) &ndash; Mark Rubin (Senior Administrative Officer) &ndash; Leena Suokas (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Special Needs Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzRRLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019314&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19314"><input class="case" type="checkbox" onClick="Coche(19314,0);" name="result[]" id="19314" value="19314"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result19314" id="result19314" title="Expand result">
+		    <span>Expand result for </span>University of Basel</a></h3>
+		  <p class="i_name">
+		Universität Basel (Uni Basel)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Antonio Loprieno (Head) &ndash; Hans Amstutz (Senior Administrative Officer) &ndash; Erich Thaler (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Economics; Law; Medicine; Philosophy/History; Psychology; Science; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLDMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019351&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19351"><input class="case" type="checkbox" onClick="Coche(19351,0);" name="result[]" id="19351" value="19351"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result19351" id="result19351" title="Expand result">
+		    <span>Expand result for </span>University of Lucerne</a></h3>
+		  <p class="i_name">
+		Universität Luzern (Unilu)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Bruno Staffelbach (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Law; Social and Cultural Studies; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLTMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018812&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18812"><input class="case" type="checkbox" onClick="Coche(18812,0);" name="result[]" id="18812" value="18812"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result18812" id="result18812" title="Expand result">
+		    <span>Expand result for </span>University of Lugano</a></h3>
+		  <p class="i_name">
+		Università della Svizzera Italiana (USI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Piero Martinoli (Head) &ndash; Albino Zgraggen (Senior Administrative Officer) &ndash; Albino Zgraggen (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Biomedicine; Communication Science; Economics; Informatics; Italian Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BYLDMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019368&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19368"><input class="case" type="checkbox" onClick="Coche(19368,0);" name="result[]" id="19368" value="19368"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result19368" id="result19368" title="Expand result">
+		    <span>Expand result for </span>University of St. Gallen/Graduate School of Business, Economics, Law and Social Sciences</a></h3>
+		  <p class="i_name">
+		Universität St. Gallen-Hochschule für Wirtschafts-, Rechts- und Sozialwissenschaften (HSG)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Thomas Bieger (Head) &ndash; Markus Brönnimann (Senior Administrative Officer) &ndash; Ulrike Landfester (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Political Sciences; Finance; Humanities ans Social Sciences; Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLUNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013242&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="13242"><input class="case" type="checkbox" onClick="Coche(13242,0);" name="result[]" id="13242" value="13242"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result13242" id="result13242" title="Expand result">
+		    <span>Expand result for </span>University of Teacher Education - Bern</a></h3>
+		  <p class="i_name">
+		Pädagogische Hochschule Bern (PH Bern)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Martin Schäfer (Head) &ndash; Christine Tauch (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxSLSMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013249&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13249"><input class="case" type="checkbox" onClick="Coche(13249,0);" name="result[]" id="13249" value="13249"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result13249" id="result13249" title="Expand result">
+		    <span>Expand result for </span>University of Teacher Education - Schaffhausen</a></h3>
+		  <p class="i_name">
+		Pädagogische Hochschule Schaffhausen (PHSH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Thomas Meinen (Head) &ndash; Piroska Sipöcz (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxSLSNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013252&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="13252"><input class="case" type="checkbox" onClick="Coche(13252,0);" name="result[]" id="13252" value="13252"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result13252" id="result13252" title="Expand result">
+		    <span>Expand result for </span>University of Teacher Education - Valais</a></h3>
+		  <p class="i_name">
+		Pädagogische Hochschule Wallis / Haute école pédagogique du Valais (PH VS / HEP VS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Patrice Clivaz (Head) &ndash; Pascale Buehler Ramos (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxSLTMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007089&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="7089"><input class="case" type="checkbox" onClick="Coche(7089,0);" name="result[]" id="7089" value="7089"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result7089" id="result7089" title="Expand result">
+		    <span>Expand result for </span>University of Teacher Education - Vaud</a></h3>
+		  <p class="i_name">
+		Haute Ecole Pédagogique du canton de Vaud (HEP Vaud)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Guillaume Vanhulst (Head) &ndash; Luc Macherel (Senior Administrative Officer) &ndash; Cyril Petitpierre (Senior Administrative Officer) &ndash; Jean-Luc Gilles (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Continuing Education; Postgraduate Education; Preschool and Primary Education; Secondary Education; Special Education; Upper Secondary Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tU2BYLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007088&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7088"><input class="case" type="checkbox" onClick="Coche(7088,0);" name="result[]" id="7088" value="7088"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result7088" id="result7088" title="Expand result">
+		    <span>Expand result for </span>University of Teacher Education of the cantons of Bern, Jura and Neuchatel</a></h3>
+		  <p class="i_name">
+		Haute Ecole pédagogique - BEJUNE (HEP-BEJUNE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Richard-Emmanuel Eastes (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tU2BYLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003996&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3996"><input class="case" type="checkbox" onClick="Coche(3996,0);" name="result[]" id="3996" value="3996"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Switzerland</p>
+				  <h3>
+		    <a href="#result3996" id="result3996" title="Expand result">
+		    <span>Expand result for </span>Valais School of Art</a></h3>
+		  <p class="i_name">
+		Ecole cantonale d'Art du Valais		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sibylle Omlin (Head) &ndash; Micheline Zimmermann (Senior Administrative Officer) &ndash; Patricia Comby (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Fine Arts; Graphic Arts; Visual Arts</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sU0RZLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 37 of 37</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland" selected>Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

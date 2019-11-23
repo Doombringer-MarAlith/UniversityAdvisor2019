@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Netherlands')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Netherlands)">
+	    <input type="hidden" class="envoi" name="total" value="61">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Netherlands">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">61 results found for <strong>(Country=Netherlands)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 61 of 61</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-019859&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19859"><input class="case" type="checkbox" onClick="Coche(19859,0);" name="result[]" id="19859" value="19859"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19859" id="result19859" title="Expand result">
+		    <span>Expand result for </span>Leiden University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19859_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universiteit Leiden		  </p>
+		 <p class="gallery">
+				  <a title="http://www.leiden.edu" href="images/IAUMembers/19859_1.jpg" class="fancybox" rel="gallery19859"><img class="img" src="images/IAUMembers/s_19859_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.leiden.edu" href="images/IAUMembers/19859_2.jpg" class="fancybox" rel="gallery19859"><img class="img" src="images/IAUMembers/s_19859_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.leiden.edu" href="images/IAUMembers/19859_3.jpg" class="fancybox" rel="gallery19859"><img class="img" src="images/IAUMembers/s_19859_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Carel Stolker (Head) &ndash; H.W. te Beest (Senior Administrative Officer) &ndash; Robert Coelen (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Archaeology; Education; Humanities; Law; Medicine; Public Administration; Science; Social and Behavioural Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLTNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013871&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="13871"><input class="case" type="checkbox" onClick="Coche(13871,0);" name="result[]" id="13871" value="13871"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result13871" id="result13871" title="Expand result">
+		    <span>Expand result for </span>Radboud University Nijmegen</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_13871_logo.png" /></h3>
+		  <p class="i_name">
+		Radboud Universiteit Nijmegen (KUN)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.ru.nl" href="images/IAUMembers/13871_1.jpg" class="fancybox" rel="gallery13871"><img class="img" src="images/IAUMembers/s_13871_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ru.nl" href="images/IAUMembers/13871_2.jpg" class="fancybox" rel="gallery13871"><img class="img" src="images/IAUMembers/s_13871_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ru.nl" href="images/IAUMembers/13871_3.jpg" class="fancybox" rel="gallery13871"><img class="img" src="images/IAUMembers/s_13871_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>J.H.J.M (Han) van Krieken (Head) &ndash; Wessel Meijer (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Law; Management; Medical Sciences; Philosophy, Theology and Religious Studies; Science and Computer Science; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxYLVMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019865&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19865"><input class="case" type="checkbox" onClick="Coche(19865,0);" name="result[]" id="19865" value="19865"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19865" id="result19865" title="Expand result">
+		    <span>Expand result for </span>Tilburg University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19865_logo.png" /></h3>
+		  <p class="i_name">
+		Universiteit van Tilburg (UVT)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.tilburguniversity.edu" href="images/IAUMembers/19865_1.jpg" class="fancybox" rel="gallery19865"><img class="img" src="images/IAUMembers/s_19865_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.tilburguniversity.edu" href="images/IAUMembers/19865_2.jpg" class="fancybox" rel="gallery19865"><img class="img" src="images/IAUMembers/s_19865_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.tilburguniversity.edu" href="images/IAUMembers/19865_3.jpg" class="fancybox" rel="gallery19865"><img class="img" src="images/IAUMembers/s_19865_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>K.M. Becking (Head) &ndash; Roos Hogenkamp (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Research; Arts and Humanities; Bilingual Studies in the Bilingual Society; Business; Catholic Theology; Centre of Finance; Cooperational Universities from Brabant; Data; Development Research; Economics and Management; Fiscal Law; Globalization and Sustainable Development; Innovation for Electronic Resources (Ticer); Jurisprudence and Comparative Law; Language Studies; Law; Legislation Studies; Liturgy; Meditation; Nature Conservation; Nexus; Oldendorff; Organization for Strategic Labour Market Research; Philosophy; Research Group on Information and Communication Technology; Research of Intercultural Cooperation; Social and Behavioural Sciences; Social and Socio-Economic Research (Tisser); Social Entrepreneurship; Social Policy Research and Consultancy; Sustainability Problems; Tilburg Law and Economics Center</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLUM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-014006&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="14006"><input class="case" type="checkbox" onClick="Coche(14006,0);" name="result[]" id="14006" value="14006"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result14006" id="result14006" title="Expand result">
+		    <span>Expand result for </span>University of Groningen</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_14006_logo.jpg" /></h3>
+		  <p class="i_name">
+		Rijksuniversiteit Groningen		  </p>
+		 <p class="gallery">
+				  <a title="http://www.rug.nl" href="images/IAUMembers/14006_1.jpg" class="fancybox" rel="gallery14006"><img class="img" src="images/IAUMembers/s_14006_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.rug.nl" href="images/IAUMembers/14006_2.jpg" class="fancybox" rel="gallery14006"><img class="img" src="images/IAUMembers/s_14006_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Frans Zwarts (Head) &ndash; Sibrand  Poppema (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Behavioural and Social Sciences; Economics and Business; Law; Mathematics and Natural Sciences; Medical Sciences; Philosophy; Spatial Sciences; Theology and Religious Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzBQLCM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019862&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19862"><input class="case" type="checkbox" onClick="Coche(19862,0);" name="result[]" id="19862" value="19862"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19862" id="result19862" title="Expand result">
+		    <span>Expand result for </span>Utrecht University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19862_logo.png" /></h3>
+		  <p class="i_name">
+		Universiteit Utrecht (UU)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.uu.nl" href="images/IAUMembers/19862_4.jpg" class="fancybox" rel="gallery19862"><img class="img" src="images/IAUMembers/s_19862_4.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.uu.nl" href="images/IAUMembers/19862_1.jpg" class="fancybox" rel="gallery19862"><img class="img" src="images/IAUMembers/s_19862_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.uu.nl" href="images/IAUMembers/19862_2.jpg" class="fancybox" rel="gallery19862"><img class="img" src="images/IAUMembers/s_19862_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Anton Pijpers (Head) &ndash; Henk Kummeling (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Education; Ethics; Geosciences; Law, Economics and Governance; Life Sciences; Medicine; Natural Sciences; Science; Social and Behavioural Sciences; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000943&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="943"><input class="case" type="checkbox" onClick="Coche(943,0);" name="result[]" id="943" value="943"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result943" id="result943" title="Expand result">
+		    <span>Expand result for </span>Amsterdam School of the Arts</a></h3>
+		  <p class="i_name">
+		Amsterdamse Hogeschool voor de Kunsten (AHK)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Bert Verveld (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Cultural Heritage; Dance; Film and Television; Fine Arts; Music; Theatre</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0uMzBTCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007482&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7482"><input class="case" type="checkbox" onClick="Coche(7482,0);" name="result[]" id="7482" value="7482"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7482" id="result7482" title="Expand result">
+		    <span>Expand result for </span>Amsterdam University of Applied Sciences (AUAS)</a></h3>
+		  <p class="i_name">
+		Hogeschool van Amsterdam (HvA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Louise J. Gunning-Schepers (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Management; Education; Exercise, Sports and Nutrition; Healthcare; Media and Information Science; Social Work and Law; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzBYLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001105&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1105"><input class="case" type="checkbox" onClick="Coche(1105,0);" name="result[]" id="1105" value="1105"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result1105" id="result1105" title="Expand result">
+		    <span>Expand result for </span>ArtEZ Institute of the Arts</a></h3>
+		  <p class="i_name">
+		ArtEZ Hogeschool voor de Kunsten		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Karoline Kleinburink (Head) &ndash; Cecile Waltmans (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Art and Design; Dance; Music; Theatre</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMyRQLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001308&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1308"><input class="case" type="checkbox" onClick="Coche(1308,0);" name="result[]" id="1308" value="1308"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result1308" id="result1308" title="Expand result">
+		    <span>Expand result for </span>Avans University of Applied Science</a></h3>
+		  <p class="i_name">
+		Avans Hogeschool		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Paul Rüpp (Head) &ndash; Sandra Diemont (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Economics; Education; Healthcare; Information and Communication Technology; Law; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMyxQLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001852&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1852"><input class="case" type="checkbox" onClick="Coche(1852,0);" name="result[]" id="1852" value="1852"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result1852" id="result1852" title="Expand result">
+		    <span>Expand result for </span>Business School Netherlands</a></h3>
+		  <p class="i_name">
+		Business School Nederland (BSN)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>D.J. Gerdzen (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sM0BVLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001853&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1853"><input class="case" type="checkbox" onClick="Coche(1853,0);" name="result[]" id="1853" value="1853"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result1853" id="result1853" title="Expand result">
+		    <span>Expand result for </span>Business School Notenboom</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Stan Notenboom (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Events, Travel and Leisure Management; Hotel Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sM0BVLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001877&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1877"><input class="case" type="checkbox" onClick="Coche(1877,0);" name="result[]" id="1877" value="1877"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result1877" id="result1877" title="Expand result">
+		    <span>Expand result for </span>CAH Vilentum University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		CAH Vilentum  Christelijke Agrarische Hogeschool (CAH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>H.E. Verweij (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Business and Management; Agriculture; Biotechnology and Culture; Horticulture; Technology and Automatisation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sM0BXLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010175&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10175"><input class="case" type="checkbox" onClick="Coche(10175,0);" name="result[]" id="10175" value="10175"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result10175" id="result10175" title="Expand result">
+		    <span>Expand result for </span>Catholic PABO Zwolle</a></h3>
+		  <p class="i_name">
+		Katholieke PABO Zwolle (KPZ)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jan Heijmans (Head) &ndash; Harrie Poulssen (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Primary Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BRLVM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-002874&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="2874"><input class="case" type="checkbox" onClick="Coche(2874,0);" name="result[]" id="2874" value="2874"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result2874" id="result2874" title="Expand result">
+		    <span>Expand result for </span>Codarts University for the Arts</a></h3>
+		  <p class="i_name">
+		Codarts, Hogeschool voor de Kunsten		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Wilma Franchimon (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Circus Arts; Dance; Music</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQ0BXLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016257&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16257"><input class="case" type="checkbox" onClick="Coche(16257,0);" name="result[]" id="16257" value="16257"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result16257" id="result16257" title="Expand result">
+		    <span>Expand result for </span>Delft University of Technology</a></h3>
+		  <p class="i_name">
+		Technische Universiteit Delft		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>D.J. van den Berg (Head) &ndash; Karel Ch.A.M. Luyben (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Aerospace Engineering; Applied Sciences; Architecture; Biotechnological Sciences ; Civil Engineering and Geosciences; Computing and Imaging; Electrical Engineering, Mathematics and Computer Sciences; Housing, Urban and Mobility Studies; Industrial Design Engineering; Information Technology, Micro-Electronics and Submicron Physics; Integral Design of Structures ; Mechanical, Maritime and Materials Engineering; Reactor; Systems and Control; Technical Geosciences ; Technology, Policy and Management; Telecommunications and Radar; Transport, Infrastructure and Logistics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhSLTM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003677&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3677"><input class="case" type="checkbox" onClick="Coche(3677,0);" name="result[]" id="3677" value="3677"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result3677" id="result3677" title="Expand result">
+		    <span>Expand result for </span>Design Academy Eindhoven</a></h3>
+		  <p class="i_name">
+		 (DAE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Thomas Widdershoven (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Industrial Design</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUzhXLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003910&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3910"><input class="case" type="checkbox" onClick="Coche(3910,0);" name="result[]" id="3910" value="3910"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result3910" id="result3910" title="Expand result">
+		    <span>Expand result for </span>Driestar University for Teacher Education</a></h3>
+		  <p class="i_name">
+		Driestar Hogeschool		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rens Rottier (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sU0RRLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003922&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3922"><input class="case" type="checkbox" onClick="Coche(3922,0);" name="result[]" id="3922" value="3922"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result3922" id="result3922" title="Expand result">
+		    <span>Expand result for </span>Duisenberg School of Finance</a></h3>
+		  <p class="i_name">
+		 (DSF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Joseph Streppel (Head) &ndash; Dirk Schoenmaker (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Finance</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sU0RSLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-002788&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="2788"><input class="case" type="checkbox" onClick="Coche(2788,0);" name="result[]" id="2788" value="2788"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result2788" id="result2788" title="Expand result">
+		    <span>Expand result for </span>Ede Christian University</a></h3>
+		  <p class="i_name">
+		Christelijke Hogeschool Ede (CHE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Harmen van Wijnen (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Communication Studies; Journalism; Nursing; Social Work; Teacher Education for Primary Schools; Theology and Religion</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzxYLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016258&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16258"><input class="case" type="checkbox" onClick="Coche(16258,0);" name="result[]" id="16258" value="16258"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result16258" id="result16258" title="Expand result">
+		    <span>Expand result for </span>Eindhoven University of Technology</a></h3>
+		  <p class="i_name">
+		Technische Universiteit Eindhoven (TU/e)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jan Mengelers (Head) &ndash; Nicole Ummelen (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Physics; Architecture, Building and Planning; Biomedical Engineering; Centre for Innovation Studies; Centre for Wireless Technology; Chemical Engineering and Chemistry; Electrical Engineering; Embedded Systems Institute; European Institute for Statistics, Probability, Stochastic Operations Research and its Applications; Industrial Design; Industrial Engineering and Innovation Sciences; Institute for Complex Molecular Systems; Mathematics and Computer Science; Mechanical Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhSLTNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004508&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4508"><input class="case" type="checkbox" onClick="Coche(4508,0);" name="result[]" id="4508" value="4508"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result4508" id="result4508" title="Expand result">
+		    <span>Expand result for </span>Erasmus University Rotterdam</a></h3>
+		  <p class="i_name">
+		Erasmus Universiteit Rotterdam (EUR)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Pauline van der Meer Mohr (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Economics; Health Policy and Management; History, Culture and Communication; Law; Management; Medical; Philosophy; Social Sciences; Social Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRQLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004873&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4873"><input class="case" type="checkbox" onClick="Coche(4873,0);" name="result[]" id="4873" value="4873"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result4873" id="result4873" title="Expand result">
+		    <span>Expand result for </span>EuroPort Business School</a></h3>
+		  <p class="i_name">
+		 (EPBS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tI0BXLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006385&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="6385"><input class="case" type="checkbox" onClick="Coche(6385,0);" name="result[]" id="6385" value="6385"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result6385" id="result6385" title="Expand result">
+		    <span>Expand result for </span>Fontys University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		Fontys Hogescholen		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nienke Meijer (Head) &ndash; Leny Scheepers (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Business Management and Logistics; Economics, Marketing and Law; Engineering; Healthcare; ICT; Media and Communications; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQyxYLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006641&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="6641"><input class="case" type="checkbox" onClick="Coche(6641,0);" name="result[]" id="6641" value="6641"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result6641" id="result6641" title="Expand result">
+		    <span>Expand result for </span>Gerrit Rietveld Academy</a></h3>
+		  <p class="i_name">
+		Gerrit Rietveld Academie		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Annelies van Eenennaam (Head) &ndash; Steven Jongeja (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Design; Fine Arts; The Sandberg Institute; Visual Arts</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQzhULDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007483&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7483"><input class="case" type="checkbox" onClick="Coche(7483,0);" name="result[]" id="7483" value="7483"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7483" id="result7483" title="Expand result">
+		    <span>Expand result for </span>HAN University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		Hogeschool van Arnhem en Nijmegen (HAN)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kees Boele (Head) &ndash; Jannet Van de Riet (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business, Management and Law; Education; Engineering and Life Sciences; Health and Social Studies; Information Technology, Media and Communication; Sports and Exercise</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzBYLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007001&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="7001"><input class="case" type="checkbox" onClick="Coche(7001,0);" name="result[]" id="7001" value="7001"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7001" id="result7001" title="Expand result">
+		    <span>Expand result for </span>Hanze University of Applied Sciences Groningen</a></h3>
+		  <p class="i_name">
+		Hanzehogeschool Groningen		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Henk J. Pijlman (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture, Built Environment and Civil Engineering; Arts; Business Management; Communication and Media; Computer Science; Dance; Education; Engineering; Facility Management; Financial and Economic Management; Health Care Studies; International Business; Law; Life Sciences and Technology; Marketing Management; Music; Nursing; Pop Culture; Social Studies; Sports Studies; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tU2BQLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007042&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7042"><input class="case" type="checkbox" onClick="Coche(7042,0);" name="result[]" id="7042" value="7042"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7042" id="result7042" title="Expand result">
+		    <span>Expand result for </span>HAS University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		HAS Hogeschool		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>D.J. Pouwels (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agribusiness Management; Animal Production and Animal Care; Environmental Technology; Food Design; Food Science and Technology; Garden and Landscape Management; Horticulture; Rural Development and Innovation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tU2BULEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007574&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="7574"><input class="case" type="checkbox" onClick="Coche(7574,0);" name="result[]" id="7574" value="7574"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7574" id="result7574" title="Expand result">
+		    <span>Expand result for </span>Hotel School The Hague - Hospitality Business School</a></h3>
+		  <p class="i_name">
+		Hotelschool Den Haag		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Susanne Stolte (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Hotel Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzRXLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017041&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17041"><input class="case" type="checkbox" onClick="Coche(17041,0);" name="result[]" id="17041" value="17041"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result17041" id="result17041" title="Expand result">
+		    <span>Expand result for </span>IHE Delft Institute for Water Education</a></h3>
+		  <p class="i_name">
+		 (IHE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Eddy Moors (Head) &ndash; Charlotte de Fraiture (Senior Administrative Officer) &ndash; Johan Aad van Dijk (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Environmental Science; One year Master of Science Programme in Sanitation; Urban Water and Sanitation; Water Management and Governance; Water Science and Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxQLSMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007476&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="7476"><input class="case" type="checkbox" onClick="Coche(7476,0);" name="result[]" id="7476" value="7476"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7476" id="result7476" title="Expand result">
+		    <span>Expand result for </span>INHOLLAND University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		Hogeschool INHOLLAND		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Geert Dales (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Communication, Media and Music; Education, Learning and Philosophy; Engineering, Design and Computing; Health, Sports and Social Work; Management, Finance and Law; Marketing, Tourism and Leisure</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzBXLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008329&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8329"><input class="case" type="checkbox" onClick="Coche(8329,0);" name="result[]" id="8329" value="8329"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result8329" id="result8329" title="Expand result">
+		    <span>Expand result for </span>Institute for Housing and Urban Development Studies</a></h3>
+		  <p class="i_name">
+		 (IHS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kees van Rooijen (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Management of Competitive Urban Regions; Urban Management and Development</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uIyxSLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011127&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11127"><input class="case" type="checkbox" onClick="Coche(11127,0);" name="result[]" id="11127" value="11127"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result11127" id="result11127" title="Expand result">
+		    <span>Expand result for </span>Maastricht School of Management</a></h3>
+		  <p class="i_name">
+		 (MSM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Wim A. Naudé (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRRLEM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019860&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19860"><input class="case" type="checkbox" onClick="Coche(19860,0);" name="result[]" id="19860" value="19860"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result19860" id="result19860" title="Expand result">
+		    <span>Expand result for </span>Maastricht University</a></h3>
+		  <p class="i_name">
+		Universiteit Maastricht (UM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luc Soete (Head) &ndash; Martin Paul (Head) &ndash; Nick Bos (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Arts and Social Sciences; Business and Economics; Cognitive and Clinical Neuroscience; Governance; Health Professions Education; Health, Medicine and Life Sciences; Integrated Assessment and Sustainable Development; Knowledge Engineering; Law; Psychology and Neuroscience; Science; Teaching</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLUNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011412&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11412"><input class="case" type="checkbox" onClick="Coche(11412,0);" name="result[]" id="11412" value="11412"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result11412" id="result11412" title="Expand result">
+		    <span>Expand result for </span>Marnix Academy</a></h3>
+		  <p class="i_name">
+		Marnix Academie		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>K. Aardse (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRULDMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012664&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="12664"><input class="case" type="checkbox" onClick="Coche(12664,0);" name="result[]" id="12664" value="12664"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result12664" id="result12664" title="Expand result">
+		    <span>Expand result for </span>NHL University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		NHL Hogeschool		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>William Smink (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Management; Education and Communication Studies; Health Care and Welfare; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhWLUMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012665&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12665"><input class="case" type="checkbox" onClick="Coche(12665,0);" name="result[]" id="12665" value="12665"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result12665" id="result12665" title="Expand result">
+		    <span>Expand result for </span>NHTV Breda University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		NHTV Internationale Hogeschool Breda		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hein van Oorschot (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Facility Management; Games and Media; Hotel Management; Leisure; Tourism; Urban Development, Logistics and Mobility</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhWLUM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012934&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="12934"><input class="case" type="checkbox" onClick="Coche(12934,0);" name="result[]" id="12934" value="12934"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result12934" id="result12934" title="Expand result">
+		    <span>Expand result for </span>Nyenrode Business University</a></h3>
+		  <p class="i_name">
+		Nyenrode Business Universiteit		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Miša Džoljić Džoljić (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accounting, Auditing and Control; Business Ethics; Competition; Cooperative Entrepreneurship; Entrepreneurship; Europe China; Executive and Management Development; Finance; Human Resources, Organisations and Management Effectiveness; Law; Leadership and Personal Development; Marketing and Supply Chain Management; NIVRA-Nyenrode; Strategy ; Sustainability; Talent Management; Tax Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhZLFMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013096&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13096"><input class="case" type="checkbox" onClick="Coche(13096,0);" name="result[]" id="13096" value="13096"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result13096" id="result13096" title="Expand result">
+		    <span>Expand result for </span>Open University of the Netherlands</a></h3>
+		  <p class="i_name">
+		Open Universiteit Nederland (OUNL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>S.P. van den Eijnden (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Science; Cultural Sciences; Education and Training; Law; Management; Psychology; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxQLjM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006629&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="6629"><input class="case" type="checkbox" onClick="Coche(6629,0);" name="result[]" id="6629" value="6629"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result6629" id="result6629" title="Expand result">
+		    <span>Expand result for </span>Reformed University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		Gereformeerde Hogeschool (VIAA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>J.D. Schaap (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Educational Leadership; Nursing; Primary Education; Social Educational Care; Social Work and Social Services; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQzhSLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007479&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="7479"><input class="case" type="checkbox" onClick="Coche(7479,0);" name="result[]" id="7479" value="7479"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7479" id="result7479" title="Expand result">
+		    <span>Expand result for </span>Rotterdam University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		Hogeschool Rotterdam (Rotterdam UAS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ron Bormans (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Behaviour and Society; Economics; Education; Healthcare; Media and ICT; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzBXLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010514&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10514"><input class="case" type="checkbox" onClick="Coche(10514,0);" name="result[]" id="10514" value="10514"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result10514" id="result10514" title="Expand result">
+		    <span>Expand result for </span>Royal Tropical Institute</a></h3>
+		  <p class="i_name">
+		Koninklijk Instituut voor de Tropen (KIT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Derk Veermer (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health Development</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BVLDMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-014554&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="14554"><input class="case" type="checkbox" onClick="Coche(14554,0);" name="result[]" id="14554" value="14554"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result14554" id="result14554" title="Expand result">
+		    <span>Expand result for </span>Saxion Universities of Applied Sciences</a></h3>
+		  <p class="i_name">
+		Saxion Hogescholen		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Henk Mulders (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Arts and Technology; Business Engineering and Entrepreneurship; Communication, Information Technology and Information Management; Education; Environmental Planning and Building; Finance and Accounting; Governance and Law; Hospitality; Human Resources Management; Life Sciences, Engineering and Design; Marketing and International Management; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzBVLTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015862&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="15862"><input class="case" type="checkbox" onClick="Coche(15862,0);" name="result[]" id="15862" value="15862"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result15862" id="result15862" title="Expand result">
+		    <span>Expand result for </span>Stenden University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		Stenden Hogeschool		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Leendert Klaassen (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Postgraduate; Undergraduate</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRYLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015883&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="15883"><input class="case" type="checkbox" onClick="Coche(15883,0);" name="result[]" id="15883" value="15883"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result15883" id="result15883" title="Expand result">
+		    <span>Expand result for </span>Stoas University of Applied Sciences and Teacher Education</a></h3>
+		  <p class="i_name">
+		Stoas Hogeschool		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Animal Husbandry; Food Technology; Horticulture</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRYLiMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006923&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="6923"><input class="case" type="checkbox" onClick="Coche(6923,0);" name="result[]" id="6923" value="6923"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result6923" id="result6923" title="Expand result">
+		    <span>Expand result for </span>The Hague University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		Haagse Hogeschool		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Leonard Geluk (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>European Studies; Food Technology; Industrial Design Engineering; International and European Law; International Business and Management; International Communications Management; Public Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQ0RSLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009594&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9594"><input class="case" type="checkbox" onClick="Coche(9594,0);" name="result[]" id="9594" value="9594"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result9594" id="result9594" title="Expand result">
+		    <span>Expand result for </span>Thim van der Laan International University of Applied Sciences for Physiotherapy</a></h3>
+		  <p class="i_name">
+		Internationale Hogeschool Fysiotherapie Thim van der Laan		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>J. van der Laan (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Physical Therapy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzRZLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016666&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16666"><input class="case" type="checkbox" onClick="Coche(16666,0);" name="result[]" id="16666" value="16666"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result16666" id="result16666" title="Expand result">
+		    <span>Expand result for </span>Tias school for Business and Society</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kees Koedijk (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accounting; Business Law; Finance; Information Management; Management and Organisation Strategy; Marketing; Operations Management and Research Methods; Public and Non-Profit Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhWLUM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007480&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="7480"><input class="case" type="checkbox" onClick="Coche(7480,0);" name="result[]" id="7480" value="7480"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7480" id="result7480" title="Expand result">
+		    <span>Expand result for </span>TIO University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		Hogeschool TIO		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Hotel and Event  Management; International Tourism Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzBYLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019863&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19863"><input class="case" type="checkbox" onClick="Coche(19863,0);" name="result[]" id="19863" value="19863"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result19863" id="result19863" title="Expand result">
+		    <span>Expand result for </span>University of Amsterdam</a></h3>
+		  <p class="i_name">
+		Universiteit van Amsterdam (UvA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>K.I.J. (Karen) Maex (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Academic Center for Dentistry in Amsterdam; Academic Medical Center; Economics and Business; Humanities; Law; Medicine; Science; Social and Behavioural Sciences; Tinbergen Institute</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLUMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007478&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="7478"><input class="case" type="checkbox" onClick="Coche(7478,0);" name="result[]" id="7478" value="7478"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7478" id="result7478" title="Expand result">
+		    <span>Expand result for </span>University of Applied Sciences Leiden</a></h3>
+		  <p class="i_name">
+		Hogeschool Leiden		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Paul van Maanen (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Health Sciences; Management and Business Studies; Social Work and Applied Psychology; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzBXLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007481&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7481"><input class="case" type="checkbox" onClick="Coche(7481,0);" name="result[]" id="7481" value="7481"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7481" id="result7481" title="Expand result">
+		    <span>Expand result for </span>University of Applied Sciences Utrecht</a></h3>
+		  <p class="i_name">
+		Hogeschool Utrecht (HU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>G.T.C. Bonhof (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Communication and Journalism; Economics, Business and Commerce; Health Sciences; Law and Social Studies; Nautical Science; Pedagogy; Social Work; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzBYLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023222&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23222"><input class="case" type="checkbox" onClick="Coche(23222,0);" name="result[]" id="23222" value="23222"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result23222" id="result23222" title="Expand result">
+		    <span>Expand result for </span>University of Humanistic Studies</a></h3>
+		  <p class="i_name">
+		Universiteit voor Humanistiek (UvH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gerty Lensvelt-Mulders (Head) &ndash; Chris Gerritsen (Senior Administrative Officer) &ndash; José Kok (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Care Ethics and Policy; Humanistic Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxSLEMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007472&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7472"><input class="case" type="checkbox" onClick="Coche(7472,0);" name="result[]" id="7472" value="7472"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7472" id="result7472" title="Expand result">
+		    <span>Expand result for </span>University of the Arts, The Hague</a></h3>
+		  <p class="i_name">
+		Hogeschool der Kunsten Den Haag		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Henk van der Meulen (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Fine Arts and Design; Music and Dance</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzBXLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019861&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19861"><input class="case" type="checkbox" onClick="Coche(19861,0);" name="result[]" id="19861" value="19861"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result19861" id="result19861" title="Expand result">
+		    <span>Expand result for </span>University of Twente</a></h3>
+		  <p class="i_name">
+		Universiteit Twente (UT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ed Brinksma (Head) &ndash; Victor van der Chijs (Head) &ndash; Karin Paardenkooper (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Behavioural Research; Behavioural Sciences; Biomedical Technology and Technical Medicine; Conflict, Risk and Safety Perception; Dutch Institute for Knowledge Intensive Entrepreneurship; E-government Studies; eHealth Research; Electrical Engineering, Mathematics and Computer Science; Energy and Resources; Engineering Technology; European Studies; Examinering en certificering; Geo Information Science and Earth Observation; Geo-Information Science and Earth Observation; Governance Studies ; Healthcare Operations Improvement and Research; Higher Education Policy Studies; Innovation and Governance Studies; Integrale ProductieVernieuwing; Maatschappelijke veiligheidsvraagstukken; Management and Governance; Mechanics, Processes and Control; Mechatronics; Nanotechnology; Philosophy of Technology and Engineering Science; Science and Technology; Social Sciences and Technology; Sports and Leisure; Studies of Science, Technology and Society; Technical Medicine; Telematics and Information Technologies; Telematics and Information Technology; The Study of Democracy; ThermoPlastic Composite Research Centre; Transport Studies; Twente Center for Career Research; Twente Centre for Studies in Technology and Sustainable Development; Twente Embedded Systems Initiative; Twente Water Centre; Virtual Reality Initiative Twente</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLUMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007485&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7485"><input class="case" type="checkbox" onClick="Coche(7485,0);" name="result[]" id="7485" value="7485"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7485" id="result7485" title="Expand result">
+		    <span>Expand result for </span>Utrecht School of the Arts</a></h3>
+		  <p class="i_name">
+		Hogeschool voor de Kunsten Utrecht (HKU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Wim Kardux (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Art and Economics; Art, Media and Technology; Fine Arts and Design; Music; Theatre</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzBYLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007484&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="7484"><input class="case" type="checkbox" onClick="Coche(7484,0);" name="result[]" id="7484" value="7484"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7484" id="result7484" title="Expand result">
+		    <span>Expand result for </span>Van Hall Larenstein University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		Hogeschool Van Hall Larenstein		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Peter van Dongen (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Animal Management; Bioengineering; Business and Agribusiness; Environmental Sciences; Food Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzBYLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021064&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="21064"><input class="case" type="checkbox" onClick="Coche(21064,0);" name="result[]" id="21064" value="21064"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result21064" id="result21064" title="Expand result">
+		    <span>Expand result for </span>VU University Amsterdam</a></h3>
+		  <p class="i_name">
+		Vrije Universiteit Amsterdam (VU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vinod Subramaniam (Head) &ndash; Jaap Winter (Senior Administrative Officer) &ndash; Wytske Siegersma (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Dentistry; Earth and Life Sciences; Economics and Business Administration; Human Movement Sciences; Law; Medicine; Neurosciences; Oncology; Philosophy; Psychology and Education; Science; Social Sciences; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRQLUMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021110&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="21110"><input class="case" type="checkbox" onClick="Coche(21110,0);" name="result[]" id="21110" value="21110"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result21110" id="result21110" title="Expand result">
+		    <span>Expand result for </span>Wageningen University and Research Centre</a></h3>
+		  <p class="i_name">
+		Wageningen Universiteit en Researchcentrum		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Louise O. Fresco (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Economics; Agro-technology and Food Innovations; Agro-technology and Food Sciences; Animal Disease Control; Animal Sciences; Applied Plant Research; Business; Environmental Sciences; Food Safety; Green World; International Agricultural Centre; Plant Research; Plant Sciences; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRRLDNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021162&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="21162"><input class="case" type="checkbox" onClick="Coche(21162,0);" name="result[]" id="21162" value="21162"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result21162" id="result21162" title="Expand result">
+		    <span>Expand result for </span>Webster University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jean Paul van Marissing (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Behavioral and Social Sciences; Business and Management; European Studies; International Business and Management Studies; International Relations; Media Communications; Psychology and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRRLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007489&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="7489"><input class="case" type="checkbox" onClick="Coche(7489,0);" name="result[]" id="7489" value="7489"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7489" id="result7489" title="Expand result">
+		    <span>Expand result for </span>Wittenborg University of Applied Sciences</a></h3>
+		  <p class="i_name">
+		Hogeschool Wittenborg &ndash; Wittenborg Business University		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Peter Birdsall (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; International Business and Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzBYLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007491&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7491"><input class="case" type="checkbox" onClick="Coche(7491,0);" name="result[]" id="7491" value="7491"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Netherlands</p>
+				  <h3>
+		    <a href="#result7491" id="result7491" title="Expand result">
+		    <span>Expand result for </span>Zuyd University</a></h3>
+		  <p class="i_name">
+		Hogeschool Zuyd		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Karel van Rosmalen (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Business; Education; Healthcare; Social Work; Technology and Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzBZLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 61 of 61</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands" selected>Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Sudan')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Sudan)">
+	    <input type="hidden" class="envoi" name="total" value="81">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Sudan">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">81 results found for <strong>(Country=Sudan)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 81 of 81</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-024200&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="24200"><input class="case" type="checkbox" onClick="Coche(24200,0);" name="result[]" id="24200" value="24200"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result24200" id="result24200" title="Expand result">
+		    <span>Expand result for </span>Elsheikh Abdallah Elbadri University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_24200_logo.jpg" /></h3>
+		  <p class="i_name">
+		 (EAEU)		  </p>
+		 <p class="gallery">
+				  <a title="http://eaeu.edu.sd" href="images/IAUMembers/24200_1.jpg" class="fancybox" rel="gallery24200"><img class="img" src="images/IAUMembers/s_24200_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://eaeu.edu.sd" href="images/IAUMembers/24200_2.jpg" class="fancybox" rel="gallery24200"><img class="img" src="images/IAUMembers/s_24200_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Omer Abdalla Elbedri (Head) &ndash; Ghanem Osman Elhaj Abdalla (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Science; Economics and Management Sciences; Engineering; Health Sciences; Medicine; Pharmacy; Sciences; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBSLCNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009797&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="9797"><input class="case" type="checkbox" onClick="Coche(9797,0);" name="result[]" id="9797" value="9797"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result9797" id="result9797" title="Expand result">
+		    <span>Expand result for </span>Kassala University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_9797_logo.png" /></h3>
+		  <p class="i_name">
+		Jameat Kassala		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdalla Ali Mohammed Hamad (Head) &ndash; Osam Mohammed (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Natural Resources; Community; Computer Sciences and Information Technology; Economics and Managerial Sciences; Education; Engineering; Islamic Studies; Medicine and Health Sciences; Postgraduate Studies; Tuberculosis</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxZLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004471&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="4471"><input class="case" type="checkbox" onClick="Coche(4471,0);" name="result[]" id="4471" value="4471"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result4471" id="result4471" title="Expand result">
+		    <span>Expand result for </span>National University, Sudan</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_4471_logo.png" /></h3>
+		  <p class="i_name">
+		Al Jamea Alwatania (NUSU)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.nu.edu.sd" href="images/IAUMembers/4471_1.jpg" class="fancybox" rel="gallery4471"><img class="img" src="images/IAUMembers/s_4471_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Qurashi M. Ali (Head) &ndash; Amin Sidahmed (Senior Administrative Officer) &ndash; Amin Elamin (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences; Clinical and Industrial Pharmacy; Computer and Health Informatics; Dental Medicine and Surgery; Engineering; International Relations and Diplomatic Studies; Medical Laboratory Sciences; Medicine and Surgery; Nursing and Midwifery; Physiotherapy; Radiography and Medical Imaging</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzBXLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009802&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="9802"><input class="case" type="checkbox" onClick="Coche(9802,0);" name="result[]" id="9802" value="9802"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result9802" id="result9802" title="Expand result">
+		    <span>Expand result for </span>Shendi University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_9802_logo.jpg" /></h3>
+		  <p class="i_name">
+		 (ShU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tagelsir Hassan (Head) &ndash; Nasir Mohamed Osman (Senior Administrative Officer) &ndash; Mohamed Alhassan Ahmed Alhafian (Senior Administrative Officer) &ndash; Hana Awad Mohamed (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Alfateh Islamic Research Centre; Archaeology, Hotel Management and Tourism; Arts; Community; Community Development; Computer Science & Information Technology; Crops, Irrigation and Animal Production; Economics, Commerce and Business Administration; Education; Laboratory Science; Law; Medicine; Nursing; Postgraduate Studies and Scientific Research; Public Health; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BQLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009804&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="9804"><input class="case" type="checkbox" onClick="Coche(9804,0);" name="result[]" id="9804" value="9804"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result9804" id="result9804" title="Expand result">
+		    <span>Expand result for </span>Wad Medani Ahlia University</a></h3>
+		  <p class="i_name">
+		Jameat Wad Medani AlAhlia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Isam AbdelRahman Elboushi (Head) &ndash; Ibrahim N. Nour (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences; Applied Psychology; Architecture and Town Planning; Computer Science and Information Technology; English Language</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BQLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009793&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="9793"><input class="case" type="checkbox" onClick="Coche(9793,0);" name="result[]" id="9793" value="9793"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result9793" id="result9793" title="Expand result">
+		    <span>Expand result for </span>West Kordufan University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_9793_logo.jpg" /></h3>
+		  <p class="i_name">
+		 (WKU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ali Ahmed Hassabo Adam (Head) &ndash; El-Moizlilahi Salih El-Ballaa (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration, Economics and Social Science; Animal Production; Camel Research; Community Development; Computer Sciences and Information Technology; Education; Extra Mural Studies and Community Development; Geographical Information System and Water Studies; Gum-Arabic and Forest Products; Hajj and Umrah Research; Imams and Preachers Training; Islamic Science and Arabic Language; Liguistics; Media; Medical Laboratories Science; Medicine and Health Sciences; Peace Studies; Postgaduate Studies; Public Health and Environmental Health; Shari'a and Law; Small Ruminant; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxZLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000053&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="53"><input class="case" type="checkbox" onClick="Coche(53,0);" name="result[]" id="53" value="53"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result53" id="result53" title="Expand result">
+		    <span>Expand result for </span>Academy of Engineering Sciences</a></h3>
+		  <p class="i_name">
+		Academiat Al-Uloom Al-Handasia (AES)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Ali Bashir (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Planning; Automation and Control Engineering; Electrical Power Engineering; Electronic and Computer Engineering; Telecommunications Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?JTo2MF0tMyxgCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024295&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24295"><input class="case" type="checkbox" onClick="Coche(24295,0);" name="result[]" id="24295" value="24295"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result24295" id="result24295" title="Expand result">
+		    <span>Expand result for </span>Academy of Health Sciences</a></h3>
+		  <p class="i_name">
+		 (AHS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Allied Health; Medical Laboratory Science; Midwifery; Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBSLjM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010495&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10495"><input class="case" type="checkbox" onClick="Coche(10495,0);" name="result[]" id="10495" value="10495"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10495" id="result10495" title="Expand result">
+		    <span>Expand result for </span>Africa College</a></h3>
+		  <p class="i_name">
+		Koliat Ifriqya		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Suliman Nasr Eldien (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Arabic Language; Business Administration; Psychology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULjM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009763&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9763"><input class="case" type="checkbox" onClick="Coche(9763,0);" name="result[]" id="9763" value="9763"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9763" id="result9763" title="Expand result">
+		    <span>Expand result for </span>Ahfad University for Women</a></h3>
+		  <p class="i_name">
+		Jameat Al-Ahfad Llbanat (AUW)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gasim Yousif Badri (Head) &ndash; Faisal Abas (Senior Administrative Officer) &ndash; Mustafa Khogali (Senior Administrative Officer) &ndash; Amna Elsadik Badri (Senior Administrative Officer) &ndash; Abdel Gadir El Nasri (Senior Administrative Officer) &ndash; Nafisa Bedri (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Ahfad Centre for Science and Technology; Ahfad Institute of Languages; Health Sciences; Management Studies; Medicine; Nutrition Centre for Training and Research (NHCTR); Pharmacy; Psychology and Preschool Education; Regional Institute of Gender, Diversity, Peace and Rights; Research and Grants; Rural Extension, Education and Development; Teachers Research and Resources</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxWLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009768&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9768"><input class="case" type="checkbox" onClick="Coche(9768,0);" name="result[]" id="9768" value="9768"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9768" id="result9768" title="Expand result">
+		    <span>Expand result for </span>Al Mughtaribeen University</a></h3>
+		  <p class="i_name">
+		Jameat Al-Mughtaribeein &ndash; University of Expatriates (MU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tahir Muhammad Harun (Head) &ndash; Abdelrahim Satti (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences; Engineering; Languages; Medicine; Preparatory Studies and Community Service</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxWLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009765&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9765"><input class="case" type="checkbox" onClick="Coche(9765,0);" name="result[]" id="9765" value="9765"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9765" id="result9765" title="Expand result">
+		    <span>Expand result for </span>Al-Butana University</a></h3>
+		  <p class="i_name">
+		Jameat Al-Butana		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Anwar Ahmed Eisa Rashid (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Medical Sciences; Computer Sciences and Information Technology; Education; Graduate Studies; Management Science and Economics; Medicine; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxWLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009770&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9770"><input class="case" type="checkbox" onClick="Coche(9770,0);" name="result[]" id="9770" value="9770"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9770" id="result9770" title="Expand result">
+		    <span>Expand result for </span>Al-Neelain University</a></h3>
+		  <p class="i_name">
+		Jameat Al-Neelain		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Muhammad El Amin Ahmed (Head) &ndash; Tariq Abbas El Bakhit (Senior Administrative Officer) &ndash; Adam El Hadi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Technology and Fishery; Arts; Commerce; Community Development; Computer Science and Information Technology; Dentistry; Economic and Social Studies; Education; Engineering; Graduate Studies; Law; Medical Laboratory Sciences; Medicine; Nursing Sciences; Optics; Petroleum and Minerals; Pharmacy; Physiotherapy; Science and Technology; Technological Mathematic Science and Statistics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxXLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009774&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9774"><input class="case" type="checkbox" onClick="Coche(9774,0);" name="result[]" id="9774" value="9774"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9774" id="result9774" title="Expand result">
+		    <span>Expand result for </span>Al-Zaiem Al-Azhari University</a></h3>
+		  <p class="i_name">
+		Jameat Al-Ziem Al-Azhari (AAU-Sudan)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Siham Mohamed Ahmed Bakhit (Head) &ndash; Ashraf Ez Aldeen (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Basic Education; Computer Science and Information Technology; Economics and Administration; Education; Engineering; Information and Network Technology; Information Technology and Linguistics; Medical and Health Education Development; Medical Laboratory Sciences; Medical Technical Sciences; Medicine; Political Science and Strategic Studies; Postgraduate Studies; Public Health; Radiology Science and Medical Imaging; Shari'a and Law; Sudanese and International Studies; Technical and Developmental Studies; Tourism and Hospitality; Urban Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxXLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024278&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24278"><input class="case" type="checkbox" onClick="Coche(24278,0);" name="result[]" id="24278" value="24278"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result24278" id="result24278" title="Expand result">
+		    <span>Expand result for </span>Alsharg Alahlia College</a></h3>
+		  <p class="i_name">
+		Koliat Al-Sharg Al-Ahlia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Haroun A.Eissa Eissa (Head) &ndash; Mohammed Sulieman Hussaien Ameeri (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences; Banking and Economics; English Language and Literature; Human Resources; Information Technology; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBSLVNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010482&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10482"><input class="case" type="checkbox" onClick="Coche(10482,0);" name="result[]" id="10482" value="10482"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10482" id="result10482" title="Expand result">
+		    <span>Expand result for </span>Alyarmouk College</a></h3>
+		  <p class="i_name">
+		Koliat Alyarmouk		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hassan Alhadi (Head) &ndash; Qasim Al-Zuhairi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dental Technology; Dentistry; Human Medicine; Medical Laboratory Science; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULiMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024265&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24265"><input class="case" type="checkbox" onClick="Coche(24265,0);" name="result[]" id="24265" value="24265"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result24265" id="result24265" title="Expand result">
+		    <span>Expand result for </span>Arab Open University - Sudan Branch</a></h3>
+		  <p class="i_name">
+		 (AOU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdin Sharif (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences; Education; English Language and Literature; Information and Computer Technologies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBSLUM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024301&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24301"><input class="case" type="checkbox" onClick="Coche(24301,0);" name="result[]" id="24301" value="24301"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result24301" id="result24301" title="Expand result">
+		    <span>Expand result for </span>Bahri Ahlia College</a></h3>
+		  <p class="i_name">
+		 (Civil Maritime College)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative and Financial Sciences; Architecture; Chinese Language; Electronic Engineering; English Language; Information Technology; Interior Design</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBTLCMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009778&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9778"><input class="case" type="checkbox" onClick="Coche(9778,0);" name="result[]" id="9778" value="9778"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9778" id="result9778" title="Expand result">
+		    <span>Expand result for </span>Bahri University</a></h3>
+		  <p class="i_name">
+		Jameat Bahri		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ayoub Ayoub (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Animal Production; Applied and Industrial Sciences; Art, Music and Drama; Arts and Humanities; Community Studies and Rural Development; Computer Sciences; Distance Education; Economic and Social Studies; Education; Engineering and Architecture; Graduate Studies; Human Resources Development and Continual Education; Languages and Translation; Law; Management Sciences; Medicine; Natural Resources and Environmental Studies; Nursing; Peace and Development; Petroleum Geology and Minerals; Public Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxXLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009779&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9779"><input class="case" type="checkbox" onClick="Coche(9779,0);" name="result[]" id="9779" value="9779"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9779" id="result9779" title="Expand result">
+		    <span>Expand result for </span>Bakht Er-Ruda University</a></h3>
+		  <p class="i_name">
+		Jameat Bakht Er-Ruda (UofB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gadalla Abdalla El-Hassan (Head) &ndash; Yousif Khogaly (Senior Administrative Officer) &ndash; Tarig Zahran (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Natural Resources; Arts; Community Development; Economics and Administrative Sciences; Education; Law; Medicine and Health Sciences; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxXLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010483&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10483"><input class="case" type="checkbox" onClick="Coche(10483,0);" name="result[]" id="10483" value="10483"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10483" id="result10483" title="Expand result">
+		    <span>Expand result for </span>Bayan College for Science and Technology</a></h3>
+		  <p class="i_name">
+		Koliat Bayan I'Leloom Wal Technologia (BSTC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohammad Bashir Jafar (Head) &ndash; Ibrahim Al-Mubarak (Senior Administrative Officer) &ndash; Hassan Ibrahim Hamida (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Science; Dentistry; Electronic Engineering; Information Systems; Medical Equipment Engineering; Medicine and Surgery; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULiMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009769&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9769"><input class="case" type="checkbox" onClick="Coche(9769,0);" name="result[]" id="9769" value="9769"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9769" id="result9769" title="Expand result">
+		    <span>Expand result for </span>Blue Nile University</a></h3>
+		  <p class="i_name">
+		Jameat Al-Neel Alazarg (UOBN)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Faisal Elgasim Ahmed (Head) &ndash; Abdel Shakoor H. Suliman (Senior Administrative Officer) &ndash; Abd El hafiz (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Administrative and Social Sciences; Education - Damazin; Engineering - Rusirs; Higher Studies and Research; Medicine and  Health Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxWLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000753&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="753"><input class="case" type="checkbox" onClick="Coche(753,0);" name="result[]" id="753" value="753"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result753" id="result753" title="Expand result">
+		    <span>Expand result for </span>Canadian Sudanese College</a></h3>
+		  <p class="i_name">
+		Al Koliat Al Candia Al Sudania (CSC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alex Kafori (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Computer Information Systems</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0tUzRTCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010500&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10500"><input class="case" type="checkbox" onClick="Coche(10500,0);" name="result[]" id="10500" value="10500"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10500" id="result10500" title="Expand result">
+		    <span>Expand result for </span>College of Aviation Sciences</a></h3>
+		  <p class="i_name">
+		Koliat Uloom Altyaran		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Osman Ahmed Eisa (Head) &ndash; Mohammed Alsafy Hassan Alzain (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Economy and Finance; Hotel Management and Tourism; Information Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BVLCNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024299&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24299"><input class="case" type="checkbox" onClick="Coche(24299,0);" name="result[]" id="24299" value="24299"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result24299" id="result24299" title="Expand result">
+		    <span>Expand result for </span>College of Igra for Science and Technology</a></h3>
+		  <p class="i_name">
+		 (ICST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Economy; Islamic Studies; Management Science; Medical Laboratory Science; Medicine and Surgery; Nursing; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBSLjNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010484&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10484"><input class="case" type="checkbox" onClick="Coche(10484,0);" name="result[]" id="10484" value="10484"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10484" id="result10484" title="Expand result">
+		    <span>Expand result for </span>Comboni College for Science and Technology</a></h3>
+		  <p class="i_name">
+		Koliat Camboni l'Leloom Wa Eltekonlogia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdel Rahman Khangi (Head) &ndash; Nahla Gafer (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Science; Humanities; Mathematics and Physics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULiMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009781&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9781"><input class="case" type="checkbox" onClick="Coche(9781,0);" name="result[]" id="9781" value="9781"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9781" id="result9781" title="Expand result">
+		    <span>Expand result for </span>Dalanj University</a></h3>
+		  <p class="i_name">
+		Jameat El-Dalanj &ndash; Dilling University		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohammed El-Awad Dafaalla Ahmed (Head) &ndash; Abdel Qader Muhammad Ali (Senior Administrative Officer) &ndash; Ahmed Mohamed Ibrahim (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Camels; Community Development; Computer Science and Information Technology; Development of Human Resource; Economic and Administrative Science; Education; Graduate Studies; Horticultural Development; Medicine; Natural Gums; Peace Studies and Development; Physical Education and Sport Science; Science; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxYLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024303&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24303"><input class="case" type="checkbox" onClick="Coche(24303,0);" name="result[]" id="24303" value="24303"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result24303" id="result24303" title="Expand result">
+		    <span>Expand result for </span>Delta College of Science and Technology</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Accountancy and Information Systems; Business Administration; Information Systems Management; Information Technology; Islamic Studies; Sharia Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBTLCMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009780&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9780"><input class="case" type="checkbox" onClick="Coche(9780,0);" name="result[]" id="9780" value="9780"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9780" id="result9780" title="Expand result">
+		    <span>Expand result for </span>Dongola University</a></h3>
+		  <p class="i_name">
+		Jameat Dongola (UOFD)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Saadeldin Ibrahim Mohammed Izzeldin (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Sciences; Arts and Humanities; Business Administration; Community Development; Earth Sciences and Mining; Economics and Administrative Sciences; Education - Dongola; Education - Merowe; Education - Romy Bakri; Graduate Studies; Heritage Research; Medical Research; Medicine and Health Sciences; Shari'a Law; Technology and Human Development</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxYLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010498&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10498"><input class="case" type="checkbox" onClick="Coche(10498,0);" name="result[]" id="10498" value="10498"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10498" id="result10498" title="Expand result">
+		    <span>Expand result for </span>East Nile College</a></h3>
+		  <p class="i_name">
+		Koliat Sharq El-Neel (Shareq el Neil College)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Anas Abd Elhafis (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Enviromental Planning; Computer Science; Economics and Administrative Sciences; Information Technology; Media Studies; Medical Laboratory Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULjNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009783&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9783"><input class="case" type="checkbox" onClick="Coche(9783,0);" name="result[]" id="9783" value="9783"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9783" id="result9783" title="Expand result">
+		    <span>Expand result for </span>El-Imam El-Mahdi University</a></h3>
+		  <p class="i_name">
+		Jameat El-Imam El-Mahdi		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nour El-Daim Osman Mohammed (Head) &ndash; Ali Mohamed Mohamedein (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Community Development; Computer Science and Information Technology; Economics and Administrative Sciences; Education; Engineering and Technical Studies; Graduate Studies; Human Resource Development; Law and Islamic Law (Shari'a); Medicine and Health Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxYLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010492&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10492"><input class="case" type="checkbox" onClick="Coche(10492,0);" name="result[]" id="10492" value="10492"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10492" id="result10492" title="Expand result">
+		    <span>Expand result for </span>Elnasr Technical College</a></h3>
+		  <p class="i_name">
+		Koliat Elnasr Eltagania (NTC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maaz Elsarag (Head) &ndash; Khadiga Osman (Senior Administrative Officer) &ndash; Ebada Abdelmageed (Senior Administrative Officer) &ndash; Eltahir Abdelmajid (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architectural Engineering; Business Administration; Civil Engineering; Educational and Technical Studies; Electrical Engineering; Information Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULjMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010490&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10490"><input class="case" type="checkbox" onClick="Coche(10490,0);" name="result[]" id="10490" value="10490"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10490" id="result10490" title="Expand result">
+		    <span>Expand result for </span>Elrazi University</a></h3>
+		  <p class="i_name">
+		Jameat El-Razi		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Osman Rizk (Head) &ndash; Al-Fadil Mohamed Khair Mohammad Maroof (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Dental Technology; Dentistry; Information Technology; Medical Labs; Medicine; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULjNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004470&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4470"><input class="case" type="checkbox" onClick="Coche(4470,0);" name="result[]" id="4470" value="4470"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result4470" id="result4470" title="Expand result">
+		    <span>Expand result for </span>Emirates College of Science and Technology</a></h3>
+		  <p class="i_name">
+		Elkolia Alemarat Eltigania (ECST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Saifuddin Fattouh Osman (Head) &ndash; Sami Mohammed Ibrahim (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and AuditingInformation Systems; Architecture and Planning; Banking Information Systems; Computer Science; Economics and Administrative Sciences; English Language and Literature; Human Development and IT; Information Systems; Information Technology; Management Information Systems</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzBXLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010493&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10493"><input class="case" type="checkbox" onClick="Coche(10493,0);" name="result[]" id="10493" value="10493"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10493" id="result10493" title="Expand result">
+		    <span>Expand result for </span>Garden City College for Science and Technology</a></h3>
+		  <p class="i_name">
+		Jameat Garden City (GCST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Alamin Altom (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture, Planning and Urban Design; Communication Sciences; Computer Science and Information Technology; Creative Multimedia Studies; Economics and Administration; Electronic and Computer Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULjMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010480&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10480"><input class="case" type="checkbox" onClick="Coche(10480,0);" name="result[]" id="10480" value="10480"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10480" id="result10480" title="Expand result">
+		    <span>Expand result for </span>Gezira College of Technology</a></h3>
+		  <p class="i_name">
+		Koliat Al-Gezira Altigania		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Adil Difallal (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences; Architecture; Computer Science; Diploma Programmes; Economics; Electronic Systems Engineering; English Language and Literature; Information Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULiNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024309&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24309"><input class="case" type="checkbox" onClick="Coche(24309,0);" name="result[]" id="24309" value="24309"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result24309" id="result24309" title="Expand result">
+		    <span>Expand result for </span>Hikma College of Science and Technology</a></h3>
+		  <p class="i_name">
+		Hikma College (HCST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mudesir Suleiman (Head) &ndash; Adel Saad (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences; Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBTLCNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010481&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10481"><input class="case" type="checkbox" onClick="Coche(10481,0);" name="result[]" id="10481" value="10481"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10481" id="result10481" title="Expand result">
+		    <span>Expand result for </span>Imam Hadi College</a></h3>
+		  <p class="i_name">
+		Koliat Al-Imam Al-Hadi		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Khalid Fait Hassab Elrasol (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>English Language and Literature/Letters; Information Technology; Law; Shari' a and Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULiMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024326&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24326"><input class="case" type="checkbox" onClick="Coche(24326,0);" name="result[]" id="24326" value="24326"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result24326" id="result24326" title="Expand result">
+		    <span>Expand result for </span>International College for Sciences and Technology</a></h3>
+		  <p class="i_name">
+		 (ICST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tariq Hassan Elsonni (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences; Aircraft Maintenance Engineering; Electrical and Electronic Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBTLEM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009794&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9794"><input class="case" type="checkbox" onClick="Coche(9794,0);" name="result[]" id="9794" value="9794"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9794" id="result9794" title="Expand result">
+		    <span>Expand result for </span>International University of Africa</a></h3>
+		  <p class="i_name">
+		Jameat Ifriqya Al-Alamiyyah (IUA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Kamal Mohamed Obeid (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Production and Processing Technology; Arabic Language; Arts; Computer Studies; Disaster Management and Refugees Studies; Economics and Political Sciences; Education; Engineering; Faculty of Administration Sciences; Faculty of Family Sciences and Community Devolopment; Faculty of Languages; Islamic Africa Center; Islamic Studies; ISSC; Media Studies; Medical Laboratory Sciences; Medicine; Minerals and Petroleum; Nursing; Oral and Dental Medicine; Pharmacy; Pure and Applied Sciences; Research and African Studies; Sharia and Law; Yousif Al Khalifa for writitng the languages with arabic character</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxZLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011165&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11165"><input class="case" type="checkbox" onClick="Coche(11165,0);" name="result[]" id="11165" value="11165"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result11165" id="result11165" title="Expand result">
+		    <span>Expand result for </span>Islamic Institute of Translation</a></h3>
+		  <p class="i_name">
+		Mahad Elitergma Elislami (ISINTRA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tigani Gizuli (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Languages</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRRLUM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000782&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="782"><input class="case" type="checkbox" onClick="Coche(782,0);" name="result[]" id="782" value="782"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result782" id="result782" title="Expand result">
+		    <span>Expand result for </span>Jordanian Sudanese College for Science and Technology</a></h3>
+		  <p class="i_name">
+		Al-Kolia Al Ordinia l'Leloom Wa Eltekonlogia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Khalid Adnan Ahmed (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Electrical Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0tU0BSCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024297&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24297"><input class="case" type="checkbox" onClick="Coche(24297,0);" name="result[]" id="24297" value="24297"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result24297" id="result24297" title="Expand result">
+		    <span>Expand result for </span>Kamlin Ahlia College</a></h3>
+		  <p class="i_name">
+		 (KAC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Ali Ahmed Hamida (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Economics and Management Sciences; Medical Laboratory Science; Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBSLjM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009796&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9796"><input class="case" type="checkbox" onClick="Coche(9796,0);" name="result[]" id="9796" value="9796"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9796" id="result9796" title="Expand result">
+		    <span>Expand result for </span>Karary University</a></h3>
+		  <p class="i_name">
+		Jameat Karary (KU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Yousif Abdurahim (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Aeronautics; Dentistry; Engineering; Medical Laboratory Sciences; Medicine and Surgery; Military; Naval Studies; Nursing and Medical Technology; Pharmacy ; Postgraduate Studies; Radiology; Technical Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxZLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010496&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10496"><input class="case" type="checkbox" onClick="Coche(10496,0);" name="result[]" id="10496" value="10496"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10496" id="result10496" title="Expand result">
+		    <span>Expand result for </span>Khartoum College for Applied Studies</a></h3>
+		  <p class="i_name">
+		Koliat Khartoum Al-Tatpigia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohammed Abdulrahman Abusseb (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Economics and Business Administration; Hotel and Tourism; Information Technology; Interior Design</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULjM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010487&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10487"><input class="case" type="checkbox" onClick="Coche(10487,0);" name="result[]" id="10487" value="10487"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10487" id="result10487" title="Expand result">
+		    <span>Expand result for </span>Khartoum College of Science and Technology</a></h3>
+		  <p class="i_name">
+		Koliat El-Khartoum Eltigania (KTC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abubaker Akerbueljokh (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Business Studies; Civil Engineering; Information Systems</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULiM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011164&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11164"><input class="case" type="checkbox" onClick="Coche(11164,0);" name="result[]" id="11164" value="11164"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result11164" id="result11164" title="Expand result">
+		    <span>Expand result for </span>Khartoum International Institute for Arabic Language</a></h3>
+		  <p class="i_name">
+		Mahad El-Khartoum Eldawally Lil Lugha Elarabia (KIIAL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abed Elraheem Ali (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Modern Languages and Arabic</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRRLUMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000052&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="52"><input class="case" type="checkbox" onClick="Coche(52,0);" name="result[]" id="52" value="52"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result52" id="result52" title="Expand result">
+		    <span>Expand result for </span>Manhal Academy of Sciences</a></h3>
+		  <p class="i_name">
+		Academiat Al-Manhal l'Leloom		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Altaj Ali Fadalla (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Automation and Control Engineering; Economics; Electronics Systems Engineering; Information Systems Management; Information Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?JTo2MF0tMyhgCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024266&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24266"><input class="case" type="checkbox" onClick="Coche(24266,0);" name="result[]" id="24266" value="24266"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result24266" id="result24266" title="Expand result">
+		    <span>Expand result for </span>Mashreq University</a></h3>
+		  <p class="i_name">
+		Jameat El-Mashreq (MU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Communication Sciences; Computer Science and Information Technology; Economics and Managerial Sciences; Engineering; Graduate Studies; Technology and Community Development</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBSLUM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009788&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9788"><input class="case" type="checkbox" onClick="Coche(9788,0);" name="result[]" id="9788" value="9788"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9788" id="result9788" title="Expand result">
+		    <span>Expand result for </span>National Ribat University</a></h3>
+		  <p class="i_name">
+		Jameat El-Ribat El Watani (NRU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdelateef Osman Ashmaig (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Criminal and Social Studies; Dentistry; Economic, Administrative and Financial Sciences; Environmental Studies and Disaster Management; Epistemological Studies and Quranic Miracle; Forensic Evidence Sciences; Graduate and Scientific Research; Information ; Islamic and Quranic Studies; Islamic Studies - Jaba Awleya; Languages and Translation; Law; Medical Laboratory Sciences; Medicine; Nursing Sciences; Pharmacy; Poisons; Police; Police Sciences and Law; Radiology and Nuclear Medicine; Strategic and Security Studies; Technology and Health Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxYLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010488&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10488"><input class="case" type="checkbox" onClick="Coche(10488,0);" name="result[]" id="10488" value="10488"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10488" id="result10488" title="Expand result">
+		    <span>Expand result for </span>Nile College</a></h3>
+		  <p class="i_name">
+		Koliat El-Neel		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Yousuf Sukkar (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Management and Accountancy; Dentistry; Management and Health Information System; Medical Laboratory Sciences; Medicine; Nursing; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULiNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009805&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9805"><input class="case" type="checkbox" onClick="Coche(9805,0);" name="result[]" id="9805" value="9805"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9805" id="result9805" title="Expand result">
+		    <span>Expand result for </span>Nile Valley University</a></h3>
+		  <p class="i_name">
+		Jameat Wadi Al-Neel (NVU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdel Ilah Musa Ali (Head) &ndash; Ali Hamza Osman (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Archaeology and Heritage Studies; Community Development; Economics and Administrative Sciences; Education; Engineering and Technology; Graduate Studies; Holy Quran; Islamic and Arabic Sciences; Medicine; Open Education; Science and Technology; Sharia and Law; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BQLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024280&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24280"><input class="case" type="checkbox" onClick="Coche(24280,0);" name="result[]" id="24280" value="24280"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result24280" id="result24280" title="Expand result">
+		    <span>Expand result for </span>Obied Technical College</a></h3>
+		  <p class="i_name">
+		Koliat El-Obied Elitagania (OTC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Economics and Business Administration; Information Technology; Management Information Systems; Psychology and Preschool Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBSLiNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009800&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9800"><input class="case" type="checkbox" onClick="Coche(9800,0);" name="result[]" id="9800" value="9800"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9800" id="result9800" title="Expand result">
+		    <span>Expand result for </span>Omdurman Ahlia University</a></h3>
+		  <p class="i_name">
+		Jameat Omdurman Ahlia (OAU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Karrar Ahmed Bashir Abbadi (Head) &ndash; Abd Alla Al Sharif Al Gol (Senior Administrative Officer) &ndash; Idris Al tahir Al nayl (Senior Administrative Officer) &ndash; Awad Ibrahim AlBeely (Senior Administrative Officer) &ndash; Abdallah Al Goul (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Alternative Energy and Sustainable Development; Applied and Computer Sciences; Applied Studies; Arts; Aun EI-Sharief Qasim; Economics and Administrative Sciences; Engineering and Architecture; Environmental Sciences; Health Sciences; Human and Technological Development; Medicine; Sudanese Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BQLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009801&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9801"><input class="case" type="checkbox" onClick="Coche(9801,0);" name="result[]" id="9801" value="9801"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9801" id="result9801" title="Expand result">
+		    <span>Expand result for </span>Omdurman Islamic University</a></h3>
+		  <p class="i_name">
+		Jameat Omdurman Islamiah (OIU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hasan Abbas Hassan Ibrahim (Head) &ndash; Seddig Mohamed Ahmed Al-Aghbash Mohamed (Senior Administrative Officer) &ndash; Al- Khider Ali Idris Mohammed (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences; Agriculture; Arabic Language; Arts; Community Development; Economics and Political Sciences; Education; Engineering; Family Studies; Graduate Studies; Imams and Preachers Training; Information; Islamic Call; Legal Training; Medical Laboratory; Medicine and  Health Sciences; Medicine and Health Sciences; Pharmacy; Researches and Strategic Studies; Researches and the Islamic World Studies; Sciences and Technology; Sharia and Law; Theology; UNESCO Chair for Water</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BQLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010491&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10491"><input class="case" type="checkbox" onClick="Coche(10491,0);" name="result[]" id="10491" value="10491"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10491" id="result10491" title="Expand result">
+		    <span>Expand result for </span>Peace College for Languages and Translation</a></h3>
+		  <p class="i_name">
+		Koliat El-Salam Llogat Wa El-Targama		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Ahmed Elbarodi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Languages and Translation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULjMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009789&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9789"><input class="case" type="checkbox" onClick="Coche(9789,0);" name="result[]" id="9789" value="9789"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9789" id="result9789" title="Expand result">
+		    <span>Expand result for </span>Peace University</a></h3>
+		  <p class="i_name">
+		Jameat El-Salam		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Radi Bokhari (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Development Studies; Economics and Community Development; Environmental Studies and Research; Graduate Studies and Research; Literature; Management and Finance; Medicine and Health Sciences; Microfinance; Natural Resources and Environmental Studies; Peace and Development Studies; Petroleum Engineering and Water Science; Primary Education; Vegetables and Fruits; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxYLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010497&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10497"><input class="case" type="checkbox" onClick="Coche(10497,0);" name="result[]" id="10497" value="10497"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10497" id="result10497" title="Expand result">
+		    <span>Expand result for </span>Port Sudan Alhia College</a></h3>
+		  <p class="i_name">
+		Koliat Port Sudan Ahlia (PAC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hassay Awaly (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Administrative Sciences; Information Technology; Medical Laboratory Sciences; Translation and Languages</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULjM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009764&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9764"><input class="case" type="checkbox" onClick="Coche(9764,0);" name="result[]" id="9764" value="9764"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9764" id="result9764" title="Expand result">
+		    <span>Expand result for </span>Red Sea University</a></h3>
+		  <p class="i_name">
+		Jameat Al-Bahar Al-Ahmar (RSU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Abdel Aziz (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Applied Sciences; Arts; Community Development; Earth Sciences; Economics; Education; Education Gabeet; Engineering; Graduate Studies and Scientific Research; Marine Research Institute; Medicine; Oceanography and Fisheries; Technical Studies and Development</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxWLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009803&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9803"><input class="case" type="checkbox" onClick="Coche(9803,0);" name="result[]" id="9803" value="9803"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9803" id="result9803" title="Expand result">
+		    <span>Expand result for </span>Sinnar University</a></h3>
+		  <p class="i_name">
+		Jameat Sinar		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Elkheir Abdelrahman (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Animal Production; Community Development; Computer Science and Information Technology; Economics and Managerial Science; Education; Education for Basic School Teachers; Engineering; Graduate Studies; Islamic and Arabic Studies; Medicine and Health Sciences; Natural Resources and Environmental Science; Sharia and Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BQLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000055&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="55"><input class="case" type="checkbox" onClick="Coche(55,0);" name="result[]" id="55" value="55"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result55" id="result55" title="Expand result">
+		    <span>Expand result for </span>Sudan Academy for Banking and Financial Sciences</a></h3>
+		  <p class="i_name">
+		Academiat El-Sudan Zeldum El-Masrafia Walmalia (SABFS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Omer Ahmed Osman ElMaGhli (Head) &ndash; Mohammed Hassan Osma Bakri (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Administrative Sciences; Computer Sciences and Statistics; Economics; Law; Postgraduate Studies; Research, Publishing and Consultancy; Second Language and Islamic Culture</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?JTo2MF0tMzRgCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024199&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24199"><input class="case" type="checkbox" onClick="Coche(24199,0);" name="result[]" id="24199" value="24199"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result24199" id="result24199" title="Expand result">
+		    <span>Expand result for </span>Sudan Academy of Sciences</a></h3>
+		  <p class="i_name">
+		 (SAS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Eisa Ibrahim El Gaali (Head) &ndash; Awad Galal Osman (Senior Administrative Officer) &ndash; Mohammed Salman Ali (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Research; Animal Wealth; Applied Science and Technology; Atomic Energy; Atomic Energy Research; Biological Science, New Technologies and Environment; Biological Sciences, Modern Technologies and Environment Research; Cancer Studies and Research; Economic, Social and Human Studies; Economic, Social and Human Studies Research; Energy and Earth Science; Energy and Earth Sciences Research; Engineering Research and Industrial Technology; Information and Communication Research; Political and Diplomatic Research; Political Sciences and Diplomatic Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBRLjNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009790&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9790"><input class="case" type="checkbox" onClick="Coche(9790,0);" name="result[]" id="9790" value="9790"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9790" id="result9790" title="Expand result">
+		    <span>Expand result for </span>Sudan International University</a></h3>
+		  <p class="i_name">
+		Jameat El-Sudan El Alimya (SIU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Bakri Osman Saeed (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computing and Information Systems; Dentistry; Economics, Financial and Banking Studies; Engineering and Architecture; Management Sciences; MBA; Medical Laboratory Sciences; Medicine; Nursing; Pharmacy; Tourism and Hotels</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxZLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010499&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10499"><input class="case" type="checkbox" onClick="Coche(10499,0);" name="result[]" id="10499" value="10499"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10499" id="result10499" title="Expand result">
+		    <span>Expand result for </span>Sudan University College for Girls</a></h3>
+		  <p class="i_name">
+		Koliat Sudan Alijamia (SUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fadwa Abd El-Rahman Ali Taha (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Computer Science; Economics; English; Journalism and Communication Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULjNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009792&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9792"><input class="case" type="checkbox" onClick="Coche(9792,0);" name="result[]" id="9792" value="9792"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9792" id="result9792" title="Expand result">
+		    <span>Expand result for </span>Sudan University of Science and Technology</a></h3>
+		  <p class="i_name">
+		Jameat El-Sudan I'Leloom Wal Technologia (SUST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rashid Husein (Head) &ndash; Yousif Idris (Senior Administrative Officer) &ndash; Abbas Musa (Senior Administrative Officer) &ndash; Rania Abdelhameed Mokhtar (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Studies; Animal Production Science and Technology; Architecture and Planning; Business Studies; Communication Science; Computer; Computer Science and Information Technology; Education; Engineering; Engineering Technology Industries; Family and Community Development; Fine and Applied Arts; Forestry and Range Science; Graduate Studies; Islamic Science and Research; Languages; Laser; Medical Laboratory Science; Medical Radiological Sciences; Music and Drama; Petroleum Engineering and Technology; Physical Education and Sports; Science; Strategic and Futuristic Studies; Studies and Culture of Peace; Sudanese Malaysian Studies; Support Business Incubator Project; Technology; Veterinary Medicine; Water and Environmental Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxZLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009785&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9785"><input class="case" type="checkbox" onClick="Coche(9785,0);" name="result[]" id="9785" value="9785"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9785" id="result9785" title="Expand result">
+		    <span>Expand result for </span>The Future University</a></h3>
+		  <p class="i_name">
+		Jameat El-Mustagbal (FU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mustafa El Tayeb (Head) &ndash; Elsaied Ali Baha Eldin (Senior Administrative Officer) &ndash; Abubaker Ghassan (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Art and Design; Basic Studies; Computer Science; Engineering; Geoinformatics; Information Technology; Telecommunication</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxYLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010485&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10485"><input class="case" type="checkbox" onClick="Coche(10485,0);" name="result[]" id="10485" value="10485"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10485" id="result10485" title="Expand result">
+		    <span>Expand result for </span>University Ibn Sina</a></h3>
+		  <p class="i_name">
+		Jameat Ibn Sina (ISU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mahmoud Nasreldin Ahmed (Head) &ndash; Abulgasim Abdalla Muzzammil (Senior Administrative Officer) &ndash; Yousif Salih El Tayeb (Senior Administrative Officer) &ndash; Hassan Ahmed (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Clinical Pharmacy; Dental Technology; Dentistry; Medical Laboratory Technology; Medicine; Physical Therapy and Rehabilitation; Postgraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULiM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009766&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9766"><input class="case" type="checkbox" onClick="Coche(9766,0);" name="result[]" id="9766" value="9766"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9766" id="result9766" title="Expand result">
+		    <span>Expand result for </span>University of Al-Fashir</a></h3>
+		  <p class="i_name">
+		Jameat Al-Fashir		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Osman Abduljabbar Osman (Head) &ndash; Abdulmohsin Abdulraouf Suliman (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Health Sciences; Arts; Basic Level Teacher Training; Community Development; Economics and Administrative Sciences; Education; Environmental Science and Natural Resources; Graduate Studies and Scientific Research; Holy Qura'n; Human Development; Medicine; Sharia and Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxWLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009782&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9782"><input class="case" type="checkbox" onClick="Coche(9782,0);" name="result[]" id="9782" value="9782"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9782" id="result9782" title="Expand result">
+		    <span>Expand result for </span>University of Gadarif</a></h3>
+		  <p class="i_name">
+		Jameat El-Gadarif (G.U.)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ibrahim Abdelsalam Yousif Mohammed (Head) &ndash; Abdul Hamid Bashir (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural and Environmental Sciences; Community Development; Computer Science and Information Technology; Economics and Administrative Sciences; Education; Graduate Studies; Medicine and Health Sciences; Sharia and Islamic Studies; Veterinary Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxYLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009767&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9767"><input class="case" type="checkbox" onClick="Coche(9767,0);" name="result[]" id="9767" value="9767"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9767" id="result9767" title="Expand result">
+		    <span>Expand result for </span>University of Gezira</a></h3>
+		  <p class="i_name">
+		Jameat Al-Gezira (UOFG)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohammed Omar Warrag (Head) &ndash; Osman Elamin (Senior Administrative Officer) &ndash; Malik Alnaeem Mohammad Ali (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Sciences; Animal Production; Applied Medical Sciences; Business Studies; Cancer; Communicable Diseases; Communication Sciences; Community College; Dentistry; Desert Studies; Developmental Studies; Economics and Rural Development; Education-Elhassaheisa; Education-Hantoub; Educational Sciences; Engineering and Technology; Forest Science and Technology; Health and Environmental Sciences; Islamization of Knowledge; Law; Mathematical and Computer Sciences; Medical Laboratory Sciences; Medicine; Nomads; Oilseeds Processing; Pharmacy; Promotion of Horticultural Exports; Science; Sugar; Textiles; Water Management and Irrigation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxWLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009786&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9786"><input class="case" type="checkbox" onClick="Coche(9786,0);" name="result[]" id="9786" value="9786"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9786" id="result9786" title="Expand result">
+		    <span>Expand result for </span>University of Holy Qu'ran and Islamic Sciences</a></h3>
+		  <p class="i_name">
+		Jameat El-Quraan El-Kareem Wa El-Derasat El-Islamia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Saeed Salman (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences; Arabic Language; Community; Computer Science and Information Technology; Da’wa and Information; Economics and Social Sciences; Education; Female Students; Holly Qur’an and Sunnah; Holy Qu'ran; Islamic Economics Studies; Jurisprudence and Ifta; Languages; Postgraduate Studies; Professional Development and Quality Assurance; Shari'a</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxYLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009784&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9784"><input class="case" type="checkbox" onClick="Coche(9784,0);" name="result[]" id="9784" value="9784"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9784" id="result9784" title="Expand result">
+		    <span>Expand result for </span>University of Khartoum</a></h3>
+		  <p class="i_name">
+		Jameat El-Khartoum		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Mohamed Suliman (Head) &ndash; Mustafa Mohamed Ali El Balla (Senior Administrative Officer) &ndash; Ibrahim Mukhtar Ahmed (Senior Administrative Officer) &ndash; Abdelbagi Dafalla Ahmed (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Training; African and Asian Studies; Agriculture; Animal Production; Arabic Language; Architecture; Arts; Bioinformatics and System Biology; Building and Roads; Camel; Confucius; Dentistry; Desertification and Desert Cultivation Studies; Development Studies and Research; Diplomatic Studies; Distance Learning; Economic and Social Studies; Education; Educational Development for Health Professions; Endemic Diseases; Energy; Engineering; English Language; Environmental Studies; Forestry; Geographical and Environmental Sciences; Graduate Studies; Health Economics; Human Rights; Law; Management Studies; Mathematical Sciences; Medical Laboratory Sciences; Medicine; Mycetoma; Nursing; Peace; Pharmacy; Public and Environmental Health; Salma; Science; Studies and Promotion of Animal Exports; Studies of Public Administration and Federalism Governance; Technological and Developmental Studies; Veterinary Medicine; Water</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxYLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009798&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9798"><input class="case" type="checkbox" onClick="Coche(9798,0);" name="result[]" id="9798" value="9798"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9798" id="result9798" title="Expand result">
+		    <span>Expand result for </span>University of Kordofan</a></h3>
+		  <p class="i_name">
+		Jameat Kordofan		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Abdalla Agabeldour (Head) &ndash; Abdoalrhman Elshreef Hammad (Senior Administrative Officer) &ndash; Azhari Eltahir Mohammed (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Commercial Studies; Computer Studies and Statistics; Education; Engineering and Technical studies; Graduate Studies and Scientific Research; Gum-Arabic Research and Desertification Studies; Islamic Knowledge and Behavioral Sciences; Medicine and Health Sciences; Natural Resources and Environmental Studies; Peace and Development Studies; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxZLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009772&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9772"><input class="case" type="checkbox" onClick="Coche(9772,0);" name="result[]" id="9772" value="9772"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9772" id="result9772" title="Expand result">
+		    <span>Expand result for </span>University of Medical Sciences and Technology</a></h3>
+		  <p class="i_name">
+		Jameat Al-Uloom Al-Tibya Wal Tiqnologia (UMST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hassan Mohammed Ahmed (Head) &ndash; Asma Abdelwakil (Senior Administrative Officer) &ndash; Mustafa Mohmoud Awad Elkarim (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Anesthesia; Business Administration; Computer Science and Information Technology; Dentistry; Economic, Social and Environmental Studies; Engineering; Law; Mass Communication; Medical Laboratory Sciences; Medicine; Nursing ; Nursing Technology; Pharmacy; Radiological Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxXLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009799&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9799"><input class="case" type="checkbox" onClick="Coche(9799,0);" name="result[]" id="9799" value="9799"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9799" id="result9799" title="Expand result">
+		    <span>Expand result for </span>University of Nyala</a></h3>
+		  <p class="i_name">
+		Jameat Nyala		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ibrahim Mohamed Sharif Khairy (Head) &ndash; Faisal Malik Abbakar (Senior Administrative Officer) &ndash; Musaa Salih Omer (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Allied Health; Development; Distance Education; Economic Studies and Consultations; Economics and Business Studies; Education; Educational Studies and Curricula Development; Engineering Sciences; Graduate Studies; Languages and Translation; Law and Sharia; Legal Studies and Consultations; Low Cost Building Materials; Medicine and  Health Sciences; Molecular Biology; Peace Studies and Research; Science and Information Technology; Small Ruminants Development; Technology and Community Development; Veterinary Science; Water Harvesting</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxZLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009773&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9773"><input class="case" type="checkbox" onClick="Coche(9773,0);" name="result[]" id="9773" value="9773"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9773" id="result9773" title="Expand result">
+		    <span>Expand result for </span>University of Science and Technology</a></h3>
+		  <p class="i_name">
+		Jameat Al-Uloom Wal Tigana		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mutaz Mohammed Ahmed Al-Bereir (Head) &ndash; Hind Mustafa Abdalla Hashim (Senior Administrative Officer) &ndash; Awad Alkarim Yousif (Senior Administrative Officer) &ndash; Mirghani Yousif (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences; Computer Science and Information Technology; Dentistry; Engineering; Medical Laboratory Science; Medicine; Pharmacy; Post Graduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxXLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009787&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9787"><input class="case" type="checkbox" onClick="Coche(9787,0);" name="result[]" id="9787" value="9787"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9787" id="result9787" title="Expand result">
+		    <span>Expand result for </span>University of the Holy Qura'n and and Taseel of Sciences</a></h3>
+		  <p class="i_name">
+		Jameat El-Qur’an Alkarim Wa Tasiel Al Uloom		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ali Abdulah (Head)</strong></p> -->
+		  <p class="divisions"></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzxYLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009806&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9806"><input class="case" type="checkbox" onClick="Coche(9806,0);" name="result[]" id="9806" value="9806"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result9806" id="result9806" title="Expand result">
+		    <span>Expand result for </span>University of Zalengei</a></h3>
+		  <p class="i_name">
+		Jameat Zalengei (UNIZAL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ali Hussein Bahar Mohammed (Head) &ndash; Suliman Adam Ahmed (Senior Administrative Officer) &ndash; Ahmed Idris Ahmed (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Community Development; Computer Science and Information Technology; Economics and Administrative Sciences; Education; Education, Primary Level; Environment and Technology Transfer; Forestry Science; Graduate Studies and Scientific Research; Information; Jebel Marra Research Institute of African Studies; Languages ​​and Linguistic Sciences; Medicine and Health Sciences; Peace and Development Studies; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BQLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024296&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24296"><input class="case" type="checkbox" onClick="Coche(24296,0);" name="result[]" id="24296" value="24296"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result24296" id="result24296" title="Expand result">
+		    <span>Expand result for </span>Wad Medani College of Medical Sciences and Technology</a></h3>
+		  <p class="i_name">
+		 (WMST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Osman Khalavallah (Head) &ndash; Osman M. Elmustafa (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Information Technology; Medical Laboratory Science; Medicine; Nursing; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBSLjM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010494&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10494"><input class="case" type="checkbox" onClick="Coche(10494,0);" name="result[]" id="10494" value="10494"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10494" id="result10494" title="Expand result">
+		    <span>Expand result for </span>West Nile College</a></h3>
+		  <p class="i_name">
+		Koliat Gareb El-Neel		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Sir Elkhatim (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences and Psychology; Diploma Studies; Medical Laboratory Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULjMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010489&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10489"><input class="case" type="checkbox" onClick="Coche(10489,0);" name="result[]" id="10489" value="10489"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Sudan</p>
+				  <h3>
+		    <a href="#result10489" id="result10489" title="Expand result">
+		    <span>Expand result for </span>White Nile College of Science and Technology</a></h3>
+		  <p class="i_name">
+		Koliat El-Neel Al-Abid Al-Ahlia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hamad Shazli (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences; Architecture; Arts-English Language; Economics and Banking; Education; Human Development; Information Technology; Law; Medical Laboratory Science; Medicine and Surgery; Postgraduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BULiNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 81 of 81</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan" selected>Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Egypt')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Egypt)">
+	    <input type="hidden" class="envoi" name="total" value="52">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Egypt">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">52 results found for <strong>(Country=Egypt)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 52 of 52</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-006571&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="6571"><input class="case" type="checkbox" onClick="Coche(6571,0);" name="result[]" id="6571" value="6571"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result6571" id="result6571" title="Expand result">
+		    <span>Expand result for </span>Alexandria University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_6571_logo.jpg" /></h3>
+		  <p class="i_name">
+		Gameat Aliskandaria (AU)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.alexu.edu.eg" href="images/IAUMembers/6571_1.jpg" class="fancybox" rel="gallery6571"><img class="img" src="images/IAUMembers/s_6571_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Essam Elkordi (Head) &ndash; Hisham Gaber (Senior Administrative Officer) &ndash; Seddik AbdelSalam Tawfik (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Arts; Commerce; Dentistry; Economics and Political Sciences; Education; Engineering; Fine Arts; Graduate Studies and Research; Kindergarten; Law; Medical Research; Medicine; Nursing; Pharmacy; Physical Education for Girls; Physical Education for Men; Public Health; Science; Specific Education; Tourism and Hotels; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQzRXLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001035&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="1035"><input class="case" type="checkbox" onClick="Coche(1035,0);" name="result[]" id="1035" value="1035"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result1035" id="result1035" title="Expand result">
+		    <span>Expand result for </span>Arab Academy for Science, Technology and Maritime Transport</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_1035_logo.png" /></h3>
+		  <p class="i_name">
+		 (AASTMT)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.aast.edu" href="images/IAUMembers/1035_1.jpg" class="fancybox" rel="gallery1035"><img class="img" src="images/IAUMembers/s_1035_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.aast.edu" href="images/IAUMembers/1035_2.jpg" class="fancybox" rel="gallery1035"><img class="img" src="images/IAUMembers/s_1035_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ismail Abdel Ghafar (Head) &ndash; Hanan Gouda (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Computer Service; Computing and Information Technology; Engineering and Technology; Fisheries Technology and Aquaculture; Informatics; International Transport and Logistics; Investment and Finance; Language and Communication; Language Studies; Management and Technology; Marine Hotel; Marine Safety; Maritime Postgraduate Studies; Maritime Research and Consultation; Maritime Security; Maritime Transport and Technology; Multimedia; Pharmacy; Port Training; Productivity and Quality; Trade and Commodities Exchange ; Upgrading Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sM2BTLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011951&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="11951"><input class="case" type="checkbox" onClick="Coche(11951,0);" name="result[]" id="11951" value="11951"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result11951" id="result11951" title="Expand result">
+		    <span>Expand result for </span>Misr University for Science and Technology</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_11951_logo.gif" /></h3>
+		  <p class="i_name">
+		 (MUST)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.must.edu.eg" href="images/IAUMembers/11951_1.jpg" class="fancybox" rel="gallery11951"><img class="img" src="images/IAUMembers/s_11951_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.must.edu.eg" href="images/IAUMembers/11951_2.jpg" class="fancybox" rel="gallery11951"><img class="img" src="images/IAUMembers/s_11951_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.must.edu.eg" href="images/IAUMembers/11951_3.jpg" class="fancybox" rel="gallery11951"><img class="img" src="images/IAUMembers/s_11951_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Muhammad H. El-Azzazi (Head) &ndash; Wesam Nagy Salam (Senior Administrative Officer) &ndash; Muhammad  El-Saadani (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Medical Science; Archaeology and Tourism Guidance; Biotechnology; Business; Dental Surgery; Engineering; Foreign Languages; Information Technology; Mass Media; Medicine; Pharmacy; Physical Therapy; Special Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRZLTMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020464&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="20464"><input class="case" type="checkbox" onClick="Coche(20464,0);" name="result[]" id="20464" value="20464"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result20464" id="result20464" title="Expand result">
+		    <span>Expand result for </span>University of Sadat City</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_20464_logo.png" /></h3>
+		  <p class="i_name">
+		 (USC)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.usc.edu.eg" href="images/IAUMembers/20464_1.png" class="fancybox" rel="gallery20464"><img class="img" src="images/IAUMembers/s_20464_1.png" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Essam El-Din Metwaly (Head) &ndash; Radwan El-Qerm (Senior Administrative Officer) &ndash; Refai Ibrahim Refai (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Commerce; Education; Environmental Studies and Research; Genetic Engineering and Biotechnology Research; Law; Pharmacy; Physical Education; Tourism and Hotels; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BULUMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000759&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="759"><input class="case" type="checkbox" onClick="Coche(759,0);" name="result[]" id="759" value="759"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result759" id="result759" title="Expand result">
+		    <span>Expand result for </span>Ahram Canadian University</a></h3>
+		  <p class="i_name">
+		Al-Ahram Canadian University (ACU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Farouk Ismail (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Computer Science and Information Technology; Engineering; English Language; Mass Communication ; Oral and Dental Medicine; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0tUzRZCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000211&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="211"><input class="case" type="checkbox" onClick="Coche(211,0);" name="result[]" id="211" value="211"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result211" id="result211" title="Expand result">
+		    <span>Expand result for </span>Ain Shams University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdul Wahab Ezzat (Head) &ndash; Hassan Abd Elazeez Ammar (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Al-Alsun; Arts; Commerce; Computer and Information Science; Dentistry; Education; Engineering; Environmental Studies and Research; Genetic Engineering and Biotechnology; Law; Medicine; Middle East; Nursing; Papyrus Studies; Pharmacy; Postgraduate Childhood Studies; Public Service and Development; Science; Science Education Development; Scientific Computing; Specific Education; University Education Development; Vectors of Diseases; Women for Arts, Science and Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0sQyRRCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000765&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="765"><input class="case" type="checkbox" onClick="Coche(765,0);" name="result[]" id="765" value="765"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result765" id="result765" title="Expand result">
+		    <span>Expand result for </span>Al-Azhar University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ibrahim Al-Hudhud (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Arabic Language; Childhood Disabilities; Commerce; Commerce; Dentistry; Education; Engineering; Genetic Engineering; Heart Diseases and Surgery; Islamic and Arab Studies; Islamic Call; Islamic Commercial Studies; Islamic Jurisprudence and Law; Islamic Studies; Islamic Theology; Languages and Translation; Medicine; Mycology and Biotechnology; Pharmacy; Population Studies; Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0tUzhVCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000761&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="761"><input class="case" type="checkbox" onClick="Coche(761,0);" name="result[]" id="761" value="761"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result761" id="result761" title="Expand result">
+		    <span>Expand result for </span>Alsun Academy</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Khaled Hassan Azazi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Commercial Studies; Information Systems Management; Tourism Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0tUzhRCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001177&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1177"><input class="case" type="checkbox" onClick="Coche(1177,0);" name="result[]" id="1177" value="1177"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result1177" id="result1177" title="Expand result">
+		    <span>Expand result for </span>Assiut University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Abdu Ahmed Abdel-Hafez Geaies (Head) &ndash; Essam Mohamed Ahmed Zinati (Senior Administrative Officer) &ndash; Mokhtar Taha (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Arts; Cancer; Commerce; Computer and Information Science; Dentistry; Education; Engineering; Law; Medicine; Nursing; Pharmacy; Physical Education; Science; Social Work; Specific Education; Sugar Technology Research; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMyRXLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024084&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24084"><input class="case" type="checkbox" onClick="Coche(24084,0);" name="result[]" id="24084" value="24084"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result24084" id="result24084" title="Expand result">
+		    <span>Expand result for </span>Aswan University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mansour Mohammed Kabbas (Head) &ndash; Abdul Qader Mohammed (Senior Administrative Officer) &ndash; Abuelhassan  Elshazly Younis (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Archaeology; Arts; Commerce; Dar Al Uloom; Education; Educational Quality; Engineering; Languages; Law; Medicine; Nursing; Physical Education; Power Engineering; Sciences; Social Work; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLiMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001594&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1594"><input class="case" type="checkbox" onClick="Coche(1594,0);" name="result[]" id="1594" value="1594"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result1594" id="result1594" title="Expand result">
+		    <span>Expand result for </span>Benha University</a></h3>
+		  <p class="i_name">
+		 (BU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>El Sayed Yousef El Kady (Head) &ndash; Mohamed Reda Rashwan Abu El-Elaa (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Applied Arts; Arts; Commerce; Computers and Informatics; Education; Engineering (Benha); Engineering (Shoubra); Law; Medicine; Nursing; Physical Education; Science; Specific Education; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRZLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001595&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1595"><input class="case" type="checkbox" onClick="Coche(1595,0);" name="result[]" id="1595" value="1595"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result1595" id="result1595" title="Expand result">
+		    <span>Expand result for </span>Beni-Suef University</a></h3>
+		  <p class="i_name">
+		 (BSU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Amin Lotfy El-Sayed (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Al-Alsun; Arts; Commerce; Computers and Information; Dentistry; Economic Studies and Political Science; Education; Engineering; Health Science; Industrial Education; Laser Institute for Research and Application (LIRA); Law; Media; Medicine; Nursing; Pharmacy; Physical Education; Physical Therapy; Post Graduate Studies and Advanced Science; Science; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMzRZLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001883&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1883"><input class="case" type="checkbox" onClick="Coche(1883,0);" name="result[]" id="1883" value="1883"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result1883" id="result1883" title="Expand result">
+		    <span>Expand result for </span>Cairo University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gaber Nassar (Head) &ndash; Saed Yehia Mahmoud Daw (Senior Administrative Officer) &ndash; Mohamed Othman Elkhosht (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>African Studies and Research; Agriculture; Arabic Languages and Culture; Archaeology; Arts; Cancer; Commerce; Computer Science and Informatics; Dar el Ulum; Development and Technology Planning; Economics and Political Science; Educational Studies and Research; Engineering; Environmental Studies and Research; Future Studies and Research; Kindergarten; Laser Science; Law; Mass Communication; Medicine; Nursing; Open Education; Open University E-Learning; Oral and Dental Medicine; Pharmacy; Physiotherapy; Regional and Town Planning; Science; Specialized Education; Statistical Studies and Research; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sM0BYLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003519&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3519"><input class="case" type="checkbox" onClick="Coche(3519,0);" name="result[]" id="3519" value="3519"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result3519" id="result3519" title="Expand result">
+		    <span>Expand result for </span>Damanhour University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ebeed Saleh (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Arts; Commerce; Dentistry; Education; Environmental Research; Kindergarten; Nursing; Pharmacy; Science; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUzRRLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003633&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3633"><input class="case" type="checkbox" onClick="Coche(3633,0);" name="result[]" id="3633" value="3633"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result3633" id="result3633" title="Expand result">
+		    <span>Expand result for </span>Delta University for Science and Technology</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Yahia Abulazeem Al-Mashad (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Dentistry; Engineering; Pharmacy; Phsical Therapy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUzhTLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004433&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4433"><input class="case" type="checkbox" onClick="Coche(4433,0);" name="result[]" id="4433" value="4433"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result4433" id="result4433" title="Expand result">
+		    <span>Expand result for </span>Egyptian E-Learning University</a></h3>
+		  <p class="i_name">
+		 (EELU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Yasser H. Dakroury (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Computer and Information Technology; Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzBTLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004436&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4436"><input class="case" type="checkbox" onClick="Coche(4436,0);" name="result[]" id="4436" value="4436"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result4436" id="result4436" title="Expand result">
+		    <span>Expand result for </span>Egyptian Russian University</a></h3>
+		  <p class="i_name">
+		El Gamma El Massria El Russia (ERU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sherif M. Helmy (Head) &ndash; Ekram Agha (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Engineering; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzBTLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004462&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4462"><input class="case" type="checkbox" onClick="Coche(4462,0);" name="result[]" id="4462" value="4462"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result4462" id="result4462" title="Expand result">
+		    <span>Expand result for </span>El Shorouk Academy</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Farid Khamis (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer and Information Technology; Engineering; Media</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzBWLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006276&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="6276"><input class="case" type="checkbox" onClick="Coche(6276,0);" name="result[]" id="6276" value="6276"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result6276" id="result6276" title="Expand result">
+		    <span>Expand result for </span>Fayoum University</a></h3>
+		  <p class="i_name">
+		 (FU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Khaled Ismael Hamza (Head) &ndash; Magdy Tawfik Hanna (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Archaeology; Arts; Computer and Information Sciences; Dar Al Uloom (Arabic and Islamic Studies); Dentistry; Early Childhood Education; Education; Engineering; Medicine; Nile Basin Countries; Nursing; Pharmacy; Science; Social Work; Specific Education; Tourism and Hotels</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQyhXLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019718&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19718"><input class="case" type="checkbox" onClick="Coche(19718,0);" name="result[]" id="19718" value="19718"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result19718" id="result19718" title="Expand result">
+		    <span>Expand result for </span>French University in Egypt</a></h3>
+		  <p class="i_name">
+		Université française d'Egypte (UFE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hassan Nadir Khairallah (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Languages; Engineering; Lifelong Education and Distance Education; Management and Information Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLDNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006544&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="6544"><input class="case" type="checkbox" onClick="Coche(6544,0);" name="result[]" id="6544" value="6544"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result6544" id="result6544" title="Expand result">
+		    <span>Expand result for </span>Future University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ebada Sarhan (Head) &ndash; Osama Salama (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Commerce and Business Administration; Computers and Information Technology; Economics and Political Science; Engineering and Technology; English Language; Oral and Dental Medicine; Pharmaceutical Sciences and  Pharmaceutical Industries</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQzRULWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007164&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7164"><input class="case" type="checkbox" onClick="Coche(7164,0);" name="result[]" id="7164" value="7164"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result7164" id="result7164" title="Expand result">
+		    <span>Expand result for </span>Helwan University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maged Mohammad Fahmy Negm (Head) &ndash; Gamal Shokry Mohamed Othman (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Arts; Art Education; Arts; Chinese-Egyptian Research; Commerce and Business Administration; Computer and Information Sciences; Education; Engineering; Fine Arts; Home Economics; Industrial Education; Law; Music Education; Nursing; Pharmacy; Physical Education; Research and Studies Interfaces; Science; Scientific Computing; Small Projects Support; Social Service; Social Therapy; Social Work; Space Weather; Staff Capabilities Development; Technological Development Research; Tourism and Hotel Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUyRWLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009521&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9521"><input class="case" type="checkbox" onClick="Coche(9521,0);" name="result[]" id="9521" value="9521"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result9521" id="result9521" title="Expand result">
+		    <span>Expand result for </span>International Academy for Engineering and Media Science</a></h3>
+		  <p class="i_name">
+		 (IAEMS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Safwat EI-Sherif (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Information Engineering; Media Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzRSLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010044&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10044"><input class="case" type="checkbox" onClick="Coche(10044,0);" name="result[]" id="10044" value="10044"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result10044" id="result10044" title="Expand result">
+		    <span>Expand result for </span>Kafr El Shiekh University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maged Abdeltawab El Kemary (Head) &ndash; Ibrahim Mohamed Aman (Senior Administrative Officer) &ndash; AbdAllah Gaad (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Aquatic and Fisheries Sciences; Arts; Commerce; Computers and Information; Dentistry; Education; Engineering; Languages; Medicine; Nursing; Pharmacy; Physical Education; Physical Therapy; Science; Specific Education; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BQLSMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011363&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11363"><input class="case" type="checkbox" onClick="Coche(11363,0);" name="result[]" id="11363" value="11363"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result11363" id="result11363" title="Expand result">
+		    <span>Expand result for </span>Mansoura University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Muhammad Hassan Kenawy (Head) &ndash; Amira Al-Sorongy (Senior Administrative Officer) &ndash; Yehia Hussein Ebeid (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Commerce; Computer and Information Science; Dentistry; Education; Engineering; Kindergarten Education; Law; Medicine; Nursing; Ophthalmology; Pharmacy; Physical Education; Science; Specific Education; Tourism and Hotels; Urology and Nephrology; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRTLUMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011566&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11566"><input class="case" type="checkbox" onClick="Coche(11566,0);" name="result[]" id="11566" value="11566"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result11566" id="result11566" title="Expand result">
+		    <span>Expand result for </span>Menoufia University</a></h3>
+		  <p class="i_name">
+		Menofia University (MU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Moawad Mohamed El-Kholy (Head) &ndash; Adel El-Sayed Sadek Moubark (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Art; Commerce; Computer Science and Information Technology; Education; Electronic Engineering; Engineering; Home Economics; Law; Liver Diseases; Medicine; Nursing; Physical Education; Science; Specific Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRVLUM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011716&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11716"><input class="case" type="checkbox" onClick="Coche(11716,0);" name="result[]" id="11716" value="11716"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result11716" id="result11716" title="Expand result">
+		    <span>Expand result for </span>Minia University</a></h3>
+		  <p class="i_name">
+		Minya University		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gamal el-Deen Ali Abu El-Magd (Head) &ndash; Gaber Zayed Abdulwanes Bresha (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Al Alson; Art Education; Arts; Computers and Information; Dar Aloum; Dentistry; Education; Engineering; Fine Arts; Kindergarten; Languages; Nursing; Pharmacy; Physical Education; Science; Special Education; Tourism and Hotel Management; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRXLDM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011950&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11950"><input class="case" type="checkbox" onClick="Coche(11950,0);" name="result[]" id="11950" value="11950"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result11950" id="result11950" title="Expand result">
+		    <span>Expand result for </span>Misr International University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamed Shebl El Komy (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Al Alsun and Mass Communication; Business Administration and International Trade; Computer Science; Engineering Sciences and Arts; Oral and Dental Medicine; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRZLTNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011993&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11993"><input class="case" type="checkbox" onClick="Coche(11993,0);" name="result[]" id="11993" value="11993"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result11993" id="result11993" title="Expand result">
+		    <span>Expand result for </span>Modern University for Technology and Information</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Olfat Kamel (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computers and Information; Dentistry; Engineering; Management; Mass Communication; Nursing; Pharmacy; Physical Therapy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRZLjMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012315&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="12315"><input class="case" type="checkbox" onClick="Coche(12315,0);" name="result[]" id="12315" value="12315"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result12315" id="result12315" title="Expand result">
+		    <span>Expand result for </span>Nahda University</a></h3>
+		  <p class="i_name">
+		Nahda University in Beni Suef (NUB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Seddik Afifi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Science; Engineering; Marketing and Business Administration; Mass Communication; Oral and Dental Medicine; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhTLDM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012525&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12525"><input class="case" type="checkbox" onClick="Coche(12525,0);" name="result[]" id="12525" value="12525"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result12525" id="result12525" title="Expand result">
+		    <span>Expand result for </span>National Telecommunications Institute</a></h3>
+		  <p class="i_name">
+		 (NTI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Iman Ashour (Head) &ndash; Magdy El-Soudani (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computers and Systems; Electronics; Network Planning; Switching anf Traffic; Transmission</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhVLEM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012709&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="12709"><input class="case" type="checkbox" onClick="Coche(12709,0);" name="result[]" id="12709" value="12709"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result12709" id="result12709" title="Expand result">
+		    <span>Expand result for </span>Nile University</a></h3>
+		  <p class="i_name">
+		 (NU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tarek Khalil (Head) &ndash; Amr Mortagy (Senior Administrative Officer) &ndash; Hussein I. Anis (Senior Administrative Officer) &ndash; Mahmoud E. Allam (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business ; Communications and Information Technology ; Engineering and Applied Sciences; Management of Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhXLCNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012970&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12970"><input class="case" type="checkbox" onClick="Coche(12970,0);" name="result[]" id="12970" value="12970"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result12970" id="result12970" title="Expand result">
+		    <span>Expand result for </span>October 6 University</a></h3>
+		  <p class="i_name">
+		6th of October University (O6U)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Attia Seida (Head) &ndash; Ahmed Wael (Senior Administrative Officer) &ndash; Abdellatif Kheireldin (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Arts; Applied Medical Sciences; Dentistry; Economics and Management; Education; Engineering; Hotel Management and Tourism; Information Systems and Computer Science; Languages and Translation; Media  and Mass Communication; Medicine; Pharmacy; Physiotherapy; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhZLVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012971&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="12971"><input class="case" type="checkbox" onClick="Coche(12971,0);" name="result[]" id="12971" value="12971"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result12971" id="result12971" title="Expand result">
+		    <span>Expand result for </span>October High Institute for Engineering and Technology</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sawsan El-Toukhy (Head) &ndash; Basma Sherin Bayoumy (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architectural Engineering; Business Administration; Communications and Electronics Engineering; Construction Management Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhZLVMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011992&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11992"><input class="case" type="checkbox" onClick="Coche(11992,0);" name="result[]" id="11992" value="11992"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result11992" id="result11992" title="Expand result">
+		    <span>Expand result for </span>October University for Modern Sciences and Arts</a></h3>
+		  <p class="i_name">
+		 (MSA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Khayri Abd El Hamied (Head) &ndash; Omayma Ouf (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Design; Biotechnology; Computer Science; Dentistry; Engineering; Languages; Management; Mass Communication; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRZLjMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013462&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="13462"><input class="case" type="checkbox" onClick="Coche(13462,0);" name="result[]" id="13462" value="13462"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result13462" id="result13462" title="Expand result">
+		    <span>Expand result for </span>Pharos University in Alexandria</a></h3>
+		  <p class="i_name">
+		 (PUA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mahmoud Mohy El-Din (Head) &ndash; Mohamed Abdel Fattah Ragab (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Allied Medical Sciences; Arts and Design; Dentistry; Engineering; Financial and Administrative Sciences; Languages and Translation; Legal Studies and International Relations; Mass Communication; Pharmacy and Drug Manufacturing; Physical Therapy; Tourism and Hotel Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxULUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013690&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13690"><input class="case" type="checkbox" onClick="Coche(13690,0);" name="result[]" id="13690" value="13690"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result13690" id="result13690" title="Expand result">
+		    <span>Expand result for </span>Port-Said University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rashed Sabrey El-Qassabey (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Commerce; Education; Engineering; Kindergarten; Management and Computer; Nursing; Physical Education; Science; Specific Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxWLjNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-014181&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="14181"><input class="case" type="checkbox" onClick="Coche(14181,0);" name="result[]" id="14181" value="14181"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result14181" id="result14181" title="Expand result">
+		    <span>Expand result for </span>Sadat Academy for Management Sciences</a></h3>
+		  <p class="i_name">
+		 (SAMS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alaa Eldin  Mohamed  El Ghazali (Head) &ndash; Ibrahim Hassan Ibrahim (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzBRLiMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019838&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19838"><input class="case" type="checkbox" onClick="Coche(19838,0);" name="result[]" id="19838" value="19838"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result19838" id="result19838" title="Expand result">
+		    <span>Expand result for </span>Senghor University</a></h3>
+		  <p class="i_name">
+		Université Senghor/Université internationale de Langue française au Service du Développement africain		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Albert Lourde (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration; Cultural Studies; Distance Education, Information and Communication Technologies; Environmental Management; Health Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLFNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015444&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="15444"><input class="case" type="checkbox" onClick="Coche(15444,0);" name="result[]" id="15444" value="15444"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result15444" id="result15444" title="Expand result">
+		    <span>Expand result for </span>Sinai University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hatem Mostafa El-bolok (Head) &ndash; Osama Kamel Rateb (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration and International Marketing; Dentistry; Engineering Science; Information Technology and Computer Sciences; Media Technology; Pharmacy and Pharmaceutical Industries</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRULSMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015513&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="15513"><input class="case" type="checkbox" onClick="Coche(15513,0);" name="result[]" id="15513" value="15513"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result15513" id="result15513" title="Expand result">
+		    <span>Expand result for </span>Sohag University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Safa Mahmoud El-sayed (Head) &ndash; Anees Mohamed Sheeha (Senior Administrative Officer) &ndash; Lotfy H. Abo-Dahab (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Arts; Commerce; Education; Engineering; Industrial Education; Medicine; Nursing; Science; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRVLDMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015577&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="15577"><input class="case" type="checkbox" onClick="Coche(15577,0);" name="result[]" id="15577" value="15577"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result15577" id="result15577" title="Expand result">
+		    <span>Expand result for </span>South Valley University</a></h3>
+		  <p class="i_name">
+		 (SVU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abbas Mohamed Mansour (Head) &ndash; Mahmoud Khodari Maeila Hamed (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Archaeology; Arts; Commerce; Education; Education; Engineering; Fine Arts; Law; Mass Communication; Medicine; Nursing; Nursing Technical Studies; Oral and Dental Medicine; Pharmacy; Physical Education; Physics Therapy; Sciences; Special Education; Tourism and Hotels; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRVLVM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015917&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="15917"><input class="case" type="checkbox" onClick="Coche(15917,0);" name="result[]" id="15917" value="15917"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result15917" id="result15917" title="Expand result">
+		    <span>Expand result for </span>Suez Canal University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mamdouh Ghorab (Head) &ndash; Mohammed Hassan Ali (Senior Administrative Officer) &ndash; Nahed Mohamed Mostafa (Senior Administrative Officer) &ndash; Tarek Rashed Rahmy (Senior Administrative Officer) &ndash; Atef Mohamed Aboel-Nour (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Arts; Biotechnology; Commerce; Computer and Information; Dentistry; Education; Engineering; Medicine; Nursing; Pharmacy; Science; Tourism and Hotel Management; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRZLDM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024464&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24464"><input class="case" type="checkbox" onClick="Coche(24464,0);" name="result[]" id="24464" value="24464"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result24464" id="result24464" title="Expand result">
+		    <span>Expand result for </span>Suez University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maher Mesbah (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Commerce; Education; Fisheries; Industrial Education; Petroleum and Mining Engineering; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBULUMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016670&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16670"><input class="case" type="checkbox" onClick="Coche(16670,0);" name="result[]" id="16670" value="16670"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result16670" id="result16670" title="Expand result">
+		    <span>Expand result for </span>Tabbin Institute for Metallurgical Studies</a></h3>
+		  <p class="i_name">
+		 (TIMS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Basic Science; Chemical Engineering; Electrical Engineering; Energy and Environment Research; Industrial Engineering; Mechanical Engineering; Mining and Metallurgical Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhWLVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016150&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16150"><input class="case" type="checkbox" onClick="Coche(16150,0);" name="result[]" id="16150" value="16150"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result16150" id="result16150" title="Expand result">
+		    <span>Expand result for </span>Tanta University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ibrahim Abdel Wahab Ahmed Salem (Head) &ndash; Moddather Taha Al-Sayed Abo Al-Kheir (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Arts; Commerce; Dentistry; Education; Engineering; Law; Medicine; Nursing; Pharmacy; Physical Education; Science; Specific Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhRLTNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016377&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16377"><input class="case" type="checkbox" onClick="Coche(16377,0);" name="result[]" id="16377" value="16377"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result16377" id="result16377" title="Expand result">
+		    <span>Expand result for </span>The American University in Cairo</a></h3>
+		  <p class="i_name">
+		 (AUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Francis J. Ricciardone (Head) &ndash; Ehab Abdel-Rahman (Senior Administrative Officer) &ndash; Brian MacDougall (Senior Administrative Officer) &ndash; Ann Lesch (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>American Studies and Research; Arabic Language; Arabic Study Abroad; Business, Economics and Communication; Continuing Education; Desert Development; Economics and Business History; English Language; Gender and Women's Studies; Humanities and Social Sciences; Journalism; Management; Philanthropy and Civic Engagement; Science and Engineering; Science and Technology; Social Research</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhTLVM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016403&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16403"><input class="case" type="checkbox" onClick="Coche(16403,0);" name="result[]" id="16403" value="16403"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result16403" id="result16403" title="Expand result">
+		    <span>Expand result for </span>The British University in Egypt</a></h3>
+		  <p class="i_name">
+		 (BUE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Hamad (Head) &ndash; Hassan Ammar (Senior Administrative Officer) &ndash; Victoria Lindsay (Senior Administrative Officer) &ndash; Yehia A. Bahei-El-Din (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Business Administration, Economics and Political Science ; Communications and Mass Media; Dentistry; Engineering; Informatics and Computer Science ; Law; Nursing; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhULCMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016457&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="16457"><input class="case" type="checkbox" onClick="Coche(16457,0);" name="result[]" id="16457" value="16457"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result16457" id="result16457" title="Expand result">
+		    <span>Expand result for </span>The German University in Cairo</a></h3>
+		  <p class="i_name">
+		 (GUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mahmoud H. Abdel-Kader (Head) &ndash; Slim Abdennadher (Senior Administrative Officer) &ndash; Yasser Higazi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Science and Arts; Engineering and Materials Science; Information Engineering and Technology; Law and Legal Studies; Lifelong Learning and Distance Education; Management Technology; Media Engineering and Technology; Pharmacy and Biotechnology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhULTM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021336&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="21336"><input class="case" type="checkbox" onClick="Coche(21336,0);" name="result[]" id="21336" value="21336"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result21336" id="result21336" title="Expand result">
+		    <span>Expand result for </span>Workers University</a></h3>
+		  <p class="i_name">
+		 (WU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hussein Magawer (Head) &ndash; Mostafa El Sayed (Senior Administrative Officer) &ndash; Ahmed Abdel Salam (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Industrial Relations; Industrial Safety; Insurance; Labour Administration; Labour Education; Population's Culture; Trade Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRTLFM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-021773&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="21773"><input class="case" type="checkbox" onClick="Coche(21773,0);" name="result[]" id="21773" value="21773"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result21773" id="result21773" title="Expand result">
+		    <span>Expand result for </span>Zagazig University</a></h3>
+		  <p class="i_name">
+		El Zakazik University		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Khalid Abd El-Bary (Head) &ndash; Abdel Hakeem Mohamed Ismaiil Elsayed (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Arts; Asian Studies and Research; Commerce; Computers and Informatics; Education; Engineering; Law; Medicine; Near Eastern Civilization; Nursing; Oncology; Pharmacy; Physical Education; Science; Special Education; Technology and Development; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRXLVMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-025110&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="25110"><input class="case" type="checkbox" onClick="Coche(25110,0);" name="result[]" id="25110" value="25110"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Egypt</p>
+				  <h3>
+		    <a href="#result25110" id="result25110" title="Expand result">
+		    <span>Expand result for </span>Zewail City of Science and Technology</a></h3>
+		  <p class="i_name">
+		 (ZCST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mostafa El-Sayed El-Sayed (Head) &ndash; Sherif Sedky (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Centre for Aging and Associated Diseases (CAAD); Centre for Fundamental Physics (CFP); Centre for Genomics (CG); Centre for Imaging and Microscopy (CIM); Centre for Learning Technologies (CLT); Centre for Materials Science (CMS); Centre for Nanoelectronics and Devices (CND); Centre for Photonics and Smart Materials (CPSM); Centre for X-Ray Determination of the Structure of Matter (CXDS); Centre of Excellence for Stem Cells and Regenerative Medicine (CESC); Centre or Nanotechnology (CNT); Dr. Nagwa El-Nwishy Research Centres; Engineering; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzRRLDNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 52 of 52</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt" selected>Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

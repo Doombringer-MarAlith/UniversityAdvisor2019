@@ -1,0 +1,2026 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Portugal')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Portugal)">
+	    <input type="hidden" class="envoi" name="total" value="84">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Portugal">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">84 results found for <strong>(Country=Portugal)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 84 of 84</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-018676&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="18676"><input class="case" type="checkbox" onClick="Coche(18676,0);" name="result[]" id="18676" value="18676"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result18676" id="result18676" title="Expand result">
+		    <span>Expand result for </span>Fernando Pessoa University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_18676_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universidade Fernando Pessoa (UFP)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.ufp.pt" href="images/IAUMembers/18676_1.jpg" class="fancybox" rel="gallery18676"><img class="img" src="images/IAUMembers/s_18676_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ufp.pt" href="images/IAUMembers/18676_2.jpg" class="fancybox" rel="gallery18676"><img class="img" src="images/IAUMembers/s_18676_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ufp.pt" href="images/IAUMembers/18676_3.jpg" class="fancybox" rel="gallery18676"><img class="img" src="images/IAUMembers/s_18676_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Salvato Trigo (Head) &ndash; Manuela Trigo (Senior Administrative Officer) &ndash; Nadine Rombert Trigo (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health Sciences; Human and Social Sciences; Ponte de Lima; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BWLVM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018554&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="18554"><input class="case" type="checkbox" onClick="Coche(18554,0);" name="result[]" id="18554" value="18554"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result18554" id="result18554" title="Expand result">
+		    <span>Expand result for </span>Universidade de Lisboa</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_18554_logo.jpg" /></h3>
+		  <p class="i_name">
+		 (ULisboa)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.ulisboa.pt/en" href="images/IAUMembers/18554_1.jpg" class="fancybox" rel="gallery18554"><img class="img" src="images/IAUMembers/s_18554_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>António Manuel da Cruz Serra (Head) &ndash; Ana Maduro (Senior Administrative Officer) &ndash; Isabel França (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agrigulture; Architecture; Arts and Humanities; Dental Medicine; Economics and Management; Education; Fine Arts; Geography and Spatial Planning; Human Kinetics; IST Técnico Lisboa; Law; Medicine; Pharmacy; Psychology; Sciences; Social and Political Sciences; Social Sciences; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018591&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="18591"><input class="case" type="checkbox" onClick="Coche(18591,0);" name="result[]" id="18591" value="18591"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result18591" id="result18591" title="Expand result">
+		    <span>Expand result for </span>University of Porto</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_18591_logo.png" /></h3>
+		  <p class="i_name">
+		Universidade do Porto (UPORTO)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.up.pt" href="images/IAUMembers/18591_1.jpg" class="fancybox" rel="gallery18591"><img class="img" src="images/IAUMembers/s_18591_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.up.pt" href="images/IAUMembers/18591_2.jpg" class="fancybox" rel="gallery18591"><img class="img" src="images/IAUMembers/s_18591_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>António Sousa Pereira (Head) &ndash; Maria de Lurdes Correia Fernandes (International Relations Officer) &ndash; Bárbara Costa (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Arts and Humanities; Biomedical Sciences; Dentistry; Economics; Engineering; Fine Arts; Law; Medicine; Nutrition and Food Science; Pharmacy; Psychology and Education Sciences; Science; Sports</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLjMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018512&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18512"><input class="case" type="checkbox" onClick="Coche(18512,0);" name="result[]" id="18512" value="18512"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18512" id="result18512" title="Expand result">
+		    <span>Expand result for </span>Atlantic University</a></h3>
+		  <p class="i_name">
+		Universidade Atlântica (UATLA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Carlos Guillén Gestoso (Head) &ndash; Natália do Espírito-Santo (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Studies; Graduate Studies; Health; Information and Communication Technology; Land, Environment and Development</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLDMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018513&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18513"><input class="case" type="checkbox" onClick="Coche(18513,0);" name="result[]" id="18513" value="18513"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18513" id="result18513" title="Expand result">
+		    <span>Expand result for </span>Autonomous University of Lisbon</a></h3>
+		  <p class="i_name">
+		Universidade Autónoma de Lisboa (UAL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Amado da Silva (Head) &ndash; Carolina Peralta (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Communication Sciences; Economics and Business Administration; Graduate Studies; History, Arts and Humanity; International Relations; Law; Psychology; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLDMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018529&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18529"><input class="case" type="checkbox" onClick="Coche(18529,0);" name="result[]" id="18529" value="18529"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18529" id="result18529" title="Expand result">
+		    <span>Expand result for </span>Catholic University of Portugal</a></h3>
+		  <p class="i_name">
+		Universidade Católica Portuguesa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maria de Glória Garcia (Head) &ndash; Maria da Graça Pereira Coutinho (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Studies; Architecture, Science and Technology; Art Science and Technology; Arts; Bioethics; Biotechnology; Biotechnology and Chemistry; Canon Law; Communication and Culture; Conservation and Restoration; Economics and Business Administration; Economics and Management; Economics, Management and Social Sciences; Education and Psychology; Engineering; European Studies; Family Studies; Fine Arts; Health Sciences; History of Religion; Human Sciences; Law; Management and Applied Economics; Management and Economics; Opinion Poll Studies; Oriental Studies; Philosophy; Philosophy and Humanities; Political Studies; Portuguese Thought; Psychology and Education; Religious and Cultural Studies; Social Sciences; Social Services and Sociology; Studies for Portuguese-Speaking People and Portuguese Culture; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLENEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003205&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3205"><input class="case" type="checkbox" onClick="Coche(3205,0);" name="result[]" id="3205" value="3205"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result3205" id="result3205" title="Expand result">
+		    <span>Expand result for </span>Conservatory Superior of Music of Gaia</a></h3>
+		  <p class="i_name">
+		Conservatório Superior de Música de Gaia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mário Mateus (Head) &ndash; Fernanda Correia (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Conducting; Theatrical Singing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhQLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-022510&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="22510"><input class="case" type="checkbox" onClick="Coche(22510,0);" name="result[]" id="22510" value="22510"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result22510" id="result22510" title="Expand result">
+		    <span>Expand result for </span>Cooperative for Polytechnic and University Education</a></h3>
+		  <p class="i_name">
+		Cooperativa de Ensino Superior Politécnico e Universitário (CESPU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jorge Brandão Proença (Head) &ndash; António Manuel de Almeida-Dias (Head) &ndash; Maria Raquel Soares Pacheco Esteves (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Health Sciences (ESSV); Health Sciences (ESSVA); Pharmacy; Science; Social and Behavioural Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyhVLDNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008897&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8897"><input class="case" type="checkbox" onClick="Coche(8897,0);" name="result[]" id="8897" value="8897"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8897" id="result8897" title="Expand result">
+		    <span>Expand result for </span>Egas Moniz  Institute of Health Sciences</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Ciências da Saúde Egas Moniz (ISCSEM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Manuel Jorge de Queiroz Medeiros (Head) &ndash; Ana Isabel Fernandes (Senior Administrative Officer) &ndash; Carla Ascenso (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Criminal Psychology; Forensic and Criminal Sciences; Graduate Studies; Health Sciences; Nutrition</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BZLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004597&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4597"><input class="case" type="checkbox" onClick="Coche(4597,0);" name="result[]" id="4597" value="4597"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4597" id="result4597" title="Expand result">
+		    <span>Expand result for </span>ERISA - Ribeiro Sanches School of Health</a></h3>
+		  <p class="i_name">
+		ERISA - Escola Superior de Saúde Ribeiro Sanches		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Adelina Motta da Cruz (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Clinical Analysis and Public Health; Graduate Studies; Nursing; Pharmacy; Radiology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRZLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004558&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4558"><input class="case" type="checkbox" onClick="Coche(4558,0);" name="result[]" id="4558" value="4558"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4558" id="result4558" title="Expand result">
+		    <span>Expand result for </span>ESAD-College of Art and Design</a></h3>
+		  <p class="i_name">
+		Escola Superior de Artes e Design (ESAD)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vitor Carvalho (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Art; Design; Graduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRVLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004588&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4588"><input class="case" type="checkbox" onClick="Coche(4588,0);" name="result[]" id="4588" value="4588"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4588" id="result4588" title="Expand result">
+		    <span>Expand result for </span>Estoril Higher Institute for Tourism and Hotel Studies</a></h3>
+		  <p class="i_name">
+		Escola Superior de Hotelaria e Turismo do Estoril (ESHTE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Raúl Manuel das Roucas Filipe (Head) &ndash; Carlos Fernando Santiago Neto Brandão (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Food Production for Restaurants; Graduate Studies; Hotel Management; Leisure and Tourism Management; Tourism Information</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRYLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009009&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9009"><input class="case" type="checkbox" onClick="Coche(9009,0);" name="result[]" id="9009" value="9009"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result9009" id="result9009" title="Expand result">
+		    <span>Expand result for </span>European University</a></h3>
+		  <p class="i_name">
+		Universidade Europeia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tawfiq Rkibi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Business Computing; Graduate Studies; Hotel Management; Human Resources and Organizational Management; Information Systems, Web and Multimedia; Marketing, Publicity and Public Relations; Safety Management and Civil Protection; Secretariat and Corporate Communications; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BQLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004604&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4604"><input class="case" type="checkbox" onClick="Coche(4604,0);" name="result[]" id="4604" value="4604"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4604" id="result4604" title="Expand result">
+		    <span>Expand result for </span>Gallaécia School</a></h3>
+		  <p class="i_name">
+		Escola Superior Gallaécia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mariana Correia (Head) &ndash; Rui Correia (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Urban Planning; Arts and Multimedia; Design; Ecology and Landscape</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzhQLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004546&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4546"><input class="case" type="checkbox" onClick="Coche(4546,0);" name="result[]" id="4546" value="4546"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4546" id="result4546" title="Expand result">
+		    <span>Expand result for </span>Higher School of Arts of Oporto</a></h3>
+		  <p class="i_name">
+		Escola Superior Artística do Porto (ESAP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>António Manuel da Silva Martins Teixeira (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Animation and Cultural Production; Cinema and Audiovisual; Cultural Management; Design and Multimedia Communication; Fine Arts; Theatre - Interpretation and Staging; Visual Arts - Photography</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRULUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004569&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4569"><input class="case" type="checkbox" onClick="Coche(4569,0);" name="result[]" id="4569" value="4569"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4569" id="result4569" title="Expand result">
+		    <span>Expand result for </span>Higher School of Education of Paula Frassinetti</a></h3>
+		  <p class="i_name">
+		Escola Superior de Educação de Paula Frassinetti (ESEPF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Luís de Almeida Gonçalves (Head) &ndash; Margarida Pechincha (Senior Administrative Officer) &ndash; Isabel Nogueira (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Psychology and Special Education; Social Education; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRWLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004550&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4550"><input class="case" type="checkbox" onClick="Coche(4550,0);" name="result[]" id="4550" value="4550"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4550" id="result4550" title="Expand result">
+		    <span>Expand result for </span>Higher School of Real Estate Studies</a></h3>
+		  <p class="i_name">
+		Escola Superior de Actividades Imobiliárias (ESAI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Julie Jeanne Lefebvre (Head) &ndash; Daniel Rui de Oliveira Fonseca Lopes (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Real Estate and Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRVLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004607&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4607"><input class="case" type="checkbox" onClick="Coche(4607,0);" name="result[]" id="4607" value="4607"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4607" id="result4607" title="Expand result">
+		    <span>Expand result for </span>Infante D. Henrique Nautical School</a></h3>
+		  <p class="i_name">
+		Escola Superior Náutica Infante D. Henrique		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luis Filipe Baptista (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Maritime Electronic Systems; Maritime Machinery Engineering; Piloting; Port Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzhQLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018722&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18722"><input class="case" type="checkbox" onClick="Coche(18722,0);" name="result[]" id="18722" value="18722"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18722" id="result18722" title="Expand result">
+		    <span>Expand result for </span>Infante D. Henrique Portucalense University of Oporto</a></h3>
+		  <p class="i_name">
+		Universidade Portucalense Infante D. Henrique		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alfredo Rodrigues Marques (Head) &ndash; Maria Paula Coutinho Dias Morais (Senior Administrative Officer) &ndash; Susana Carvalho (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics, Management and Informatics; Law; Psychology and Education; Tourism Heritage and Culture</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BXLEMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008884&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8884"><input class="case" type="checkbox" onClick="Coche(8884,0);" name="result[]" id="8884" value="8884"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8884" id="result8884" title="Expand result">
+		    <span>Expand result for </span>Institute of Administration and Management</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Administração e Gestão		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Joaquim Alberto Hierro Lopes (Head) &ndash; Vitor Ruiz Póvoas Vieira da Costa (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Hotel Management; Human and Social Sciences; Law; Mathematics and Computer Science; Tourism; Translation and Interpretation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BYLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009021&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9021"><input class="case" type="checkbox" onClick="Coche(9021,0);" name="result[]" id="9021" value="9021"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result9021" id="result9021" title="Expand result">
+		    <span>Expand result for </span>Institute of Advanced Technologies of Lisbon</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Tecnologias Avançadas de Lisboa (ISTEC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José António Carriço (Head) &ndash; António Manuel Chaves Fernandes Fidalgo (Senior Administrative Officer) &ndash; António Fidalgo (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Science; Graduate Studies; Multimedia Engineering; Oporto</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BSLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008905&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8905"><input class="case" type="checkbox" onClick="Coche(8905,0);" name="result[]" id="8905" value="8905"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8905" id="result8905" title="Expand result">
+		    <span>Expand result for </span>Institute of Business and Tourism</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Ciências Empresariais e do Turismo (ISCET)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Adalberto Dias de Carvalho (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Science; Human Resources Management; International Business; Law; Marketing and Advertising; Social and Organizational Psychology; Social Science; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0RQLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008958&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8958"><input class="case" type="checkbox" onClick="Coche(8958,0);" name="result[]" id="8958" value="8958"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8958" id="result8958" title="Expand result">
+		    <span>Expand result for </span>Institute of Education and Science</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Educação e Ciências		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Cristina Ventura (Head) &ndash; Tânia Carraquico (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Administration; Design and Graphic Arts; Educational Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0RVLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008903&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8903"><input class="case" type="checkbox" onClick="Coche(8903,0);" name="result[]" id="8903" value="8903"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8903" id="result8903" title="Expand result">
+		    <span>Expand result for </span>Institute of Educational Sciences</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Ciências Educativas (ISCE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luís Picado Picado (Head) &ndash; Carla Picado (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Physical Education and Sport; Social and Cultural Studies; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0RQLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008987&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8987"><input class="case" type="checkbox" onClick="Coche(8987,0);" name="result[]" id="8987" value="8987"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8987" id="result8987" title="Expand result">
+		    <span>Expand result for </span>Institute of Entre Douro and Vouga</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Entre Douro e Vouga (ISVOUGA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maria Teresa de Carvalho Leão (Head) &ndash; Nídia Maria Coimbra de Sousa Lamas (Senior Administrative Officer) &ndash; João Nuno Macedo Lameiras (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Business Administration; Law; Marketing, Advertising and Public Relations; Production and Industrial Management Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0RYLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008607&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8607"><input class="case" type="checkbox" onClick="Coche(8607,0);" name="result[]" id="8607" value="8607"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8607" id="result8607" title="Expand result">
+		    <span>Expand result for </span>Institute of Financial and Fiscal Studies</a></h3>
+		  <p class="i_name">
+		Instituto de Estudos Superiores Financeiros e Fiscais (IESF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>João Paulo Peixoto (Head) &ndash; Ana Moutinho (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Management; Finance and Taxation; Graduate Studies; Management and Information Systems</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uIzhQLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008605&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8605"><input class="case" type="checkbox" onClick="Coche(8605,0);" name="result[]" id="8605" value="8605"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8605" id="result8605" title="Expand result">
+		    <span>Expand result for </span>Institute of Higher Studies of Fafe</a></h3>
+		  <p class="i_name">
+		Instituto de Estudos Superiores de Fafe (IESF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luciano Magalhâes de Sampaio (Head) &ndash; Bruno Torres (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uIzhQLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008895&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8895"><input class="case" type="checkbox" onClick="Coche(8895,0);" name="result[]" id="8895" value="8895"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8895" id="result8895" title="Expand result">
+		    <span>Expand result for </span>Institute of Information and Administration</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Ciências da Informação e da Administração (ISCIA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Armando Teixeira Carneiro (Head) &ndash; Jorge Tavares da Silva da Silva (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Communication Studies; Management and International Relations; Marine Science; Psychology and Education; Security and Risk</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BZLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008799&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8799"><input class="case" type="checkbox" onClick="Coche(8799,0);" name="result[]" id="8799" value="8799"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8799" id="result8799" title="Expand result">
+		    <span>Expand result for </span>Institute of Intercultural and Transdisciplinary Studies of Almada</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Estudos Interculturais e Transdisciplinares – Almada (ISEIT/Almada)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maria de Fátima  Serralha (Head) &ndash; Ana Paula Sena (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Graduate Studies; Intercultural and Interdisciplinary Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uIzxZLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008800&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8800"><input class="case" type="checkbox" onClick="Coche(8800,0);" name="result[]" id="8800" value="8800"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8800" id="result8800" title="Expand result">
+		    <span>Expand result for </span>Institute of Intercultural and Transdisciplinary Studies of Viseu</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Estrudos Interculturais e Transdiciplinares de Viseu (ISEIT-VISEU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Teresa Santos Luís Panteleitchouk Panteleitchouk (Head) &ndash; Margarida Varela (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Graduate Studies; Intercultural and Interdisciplinary Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BQLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009008&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9008"><input class="case" type="checkbox" onClick="Coche(9008,0);" name="result[]" id="9008" value="9008"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result9008" id="result9008" title="Expand result">
+		    <span>Expand result for </span>Institute of Languages and Administration - Leiria</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Línguas e Administração de Leiria (ISLA - Leiria)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Carlos Francisco Silva (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Graduate Studies; Human Resources Management; Labour Safety Engineering; Social and Organizational Psychology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BQLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009015&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9015"><input class="case" type="checkbox" onClick="Coche(9015,0);" name="result[]" id="9015" value="9015"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result9015" id="result9015" title="Expand result">
+		    <span>Expand result for </span>Institute of Paços de Brandão</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Paços de Brandão		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Raquel Oliveira (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Chemical Engineering; Graduate Studies; Management and Accountancy; Marketing, Advertising and Public Relations</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BRLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009018&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9018"><input class="case" type="checkbox" onClick="Coche(9018,0);" name="result[]" id="9018" value="9018"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result9018" id="result9018" title="Expand result">
+		    <span>Expand result for </span>Institute of Social Services of Oporto</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Serviço Social do Porto		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maria Cidália de Jesus Queiroz (Head) &ndash; Idalina Maria Morais Machado (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Graduate Studies; Social Gerontology; Social Services</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BRLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009014&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9014"><input class="case" type="checkbox" onClick="Coche(9014,0);" name="result[]" id="9014" value="9014"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result9014" id="result9014" title="Expand result">
+		    <span>Expand result for </span>Institute of the New Professions</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Novas Profissões (INP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Miguel Varela (Head) &ndash; Teresa do Rosário Damásio (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration and Commerce; Communication; Graduate Studies; Journalism; Public Relations and Publicity; Secretarial Studies in Management and Administration; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BRLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009337&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9337"><input class="case" type="checkbox" onClick="Coche(9337,0);" name="result[]" id="9337" value="9337"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result9337" id="result9337" title="Expand result">
+		    <span>Expand result for </span>ISCTE - University Institute of Lisbon</a></h3>
+		  <p class="i_name">
+		ISCTE - Instituto Universitário de Lisboa (ISCTE-IUL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luís Antero Reto (Head) &ndash; António Caetano (Senior Administrative Officer) &ndash; Carlos Sá da Costa (Senior Administrative Officer) &ndash; Fernando Luís Machado (Senior Administrative Officer) &ndash; Nuno Guimarães (Senior Administrative Officer) &ndash; Graça Cordeiro (Senior Administrative Officer) &ndash; Susana Carvalhosa (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Technology; Business; Human and Social Sciences; Social and Public Policies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMyxTLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009000&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9000"><input class="case" type="checkbox" onClick="Coche(9000,0);" name="result[]" id="9000" value="9000"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result9000" id="result9000" title="Expand result">
+		    <span>Expand result for </span>ISG - Business and Economics School</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Gestão (ISG)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Miguel Varela (Head) &ndash; Teresa do Rosário Damásio (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Graduate Studies; Human Resources Management; Management; Marketing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BQLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009006&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9006"><input class="case" type="checkbox" onClick="Coche(9006,0);" name="result[]" id="9006" value="9006"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result9006" id="result9006" title="Expand result">
+		    <span>Expand result for </span>ISLA - Institute of Business and Administration of Santarém</a></h3>
+		  <p class="i_name">
+		ISLA- Instituto Superior de Gestão e Administração de Santarém (ISLA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Domingos Santos Martin (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Graduate Studies; Human Resources Management; Labour Safety Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BQLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009010&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9010"><input class="case" type="checkbox" onClick="Coche(9010,0);" name="result[]" id="9010" value="9010"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result9010" id="result9010" title="Expand result">
+		    <span>Expand result for </span>ISLA - Polytechnic Institute of Management and Technology</a></h3>
+		  <p class="i_name">
+		ISLA - Instituto Politécnico de Gestão e Tecnologia (ISLA Gaia)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>António Lencastre Godinho (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Graduate Studies; Human Resources Management; Information Systems and Multimedia Management; Labour Safety Engineering; Psychology; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BRLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009327&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9327"><input class="case" type="checkbox" onClick="Coche(9327,0);" name="result[]" id="9327" value="9327"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result9327" id="result9327" title="Expand result">
+		    <span>Expand result for </span>ISPA - University Institute of Psychological, Social and Life Sciences</a></h3>
+		  <p class="i_name">
+		ISPA - Instituto Universitário de Ciências Psicológicas, Sociais e da Vida		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rui Pais de Oliveira (Head) &ndash; José João Amoreira (Senior Administrative Officer) &ndash; Teresa D'Oliveira (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Community Development; Graduate Studies; Psychology; Rehabilitation and Social Insertion</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMyxSLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008802&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8802"><input class="case" type="checkbox" onClick="Coche(8802,0);" name="result[]" id="8802" value="8802"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8802" id="result8802" title="Expand result">
+		    <span>Expand result for </span>Jean Piaget School of Education of Arcozelo (Viseu)</a></h3>
+		  <p class="i_name">
+		Escola Superior de Educação Jean Piaget de Arcozelo (Viseu)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Françoise Cruz (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Graduate Studies; Health Sciences; Intercultural and Interdisciplinary Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BQLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004568&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4568"><input class="case" type="checkbox" onClick="Coche(4568,0);" name="result[]" id="4568" value="4568"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4568" id="result4568" title="Expand result">
+		    <span>Expand result for </span>João de Deus Higher School of Education</a></h3>
+		  <p class="i_name">
+		Escola Superior de Educação de João de Deus		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>António Ponces de Carvalho (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Basic Education; Educational Sciences; Postgraduate Studies; Pre-school Education; Social Gerontology; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRWLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018696&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18696"><input class="case" type="checkbox" onClick="Coche(18696,0);" name="result[]" id="18696" value="18696"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18696" id="result18696" title="Expand result">
+		    <span>Expand result for </span>Lusiada University of Lisbon</a></h3>
+		  <p class="i_name">
+		Universidade Lusíada de Lisboa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Diamantino Freitas Gomes Durão (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Angola; Architecture and Arts; Economics and Business Studies; Environmental Law; Humanities and Social Sciences; Law; Porto; Psychology and Educational Sciences; Research and Development; São Tomé e Príncipe; Social Services; Vila Nova de Famalicão</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BWLjM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018702&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18702"><input class="case" type="checkbox" onClick="Coche(18702,0);" name="result[]" id="18702" value="18702"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18702" id="result18702" title="Expand result">
+		    <span>Expand result for </span>Lusophone University of Humanities and Technologies</a></h3>
+		  <p class="i_name">
+		Universidade Lusófona de Humanidades e Tecnologias (ULHT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mário Moutinho (Head) &ndash; Manuel Almeida Damásio (Senior Administrative Officer) &ndash; Teresa do Rosario Damásio (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration; Aeronautics; Biomedical Sciences; Communication Sciences, Arts and Information Technologies; Economics and Management; Education; Engineering and Natural Sciences; Fine Arts; Health Sciences and Technology; Human and Social Sciences; Law; Philosophy, Mathematics and Cognitive Sciences; Physical Education and Sports; Political Sciences, Portuguese Speaking Countries and International Relations; Psychology; Security Studies; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BXLCMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008883&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8883"><input class="case" type="checkbox" onClick="Coche(8883,0);" name="result[]" id="8883" value="8883"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8883" id="result8883" title="Expand result">
+		    <span>Expand result for </span>Maia Academic Institute</a></h3>
+		  <p class="i_name">
+		Instituto Universitário da Maia - ISMAI (ISMAI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Manuel Matias de Azevedo (Head) &ndash; Fernando Hernâni Bento (Senior Administrative Officer) &ndash; Pedro Almiro Neves (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Licenciatura; LifeLong Learning; Mestrado</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BYLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009030&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9030"><input class="case" type="checkbox" onClick="Coche(9030,0);" name="result[]" id="9030" value="9030"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result9030" id="result9030" title="Expand result">
+		    <span>Expand result for </span>Manuel Teixeira Gomes Institute</a></h3>
+		  <p class="i_name">
+		Instituto Superior Manuel Teixeira Gomes (ISMAT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Damásio Manuel (Head) &ndash; Maria Ivone Portugal (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy; Business Administration; Communication Design; Computer Engineering; Graduate Studies; Human Resources Management; Law; Physical Education and Sports; Psychology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BTLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004575&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4575"><input class="case" type="checkbox" onClick="Coche(4575,0);" name="result[]" id="4575" value="4575"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4575" id="result4575" title="Expand result">
+		    <span>Expand result for </span>Maria Ulrich Early Childhood Educators School</a></h3>
+		  <p class="i_name">
+		Escola Superior de Educadores de Infância Maria Ulrich		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Elisabete Gomes (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Graduate Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRXLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009033&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9033"><input class="case" type="checkbox" onClick="Coche(9033,0);" name="result[]" id="9033" value="9033"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result9033" id="result9033" title="Expand result">
+		    <span>Expand result for </span>Miguel Torga Institute</a></h3>
+		  <p class="i_name">
+		Instituto Superior Miguel Torga		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sofia Figueiredo (Head) &ndash; Maria João Barata (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Auditing; Business Computing; Communication Design; Computer Science; Corporate Communication; Graduate Studies; Human Resources Management; Management; Multimedia; Psychology; Social Communication; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BTLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018714&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18714"><input class="case" type="checkbox" onClick="Coche(18714,0);" name="result[]" id="18714" value="18714"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18714" id="result18714" title="Expand result">
+		    <span>Expand result for </span>New University of Lisbon</a></h3>
+		  <p class="i_name">
+		Universidade Nova de Lisboa (UNL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>António Manuel Bensabat Rendas (Head) &ndash; João Sàágua (Senior Administrative Officer) &ndash; Tânia Sto. António (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Sciences; Chemical and Biological Technology; Economics and Management; Hygiene and Tropical Medicine; Law; Public Health; Science and Technology; Social and Human Sciences; Statistics and Information Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BXLDMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004577&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4577"><input class="case" type="checkbox" onClick="Coche(4577,0);" name="result[]" id="4577" value="4577"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4577" id="result4577" title="Expand result">
+		    <span>Expand result for </span>Nursing School of Coimbra</a></h3>
+		  <p class="i_name">
+		Escola Superior de Enfermagem de Coimbra		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maria da Conceição Saraiva da Silva Costa Bento (Head) &ndash; Fernando Manuel Dias Henriques (Senior Administrative Officer) &ndash; Aida Maria de Oliveira Cruz Mendes (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRXLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004578&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4578"><input class="case" type="checkbox" onClick="Coche(4578,0);" name="result[]" id="4578" value="4578"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4578" id="result4578" title="Expand result">
+		    <span>Expand result for </span>Nursing School of Lisbon</a></h3>
+		  <p class="i_name">
+		Escola Superior de Enfermagem de Lisboa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maria Filomena Mendes Gaspar (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Graduate Studies; Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRXLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004580&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4580"><input class="case" type="checkbox" onClick="Coche(4580,0);" name="result[]" id="4580" value="4580"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4580" id="result4580" title="Expand result">
+		    <span>Expand result for </span>Nursing School of Saint Joseph of Cluny</a></h3>
+		  <p class="i_name">
+		Escola Superior de Enfermagem de São José de Cluny		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maria Olivia de Sousa Freitas Barcelos (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Graduate Studies; Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRYLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018507&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18507"><input class="case" type="checkbox" onClick="Coche(18507,0);" name="result[]" id="18507" value="18507"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18507" id="result18507" title="Expand result">
+		    <span>Expand result for </span>Open University</a></h3>
+		  <p class="i_name">
+		Universidade Aberta (Uab)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Paulo Maria Bastos da Silva Dias (Head) &ndash; Carla Maria Bispo Padrel de Oliveira (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education and Distance Education; Graduate Studies; Humanities; Science and Technology; Social Sciences and Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLCM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008807&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8807"><input class="case" type="checkbox" onClick="Coche(8807,0);" name="result[]" id="8807" value="8807"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8807" id="result8807" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Beja</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico de Beja (IPBeja)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vito Carioca (Head) &ndash; Nuno Loureiro (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Education; Health Sciences; Management and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BQLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008808&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8808"><input class="case" type="checkbox" onClick="Coche(8808,0);" name="result[]" id="8808" value="8808"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8808" id="result8808" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Bragança</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico de Bragança		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>João Alberto Sobrinho Teixeira (Head) &ndash; Raquel Rodrigues (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Communication, Administration and Tourism; Education; Health; Management and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BQLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008809&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8809"><input class="case" type="checkbox" onClick="Coche(8809,0);" name="result[]" id="8809" value="8809"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8809" id="result8809" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Castelo Branco</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico de Castelo Branco		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Carlos Manuel Leitão Maia (Head) &ndash; José Carlos Dias Duarte Gonçalves (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Applied Arts; Education; Graduate; Health; Management; Technology; Tourism, Sports and Services</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BQLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008820&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8820"><input class="case" type="checkbox" onClick="Coche(8820,0);" name="result[]" id="8820" value="8820"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8820" id="result8820" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Cávado and Ave</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico do Cávado e do Ave (IPCA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>João Carvalho (Head) &ndash; Antonio Siva Pereira (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Graduate Studies; Management; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BSLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008810&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8810"><input class="case" type="checkbox" onClick="Coche(8810,0);" name="result[]" id="8810" value="8810"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8810" id="result8810" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Coimbra</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico de Coimbra		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rui Jorge da Silva Antunes (Head) &ndash; Manuel Filipe Mateus dos Reis (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Administration; Agriculture; Education; Engineering; Health Technology; Management and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BRLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008806&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8806"><input class="case" type="checkbox" onClick="Coche(8806,0);" name="result[]" id="8806" value="8806"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8806" id="result8806" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Guarda</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico da Guarda &ndash; Polytechnic of Guarda (IPG)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Constantino Mendes Rei (Head) &ndash; Susana Pereira (International Relations Officer) &ndash; Anabela Pires (International Relations Officer) &ndash; Vitoria Fonseca (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education, Communication and Sports; Health Sciences; Technology and Management; Tourism and Hotel Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BQLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008811&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8811"><input class="case" type="checkbox" onClick="Coche(8811,0);" name="result[]" id="8811" value="8811"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8811" id="result8811" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Leiria</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico de Leiria		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nuno André Oliveira Mangas Pereira (Head) &ndash; João Paulo Marques (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education and Social Sciences; Fine Arts and Design; Health Sciences; Technology and Management; Tourism and Maritime Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BRLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008812&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8812"><input class="case" type="checkbox" onClick="Coche(8812,0);" name="result[]" id="8812" value="8812"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8812" id="result8812" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Lisbon</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico de Lisboa (IPL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luís Manuel Vicente Ferreira (Head) &ndash; António José Carvalho Marques (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Administration; Communication and Media Studies; Dance; Education; Engineering; Health Sciences; Music; Theatre and Cinema</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BRLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008821&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8821"><input class="case" type="checkbox" onClick="Coche(8821,0);" name="result[]" id="8821" value="8821"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8821" id="result8821" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Oporto</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico do Porto		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Manuela Melo (Head) &ndash; Orlando de Freitas Barreira Fernandes (Senior Administrative Officer) &ndash; Maria da Fátima Lopes da Silva Morgado (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Administration; Education; Engineering; Health Technology; Industrial and Management Studies; Music and Performing Arts; Technology and Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BSLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008814&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8814"><input class="case" type="checkbox" onClick="Coche(8814,0);" name="result[]" id="8814" value="8814"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8814" id="result8814" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Portalegre</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico de Portalegre		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Joaquim Mourato (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Education; Graduate Studies; Health; Technology and Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BRLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008815&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8815"><input class="case" type="checkbox" onClick="Coche(8815,0);" name="result[]" id="8815" value="8815"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8815" id="result8815" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Santarém</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico de Santarém (IPS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jorge Alberto Guerra Justino (Head) &ndash; Pedro Maria Nogueiro Carvalho (Senior Administrative Officer) &ndash; Maria do Céu Martins (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Education; Health; Management and Technology; Sport</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BRLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008816&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8816"><input class="case" type="checkbox" onClick="Coche(8816,0);" name="result[]" id="8816" value="8816"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8816" id="result8816" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Setúbal</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico de Setúbal (IPS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Pedro Miguel de Jesus Calado Dominguinhos (Head) &ndash; João Carlos Vinagre Nascimento dos Santos (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Education; Graduate Studies; Health; Technology; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BRLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009052&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9052"><input class="case" type="checkbox" onClick="Coche(9052,0);" name="result[]" id="9052" value="9052"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result9052" id="result9052" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of the West</a></h3>
+		  <p class="i_name">
+		Instituto Superior Politécnico do Oeste		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Casimiro Ramos (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Administration; Human Resource Management; Law; Management Computing; Postgraduate Studies; Tourism and Hotel Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BVLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008817&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8817"><input class="case" type="checkbox" onClick="Coche(8817,0);" name="result[]" id="8817" value="8817"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8817" id="result8817" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Tomar</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico de Tomar		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Eugénio Pina de Almeida (Head) &ndash; Miguel Pinto dos Santos (Senior Administrative Officer) &ndash; Maria da Conceicao Rodrigues Catroga (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Graduate Studies; Management; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BRLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008818&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8818"><input class="case" type="checkbox" onClick="Coche(8818,0);" name="result[]" id="8818" value="8818"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8818" id="result8818" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Viana do Castelo</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico de Viana do Castelo (IPVC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rui Alberto Martins Teixeira (Head) &ndash; Margarida  Amorim Pereira (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Business Administration; Education; Graduate Studies; Health; Sports and Leisure Studies; Technology and Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BRLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008819&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8819"><input class="case" type="checkbox" onClick="Coche(8819,0);" name="result[]" id="8819" value="8819"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8819" id="result8819" title="Expand result">
+		    <span>Expand result for </span>Polytechnic Institute of Viseu</a></h3>
+		  <p class="i_name">
+		Instituto Politécnico de Viseu		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fernando Lopes Rodrigues Sebastião (Head) &ndash; Maria Paula Martins de Oliveira Carvalho (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Education; Health; Technology and Management - Lamego; Technology and Management - Viseu</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BRLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008826&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8826"><input class="case" type="checkbox" onClick="Coche(8826,0);" name="result[]" id="8826" value="8826"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8826" id="result8826" title="Expand result">
+		    <span>Expand result for </span>Portuguese Higher Institute of Marketing Management of Oporto</a></h3>
+		  <p class="i_name">
+		Instituto Português de Administração de Marketing do Porto &ndash; IPAM - The Marketing School (IPAM Porto)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Daniel Sá (Head) &ndash; Márcia Monteiro (Senior Administrative Officer) &ndash; Sandra Gomes (International Relations Officer) &ndash; Ana Ferreira (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Bachelor's Degree in Marketing Management; Master's Degree in Design Management; Master's Degree in Marketing Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BSLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008825&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8825"><input class="case" type="checkbox" onClick="Coche(8825,0);" name="result[]" id="8825" value="8825"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result8825" id="result8825" title="Expand result">
+		    <span>Expand result for </span>Portuguese Institute of Administration and Marketing of Lisbon</a></h3>
+		  <p class="i_name">
+		Instituto Português de Administração e Marketing de Lisboa &ndash; IPAM Lisboa		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Filipe Ferrão (Head) &ndash; Ferreira Cascão (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Averiro; Consumer Studies; Marketing Management; Porto</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BSLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004579&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4579"><input class="case" type="checkbox" onClick="Coche(4579,0);" name="result[]" id="4579" value="4579"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4579" id="result4579" title="Expand result">
+		    <span>Expand result for </span>Santa Maria Higher School of Nursing</a></h3>
+		  <p class="i_name">
+		Escola Superior de Enfermagem de Santa Maria		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Manuel Silva (Head) &ndash; Irmã Ana Paula Da conceição (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Graduate Studies; Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRXLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004595&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4595"><input class="case" type="checkbox" onClick="Coche(4595,0);" name="result[]" id="4595" value="4595"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4595" id="result4595" title="Expand result">
+		    <span>Expand result for </span>School of Health of Alcoitão</a></h3>
+		  <p class="i_name">
+		Escola Superior de Saúde do Alcoitão (ESSA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>António Duarte Amaro (Head) &ndash; José Manuel Henriques de Campos (Senior Administrative Officer) &ndash; António Manuel Fernandes Lopes (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Occupational Therapy; Physical Therapy; Social Policy and Social Work.; Speech Therapy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRZLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004581&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4581"><input class="case" type="checkbox" onClick="Coche(4581,0);" name="result[]" id="4581" value="4581"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4581" id="result4581" title="Expand result">
+		    <span>Expand result for </span>School of Nursing of Oporto</a></h3>
+		  <p class="i_name">
+		Escola Superior de Enfermagem do Porto		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Paulo Parente (Head) &ndash; Manuela Martins Célia Santos (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Graduate Studies; Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRYLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018703&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18703"><input class="case" type="checkbox" onClick="Coche(18703,0);" name="result[]" id="18703" value="18703"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18703" id="result18703" title="Expand result">
+		    <span>Expand result for </span>University Lusófona of Porto</a></h3>
+		  <p class="i_name">
+		Universidade Lusófona do Porto (ULP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Isabel Babo-Lança (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Urbanism; Communication, Arts and Information Technology; Economics and Management; Law; Natural Sciences, Engineering and Technology; Psychology; Social and Human Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BXLCMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018541&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18541"><input class="case" type="checkbox" onClick="Coche(18541,0);" name="result[]" id="18541" value="18541"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18541" id="result18541" title="Expand result">
+		    <span>Expand result for </span>University of Aveiro</a></h3>
+		  <p class="i_name">
+		Universidade de Aveiro		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Manuel António Assunção (Head) &ndash; José Alberto Rafael (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accounting and Administration; Aveiro North School; Biology; Cell Biology; Ceramic and Composite Materials; Chemistry; Civil Engineering; Communication and Art; Design, Production Technology and Management; Development of Pedagogic Knowledge in Educational and Training Systems; Didactics and Technology in Teacher Training; Economics, Management and Industrial Engineering; Education; Electronics and Telematics Engineering of Aveiro; Electronics, Telecommunications and Computing; Enterprise Competitiveness; Environment and Planning; Environmental and Marine Studies; Geoscience; Governance and Public Policy; Health Sciences; Industrial Minerals and Clays; Languages and Cultures; Lithosphere Evolution and Surface Environment; Materials and Ceramic Engineering; Mathematics; Mathematics and Applications; Mechanical Engineering; Mechanical Technology and Automation; Optimization and Control; Organic Chemistry, Natural and Agro-food Products; Physics; Physics of Layered Semiconductors, Opto-electronics and Disordered Systems; Social, Political and Territorial Sciences; Technology and Management; Telecommunications</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLSMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018535&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18535"><input class="case" type="checkbox" onClick="Coche(18535,0);" name="result[]" id="18535" value="18535"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18535" id="result18535" title="Expand result">
+		    <span>Expand result for </span>University of Beira Interior</a></h3>
+		  <p class="i_name">
+		Universidade da Beira Interior (UBI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>António Carreto Fidalgo (Head) &ndash; João Manuel Messias Canavilhas (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Computer Science; Engineering; Health Sciences; Optics; Science; Social and Human Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLFM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018547&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18547"><input class="case" type="checkbox" onClick="Coche(18547,0);" name="result[]" id="18547" value="18547"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18547" id="result18547" title="Expand result">
+		    <span>Expand result for </span>University of Coimbra</a></h3>
+		  <p class="i_name">
+		Universidade de Coimbra (UC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>João Gabriel Silva (Head) &ndash; Carlos Lúzio Vaz (Senior Administrative Officer) &ndash; Joaquim Ramos de Carvalho (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics; Humanities; Law; Medicine; Pharmacy; Psychology and Education; Science and Technology; Sports and Physical Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLSM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018550&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18550"><input class="case" type="checkbox" onClick="Coche(18550,0);" name="result[]" id="18550" value="18550"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18550" id="result18550" title="Expand result">
+		    <span>Expand result for </span>University of Evora</a></h3>
+		  <p class="i_name">
+		Universidade de Évora (UE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ana Costa Freitas (Head) &ndash; Maria Filomena Mendes (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Social Sciences; Art; Nursing; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLTNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018538&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18538"><input class="case" type="checkbox" onClick="Coche(18538,0);" name="result[]" id="18538" value="18538"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18538" id="result18538" title="Expand result">
+		    <span>Expand result for </span>University of Madeira</a></h3>
+		  <p class="i_name">
+		Universidade da Madeira (UMa)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Manuel Cunha Leal Molarinho Carmo (Head) &ndash; Susana Teles (Senior Administrative Officer) &ndash; José Manuel Rocha Teixeira Baptista (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Arts and Multimedia; Biochemistry; Biology; Biology and Geology; Chemistry; Communication, Culture and Organisation; Cultural Studies; Design; Economics; Educational Sciences; Engineering and Computer Science; English and Business Studies; Food and Environmental Studies; Graduate Studies; Interactive Media Design; Management; Mathematics; Nursing; Physical Education and Sports; Psychology; Social Services</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLFNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018587&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18587"><input class="case" type="checkbox" onClick="Coche(18587,0);" name="result[]" id="18587" value="18587"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18587" id="result18587" title="Expand result">
+		    <span>Expand result for </span>University of Minho</a></h3>
+		  <p class="i_name">
+		Universidade do Minho &ndash; Minho University; Univ Minho (UMinho)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>António M. Cunha (Head) &ndash; Adriana Lago de Carvalho (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Arts and Humanities; Economics and Management; Education; Engineering; Health Sciences; Law; Nursing; Psychology; Science; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLiM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018571&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18571"><input class="case" type="checkbox" onClick="Coche(18571,0);" name="result[]" id="18571" value="18571"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18571" id="result18571" title="Expand result">
+		    <span>Expand result for </span>University of the Algarve</a></h3>
+		  <p class="i_name">
+		Universidade do Algarve (UAlg)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>António Branco (Head) &ndash; João Rodrigues (Senior Administrative Officer) &ndash; Isabel Cavaco (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Archaeology and Evolution of Human Behaviour; Arts and Communication; Biomedical Research; Biomedical Sciences and Medicine; Economics; Education and Communication; Electronics, Optoelectronics and Telecommunications; Engineering; Health; Human and Social Sciences; Management, Hospitality and Tourism; Marine and Environmental Research; Marine Sciences; Mediterranean Bioresources and Food; Science and Technology; Spatial and Organizational Dynamics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLVMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018599&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18599"><input class="case" type="checkbox" onClick="Coche(18599,0);" name="result[]" id="18599" value="18599"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18599" id="result18599" title="Expand result">
+		    <span>Expand result for </span>University of the Azores</a></h3>
+		  <p class="i_name">
+		Universidade dos Açores		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>João Luís Roque Baptista Gaspar (Head) &ndash; Ana Teresa da Conceição Silva Alves (Senior Administrative Officer) &ndash; Susana da Conceição Miranda Silva Mira Leal (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Research and Technology; Agriculture; Applied Economic Studies of the Atlantic; Applied Mathematics and Information Technology; Biology; Biotechnology; Climate, Meteorology and Global Change; Economics and Management; Educational Sciences; Entrepreneurship; Gaspar Frutuoso; Geosciences; History; History, Philosophy and Social Sciences; Innovation and Sustainability in Engineering and Construction; Law and Economics Studies; Mathematics; Modern Languages and Literature; Nursing; Oceanography and Fishery; Philosophy; Physics and Technology Research; Social Studies; Technological Sciences and Development; Vulcanology and Geological Risks</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLjNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018569&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18569"><input class="case" type="checkbox" onClick="Coche(18569,0);" name="result[]" id="18569" value="18569"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result18569" id="result18569" title="Expand result">
+		    <span>Expand result for </span>University of Tras-os-Montes and Alto Douro</a></h3>
+		  <p class="i_name">
+		Universidade de Trás-os-Montes e Alto Douro (UTAD)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>António Fontainhas Fernandes (Head) &ndash; Elsa Rocha de Sousa Justino (Senior Administrative Officer) &ndash; Lúcia Fernandes (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agrarian and Veterinary Science; Graduate Studies; Human and Social Sciences; Life and Environmental Sciences; Nursing; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLUNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004610&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4610"><input class="case" type="checkbox" onClick="Coche(4610,0);" name="result[]" id="4610" value="4610"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Portugal</p>
+				  <h3>
+		    <a href="#result4610" id="result4610" title="Expand result">
+		    <span>Expand result for </span>Vasco da Gama University School</a></h3>
+		  <p class="i_name">
+		Escola Universitária Vasco da Gama (EUVG)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Pedro Miguel Pires de Carvalho (Head) &ndash; Joana Ferreira (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Veterinary Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzhRLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 84 of 84</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal" selected>Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

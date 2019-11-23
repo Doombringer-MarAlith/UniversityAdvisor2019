@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Kenya')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Kenya)">
+	    <input type="hidden" class="envoi" name="total" value="50">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Kenya">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">50 results found for <strong>(Country=Kenya)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 50 of 50</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-009980&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="9980"><input class="case" type="checkbox" onClick="Coche(9980,0);" name="result[]" id="9980" value="9980"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result9980" id="result9980" title="Expand result">
+		    <span>Expand result for </span>Jomo Kenyatta University of Agriculture and Technology</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_9980_logo.jpg" /></h3>
+		  <p class="i_name">
+		 (JKUAT)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.jkuat.ac.ke" href="images/IAUMembers/9980_1.jpg" class="fancybox" rel="gallery9980"><img class="img" src="images/IAUMembers/s_9980_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Victoria Wambui Ngumi (Head) &ndash; Araka Davies (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Architecture and Building Sciences; Arusha Centre; Biosystems and Environmental Engineering (SOBEE); Biotechnology Research (IBR); Business; Civil Engineering and Geomatic Engineering (SCEGE); Co-operative University College of Kenya; Communications and Development Studies (SCDS); Computing and Information Technology (SCIT); Electrical, Electronic & Information Engineering (SEEIE); Energy and Environmental Technology; Engineering and Technology; Entrepreneurship, Procurement and Management; Karen Campus; Kigali Campus; Kirinyaga University College; Kisii Central Business District (CBD); Kitale Central Business District (CBD); KQ Pride Centre; Law; Mathematical Sciences (SMS); Mechanical, Manufacturing and Materials Engineering (SoMMME); Murang'a University College; Nairobi Central Business District (CBD); Open, Distance and eLearning (SODeL); Physical Sciences (SPS); Sino-Africa Joint Research Education Centre (SAJOREC); Sustainable Materials Research and Technology Centre (SMARTEC); Taita Taveta University College (TTUC); Urban Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0RYLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010287&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="10287"><input class="case" type="checkbox" onClick="Coche(10287,0);" name="result[]" id="10287" value="10287"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result10287" id="result10287" title="Expand result">
+		    <span>Expand result for </span>Kenyatta University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_10287_logo.png" /></h3>
+		  <p class="i_name">
+		 (KU)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.ku.ac.ke" href="images/IAUMembers/10287_1.jpg" class="fancybox" rel="gallery10287"><img class="img" src="images/IAUMembers/s_10287_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ku.ac.ke" href="images/IAUMembers/10287_2.jpg" class="fancybox" rel="gallery10287"><img class="img" src="images/IAUMembers/s_10287_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ku.ac.ke" href="images/IAUMembers/10287_3.jpg" class="fancybox" rel="gallery10287"><img class="img" src="images/IAUMembers/s_10287_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Paul Kuria Wainaina (Head) &ndash; Daniel M. Muindi (Senior Administrative Officer) &ndash; John Okumu (Senior Administrative Officer) &ndash; Wangari Mwai (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Enterprise Development; Applied Human Sciences; Architecture and the Built Environment; Business; Creative Arts, Film and Media Studies; Digital School of Virtual and Open Learning; Economics; Education; Engineering and Technology; Environmental Studies; Graduate; Hospitality and Tourism; Humanities and Social Sciences; Law; Medicine; Public Health; Pure and Applied Sciences; Security, Diplomacy and Peace Studies; Visual and Performing Arts</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BSLiM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012011&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="12011"><input class="case" type="checkbox" onClick="Coche(12011,0);" name="result[]" id="12011" value="12011"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result12011" id="result12011" title="Expand result">
+		    <span>Expand result for </span>Moi University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_12011_logo.jpg" /></h3>
+		  <p class="i_name">
+		 (MU)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.mu.ac.ke" href="images/IAUMembers/12011_1.jpg" class="fancybox" rel="gallery12011"><img class="img" src="images/IAUMembers/s_12011_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Isaac S. Kosgey (Head) &ndash; Nathan Ogechi (Senior Administrative Officer) &ndash; Isaac N. Kimengi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Aerospace Sciences ; Agriculture; Alupe Campus; Arts and Social Sciences; Biological and Physical Sciences ; Business and Economics; Dentistry; Education; Engineering; Human Resource Development; Information Sciences; Law; Medicine; Nursing; Public Health; Tourism, Hospitality and Event Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhQLDMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015898&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="15898"><input class="case" type="checkbox" onClick="Coche(15898,0);" name="result[]" id="15898" value="15898"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result15898" id="result15898" title="Expand result">
+		    <span>Expand result for </span>Strathmore University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_15898_logo.png" /></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+				  <a title="http://www.strathmore.edu" href="images/IAUMembers/15898_1.jpg" class="fancybox" rel="gallery15898"><img class="img" src="images/IAUMembers/s_15898_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.strathmore.edu" href="images/IAUMembers/15898_2.jpg" class="fancybox" rel="gallery15898"><img class="img" src="images/IAUMembers/s_15898_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>John Odhiambo (Head) &ndash; Dorina Telaide (Senior Administrative Officer) &ndash; Elizabeth Gachenga (Senior Administrative Officer) &ndash; Izael Pereira Da Silva (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>@iLabAfrica; Accountancy; Business; Energy; Finance and Applied Economics; Governance (SGC); Graduate Studies; Humanities and Social Sciences; Information Technology; Law; Management and Commerce; Mathematical Sciences; Strathmore Research and Consultancy; Therapeutic Sciences (CREATES); Tourism and Hospitality</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRYLjNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016407&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="16407"><input class="case" type="checkbox" onClick="Coche(16407,0);" name="result[]" id="16407" value="16407"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result16407" id="result16407" title="Expand result">
+		    <span>Expand result for </span>The Catholic University of Eastern Africa</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_16407_logo.jpg" /></h3>
+		  <p class="i_name">
+		 (CUEA)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.cuea.edu" href="images/IAUMembers/16407_1.jpg" class="fancybox" rel="gallery16407"><img class="img" src="images/IAUMembers/s_16407_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.cuea.edu" href="images/IAUMembers/16407_2.jpg" class="fancybox" rel="gallery16407"><img class="img" src="images/IAUMembers/s_16407_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Justus Mbae (Head) &ndash; Pius Male (Senior Administrative Officer) &ndash; Kaku Sagary Nokoe (Senior Administrative Officer) &ndash; Peter Gichure (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Social Sciences; Canon Law; Commerce; Education; Gaba Campus; Graduate Studies; Kisumu Campus; Law; Library and information Science; Regional Integration and Development; Science; Social Justice and Ethics; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhULCM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017094&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="17094"><input class="case" type="checkbox" onClick="Coche(17094,0);" name="result[]" id="17094" value="17094"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result17094" id="result17094" title="Expand result">
+		    <span>Expand result for </span>United States International University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_17094_logo.png" /></h3>
+		  <p class="i_name">
+		 (USIU)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.usiu.ac.ke" href="images/IAUMembers/17094_1.jpg" class="fancybox" rel="gallery17094"><img class="img" src="images/IAUMembers/s_17094_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.usiu.ac.ke" href="images/IAUMembers/17094_2.jpg" class="fancybox" rel="gallery17094"><img class="img" src="images/IAUMembers/s_17094_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Paul Tiyambe Zeleza (Head) &ndash; James Ogolla (Senior Administrative Officer) &ndash; Ruthie Rono (Senior Administrative Officer) &ndash; Daniel N. Muchai (Senior Administrative Officer) &ndash; Hellen Ombima (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Humanities and Social Sciences; Pharmacy and Health Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxQLjMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020319&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="20319"><input class="case" type="checkbox" onClick="Coche(20319,0);" name="result[]" id="20319" value="20319"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result20319" id="result20319" title="Expand result">
+		    <span>Expand result for </span>University of Nairobi</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_20319_logo.jpg" /></h3>
+		  <p class="i_name">
+		 (UoN)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.uonbi.ac.ke" href="images/IAUMembers/20319_1.jpg" class="fancybox" rel="gallery20319"><img class="img" src="images/IAUMembers/s_20319_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.uonbi.ac.ke" href="images/IAUMembers/20319_2.jpg" class="fancybox" rel="gallery20319"><img class="img" src="images/IAUMembers/s_20319_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.uonbi.ac.ke" href="images/IAUMembers/20319_3.jpg" class="fancybox" rel="gallery20319"><img class="img" src="images/IAUMembers/s_20319_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Peter M.F. Mbithi (Head) &ndash; Bernard N.K. Njoroge (Senior Administrative Officer) &ndash; Henry W. Mutoro (Senior Administrative Officer) &ndash; Simon E. O. Mitema (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Veterinary Sciences; Architecture and Engineering; Biological and Physical Sciences; Education And External Studies; Health Sciences; Humanities and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BTLDNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024049&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24049"><input class="case" type="checkbox" onClick="Coche(24049,0);" name="result[]" id="24049" value="24049"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24049" id="result24049" title="Expand result">
+		    <span>Expand result for </span>Adventist University of Africa</a></h3>
+		  <p class="i_name">
+		 (AUA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Delbert W. Baker (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Postgraduate Studies; Theological Seminary</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLSNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000134&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="134"><input class="case" type="checkbox" onClick="Coche(134,0);" name="result[]" id="134" value="134"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result134" id="result134" title="Expand result">
+		    <span>Expand result for </span>Africa International University</a></h3>
+		  <p class="i_name">
+		 (AIU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Dankit Nassiuma (Head) &ndash; Peter Muroncia (Senior Administrative Officer) &ndash; Samuel Katia (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Economics (SBE); Education, Arts and Social Sciences (SEAS); Nairobi Evangelical Graduate School of Theology (NEGST); Study of African Realities (ISAR)</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0sMyxUCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000135&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="135"><input class="case" type="checkbox" onClick="Coche(135,0);" name="result[]" id="135" value="135"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result135" id="result135" title="Expand result">
+		    <span>Expand result for </span>Africa Nazarene University</a></h3>
+		  <p class="i_name">
+		 (ANU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Leah Marangu (Head) &ndash; Peter Kangori (Senior Administrative Officer) &ndash; Rodney Reed (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Computer Science and Information Technology; Counselling Psychology; Education; Environment and Natural Resource Management; Governance, Peace and Security; Law; Mass Communication; Pre-University Programme (PUP); Religion; Research, Development, and Policy (IRDP)</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0sMyxVCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024029&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24029"><input class="case" type="checkbox" onClick="Coche(24029,0);" name="result[]" id="24029" value="24029"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24029" id="result24029" title="Expand result">
+		    <span>Expand result for </span>Chuka University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Erastus N. Njoka (Head) &ndash; S. M. Kagwanja (Senior Administrative Officer) &ndash; Dorcas K. Isutsa (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Environmental Studies (FAES); Arts and Humanities; Business Studies; Education and Resources Development; Science, Engineering and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLENEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003594&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3594"><input class="case" type="checkbox" onClick="Coche(3594,0);" name="result[]" id="3594" value="3594"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result3594" id="result3594" title="Expand result">
+		    <span>Expand result for </span>Daystar University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Timothy Wachira (Head) &ndash; Jomo Gatundu (Senior Administrative Officer) &ndash; James Kombo (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Business and Economics; Communication, Language and Performing Arts; Human and Social Sciences; Science, Engineering and Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUzRZLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-022862&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="22862"><input class="case" type="checkbox" onClick="Coche(22862,0);" name="result[]" id="22862" value="22862"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result22862" id="result22862" title="Expand result">
+		    <span>Expand result for </span>Dedan Kimathi University of Technology</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>P. Ndirangu Kioni (Head) &ndash; M.K. Gachari (Senior Administrative Officer) &ndash; Andrew Muriuki (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business, Management and Economics; Computer Science and Information Technology; Engineering; Food Bioresources Technology; Geomatics, GIS and Remote Sensing (IGGReS); Geothermal Energy Training and Research (GETRI); Graduate Studies; Health Sciences; Science; Technical and Professional Studies; Tourism and Hospitality Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyhYLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004432&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4432"><input class="case" type="checkbox" onClick="Coche(4432,0);" name="result[]" id="4432" value="4432"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result4432" id="result4432" title="Expand result">
+		    <span>Expand result for </span>Egerton University</a></h3>
+		  <p class="i_name">
+		 (EU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>J. K. Tuitoek (Head) &ndash; Seth Owido (Senior Administrative Officer) &ndash; Njenga Munene John (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Arts and Social Sciences; Baringo Campus; Commerce; Education and Community Studies; Engineering and Technology; Environment and Resource Development; Health Sciences; Law; Nakuru Town Campus College; Open and Distance Learning; Science; Veterinary Medicine and Surgery; Women, Gender and Development Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzBTLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024051&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24051"><input class="case" type="checkbox" onClick="Coche(24051,0);" name="result[]" id="24051" value="24051"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24051" id="result24051" title="Expand result">
+		    <span>Expand result for </span>Garissa University College</a></h3>
+		  <p class="i_name">
+		 (GUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmed Warfa (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Social Sciences; Education; Information Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLTMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006774&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="6774"><input class="case" type="checkbox" onClick="Coche(6774,0);" name="result[]" id="6774" value="6774"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result6774" id="result6774" title="Expand result">
+		    <span>Expand result for </span>Great Lakes University of Kisumu</a></h3>
+		  <p class="i_name">
+		 (GLUK)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Atieno Anne Ndede Amadi (Head) &ndash; Elijah Mirwoba Siringi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Art and Sciences; Health Sciences; Nursing and Midwifery; Postgraduate Studies and Research; Tropical Institute of Community Health and Development (TICH) in Africa</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQzxXLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024039&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24039"><input class="case" type="checkbox" onClick="Coche(24039,0);" name="result[]" id="24039" value="24039"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24039" id="result24039" title="Expand result">
+		    <span>Expand result for </span>Jaramogi Oginga Odinga University of Science and Technology</a></h3>
+		  <p class="i_name">
+		 (JOOUST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Stephen G. Agong' (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural and Food Sciences; Biological and Physical Sciences; Built Environment; Business and Economics; Education; Engineering and Technology; Environment and Natural Resources Management; Health Sciences; Humanities and Social Sciences; Informatics and Innovative Systems; Mathematics and Actuarial Sciences; Tourism and Hospitality Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLFNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010031&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10031"><input class="case" type="checkbox" onClick="Coche(10031,0);" name="result[]" id="10031" value="10031"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result10031" id="result10031" title="Expand result">
+		    <span>Expand result for </span>Kabarak University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jones Kaleli (Head) &ndash; Ronald Chepkilot (Senior Administrative Officer) &ndash; Henry Kiplagat (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biological and Physical Sciences; Business and Economics; Computer Science and Bioinformatics; Education; Environmental Studies and Energy Technology; Law; Medicine and Health Sciences; Music and Performing Arts; Theology and Biblical Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BQLFMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024044&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24044"><input class="case" type="checkbox" onClick="Coche(24044,0);" name="result[]" id="24044" value="24044"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24044" id="result24044" title="Expand result">
+		    <span>Expand result for </span>Karatina University</a></h3>
+		  <p class="i_name">
+		 (KARU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mucai Muchiri (Head) &ndash; Linus M. Gitonga (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Biotechnology; Business; Education and Social Sciences; Natural Resouces and Environmental Studies; Pure and Applied Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLSMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024047&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24047"><input class="case" type="checkbox" onClick="Coche(24047,0);" name="result[]" id="24047" value="24047"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24047" id="result24047" title="Expand result">
+		    <span>Expand result for </span>KCA University</a></h3>
+		  <p class="i_name">
+		 (KCA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Noah Midamba (Head) &ndash; Alice Njuguna (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Public Management; Computing and Information Management; Education and Arts; Graduate Studies and Research; Professional Programmes</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLSM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024046&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24046"><input class="case" type="checkbox" onClick="Coche(24046,0);" name="result[]" id="24046" value="24046"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24046" id="result24046" title="Expand result">
+		    <span>Expand result for </span>Kenya Highland Evangelical University</a></h3>
+		  <p class="i_name">
+		 (KHEU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Robert Lang'at (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Management; Christian Education; Computer Science; Counselling; Education (Arts); Education (Early Childhood); Library and Information Science; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLSM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010286&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="10286"><input class="case" type="checkbox" onClick="Coche(10286,0);" name="result[]" id="10286" value="10286"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result10286" id="result10286" title="Expand result">
+		    <span>Expand result for </span>Kenya Methodist University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Henry K. Kiriamiti (Head) &ndash; Alice K. Mutungi (Senior Administrative Officer) &ndash; Joel M. Mberia (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Economics; Education and Social Sciences; Medicine and Health Sciences; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BSLiM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010287-024052&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24052"><input class="case" type="checkbox" onClick="Coche(24052,0);" name="result[]" id="24052" value="24052"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24052" id="result24052" title="Expand result">
+		    <span>Expand result for </span>Kenyatta University &ndash; Machakos University College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Francis M. Mathooko (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Natural Resources; Business and Economics; Engineering and Technology; Hospitalityand Tourism Management; Humanities and Social Sciences; Pure and Applied Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLTMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024045&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24045"><input class="case" type="checkbox" onClick="Coche(24045,0);" name="result[]" id="24045" value="24045"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24045" id="result24045" title="Expand result">
+		    <span>Expand result for </span>Kibabii University</a></h3>
+		  <p class="i_name">
+		 (KIBU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Isaac Ipara Odeo (Head) &ndash; Shem Aywa (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Economics; Computing and Informatics (SCAI); Education and Social Science (FESS); Graduate Studies; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLSM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024033&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24033"><input class="case" type="checkbox" onClick="Coche(24033,0);" name="result[]" id="24033" value="24033"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24033" id="result24033" title="Expand result">
+		    <span>Expand result for </span>Kisii University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>John Sorana Akama (Head) &ndash; Joseph Mailutha (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Natural Resource Management; Arts and Social Sciences; Business and Economics; Education and Human Resources Development; Gender and Development Studies; Health Sciences; Information Science and Technology; Kisii Down Town Campus (Ouru Towers); Kisii Town Campus; Law; Pure and Applied Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024040&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24040"><input class="case" type="checkbox" onClick="Coche(24040,0);" name="result[]" id="24040" value="24040"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24040" id="result24040" title="Expand result">
+		    <span>Expand result for </span>Laikipia University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Francis K. Lelo (Head) &ndash; Isaac S. Kosgey (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Education; Humanities and Development Studies; Science and Applied Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLSNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-022968&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="22968"><input class="case" type="checkbox" onClick="Coche(22968,0);" name="result[]" id="22968" value="22968"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result22968" id="result22968" title="Expand result">
+		    <span>Expand result for </span>Maasai Mara University</a></h3>
+		  <p class="i_name">
+		 (MMARAU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mary Walingo (Head) &ndash; Simon Ole Seno (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Social Sciences; Business and Economics; Education; Science and Information Sciences; Tourism and Natural Resources Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyhZLUNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011441&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11441"><input class="case" type="checkbox" onClick="Coche(11441,0);" name="result[]" id="11441" value="11441"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result11441" id="result11441" title="Expand result">
+		    <span>Expand result for </span>Maseno University</a></h3>
+		  <p class="i_name">
+		 (MSU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Julius Omondi Nyabundi (Head) &ndash; Mary J. Kipsat (Senior Administrative Officer) &ndash; Catherine A. Muhoma (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Food Security; Arts and Social Sciences; Biological and Physical Science; Business and Economics; Computing; Development and Strategic Studies; Ecotourism, Hotel and Institution Management; Education; Environment and Earth Sciences; Gender Studies; Kisumu City Campus College; Mathematics, Statistics and Actuarial Science; Medicine; Planning and Architecture; Public Health and Community Development; Tom Mboya University College</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRULSMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011442&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11442"><input class="case" type="checkbox" onClick="Coche(11442,0);" name="result[]" id="11442" value="11442"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result11442" id="result11442" title="Expand result">
+		    <span>Expand result for </span>Masinde Muliro University of Science and Technology</a></h3>
+		  <p class="i_name">
+		 (MMUST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Frederick A. Ochieng' Otieno (Head) &ndash; Joseph K. Rotich (Senior Administrative Officer) &ndash; Josephine Ngaira (Senior Administrative Officer) &ndash; Catherine Aurah (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture, Veterinary Science and Technology; Business and Economics; Disaster Management and Humanitarian Assistance; Education and Social Sciences; Engineering; Graduate Studies; Medicine; Nursing and Midwifery; Open and Distance E-Learning; Open Learning and Continuing Education; Public Health, Biomedical Science and Technology; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRULSMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024036&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24036"><input class="case" type="checkbox" onClick="Coche(24036,0);" name="result[]" id="24036" value="24036"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24036" id="result24036" title="Expand result">
+		    <span>Expand result for </span>Meru University of Science and Technology</a></h3>
+		  <p class="i_name">
+		 (MUST)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Romanus Odhiambo Otieno (Head) &ndash; Elijah Walubuka (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Food Science; Business and Economics (SBE); Education; Health Sciences; Information Technology and Engineering; Pure and Applied Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLFM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012011-024053&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24053"><input class="case" type="checkbox" onClick="Coche(24053,0);" name="result[]" id="24053" value="24053"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24053" id="result24053" title="Expand result">
+		    <span>Expand result for </span>Moi University &ndash; Rongo University College</a></h3>
+		  <p class="i_name">
+		 (RUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Samuel Gudu (Head) &ndash; Stanley Shitote (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture, Natural Resources and Environmental Studies; Business and Human Resource Development; Education; Information and Communication Studies; Science, Technology and Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLTMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012192&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12192"><input class="case" type="checkbox" onClick="Coche(12192,0);" name="result[]" id="12192" value="12192"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result12192" id="result12192" title="Expand result">
+		    <span>Expand result for </span>Mount Kenya University</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Stanley  Waudo (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Economics; Computing and Informatics (SCI); Education; Engineering, Energy and the Built Environment; Film, Creative and Performing Arts; Health Sciences; Hospitality, Travel and Tourism Management; Law; Postgraduate Studies; Pure and Applied Sciences; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhRLjMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024038&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24038"><input class="case" type="checkbox" onClick="Coche(24038,0);" name="result[]" id="24038" value="24038"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24038" id="result24038" title="Expand result">
+		    <span>Expand result for </span>Multimedia University of Kenya</a></h3>
+		  <p class="i_name">
+		 (MMU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Festus Kaberia (Head) &ndash; Rosebella O. Maranga (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Law; Computing and Information Technology; Engineering; Media and Communication; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLFNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013721&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13721"><input class="case" type="checkbox" onClick="Coche(13721,0);" name="result[]" id="13721" value="13721"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result13721" id="result13721" title="Expand result">
+		    <span>Expand result for </span>Presbyterian University of East Africa</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Peter B. Kibas (Head) &ndash; Robert Karanja (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Computer Science; Education; Health Sciences; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxXLEMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024032&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24032"><input class="case" type="checkbox" onClick="Coche(24032,0);" name="result[]" id="24032" value="24032"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24032" id="result24032" title="Expand result">
+		    <span>Expand result for </span>Pwani University</a></h3>
+		  <p class="i_name">
+		 (PU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohammed S. Rajab (Head) &ndash; Mwakio Peter Tole (Senior Administrative Officer) &ndash; James H.P. Kahindi (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Sciences and Agribusiness (SASA); Education; Health and Human Sciences (SHHS); Humanities and Social Sciences; Pure and Applied Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLFMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-014582&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="14582"><input class="case" type="checkbox" onClick="Coche(14582,0);" name="result[]" id="14582" value="14582"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result14582" id="result14582" title="Expand result">
+		    <span>Expand result for </span>Scott Theological College</a></h3>
+		  <p class="i_name">
+		 (STC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mumo Kisau (Head) &ndash; Benjamin Musyoka (Senior Administrative Officer) &ndash; John Njoka (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Church Renewal; Education; Professional Studies; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzBVLiMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024035&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24035"><input class="case" type="checkbox" onClick="Coche(24035,0);" name="result[]" id="24035" value="24035"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24035" id="result24035" title="Expand result">
+		    <span>Expand result for </span>South Eastern Kenya University</a></h3>
+		  <p class="i_name">
+		 (SEKU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Geoffrey Muluvi (Head) &ndash; M. Mburu (Senior Administrative Officer) &ndash; Zipporah Wathira Ng’aNg’a (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Veterinary Sciences; Business and Economics; Education; Engineering and Technology; Environment and Natural Resources Management; Health Sciences; Humanities and Social Sciences; Information and Communication Technology; Mining and Mineral Processing; Pure and Applied Sciences; Water Resources Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLFM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-015722&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="15722"><input class="case" type="checkbox" onClick="Coche(15722,0);" name="result[]" id="15722" value="15722"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result15722" id="result15722" title="Expand result">
+		    <span>Expand result for </span>St Paul's University</a></h3>
+		  <p class="i_name">
+		 (SPU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Joseph D. Galgalo (Head) &ndash; Charity Irungu (Senior Administrative Officer) &ndash; David Muturi Wachira (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Communication; Social Sciences; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRXLEMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024031&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24031"><input class="case" type="checkbox" onClick="Coche(24031,0);" name="result[]" id="24031" value="24031"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24031" id="result24031" title="Expand result">
+		    <span>Expand result for </span>Technical University of Mombasa</a></h3>
+		  <p class="i_name">
+		 (TUM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Laila Abubakar (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied and Health Sciences; Business; Computing and Informatics; Engineering and Technology; Humanities and Social Studies; Medicine; Research, Innovation and Extension (IRIE)</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLFMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016407-024054&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24054"><input class="case" type="checkbox" onClick="Coche(24054,0);" name="result[]" id="24054" value="24054"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24054" id="result24054" title="Expand result">
+		    <span>Expand result for </span>The Catholic University of Eastern Africa &ndash; Hekima University College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Agbonkhianmeghe Orobator (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Pastoral Theology; Peace Studies and International Relations; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016407-024057&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24057"><input class="case" type="checkbox" onClick="Coche(24057,0);" name="result[]" id="24057" value="24057"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24057" id="result24057" title="Expand result">
+		    <span>Expand result for </span>The Catholic University of Eastern Africa &ndash; Marist International University College</a></h3>
+		  <p class="i_name">
+		 (MIUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Joseph Udeajah (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Social Sciences; Business; Education; Information Technology; Mathematics; Religious Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLTM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016407-024058&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24058"><input class="case" type="checkbox" onClick="Coche(24058,0);" name="result[]" id="24058" value="24058"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24058" id="result24058" title="Expand result">
+		    <span>Expand result for </span>The Catholic University of Eastern Africa &ndash; Regina Pacis University College</a></h3>
+		  <p class="i_name">
+		 (RPUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Community Health Development; Medical Education; Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLTNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016407-024055&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24055"><input class="case" type="checkbox" onClick="Coche(24055,0);" name="result[]" id="24055" value="24055"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24055" id="result24055" title="Expand result">
+		    <span>Expand result for </span>The Catholic University of Eastern Africa &ndash; Tangaza University College</a></h3>
+		  <p class="i_name">
+		Tangaza College (TUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Steven Payne (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>African Studies; Education; Leadership and Management; Social Communication; Social Ministry; Spiritaulity and Religious Formation; Theology; Youth Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLTM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016407-024099&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24099"><input class="case" type="checkbox" onClick="Coche(24099,0);" name="result[]" id="24099" value="24099"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24099" id="result24099" title="Expand result">
+		    <span>Expand result for </span>The Catholic University of Eastern Africa &ndash; Uzima University College</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Cosmas K'Otieno Rhagot (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Informatics; Medicine; Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLjNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-016511&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="16511"><input class="case" type="checkbox" onClick="Coche(16511,0);" name="result[]" id="16511" value="16511"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result16511" id="result16511" title="Expand result">
+		    <span>Expand result for </span>The Pan Africa Christian University</a></h3>
+		  <p class="i_name">
+		 (PACU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Margaret J. Muthwii (Head) &ndash; Anthony Mwaniki (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Communications, Languages and Linguistics; Community Development; Computing and Information Technology; Leadership; Psychology; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhVLDMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024030&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24030"><input class="case" type="checkbox" onClick="Coche(24030,0);" name="result[]" id="24030" value="24030"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24030" id="result24030" title="Expand result">
+		    <span>Expand result for </span>The Technical University of Kenya</a></h3>
+		  <p class="i_name">
+		 (TU-K)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>F.W.O. Aduol (Head) &ndash; J. Kiplang’at (Senior Administrative Officer) &ndash; P. Shiundu (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Sciences and Technology; Engineering Sciences and Technology; Social Sciences and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLFNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020147&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="20147"><input class="case" type="checkbox" onClick="Coche(20147,0);" name="result[]" id="20147" value="20147"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result20147" id="result20147" title="Expand result">
+		    <span>Expand result for </span>University of Eastern Africa, Baraton</a></h3>
+		  <p class="i_name">
+		 (UEAB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Philip Maiyo (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Education; Health Sciences; Humanities and Social Sciences; Kisumu Extension; Nairobi Extension; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BRLSM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024043&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24043"><input class="case" type="checkbox" onClick="Coche(24043,0);" name="result[]" id="24043" value="24043"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24043" id="result24043" title="Expand result">
+		    <span>Expand result for </span>University of Eldoret</a></h3>
+		  <p class="i_name">
+		 (UOELD)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Teresa A. O. Akenga (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Biotechnology; Business and Management Sciences; Economics; Education; Engineering; Environmental Studies; Natural Resource Management; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLSMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024041&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="24041"><input class="case" type="checkbox" onClick="Coche(24041,0);" name="result[]" id="24041" value="24041"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24041" id="result24041" title="Expand result">
+		    <span>Expand result for </span>University of Kabianga</a></h3>
+		  <p class="i_name">
+		 (UoK)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Eric K. Prof Koech (Head) &ndash; Wilson K. Prof Kipngeno (Head) &ndash; Marion Prof Mutugi (Head) &ndash; Elijah Prof Omwenga (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Biotechnology; Arts and Social Sciences; Business and Economics; Education; Information Science and Knowledge Management; Natural Resource and Environmental Management; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLSMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020319-024050&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24050"><input class="case" type="checkbox" onClick="Coche(24050,0);" name="result[]" id="24050" value="24050"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Kenya</p>
+				  <h3>
+		    <a href="#result24050" id="result24050" title="Expand result">
+		    <span>Expand result for </span>University of Nairobi &ndash; Embu University College</a></h3>
+		  <p class="i_name">
+		 (EUC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Daniel Mugendi Njiru (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Business and Economics; Education and Social Sciences; Pure and Applied Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBQLTNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 50 of 50</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya" selected>Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Lebanon')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Lebanon)">
+	    <input type="hidden" class="envoi" name="total" value="40">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Lebanon">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">40 results found for <strong>(Country=Lebanon)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 40 of 40</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-009842&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="9842"><input class="case" type="checkbox" onClick="Coche(9842,0);" name="result[]" id="9842" value="9842"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result9842" id="result9842" title="Expand result">
+		    <span>Expand result for </span>Al Imam Al Ouzai University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_9842_logo.png" /></h3>
+		  <p class="i_name">
+		Jamiat Al-imam Al-Ouzai		  </p>
+		 <p class="gallery">
+				  <a title="http://www.ouzai.org" href="images/IAUMembers/9842_1.jpg" class="fancybox" rel="gallery9842"><img class="img" src="images/IAUMembers/s_9842_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Toufic Al-Houri (Head) &ndash; Munir Saaddine (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Islamic Business Administration; Islamic Studies; Supervision of Food Products</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BULEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000925&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="925"><input class="case" type="checkbox" onClick="Coche(925,0);" name="result[]" id="925" value="925"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result925" id="result925" title="Expand result">
+		    <span>Expand result for </span>American University of Science and Technology</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_925_logo.png" /></h3>
+		  <p class="i_name">
+		 (AUST)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.aust.edu.lb" href="images/IAUMembers/925_1.jpg" class="fancybox" rel="gallery925"><img class="img" src="images/IAUMembers/s_925_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.aust.edu.lb" href="images/IAUMembers/925_2.jpg" class="fancybox" rel="gallery925"><img class="img" src="images/IAUMembers/s_925_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hiam Sakr (Head) &ndash; Nabeel Haidar (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Science; Business and Economics; Health Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0uMyhVCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019500&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19500"><input class="case" type="checkbox" onClick="Coche(19500,0);" name="result[]" id="19500" value="19500"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19500" id="result19500" title="Expand result">
+		    <span>Expand result for </span>Antonine University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19500_logo.png" /></h3>
+		  <p class="i_name">
+		Université Antonine &ndash; Al Jamiat Al Antoniah (UPA)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.ua.edu.lb/french/home" href="images/IAUMembers/19500_1.jpg" class="fancybox" rel="gallery19500"><img class="img" src="images/IAUMembers/s_19500_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Michel Jalakh (Head) &ndash; Rev. Fr. Toufic Maatouk (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advertising and Media Studies; Business Administration; Engineering; Information and Communication; Music and Musicology; Public Health; Theological Science and Pastoral Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RVLCNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009852&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="9852"><input class="case" type="checkbox" onClick="Coche(9852,0);" name="result[]" id="9852" value="9852"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result9852" id="result9852" title="Expand result">
+		    <span>Expand result for </span>Beirut Arab University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_9852_logo.jpg" /></h3>
+		  <p class="i_name">
+		Jamiat Bâyrut Al-Arabiya (BAU)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.bau.edu.lb" href="images/IAUMembers/9852_1.jpg" class="fancybox" rel="gallery9852"><img class="img" src="images/IAUMembers/s_9852_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.bau.edu.lb" href="images/IAUMembers/9852_2.jpg" class="fancybox" rel="gallery9852"><img class="img" src="images/IAUMembers/s_9852_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Amr Galal El-Adawi (Head) &ndash; Issam Houri (Senior Administrative Officer) &ndash; Zina Ariss (Senior Administrative Officer) &ndash; Saad Raslan (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architectural Engineering; Arts; Commerce and Business Administration; Dentistry; Engineering; Health Sciences; Law and Political Sciences; Medicine; Pharmacy; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BVLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007537&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="7537"><input class="case" type="checkbox" onClick="Coche(7537,0);" name="result[]" id="7537" value="7537"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result7537" id="result7537" title="Expand result">
+		    <span>Expand result for </span>Holy Family University - Batroon</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_7537_logo.png" /></h3>
+		  <p class="i_name">
+		Université Sainte Famille - Batroun		  </p>
+		 <p class="gallery">
+				  <a title="http://www.usf.edu.lb" href="images/IAUMembers/7537_1.png" class="fancybox" rel="gallery7537"><img class="img" src="images/IAUMembers/s_7537_1.png" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sister Marie du Christ (Head) &ndash; Josiane Abi Khattar (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Management; Education and Specialized Education; Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzRTLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019833&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19833"><input class="case" type="checkbox" onClick="Coche(19833,0);" name="result[]" id="19833" value="19833"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19833" id="result19833" title="Expand result">
+		    <span>Expand result for </span>Holy Spirit University of Kaslik</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19833_logo.gif" /></h3>
+		  <p class="i_name">
+		Université Saint-Esprit de Kaslik &ndash; Jamiat Al Rouh Al Kodos-Kaslik (USEK)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.usek.edu.lb" href="images/IAUMembers/19833_1.jpg" class="fancybox" rel="gallery19833"><img class="img" src="images/IAUMembers/s_19833_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fr. Talal Hachem (Head) &ndash; Georges Yahchouchi (Senior Administrative Officer) &ndash; Rima Mattar (International Relations Officer) &ndash; Clémence Drouet (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Sciences; Business and Commercial Sciences; Doctoral Studies; Engineering; Fine and Applied Arts; History; Law; Letters; Liturgy; Medicine and Medical Sciences; Music; Nursing; Philosophy and Humanities; Political Science and Administration; Research; Science; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010888&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="10888"><input class="case" type="checkbox" onClick="Coche(10888,0);" name="result[]" id="10888" value="10888"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result10888" id="result10888" title="Expand result">
+		    <span>Expand result for </span>Lebanese International University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_10888_logo.png" /></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+				  <a title="http://www.liu.edu.lb" href="images/IAUMembers/10888_1.png" class="fancybox" rel="gallery10888"><img class="img" src="images/IAUMembers/s_10888_1.png" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdul-Rahim Mourad (Head) &ndash; Rana Sabra (Senior Administrative Officer) &ndash; Fatima Abou-Nassif (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Science; Business; Education; Engineering; Pharmacy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BYLiNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012893&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="12893"><input class="case" type="checkbox" onClick="Coche(12893,0);" name="result[]" id="12893" value="12893"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result12893" id="result12893" title="Expand result">
+		    <span>Expand result for </span>Notre Dame University-Louaizé</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_12893_logo.jpg" /></h3>
+		  <p class="i_name">
+		Jamiat Saidet Alwaizi (NDU)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.ndu.edu.lb" href="images/IAUMembers/12893_1.jpg" class="fancybox" rel="gallery12893"><img class="img" src="images/IAUMembers/s_12893_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ndu.edu.lb" href="images/IAUMembers/12893_1.png" class="fancybox" rel="gallery12893"><img class="img" src="images/IAUMembers/s_12893_1.png" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Walid Moussa (Head) &ndash; Assaad Eid (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Research in Education; Architecture, Art and Design; Business Administration and Economics; Continuing Education; Digitization and Preservation; Engineering; Humanities; Lebanese Emigration Research; Marian Studies; Natural and Applied Sciences; Nursing and Health Sciences; Political Science, Public Administration and Diplomacy; Societal Research; Water, Energy and Environment Research</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhYLjMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013876&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="13876"><input class="case" type="checkbox" onClick="Coche(13876,0);" name="result[]" id="13876" value="13876"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result13876" id="result13876" title="Expand result">
+		    <span>Expand result for </span>Rafik Hariri University</a></h3>
+		  <p class="i_name">
+		 (RHU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ahmad Smaili (Head) &ndash; Hisham Kobrosli (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Business Administration; Engineering; Sciences and Information Systems</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxYLVM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019834&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19834"><input class="case" type="checkbox" onClick="Coche(19834,0);" name="result[]" id="19834" value="19834"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19834" id="result19834" title="Expand result">
+		    <span>Expand result for </span>Saint-Joseph University</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19834_logo.jpg" /></h3>
+		  <p class="i_name">
+		Université Saint-Joseph (USJ)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.usj.edu.lb" href="images/IAUMembers/19834_1.jpg" class="fancybox" rel="gallery19834"><img class="img" src="images/IAUMembers/s_19834_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Salim Daccache, s.j. (Head) &ndash; Antoine Hokayem (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agro-industry; Arabic Research and Studies; Arabic Terminology; Archeology; Arts and Humanities; Banking; Biochemistry; Bioequivalence and Medicament Control; Biostatical and Medical Epidemiology; Business Administration; Business Administration and Management; Cartography; Chemistry and Physics; Christian Arabs; Communication and Information; Confucius; Construction; Dentistry; E-learning Technologies; Economics; Education ; Electrical Industries and Telecommunications; Engineering; Ethics; Euro-Lebanese Intercultural Studies; European Union Studies; Experimental Psychology; Health and Social Protection; Human Hispathology; Insurance Studies; Islamic-Christian Studies; Japanese; Law and Political Science; Medical Computer Science; Medical Genetics; Medical Laboratory Techniques; Medicine; Mediterranean Agronomy; Michel Henry; Middle East Markets; Midwifery; Mineralized Tissues; Modelling and Information Technology; Modern Arab World Studies; Modern Languages; Molecular Biology; Nursing; Open University; Oriental Literature; Pharmacology; Pharmacy; Physiology; Physiotherapy; Political Science; Psychomotricity; Religious Interpretation; Religious Sciences; Rights of the Arab World; Science; Social Work Training; Socio-economical Reality; Speech Therapy; Teachers; Teaching Pedagogy; Teledetection; Theatre, Audiovisual and Film Studies; Tourism; Toxicology; Translation and Interpretation; Water and Environment</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RYLFMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000751&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="751"><input class="case" type="checkbox" onClick="Coche(751,0);" name="result[]" id="751" value="751"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result751" id="result751" title="Expand result">
+		    <span>Expand result for </span>The Islamic University of Lebanon</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_751_logo.png" /></h3>
+		  <p class="i_name">
+		Al Jamiat Al Islamiah Fi Lobnan (IUL)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.al-jamaa.org" href="images/IAUMembers/751_1.jpg" class="fancybox" rel="gallery751"><img class="img" src="images/IAUMembers/s_751_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.al-jamaa.org" href="images/IAUMembers/751_2.jpg" class="fancybox" rel="gallery751"><img class="img" src="images/IAUMembers/s_751_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.al-jamaa.org" href="images/IAUMembers/751_3.jpg" class="fancybox" rel="gallery751"><img class="img" src="images/IAUMembers/s_751_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hassan Chalabi (Head) &ndash; Swidan Naser (Senior Administrative Officer) &ndash; Samiih Fayad (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Business Administration; Engineering; Islamic Studies; Law; Literature and Humanities; Nursing; Political, Administrative and Diplomatic Sciences; Science and Arts; Tourism Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0tUzRRCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009841&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="9841"><input class="case" type="checkbox" onClick="Coche(9841,0);" name="result[]" id="9841" value="9841"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result9841" id="result9841" title="Expand result">
+		    <span>Expand result for </span>University of Balamand</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_9841_logo.png" /></h3>
+		  <p class="i_name">
+		Jamiat Al-Balamand &ndash; Université de Balamand (UOB)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.balamand.edu.lb" href="images/IAUMembers/9841_1.jpg" class="fancybox" rel="gallery9841"><img class="img" src="images/IAUMembers/s_9841_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.balamand.edu.lb" href="images/IAUMembers/9841_2.jpg" class="fancybox" rel="gallery9841"><img class="img" src="images/IAUMembers/s_9841_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.balamand.edu.lb" href="images/IAUMembers/9841_3.jpg" class="fancybox" rel="gallery9841"><img class="img" src="images/IAUMembers/s_9841_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Elias Warrak (Head) &ndash; Georges Bahr (Senior Administrative Officer) &ndash; Georges N. Nahas (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Social Sciences; Business and Management; Christian and Muslim Studies; Computer; Engineering; Engineering and Environmental Studies; Fine Arts; Health Sciences; History, Archaeology, Near Eastern Heritage; Medicine; Postgraduate Medical Education; Science; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BULDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-026473&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="26473"><input class="case" type="checkbox" onClick="Coche(26473,0);" name="result[]" id="26473" value="26473"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result26473" id="result26473" title="Expand result">
+		    <span>Expand result for </span>Academic University College for Non-Violence and Human Rights</a></h3>
+		  <p class="i_name">
+		 (AUNOHR)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Elham Kallab (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Nonviolence and Human Rights</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzhULVMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011124&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="11124"><input class="case" type="checkbox" onClick="Coche(11124,0);" name="result[]" id="11124" value="11124"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result11124" id="result11124" title="Expand result">
+		    <span>Expand result for </span>Al-Kafaat University</a></h3>
+		  <p class="i_name">
+		Maahad al kafaat al jamee (AKI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fathi Oueida (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Fine Arts and Advertising; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRRLEMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000917&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="917"><input class="case" type="checkbox" onClick="Coche(917,0);" name="result[]" id="917" value="917"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result917" id="result917" title="Expand result">
+		    <span>Expand result for </span>American University of Beirut</a></h3>
+		  <p class="i_name">
+		 (AUB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fadlo Khoury (Head) &ndash; Imad Baalbaki (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Mathematical Sciences; Agricultural and Food Sciences; Agricultural Research and Education; Arab and Middle Eastern Studies; Arts and Science; Behavioural Research; Business; Central Research Science Lab; Engineering and Architecture; Environment and Sustainable Development; Financial Economics; Health Sciences; Medicine; Nursing; Research on Population and Health; Science and Mathematics Education; Teaching and Learning</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0uMyRXCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000918&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="918"><input class="case" type="checkbox" onClick="Coche(918,0);" name="result[]" id="918" value="918"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result918" id="result918" title="Expand result">
+		    <span>Expand result for </span>American University of Culture and Education</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Pierre Gedeon (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Science; Business; Fine Arts; Hospitality; Information Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0uMyRYCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000927&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="927"><input class="case" type="checkbox" onClick="Coche(927,0);" name="result[]" id="927" value="927"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result927" id="result927" title="Expand result">
+		    <span>Expand result for </span>American University of Technology</a></h3>
+		  <p class="i_name">
+		 (AUT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ghada Sakr Hinain (Head) &ndash; Marcel Hinain (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Sciences; Arts and Humanities; Business Administration</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0uMyhXCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001040&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="1040"><input class="case" type="checkbox" onClick="Coche(1040,0);" name="result[]" id="1040" value="1040"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result1040" id="result1040" title="Expand result">
+		    <span>Expand result for </span>Arab Open University - Lebanon Branch</a></h3>
+		  <p class="i_name">
+		 (AOU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fayrouz Farah Sarkis (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Studies; Computer Studies; Education; English Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sM2BULGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-001107&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="1107"><input class="case" type="checkbox" onClick="Coche(1107,0);" name="result[]" id="1107" value="1107"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result1107" id="result1107" title="Expand result">
+		    <span>Expand result for </span>Arts, Science and Technology University Lebanon</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Adnan Hamzeh (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Business Administration; Science and Fine Arts</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sMyRQLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009851&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9851"><input class="case" type="checkbox" onClick="Coche(9851,0);" name="result[]" id="9851" value="9851"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result9851" id="result9851" title="Expand result">
+		    <span>Expand result for </span>Beirut Islamic University</a></h3>
+		  <p class="i_name">
+		Jamiat Bayrut al islamiyyah (BIU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamad Rachid Kabbani (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Islamic Sharia</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BVLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004308&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4308"><input class="case" type="checkbox" onClick="Coche(4308,0);" name="result[]" id="4308" value="4308"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result4308" id="result4308" title="Expand result">
+		    <span>Expand result for </span>Business Higher School</a></h3>
+		  <p class="i_name">
+		Ecole supérieure des Affaires (ESA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Stéphane Attali (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Studies; Financial and Monetary Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyxQLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009850&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9850"><input class="case" type="checkbox" onClick="Coche(9850,0);" name="result[]" id="9850" value="9850"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result9850" id="result9850" title="Expand result">
+		    <span>Expand result for </span>City University</a></h3>
+		  <p class="i_name">
+		 (CITYU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sami Menkara (Head) &ndash; Arwa Haddad Helou (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Design; Arts and Human Sciences; Business Administration; Engineering and Information Technology; Public Health; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BVLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011123&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11123"><input class="case" type="checkbox" onClick="Coche(11123,0);" name="result[]" id="11123" value="11123"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result11123" id="result11123" title="Expand result">
+		    <span>Expand result for </span>Daawa University Institute for Islamic Studies</a></h3>
+		  <p class="i_name">
+		Maahad al daawa al jamee Ildrasat al islamih (Daawa CIS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdel Naser Jabri (Head) &ndash; Majed Oueini (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arabic; Islamic Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRRLEMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000749&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="749"><input class="case" type="checkbox" onClick="Coche(749,0);" name="result[]" id="749" value="749"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result749" id="result749" title="Expand result">
+		    <span>Expand result for </span>Global University</a></h3>
+		  <p class="i_name">
+		Al Jamiaa Al Aalamia (GU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Adnan Traboulsi (Head) &ndash; Ghaleb El Araissi (Senior Administrative Officer) &ndash; Ahmad Shatila (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administrative Sciences; Health Sciences; Literature and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0tUzBZCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009853&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9853"><input class="case" type="checkbox" onClick="Coche(9853,0);" name="result[]" id="9853" value="9853"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result9853" id="result9853" title="Expand result">
+		    <span>Expand result for </span>Haigazian University</a></h3>
+		  <p class="i_name">
+		Jamiat Haikazian (HU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Paul Haidostian (Head) &ndash; Roubina Artinian (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration and Economics; Humanities; Science; Social and Behavioural Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BVLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008313&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8313"><input class="case" type="checkbox" onClick="Coche(8313,0);" name="result[]" id="8313" value="8313"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result8313" id="result8313" title="Expand result">
+		    <span>Expand result for </span>Holy Family University Institute of Physiotherapy</a></h3>
+		  <p class="i_name">
+		Institut universitaire Sainte Famille de Physiothérapie		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hilda Chlala (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Nursing; Physiotherapy</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uIyxRLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004361&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4361"><input class="case" type="checkbox" onClick="Coche(4361,0);" name="result[]" id="4361" value="4361"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result4361" id="result4361" title="Expand result">
+		    <span>Expand result for </span>International School of Management</a></h3>
+		  <p class="i_name">
+		Ecole supérieure internationale de Gestion		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIyxWLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009844&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9844"><input class="case" type="checkbox" onClick="Coche(9844,0);" name="result[]" id="9844" value="9844"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result9844" id="result9844" title="Expand result">
+		    <span>Expand result for </span>Jinan University</a></h3>
+		  <p class="i_name">
+		Jamiat al-jinan (JU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mona Haddad Yakan (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Information and Communication; Literature and Humanities; Public Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BULWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019750&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19750"><input class="case" type="checkbox" onClick="Coche(19750,0);" name="result[]" id="19750" value="19750"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result19750" id="result19750" title="Expand result">
+		    <span>Expand result for </span>La Sagesse University</a></h3>
+		  <p class="i_name">
+		Université La Sagesse &ndash; Jamiat Al-Hikmat (ULS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Camille Moubarak (Head) &ndash; Antoine Saad (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Canon Law; Ecclesiastical Science; Health Sciences; Hospitality Management; Law; Management and Finance; Political Science and International Relations</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLTNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010886&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10886"><input class="case" type="checkbox" onClick="Coche(10886,0);" name="result[]" id="10886" value="10886"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result10886" id="result10886" title="Expand result">
+		    <span>Expand result for </span>Lebanese American University</a></h3>
+		  <p class="i_name">
+		 (LAU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Joseph G. Jabbra (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Design; Arts and Science; Banking and Finance; Business; Diplomacy and Conflict Transformation; Engineering; Family  and Enterpreneurial Business; Hospitality and Tourism Management; Islamic Art and Architecture; Media Training and Research; Medicine; Migration Studies; Peace and Justice Education; Pharmacy; Software; Teacher Training; Urban Planning; Water Resources and Environmental Technology; Women's Studies in the Arab World</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BYLiM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019755&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19755"><input class="case" type="checkbox" onClick="Coche(19755,0);" name="result[]" id="19755" value="19755"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result19755" id="result19755" title="Expand result">
+		    <span>Expand result for </span>Lebanese Canadian University</a></h3>
+		  <p class="i_name">
+		Université Libano-Canadienne (LCU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rony Abi Nakhlé (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Arts and Science; Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RXLTM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000752&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="752"><input class="case" type="checkbox" onClick="Coche(752,0);" name="result[]" id="752" value="752"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result752" id="result752" title="Expand result">
+		    <span>Expand result for </span>Lebanese University</a></h3>
+		  <p class="i_name">
+		Al Jamiat Al-Lubnaniya &ndash; Université Libanaise (UL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Zouheir Ali Chokr (Head) &ndash; Mohammad El Baba (Senior Administrative Officer) &ndash; Habib Charouk (Senior Administrative Officer) &ndash; Bernadette Abi-Saleh (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Arts and Humanities; Dentistry; Economics and Business Administration; Education; Engineering; Fine Arts; Information and Documentation; Law, Political Science and Management; Medicine; Pharmacy; Public Health; Science; Social Sciences; Technology; Tourism and Hospitality Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0tUzRSCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-024834&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="24834"><input class="case" type="checkbox" onClick="Coche(24834,0);" name="result[]" id="24834" value="24834"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result24834" id="result24834" title="Expand result">
+		    <span>Expand result for </span>Lebanese-French University of Technology and Applied Sciences</a></h3>
+		  <p class="i_name">
+		Université de Technologie et de Sciences Appliquées Libano-Française (ULF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohamad Salhab (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering; Fine Art; Management; Science and Letters; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQzBYLFMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010889&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10889"><input class="case" type="checkbox" onClick="Coche(10889,0);" name="result[]" id="10889" value="10889"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result10889" id="result10889" title="Expand result">
+		    <span>Expand result for </span>Lebanese-German University</a></h3>
+		  <p class="i_name">
+		 (HLIP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Marwan El Rassi (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Education; Business and Insurance; Business Training & Research; Chartered Insurance; Family Entrepreneurship; Global Languages; Healthcare Management and Quality; Media Professional Training; Public Health; School Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BYLiNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009845&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9845"><input class="case" type="checkbox" onClick="Coche(9845,0);" name="result[]" id="9845" value="9845"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result9845" id="result9845" title="Expand result">
+		    <span>Expand result for </span>Makassed University of Beirut</a></h3>
+		  <p class="i_name">
+		Jamiat al-Makassed (MUB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Hisham Nashabe (Head) &ndash; Manal Mikdashi (Senior Administrative Officer) &ndash; Manal Mikdashi (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Management and Information Technology; Nursing and Health Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BULTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-010589&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="10589"><input class="case" type="checkbox" onClick="Coche(10589,0);" name="result[]" id="10589" value="10589"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result10589" id="result10589" title="Expand result">
+		    <span>Expand result for </span>Middle East University</a></h3>
+		  <p class="i_name">
+		Kulliat Al-Sharq al-Awsat (MEU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>L. Hongisto (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Science; Business Administration; Education; Philosophy and Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BVLiNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-000750&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="750"><input class="case" type="checkbox" onClick="Coche(750,0);" name="result[]" id="750" value="750"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result750" id="result750" title="Expand result">
+		    <span>Expand result for </span>Modern University for Business and Science</a></h3>
+		  <p class="i_name">
+		Al Jamiaa Al Hadissa Lilidara wal Ouloum (MUBS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ali Cheaib (Head) &ndash; Sahira Moutaweh (Senior Administrative Officer) &ndash; Nizam Najd (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Computer and Applied Sciences; Education and Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jjo2MF0tUzRQCmAK" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008146&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8146"><input class="case" type="checkbox" onClick="Coche(8146,0);" name="result[]" id="8146" value="8146"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result8146" id="result8146" title="Expand result">
+		    <span>Expand result for </span>Saint Paul's Institute of Philosophy and Theology</a></h3>
+		  <p class="i_name">
+		Institut Saint-Paul de Philosophie et de Théologie		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Georges Khawam (Head) &ndash; Rita Daou (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Muslim-Christian Dialogue; Philosophy; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uIyRULUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-011125&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="11125"><input class="case" type="checkbox" onClick="Coche(11125,0);" name="result[]" id="11125" value="11125"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result11125" id="result11125" title="Expand result">
+		    <span>Expand result for </span>University of Sciences and Arts in Lebanon</a></h3>
+		  <p class="i_name">
+				  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mohammad Reda Fadlallah (Head) &ndash; Ahmad Fadlallah (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Sciences; Education; Management, Finance and Economics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRRLEM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-020603&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="20603"><input class="case" type="checkbox" onClick="Coche(20603,0);" name="result[]" id="20603" value="20603"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Lebanon</p>
+				  <h3>
+		    <a href="#result20603" id="result20603" title="Expand result">
+		    <span>Expand result for </span>University of Tripoli Lebanon</a></h3>
+		  <p class="i_name">
+		 (TUIS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Abdulsalam Ghaith (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Educational Sciences; Shari'a and Islamic Studies; The Holy Quran, Multi Readings and Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQ2BWLCMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 40 of 40</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon" selected>Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

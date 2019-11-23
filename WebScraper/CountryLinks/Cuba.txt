@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Cuba')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Cuba)">
+	    <input type="hidden" class="envoi" name="total" value="51">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Cuba">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">51 results found for <strong>(Country=Cuba)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 51 of 51</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-017535&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17535"><input class="case" type="checkbox" onClick="Coche(17535,0);" name="result[]" id="17535" value="17535"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result17535" id="result17535" title="Expand result">
+		    <span>Expand result for </span>Camilo Cienfuegos University of Matanzas</a></h3>
+		  <p class="i_name">
+		Universidad de Matanzas Camilo Cienfuegos (UMCC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Leyda Finlé de la Cruz (Head) &ndash; Benita Nancy García Gutiérez (Senior Administrative Officer) &ndash; Alberto Medina León (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Economics and Computer Science; Education; Engineering; Physical Education; Social Sciences and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLFM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008910&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8910"><input class="case" type="checkbox" onClick="Coche(8910,0);" name="result[]" id="8910" value="8910"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result8910" id="result8910" title="Expand result">
+		    <span>Expand result for </span>Carlos J. Finlay University of Medical Sciences of Camaguey</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Médicas de Camagüey Carlos J. Finlay		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>María del Carmen Romero (Head) &ndash; Eloy Ortiz Hernández (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Medical Sciences; Stomatology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0RRLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009034&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9034"><input class="case" type="checkbox" onClick="Coche(9034,0);" name="result[]" id="9034" value="9034"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result9034" id="result9034" title="Expand result">
+		    <span>Expand result for </span>Dr. Antonio Núñez Jiménez Institute of Mining and Metallurgy of Moa</a></h3>
+		  <p class="i_name">
+		Instituto Superior Minero Metalúrgico de Moa Dr. Antonio Núñez Jiménez (ISMMM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ángel Columbié Navarro (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Geology and Mining; Humanities; Metallurgy and Electromechanics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BTLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009041&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9041"><input class="case" type="checkbox" onClick="Coche(9041,0);" name="result[]" id="9041" value="9041"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result9041" id="result9041" title="Expand result">
+		    <span>Expand result for </span>Enrique José Varona Pedagogical University</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Pedagógicas Enrique José Varona (UCPEJV)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Deisy Fraga Cedré (Head) &ndash; Maritza Rippes Aller (Senior Administrative Officer) &ndash; Mercedes Mora Carnet (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Educational Sciences; Foreign Languages; Humanities; Primary Education; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BULDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009042&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9042"><input class="case" type="checkbox" onClick="Coche(9042,0);" name="result[]" id="9042" value="9042"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result9042" id="result9042" title="Expand result">
+		    <span>Expand result for </span>Félix Varela Morales Pedagogical University of Villa Clara</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Pedagógicas Félix Varela Morales		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>C. Noris B. Cárdenas Martínez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biology; Educational Sciences; Environmental Sciences; Foreign Languages; Humanities; Primary Education; Technical Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BULEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018180&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18180"><input class="case" type="checkbox" onClick="Coche(18180,0);" name="result[]" id="18180" value="18180"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result18180" id="result18180" title="Expand result">
+		    <span>Expand result for </span>Frank País García Pedagogical University</a></h3>
+		  <p class="i_name">
+		Universidad Ciencias Pedagógica Frank País García		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maribel Ferrer Vincente (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Educational Sciences; Humanities; Science; Technical Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BRLiNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017124&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17124"><input class="case" type="checkbox" onClick="Coche(17124,0);" name="result[]" id="17124" value="17124"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result17124" id="result17124" title="Expand result">
+		    <span>Expand result for </span>Fructuoso Rodríguez Pérez Agrarian University of Havana</a></h3>
+		  <p class="i_name">
+		Universidad Agraria de la Habana Fructuoso Rodríguez Pérez (UNAH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maria Irene Balbin (Head) &ndash; Adianez Taboada Zamora (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Engineering; Agriculure; Computer Science; Economics; Pedagogical Science; Physical Education; Social Sciences and Humanities; Stockraising; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxRLEMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-002482&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="2482"><input class="case" type="checkbox" onClick="Coche(2482,0);" name="result[]" id="2482" value="2482"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result2482" id="result2482" title="Expand result">
+		    <span>Expand result for </span>Guantánamo University</a></h3>
+		  <p class="i_name">
+		Universidad de Guantánamo		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alberto Turro Breff (Head) &ndash; Victor M. Álvarez Villar (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agro-Forestry; Economics and Business Administration; Law; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzBYLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017411&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17411"><input class="case" type="checkbox" onClick="Coche(17411,0);" name="result[]" id="17411" value="17411"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result17411" id="result17411" title="Expand result">
+		    <span>Expand result for </span>Ignacio Agramonte Loynaz University of Camagüey</a></h3>
+		  <p class="i_name">
+		Universidad de Camagüey Ignacio Agramonte Loynaz (UC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Santiago Lajes Choy (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Construction Engineering; Economics; Electromechanics; Humanity; Law and Economics; Physical Education; Primary Education; Science Applied to Industry; Teachers Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULDMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023364&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23364"><input class="case" type="checkbox" onClick="Coche(23364,0);" name="result[]" id="23364" value="23364"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result23364" id="result23364" title="Expand result">
+		    <span>Expand result for </span>Institute of Animal Science</a></h3>
+		  <p class="i_name">
+		Instituto de Ciencia Animal (ICA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Andrés Diaz Untoria (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Animal Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxTLUMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023372&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23372"><input class="case" type="checkbox" onClick="Coche(23372,0);" name="result[]" id="23372" value="23372"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result23372" id="result23372" title="Expand result">
+		    <span>Expand result for </span>Institute of Cardiology and Cardiovascular Surgery</a></h3>
+		  <p class="i_name">
+		Instituto de Cardiología y Cirugía Cardiovascular		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Lorenzo D. LLerena Rojas (Head) &ndash; Nurys Armas (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Cardiovascular Surgery</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxTLVMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008921&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8921"><input class="case" type="checkbox" onClick="Coche(8921,0);" name="result[]" id="8921" value="8921"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result8921" id="result8921" title="Expand result">
+		    <span>Expand result for </span>Institute of Industrial Design</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Diseño Industrial (ISDi)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sergio Luis Peña Martínez (Head) &ndash; Antonio Berazaín (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Fashion Design; Industrial Design; Theory and Methodology; Visual Communication</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0RSLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009038&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="9038"><input class="case" type="checkbox" onClick="Coche(9038,0);" name="result[]" id="9038" value="9038"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result9038" id="result9038" title="Expand result">
+		    <span>Expand result for </span>Jesús Montané Oropesa University of Isla de la Juventud</a></h3>
+		  <p class="i_name">
+		Universidad de la Isla de la Juventud Jesús Montané Oropesa (UIJ)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Leonardo Cruz Cabrera (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Physical Education; Social Sciences and Humanities; Technical Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BTLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009054&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9054"><input class="case" type="checkbox" onClick="Coche(9054,0);" name="result[]" id="9054" value="9054"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result9054" id="result9054" title="Expand result">
+		    <span>Expand result for </span>José Antonio Echeverría Polytechnic Institute</a></h3>
+		  <p class="i_name">
+		Instituto Superior Politécnico José Antonio Echeverría &ndash; Ciudad Universitaria José Antonio Echeverría (CUJAE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alicia Alonso Becerra (Head) &ndash; Esther Rosalina Ansola Hazday (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Chemical Engineering; Civil Engineering; Computer Engineering; Electrical Engineering; Industrial Engineering; Mechanical Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BVLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018181&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18181"><input class="case" type="checkbox" onClick="Coche(18181,0);" name="result[]" id="18181" value="18181"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result18181" id="result18181" title="Expand result">
+		    <span>Expand result for </span>José de la Luz y Caballero Pedagogical University</a></h3>
+		  <p class="i_name">
+		Universidad de Cienciais Pedagógica José de la Luz y Caballero (UCP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Graciela Florencia Góngora Suárez (Head) &ndash; Cristina Virgen Aldana Zayas (Senior Administrative Officer) &ndash; Luis Ernesto Ruiz Martínez (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Educational Sciences; Humanities; Primary Education; Science; Technical Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BRLiMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-002501&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="2501"><input class="case" type="checkbox" onClick="Coche(2501,0);" name="result[]" id="2501" value="2501"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result2501" id="result2501" title="Expand result">
+		    <span>Expand result for </span>José Martí Pérez University of Sancti Spiritus</a></h3>
+		  <p class="i_name">
+		Universidad de Sancti Spiritus José Marti Pérez (UNISS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Naima Trujillo Barretto (Head) &ndash; Martín Santana (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Finance; Engineering; Humanities; Pedagogy; Stockbreeding</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzRQLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-002614&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="2614"><input class="case" type="checkbox" onClick="Coche(2614,0);" name="result[]" id="2614" value="2614"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result2614" id="result2614" title="Expand result">
+		    <span>Expand result for </span>Las Tunas University Vladimir Ilich Lenin</a></h3>
+		  <p class="i_name">
+		Universidad Vladimir Ilich Lenin de las Tunas (ULT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Marlene del Toro Borrego (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Sciences; Basic Education; Economics; Physical Education; Secondary Education; Social Sciences and Humanities; Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzhRLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023378&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23378"><input class="case" type="checkbox" onClick="Coche(23378,0);" name="result[]" id="23378" value="23378"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result23378" id="result23378" title="Expand result">
+		    <span>Expand result for </span>Latin American Reference Center for Special Education</a></h3>
+		  <p class="i_name">
+		Centro de Referencia Latinoamericano para la Educación Especial (CELAEE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Santiago Borges Rodríguez (Head) &ndash; Caridad Rosario Zurita Cruz (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Special Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxTLVNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023380&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23380"><input class="case" type="checkbox" onClick="Coche(23380,0);" name="result[]" id="23380" value="23380"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result23380" id="result23380" title="Expand result">
+		    <span>Expand result for </span>Latin American School of Medicine</a></h3>
+		  <p class="i_name">
+		Escuela Latinoamericana de Medicina (ELAM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rafael González Ponce de León (Head) &ndash; Heidi Soca González (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Medicine; Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxTLiNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009044&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9044"><input class="case" type="checkbox" onClick="Coche(9044,0);" name="result[]" id="9044" value="9044"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result9044" id="result9044" title="Expand result">
+		    <span>Expand result for </span>Manuel Ascunce Domenech Pedagogical University</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Pedagógicas Manuel Ascunce Domenech (UCPCA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Anisia Ruíz Gutiérrez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Humanities; Pre-School Teacher Training; Sciences; Secondary Teacher Training; Technical Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BULWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017338&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17338"><input class="case" type="checkbox" onClick="Coche(17338,0);" name="result[]" id="17338" value="17338"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result17338" id="result17338" title="Expand result">
+		    <span>Expand result for </span>Marta Abreu  Central University of Las Villas</a></h3>
+		  <p class="i_name">
+		Universidad Central Marta Abreu de Las Villas (UCLV)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Andrés Castro Alegría (Head) &ndash; Luis Antonio Barranco Olivera (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Research; Agriculture; Applied Chemistry Studies; Bioactive Chemistry; Botanical Garden Studies; Business Administration; Chemistry and Pharmacy; Community Studies; Computational Mechanics and Numerical Methods in Engineering; Construction Engineering; Educational Sciences; Electrical Energy Studies; Electrical Engineering; Energy and Environmental Technologies; Humanities; Industrial and Mechanical Engineering; Informatics Studies; Information Science and Education; Information Technology and Electronic Studies; Law; Mathematics, Physics and Computer Science; Mechanical Engineering; Physical Education and Sport; Plant Biotechnology; Research and Development of Structures and Materials; Social Sciences; Welding Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLFNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006218&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="6218"><input class="case" type="checkbox" onClick="Coche(6218,0);" name="result[]" id="6218" value="6218"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result6218" id="result6218" title="Expand result">
+		    <span>Expand result for </span>Medical University Dr. Juan Guiteras Gener of Matanzas</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Médicas Juan Guiteras Gener de Matanzas (UCMM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Víctor Junco (Head) &ndash; Lázaro de León Rosales (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQyhRLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023366&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23366"><input class="case" type="checkbox" onClick="Coche(23366,0);" name="result[]" id="23366" value="23366"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result23366" id="result23366" title="Expand result">
+		    <span>Expand result for </span>National Center for Agricultural Health</a></h3>
+		  <p class="i_name">
+		Centro Nacional de Sanidad Agropecuaria (CENSA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>C. Sandra Cuello Porta (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Animal Health and Production; Biopharmaceutical Productions; Engineering and Services; Human Resources Management; Microbiology; Plant Protection; Quality Assurance; Technological Innovation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxTLUM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023368&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23368"><input class="case" type="checkbox" onClick="Coche(23368,0);" name="result[]" id="23368" value="23368"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result23368" id="result23368" title="Expand result">
+		    <span>Expand result for </span>National Coordination Center for Clinical Trials</a></h3>
+		  <p class="i_name">
+		Centro nacional coordinator de essayos clínicos		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alberto Hernández Rodríguez (Head) &ndash; Ania Torres Pombert (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Clinical Trials</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxTLUNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023365&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23365"><input class="case" type="checkbox" onClick="Coche(23365,0);" name="result[]" id="23365" value="23365"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result23365" id="result23365" title="Expand result">
+		    <span>Expand result for </span>National Institute of Agricultural Sciences</a></h3>
+		  <p class="i_name">
+		Instituto Nacional de Ciencias Agrícolas (INCA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>C. María del Carmen Pérez Hernández (Head) &ndash; Walfredo Torres de la Noval (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Mathematics; Genetics; Nutrition; Physiology and Vegetal Biochemistry; Phytotechnics</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxTLUM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023375&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23375"><input class="case" type="checkbox" onClick="Coche(23375,0);" name="result[]" id="23375" value="23375"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result23375" id="result23375" title="Expand result">
+		    <span>Expand result for </span>National Institute of Health Workers</a></h3>
+		  <p class="i_name">
+		Instituto Nacional de Salud de los Trabajadores (INSAT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Tomasa María  Esther Linares Fernández (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Chemistry and Biology; Healh Sciences; Physiology; Psychology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxTLVM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023376&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23376"><input class="case" type="checkbox" onClick="Coche(23376,0);" name="result[]" id="23376" value="23376"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result23376" id="result23376" title="Expand result">
+		    <span>Expand result for </span>National Institute of Hygiene, Epidemiology and Microbiology</a></h3>
+		  <p class="i_name">
+		Instituto Nacional de Higiene Epidemiología y Microbiología (INHEM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Disnardo Raúl Pérez González (Head) &ndash; Adolfo Alvarez Pérez (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biochemistry and Physiology; Epidemiology; Food Science; Hygiene; Microbiology; Nutrition; Public Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxTLVM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-009045&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="9045"><input class="case" type="checkbox" onClick="Coche(9045,0);" name="result[]" id="9045" value="9045"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result9045" id="result9045" title="Expand result">
+		    <span>Expand result for </span>Pedagogical University Hector Pineda Alfredo Zaldivar</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Pedagógicas Héctor Alfredo Pineda Zaldívar (UCPETP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Odelaisis Deliz de los Santos (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Science and General Studies; Technical Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM2BULTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023373&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23373"><input class="case" type="checkbox" onClick="Coche(23373,0);" name="result[]" id="23373" value="23373"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result23373" id="result23373" title="Expand result">
+		    <span>Expand result for </span>Pedro Kourí Tropical Medicine Institute</a></h3>
+		  <p class="i_name">
+		Instituto de Medicina Tropical Pedro Kourí (IPK)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Nereyda Cantelar de Francisco (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Tropical Mecicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxTLVMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023374&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23374"><input class="case" type="checkbox" onClick="Coche(23374,0);" name="result[]" id="23374" value="23374"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result23374" id="result23374" title="Expand result">
+		    <span>Expand result for </span>Prof. Dr Rafael Estrada González Institute of Neurology and Neurosurgery</a></h3>
+		  <p class="i_name">
+		Instituto de Neurología y Neurocirugía Prof. Dr Rafael Estrada González (INN)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Enrique Michel Esteban (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Neurology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxTLVMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018170&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18170"><input class="case" type="checkbox" onClick="Coche(18170,0);" name="result[]" id="18170" value="18170"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result18170" id="result18170" title="Expand result">
+		    <span>Expand result for </span>Rafael María de Mendive Pedagogical University of Pinar del Río</a></h3>
+		  <p class="i_name">
+		Universidad Pedagógica de Pinar del Río Rafael María de Mendive		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mario Luis Gómez Ivizate (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Education; Humanities; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BRLVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023377&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23377"><input class="case" type="checkbox" onClick="Coche(23377,0);" name="result[]" id="23377" value="23377"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result23377" id="result23377" title="Expand result">
+		    <span>Expand result for </span>Raul Roa García Higher Institute of International Relations</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Relaciones Internacionales Raúl Roa García		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Isabel Allende Karam (Head) &ndash; Jorge Casals Llano (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>International Relations</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxTLVM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008913&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="8913"><input class="case" type="checkbox" onClick="Coche(8913,0);" name="result[]" id="8913" value="8913"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result8913" id="result8913" title="Expand result">
+		    <span>Expand result for </span>Serafín Ruiz de Zárate University of Medical Sciences of Villa Clara</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Médicas Serafín Ruiz de Zárate de Villa Clara (UCMVC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Frank Quintana Gómez (Head) &ndash; Nancy Rodríguez Fernández (Senior Administrative Officer) &ndash; Julio González Rodríguez (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health Technology; Medical Sciences; Nursing; Stomatology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0RRLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008889&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8889"><input class="case" type="checkbox" onClick="Coche(8889,0);" name="result[]" id="8889" value="8889"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result8889" id="result8889" title="Expand result">
+		    <span>Expand result for </span>University of Arts</a></h3>
+		  <p class="i_name">
+		Universidad de las Artes (ISA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rolando González Patricio (Head) &ndash; Sonia Ortega Bravo (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Audiovisual Media Communications; Dance; Music; Plastic Arts; Theatre</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0BYLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017420&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17420"><input class="case" type="checkbox" onClick="Coche(17420,0);" name="result[]" id="17420" value="17420"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result17420" id="result17420" title="Expand result">
+		    <span>Expand result for </span>University of Ciego de Avila</a></h3>
+		  <p class="i_name">
+		Universidad de Ciego de Avila (UNICA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Mario Ares Sánchez (Head) &ndash; Oscar Fernández (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Computer Science; Economics; Engineering; Law; Social Sciences and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULENgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017430&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17430"><input class="case" type="checkbox" onClick="Coche(17430,0);" name="result[]" id="17430" value="17430"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result17430" id="result17430" title="Expand result">
+		    <span>Expand result for </span>University of Cienfuegos</a></h3>
+		  <p class="i_name">
+		Universidad de Cienfuegos		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan B. Cogollos Martínez (Head) &ndash; Frank Hernandez Gonzalez (Senior Administrative Officer) &ndash; Nereida E. Moya Padilla (Senior Administrative Officer) &ndash; Victor Millo Carmenate (Senior Administrative Officer) &ndash; Lourdes Pomares Castellon (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomy; Economics and Business; Engineering; Environmental and Energy Studies; Humanities; Hydraulic Oil and Pneumatic Studies; Pedagogic Sciences; Pedagogical Studies and Higher Education; Physical Education; Social Sciences; Sociocultural; Sustainable Agriculture</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULFNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017507&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17507"><input class="case" type="checkbox" onClick="Coche(17507,0);" name="result[]" id="17507" value="17507"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result17507" id="result17507" title="Expand result">
+		    <span>Expand result for </span>University of Computer Science</a></h3>
+		  <p class="i_name">
+		Universidad de las Ciencias Informáticas (UCI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Miriam Nicado García (Head) &ndash; Natalia Martínez Sánchez (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLCM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017461&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17461"><input class="case" type="checkbox" onClick="Coche(17461,0);" name="result[]" id="17461" value="17461"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result17461" id="result17461" title="Expand result">
+		    <span>Expand result for </span>University of Granma</a></h3>
+		  <p class="i_name">
+		Universidad de Granma		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Quirino Arias Cedeño (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Animal Production; Applied Chemistry; Computer Science; Economics and Business Administration; Engineering; Higher Education; Management and Local Developpment Studies; Social Sciences and Humanities; Vegetal Biotechnology; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULUMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017485&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17485"><input class="case" type="checkbox" onClick="Coche(17485,0);" name="result[]" id="17485" value="17485"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result17485" id="result17485" title="Expand result">
+		    <span>Expand result for </span>University of Havana</a></h3>
+		  <p class="i_name">
+		Universidad de la Habana (UH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gustavo Cobreiro Suárez (Head) &ndash; Magda Luisa Arias Rivera (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accountancy and Finance; Biology; Biotechnology and Biomedicine; Chemistry; Communication Studies; Cuban Economics; Demographic Studies; Distance Education; Economics; Environmental Studies; Fine Arts and Modern Languages; Foreign Languages; Geography; Health and Well-being; Higher Education Development; International Economics Research; International Migration; Latino American Social Sciences; Law; Marine Biology; Mathematics and Computer Science; National Botanical Garden; Pharmacy and Food Technology; Philosophy and History; Physics; Preservation and Management of the Cultural Historical Patrimony; Psychology; Public Administration; Science and Technology of Materials; Social Sciences; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULiM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017466&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17466"><input class="case" type="checkbox" onClick="Coche(17466,0);" name="result[]" id="17466" value="17466"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result17466" id="result17466" title="Expand result">
+		    <span>Expand result for </span>University of Holguín</a></h3>
+		  <p class="i_name">
+		Universidad de Holguín		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Reynaldo Velazquez Zaldivar (Head) &ndash; David Almaguer la Rosa (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Engineering; Economics; Education; Engineering; Humanities; Industrial Engineering and Tourism; Law; Mathematics and Computer Science; Physical Education; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULUM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006213&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="6213"><input class="case" type="checkbox" onClick="Coche(6213,0);" name="result[]" id="6213" value="6213"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result6213" id="result6213" title="Expand result">
+		    <span>Expand result for </span>University of Medical Sciences of Ciego de Avila</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Médicas de Ciego de Avila (UCMCA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Venerando Sevilla Pérez (Head) &ndash; Magaly Rita Gómez Verano (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQyhRLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006214&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="6214"><input class="case" type="checkbox" onClick="Coche(6214,0);" name="result[]" id="6214" value="6214"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result6214" id="result6214" title="Expand result">
+		    <span>Expand result for </span>University of Medical Sciences of Cienfuegos</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Médicas de Cienfuegos (UCMCF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Roberto Baños (Head) &ndash; Elinor Dulzaides Iglesias (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQyhRLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006215&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="6215"><input class="case" type="checkbox" onClick="Coche(6215,0);" name="result[]" id="6215" value="6215"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result6215" id="result6215" title="Expand result">
+		    <span>Expand result for </span>University of Medical Sciences of Granma</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Médicas de Granma (UCMG)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Adrián Fonseca Botello (Head) &ndash; Magdalena Sánchez Fernández (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQyhRLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006216&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="6216"><input class="case" type="checkbox" onClick="Coche(6216,0);" name="result[]" id="6216" value="6216"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result6216" id="result6216" title="Expand result">
+		    <span>Expand result for </span>University of Medical Sciences of Guantanamo</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Médicas de Guantánamo (UCMGT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>María del Rosario Parra (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQyhRLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023370&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23370"><input class="case" type="checkbox" onClick="Coche(23370,0);" name="result[]" id="23370" value="23370"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result23370" id="result23370" title="Expand result">
+		    <span>Expand result for </span>University of Medical Sciences of Havana</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Médicas de la Habana (UCMH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jorge González Pérez. (Head) &ndash; Mayrim Lago (Senior Administrative Officer) &ndash; Celia Ojeda (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biomedical Sciences - Victoria de Girón; Dentistry - Raúl González Sánchez; Heath Technoligy; Medical Sciences - 10 de octubre; Medical Sciences - Calixto García Iñiguez; Medical Sciences - Dr. Miguel Enriquez; Medical Sciences - Dr. Salvador Allende; Medical Sciences - Enrique Cabrera; Medical Sciences - Finlay- Albarrán; Medical Sciences - Julio Trigo; Medical Sciences - Manuel Fajardo Rivero; Nursing - Lidia Doce</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxTLVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006219&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="6219"><input class="case" type="checkbox" onClick="Coche(6219,0);" name="result[]" id="6219" value="6219"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result6219" id="result6219" title="Expand result">
+		    <span>Expand result for </span>University of Medical Sciences of Pinar del Rio</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Médicas de Pinar del Río (UCMPR)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Blas Nivaldo Porras Pérez (Head) &ndash; Taimara Ramírez Acosta (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQyhRLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006220&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="6220"><input class="case" type="checkbox" onClick="Coche(6220,0);" name="result[]" id="6220" value="6220"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result6220" id="result6220" title="Expand result">
+		    <span>Expand result for </span>University of Medical Sciences of Sancti Spiritu</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Médicas de Sancti Spíritus (UCMSS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alexis Lorente Jiménez (Head) &ndash; Carmen Fidelina Sánchez Sánchez (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQyhSLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008912&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8912"><input class="case" type="checkbox" onClick="Coche(8912,0);" name="result[]" id="8912" value="8912"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result8912" id="result8912" title="Expand result">
+		    <span>Expand result for </span>University of Medical Sciences of Santiago de Cuba</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Médicas Santiago de Cuba (UCM - Santiago de Cuba)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Antonio López (Head) &ndash; Lilliam Leyva Rosales (Senior Administrative Officer) &ndash; José Suárez Lorens (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Health Technology; Medical Sciences I; Medical Sciences II; Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0RRLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017559&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17559"><input class="case" type="checkbox" onClick="Coche(17559,0);" name="result[]" id="17559" value="17559"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result17559" id="result17559" title="Expand result">
+		    <span>Expand result for </span>University of Oriente</a></h3>
+		  <p class="i_name">
+		Universidad de Oriente (UO)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Martha del Carmen Mesa Valenciano (Head) &ndash; Josefina Fonseca Ramis (Senior Administrative Officer) &ndash; Luisa Villafruela Loperena (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Applied Electromagnetics; Chemical Engineering; Construction; Cuba - Caribbean Studies; Distance Education; Economics and Business Administration; Electrical Engineering; Energetics; Higher Education Studies; Humanities; Industrial Biotechnology; Integral Development of Culture; Law; Mathematics and Computer Science; Mechanical Engineering; Medical Biophysics; Multidisciplinary Studies of Coastal Zones; Natural Sciences; Neurosciences; Pattern Recognition and Data Mining; Refrigeration Studies; Social Sciences; Sugar Research; Tourism Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLTNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017576&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17576"><input class="case" type="checkbox" onClick="Coche(17576,0);" name="result[]" id="17576" value="17576"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result17576" id="result17576" title="Expand result">
+		    <span>Expand result for </span>University of Pinar del Río Hermanos Saiz Montes de Oca</a></h3>
+		  <p class="i_name">
+		Universidad de Pinar del Río Hermanos Saiz Montes de Oca &ndash; University of Pinar del Río "Hermanos Saiz Montes de Oca" (UPR)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Andrés Erasmo Ares Rojas (Head) &ndash; Teresa de la Caridad Díaz  Domínguez (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agronomía; Economics; Engineering; Environmental and Natural Resources; Forestry and Agronomy; Higher Education Sciences; Management, Development Studies and Tourism; Social Science and Humanity</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLVM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-006221&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="6221"><input class="case" type="checkbox" onClick="Coche(6221,0);" name="result[]" id="6221" value="6221"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Cuba</p>
+				  <h3>
+		    <a href="#result6221" id="result6221" title="Expand result">
+		    <span>Expand result for </span>Zoilo Marinello University of Medical Sciences of Las Tunas</a></h3>
+		  <p class="i_name">
+		Universidad de Ciencias Médicas Zoilo Marinello de Las Tunas (UCMLT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luis Manuel Pérez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Medical Technology; Medicine; Nursing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQyhSLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 51 of 51</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba" selected>Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

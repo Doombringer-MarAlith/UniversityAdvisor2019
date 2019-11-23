@@ -1,0 +1,2565 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <title>Search Results – WHED – IAU's World Higher Education Database</title>
+  <meta name="description" content="">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="js/js.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
+<script src="js/IE8.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
+  
+  <script type="text/javascript"><!--
+    function CocheAll() {
+      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
+      Coche(lst,1);
+    }
+    function Coche(id,all) {
+      $.ajax({
+	url: "ajax/checkinstitution.php",
+	type: "POST",
+	data: "id=" + id + "&all=" + all,
+	cache: false,
+	success:function(msg){
+	  $("#tools").html(msg);
+	  if ( !id ) $('.case').prop("checked", false);
+	  if ( all ) $('.case').prop("checked", true);
+	},
+	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+	}
+      }); 
+    }
+  //--></script>
+
+</head>
+
+<body class="page_search results large">
+
+  <div id="page" class="clearfix">
+  
+    <div class="main">
+    
+      <header role="banner" id="entete" class="clearfix">
+  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
+  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
+      
+  
+    <div class="mobile">
+      <a href="#qsearch">Search</a>
+    <span> &ndash; </span>
+    <a href="#login">Login</a>
+  </div>
+</header>
+      
+      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
+      
+      <section role="main" id="contenu">
+      
+	<h2>Search results Institution(s)</h2>
+	
+		  <form method="post" name="grille">
+	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Spain')">
+	    <input type="hidden" class="envoi" name="requete" value="(Country=Spain)">
+	    <input type="hidden" class="envoi" name="total" value="109">
+	    <input type="hidden" name="ret" value="home.php">
+	    <input type="hidden" class="envoi" name="quick" value="0">
+	    <input type="hidden" class="envoi" name="membre" value="0">
+	    <input type="hidden" class="envoi" name="Chp0" value="">
+	    <input type="hidden" class="envoi" name="Chp1" value="Spain">
+	    <input type="hidden" name="debut" value="0">
+	    <input type="hidden" name="use" value="">
+	    <input type="hidden" name="afftri" value="yes">
+	    <input type="hidden" name="stat" value="Country">
+	    
+	    <p class="fright">
+	      	      <a class="bouton search" href="home.php">New search</a>
+	    </p>
+	  
+	    <p class="infos">109 results found for <strong>(Country=Spain)</strong></p>
+
+    	<div class="tri">
+	    	        
+	      	<h3>Sort by:</h3>
+	      	<p>
+	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
+	      		</select>
+	      		<noscript><input type="submit" value="ok"></noscript>
+	      	</p>   	
+	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</p>
+	  	</div>
+	  </form>
+	  <!-- debut form select -->
+	  <form name="SELECT">  
+	  <div class="pagination">
+  <p class="prem">Results 1 to 109 of 109</p>
+  </div>
+	  <ul id="results">
+	  <span class="gui">&nbsp;&nbsp;IAU-018028&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="18028"><input class="case" type="checkbox" onClick="Coche(18028,0);" name="result[]" id="18028" value="18028"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result18028" id="result18028" title="Expand result">
+		    <span>Expand result for </span>National University of Distance Education</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_18028_logo.gif" /></h3>
+		  <p class="i_name">
+		Universidad Nacional de Educación a Distancia (UNED)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.uned.es" href="images/IAUMembers/18028_1.jpg" class="fancybox" rel="gallery18028"><img class="img" src="images/IAUMembers/s_18028_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ricardo Mayral Usón (Head) &ndash; Rebeca de Juan Díaz (Senior Administrative Officer) &ndash; María Esther Souto Galván (International Relations Officer) &ndash; Sebastián Rubén Gómez Palomo (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Engineering; Economics and Business Administration; Education; General Gutiérrez Mellado; Geography and History; Industrial Engineering; Internal Security; Law; Philology; Philosophy; Political Science and Sociology; Psychology; Research; Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BQLENAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019354&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19354"><input class="case" type="checkbox" onClick="Coche(19354,0);" name="result[]" id="19354" value="19354"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19354" id="result19354" title="Expand result">
+		    <span>Expand result for </span>Open University of Cataluña</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19354_logo.png" /></h3>
+		  <p class="i_name">
+		Universitat Oberta de Catalunya &ndash; Universidad Abierta de Cataluña (UOC)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.uoc.es" href="images/IAUMembers/19354_1.jpg" class="fancybox" rel="gallery19354"><img class="img" src="images/IAUMembers/s_19354_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Josep A. Planell (Head) &ndash; Pastora Martinez Samper (Senior Administrative Officer) &ndash; Antoni Cahner (Senior Administrative Officer) &ndash; John Zvereff (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Computer Science, Multimedia and Telecommunications; e-Learn; Economics and Business Administration; Health Sciences; Information and Communication Sciences; Internet Interdisplinary Studies; Law and Political Science; Psychology and Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018223&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="18223"><input class="case" type="checkbox" onClick="Coche(18223,0);" name="result[]" id="18223" value="18223"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result18223" id="result18223" title="Expand result">
+		    <span>Expand result for </span>Polytechnic University of Madrid</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_18223_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universidad Politécnica de Madrid (UPM)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.upm.es" href="images/IAUMembers/18223_1.jpg" class="fancybox" rel="gallery18223"><img class="img" src="images/IAUMembers/s_18223_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Guillermo Pérez Cisneros (Head) &ndash; Cristina Pérez García (Senior Administrative Officer) &ndash; Narciso García Santos (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Aeronautical Engineering; Agricultural Engineering; Agronomy; Architecture; Civil Engineering; Computer Science; Educational Sciences; Forestry Engineering; Industrial Engineering; Marine Engineering; Mining Engineering; Physical Education and Sports; Surveying Engineering; Telecommunications Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BSLEMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019320&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19320"><input class="case" type="checkbox" onClick="Coche(19320,0);" name="result[]" id="19320" value="19320"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19320" id="result19320" title="Expand result">
+		    <span>Expand result for </span>University of Barcelona</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19320_logo.png" /></h3>
+		  <p class="i_name">
+		Universitat de Barcelona &ndash; Universidad de Barcelona (UB)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.ub.edu" href="images/IAUMembers/19320_1.jpg" class="fancybox" rel="gallery19320"><img class="img" src="images/IAUMembers/s_19320_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ub.edu" href="images/IAUMembers/19320_2.jpg" class="fancybox" rel="gallery19320"><img class="img" src="images/IAUMembers/s_19320_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ub.edu" href="images/IAUMembers/19320_3.jpg" class="fancybox" rel="gallery19320"><img class="img" src="images/IAUMembers/s_19320_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Joan Elias Garcia (Head) &ndash; Belén Noguera de la Muela (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biology; Catalan School for Advanced Studies in Cinema and Audiovisual Media; Centre for Advanced Studies in Public Relations; Chemistry; Documentation and Library Science; Economics and Business; Fine Arts; Geography and History; Geology; Institute for Nutrition and Food Safety Research (INSA); Institute of Cosmos Sciences (ICC); Institute of Nanoscience and Nanotechnology (IN2UB); Inter-University Institute of the Ancient Near East (IPOA); Law; Mathematics; Medicine; National Institute of Physical Educational of Catalonia (INEFC); Nursing; Odontology; Pedagogy; Pharmacy; Philology; Philosophy; Physics; Psychology; Research Institute of Applied Economics (IREA); Sant Joan de Déu University School of Nursing; Teacher Training; University  School of Hotel Management and Tourism (CETT); University of Barcelona Institute of Biomedicine; University of Barcelona Institute of Mathematics (IMUB); Water Research Institute</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLENgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017460&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="17460"><input class="case" type="checkbox" onClick="Coche(17460,0);" name="result[]" id="17460" value="17460"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result17460" id="result17460" title="Expand result">
+		    <span>Expand result for </span>University of Granada</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_17460_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universidad de Granada (UGR)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.ugr.es" href="images/IAUMembers/17460_1.jpg" class="fancybox" rel="gallery17460"><img class="img" src="images/IAUMembers/s_17460_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ugr.es" href="images/IAUMembers/17460_2.jpg" class="fancybox" rel="gallery17460"><img class="img" src="images/IAUMembers/s_17460_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.ugr.es" href="images/IAUMembers/17460_3.jpg" class="fancybox" rel="gallery17460"><img class="img" src="images/IAUMembers/s_17460_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Pilar Aranda (Head) &ndash; Andrés Navarro Galera (Senior Administrative Officer) &ndash; Dorothy Kelly (International Relations Officer) &ndash; Irene Pedreira Romero (International Relations Officer) &ndash; Ignacio Blanco (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Arts and Philosophy; Biotechnology; Civil Engineering; Communication and Documentation; Computer and Telecommunications Engineering; Construction Engineering; Criminology; Dentistry; Earth Sciences; Economics and Business Administration; Education and Humanities; Educational Sciences; Fine Arts; Geophysics and Earthquake Prevention; Health Sciences; Health Sciences; Labour Sciences; Law; Medicine; Migration; Neuroscience; Nursing; Nutrition and Food Technology; Peace and Conflicts; Pharmacy; Physical Education and Sports; Political Science and Sociology; Psychology; Regenerative Medicine; Regional Development; Science; Social Sciences; Social Work; Teacher Training; Theoretical and Computational Physics; Translation and Interpretation; Water Studies; Women's Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULUNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017529&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="17529"><input class="case" type="checkbox" onClick="Coche(17529,0);" name="result[]" id="17529" value="17529"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result17529" id="result17529" title="Expand result">
+		    <span>Expand result for </span>University of Málaga</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_17529_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universidad de Málaga (UMA)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.uma.es" href="images/IAUMembers/17529_1.jpg" class="fancybox" rel="gallery17529"><img class="img" src="images/IAUMembers/s_17529_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.uma.es" href="images/IAUMembers/17529_2.jpg" class="fancybox" rel="gallery17529"><img class="img" src="images/IAUMembers/s_17529_2.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.uma.es" href="images/IAUMembers/17529_3.jpg" class="fancybox" rel="gallery17529"><img class="img" src="images/IAUMembers/s_17529_3.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Ángel Narváez Bueno (Head) &ndash; Susana Cabrera Yeto (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Business and Management; Communication; Computer Engineering; Doctoral Studies; Economics and Business Science; Education; Fine Arts; Humanities; Industrial Engineering; Law; Medicine; Nursing; Polytechnic; Psychology; Science; Social Work and Studies; Telecommunications Engineering; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLENEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017595&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="17595"><input class="case" type="checkbox" onClick="Coche(17595,0);" name="result[]" id="17595" value="17595"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result17595" id="result17595" title="Expand result">
+		    <span>Expand result for </span>University of Salamanca</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_17595_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universidad de Salamanca (USA)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.usal.es" href="images/IAUMembers/17595_1.jpg" class="fancybox" rel="gallery17595"><img class="img" src="images/IAUMembers/s_17595_1.jpg" alt="See image"></a> <span class="no">-</span>
+				  <a title="http://www.usal.es" href="images/IAUMembers/17595_2.jpg" class="fancybox" rel="gallery17595"><img class="img" src="images/IAUMembers/s_17595_2.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ricardo Rivero Ortega (Head) &ndash; D. Fernando E. Almaraz Menéndez (Senior Administrative Officer) &ndash; Luis J. Mediero Oslé (Senior Administrative Officer) &ndash; D. Efrem Yildiz Sadak (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture and Environmental Studies; Biology; Biology and Functional Genomics (IBFG); Chemistry; Community Integration (INICO); Economics and Business Administration; Education; Education (Ávila); Education Sciences (IUCE); European College of Aeronautics (Matacán, Salamanca); Fine Arts; Fundamental Physics and Mathematics; Geography and History; Industrial Engineering; Labour Relations (Zamora); Latin America; Law; Luso Hispanic for Agricultural Research; Medicine; Medieval and Renaissance Studies (IEMYR); Molecular and Cell Biology of Cancer; Multidisciplinary Institute for Enterprise (IME); Neuroscience (Castilla y León); Nursing (Ávila); Nursing (INSALUD, Zamora); Nursing and Physiotherapy; Pharmacy; Philology; Philosophy; Polytechnic; Psychology; Research in Art and Animation Technology (ATA); Science; Social Sciences; Studies of Science and Technology; Teacher Training (Zamora); Translation and Documentation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLjM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019326&nbsp;&nbsp;</span>	      <li class="iaumember clearfix plus">
+		<div class="tools">
+				  <label for="19326"><input class="case" type="checkbox" onClick="Coche(19326,0);" name="result[]" id="19326" value="19326"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <img src="images/iau_member.png" alt="IAU Member" title="IAU Member" class="member">
+				  <h3>
+		    <a href="#result19326" id="result19326" title="Expand result">
+		    <span>Expand result for </span>University of Vic-Central University of Catalunya</a>&nbsp;&nbsp;&nbsp;&nbsp;<img style="max-height:50px;width:auto;vertical-align: bottom;" src="images/IAUMembers/s_19326_logo.jpg" /></h3>
+		  <p class="i_name">
+		Universitat de Vic-Universitat Central de Catalunya (UVIC)		  </p>
+		 <p class="gallery">
+				  <a title="http://www.uvic.es" href="images/IAUMembers/19326_1.jpg" class="fancybox" rel="gallery19326"><img class="img" src="images/IAUMembers/s_19326_1.jpg" alt="See image"></a> <span class="no">-</span>
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jordi Montaña Matosas (Head) &ndash; M. Carme Sanmartí i Roset (Senior Administrative Officer) &ndash; Joan Masnou Suriñach (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Communication Studies; Design; Education, Translation and Humanities; Health Sciences; Health Sciences and Welfare; Languages; Management and Administration; Polytechnic; Women's Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLEM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019311&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19311"><input class="case" type="checkbox" onClick="Coche(19311,0);" name="result[]" id="19311" value="19311"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result19311" id="result19311" title="Expand result">
+		    <span>Expand result for </span>Abat Oliba CEU University</a></h3>
+		  <p class="i_name">
+		Universitat Abat Oliba CEU (UAOC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Carlos Pérez del Valle (Head) &ndash; Ferran Porta Jacques (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Communication; Economics and Business Studies; Humanities and Educational Sciences; Law and Political Science; Psychology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLDMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017133&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17133"><input class="case" type="checkbox" onClick="Coche(17133,0);" name="result[]" id="17133" value="17133"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17133" id="result17133" title="Expand result">
+		    <span>Expand result for </span>Alfonso X El Sabio University</a></h3>
+		  <p class="i_name">
+		Universidad Alfonso X El Sabio (UAX)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Domínguez de Posada Rodríguez (Head) &ndash; Antonio Bellver Sánchez (Senior Administrative Officer) &ndash; Iris Núñez Trebol (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Languages; Educational Sciences; Health Sciences; Polytechnic; Social Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxRLFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-008985&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="8985"><input class="case" type="checkbox" onClick="Coche(8985,0);" name="result[]" id="8985" value="8985"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result8985" id="result8985" title="Expand result">
+		    <span>Expand result for </span>Art Institute of the Community of Valencia</a></h3>
+		  <p class="i_name">
+		Instituto Superior de Enseñanzas Artísticas de la Comunitat Valenciana		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vicente Llimerá Dus (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dance; Design; Music; Plastic Arts; Theatre</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uI0RYLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019313&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19313"><input class="case" type="checkbox" onClick="Coche(19313,0);" name="result[]" id="19313" value="19313"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result19313" id="result19313" title="Expand result">
+		    <span>Expand result for </span>Autonomous University of Barcelona</a></h3>
+		  <p class="i_name">
+		Universitat Autónoma de Barcelona &ndash; Universidad Autónoma de Barcelona (UAB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ferran Sancho Pifarré (Head) &ndash; Judith Solé Resina (Senior Administrative Officer) &ndash; Lluís Quintana Trias (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Ancient Middle East Studies; Animal Biotechnology and Gene Therapy; Arts and Philosophy; Biosciences; Business Administration; Communication; Communication Studies; Computer Science; Design and Art; Dexeus; Ecology and Forestry; Economic Analysis; Economics and Business Studies; Education; Educational Sciences; Engineering; Environment; Environmental Studies; European Studies; Food Technology; Food Technology Plant ; Franquism and Democracy; Government and Public Policy; Health Sciences; High Energy Physics; History of Science; Human Rights Studies; International and Intercultural Studies; Law; Management and Public Administration; Materials Science; Medical Research; Medicine; Medieval Studies; Microelectronics Studies; Musicological Research and Documentation; Near-East Studies; Neuro-rehabilitation; Neurosciences; Nursing; Nursing and Physiotherapy; Ocular Microsurgery; Parc Taulí; Political and Social Sciences; Political Science and Sociology; Psychology; Regional and Metropolitan Studies; Research and Artificial Intelligence; Science; Science and Environmental Technology; Social and Political Science; Studies in Peace and Disarmament; Study of Organizations and Economic Decisions; Tourism and Hotel Management; Translation and Interpreting; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLDMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017213&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17213"><input class="case" type="checkbox" onClick="Coche(17213,0);" name="result[]" id="17213" value="17213"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17213" id="result17213" title="Expand result">
+		    <span>Expand result for </span>Autonomous University of Madrid</a></h3>
+		  <p class="i_name">
+		Universidad Autónoma de Madrid (UAM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rafael Garesse Alarcón (Head) &ndash; Amaya Mendikoetxea Pelayo (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Computer Science; Economics and Business Administration; Law; Medicine; Nursing; Philosophy and Letters; Polytechnic; Psychology; Science; Teacher Training and Education; University Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxSLDMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017262&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17262"><input class="case" type="checkbox" onClick="Coche(17262,0);" name="result[]" id="17262" value="17262"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17262" id="result17262" title="Expand result">
+		    <span>Expand result for </span>Camilo José Cela University</a></h3>
+		  <p class="i_name">
+		Universidad Camilo José Cela (UCJC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Eduardo Nolla Blanco (Head) &ndash; Ignacio Castillo Cebrián (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Technology; Communication Sciences; Health Sciences; Law and Economics; Social Sciences and Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxSLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017265&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17265"><input class="case" type="checkbox" onClick="Coche(17265,0);" name="result[]" id="17265" value="17265"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17265" id="result17265" title="Expand result">
+		    <span>Expand result for </span>Cardinal Herrera-CEU University</a></h3>
+		  <p class="i_name">
+		Universidad Cardenal Herrera-CEU (UCH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rosa Visiedo Claverol (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health Sciences; Humanities and Communication Sciences; Law, Business and Political Science; Technical Education; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxSLUM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017266&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17266"><input class="case" type="checkbox" onClick="Coche(17266,0);" name="result[]" id="17266" value="17266"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17266" id="result17266" title="Expand result">
+		    <span>Expand result for </span>Carlos III University of Madrid</a></h3>
+		  <p class="i_name">
+		Universidad Carlos III de Madrid (UCAR)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Romo (Head) &ndash; Juan Manuel Moreno Alvarez (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Studies in Economics; Automotive Vehicle Safety; Chemistry and Materials; Comparative Public Law; Cultural Communication; Culture and Technology; Documentation and Information Management; Economic History and Institutions; Engineering; Human Rights; Humanities, Documentation and Communication Studies; International and European Studies; Law and Economics; Polytechnic; Social Sciences and Law; Social Security; Society and Political Classical Studies; Territorial, Urban and Environmental Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxSLUM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017285&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17285"><input class="case" type="checkbox" onClick="Coche(17285,0);" name="result[]" id="17285" value="17285"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17285" id="result17285" title="Expand result">
+		    <span>Expand result for </span>Catholic University of Ávila</a></h3>
+		  <p class="i_name">
+		Universidad Católica Santa Teresa de Jesús de Ávila (UCAVILA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>María del Rosario Sáez Yuguero (Head) &ndash; Vicente Enciso de Yzaguirre (Senior Administrative Officer) &ndash; Javier Velázquez Saornil (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Science; Business; Law and Social Sciences; Religious Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxSLiM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017349&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17349"><input class="case" type="checkbox" onClick="Coche(17349,0);" name="result[]" id="17349" value="17349"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17349" id="result17349" title="Expand result">
+		    <span>Expand result for </span>CEU San Pablo University</a></h3>
+		  <p class="i_name">
+		Universidad CEU San Pablo (UCEU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Carlos Domínguez (Head) &ndash; Alberto Díaz-Romeral Gómez (Senior Administrative Officer) &ndash; José Luis Piñar Mañas (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Democracy; Economics and Business Administration; European Studies; Family Studies; Humanities and Communication; Law; Medicine; Pharmacy; Polytechnic</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLSNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018259&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18259"><input class="case" type="checkbox" onClick="Coche(18259,0);" name="result[]" id="18259" value="18259"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result18259" id="result18259" title="Expand result">
+		    <span>Expand result for </span>Comillas Pontifical University</a></h3>
+		  <p class="i_name">
+		Universidad Pontificia Comillas (UPCO)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Julio Luis Martínez Martíner, S.J. (Head) &ndash; Clara Martínez García (Senior Administrative Officer) &ndash; Romano Gianetti (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration and Management; Canon Law; Economics and Business Management; Educational Sciences; Engineering; Family Studies; Humanities and Social Sciences; Law; Modern Languages; Nursing and Physiotherapy; Technological Research; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BSLTNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017362&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17362"><input class="case" type="checkbox" onClick="Coche(17362,0);" name="result[]" id="17362" value="17362"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17362" id="result17362" title="Expand result">
+		    <span>Expand result for </span>Complutense University of Madrid</a></h3>
+		  <p class="i_name">
+		Universidad Complutense de Madrid (UCM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Carrillo Ménendez (Head) &ndash; Araceli Manjón-Cabeza Olmeda (Senior Administrative Officer) &ndash; Andrés Arias Astray (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Astronomy and Geodesy; Biochemistry; Biology; Chemistry; Computer Science; Documentation Sciences; Economics and Business Administration; Education; European Economics; European Law; Fine Arts; Geography and History; Geology; Geoscience; Higher Education; Higher Studies; Humanities and Science and Higher Education; Information Sciences; Law; Mathematics; Medicine; Musicology; Nursing, Physiotherapy and Podology; Nutrition and Bromatology; Odontology; Optics and Optometry; Pharmacy; Philology; Philosophy; Physics; Political Science and Sociology; Psychology; Public Health; Religion Studies; Statistics; Teacher Training; University Studies; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-022100&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="22100"><input class="case" type="checkbox" onClick="Coche(22100,0);" name="result[]" id="22100" value="22100"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result22100" id="result22100" title="Expand result">
+		    <span>Expand result for </span>European Institute of Design, Madrid</a></h3>
+		  <p class="i_name">
+		Instituto Europeo di Design, Madrid (IED Madrid)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Design</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyhRLCNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017758&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17758"><input class="case" type="checkbox" onClick="Coche(17758,0);" name="result[]" id="17758" value="17758"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17758" id="result17758" title="Expand result">
+		    <span>Expand result for </span>European University of Madrid</a></h3>
+		  <p class="i_name">
+		Universidad Europea de Madrid (UEM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Águeda Benito Capa (Head) &ndash; Elena de la Fuente García (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Arts and Communication; Biomedicine; Health Sciences; Physical Education and Sports; Polytechnic; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxXLTNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023452&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23452"><input class="case" type="checkbox" onClick="Coche(23452,0);" name="result[]" id="23452" value="23452"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result23452" id="result23452" title="Expand result">
+		    <span>Expand result for </span>European University of the Atlantic</a></h3>
+		  <p class="i_name">
+		Universidad Europea del Atlántico		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ruben Calderon (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health Sciences; Social Sciences and Humanities</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxULTMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017779&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17779"><input class="case" type="checkbox" onClick="Coche(17779,0);" name="result[]" id="17779" value="17779"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17779" id="result17779" title="Expand result">
+		    <span>Expand result for </span>Francisco de Vitoria University</a></h3>
+		  <p class="i_name">
+		Universidad Francisco de Vitoria (UFV)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Daniel Sada Castaño (Head) &ndash; José Antonio Verdejo Delgado (Senior Administrative Officer) &ndash; Juan Pérez Miranda (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biosanitary Sciences; Business; Communication Sciences; Educational Sciences; Engineering and Architecture; Law, Economics and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxXLVNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007713&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="7713"><input class="case" type="checkbox" onClick="Coche(7713,0);" name="result[]" id="7713" value="7713"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result7713" id="result7713" title="Expand result">
+		    <span>Expand result for </span>IE University</a></h3>
+		  <p class="i_name">
+		IE Universidad		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luis Martínez Zorzo (Head) &ndash; Carmina Rodríguez Hermoso (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Design; Business; Human Sciences and Technology; International Relations; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzxRLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-007936&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="7936"><input class="case" type="checkbox" onClick="Coche(7936,0);" name="result[]" id="7936" value="7936"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result7936" id="result7936" title="Expand result">
+		    <span>Expand result for </span>Institute of the Theatre, Barcelona</a></h3>
+		  <p class="i_name">
+		Institut del Teatre		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jordi Font I Cardona (Head) &ndash; Ramon Jovells I Argelich (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Dance; Drama; Performing Arts Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tU0RTLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017869&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17869"><input class="case" type="checkbox" onClick="Coche(17869,0);" name="result[]" id="17869" value="17869"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17869" id="result17869" title="Expand result">
+		    <span>Expand result for </span>International University Menéndez Pelayo</a></h3>
+		  <p class="i_name">
+		Universidad Internacional Menéndez Pelayo (UIMP)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>César Nombela (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biodiversity in Tropical Zones; Constitutional Law; Crystallography; Economics and Finance; Global Change; International Business; Phonetics and Phonology; Plastics Technology; Renewable Energies; Spanish Language and Culture for Foreign Students</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxYLUNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017858&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17858"><input class="case" type="checkbox" onClick="Coche(17858,0);" name="result[]" id="17858" value="17858"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17858" id="result17858" title="Expand result">
+		    <span>Expand result for </span>International University of Andalusia</a></h3>
+		  <p class="i_name">
+		Universidad Internacional de Andalucía (UNIA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Sánchez Maldonado (Head) &ndash; Rafael Serrano Aguilar (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Experimental Sciences and Technology; Health Sciences; Social Sciences and Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxYLTNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019343&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19343"><input class="case" type="checkbox" onClick="Coche(19343,0);" name="result[]" id="19343" value="19343"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result19343" id="result19343" title="Expand result">
+		    <span>Expand result for </span>International University of Catalonia</a></h3>
+		  <p class="i_name">
+		Universitat Internacional de Catalunya &ndash; Universidad Internacional de Cataluña (UIC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Pere Alavedra i Ribot (Head) &ndash; Belén Castro Bañeres (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Bioethics; Communication Sciences; Dentistry; Economics and Social Sciences; Education; European Studies; Family Studies; Humanities; Law; Medicine and Health Sciences; Public Health</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLSMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017864&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17864"><input class="case" type="checkbox" onClick="Coche(17864,0);" name="result[]" id="17864" value="17864"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17864" id="result17864" title="Expand result">
+		    <span>Expand result for </span>International University of La Rioja</a></h3>
+		  <p class="i_name">
+		Universidad Internacional de La Rioja		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José María Vazquez García Peñuela (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business and Communication; Education; Engineering; Health Sciences; Humanities; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxYLUMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023035&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23035"><input class="case" type="checkbox" onClick="Coche(23035,0);" name="result[]" id="23035" value="23035"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result23035" id="result23035" title="Expand result">
+		    <span>Expand result for </span>International University of Valencia</a></h3>
+		  <p class="i_name">
+		Universidad Internacional de Valencia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Manuel Badenas (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Astronomy and Astrophysics; Computer Engineering; Economics; Education; Law; Nutrition; Psychology; Translation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxQLFM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019344&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19344"><input class="case" type="checkbox" onClick="Coche(19344,0);" name="result[]" id="19344" value="19344"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result19344" id="result19344" title="Expand result">
+		    <span>Expand result for </span>Jaume I University</a></h3>
+		  <p class="i_name">
+		Universitat Jaume I &ndash; Universidad de Jaime I (UJCS)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vicent Climent Jordà (Head) &ndash; José Luis Blasco Díaz (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Ceramic Technology; Health Sciences; Humanities and Social Sciences; International Economics; Law and Economics; Technology and Experimental Sciences; Valencian Philology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLSMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003212&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3212"><input class="case" type="checkbox" onClick="Coche(3212,0);" name="result[]" id="3212" value="3212"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3212" id="result3212" title="Expand result">
+		    <span>Expand result for </span>Joaquín Rodrigo Music Conservatoire of Valencia</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Música  de Valencia Joaquín Rodrigo		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Eduardo Montesinos Comas (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Composition, Singing and Conducting; Pedagogy and Musicology; Polyphonics; Strings; Wind Instruments</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhRLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003213&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3213"><input class="case" type="checkbox" onClick="Coche(3213,0);" name="result[]" id="3213" value="3213"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3213" id="result3213" title="Expand result">
+		    <span>Expand result for </span>Juan Crisóstomo de Arriaga Music Conservatoire, Bilbao</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Música Juan Crisóstomo de Arriaga de Bilbao		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ana Aranguren (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Lute; Music Education; Musical Instruments; Singing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhRLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018315&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18315"><input class="case" type="checkbox" onClick="Coche(18315,0);" name="result[]" id="18315" value="18315"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result18315" id="result18315" title="Expand result">
+		    <span>Expand result for </span>King Juan Carlos University</a></h3>
+		  <p class="i_name">
+		Universidad Rey Juan Carlos (URJC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fernando Suárez Bilbao (Head) &ndash; Andrés Gambra Gutiérrez (Senior Administrative Officer) &ndash; Mª Teresa Sánchez Magdaleno (Senior Administrative Officer) &ndash; David Ríos Insua (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Communication; Computer Engineering; Cooperation and Voluntary Service; Dance; European Studies and Documentation; Experimental Science and Technology; Foreign Languages; Health Sciences; Humanities; International Law; Law and Social Sciences; Public Law; Telecommunications Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BTLDM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023033&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="23033"><input class="case" type="checkbox" onClick="Coche(23033,0);" name="result[]" id="23033" value="23033"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result23033" id="result23033" title="Expand result">
+		    <span>Expand result for </span>Loyola University Andalusia</a></h3>
+		  <p class="i_name">
+		Universidad Loyola Andalucía		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Gabriel Pérez Alcalá (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Business Studies; Engineering; Leadership; Social Sciences, Law and Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxQLFMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003214&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3214"><input class="case" type="checkbox" onClick="Coche(3214,0);" name="result[]" id="3214" value="3214"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3214" id="result3214" title="Expand result">
+		    <span>Expand result for </span>Manuel Castillo Music Conservatoire, Seville</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Música Manuel Castillo de Sevilla		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Israel Sánchez López (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Composition; Keyboards; Musicology; Plucked Strings and Singing; Strings; Wind/Percussion</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhRLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003207&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3207"><input class="case" type="checkbox" onClick="Coche(3207,0);" name="result[]" id="3207" value="3207"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3207" id="result3207" title="Expand result">
+		    <span>Expand result for </span>Manuel Massotti Littel Music Conservatoire of Murcia</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Musica de Murcia Manuel Massotti Littel		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Miguel Ángel Centenero Gallego (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Chamber Music; Composition; Musicology; Pedagogy; Percussion; Piano; Plucked Strings; Strings; Wind Instruments</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhQLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017759&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17759"><input class="case" type="checkbox" onClick="Coche(17759,0);" name="result[]" id="17759" value="17759"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17759" id="result17759" title="Expand result">
+		    <span>Expand result for </span>Miguel de Cervantes European University</a></h3>
+		  <p class="i_name">
+		Universidad Europea Miguel de Cervantes (UEMC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Imelda Rodríguez Escanciano (Head) &ndash; Miguel Ángel Sendín García (Senior Administrative Officer) &ndash; María Merino Bobillo (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health Sciences; Polytechnic; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxXLTNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017983&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17983"><input class="case" type="checkbox" onClick="Coche(17983,0);" name="result[]" id="17983" value="17983"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17983" id="result17983" title="Expand result">
+		    <span>Expand result for </span>Miguel Hernández University of Elche</a></h3>
+		  <p class="i_name">
+		Universidad Miguel Hernández de Elche (UMH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jesús Tadeo Pastor Ciruana (Head) &ndash; María Mercedes Sánchez Castillo (Senior Administrative Officer) &ndash; Manuel Miguel Jordán Vidal (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Experimental Sciences; Fine Arts; Law and Social Sciences ; Medicine; Pharmacy; Polytechnic; Social and Health Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxZLiMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003199&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3199"><input class="case" type="checkbox" onClick="Coche(3199,0);" name="result[]" id="3199" value="3199"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3199" id="result3199" title="Expand result">
+		    <span>Expand result for </span>Municipal Music Conservatoire of  Barcelona</a></h3>
+		  <p class="i_name">
+		Conservatorio Municipal de Música de Barcelona		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Albert Llanas (Head) &ndash; David Martí Garcés (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Musical Language and Theory; Piano; Polyphonic Instruments; Singing; String Instruments; Wind and Percussion Instruments</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyRZLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004782&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4782"><input class="case" type="checkbox" onClick="Coche(4782,0);" name="result[]" id="4782" value="4782"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result4782" id="result4782" title="Expand result">
+		    <span>Expand result for </span>Murcia School of Drama</a></h3>
+		  <p class="i_name">
+		Escuela Superior de Arte Dramático de Murcia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Ángel Serrano Masegoso. (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Body; Interpretation; Stage Direction; Theatre; Voice and Language</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzxYLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003190&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3190"><input class="case" type="checkbox" onClick="Coche(3190,0);" name="result[]" id="3190" value="3190"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3190" id="result3190" title="Expand result">
+		    <span>Expand result for </span>Music and Dance Conservatoire of the Ballearic Islands</a></h3>
+		  <p class="i_name">
+		Conservatori Superior de Música I Danza de les Illes Balears		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Catalina Pons-Estel Tugores (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Composition; Musical Instruments; Musicology; Singing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyRZLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003201&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3201"><input class="case" type="checkbox" onClick="Coche(3201,0);" name="result[]" id="3201" value="3201"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3201" id="result3201" title="Expand result">
+		    <span>Expand result for </span>Music Conservatoire of A Coruña</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Música da Coruña		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rodolfo García (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Accordeon; Composition; Guitar; Harp; Jazz; Musicology; Orchestra; Pedagogy; Percussion; Piano; Singing; Strings; Wind Instruments</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhQLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003202&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3202"><input class="case" type="checkbox" onClick="Coche(3202,0);" name="result[]" id="3202" value="3202"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3202" id="result3202" title="Expand result">
+		    <span>Expand result for </span>Music Conservatoire of Aragon</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Música de Aragón		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Agustín Charles Soler (Head) &ndash; Gloria Martínez (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Conducting; Music Theory and Composition; Musical Instruments</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhQLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003200&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3200"><input class="case" type="checkbox" onClick="Coche(3200,0);" name="result[]" id="3200" value="3200"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3200" id="result3200" title="Expand result">
+		    <span>Expand result for </span>Music Conservatoire of Extremadura</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Música Bonifacio Gil		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Miren Gabirondo Olazabal (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Keyboard Instruments; Singing, Music Theory and Composition; String Instruments; Wind and Percussion Instruments</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhQLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003206&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3206"><input class="case" type="checkbox" onClick="Coche(3206,0);" name="result[]" id="3206" value="3206"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3206" id="result3206" title="Expand result">
+		    <span>Expand result for </span>Music Conservatoire of Málaga</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Música de Málaga		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Francisco Martínez González (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Composition; Conducting; Instrumental Music and Singing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhQLUBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003208&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3208"><input class="case" type="checkbox" onClick="Coche(3208,0);" name="result[]" id="3208" value="3208"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3208" id="result3208" title="Expand result">
+		    <span>Expand result for </span>Music Conservatoire of Navarra</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Música de Navarra		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Julio Escauriaza de las Heras (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Composition; Jazz; Keyboards; Musicology; Pedagogy; Singing; Strings; Wind Instruments and Percussion</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhQLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003209&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3209"><input class="case" type="checkbox" onClick="Coche(3209,0);" name="result[]" id="3209" value="3209"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3209" id="result3209" title="Expand result">
+		    <span>Expand result for </span>Music Conservatoire of Salamanca</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Música de Salamanca		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Luis Dalda Gerona (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Composition; Musical Instruments; Musicology and Ethno-Musicology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhQLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003203&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3203"><input class="case" type="checkbox" onClick="Coche(3203,0);" name="result[]" id="3203" value="3203"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3203" id="result3203" title="Expand result">
+		    <span>Expand result for </span>Music Conservatoire of the Canary Islands</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Música de Canarias		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sergio A. Alonso Santana (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Keyboard Pedagogy; Musicology and Humanities; Pedagogy; Singing; Teaching of String Instruments; Teaching of Wind Instruments and Percussions</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhQLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003189&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3189"><input class="case" type="checkbox" onClick="Coche(3189,0);" name="result[]" id="3189" value="3189"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3189" id="result3189" title="Expand result">
+		    <span>Expand result for </span>Music Conservatoire of the Liceu</a></h3>
+		  <p class="i_name">
+		Conservatori Superior de Música del Liceu		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Maria Serrat i Martín (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Composition; Conducting; Flamenco Guitar; Modern Music and Jazz; Musical Instruments; Pedagogy; Singing</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyRYLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003211&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3211"><input class="case" type="checkbox" onClick="Coche(3211,0);" name="result[]" id="3211" value="3211"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3211" id="result3211" title="Expand result">
+		    <span>Expand result for </span>Music Conservatoire of the Principality of Asturias</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Música del Principado de Asturias		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>D. Fernando Agüería Cueva (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Improvisation and Accompaniment; Keyboards; Music Composition and Theory; Singing; Strings; Wind Instruments</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhRLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003210&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3210"><input class="case" type="checkbox" onClick="Coche(3210,0);" name="result[]" id="3210" value="3210"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3210" id="result3210" title="Expand result">
+		    <span>Expand result for </span>Music Conservatoire of Vigo</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Música de Vigo		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rafael Yebra Rivera (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Composition; Guitar; Musicology; Orchestra; Pedagogy; Percussion; Piano; Singing; Sound; Strings; Traditional and Popular Musical Instruments; Traditional Music; Wind Instruments</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhRLGBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004591&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4591"><input class="case" type="checkbox" onClick="Coche(4591,0);" name="result[]" id="4591" value="4591"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result4591" id="result4591" title="Expand result">
+		    <span>Expand result for </span>Music School of Catalonia</a></h3>
+		  <p class="i_name">
+		Escola Superior de Música de Catalunya		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Josep Borràs (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Classical and Contemporary Music; Early Music; Jazz and Modern Music; Musicology; Pedagogy; Promotion and Management; Sound; Theory, Composition and Conducting; Traditional Music</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRZLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012242&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12242"><input class="case" type="checkbox" onClick="Coche(12242,0);" name="result[]" id="12242" value="12242"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result12242" id="result12242" title="Expand result">
+		    <span>Expand result for </span>MUSIKENE Music Centre of the Basque Country</a></h3>
+		  <p class="i_name">
+		MUSIKENE Centro Superior de Música del País Vasco		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Carlos Pérez (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Analysis, Composition and Conducting Studies; Jazz Studies; Keyboard Studies; Pedagogy and Research; String, Guitar and Harp Studies; Theory and History, Traditional Music, Technologies, Body Learning and Communication; Vocal Studies; Woodwind, Brass and Percussion Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhSLSMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017165&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17165"><input class="case" type="checkbox" onClick="Coche(17165,0);" name="result[]" id="17165" value="17165"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17165" id="result17165" title="Expand result">
+		    <span>Expand result for </span>Nebrija University</a></h3>
+		  <p class="i_name">
+		Universidad Antonio de Nebrija (UAN)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Cayón Peña (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Letters; Business; Communication Sciences; Health Sciences; Polytechnic and School of Architecture; Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxRLUM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017110&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17110"><input class="case" type="checkbox" onClick="Coche(17110,0);" name="result[]" id="17110" value="17110"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17110" id="result17110" title="Expand result">
+		    <span>Expand result for </span>Open University of Madrid</a></h3>
+		  <p class="i_name">
+		Universidad a Distancia de Madrid		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José André s Sánchez Pedroche (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration and Economics; Communications and Marketing; Criminology and Safety; History and Humanities; Industrial Engineering, Computer Science and Telecommunications; Labour and Human Resources; Law; Quality and Environment; Tourism and Cultural Heritage</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxRLDNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003215&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="3215"><input class="case" type="checkbox" onClick="Coche(3215,0);" name="result[]" id="3215" value="3215"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3215" id="result3215" title="Expand result">
+		    <span>Expand result for </span>Oscar Esplá Music Conservatoire, Alicante</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Música Oscar Esplá de Alicante		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Vicente Asensi Seva (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Conducting; Music; Music Theory and Composition; Musical Instruments</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhRLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018148&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18148"><input class="case" type="checkbox" onClick="Coche(18148,0);" name="result[]" id="18148" value="18148"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result18148" id="result18148" title="Expand result">
+		    <span>Expand result for </span>Pablo de Olavide University</a></h3>
+		  <p class="i_name">
+		Universidad Pablo de Olavide (UPO)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vicente Guzmán Fluja (Head) &ndash; Fernando Contreras Ibáñez (Senior Administrative Officer) &ndash; Pilar Rodríguez Reina (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Studies; Experimental Science; Humanities; Law; Polytechnic; Social Sciences; Sports Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BRLSNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018211&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18211"><input class="case" type="checkbox" onClick="Coche(18211,0);" name="result[]" id="18211" value="18211"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result18211" id="result18211" title="Expand result">
+		    <span>Expand result for </span>Polytechnic University of Cartagena</a></h3>
+		  <p class="i_name">
+		Universidad Politécnica de Cartagena (UPCT)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Antonio Franco Leemhuis (Head) &ndash; José María Salinas Leandro (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Engineering; Architecture and Building Engineering; Business Studies; Industrial Engineering; Naval and Marine Engineering; Road, Canal, Harbour and Mining Engineering; Telecommunications Engineering; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BSLDMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018236&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18236"><input class="case" type="checkbox" onClick="Coche(18236,0);" name="result[]" id="18236" value="18236"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result18236" id="result18236" title="Expand result">
+		    <span>Expand result for </span>Polytechnic University of Valencia</a></h3>
+		  <p class="i_name">
+		Universitat Politècnica de València (UPVA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Francisco José Mora Mas (Head) &ndash; Vicent Castellano i Cervera (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agri-Food Business Management; Agricultural Chemical Ecology; Agricultural Engineering and Natural Environment; Applied Computer Science; Architecture; Automated Manufacturing and Production Design; Bioengineering; Biomaterials; Business Administration and  Management; Civil Engineering; Construction Engineering; Design Engineering; Economics Engineering; Fine Arts; Food Microbiology; Geodesy, Cartography and Surveying Engineering; Industrial Engineering; Intelligent Machines; Irrigation Studies; Management and Production Engineering; Nanophotonics Technology; Polytechnic; Postgraduate Studies; Preservation and Improvement of Valencian Agrodiversity; Telecommunications Engineering; Thermal Engines</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BSLFM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019360&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19360"><input class="case" type="checkbox" onClick="Coche(19360,0);" name="result[]" id="19360" value="19360"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result19360" id="result19360" title="Expand result">
+		    <span>Expand result for </span>Pompeu Fabra University</a></h3>
+		  <p class="i_name">
+		Universitat Pompeu Fabra &ndash; Universidad Pompeu Fabra (UPF)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jaume Casals Pons (Head) &ndash; Sara López Selga (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Barcelona Biomedical Research Park; Business Studies; Communication; Continuing Education; Design; Economics; Economics and Business Sciences; Experimental Sciences and Health; Genomic Regulations; Health and Life Sciences; Humanities; Information and Communications Technology; International Economics; International Trade; Jaume Vicens i Vives University Institute of History; Law; Medical Research; Nursing; Political and Social Sciences; Polytechnic; Territorial Studies; Translation and Interpretation; Translation and Philology; University Institute for Applied Linguistics; University Institute of Culture</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLUNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018261&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18261"><input class="case" type="checkbox" onClick="Coche(18261,0);" name="result[]" id="18261" value="18261"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result18261" id="result18261" title="Expand result">
+		    <span>Expand result for </span>Pontifical University of Salamanca</a></h3>
+		  <p class="i_name">
+		Universidad Pontificia de Salamanca (UPSA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ángel Galindo (Head) &ndash; Miguel Ángel Hernández Robledo (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Canon Law; Communication; Computer Science; Education; Educational Sciences; European Studies and Human Rights; Family Studies; Health Sciences; Ibero-American Thought; Pastoral Studies; Philosophy; Psychology; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BSLUMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018302&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18302"><input class="case" type="checkbox" onClick="Coche(18302,0);" name="result[]" id="18302" value="18302"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result18302" id="result18302" title="Expand result">
+		    <span>Expand result for </span>Public University of Navarra</a></h3>
+		  <p class="i_name">
+		Universidad Pública de Navarra (UPNA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alfonso Carlosena (Head) &ndash; Javier Echeverria Martorell (Senior Administrative Officer) &ndash; Javier Casalí Sarasíbar (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural  Engineering; Agricultural Biotechnology; Economics and Business; Health Studies; Human and Social Sciences; Industrial and Telecommunications Engineering; Legal Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BTLCMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-003204&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="3204"><input class="case" type="checkbox" onClick="Coche(3204,0);" name="result[]" id="3204" value="3204"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result3204" id="result3204" title="Expand result">
+		    <span>Expand result for </span>Rafael Orozco Music Conservatoire of Cordoba</a></h3>
+		  <p class="i_name">
+		Conservatorio Superior de Música de Córdoba Rafael Orozco		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan de Dios García Aguilera (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Composition; Keyboards; Musicology; Plucked Strings; Strings; Wind Instruments/Percussions</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sUyhQLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019362&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19362"><input class="case" type="checkbox" onClick="Coche(19362,0);" name="result[]" id="19362" value="19362"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result19362" id="result19362" title="Expand result">
+		    <span>Expand result for </span>Ramon Llull University</a></h3>
+		  <p class="i_name">
+		Universitat Ramon Llull (URLL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Josep Maria Garrell i Guiu (Head) &ndash; Anna Berga i Timoneda (Senior Administrative Officer) &ndash; Carlo Maria Gallucci Calabrese (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Bioethics; Communication  and International Relations; Engineering; Health Sciences; Law; Management; Mental Health; Philosophy; Psychology, Educational and Sports Sciences; Social Education and Social Work; Technical; Tourism and Hotel Management</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLUMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019365&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="19365"><input class="case" type="checkbox" onClick="Coche(19365,0);" name="result[]" id="19365" value="19365"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result19365" id="result19365" title="Expand result">
+		    <span>Expand result for </span>Rovira i Virgili University</a></h3>
+		  <p class="i_name">
+		Universitat Rovira i Virgili &ndash; Universidad Rovira y Virgili (URV)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Francesc Xavier Grau i Vidal (Head) &ndash; Antoni González Senmarti (Senior Administrative Officer) &ndash; Marina Casals Sala (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Biotechnology; Architecture; Arts; Behavioural Assessment; Bettatur School of Tourism; Catalan Institute of Chemical Research; Catalan Institute of Classic Archaeology; Catalan Institute of Human Palaeocology and Social Evolution; Catalyst Development for Sustainable Processes; Chemical Engineering; Chemical Technology; Chemistry; Economics and Business Sciences; Educational Sciences and Psychology; Electronic Engineering; Engineering; Environmental and Industrial Applications of Catalysis; Higher Studies in Aviation (CESDA); Legal Sciences; Medicine and Health Sciences; Nursing; Oenology; The Pere Virgili Institute for Health Research; Tourism; University School for Labour Relations</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLUM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013929&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="13929"><input class="case" type="checkbox" onClick="Coche(13929,0);" name="result[]" id="13929" value="13929"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result13929" id="result13929" title="Expand result">
+		    <span>Expand result for </span>Royal Music Conservatoire of Madrid</a></h3>
+		  <p class="i_name">
+		Real Conservatorio Superior de Música de Madrid		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ana Guijarro Malagón (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Ancient Music; Composition; Conducting and Interpretation; Keyboards; Musicology; Pedagogy; Piano; Strings; Wind/Percussion</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxZLENEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013931&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13931"><input class="case" type="checkbox" onClick="Coche(13931,0);" name="result[]" id="13931" value="13931"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result13931" id="result13931" title="Expand result">
+		    <span>Expand result for </span>Royal School of Dramatic Art of Madrid</a></h3>
+		  <p class="i_name">
+		Real Escuela Superior de Arte Dramático de Madrid		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Rafael Ruiz (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Interpretation; Movement; Stage Direction & Dramaturgy; Theatre Production; Voice and Language</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxZLFMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017309&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17309"><input class="case" type="checkbox" onClick="Coche(17309,0);" name="result[]" id="17309" value="17309"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17309" id="result17309" title="Expand result">
+		    <span>Expand result for </span>Saint Vincent the Martyr Catholic University of Valencia</a></h3>
+		  <p class="i_name">
+		Universidad Católica de Valencia San Vicente Mártir (UCV)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Alfredo Peris i Cancio (Head) &ndash; Juan Morote (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Studies and Economics; Canon Law; Law; Medicine and Dentistry; Nursing; Philosophy, Anthropology and Social Work; Physical Education and Sports; Physical Therapy and Podology; Psychology, Teacher Training and Education; Veterinary and Experimental Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLCNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017317&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17317"><input class="case" type="checkbox" onClick="Coche(17317,0);" name="result[]" id="17317" value="17317"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17317" id="result17317" title="Expand result">
+		    <span>Expand result for </span>San Antonio Catholic University of Murcia</a></h3>
+		  <p class="i_name">
+		Universidad Católica San Antonio de Murcia (UCAM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Josefina García Lozano (Head) &ndash; José Alarcón Teruel (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Health Sciences; Law and Business Studies; Nursing; Polytechnic; Social Sciences and Communication; Sports</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLDM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018328&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="18328"><input class="case" type="checkbox" onClick="Coche(18328,0);" name="result[]" id="18328" value="18328"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result18328" id="result18328" title="Expand result">
+		    <span>Expand result for </span>San Jorge University</a></h3>
+		  <p class="i_name">
+		Universidad San Jorge		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Carlos Pérez Caseiras (Head) &ndash; Jesús  Cobos López (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Communication; Computer Engineering; Environment; Government and Leadership; Health Sciences; Humanism and Society; Modern Languages</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BTLENAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004564&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4564"><input class="case" type="checkbox" onClick="Coche(4564,0);" name="result[]" id="4564" value="4564"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result4564" id="result4564" title="Expand result">
+		    <span>Expand result for </span>School of Art Conservation of Galicia</a></h3>
+		  <p class="i_name">
+		Escola Superior de Conservación e Restauración de Bens Culturais de Galicia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Jose A. Quinteiro (Head) &ndash; Carmen Hermo Sánchez (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Conservation and Restoration of Archaeological Objects; Conservation and Restoration of Paintings; Conservation and Restoration of Sculptures</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzRWLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004783&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="4783"><input class="case" type="checkbox" onClick="Coche(4783,0);" name="result[]" id="4783" value="4783"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result4783" id="result4783" title="Expand result">
+		    <span>Expand result for </span>School of Dramatic Art of Seville</a></h3>
+		  <p class="i_name">
+		Escuela Superior de Arte Dramático de Sevilla		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alfonso Javier García Zurro (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Theatre</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzxYLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-004784&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="4784"><input class="case" type="checkbox" onClick="Coche(4784,0);" name="result[]" id="4784" value="4784"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result4784" id="result4784" title="Expand result">
+		    <span>Expand result for </span>School of Dramatic Art of Valencia</a></h3>
+		  <p class="i_name">
+		Escuela Superior de Arte Dramático de Valencia		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Leopoldo García Aranda (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Direction; Interpretation; Movement; Theatre Theory; Voice</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tIzxYLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019359&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19359"><input class="case" type="checkbox" onClick="Coche(19359,0);" name="result[]" id="19359" value="19359"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result19359" id="result19359" title="Expand result">
+		    <span>Expand result for </span>Universitat Politècnica de Catalunya - Barcelona Tech</a></h3>
+		  <p class="i_name">
+		Universitat Politècnica de Catalunya - BarcelonaTech &ndash; Universidad Politécnica de Cataluña (UPC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Enric Fossas Colet (Head) &ndash; Carme López Pol (Senior Administrative Officer) &ndash; Helena Martínez (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Engineering; Architecture; Building Construction; Business; Business Administration; Civil Engineering; Computer Science; Energy Technologies; Engineering; Image Processing and Multimedia ; Industrial and Aeronautical Engineering; Industrial and Control Engineering; Industrial Engineering; Informatics; Interdisciplinary Education; Mathematics and Statistics; Nautical Studies; Optics and Optometry; Telecommunications and Aerospace Engineering; Telecommunications Engineering; Textile Research and Industrial Cooperation</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLTNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-023034&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="23034"><input class="case" type="checkbox" onClick="Coche(23034,0);" name="result[]" id="23034" value="23034"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result23034" id="result23034" title="Expand result">
+		    <span>Expand result for </span>University Isable 1</a></h3>
+		  <p class="i_name">
+		Universidad Isabel I		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alberto Gómez Barahona (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Criminology; Health Sciences; Humanities and Social Sciences; Law and Economics; Science and Technology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyxQLFMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017386&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17386"><input class="case" type="checkbox" onClick="Coche(17386,0);" name="result[]" id="17386" value="17386"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17386" id="result17386" title="Expand result">
+		    <span>Expand result for </span>University of Alcalá</a></h3>
+		  <p class="i_name">
+		Universidad de Alcalá (UAH)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Fernando Galván Reula (Head) &ndash; Carmen Figueroa Navarro (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture and Geodesy; Biology, Environmental Studies and Chemistry; Business Management and Administration; Cooperation and Development Studies; Economics, Business Administration and Tourism; European Business Studies; Foreign Languages; Higher Education; Hispano-American Industrial Relations; Historical Studies; Latin American Studies; Law; Medicine and Health Sciences; North American Studies; Pharmacy; Philosophy and Letters; Polytechnic</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLiM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017387&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17387"><input class="case" type="checkbox" onClick="Coche(17387,0);" name="result[]" id="17387" value="17387"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17387" id="result17387" title="Expand result">
+		    <span>Expand result for </span>University of Alicante</a></h3>
+		  <p class="i_name">
+		Universidad de Alicante &ndash; Universitat d'Alacant (UAL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Manuel Palomar Sanz (Head) &ndash; José Vicente Cabezuelo Pliego (Senior Administrative Officer) &ndash; Juan Llopis Tavernier (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Modern Languages; Arts and Philosophy; Biodiversity; Chemical Process Engineering; Doctorate and Post-graduate Studies; Economics and Business Administration; Education; Electrochemistry; Environmental Research; Geography; Health Sciences; International Economics; Law; Lifelong Education; Materials Research; Organic Science; Polytechnic; Science; Tourism; Valencian Studies; Water and Environmental Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLiM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017388&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17388"><input class="case" type="checkbox" onClick="Coche(17388,0);" name="result[]" id="17388" value="17388"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17388" id="result17388" title="Expand result">
+		    <span>Expand result for </span>University of Almería</a></h3>
+		  <p class="i_name">
+		Universidad de Almería (UALM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Carmelo Rodríguez Torreblanca (Head) &ndash; Antonio Miguel Posadas Chinchilla (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Business Studies; Education, Nursing and Physical Therapy; Engineering; Humanities and Psychology; Labour Relations; Law</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxTLiNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017408&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17408"><input class="case" type="checkbox" onClick="Coche(17408,0);" name="result[]" id="17408" value="17408"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17408" id="result17408" title="Expand result">
+		    <span>Expand result for </span>University of Burgos</a></h3>
+		  <p class="i_name">
+		Universidad de Burgos (UBU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alfonso Murillo Villar (Head) &ndash; Simón Echavarría Martínez (Senior Administrative Officer) &ndash; Elena Vicente Domingo (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Economics and Business Management; Humanities and Education; Labour and Industrial Relations; Law; Polytechnic; Public Administration; Restoration; Science; Scientific Studies; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULCNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017409&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17409"><input class="case" type="checkbox" onClick="Coche(17409,0);" name="result[]" id="17409" value="17409"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17409" id="result17409" title="Expand result">
+		    <span>Expand result for </span>University of Cádiz</a></h3>
+		  <p class="i_name">
+		Universidad de Cádiz (UCA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Eduardo González Mazo (Head) &ndash; Francisca Fuentes Rodríguez (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Studies; Criminology; Economics and Business Management; Education; Engineering; Labour Relations and Work; Law; Law and Economics; Marine and Environmental Sciences; Marine Science and Technology; Marine Studies; Medicine; Nautical Science; Naval and Marine Engineering; Nursing and Physiotherapy; Oenology; Philosophy and Letters; Polytechnic; Research Centre for Criminology Studies; Science; Social Sciences and Communication; Sports Medicine; Teacher Training; Viticulture Research</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULCNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017412&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17412"><input class="case" type="checkbox" onClick="Coche(17412,0);" name="result[]" id="17412" value="17412"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17412" id="result17412" title="Expand result">
+		    <span>Expand result for </span>University of Cantabria</a></h3>
+		  <p class="i_name">
+		Universidad de Cantabria (UC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Ángel Pazos Carro (Head) &ndash; Sonia Castanedo Bárcena (Senior Administrative Officer) &ndash; Teresa Susinos Rada (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Anatomy and Cell Biology; Applied Mathematics and Computer Science; Applied Physics; Business Administration; Chemical Engineering and Inorganic Chemistry; Civil Engineering; Civil Navy Studies; Communication Engineering; Earth Sciences and Condensed Matter Physics; Economics and Business Administration; Economy; Education; Electrical and Energy Engineering; Electronic Technology, Systems and Automation Engineering; Electronics and Computers; European Documentation; Financial Studies; Geographical Engineering and Graphic Expression Techniques; Geography, Regional and Urban Planning; Ground and Materials Science and Engineering; History; Industrial and Telecommunications Engineering; Law; Mathematics, Statistics and Computing; Medical and Surgical Sciences; Medicine; Medicine and Psychiatry; Mining Engineering; Modern and Contemporary History; Modern Physics; Molecular Biology; Navigation and Shipbuilding Sciences and Techniques; Nursing; Philosophy and Humanities; Physics; Physiology and Pharmacology; Physiotherapy; Prehistoric Research; Private Law; Public Law; Rural Studies; Science; Structural and Mechanical Engineering; Tourism; Transport and Project and Process Technology; Water and Environmental Sciences and Techniques</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULDMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017416&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17416"><input class="case" type="checkbox" onClick="Coche(17416,0);" name="result[]" id="17416" value="17416"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17416" id="result17416" title="Expand result">
+		    <span>Expand result for </span>University of Castilla-La Mancha</a></h3>
+		  <p class="i_name">
+		Universidad de Castilla-La Mancha (UCLM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Miguel Ángel Collado Yurrita (Head) &ndash; Tomás López Moraga (Senior Administrative Officer) &ndash; Fátima Guadamillas Gómez (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Engineering; Arts and Humanities; Business and Management Studies; Chemistry; Civil Engineering; Computer  Engineering; Computer Science; Economics and Business Administration; Education; Education and Humanities; Environmental Studies; Fine Arts; Humanities; Industrial Engineering; Labour Relations and Human Resources; Law; Law and Social Sciences; Medicine; Mining and Industrial Engineering; Nursing; Nursing and Physiotherapy; Pharmacy; Social Sciences; Social Work; Sports Sciences; Teacher Training</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULDM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017437&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17437"><input class="case" type="checkbox" onClick="Coche(17437,0);" name="result[]" id="17437" value="17437"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17437" id="result17437" title="Expand result">
+		    <span>Expand result for </span>University of Córdoba</a></h3>
+		  <p class="i_name">
+		Universidad de Córdoba (UCO)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Carlos Gómez Villamandos (Head) &ndash; María del Carmen Balbuena Torezano (Senior Administrative Officer) &ndash; Nuria Magaldi Mendaña (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural and Forestry Engineering; Educational Sciences; Labour Sciences; Law, Economics and Business Science; Medicine and Nursing; Nursing; Philosophy and Letters; Polytechnic; Science; Teacher Training; Technical; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULFM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017447&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17447"><input class="case" type="checkbox" onClick="Coche(17447,0);" name="result[]" id="17447" value="17447"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17447" id="result17447" title="Expand result">
+		    <span>Expand result for </span>University of Deusto</a></h3>
+		  <p class="i_name">
+		Universidad de Deusto (UDE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José María Guibert Ucín (Head) &ndash; María Begoña Arrieta Heras (Senior Administrative Officer) &ndash; Álvaro de la Rica Aspiunza (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Basque Studies; Business Management; Cooperative Studies; Drug Addiction; Economics and Business Administration; Economics and Business Management; Engineering; European Studies; Galician Studies; Human Resources for Latin America; Human Rights; Ignacio de Loyola; Law; Law and the Human Genome; Leisure and Disabilities; Leisure Studies; Psychology and Education; Religious Sciences; Social and Human Sciences; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULSM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017458&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17458"><input class="case" type="checkbox" onClick="Coche(17458,0);" name="result[]" id="17458" value="17458"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17458" id="result17458" title="Expand result">
+		    <span>Expand result for </span>University of Extremadura</a></h3>
+		  <p class="i_name">
+		Universidad de Extremadura (Uex)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Segundo Píriz Durán (Head) &ndash; Luciano Cordero Saavedra (Senior Administrative Officer) &ndash; David Reina Esojo (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Engineering; Business; Business Studies and Tourism; Economics and Business Studies; Education; Industrial Engineering; Law; Library Sciences and Communication; Medicine; Nursing and Occupational Therapy; Philosophy and Letters; Polytechnic; Science; Sports Science; Teacher Training; Technical Agricultural Engineering; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULTNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019321&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19321"><input class="case" type="checkbox" onClick="Coche(19321,0);" name="result[]" id="19321" value="19321"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result19321" id="result19321" title="Expand result">
+		    <span>Expand result for </span>University of Girona</a></h3>
+		  <p class="i_name">
+		Universitat de Girona &ndash; Universidad de Gerona (UDG)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Sergi Bonet (Head) &ndash; Josep Solé (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Aquatic Ecology; Arts; Catalan Language and Culture; Computer Science and Applications; Economics and Business Management; Education and Psychology; Environmental Studies; Food and Agriculture Technology; Graduate Studies; Law; Medicine; Nursing; Polytechnic; Private European and Comparative Law; Quality of Life; Science; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLEMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017468&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17468"><input class="case" type="checkbox" onClick="Coche(17468,0);" name="result[]" id="17468" value="17468"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17468" id="result17468" title="Expand result">
+		    <span>Expand result for </span>University of Huelva</a></h3>
+		  <p class="i_name">
+		Universidad de Huelva (UHU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Francisco Ruiz Muñoz (Head) &ndash; Alberto Tejero Navarro (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business; Educational Sciences; Engineering; Experimental Sciences; Humanities; Labour Studies; Law; Nursing; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULUNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017472&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17472"><input class="case" type="checkbox" onClick="Coche(17472,0);" name="result[]" id="17472" value="17472"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17472" id="result17472" title="Expand result">
+		    <span>Expand result for </span>University of Jaén</a></h3>
+		  <p class="i_name">
+		Universidad de Jaén (UJA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Gómez Ortega (Head) &ndash; Nicolás Pérez Sola (Senior Administrative Officer) &ndash; Victoria López Ramón (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Experimental Sciences; Health Sciences; Humanities and Educational Sciences; Iberian Archaeology; Law and Social Sciences; Polytechnic; Social Work</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULVMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-018537&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="18537"><input class="case" type="checkbox" onClick="Coche(18537,0);" name="result[]" id="18537" value="18537"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result18537" id="result18537" title="Expand result">
+		    <span>Expand result for </span>University of La Coruña</a></h3>
+		  <p class="i_name">
+		Universidade da Coruña (UDC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Xosé Luís Armesto (Head) &ndash; Carlos Amoedo Souto (Senior Administrative Officer) &ndash; José Martínez López (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Civil Engineering; Communication Sciences; Computer Science; Economics and Business Science; Educational Sciences; Environmental Studies; European Studies; Geology; Health Sciences; Higher Polytechnic; Humanities and Documentation; Industrial Design; Labour Relations; Law; Maritime Studies; Navigation and Naval Machines; Nursing and Podology; Philology; Physical Education and Sports; Physiotherapy; Research in Irish Studies; Science; Sociology; Technical Architecture</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0BVLFM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017487&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17487"><input class="case" type="checkbox" onClick="Coche(17487,0);" name="result[]" id="17487" value="17487"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17487" id="result17487" title="Expand result">
+		    <span>Expand result for </span>University of La Laguna</a></h3>
+		  <p class="i_name">
+		Universidad de La Laguna (ULL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Antonio Martinón (Head) &ndash; Justo Artiles (Senior Administrative Officer) &ndash; Rodrigo Trujillo (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Economics, Business Administration and Tourism; Education; Engineering; Engineering and Technology; Health Sciences; Humanities; Law; Linguistics; Organic Biology; Political and Social Sciences; Political Science, Social Sciences and Communication; Regional Development; Science; Tropical Medicine and Public Health; Women's Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULiM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017492&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17492"><input class="case" type="checkbox" onClick="Coche(17492,0);" name="result[]" id="17492" value="17492"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17492" id="result17492" title="Expand result">
+		    <span>Expand result for </span>University of La Rioja</a></h3>
+		  <p class="i_name">
+		Universidad de La Rioja (URI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Arnáez Vadillo (Head) &ndash; Mariola Urrea Corres (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Administration; Education and Humanities; Industrial Engineering; Law and Social Sciences; Science, Food Science and Computer Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxULjMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017511&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17511"><input class="case" type="checkbox" onClick="Coche(17511,0);" name="result[]" id="17511" value="17511"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17511" id="result17511" title="Expand result">
+		    <span>Expand result for </span>University of Las Palmas de Gran Canaria</a></h3>
+		  <p class="i_name">
+		Universidad de Las Palmas de Gran Canaria (UPGC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Regidor García (Head) &ndash; Carmen Salinero Alonso (Senior Administrative Officer) &ndash; Pablo Martel Escobar (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Microelectonics; Architecture; Computer Engineering; Cybernetics; Economics,  Business and Tourism; Geography and History; Health Sciences; Industrial and Civil Engineering; Intelligent Systems and Digital Engineering; Law; Marine Science; Philology; Physical Education and Sports; Teacher Training; Telecommunications Engineering and Electronic Engineering; Translation and Interpretation; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLDMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017514&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17514"><input class="case" type="checkbox" onClick="Coche(17514,0);" name="result[]" id="17514" value="17514"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17514" id="result17514" title="Expand result">
+		    <span>Expand result for </span>University of León</a></h3>
+		  <p class="i_name">
+		Universidad de León (ULE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Ángel Hermida Alonso (Head) &ndash; José Luis Martínez Juan (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Engineering; Animal Science; Automation and Manufacturing; Biological and Environmental Sciences; Biomedicine; Biotechnology; Economics and Business Administration; Education; Environment, Natural Resources and Biodiversity; Food Science; Health Sciences; Humanism and the Classical Tradition; Industrial Engineering and Computer Science; Labour Studies; Law; Medieval Studies; Mining Engineering; Oenology and Vine; Philosophy and Letters; Physical Education and Sports; Social Work; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLDMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019324&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19324"><input class="case" type="checkbox" onClick="Coche(19324,0);" name="result[]" id="19324" value="19324"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result19324" id="result19324" title="Expand result">
+		    <span>Expand result for </span>University of Lleida</a></h3>
+		  <p class="i_name">
+		Universitat de Lleida &ndash; Universidad de Lérida (UDL)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Roberto Fernández Díaz (Head) &ndash; M. Teresa Areces Piñol (Senior Administrative Officer) &ndash; Astrid Ballesta Remy (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Engineering; Arts and Humanities; Education, Psychology and Social Work; Educational Sciences; Labour Relations; Languages; Law and Economics; Medicine; Nursing; Physical Education; Polytechnic</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLEMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-012029&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="12029"><input class="case" type="checkbox" onClick="Coche(12029,0);" name="result[]" id="12029" value="12029"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result12029" id="result12029" title="Expand result">
+		    <span>Expand result for </span>University of Mondragón</a></h3>
+		  <p class="i_name">
+		Mondragón Unibertsitatea (UM)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vicente Atxa (Head) &ndash; Idoia Peñacoba Etxebarria (Senior Administrative Officer) &ndash; Joxe Mari Aizega (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Business Studies; Engineering; Gastronomic Sciences; Humanities and Education</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhQLENEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017546&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17546"><input class="case" type="checkbox" onClick="Coche(17546,0);" name="result[]" id="17546" value="17546"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17546" id="result17546" title="Expand result">
+		    <span>Expand result for </span>University of Murcia</a></h3>
+		  <p class="i_name">
+		Universidad de Murcia (UMU)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>José Orihuela Calatayud (Head) &ndash; Francisco José Pérez Guzmán (Senior Administrative Officer) &ndash; Bernardo Cascales Salinas (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Arts and Humanities; Biology; Chemistry; Communication and Documentation Sciences; Computer Science; Economics and Business Management; Education; Fine Arts; Labour Studies; Law; Mathematics; Medicine; Nursing; Optics and Optometry; Philosophy; Psychology; Social Work; Veterinary Medicine</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLSM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017548&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17548"><input class="case" type="checkbox" onClick="Coche(17548,0);" name="result[]" id="17548" value="17548"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17548" id="result17548" title="Expand result">
+		    <span>Expand result for </span>University of Navarra</a></h3>
+		  <p class="i_name">
+		Universidad de Navarra (UNA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Alfonso Sánchez-Tabernero (Head) &ndash; Gonzalo Robles (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Anthropology and Ethics; Applied Biology; Applied Medical Research; Architecture; Canon Law; Civil Engineering; Communication; Culture and Society; Ecclesiastical Philosophy; Economics and Management; Education and Psychology; Engineering; Family Studies; Fashion Business; Food Sciences; Human Rights; Law; Liberal Arts; Management Assistants; Martín Azpilcueta; Medicine; Medieval Studies; Nursing; Pharmacobiology Research; Pharmacy; Philosophy and Letters; Science; Theology</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLSNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017564&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17564"><input class="case" type="checkbox" onClick="Coche(17564,0);" name="result[]" id="17564" value="17564"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17564" id="result17564" title="Expand result">
+		    <span>Expand result for </span>University of Oviedo</a></h3>
+		  <p class="i_name">
+		Universidad de Oviedo (UOV)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Vicente Gotor Santamaría (Head) &ndash; Marta González Prieto (Senior Administrative Officer) &ndash; Covadonga Betegón Biempica (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Engineering; Artificial Intelligence; Biodiversity; Biology; Biotechnology; Business Management; Business Studies; Chemistry; Civil Navy; Computer Engineering; Economics and Business; Education; Eighteenth Century Studies; Engineering; Geology; Industrial Technology; Law; Medicine and Health Sciences; Mining Engineering; Mining, Energy and Materials Engineering; Nanomaterials and Nanotechnology; Natural Resources and Regional Planning; Nursing; Oncology; Organic-metallic Chemistry; Philosophy and Letters; Physical Education and Sports Medicine; Polytechnic; Psychology; Science; Teacher Training and Education; Trade, Tourism and Social Sciences</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxVLUMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017610&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17610"><input class="case" type="checkbox" onClick="Coche(17610,0);" name="result[]" id="17610" value="17610"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17610" id="result17610" title="Expand result">
+		    <span>Expand result for </span>University of Santiago de Compostela</a></h3>
+		  <p class="i_name">
+		Universidad de Santiago de Compostela (USC)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Juan Viaño Rey (Head) &ndash; Consuelo Ferreiro Regueiro Ferreiro Regueiro (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Administration and Business Management; Advanced Musical Studies of Galicia; Agricultural Biodiversity and Rural Development; Aquaculture; Arts and Humanities; Biology; Business Administration; Ceramics; Chemistry; Communication Sciences; Criminology; Economics and Business Administration; Educational Sciences; Engineering; Forensic Medicine; Galician Language; Galician Studies and Development; Geography and History; High Energy Physics; Industrial Law; Industrial Pharmacy; Labour Relations; Law; Mathematics; Medicine and Dentistry; Neurology; Nursing; Nutritional Analysis and Research; Optics and Optometry; Orthopaedics and Muscular-Skeletal Tissue Bank; Pharmacy; Philology; Philosophy; Physics; Political and Social Sciences; Psychology; Science; Social Work; Teacher Training; Technological Research; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLDNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017630&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17630"><input class="case" type="checkbox" onClick="Coche(17630,0);" name="result[]" id="17630" value="17630"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17630" id="result17630" title="Expand result">
+		    <span>Expand result for </span>University of Saragossa</a></h3>
+		  <p class="i_name">
+		Universidad de Zaragoza (UZA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Manuel José López Pérez (Head) &ndash; María Isabel Luengo Gascón (Senior Administrative Officer) &ndash; Regina  Lázaro Gistau (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biocomputing and Physics of Complex Systems ; Business and Public Administration; Economics and Business; Education; Educational Sciences; Energy Resources; Engineering; Engineering and Architecture; Environmental Sciences; Health Sciences; Health Sciences and Sports; Humanities and Education; Law; Mathematics and its Applications; Medicine; Nanoscience; Philosophy and Humanities; Polytechnic; Science; Social and Labour Sciences; Veterinary Science</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLFNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017611&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17611"><input class="case" type="checkbox" onClick="Coche(17611,0);" name="result[]" id="17611" value="17611"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17611" id="result17611" title="Expand result">
+		    <span>Expand result for </span>University of Seville</a></h3>
+		  <p class="i_name">
+		Universidad de Sevilla (USE)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Antonio Ramírez de Arellano (Head) &ndash; Juan Ignacio Ferraro García (Senior Administrative Officer) &ndash; Eulalia W. Petit de Gabriel (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Technical Engineering; Architecture; Biology; Business Studies; Cardenal Spínola; Chemistry; Communication Studies; Computer Engineering; Construction Sciences; Criminology; Developmental Biology; Economics and Business; Educational Sciences; Engineering; Fine Arts; Francisco Maldonado de Osuna; Geography and History; Health Sciences; Labour Sciences; Languages; Law; Law; Legal Medicine and Forensic Sciences; Mathematics; Medicine; Nursing; Nursing, Physiotherapy and Podology; Odontology; Pharmacy; Philology; Philosophy; Physics; Polytechnic; Psychology; Regional Development ; Technical Architecture; Technical Industrial Engineering; Tourism and Finance</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLDMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019322&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19322"><input class="case" type="checkbox" onClick="Coche(19322,0);" name="result[]" id="19322" value="19322"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result19322" id="result19322" title="Expand result">
+		    <span>Expand result for </span>University of the Balearic Islands</a></h3>
+		  <p class="i_name">
+		Universitat de les Illes Balears &ndash; Universidad de las Islas Baleares (UIB)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Llorenç Huguet (Head) &ndash; Pedro Grimalt (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Advanced Studies; Economics and Business Science; Education; Educational Sciences; Heath Sciences; Interdisciplinary Physics and Complex Systems; Law; Nursing and Physiotherapy; Philosophy and Arts; Polytechnic; Psychology; Science; Tourism</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLEMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017682&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17682"><input class="case" type="checkbox" onClick="Coche(17682,0);" name="result[]" id="17682" value="17682"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17682" id="result17682" title="Expand result">
+		    <span>Expand result for </span>University of the Basque Country</a></h3>
+		  <p class="i_name">
+		Universidad del País Vasco - Euskal Herriko Unibertsitatea (UPV)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Iñaki Goirizelaia (Head) &ndash; Miren Lorea Bilbao Artetxe (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Ancient Civilizations; Architecture; Basque Studies; Biophysics; Business; Chemistry; Co-operative Law and Social Economics; Computer Science; Criminology; Development and International Co-operation Studies; Economics and Business Administration; Economics and Entrepreneurship Management; Economics Applied to Business; Educational Sciences; Epidemiology and Preventive Medicine; Finance and Actuarial Studies; Fine Arts; Historic Law of the Basque Country; Industrial and Telecommunications Engineering; Industrial Engineering; Industrial Engineering and Topography; Labour Relations; Law; Logic, Cognition, Language and Information; Medicine; Medicine and Dentistry; Microelectronic Technology; Mining Engineering; Nautical Science and Marine Engineering; Nursing; Pharmacy; Philology, Geography and History; Philosophy and Educational Sciences; Physical Education; Physics of Materials; Polymers; Psychology; Public Economics; Research and Process Development; Science; Social History; Social Sciences and Communication; Social Work; Teacher Training; Technical Industrial Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLiMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-019325&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="19325"><input class="case" type="checkbox" onClick="Coche(19325,0);" name="result[]" id="19325" value="19325"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result19325" id="result19325" title="Expand result">
+		    <span>Expand result for </span>University of Valencia</a></h3>
+		  <p class="i_name">
+		Universitat de València &ndash; Universidad de Valencia (UVEG)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Esteban Morcillo Sánchez (Head) &ndash; Joan Oltra I Vidal (Senior Administrative Officer) &ndash; Olga Gil Medrano (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Biodiversity and Biology; Biology; Business; Business and Law; Chemistry; Desert Research; Economics; Educational Innovations and Creativity; Engineering; Geography and History; International Economics; Labour Relations; Law; Materials Engineering; Mathematics; Medicine and Odontology; Molecular Science ; Nursing; Nursing and Podology; Pharmacy; Philology, Translation and Communication; Philosophy and Educational Sciences; Physical Education and Sports; Physics; Physics; Physiotherapy; Psychology; Robotics; Science History and Documentation; Social Sciences; Social Work; Teacher Training; Traffic and Road Safety; Valencian Philology; Women's Studies</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM0RTLEM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017622&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="17622"><input class="case" type="checkbox" onClick="Coche(17622,0);" name="result[]" id="17622" value="17622"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17622" id="result17622" title="Expand result">
+		    <span>Expand result for </span>University of Valladolid</a></h3>
+		  <p class="i_name">
+		Universidad de Valladolid (UVA)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Daniel Miguel San José (Head) &ndash; Pilar Garcés García (Senior Administrative Officer) &ndash; José Ramón González García (International Relations Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Architecture; Arts and Philosophy; Commerce; Computer Engineering; Economics and Business Administration; Education and Social Work; Industrial Engineering; Law; Medicine; Nursing; Polytechnic; Science; Social Work; Telecommunications Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLEMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-017624&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
+		<div class="tools">
+				  <label for="17624"><input class="case" type="checkbox" onClick="Coche(17624,0);" name="result[]" id="17624" value="17624"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result17624" id="result17624" title="Expand result">
+		    <span>Expand result for </span>University of Vigo</a></h3>
+		  <p class="i_name">
+		Universidad de Vigo (UVI)		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Salustiano Mato de la Iglesia (Head) &ndash; Manuel Fernández Iglesias (Senior Administrative Officer)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Applied Electronics; Biology; Business Science and Tourism; Business Studies; Chemistry; Computer Engineering; Economics and Business Studies; Educational Sciences; Educational Sciences and Sports; Fine Arts; Forestry Engineering; History; Industrial Engineering; Labour Relations; Law; Law and Labour Studies; Marine Science; Mining Engineering; Nursing; Philology and Translation; Physiotherapy; Science; Social Sciences and Communication; Teacher Training; Telecommunications Engineering</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzxWLEMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    <span class="gui">&nbsp;&nbsp;IAU-013930&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
+		<div class="tools">
+				  <label for="13930"><input class="case" type="checkbox" onClick="Coche(13930,0);" name="result[]" id="13930" value="13930"></label>
+		</div>
+		<div class="details">
+		  <p class="country">Spain</p>
+				  <h3>
+		    <a href="#result13930" id="result13930" title="Expand result">
+		    <span>Expand result for </span>Victoria Eugenia Royal Music Conservatoire</a></h3>
+		  <p class="i_name">
+		Real Conservatorio Superior de Música Victoria Eugenia de Granada		  </p>
+		 <p class="gallery">
+			</p>
+		  <!-- <p class="people"><span>Officers:</span> <strong>Celia Ruiz Bernal (Head)</strong></p> -->
+		  <p class="divisions"><span>Divisions:</span> <strong>Music Theory and Composition; Musical Instruments</strong></p>
+			
+		  <p class="tools fright">
+		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxZLFNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
+		  		  </p>
+		</div>
+	      </li>
+	    	    </ul>
+	  </form>
+	  <div class="pagination">
+  <p class="prem">Results 1 to 109 of 109</p>
+  </div>
+	
+	      
+      </section><!-- fin contenu -->
+    </div><!-- fin main -->
+    
+    <div class="mob">
+      <aside class="outils">
+	<div class="user">
+	  <div id="login">
+
+  <h2>MyWhed</h2>
+  <form method="post">
+    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
+    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
+    <button type="button" onClick="Connexion();">Ok</button>
+	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
+  </form>
+  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
+
+<script type="text/javascript">
+<!--
+function Connexion() {
+
+	$.ajax({
+		url: "ajax/login.php",
+		type: "POST",
+		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
+		cache: false,
+		success:function(msg){
+			switch (msg) {
+				case 'ABSENT':
+					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
+					break;
+				case 'INCONNU':
+					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
+					break;
+				case 'SUSPENDU':
+					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
+					break;
+				case 'OK':
+					window.top.location.href = "home.php";
+					break;
+				default:
+					if ( msg ) {
+						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
+						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
+					} else {
+						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
+					} 
+			} 
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
+			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
+		}
+	});
+
+}
+//-->
+</script>
+
+</div>
+	</div>
+        <section role="seealso" id="infos">
+  <ul>
+    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
+    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
+    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
+  </ul>
+</section>
+<section role="search" id="qsearch">
+ <h2>HEI Quick search</h2>
+ <div class="cadre">
+  	<form id="fsearch" action="results_institutions.php" method="post">
+  	<div class="recherche">Choose a country and/or enter a keyword</div>
+  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
+			<option value="">All countries</option>
+			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)">Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain" selected>Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
+    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
+    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
+		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
+    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
+		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
+		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
+   </form>
+   <script>
+   	function Valide() {
+   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
+      	$.fancybox({
+					type: 'iframe',
+					href: 'erreur.php'
+				});
+   			return false;	
+   		}
+   		$('#fsearch').submit();
+   	}
+   </script>
+	<p></p>
+   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
+   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
+	    </div>
+ </div>
+</section>
+<section role="search" id="fields">
+ <div class="clearfix"> </div><br /><br />
+ 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</section>      </aside><!-- fin outils -->
+      
+      <footer id="pied">
+  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
+  </nav>
+  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
+	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50092355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </div><!-- fin mob -->
+  </div><!-- fin page -->
+</body>
+</html>

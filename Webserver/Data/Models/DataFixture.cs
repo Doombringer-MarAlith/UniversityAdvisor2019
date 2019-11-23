@@ -55,7 +55,7 @@ namespace Webserver.Data.Models
                     Text = "Perfect Uni!",
                     UniversityId = 1,
                     UserId = "1",
-                    Value = "5"
+                    Value = 5
                 });
 
                 dbContext.Reviews.Add(new Review
@@ -63,7 +63,7 @@ namespace Webserver.Data.Models
                     Text = "Perfect KTUni!",
                     UniversityId = 2,
                     UserId = "1",
-                    Value = "5"
+                    Value = 5
                 });
 
                 dbContext.Reviews.Add(new Review
@@ -71,7 +71,7 @@ namespace Webserver.Data.Models
                     Text = "Perfect Faculty!",
                     FacultyId = 1,
                     UserId = "1",
-                    Value = "5"
+                    Value = 5
                 });
 
                 dbContext.Reviews.Add(new Review
@@ -79,7 +79,7 @@ namespace Webserver.Data.Models
                     Text = "Perfect VU Faculty!",
                     FacultyId = 2,
                     UserId = "1",
-                    Value = "5"
+                    Value = 5
                 });
 
                 dbContext.Reviews.Add(new Review
@@ -87,7 +87,7 @@ namespace Webserver.Data.Models
                     Text = "Nice!",
                     FacultyId = 3,
                     UserId = "1",
-                    Value = "5"
+                    Value = 5
                 });
 
                 dbContext.Reviews.Add(new Review
@@ -95,7 +95,14 @@ namespace Webserver.Data.Models
                     Text = "Legit!",
                     FacultyId = 4,
                     UserId = "1",
-                    Value = "5"
+                    Value = 5
+                });
+
+                dbContext.Programmes.Add(new Programme
+                {
+                    Name = "Programų sistemos",
+                    FacultyId = 4,
+                    UniversityId = 2
                 });
 
                 dbContext.SaveChanges();
