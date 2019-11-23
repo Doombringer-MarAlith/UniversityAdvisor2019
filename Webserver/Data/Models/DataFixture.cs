@@ -102,8 +102,7 @@ namespace Webserver.Data.Models
                 {
                     Name = "Programų sistemos",
                     FacultyId = 4,
-                    UniversityId = 2,
-                    Id = 1
+                    UniversityId = 2
                 });
 
                 dbContext.SaveChanges();

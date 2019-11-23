@@ -3,7 +3,6 @@ using System.Web.Mvc;
 using Webserver.Data.Repositories;
 using Models;
 
-
 namespace Webserver.Controllers
 {
     public class ProgrammesController : Controller
@@ -34,6 +33,5 @@ namespace Webserver.Controllers
             ViewBag.FacultyId = programme.FacultyId;
             return View(programme);
         }
-
     }
 }

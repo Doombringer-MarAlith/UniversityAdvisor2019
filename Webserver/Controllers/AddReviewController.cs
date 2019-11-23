@@ -9,12 +9,12 @@ namespace Webserver.Controllers
     [Authorize]
     public class AddReviewController : Controller
     {
-
         IReviewRepository _reviewRepository;
         public AddReviewController(IReviewRepository reviewRepository)
         {
             _reviewRepository = reviewRepository;
         }
+
         // GET: AddReview
         public ActionResult Index()
         {
@@ -32,6 +32,7 @@ namespace Webserver.Controllers
             ViewBag.facultyId = facultyId;
             return View();
         }
+
         public ActionResult ProgrammeReview(int programmeId)
         {
             ViewBag.programmeId = programmeId;
@@ -46,6 +47,7 @@ namespace Webserver.Controllers
             {
                 model.Value = 5;
             }
+
             model.UserId = User.Identity.GetUserId();
             _reviewRepository.Add(model);
             await _reviewRepository.Commit();
@@ -60,6 +62,7 @@ namespace Webserver.Controllers
             {
                 model.Value = 5;
             }
+
             model.UserId = User.Identity.GetUserId();
             _reviewRepository.Add(model);
             await _reviewRepository.Commit();
@@ -74,6 +77,7 @@ namespace Webserver.Controllers
             {
                 model.Value = 5;
             }
+
             model.UserId = User.Identity.GetUserId();
             _reviewRepository.Add(model);
             await _reviewRepository.Commit();
