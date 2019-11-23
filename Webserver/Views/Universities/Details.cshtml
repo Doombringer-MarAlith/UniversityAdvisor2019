@@ -55,5 +55,5 @@
     @Html.ActionLink("Back to List", "Index", "Universities")
 </p>
 <p>
-    @Html.ActionLink("Add a review", "Index", "AddReview")
+    @Html.ActionLink("Add a review", "UniversityReview", "AddReview", new { universityId = ViewBag.UniversityId }, null)
 </p>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 using Webserver.Data.Infrastructure;
 
 namespace Webserver.Data.Repositories
@@ -63,7 +64,7 @@ namespace Webserver.Data.Repositories
             return _dbSet.Where(where).FirstOrDefault<T>();
         }
 
-        public async void Commit()
+        public async Task Commit()
         {
             await _dbContext.SaveChangesAsync();
         }

@@ -25,6 +25,7 @@ namespace Webserver.Data
             modelBuilder.Configurations.Add(new UniversityConfiguration());
             modelBuilder.Configurations.Add(new FacultyConfiguration());
             modelBuilder.Configurations.Add(new ReviewConfiguration());
+            modelBuilder.Configurations.Add(new ProgrammeConfiguration());
         }
 
         public void Initialize()

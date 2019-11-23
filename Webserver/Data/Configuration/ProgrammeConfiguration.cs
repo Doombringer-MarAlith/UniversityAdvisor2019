@@ -9,9 +9,8 @@ namespace Webserver.Data.Configuration
         {
             ToTable("Programme");
             Property(programme => programme.Name).IsRequired().HasMaxLength(255);
-            Property(programme => programme.Id).IsRequired().HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
             Property(programme => programme.FacultyId).IsRequired();
             Property(programme => programme.UniversityId).IsRequired();
-        }
+            Property(programme => programme.Id).IsRequired().HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);        }
     }
 }
