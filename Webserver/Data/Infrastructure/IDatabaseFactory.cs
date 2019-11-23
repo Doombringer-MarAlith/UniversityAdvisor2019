@@ -1,5 +1,4 @@
-﻿using System;
-namespace Webserver.Data.Infrastructure
+﻿namespace Webserver.Data.Infrastructure
 {
     public interface IDatabaseFactory
     {

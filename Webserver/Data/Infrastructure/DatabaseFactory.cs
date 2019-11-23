@@ -1,6 +1,4 @@
-﻿using Webserver.Data.Models;
-
-namespace Webserver.Data.Infrastructure
+﻿namespace Webserver.Data.Infrastructure
 {
     public class DatabaseFactory : IDatabaseFactory
     {
@@ -8,12 +6,7 @@ namespace Webserver.Data.Infrastructure
 
         public ApplicationDbContext Initialize()
         {
-            if (_dbContext == null)
-            {
-                _dbContext = new ApplicationDbContext();
-            }
-
-            return _dbContext;
+            return _dbContext ?? (_dbContext = new ApplicationDbContext());
         }
     }
 }
