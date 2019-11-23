@@ -20,16 +20,14 @@ namespace WebScraper
         readonly string _countryLinksPath = "CountryLinks";
         int _currentUniversityId = 1;
         readonly int _facultiesPerUniversityMax = 49;
-        List<List<string>> universityLinks = new List<List<string>>();
+        readonly List<List<string>> universityLinks = new List<List<string>>();
         public List<University> universities = new List<University>();
         public List<Faculty> faculties = new List<Faculty>();
         public List<Programme> programmes = new List<Programme>();
 
-
-        // gets universities from WHED.net website.
+        // Gets universities from WHED.net website.
         // Feed it html source file of uni search by country and it will gather Uni names + Uni descriptions + Faculties + Faculty programmes
         // Will need to incorporate adding items straight to database
-
         public Scraper()
         {
             _websiteLink = "https://www.whed.net/";
@@ -47,7 +45,7 @@ namespace WebScraper
         {
             DateTime startTime = DateTime.Now;
             string[] files = null;
-            if((files = GetFiles()) == null)
+            if ((files = GetFiles()) == null)
             {
                 return false;
             }
@@ -96,6 +94,7 @@ namespace WebScraper
                                 {
                                     StartThreadWithTimeout(htmlCode, _standardTimeout, _currentUniversityId);
                                 }
+
                                 if (universityIndexInCountry == linksList.Count - 1)
                                 {
                                     t.Join();
@@ -136,11 +135,14 @@ namespace WebScraper
                             Console.WriteLine(_websiteLink + link);
                         }
                     }
+
                     universityIndexInCountry++;
                     _currentUniversityId += _facultiesPerUniversityMax;
                 }
+
                 currentCountryNum++;
             }
+
             Console.WriteLine("FINISHED in " + (DateTime.Now - startTime).TotalSeconds);
             return true;
         }
@@ -240,6 +242,7 @@ namespace WebScraper
                         }
                     }
                 }
+
                 facultyId++;
             } while (start != -1);
         }
@@ -265,6 +268,7 @@ namespace WebScraper
             var response = await _client.PostAsync(_websiteLink + "results_institutions.php", content);
 
             var responseString = await response.Content.ReadAsStringAsync();
+
             try
             {
                 using (StreamWriter outputFile = new StreamWriter(_countryLinksPath + "\\" + country + ".txt")) 
@@ -330,7 +334,6 @@ namespace WebScraper
                 Console.WriteLine(e.StackTrace);
                 throw;
             }
-            
         }
     }
 }

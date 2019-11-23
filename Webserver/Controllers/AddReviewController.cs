@@ -9,7 +9,8 @@ namespace Webserver.Controllers
     [Authorize]
     public class AddReviewController : Controller
     {
-        IReviewRepository _reviewRepository;
+        private readonly IReviewRepository _reviewRepository;
+
         public AddReviewController(IReviewRepository reviewRepository)
         {
             _reviewRepository = reviewRepository;
@@ -43,7 +44,7 @@ namespace Webserver.Controllers
         public async Task<ActionResult> ReviewUniversity(Review model, int id)
         {
             model.UniversityId = id;
-            if(model.Value > 5 || model.Value < 1)
+            if (model.Value > 5 || model.Value < 1)
             {
                 model.Value = 5;
             }
