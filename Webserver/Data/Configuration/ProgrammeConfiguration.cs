@@ -1,4 +1,4 @@
-﻿using Models;
+using Models;
 using System.Data.Entity.ModelConfiguration;
 
 namespace Webserver.Data.Configuration
