@@ -240,7 +240,7 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\dark-mode-switch.js" />
     <Content Include="Scripts\dark-mode-switch.min.js" />
-    <Content Include="Scripts\dark-mode.css" />
+    <Content Include="Content\dark-mode.css" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
