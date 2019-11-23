@@ -26,6 +26,7 @@ namespace Webserver
             builder.RegisterType<UniversityRepository>().As<IUniversityRepository>().InstancePerRequest();
             builder.RegisterType<FacultyRepository>().As<IFacultyRepository>().InstancePerRequest();
             builder.RegisterType<ReviewRepository>().As<IReviewRepository>().InstancePerRequest();
+            builder.RegisterType<ProgrammeRepository>().As<IProgrammeRepository>().InstancePerRequest();
 
             builder.RegisterType<ApplicationUserManager>().AsSelf().InstancePerRequest();
             builder.RegisterType<ApplicationSignInManager>().AsSelf().InstancePerRequest();

@@ -30,6 +30,14 @@ namespace Webserver.Controllers
             return View(reviews);
         }
 
+        // GET: Reviews/Programme/{id}
+        public ActionResult Programme(int id)
+        {
+            ViewBag.ProgrammeId = id;
+            IEnumerable<Review> reviews = _repository.GetMany(review => review.ProgrammeId == id);
+            return View(reviews);
+        }
+
         // GET: Reviews/Details/{id}
         public ActionResult Details(int id)
         {
