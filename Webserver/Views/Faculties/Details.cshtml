@@ -31,11 +31,14 @@
 </div>
 
 <p>
-    @Html.ActionLink("See Programmes", "Index")
+    @Html.ActionLink("See Programmes", "Index", "Programmes", new { facultyId = ViewBag.FacultyId }, null)
 </p>
 <p>
     @Html.ActionLink("Check Reviews", "Faculty", "Reviews", new { id = ViewBag.FacultyId }, null)
 </p>
 <p>
     @Html.ActionLink("Back to Faculty List", "Index", "Faculties", new { universityId = ViewBag.UniversityId }, null)
+</p>
+<p>
+    @Html.ActionLink("Add a review", "FacultyReview", "AddReview", new { facultyId = ViewBag.FacultyId }, null)
 </p>
