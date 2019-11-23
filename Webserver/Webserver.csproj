@@ -207,6 +207,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911232102516_InitialCreate.cs" />
+    <Compile Include="Migrations\201911232102516_InitialCreate.Designer.cs">
+      <DependentUpon>201911232102516_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ViewModels\Account\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="Models\ViewModels\Account\ExternalLoginListViewModel.cs" />
@@ -323,6 +328,11 @@
       <Project>{58d4dbde-7f0a-4114-8273-bf5d988a07be}</Project>
       <Name>Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201911232102516_InitialCreate.resx">
+      <DependentUpon>201911232102516_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
