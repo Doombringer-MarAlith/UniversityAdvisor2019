@@ -1,8 +1,8 @@
-﻿using System.Web.Mvc;
+﻿using Microsoft.AspNet.Identity;
 using Models;
-using Webserver.Data.Repositories;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
+using System.Web.Mvc;
+using Webserver.Data.Repositories;
 
 namespace Webserver.Controllers
 {
@@ -40,7 +40,7 @@ namespace Webserver.Controllers
             return View();
         }
 
-        // POST
+        [HttpPost]
         public async Task<ActionResult> ReviewUniversity(Review model, int id)
         {
             model.UniversityId = id;
@@ -55,7 +55,7 @@ namespace Webserver.Controllers
             return RedirectToAction("Details", "Universities", new { id = id });
         }
 
-        // POST
+        [HttpPost]
         public async Task<ActionResult> ReviewFaculty(Review model, int id)
         {
             model.FacultyId = id;
@@ -70,7 +70,7 @@ namespace Webserver.Controllers
             return RedirectToAction("Details", "Faculties", new { id = id });
         }
 
-        // POST
+        [HttpPost]
         public async Task<ActionResult> ReviewProgramme(Review model, int id)
         {
             model.ProgrammeId = id;
