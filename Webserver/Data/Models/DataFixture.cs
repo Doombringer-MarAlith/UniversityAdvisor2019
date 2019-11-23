@@ -98,6 +98,14 @@ namespace Webserver.Data.Models
                     Value = 5
                 });
 
+                dbContext.Programmes.Add(new Programme
+                {
+                    Name = "Programų sistemos",
+                    FacultyId = 4,
+                    UniversityId = 2,
+                    Id = 1
+                });
+
                 dbContext.SaveChanges();
             }
         }

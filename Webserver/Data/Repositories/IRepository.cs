@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace Webserver.Data.Repositories
 {
@@ -29,5 +30,7 @@ namespace Webserver.Data.Repositories
 
         // Gets entities using delegate
         IEnumerable<T> GetMany(Expression<Func<T, bool>> where);
+        // Saves added entities to database
+        Task Commit();
     }
 }

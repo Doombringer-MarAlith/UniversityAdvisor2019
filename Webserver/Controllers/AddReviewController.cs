@@ -1,49 +1,83 @@
 ﻿using System.Web.Mvc;
-using Webserver.Data;
 using Models;
-
+using Webserver.Data.Repositories;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
 
 namespace Webserver.Controllers
 {
-
+    [Authorize]
     public class AddReviewController : Controller
     {
+
+        IReviewRepository _reviewRepository;
+        public AddReviewController(IReviewRepository reviewRepository)
+        {
+            _reviewRepository = reviewRepository;
+        }
         // GET: AddReview
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult UniversityReview(string universityId)
+        public ActionResult UniversityReview(int universityId)
         {
             ViewBag.universityId = universityId;
             return View();
         }
 
-        public ActionResult FacultyReview()
+        public ActionResult FacultyReview(int facultyId)
         {
+            ViewBag.facultyId = facultyId;
             return View();
         }
-        public ActionResult ProgrammeReview()
+        public ActionResult ProgrammeReview(int programmeId)
         {
+            ViewBag.programmeId = programmeId;
             return View();
         }
 
-        public ActionResult ReviewUniversity(Review model, int id)
+        // POST
+        public async Task<ActionResult> ReviewUniversity(Review model, int id)
         {
-            if (ModelState.IsValid)
+            model.UniversityId = id;
+            if(model.Value > 5 || model.Value < 1)
             {
-                //TODO: SubscribeUser(model.Email);
-            }
-            using (ApplicationDbContext dbContext = new ApplicationDbContext())
-            {
-                model.UniversityId = id;
-                model.UserId = "10";
                 model.Value = 5;
-                dbContext.Reviews.Add(model);
-                dbContext.SaveChanges();
             }
-            return View("Index", model);
+            model.UserId = User.Identity.GetUserId();
+            _reviewRepository.Add(model);
+            await _reviewRepository.Commit();
+            return RedirectToAction("Details", "Universities", new { id = id });
+        }
+
+        // POST
+        public async Task<ActionResult> ReviewFaculty(Review model, int id)
+        {
+            model.FacultyId = id;
+            if (model.Value > 5 || model.Value < 1)
+            {
+                model.Value = 5;
+            }
+            model.UserId = User.Identity.GetUserId();
+            _reviewRepository.Add(model);
+            await _reviewRepository.Commit();
+            return RedirectToAction("Details", "Faculties", new { id = id });
+        }
+
+        // POST
+        public async Task<ActionResult> ReviewProgramme(Review model, int id)
+        {
+            model.ProgrammeId = id;
+            if (model.Value > 5 || model.Value < 1)
+            {
+                model.Value = 5;
+            }
+            model.UserId = User.Identity.GetUserId();
+            _reviewRepository.Add(model);
+            await _reviewRepository.Commit();
+            return RedirectToAction("Details", "Programmes", new { id = id });
         }
     }
 }

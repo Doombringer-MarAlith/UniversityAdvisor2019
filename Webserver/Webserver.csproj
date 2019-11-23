@@ -184,10 +184,12 @@
     <Compile Include="Controllers\FacultiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProgrammesController.cs" />
     <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Controllers\UniversitiesController.cs" />
     <Compile Include="Data\ApplicationDbContext.cs" />
     <Compile Include="Data\Configuration\FacultyConfiguration.cs" />
+    <Compile Include="Data\Configuration\ProgrammeConfiguration.cs" />
     <Compile Include="Data\Configuration\ReviewConfiguration.cs" />
     <Compile Include="Data\Configuration\UniversityConfiguration.cs" />
     <Compile Include="Data\Infrastructure\DatabaseFactory.cs" />
@@ -196,8 +198,10 @@
     <Compile Include="Data\Repositories\ApplicationUserRepository.cs" />
     <Compile Include="Data\Repositories\FacultyRepository.cs" />
     <Compile Include="Data\Repositories\IFacultyRepository.cs" />
+    <Compile Include="Data\Repositories\IProgrammeRepository.cs" />
     <Compile Include="Data\Repositories\IRepository.cs" />
     <Compile Include="Data\Repositories\IReviewRepository.cs" />
+    <Compile Include="Data\Repositories\ProgrammeRepository.cs" />
     <Compile Include="Data\Repositories\RepositoryBase.cs" />
     <Compile Include="Data\Repositories\ReviewRepository.cs" />
     <Compile Include="Global.asax.cs">
@@ -294,6 +298,9 @@
     <Content Include="Views\AddReview\FacultyReview.cshtml" />
     <Content Include="Views\AddReview\ProgrammeReview.cshtml" />
     <Content Include="Views\AddReview\UniversityReview.cshtml" />
+    <Content Include="Views\Programmes\Index.cshtml" />
+    <Content Include="Views\Programmes\Details.cshtml" />
+    <Content Include="Views\Reviews\Programme.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
