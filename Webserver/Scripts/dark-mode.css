@@ -14,3 +14,8 @@
 [data-theme="dark"] .bg-black {
   background-color: #eee !important;
 }
+
+
+    [data-theme="dark"] textarea {
+        background-color: #353836 !important;
+    }
