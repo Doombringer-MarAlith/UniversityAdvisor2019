@@ -6,7 +6,13 @@
 
         public ApplicationDbContext Initialize()
         {
-            return _dbContext ?? (_dbContext = new ApplicationDbContext());
+            if (_dbContext == null)
+            {
+                _dbContext = new ApplicationDbContext();
+                _dbContext.Initialize();
+            }
+
+            return _dbContext;
         }
     }
 }
