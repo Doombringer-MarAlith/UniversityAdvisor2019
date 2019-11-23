@@ -18,6 +18,17 @@ namespace Webserver.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.Programme",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false, maxLength: 255),
+                        FacultyId = c.Int(nullable: false),
+                        UniversityId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.Review",
                 c => new
                     {
@@ -28,7 +39,7 @@ namespace Webserver.Migrations
                         ProgrammeId = c.Int(nullable: false),
                         UserId = c.String(nullable: false),
                         Text = c.String(nullable: false, maxLength: 4000),
-                        Value = c.String(nullable: false),
+                        Value = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -133,6 +144,7 @@ namespace Webserver.Migrations
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.Review");
+            DropTable("dbo.Programme");
             DropTable("dbo.Faculty");
         }
     }
