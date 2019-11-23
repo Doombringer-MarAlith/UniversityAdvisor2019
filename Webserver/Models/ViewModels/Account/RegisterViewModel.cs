@@ -24,5 +24,9 @@ namespace Webserver.Models.ViewModels.Account
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "User role")]
+        public string UserRole { get; set; }
     }
 }

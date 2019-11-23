@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
@@ -16,6 +17,28 @@ namespace Webserver
             // Security stamp validator needs ApplicationUserManager and it tries to resolve the instance
             // from OWIN context (because it does not know any better). So you still need to register ApplicationUserManager with OWIN
             app.CreatePerOwinContext(() => DependencyResolver.Current.GetService<ApplicationUserManager>());
+
+            // Configure authentication roles
+            var roleManager = DependencyResolver.Current.GetService<RoleManager<IdentityRole>>();
+            if (!roleManager.RoleExists("User"))
+            {
+                var role = new IdentityRole
+                {
+                    Name = "User"
+                };
+
+                roleManager.Create(role);
+            }
+
+            if (!roleManager.RoleExists("Administrator"))
+            {
+                var role = new IdentityRole
+                {
+                    Name = "Administrator"
+                };
+
+                roleManager.Create(role);
+            }
 
             // Enable the application to use a cookie to store information for the signed in user
             // and to use a cookie to temporarily store information about a user logging in with a third party login provider
