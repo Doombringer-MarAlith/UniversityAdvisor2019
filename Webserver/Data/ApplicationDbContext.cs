@@ -12,6 +12,7 @@ namespace Webserver.Data
         public DbSet<University> Universities { get; set; }
         public DbSet<Faculty> Faculties { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<Programme> Programmes { get; set; }
 
         public ApplicationDbContext() : base("DefaultConnection")
         {
