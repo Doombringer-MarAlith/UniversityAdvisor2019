@@ -7,9 +7,7 @@ using Microsoft.Owin;
 using Owin;
 using System.Web;
 using System.Web.Mvc;
-using Webserver.Data;
 using Webserver.Data.Infrastructure;
-using Webserver.Data.Models;
 using Webserver.Data.Repositories;
 using Webserver.Models;
 
@@ -22,15 +20,17 @@ namespace Webserver
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<ApplicationDbContext>().AsSelf().SingleInstance().OnActivated(x => x.Instance.Initialize());
+            builder.RegisterType<DatabaseFactory>().As<IDatabaseFactory>().SingleInstance();
+
             builder.RegisterType<ApplicationUserRepository>().As<IUserStore<ApplicationUser>>().InstancePerRequest();
             builder.RegisterType<UniversityRepository>().As<IUniversityRepository>().InstancePerRequest();
             builder.RegisterType<FacultyRepository>().As<IFacultyRepository>().InstancePerRequest();
             builder.RegisterType<ReviewRepository>().As<IReviewRepository>().InstancePerRequest();
             builder.RegisterType<ProgrammeRepository>().As<IProgrammeRepository>().InstancePerRequest();
-            builder.RegisterType<DatabaseFactory>().As<IDatabaseFactory>().InstancePerRequest();
+
             builder.RegisterType<ApplicationUserManager>().AsSelf().InstancePerRequest();
             builder.RegisterType<ApplicationSignInManager>().AsSelf().InstancePerRequest();
+
             builder.Register<IAuthenticationManager>(c => HttpContext.Current.GetOwinContext().Authentication).InstancePerRequest();
             builder.Register<IDataProtectionProvider>(c => app.GetDataProtectionProvider()).InstancePerRequest();
 
