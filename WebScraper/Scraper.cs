@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace WebScraper
 {
-    class Scraper
+    public class Scraper
     {
         string _websiteLink { get; set; }
         int _standardTimeout { get; set; }
