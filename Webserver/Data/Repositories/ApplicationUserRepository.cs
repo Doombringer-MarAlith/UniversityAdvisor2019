@@ -6,6 +6,8 @@ namespace Webserver.Data.Repositories
 {
     public class ApplicationUserRepository : UserStore<ApplicationUser>
     {
-        public ApplicationUserRepository(IDatabaseFactory dbFactory) : base(dbFactory.Initialize()) { }
+        public ApplicationUserRepository(IDatabaseFactory dbFactory) : base(dbFactory.Initialize())
+        {
+        }
     }
 }
