@@ -73,8 +73,12 @@
 {
     if (User.IsInRole("Administrator"))
     {
-        @Html.ActionLink("Delete", "Delete", "Reviews", new { id = Model.Id }, null)
-        @Html.ActionLink("Edit", "Edit", "Reviews",  new { id = Model.Id }, null)
+        <p>
+            @Html.ActionLink("Delete", "Delete", "Reviews", new { id = Model.Id }, null)
+        </p>
+        <p>
+            @Html.ActionLink("Edit", "Edit", "Reviews", new { id = Model.Id }, null)
+        </p>
     }
 }
 

@@ -185,7 +185,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProgrammesController.cs" />
-    <Compile Include="Controllers\RemoveReviewController.cs" />
     <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Controllers\UniversitiesController.cs" />
     <Compile Include="Data\ApplicationDbContext.cs" />
@@ -312,7 +311,6 @@
     <Content Include="Views\Programmes\Details.cshtml" />
     <Content Include="Views\Reviews\Programme.cshtml" />
     <Content Include="Views\Reviews\Delete.cshtml" />
-    <Content Include="Views\RemoveReview\Details.cshtml" />
     <Content Include="Views\Reviews\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
