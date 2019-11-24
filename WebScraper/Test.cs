@@ -20,10 +20,10 @@ namespace WebScraper
         // now run and lithuania's university names should come up eventually
         static void Main()
         {
-            Scraper scraper = new Scraper();
-            if (scraper.GatherUnversities())
+            IGatherDatabase scraper = new Scraper();
+            if (scraper.TryToGatherUnversities())
             {
-                List<University> unis = scraper.universities;
+                List<University> unis = scraper.GetUniversities();
                 foreach (var item in unis)
                 {
                     Console.WriteLine(item.Name);
