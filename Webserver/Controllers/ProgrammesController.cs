@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Models;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using Webserver.Data.Repositories;
-using Models;
 
 namespace Webserver.Controllers
 {
