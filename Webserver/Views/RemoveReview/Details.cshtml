@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Details";
-Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Details</h2>
@@ -44,6 +44,14 @@ Layout = "~/Views/Shared/_Layout.cshtml";
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Text)
         </dt>
 
@@ -59,39 +67,9 @@ Layout = "~/Views/Shared/_Layout.cshtml";
             @Html.DisplayFor(model => model.Value)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.UserId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UserId)
-        </dd>
     </dl>
 </div>
-
-@if (Request.IsAuthenticated)
-{
-    if (User.IsInRole("Administrator"))
-    {
-        @Html.ActionLink("Delete Review", "Index", "RemoveReview", new { id = Model.Id }, new { @class = "popuptext" })
-    }
-}
-
-@if (Model.UniversityId != 0)
-{
-    <p>
-        @Html.ActionLink("Back to List", "University", new { id = Model.UniversityId }, null)
-    </p>
-}
-else if (Model.FacultyId != 0)
-{
-    <p>
-        @Html.ActionLink("Back to List", "Faculty", new { id = Model.FacultyId }, null)
-    </p>
-}
-else if (Model.ProgrammeId != 0)
-{
-    <p>
-        @Html.ActionLink("Back to List", "Programme", new { id = Model.ProgrammeId }, null)
-    </p>
-}
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
