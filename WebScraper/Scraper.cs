@@ -42,12 +42,11 @@ namespace WebScraper
 
         public void UpdateData()
         {
-            // TO BE ADDED updating data in existing files in CountryLinks folder
+            //TODO updating data in existing files in CountryLinks folder
         }
 
-
         // Returns true if success and false otherwise
-        public bool GatherUnversities()
+        public bool TryToGatherUnversities()
         {
             DateTime startTime = DateTime.Now;
             string[] files = null;

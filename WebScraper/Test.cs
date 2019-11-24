@@ -21,7 +21,7 @@ namespace WebScraper
         static void Main()
         {
             IGatherDatabase scraper = new Scraper();
-            if (scraper.GatherUnversities())
+            if (scraper.TryToGatherUnversities())
             {
                 List<University> unis = scraper.GetUniversities();
                 foreach (var item in unis)
