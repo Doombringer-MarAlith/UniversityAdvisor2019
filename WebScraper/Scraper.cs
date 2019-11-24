@@ -13,14 +13,14 @@ namespace WebScraper
 {
     public class Scraper
     {
-        string _websiteLink { get; set; }
-        int _standardTimeout { get; set; }
-        const int _readThisMany = 880;
-        readonly HttpClient _client = new HttpClient();
-        readonly string _countryLinksPath = "CountryLinks";
-        int _currentUniversityId = 1;
-        readonly int _facultiesPerUniversityMax = 49;
-        readonly List<List<string>> universityLinks = new List<List<string>>();
+        private string _websiteLink { get; set; }
+        private int _standardTimeout { get; set; }
+        private const int _readThisMany = 880;
+        private readonly HttpClient _client = new HttpClient();
+        private readonly string _countryLinksPath = "CountryLinks";
+        private int _currentUniversityId = 1;
+        private readonly int _facultiesPerUniversityMax = 49;
+        private readonly List<List<string>> universityLinks = new List<List<string>>();
         public List<University> universities = new List<University>();
         public List<Faculty> faculties = new List<Faculty>();
         public List<Programme> programmes = new List<Programme>();
