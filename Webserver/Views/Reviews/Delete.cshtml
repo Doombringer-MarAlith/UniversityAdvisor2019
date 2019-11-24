@@ -70,12 +70,30 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm("Delete", "Reviews", new { id = Model.Id }, FormMethod.Post, null))
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Delete" class="btn btn-default" />
+            @if (Model.UniversityId != 0)
+            {
+                <p>
+                    @Html.ActionLink("Back to List", "University", new { id = Model.UniversityId }, null)
+                </p>
+            }
+            else if (Model.FacultyId != 0)
+            {
+                <p>
+                    @Html.ActionLink("Back to List", "Faculty", new { id = Model.FacultyId }, null)
+                </p>
+            }
+            else if (Model.ProgrammeId != 0)
+            {
+                <p>
+                    @Html.ActionLink("Back to List", "Programme", new { id = Model.ProgrammeId }, null)
+                </p>
+            }
         </div>
     }
 </div>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
@@ -62,6 +63,11 @@ namespace Webserver.Data.Repositories
         public T Get(Expression<Func<T, bool>> where)
         {
             return _dbSet.Where(where).FirstOrDefault<T>();
+        }
+
+        public DbEntityEntry GetEntry(T entity)
+        {
+            return _dbContext.Entry(entity);
         }
 
         public async Task Commit()
