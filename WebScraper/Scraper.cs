@@ -17,7 +17,9 @@ namespace WebScraper
         private int _standardTimeout { get; set; }
         private const int _readThisMany = 880;
         private readonly HttpClient _client = new HttpClient();
-        private readonly string _countryLinksPath = "CountryLinks";
+        private readonly string projectPath =
+                    AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("Webserver"))
+            + "WebScraper\\CountryLinks";
         private int _currentUniversityId = 1;
         private readonly int _facultiesPerUniversityMax = 49;
         private readonly List<List<string>> universityLinks = new List<List<string>>();
@@ -58,16 +60,20 @@ namespace WebScraper
             // scrapes university links from every file (file contains up to 100 universities from WHED.net search by Country)
             foreach (var file in files)
             {
-                try
+                if (file.Equals(projectPath + "\\Lithuania.txt"))
                 {
-                    using (File.OpenRead(file))
+                    try
                     {
-                        universityLinks.Add(ScrapeUniversityLinks(File.ReadAllText(file)));
+                        using (File.OpenRead(file))
+                        {
+                            universityLinks.Add(ScrapeUniversityLinks(File.ReadAllText(file)));
+                        }
                     }
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.StackTrace);
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.StackTrace);
+                    }
+                    break;
                 }
             }
 
@@ -156,7 +162,7 @@ namespace WebScraper
         {
             try
             {
-                return Directory.GetFiles(_countryLinksPath);  
+                return Directory.GetFiles(projectPath);
             }
             catch (Exception e)
             {
@@ -276,7 +282,7 @@ namespace WebScraper
 
             try
             {
-                using (StreamWriter outputFile = new StreamWriter(_countryLinksPath + "\\" + country + ".txt")) 
+                using (StreamWriter outputFile = new StreamWriter(projectPath + "\\" + country + ".txt")) 
                 {
                     outputFile.Write(responseString);
                 }

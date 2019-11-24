@@ -2,8 +2,9 @@
 using Models;
 using System.Data.Entity;
 using Webserver.Data.Configuration;
-using Webserver.Data.Models;
 using Webserver.Models;
+using WebScraper;
+using Webserver.Data.Models;
 
 namespace Webserver.Data
 {
@@ -31,6 +32,7 @@ namespace Webserver.Data
         public void Initialize()
         {
             DataFixture.Initialize(this);
+            FillDatabase.Initialize(this, new Scraper());
         }
     }
 }
