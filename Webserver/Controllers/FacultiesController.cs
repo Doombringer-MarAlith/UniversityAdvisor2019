@@ -1,6 +1,5 @@
 ﻿using Models;
 using System.Collections.Generic;
-using System.Net;
 using System.Web.Mvc;
 using Webserver.Data.Repositories;
 
@@ -8,7 +7,7 @@ namespace Webserver.Controllers
 {
     public class FacultiesController : Controller
     {
-        private IFacultyRepository _repository;
+        private readonly IFacultyRepository _repository;
 
         public FacultiesController(IFacultyRepository repository)
         {
