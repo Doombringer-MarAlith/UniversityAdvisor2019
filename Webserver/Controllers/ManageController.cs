@@ -11,7 +11,7 @@ namespace Webserver.Controllers
     [Authorize]
     public class ManageController : Controller
     {
-        private ApplicationSignInManager _signInManager;
+        private readonly ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
         public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)

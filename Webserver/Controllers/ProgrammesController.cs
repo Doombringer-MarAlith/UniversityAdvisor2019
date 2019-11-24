@@ -7,7 +7,7 @@ namespace Webserver.Controllers
 {
     public class ProgrammesController : Controller
     {
-        private IProgrammeRepository _repository;
+        private readonly IProgrammeRepository _repository;
 
         public ProgrammesController(IProgrammeRepository repository)
         {

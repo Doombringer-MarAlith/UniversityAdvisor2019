@@ -68,6 +68,7 @@ namespace Webserver.Controllers
             {
                 return View("Error");
             }
+
             return View(new VerifyCodeViewModel { Provider = provider, ReturnUrl = returnUrl, RememberMe = rememberMe });
         }
 
@@ -151,6 +152,7 @@ namespace Webserver.Controllers
             {
                 return View("Error");
             }
+
             var result = await _userManager.ConfirmEmailAsync(userId, code);
             return View(result.Succeeded ? "ConfirmEmail" : "Error");
         }
