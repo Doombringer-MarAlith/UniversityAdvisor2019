@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace WebScraper
 {
-    public class Scraper
+    public class Scraper : IGatherDatabase
     {
         private string _websiteLink { get; set; }
         private int _standardTimeout { get; set; }
@@ -21,9 +21,9 @@ namespace WebScraper
         private int _currentUniversityId = 1;
         private readonly int _facultiesPerUniversityMax = 49;
         private readonly List<List<string>> universityLinks = new List<List<string>>();
-        public List<University> universities = new List<University>();
-        public List<Faculty> faculties = new List<Faculty>();
-        public List<Programme> programmes = new List<Programme>();
+        private List<University> universities = new List<University>();
+        private List<Faculty> faculties = new List<Faculty>();
+        private List<Programme> programmes = new List<Programme>();
 
         // Gets universities from WHED.net website.
         // Feed it html source file of uni search by country and it will gather Uni names + Uni descriptions + Faculties + Faculty programmes
@@ -39,6 +39,12 @@ namespace WebScraper
             _websiteLink = websiteLink;
             _standardTimeout = standardTimeout;
         }
+
+        public void UpdateData()
+        {
+            // TO BE ADDED updating data in existing files in CountryLinks folder
+        }
+
 
         // Returns true if success and false otherwise
         public bool GatherUnversities()
@@ -334,6 +340,21 @@ namespace WebScraper
                 Console.WriteLine(e.StackTrace);
                 throw;
             }
+        }
+
+        public List<University> GetUniversities()
+        {
+            return universities;
+        }
+
+        public List<Faculty> GetFaculties()
+        {
+            return faculties;
+        }
+
+        public List<Programme> GetProgrammes()
+        {
+            return programmes;
         }
     }
 }
