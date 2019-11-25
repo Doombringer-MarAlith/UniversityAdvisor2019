@@ -8,7 +8,6 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Programme</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -22,11 +21,21 @@
 </div>
 
 <p>
-    @Html.ActionLink("Check Reviews", "Programme", "Reviews", new { id = ViewBag.ProgrammeId }, null)
+    @Html.ActionLink("Back to Programme list", "Index", new { facultyId = Model.FacultyId })
 </p>
 <p>
-    @Html.ActionLink("Back to Programme list", "Index", "Programmes", new { facultyId = ViewBag.FacultyId }, null)
+    @Html.ActionLink("Check Reviews", "Programme", "Reviews", new { id = Model.Id }, null)
 </p>
 <p>
-    @Html.ActionLink("Add a review", "ProgrammeReview", "AddReview", new { programmeId = ViewBag.ProgrammeId }, null)
+    @Html.ActionLink("Add a review", "ProgrammeReview", "AddReview", new { programmeId = Model.Id }, null)
 </p>
+
+@if (Request.IsAuthenticated)
+{
+    if (User.IsInRole("Administrator"))
+    {
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+        </p>
+    }
+}

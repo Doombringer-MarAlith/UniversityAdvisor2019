@@ -45,14 +45,24 @@
 </div>
 
 <p>
-    @Html.ActionLink("See Faculties", "Index", "Faculties", new { universityId = ViewBag.UniversityId }, null)
+    @Html.ActionLink("Back to List", "Index")
 </p>
 <p>
-    @Html.ActionLink("Check Reviews", "University", "Reviews", new { id = ViewBag.UniversityId }, null)
+    @Html.ActionLink("See Faculties", "Index", "Faculties", new { universityId = Model.Id }, null)
 </p>
 <p>
-    @Html.ActionLink("Back to List", "Index", "Universities")
+    @Html.ActionLink("Check Reviews", "University", "Reviews", new { id = Model.Id }, null)
 </p>
 <p>
-    @Html.ActionLink("Add a review", "UniversityReview", "AddReview", new { universityId = ViewBag.UniversityId }, null)
+    @Html.ActionLink("Add a review", "UniversityReview", "AddReview", new { universityId = Model.Id }, null)
 </p>
+
+@if (Request.IsAuthenticated)
+{
+    if (User.IsInRole("Administrator"))
+    {
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+        </p>
+    }
+}
