@@ -41,7 +41,7 @@ class Login extends Component {
 
     validateForm() {
         let errorEmailText = !this.state.email ? <span className="text-danger">*Email field is required!</span> : ''
-            let errorPasswordText = !this.state.password ? <span className="text-danger">*Password field is required!</span> : ''
+        let errorPasswordText = !this.state.password ? <span className="text-danger">*Password field is required!</span> : ''
         this.setState({ validateEmailMsg: errorEmailText, validatePasswordMsg: errorPasswordText })
     }
 

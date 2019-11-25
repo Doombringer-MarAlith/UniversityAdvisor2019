@@ -2,9 +2,9 @@
 using Autofac.Integration.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.DataProtection;
-using Microsoft.Owin;
 using Owin;
 using System.Web;
 using System.Web.Mvc;
@@ -13,6 +13,7 @@ using Webserver.Data.Repositories;
 using Webserver.Models;
 
 [assembly: OwinStartupAttribute(typeof(Webserver.Startup))]
+
 namespace Webserver
 {
     public partial class Startup
@@ -38,7 +39,7 @@ namespace Webserver
             builder.RegisterType<RoleManager<IdentityRole>>().AsSelf().InstancePerRequest();
 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
-            
+
             var container = builder.Build();
 
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

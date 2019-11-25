@@ -11,7 +11,7 @@ namespace Webserver.Controllers
     [Authorize]
     public class ManageController : Controller
     {
-        private ApplicationSignInManager _signInManager;
+        private readonly ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
         public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
@@ -208,7 +208,8 @@ namespace Webserver.Controllers
             base.Dispose(disposing);
         }
 
-#region Helpers
+        #region Helpers
+
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
@@ -249,6 +250,6 @@ namespace Webserver.Controllers
             Error
         }
 
-#endregion
+        #endregion Helpers
     }
 }

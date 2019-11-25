@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Programmes</h2>
+<h2>Programmes of @ViewBag.FacultyName</h2>
 
 <table class="table">
     <tr>
@@ -32,9 +32,18 @@
             </td>
         </tr>
     }
-
 </table>
 
 <p>
     @Html.ActionLink("Back To Faculty Details", "Details", "Faculties", new { id = ViewBag.FacultyId }, null)
 </p>
+
+@if (Request.IsAuthenticated)
+{
+    if (User.IsInRole("Administrator"))
+    {
+        <p>
+            @Html.ActionLink("Add", "Add", new { facultyId = ViewBag.FacultyId })
+        </p>
+    }
+}
