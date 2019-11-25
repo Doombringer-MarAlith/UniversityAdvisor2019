@@ -72,19 +72,19 @@
 @if (Model.UniversityId != 0)
 {
     <p>
-        @Html.ActionLink("Back to List", "University", new { id = Model.UniversityId }, null)
+        @Html.ActionLink("Back to List", "University", new { id = Model.UniversityId })
     </p>
 }
 else if (Model.FacultyId != 0)
 {
     <p>
-        @Html.ActionLink("Back to List", "Faculty", new { id = Model.FacultyId }, null)
+        @Html.ActionLink("Back to List", "Faculty", new { id = Model.FacultyId })
     </p>
 }
 else if (Model.ProgrammeId != 0)
 {
     <p>
-        @Html.ActionLink("Back to List", "Programme", new { id = Model.ProgrammeId }, null)
+        @Html.ActionLink("Back to List", "Programme", new { id = Model.ProgrammeId })
     </p>
 }
 
@@ -93,10 +93,10 @@ else if (Model.ProgrammeId != 0)
     if (User.IsInRole("Administrator"))
     {
         <p>
-            @Html.ActionLink("Delete", "Delete", "Reviews", new { id = Model.Id }, null)
+            @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
         </p>
         <p>
-            @Html.ActionLink("Edit", "Edit", "Reviews", new { id = Model.Id }, null)
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
         </p>
     }
 }

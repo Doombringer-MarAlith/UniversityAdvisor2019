@@ -9,25 +9,35 @@ namespace Webserver.Controllers
 {
     public class ProgrammesController : Controller
     {
-        private readonly IProgrammeRepository _repository;
+        private readonly IProgrammeRepository _programmeRepository;
+        private readonly IFacultyRepository _facultyRepository;
 
-        public ProgrammesController(IProgrammeRepository repository)
+        public ProgrammesController(IProgrammeRepository programmeRepository, IFacultyRepository facultyRepository)
         {
-            _repository = repository;
+            _programmeRepository = programmeRepository;
+            _facultyRepository = facultyRepository;
         }
 
         // GET: Programmes/{facultyId}
         public ActionResult Index(int facultyId)
         {
+            Faculty faculty = _facultyRepository.GetById(facultyId);
+            if (faculty == null)
+            {
+                return HttpNotFound();
+            }
+
+            ViewBag.FacultyName = faculty.Name;
             ViewBag.FacultyId = facultyId;
-            IEnumerable<Programme> programmes = _repository.GetMany(programme => programme.FacultyId == facultyId);
+
+            IEnumerable<Programme> programmes = _programmeRepository.GetMany(programme => programme.FacultyId == facultyId);
             return View(programmes);
         }
 
         // GET: Programmes/Details/{id}
         public ActionResult Details(int id)
         {
-            Programme programme = _repository.GetById(id);
+            Programme programme = _programmeRepository.GetById(id);
             if (programme == null)
             {
                 return HttpNotFound();
@@ -40,7 +50,7 @@ namespace Webserver.Controllers
         [Authorize(Roles = "Administrator")]
         public ActionResult Edit(int id)
         {
-            Programme programme = _repository.GetById(id);
+            Programme programme = _programmeRepository.GetById(id);
             if (programme == null)
             {
                 return HttpNotFound();
@@ -57,11 +67,11 @@ namespace Webserver.Controllers
         {
             if (ModelState.IsValid)
             {
-                Programme programmeToBeUpdated = _repository.GetById(programme.Id);
+                Programme programmeToBeUpdated = _programmeRepository.GetById(programme.Id);
                 programmeToBeUpdated.Name = programme.Name;
 
-                _repository.GetEntry(programmeToBeUpdated).State = EntityState.Modified;
-                await _repository.Commit();
+                _programmeRepository.GetEntry(programmeToBeUpdated).State = EntityState.Modified;
+                await _programmeRepository.Commit();
 
                 RedirectToAction("Details", new { id = programme.Id });
             }
@@ -85,8 +95,8 @@ namespace Webserver.Controllers
         {
             if (ModelState.IsValid)
             {
-                _repository.Add(programme);
-                await _repository.Commit();
+                _programmeRepository.Add(programme);
+                await _programmeRepository.Commit();
                 return RedirectToAction("Index", new { facultyId = programme.FacultyId });
             }
 

@@ -9,26 +9,35 @@ namespace Webserver.Controllers
 {
     public class FacultiesController : Controller
     {
-        private readonly IFacultyRepository _repository;
+        private readonly IFacultyRepository _facultyRepository;
+        private readonly IUniversityRepository _universityRepository;
 
-        public FacultiesController(IFacultyRepository repository)
+        public FacultiesController(IFacultyRepository facultyRepository, IUniversityRepository universityRepository)
         {
-            _repository = repository;
+            _facultyRepository = facultyRepository;
+            _universityRepository = universityRepository;
         }
 
         // GET: Faculties/{universityId}
         public ActionResult Index(int universityId)
         {
-            ViewBag.UniversityId = universityId;
-            IEnumerable<Faculty> faculties = _repository.GetMany(faculty => faculty.UniversityId == universityId);
+            University university = _universityRepository.GetById(universityId);
+            if (university == null)
+            {
+                return HttpNotFound();
+            }
 
+            ViewBag.UniversityName = university.Name;
+            ViewBag.UniversityId = universityId;
+
+            IEnumerable<Faculty> faculties = _facultyRepository.GetMany(faculty => faculty.UniversityId == universityId);
             return View(faculties);
         }
 
         // GET: Faculties/Details/{id}
         public ActionResult Details(int id)
         {
-            Faculty faculty = _repository.GetById(id);
+            Faculty faculty = _facultyRepository.GetById(id);
             if (faculty == null)
             {
                 return HttpNotFound();
@@ -41,7 +50,7 @@ namespace Webserver.Controllers
         [Authorize(Roles = "Administrator")]
         public ActionResult Edit(int id)
         {
-            Faculty faculty = _repository.GetById(id);
+            Faculty faculty = _facultyRepository.GetById(id);
             if (faculty == null)
             {
                 return HttpNotFound();
@@ -58,11 +67,11 @@ namespace Webserver.Controllers
         {
             if (ModelState.IsValid)
             {
-                Faculty facultyToBeUpdated = _repository.GetById(faculty.Id);
+                Faculty facultyToBeUpdated = _facultyRepository.GetById(faculty.Id);
                 facultyToBeUpdated.Name = faculty.Name;
 
-                _repository.GetEntry(facultyToBeUpdated).State = EntityState.Modified;
-                await _repository.Commit();
+                _facultyRepository.GetEntry(facultyToBeUpdated).State = EntityState.Modified;
+                await _facultyRepository.Commit();
 
                 RedirectToAction("Details", new { id = faculty.Id });
             }
@@ -86,8 +95,8 @@ namespace Webserver.Controllers
         {
             if (ModelState.IsValid)
             {
-                _repository.Add(faculty);
-                await _repository.Commit();
+                _facultyRepository.Add(faculty);
+                await _facultyRepository.Commit();
                 return RedirectToAction("Index", new { universityId = faculty.UniversityId });
             }
 

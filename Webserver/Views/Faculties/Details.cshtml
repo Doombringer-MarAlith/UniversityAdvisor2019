@@ -8,7 +8,6 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Faculty</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -30,7 +29,7 @@
 </div>
 
 <p>
-    @Html.ActionLink("Back to Faculty List", "Index", "Faculties", new { universityId = Model.UniversityId }, null)
+    @Html.ActionLink("Back to Faculty List", "Index", new { universityId = Model.UniversityId })
 </p>
 <p>
     @Html.ActionLink("See Programmes", "Index", "Programmes", new { facultyId = Model.Id }, null)
@@ -47,7 +46,7 @@
     if (User.IsInRole("Administrator"))
     {
         <p>
-            @Html.ActionLink("Edit", "Edit", "Faculties", new { id = Model.Id }, null)
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
         </p>
     }
 }

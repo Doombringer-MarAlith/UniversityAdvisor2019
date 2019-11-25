@@ -34,19 +34,19 @@
 @if (Model.UniversityId != 0)
 {
     <p>
-        @Html.ActionLink("Back to List", "University", new { id = Model.UniversityId }, null)
+        @Html.ActionLink("Back to List", "University", new { id = Model.UniversityId })
     </p>
 }
 else if (Model.FacultyId != 0)
 {
     <p>
-        @Html.ActionLink("Back to List", "Faculty", new { id = Model.FacultyId }, null)
+        @Html.ActionLink("Back to List", "Faculty", new { id = Model.FacultyId })
     </p>
 }
 else if (Model.ProgrammeId != 0)
 {
     <p>
-        @Html.ActionLink("Back to List", "Programme", new { id = Model.ProgrammeId }, null)
+        @Html.ActionLink("Back to List", "Programme", new { id = Model.ProgrammeId })
     </p>
 }
 

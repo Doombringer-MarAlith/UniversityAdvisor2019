@@ -45,7 +45,7 @@
 </div>
 
 <p>
-    @Html.ActionLink("Back to List", "Index", "Universities")
+    @Html.ActionLink("Back to List", "Index")
 </p>
 <p>
     @Html.ActionLink("See Faculties", "Index", "Faculties", new { universityId = Model.Id }, null)
@@ -62,7 +62,7 @@
     if (User.IsInRole("Administrator"))
     {
         <p>
-            @Html.ActionLink("Edit", "Edit", "Universities", new { id = Model.Id }, null)
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
         </p>
     }
 }
