@@ -53,7 +53,7 @@ namespace Webserver.Controllers
             return View(review);
         }
 
-        // GET: RemoveReview/Delete/{id}
+        // GET: Reviews/Delete/{id}
         [Authorize(Roles = "Administrator")]
         public ActionResult Delete(int id)
         {
@@ -66,7 +66,7 @@ namespace Webserver.Controllers
             return View(review);
         }
 
-        // POST: RemoveReview/Delete/{id}
+        // POST: Reviews/Delete/{id}
         [HttpPost, ActionName("Delete")]
         [Authorize(Roles = "Administrator")]
         [ValidateAntiForgeryToken]
@@ -120,18 +120,7 @@ namespace Webserver.Controllers
                 _repository.GetEntry(reviewToBeUpdated).State = EntityState.Modified;
                 await _repository.Commit();
 
-                if (reviewToBeUpdated.UniversityId != 0)
-                {
-                    return RedirectToAction("University", "Reviews", new { id = reviewToBeUpdated.UniversityId });
-                }
-                else if (reviewToBeUpdated.FacultyId != 0)
-                {
-                    return RedirectToAction("Faculty", "Reviews", new { id = reviewToBeUpdated.FacultyId });
-                }
-                else if (reviewToBeUpdated.ProgrammeId != 0)
-                {
-                    return RedirectToAction("Programme", "Reviews", new { id = reviewToBeUpdated.ProgrammeId });
-                }
+                RedirectToAction("Details", new { id = review.Id });
             }
 
             return View(review);

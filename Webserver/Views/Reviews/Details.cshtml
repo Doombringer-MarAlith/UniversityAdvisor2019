@@ -69,19 +69,6 @@
     </dl>
 </div>
 
-@if (Request.IsAuthenticated)
-{
-    if (User.IsInRole("Administrator"))
-    {
-        <p>
-            @Html.ActionLink("Delete", "Delete", "Reviews", new { id = Model.Id }, null)
-        </p>
-        <p>
-            @Html.ActionLink("Edit", "Edit", "Reviews", new { id = Model.Id }, null)
-        </p>
-    }
-}
-
 @if (Model.UniversityId != 0)
 {
     <p>
@@ -99,4 +86,17 @@ else if (Model.ProgrammeId != 0)
     <p>
         @Html.ActionLink("Back to List", "Programme", new { id = Model.ProgrammeId }, null)
     </p>
+}
+
+@if (Request.IsAuthenticated)
+{
+    if (User.IsInRole("Administrator"))
+    {
+        <p>
+            @Html.ActionLink("Delete", "Delete", "Reviews", new { id = Model.Id }, null)
+        </p>
+        <p>
+            @Html.ActionLink("Edit", "Edit", "Reviews", new { id = Model.Id }, null)
+        </p>
+    }
 }

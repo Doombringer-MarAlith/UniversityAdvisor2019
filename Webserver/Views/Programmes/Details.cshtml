@@ -22,11 +22,21 @@
 </div>
 
 <p>
-    @Html.ActionLink("Check Reviews", "Programme", "Reviews", new { id = ViewBag.ProgrammeId }, null)
+    @Html.ActionLink("Back to Programme list", "Index", "Programmes", new { facultyId = Model.FacultyId }, null)
 </p>
 <p>
-    @Html.ActionLink("Back to Programme list", "Index", "Programmes", new { facultyId = ViewBag.FacultyId }, null)
+    @Html.ActionLink("Check Reviews", "Programme", "Reviews", new { id = Model.Id }, null)
 </p>
 <p>
-    @Html.ActionLink("Add a review", "ProgrammeReview", "AddReview", new { programmeId = ViewBag.ProgrammeId }, null)
+    @Html.ActionLink("Add a review", "ProgrammeReview", "AddReview", new { programmeId = Model.Id }, null)
 </p>
+
+@if (Request.IsAuthenticated)
+{
+    if (User.IsInRole("Administrator"))
+    {
+        <p>
+            @Html.ActionLink("Edit", "Edit", "Programmes", new { id = Model.Id }, null)
+        </p>
+    }
+}
