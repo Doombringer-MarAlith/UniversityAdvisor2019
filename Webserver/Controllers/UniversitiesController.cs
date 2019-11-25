@@ -45,6 +45,8 @@ namespace Webserver.Controllers
                 return HttpNotFound();
             }
 
+            ViewBag.UniversityId = id;
+
             List<DataPoint> dataPoints = new List<DataPoint>{
                 new DataPoint(1, 22),                   
                 new DataPoint(2, 36),
