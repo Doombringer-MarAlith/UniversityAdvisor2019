@@ -2,13 +2,12 @@
 using AutoFixture.AutoMoq;
 using AutoFixture.Xunit2;
 
-namespace AcceptanceTests.TestHelpers
+namespace Webserver.Tests
 {
     internal class AutoMoqData : AutoDataAttribute
     {
-        public AutoMoqData( ) : base(() => new Fixture().Customize(new AutoMoqCustomization()))
+        public AutoMoqData() : base(() => new Fixture().Customize(new AutoMoqCustomization()))
         {
-            
         }
     }
 }

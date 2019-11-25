@@ -196,6 +196,7 @@
     <Compile Include="Data\Configuration\ProgrammeConfiguration.cs" />
     <Compile Include="Data\Configuration\ReviewConfiguration.cs" />
     <Compile Include="Data\Configuration\UniversityConfiguration.cs" />
+    <Compile Include="Data\Services\DatabaseFiller.cs" />
     <Compile Include="Data\Infrastructure\DatabaseFactory.cs" />
     <Compile Include="Data\Infrastructure\IDatabaseFactory.cs" />
     <Compile Include="Data\Models\DataFixture.cs" />
@@ -360,6 +361,10 @@
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{58d4dbde-7f0a-4114-8273-bf5d988a07be}</Project>
       <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebScraper\WebScraper.csproj">
+      <Project>{1e0f3c15-1bdd-4906-b538-334985775b3e}</Project>
+      <Name>WebScraper</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
