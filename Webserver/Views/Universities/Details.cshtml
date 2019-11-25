@@ -76,12 +76,17 @@
     window.onload = function () {
         var chart = new CanvasJS.Chart("chartContainer", {
             theme: "light2",
+             backgroundColor: "transparent",
             animationEnabled: true,
             title: {
+                fontColor: "#18bc9c",
                 text: "OVERVIEW"
-            },
+                },
             subtitles: [
-                { text: "University rating by users" }
+                {
+                    text: "University rating by users",
+                    fontColor: "#18bc9c"
+                }
             ],
             axisX:{      
 				valueFormatString: "#" ,
@@ -89,7 +94,7 @@
 			},
             data: [
                 {
-                    type: "column", //change type to bar, line, area, pie, etc
+                   type: "column", // change type to bar, line, area, pie, etc
                    dataPoints: @Html.Raw(ViewBag.DataPoints)
                    
                 }
