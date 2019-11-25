@@ -55,7 +55,7 @@ namespace Webserver.Controllers
                 new DataPoint(3, 42),
                 new DataPoint(4, 51),
                 new DataPoint(5, 46),
-            };  //TODO sioje vietoje reikia is duombazes paskaiciuot kiek yra review su value 1, kiek su value 2 ir iki 5.
+            };  // TODO sioje vietoje reikia is duombazes paskaiciuot kiek yra review su value 1, kiek su value 2 ir iki 5.
             // bet bedele tame kad tai yra review controller o ne UniversitiesController
 
             ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
