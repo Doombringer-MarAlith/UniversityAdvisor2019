@@ -7,6 +7,9 @@
 
 <h2>@Html.DisplayFor(model => model.Name)</h2>
 
+
+
+
 <div>
     <hr />
     <dl class="dl-horizontal">
@@ -57,3 +60,38 @@
 <p>
     @Html.ActionLink("Add a review", "UniversityReview", "AddReview", new { universityId = ViewBag.UniversityId }, null)
 </p>
+
+
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<div id="chartContainer" style="height:300px; width: 100%;"></div>
+
+<script type="text/javascript">
+
+    window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            theme: "light2",
+            animationEnabled: true,
+            title: {
+                text: "OVERVIEW"
+            },
+            subtitles: [
+                { text: "University rating by users" }
+            ],
+            axisX:{      
+				valueFormatString: "#" ,
+				interval: 1
+			},
+            data: [
+                {
+                    type: "column", //change type to bar, line, area, pie, etc
+                   dataPoints: @Html.Raw(ViewBag.DataPoints)
+                   
+                }
+            ]
+        });
+        chart.render();
+    };
+</script>
+

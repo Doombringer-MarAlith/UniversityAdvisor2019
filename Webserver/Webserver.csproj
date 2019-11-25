@@ -57,13 +57,20 @@
     <Reference Include="Autofac.Integration.Owin, Version=4.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.Owin.4.2.0\lib\net45\Autofac.Integration.Owin.dll</HintPath>
     </Reference>
+    <Reference Include="FusionCharts">
+      <HintPath>..\fusioncharts-suite-xt\integrations\asp.net-cs\fusioncharts-wrapper-assembly\FusionCharts.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -113,9 +120,6 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -213,6 +217,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\DataPoint.cs" />
     <Compile Include="Models\ViewModels\Account\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="Models\ViewModels\Account\ExternalLoginListViewModel.cs" />
     <Compile Include="Models\ViewModels\Account\ForgotPasswordViewModel.cs" />
@@ -247,9 +252,24 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\package.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\canavasjs.min.js" />
     <Content Include="Scripts\dark-mode-switch.js" />
     <Content Include="Scripts\dark-mode-switch.min.js" />
     <Content Include="Content\dark-mode.css" />
+    <Content Include="Scripts\fusioncharts.charts.js" />
+    <Content Include="Scripts\fusioncharts.excelexport.js" />
+    <Content Include="Scripts\fusioncharts.gantt.js" />
+    <Content Include="Scripts\fusioncharts.js" />
+    <Content Include="Scripts\fusioncharts.maps.js" />
+    <Content Include="Scripts\fusioncharts.overlappedbar2d.js" />
+    <Content Include="Scripts\fusioncharts.overlappedcolumn2d.js" />
+    <Content Include="Scripts\fusioncharts.powercharts.js" />
+    <Content Include="Scripts\fusioncharts.timeseries.js" />
+    <Content Include="Scripts\fusioncharts.treemap.js" />
+    <Content Include="Scripts\fusioncharts.vml.js" />
+    <Content Include="Scripts\fusioncharts.widgets.js" />
+    <Content Include="Scripts\fusioncharts.zoomline.js" />
+    <Content Include="Scripts\fusioncharts.zoomscatter.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -261,6 +281,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\src\index.js" />
+    <Content Include="Scripts\src\jquery-1.11.1.min.js" />
     <Content Include="Scripts\src\react\components\Login.js" />
     <Content Include="Scripts\webpack.config.js" />
     <Content Include="Web.config" />
