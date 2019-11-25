@@ -14,9 +14,9 @@ namespace Webserver.Controllers
         public ActionResult Contact()
         {
             AddMessageToViewBag messageToViewBag = delegate (string message)
-        {
-            ViewBag.Message = message;
-        };
+            {
+                ViewBag.Message = message;
+            };
 
             messageToViewBag("Created by Julius, Rytis, Tomas and Dovile");
 
