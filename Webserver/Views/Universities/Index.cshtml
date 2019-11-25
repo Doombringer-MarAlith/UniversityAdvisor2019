@@ -8,10 +8,10 @@
 <h2>Search For Universities: </h2>
 @using (Html.BeginForm("Search", "Universities", FormMethod.Get))
 {
-<ul class="nav navbar-nav">
-    <li>@Html.TextBox("text", "")</li>
-    <li><input type="submit" value="Search" /></li>
-</ul>
+    <ul class="nav navbar-nav">
+        <li>@Html.TextBox("text", "")</li>
+        <li><input type="submit" value="Search" /></li>
+    </ul>
 }
 
 <table class="table" style="margin-top: 50px">
@@ -33,22 +33,32 @@
 
     @foreach (var item in Model)
     {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Location)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FoundingDate)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id = item.Id })
-        </td>
-    </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FoundingDate)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
+            </td>
+        </tr>
     }
 </table>
+
+@if (Request.IsAuthenticated)
+{
+    if (User.IsInRole("Administrator"))
+    {
+        <p>
+            @Html.ActionLink("Add", "Add")
+        </p>
+    }
+}

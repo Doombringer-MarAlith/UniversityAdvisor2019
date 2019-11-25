@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
@@ -30,6 +31,9 @@ namespace Webserver.Data.Repositories
 
         // Gets entities using delegate
         IEnumerable<T> GetMany(Expression<Func<T, bool>> where);
+
+        // Gets entity entry for modifying state
+        DbEntityEntry GetEntry(T entity);
 
         // Saves added entities to database
         Task Commit();

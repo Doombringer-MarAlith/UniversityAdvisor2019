@@ -1,5 +1,7 @@
 ﻿using Models;
+using System.Data.Entity;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using Webserver.Data.Repositories;
 
@@ -41,7 +43,64 @@ namespace Webserver.Controllers
                 return HttpNotFound();
             }
 
-            ViewBag.UniversityId = id;
+            return View(university);
+        }
+
+        // GET: Universities/Edit/{id}
+        [Authorize(Roles = "Administrator")]
+        public ActionResult Edit(int id)
+        {
+            University university = _repository.GetById(id);
+            if (university == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(university);
+        }
+
+        // POST: Universities/Edit/{id}
+        [HttpPost]
+        [Authorize(Roles = "Administrator")]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit([Bind(Include = "Id, Name, Description, FoundingDate")] University university)
+        {
+            if (ModelState.IsValid)
+            {
+                University universityToBeUpdated = _repository.GetById(university.Id);
+                universityToBeUpdated.Name = university.Name;
+                universityToBeUpdated.Description = university.Description;
+                universityToBeUpdated.FoundingDate = university.FoundingDate;
+
+                _repository.GetEntry(universityToBeUpdated).State = EntityState.Modified;
+                await _repository.Commit();
+
+                RedirectToAction("Details", new { id = university.Id });
+            }
+
+            return View(university);
+        }
+
+        // GET: Universities/Add
+        [Authorize(Roles = "Administrator")]
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        // POST: Universities/Add
+        [HttpPost]
+        [Authorize(Roles = "Administrator")]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Add([Bind(Include = "Name, Description, Location, FoundingDate")] University university)
+        {
+            if (ModelState.IsValid)
+            {
+                _repository.Add(university);
+                await _repository.Commit();
+                return RedirectToAction("Index");
+            }
+
             return View(university);
         }
     }
