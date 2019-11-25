@@ -1,12 +1,12 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Net;
-using System.Linq;
 using Models;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Text;
 
@@ -94,6 +94,7 @@ namespace WebScraper
                         {
                             string htmlCode = client.DownloadString(_websiteLink + link);
                             Console.WriteLine("UNIVERSITY {0:d}/{1:d} START:" + DateTime.Now, universityIndexInCountry + 1, linksList.Count);
+                            
                             /* Palieku komentare nes maybe ateity dar bandysiu padaryt kad su threadais veiktų
                             if (_currentUniversityId % 2 == 0)
                             {
@@ -138,8 +139,8 @@ namespace WebScraper
                                 {
                                     t2.Join();
                                 }
-
                             }*/
+                            
                             StartThreadWithTimeout(htmlCode, _standardTimeout);
                         }
                         catch (WebException e)
@@ -159,7 +160,7 @@ namespace WebScraper
             return true;
         }
 
-        string[] GetFiles()
+        private string[] GetFiles()
         {
             try
             {
@@ -175,7 +176,7 @@ namespace WebScraper
         /// <summary>
         /// Finds links to all universities in given HTML file text and returns them as List<string>
         /// </summary>
-        List<string> ScrapeUniversityLinks(string text)
+        private List<string> ScrapeUniversityLinks(string text)
         {
             int startIndex = 0;
             int endIndex;
@@ -197,7 +198,7 @@ namespace WebScraper
         }
 
         // Find the name of university and it's Faculties' names
-        void ScrapeUniversity(string text)
+        private void ScrapeUniversity(string text)
         {
             University university = new University();
 
@@ -220,7 +221,7 @@ namespace WebScraper
             ReadFaculties(text);
         }
 
-        void ReadFaculties(string text)
+        private void ReadFaculties(string text)
         {
             int start = 0;
             int end;
@@ -269,7 +270,7 @@ namespace WebScraper
         /// <param name="country">Country's name to get university list for</param>
         /// <param name="offset">From what number to start gathering university hrefs (2 to 2 + _readThisMany)</param>
         /// <returns></returns>
-        async Task<int> Scrape(string country, int offset)
+        private async Task<int> Scrape(string country, int offset)
         {
             var values = new Dictionary<string, string>
             {
@@ -292,7 +293,7 @@ namespace WebScraper
                     outputFile.Write(responseString);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.StackTrace);
             }
@@ -300,7 +301,7 @@ namespace WebScraper
             return FindUniversityCount(responseString);
         }
 
-        int FindUniversityCount(string text)
+        private int FindUniversityCount(string text)
         {
             int start = text.IndexOf("total") + 14;
             if (start == 13)
@@ -318,14 +319,14 @@ namespace WebScraper
             return Int32.Parse(txt);
         }
 
-        void StartThreadWithTimeout(string text, int timeout)
+        private void StartThreadWithTimeout(string text, int timeout)
         {
             Thread t = new Thread(() => ScrapeUniversity(text));
             t.Start();
             DateTime current = DateTime.Now;
             while (t.IsAlive)
             {
-                if((DateTime.Now - current).TotalMilliseconds > timeout)
+                if ((DateTime.Now - current).TotalMilliseconds > timeout)
                     break;
             }
 
@@ -336,7 +337,7 @@ namespace WebScraper
             }
         }
 
-        void WriteToFile(string txt, string path)
+        private void WriteToFile(string txt, string path)
         {
             try
             {
