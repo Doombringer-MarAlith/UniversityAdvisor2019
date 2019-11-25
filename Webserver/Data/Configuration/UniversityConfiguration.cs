@@ -9,7 +9,7 @@ namespace Webserver.Data.Configuration
         {
             ToTable("University");
             Property(university => university.Name).IsRequired().HasMaxLength(255);
-            Property(university => university.Id).IsRequired(); //.HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
+            Property(university => university.Id).IsRequired().HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
         }
     }
 }
