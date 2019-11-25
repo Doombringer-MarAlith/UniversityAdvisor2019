@@ -5,14 +5,68 @@
 }
 
 <h2>University Review</h2>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .rate {
+        float: left;
+        height: 46px;
+        padding: 0 10px;
+    }
+
+    .rate:not(:checked) > input {
+        position: absolute;
+        top: -9999px;
+    }
+
+    .rate:not(:checked) > label {
+        float: right;
+        width: 1em;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 30px;
+        color: #ccc;
+    }
+
+    .rate:not(:checked) > label:before {
+        content: '★ ';
+    }
+
+    .rate > input:checked ~ label {
+        color: #ffc700;
+    }
+
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        color: #deb217;
+    }
+
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+        color: #c59b08;
+    }
+</style>
 
 @using (Html.BeginForm("ReviewUniversity", "AddReview", new { id = ViewBag.universityId }, FormMethod.Post, null))
 {
-<center>
-    @Html.TextAreaFor(model => model.Text, new { name = "text", cols = "40", rows = "10" })
-    @Html.ValidationMessageFor(model => model.Text)
-    @Html.TextBoxFor(model => model.Value, new { name="Rating(1-5)"})
-    <br>
-    <input type="submit" class="btn btn-default" value="Submit" />
-</center>
+    <center>
+        @Html.TextAreaFor(model => model.Text, new { name = "text", cols = "40", rows = "10" })
+        @Html.ValidationMessageFor(model => model.Text)
+        <div>
+            @Html.RadioButtonFor(model => model.Value, 1, new { @class = "rate", id = "star1", type = "radio", name = "rating", title = "Terrible", label = "1" })
+            @Html.RadioButtonFor(model => model.Value, 2, new { @class = "rate", id = "star2", type = "radio", name = "rating", title = "Not good", label = "2" })
+            @Html.RadioButtonFor(model => model.Value, 3, new { @class = "rate", id = "star3", type = "radio", name = "rating", title = "Average", label = "5" })
+            @Html.RadioButtonFor(model => model.Value, 4, new { @class = "rate", id = "star4", type = "radio", name = "rating", title = "Good", label = "5" })
+            @Html.RadioButtonFor(model => model.Value, 5, new { @class = "rate", id = "star5", type = "radio", name = "rating", title = "Amazing", label = "5" })
+        </div>
+        <br>
+        <input type="submit" class="btn btn-default" value="Submit" />
+    </center>
 }
