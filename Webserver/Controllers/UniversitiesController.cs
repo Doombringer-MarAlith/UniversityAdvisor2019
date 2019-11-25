@@ -7,22 +7,25 @@ using Webserver.Data.Repositories;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using ASPNET_MVC_Samples.Models;
+using System.Linq;
 
 namespace Webserver.Controllers
 {
     public class UniversitiesController : Controller
     {
-        private readonly IUniversityRepository _repository;
+        private readonly IUniversityRepository _universityRepository;
+        private readonly IReviewRepository _reviewRepository;
 
-        public UniversitiesController(IUniversityRepository repository)
+        public UniversitiesController(IUniversityRepository universityRepository, IReviewRepository reviewRepository)
         {
-            _repository = repository;
+            _universityRepository = universityRepository;
+            _reviewRepository = reviewRepository;
         }
 
         // GET: Universities
         public ActionResult Index()
         {
-            return View(_repository.GetAll());
+            return View(_universityRepository.GetAll());
         }
 
         // GET: Universities/Search/{text}
@@ -33,7 +36,7 @@ namespace Webserver.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            var universityList = _repository.GetMany(university => university.Name.Contains(text));
+            var universityList = _universityRepository.GetMany(university => university.Name.Contains(text));
             return View("Index", universityList);
         }
 
@@ -41,22 +44,22 @@ namespace Webserver.Controllers
        
         public ActionResult Details(int id)
         {
-            University university = _repository.GetById(id);
+            University university = _universityRepository.GetById(id);
             if (university == null)
             {
                 return HttpNotFound();
             }
 
             ViewBag.UniversityId = id;
+            var reviewList = _reviewRepository.GetMany(review => review.UniversityId.Equals(id));
 
             List<DataPoint> dataPoints = new List<DataPoint>{
-                new DataPoint(1, 22),                   
-                new DataPoint(2, 36),
-                new DataPoint(3, 42),
-                new DataPoint(4, 51),
-                new DataPoint(5, 46),
-            };  // TODO sioje vietoje reikia is duombazes paskaiciuot kiek yra review su value 1, kiek su value 2 ir iki 5.
-            // bet bedele tame kad tai yra review controller o ne UniversitiesController
+                new DataPoint(1, reviewList.Where(review => review.Value.Equals(1)).Count()),                   
+                new DataPoint(2, reviewList.Where(review => review.Value.Equals(2)).Count()),
+                new DataPoint(3, reviewList.Where(review => review.Value.Equals(3)).Count()),
+                new DataPoint(4, reviewList.Where(review => review.Value.Equals(4)).Count()),
+                new DataPoint(5, reviewList.Where(review => review.Value.Equals(5)).Count()),
+            };
 
             ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
 
@@ -67,7 +70,7 @@ namespace Webserver.Controllers
         [Authorize(Roles = "Administrator")]
         public ActionResult Edit(int id)
         {
-            University university = _repository.GetById(id);
+            University university = _universityRepository.GetById(id);
             if (university == null)
             {
                 return HttpNotFound();
@@ -84,13 +87,13 @@ namespace Webserver.Controllers
         {
             if (ModelState.IsValid)
             {
-                University universityToBeUpdated = _repository.GetById(university.Id);
+                University universityToBeUpdated = _universityRepository.GetById(university.Id);
                 universityToBeUpdated.Name = university.Name;
                 universityToBeUpdated.Description = university.Description;
                 universityToBeUpdated.FoundingDate = university.FoundingDate;
 
-                _repository.GetEntry(universityToBeUpdated).State = EntityState.Modified;
-                await _repository.Commit();
+                _universityRepository.GetEntry(universityToBeUpdated).State = EntityState.Modified;
+                await _universityRepository.Commit();
 
                 RedirectToAction("Details", new { id = university.Id });
             }
@@ -113,8 +116,8 @@ namespace Webserver.Controllers
         {
             if (ModelState.IsValid)
             {
-                _repository.Add(university);
-                await _repository.Commit();
+                _universityRepository.Add(university);
+                await _universityRepository.Commit();
                 return RedirectToAction("Index");
             }
 

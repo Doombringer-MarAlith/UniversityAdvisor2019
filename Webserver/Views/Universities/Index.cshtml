@@ -22,12 +22,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Location)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FoundingDate)
-        </th>
         <th></th>
     </tr>
 
@@ -39,12 +33,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Location)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FoundingDate)
             </td>
             <td>
                 @Html.ActionLink("Details", "Details", new { id = item.Id })
