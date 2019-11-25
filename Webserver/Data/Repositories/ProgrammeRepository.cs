@@ -5,6 +5,8 @@ namespace Webserver.Data.Repositories
 {
     public class ProgrammeRepository : RepositoryBase<Programme>, IProgrammeRepository
     {
-        public ProgrammeRepository(IDatabaseFactory dbFactory) : base(dbFactory) { }
+        public ProgrammeRepository(IDatabaseFactory dbFactory) : base(dbFactory)
+        {
+        }
     }
 }

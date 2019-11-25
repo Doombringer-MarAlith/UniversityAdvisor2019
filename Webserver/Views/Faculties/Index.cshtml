@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Faculties of @ViewBag.UniversityName</h2>
 
 <table class="table">
     <tr>
@@ -18,22 +18,32 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UniversityId)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id = item.Id })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UniversityId)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
+            </td>
+        </tr>
+    }
 </table>
 
 <p>
     @Html.ActionLink("Back To University Details", "Details", "Universities", new { id = ViewBag.UniversityId }, null)
 </p>
+
+@if (Request.IsAuthenticated)
+{
+    if (User.IsInRole("Administrator"))
+    {
+        <p>
+            @Html.ActionLink("Add", "Add", new { universityId = ViewBag.UniversityId })
+        </p>
+    }
+}

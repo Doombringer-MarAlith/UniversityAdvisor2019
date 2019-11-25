@@ -51,5 +51,14 @@
             </td>
         </tr>
     }
-
 </table>
+
+@if (Request.IsAuthenticated)
+{
+    if (User.IsInRole("Administrator"))
+    {
+        <p>
+            @Html.ActionLink("Add", "Add")
+        </p>
+    }
+}

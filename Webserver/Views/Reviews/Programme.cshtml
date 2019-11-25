@@ -33,11 +33,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.UserId)
             </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
+            </td>
         </tr>
     }
-
 </table>
 
 <p>
-    @Html.ActionLink("Back To Programme Details", "Details", "Programmes", new { id = ViewBag.ProgrammeId }, null)
+    @Html.ActionLink("Back To Programme Details", "Details", new { id = ViewBag.ProgrammeId })
 </p>

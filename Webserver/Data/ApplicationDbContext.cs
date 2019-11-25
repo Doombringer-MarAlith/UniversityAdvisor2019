@@ -16,7 +16,6 @@ namespace Webserver.Data
 
         public ApplicationDbContext() : base("DefaultConnection")
         {
-
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -1,15 +1,16 @@
-﻿using System.Web.Mvc;
+﻿using Microsoft.AspNet.Identity;
 using Models;
-using Webserver.Data.Repositories;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
+using System.Web.Mvc;
+using Webserver.Data.Repositories;
 
 namespace Webserver.Controllers
 {
     [Authorize]
     public class AddReviewController : Controller
     {
-        IReviewRepository _reviewRepository;
+        private readonly IReviewRepository _reviewRepository;
+
         public AddReviewController(IReviewRepository reviewRepository)
         {
             _reviewRepository = reviewRepository;
@@ -39,11 +40,11 @@ namespace Webserver.Controllers
             return View();
         }
 
-        // POST
+        [HttpPost]
         public async Task<ActionResult> ReviewUniversity(Review model, int id)
         {
             model.UniversityId = id;
-            if(model.Value > 5 || model.Value < 1)
+            if (model.Value > 5 || model.Value < 1)
             {
                 model.Value = 5;
             }
@@ -54,7 +55,7 @@ namespace Webserver.Controllers
             return RedirectToAction("Details", "Universities", new { id = id });
         }
 
-        // POST
+        [HttpPost]
         public async Task<ActionResult> ReviewFaculty(Review model, int id)
         {
             model.FacultyId = id;
@@ -69,7 +70,7 @@ namespace Webserver.Controllers
             return RedirectToAction("Details", "Faculties", new { id = id });
         }
 
-        // POST
+        [HttpPost]
         public async Task<ActionResult> ReviewProgramme(Review model, int id)
         {
             model.ProgrammeId = id;

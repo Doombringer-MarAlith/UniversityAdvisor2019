@@ -5,6 +5,8 @@ namespace Webserver.Data.Repositories
 {
     public class UniversityRepository : RepositoryBase<University>, IUniversityRepository
     {
-        public UniversityRepository(IDatabaseFactory dbFactory) : base(dbFactory) { }
+        public UniversityRepository(IDatabaseFactory dbFactory) : base(dbFactory)
+        {
+        }
     }
 }

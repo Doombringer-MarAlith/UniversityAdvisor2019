@@ -27,11 +27,16 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Value)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
+            </td>
         </tr>
     }
-
 </table>
 
 <p>
-    @Html.ActionLink("Back To Faculty Details", "Details", "Faculties", new { id = ViewBag.FacultyId }, null)
+    @Html.ActionLink("Back To Faculty Details", "Details", new { id = ViewBag.FacultyId })
 </p>

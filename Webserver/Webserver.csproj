@@ -239,18 +239,18 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\bootstrap-flat-theme.css" />
+    <Content Include="App_Start\Content\bootstrap-theme.css" />
+    <Content Include="App_Start\Content\bootstrap-theme.min.css" />
+    <Content Include="App_Start\Content\bootstrap.css" />
+    <Content Include="App_Start\Content\bootstrap.min.css" />
+    <Content Include="App_Start\Content\bootstrap-flat-theme.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="App_Start\Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\package.json" />
+    <Content Include="App_Start\Content\package.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\canavasjs.min.js" />
     <Content Include="Scripts\dark-mode-switch.js" />
@@ -270,6 +270,7 @@
     <Content Include="Scripts\fusioncharts.widgets.js" />
     <Content Include="Scripts\fusioncharts.zoomline.js" />
     <Content Include="Scripts\fusioncharts.zoomscatter.js" />
+    <Content Include="App_Start\Content\dark-mode.css" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -295,7 +296,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -332,6 +332,14 @@
     <Content Include="Views\Programmes\Index.cshtml" />
     <Content Include="Views\Programmes\Details.cshtml" />
     <Content Include="Views\Reviews\Programme.cshtml" />
+    <Content Include="Views\Reviews\Delete.cshtml" />
+    <Content Include="Views\Reviews\Edit.cshtml" />
+    <Content Include="Views\Programmes\Edit.cshtml" />
+    <Content Include="Views\Faculties\Edit.cshtml" />
+    <Content Include="Views\Universities\Edit.cshtml" />
+    <Content Include="Views\Universities\Add.cshtml" />
+    <Content Include="Views\Faculties\Add.cshtml" />
+    <Content Include="Views\Programmes\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -341,10 +349,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="App_Start\Content\bootstrap.min.css.map" />
+    <Content Include="App_Start\Content\bootstrap.css.map" />
+    <Content Include="App_Start\Content\bootstrap-theme.min.css.map" />
+    <Content Include="App_Start\Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
