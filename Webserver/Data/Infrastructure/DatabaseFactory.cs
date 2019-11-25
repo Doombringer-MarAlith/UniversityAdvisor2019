@@ -11,15 +11,8 @@ namespace Webserver.Data.Infrastructure
 
         public DatabaseFactory(DatabaseFiller dbFiller, IGatherDatabase scraper)
         {
-            if (_dbFiller == null)
-            {
-                _dbFiller = dbFiller;
-            }
-
-            if (_scraper == null)
-            {
-                _scraper = scraper;
-            }
+            _dbFiller = dbFiller;
+            _scraper = scraper;
         }
 
         public ApplicationDbContext Initialize()

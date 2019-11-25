@@ -4,8 +4,6 @@ using System.Data.Entity;
 using Webserver.Data.Configuration;
 using Webserver.Data.Models;
 using Webserver.Models;
-using WebScraper;
-
 
 namespace Webserver.Data
 {
