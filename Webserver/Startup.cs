@@ -11,6 +11,8 @@ using System.Web.Mvc;
 using Webserver.Data.Infrastructure;
 using Webserver.Data.Repositories;
 using Webserver.Models;
+using WebScraper;
+using Webserver.Data;
 
 [assembly: OwinStartupAttribute(typeof(Webserver.Startup))]
 
@@ -22,6 +24,8 @@ namespace Webserver
         {
             var builder = new ContainerBuilder();
 
+            builder.RegisterType<Scraper>().As<IGatherDatabase>().SingleInstance();
+            builder.RegisterType<DatabaseFiller>().AsSelf().SingleInstance();
             builder.RegisterType<DatabaseFactory>().As<IDatabaseFactory>().SingleInstance();
 
             builder.RegisterType<ApplicationUserRepository>().As<IUserStore<ApplicationUser>>().InstancePerRequest();
