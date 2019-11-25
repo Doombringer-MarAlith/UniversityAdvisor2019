@@ -6,9 +6,9 @@ using System;
 
 namespace Webserver.Data
 {
-    public static class FillDatabase
+    public class DatabaseFiller
     {
-        public static void Initialize(ApplicationDbContext dbContext, IGatherDatabase gatherDatabase)
+        public void Initialize(ApplicationDbContext dbContext, IGatherDatabase gatherDatabase)
         {
             if (!dbContext.Universities.Any())
             {
@@ -38,6 +38,7 @@ namespace Webserver.Data
                                 dbContext.Faculties.Add(faculties[currentIndex]);
                                 currentIndex++;
                             }
+
                             id++;
                         }
                     }
@@ -55,6 +56,7 @@ namespace Webserver.Data
                                 dbContext.Programmes.Add(programmes[currentIndex]);
                                 currentIndex++;
                             }
+
                             id++;
                         }
                     }

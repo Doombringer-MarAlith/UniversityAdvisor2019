@@ -74,6 +74,7 @@ namespace WebScraper
                     {
                         Console.WriteLine(e.StackTrace);
                     }
+
                     break;
                 }
             }
@@ -239,6 +240,7 @@ namespace WebScraper
                     byte[] bytes = Encoding.Default.GetBytes(text.Substring(start, end - start));
                     facultyName = Encoding.UTF8.GetString(bytes);
                     facultyCount++;
+
                     // Add Faculty to db here, facultyName, create new faculty Id, use UniversityId 
                     faculties.Add(new Faculty { Name = facultyName});
 
@@ -255,6 +257,7 @@ namespace WebScraper
                         {
                             programmes.Add(new Programme() { Name = field });
                         }
+
                         programmesCountPerFaculty.Add(fields.Count());
                     }
                 }
@@ -353,10 +356,29 @@ namespace WebScraper
             }
         }
 
-        public List<University> GetUniversities()   {   return universities;    }
-        public List<Faculty> GetFaculties() {   return faculties;   }
-        public List<Programme> GetProgrammes()  {   return programmes;  }
-        public List<int> GetFacultiesCountPerUniversity()   {   return facultiesCountPerUniversity; }
-        public List<int> GetProgrammesCountPerFaculty()     {   return programmesCountPerFaculty;   }
+        public List<University> GetUniversities()   
+        {
+            return universities;
+        }
+
+        public List<Faculty> GetFaculties()
+        {
+            return faculties;
+        }
+
+        public List<Programme> GetProgrammes()
+        { 
+            return programmes;  
+        }
+
+        public List<int> GetFacultiesCountPerUniversity() 
+        { 
+            return facultiesCountPerUniversity;
+        }
+
+        public List<int> GetProgrammesCountPerFaculty()
+        { 
+            return programmesCountPerFaculty;
+        }
     }
 }

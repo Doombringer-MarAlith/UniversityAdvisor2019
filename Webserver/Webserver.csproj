@@ -192,7 +192,7 @@
     <Compile Include="Data\Configuration\ProgrammeConfiguration.cs" />
     <Compile Include="Data\Configuration\ReviewConfiguration.cs" />
     <Compile Include="Data\Configuration\UniversityConfiguration.cs" />
-    <Compile Include="Data\FillDatabase.cs" />
+    <Compile Include="Data\Services\DatabaseFiller.cs" />
     <Compile Include="Data\Infrastructure\DatabaseFactory.cs" />
     <Compile Include="Data\Infrastructure\IDatabaseFactory.cs" />
     <Compile Include="Data\Models\DataFixture.cs" />
