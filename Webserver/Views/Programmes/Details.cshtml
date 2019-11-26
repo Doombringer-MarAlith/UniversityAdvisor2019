@@ -50,12 +50,16 @@
     window.onload = function () {
         var chart = new CanvasJS.Chart("chartContainer", {
             theme: "light2",
+            backgroundColor: "transparent",
             animationEnabled: true,
             title: {
+                fontColor: "#18bc9c",
                 text: "OVERVIEW"
             },
             subtitles: [
-                { text: "Programme rating by users" }
+                {
+                text: "Programme rating by users",
+                fontColor: "#18bc9c"}
             ],
             axisX:{
 				valueFormatString: "#" ,
