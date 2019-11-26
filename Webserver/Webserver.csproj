@@ -246,6 +246,7 @@
     <Content Include="App_Start\Content\bootstrap.css" />
     <Content Include="App_Start\Content\bootstrap.min.css" />
     <Content Include="App_Start\Content\bootstrap-flat-theme.css" />
+    <Content Include="Content\star_rating.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

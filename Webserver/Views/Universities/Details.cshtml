@@ -27,14 +27,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Location)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.FoundingDate)
         </dt>
 
@@ -72,7 +64,6 @@
 <div id="chartContainer" style="height:300px; width: 100%;"></div>
 
 <script type="text/javascript">
-
     window.onload = function () {
         var chart = new CanvasJS.Chart("chartContainer", {
             theme: "light2",
@@ -80,21 +71,19 @@
             title: {
                 text: "OVERVIEW"
             },
-            subtitles: [
-                { text: "University rating by users" }
-            ],
-            axisX:{
-				valueFormatString: "#" ,
+            subtitles: [{
+                text: "University rating by users"
+            }],
+            axisX: {
+				valueFormatString: "#",
 				interval: 1
 			},
-            data: [
-                {
-                    type: "column", //change type to bar, line, area, pie, etc
-                   dataPoints: @Html.Raw(ViewBag.DataPoints)
-
-                }
-            ]
+            data: [{
+                type: "column", // Change type to bar, line, area, pie, etc
+                dataPoints: @Html.Raw(ViewBag.DataPoints)
+            }]
         });
+
         chart.render();
     };
 </script>

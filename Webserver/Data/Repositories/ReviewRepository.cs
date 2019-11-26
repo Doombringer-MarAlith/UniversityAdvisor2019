@@ -7,6 +7,7 @@ namespace Webserver.Data.Repositories
     {
         public ReviewRepository(IDatabaseFactory dbFactory) : base(dbFactory)
         {
+            
         }
     }
 }

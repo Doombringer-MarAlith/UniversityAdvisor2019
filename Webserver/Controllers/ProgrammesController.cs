@@ -4,6 +4,9 @@ using System.Data.Entity;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using Webserver.Data.Repositories;
+using ASPNET_MVC_Samples.Models;
+using Newtonsoft.Json;
+using System.Linq;
 
 namespace Webserver.Controllers
 {
@@ -11,11 +14,13 @@ namespace Webserver.Controllers
     {
         private readonly IProgrammeRepository _programmeRepository;
         private readonly IFacultyRepository _facultyRepository;
+        private readonly IReviewRepository _reviewRepository;
 
-        public ProgrammesController(IProgrammeRepository programmeRepository, IFacultyRepository facultyRepository)
+        public ProgrammesController(IProgrammeRepository programmeRepository, IFacultyRepository facultyRepository, IReviewRepository reviewRepository)
         {
             _programmeRepository = programmeRepository;
             _facultyRepository = facultyRepository;
+            _reviewRepository = reviewRepository;
         }
 
         // GET: Programmes/{facultyId}
@@ -42,6 +47,18 @@ namespace Webserver.Controllers
             {
                 return HttpNotFound();
             }
+
+            var reviewList = _reviewRepository.GetMany(review => review.ProgrammeId.Equals(id));
+
+            List<DataPoint> dataPoints = new List<DataPoint>{
+                new DataPoint(1, reviewList.Where(review => review.Value.Equals(1)).Count()),
+                new DataPoint(2, reviewList.Where(review => review.Value.Equals(2)).Count()),
+                new DataPoint(3, reviewList.Where(review => review.Value.Equals(3)).Count()),
+                new DataPoint(4, reviewList.Where(review => review.Value.Equals(4)).Count()),
+                new DataPoint(5, reviewList.Where(review => review.Value.Equals(5)).Count()),
+            };
+
+            ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
 
             return View(programme);
         }
