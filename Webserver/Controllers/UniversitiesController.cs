@@ -1,13 +1,14 @@
-﻿using Models;
+﻿using ASPNET_MVC_Samples.Models;
+using Models;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using Webserver.Data.Repositories;
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using ASPNET_MVC_Samples.Models;
-using System.Linq;
+using Webserver.Services.Api;
 
 namespace Webserver.Controllers
 {
@@ -15,11 +16,13 @@ namespace Webserver.Controllers
     {
         private readonly IUniversityRepository _universityRepository;
         private readonly IReviewRepository _reviewRepository;
+        private readonly IMapsApi _mapsApi;
 
-        public UniversitiesController(IUniversityRepository universityRepository, IReviewRepository reviewRepository)
+        public UniversitiesController(IUniversityRepository universityRepository, IReviewRepository reviewRepository, IMapsApi mapsApi)
         {
             _universityRepository = universityRepository;
             _reviewRepository = reviewRepository;
+            _mapsApi = mapsApi;
         }
 
         // GET: Universities
@@ -62,6 +65,7 @@ namespace Webserver.Controllers
             };
 
             ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
+            ViewBag.GoogleMapUri = _mapsApi.GetStaticMapUri(university.Name);
 
             return View(university);
         }

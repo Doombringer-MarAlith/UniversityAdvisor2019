@@ -59,34 +59,37 @@
     }
 }
 <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 <div id="chartContainer" style="height:300px; width: 100%;"></div>
 
 <script type="text/javascript">
-
-window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer", {
-        theme: "light2",
-        backgroundColor: "transparent",
-        animationEnabled: true,
-        title: {
-            fontColor: "#18bc9c",
-            text: "OVERVIEW"
-        },
-        subtitles: [{
-            text: "University rating by users",
-            fontColor: "#18bc9c"
-        } ],
-        axisX:{      
-			valueFormatString: "#" ,
-			interval: 1
-		},
-        data: [ {
-            type: "column", // change type to bar, line, area, pie, etc
-            dataPoints: @Html.Raw(ViewBag.DataPoints)    
+    window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            theme: "light2",
+            animationEnabled: true,
+            title: {
+                text: "OVERVIEW"
+            },
+            subtitles: [{
+                text: "University rating by users"
+            }],
+            axisX: {
+                valueFormatString: "#",
+                interval: 1
+            },
+            data: [{
+                type: "column", // Change type to bar, line, area, pie, etc
+                dataPoints: @Html.Raw(ViewBag.DataPoints)
             }]
-    });
-    chart.render();
+        });
+
+        chart.render();
     };
 </script>
+
+<div>
+    <h3>Location</h3>
+    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="@ViewBag.GoogleMapUri" style="border: 1px solid black"></iframe>
+</div>
