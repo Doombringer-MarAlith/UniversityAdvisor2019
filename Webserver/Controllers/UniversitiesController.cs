@@ -1,25 +1,34 @@
-﻿using Models;
+﻿using ASPNET_MVC_Samples.Models;
+using Models;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using Webserver.Data.Repositories;
+using Webserver.Services.Api;
 
 namespace Webserver.Controllers
 {
     public class UniversitiesController : Controller
     {
-        private readonly IUniversityRepository _repository;
+        private readonly IUniversityRepository _universityRepository;
+        private readonly IReviewRepository _reviewRepository;
+        private readonly IMapsApi _mapsApi;
 
-        public UniversitiesController(IUniversityRepository repository)
+        public UniversitiesController(IUniversityRepository universityRepository, IReviewRepository reviewRepository, IMapsApi mapsApi)
         {
-            _repository = repository;
+            _universityRepository = universityRepository;
+            _reviewRepository = reviewRepository;
+            _mapsApi = mapsApi;
         }
 
         // GET: Universities
         public ActionResult Index()
         {
-            return View(_repository.GetAll());
+            return View(_universityRepository.GetAll());
         }
 
         // GET: Universities/Search/{text}
@@ -30,18 +39,33 @@ namespace Webserver.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            var universityList = _repository.GetMany(university => university.Name.Contains(text));
+            var universityList = _universityRepository.GetMany(university => university.Name.Contains(text));
             return View("Index", universityList);
         }
 
         // GET: Universities/Details/{id}
+       
         public ActionResult Details(int id)
         {
-            University university = _repository.GetById(id);
+            University university = _universityRepository.GetById(id);
             if (university == null)
             {
                 return HttpNotFound();
             }
+
+            ViewBag.UniversityId = id;
+            var reviewList = _reviewRepository.GetMany(review => review.UniversityId.Equals(id));
+
+            List<DataPoint> dataPoints = new List<DataPoint>{
+                new DataPoint(1, reviewList.Where(review => review.Value.Equals(1)).Count()),                   
+                new DataPoint(2, reviewList.Where(review => review.Value.Equals(2)).Count()),
+                new DataPoint(3, reviewList.Where(review => review.Value.Equals(3)).Count()),
+                new DataPoint(4, reviewList.Where(review => review.Value.Equals(4)).Count()),
+                new DataPoint(5, reviewList.Where(review => review.Value.Equals(5)).Count()),
+            };
+
+            ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
+            ViewBag.GoogleMapUri = _mapsApi.GetStaticMapUri(university.Name);
 
             return View(university);
         }
@@ -50,7 +74,7 @@ namespace Webserver.Controllers
         [Authorize(Roles = "Administrator")]
         public ActionResult Edit(int id)
         {
-            University university = _repository.GetById(id);
+            University university = _universityRepository.GetById(id);
             if (university == null)
             {
                 return HttpNotFound();
@@ -67,13 +91,13 @@ namespace Webserver.Controllers
         {
             if (ModelState.IsValid)
             {
-                University universityToBeUpdated = _repository.GetById(university.Id);
+                University universityToBeUpdated = _universityRepository.GetById(university.Id);
                 universityToBeUpdated.Name = university.Name;
                 universityToBeUpdated.Description = university.Description;
                 universityToBeUpdated.FoundingDate = university.FoundingDate;
 
-                _repository.GetEntry(universityToBeUpdated).State = EntityState.Modified;
-                await _repository.Commit();
+                _universityRepository.GetEntry(universityToBeUpdated).State = EntityState.Modified;
+                await _universityRepository.Commit();
 
                 RedirectToAction("Details", new { id = university.Id });
             }
@@ -96,8 +120,8 @@ namespace Webserver.Controllers
         {
             if (ModelState.IsValid)
             {
-                _repository.Add(university);
-                await _repository.Commit();
+                _universityRepository.Add(university);
+                await _universityRepository.Commit();
                 return RedirectToAction("Index");
             }
 

@@ -14,5 +14,9 @@ namespace WebScraper
         List<Faculty> GetFaculties();
 
         List<Programme> GetProgrammes();
+
+        List<int> GetFacultiesCountPerUniversity();
+
+        List<int> GetProgrammesCountPerFaculty();
     }
 }

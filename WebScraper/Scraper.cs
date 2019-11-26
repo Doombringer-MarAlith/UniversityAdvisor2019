@@ -1,4 +1,4 @@
-﻿using Models;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Text;
 
 namespace WebScraper
 {
@@ -17,13 +18,15 @@ namespace WebScraper
         private int _standardTimeout { get; set; }
         private const int _readThisMany = 880;
         private readonly HttpClient _client = new HttpClient();
-        private readonly string _countryLinksPath = "CountryLinks";
-        private int _currentUniversityId = 1;
-        private readonly int _facultiesPerUniversityMax = 49;
+        private readonly string projectPath =
+                    AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("Webserver"))
+            + "WebScraper\\CountryLinks";
         private readonly List<List<string>> universityLinks = new List<List<string>>();
         private List<University> universities = new List<University>();
         private List<Faculty> faculties = new List<Faculty>();
         private List<Programme> programmes = new List<Programme>();
+        private List<int> facultiesCountPerUniversity = new List<int>();
+        private List<int> programmesCountPerFaculty = new List<int>();
 
         // Gets universities from WHED.net website.
         // Feed it html source file of uni search by country and it will gather Uni names + Uni descriptions + Faculties + Faculty programmes
@@ -58,21 +61,26 @@ namespace WebScraper
             // scrapes university links from every file (file contains up to 100 universities from WHED.net search by Country)
             foreach (var file in files)
             {
-                try
+                if (file.Equals(projectPath + "\\Lithuania.txt"))
                 {
-                    using (File.OpenRead(file))
+                    try
                     {
-                        universityLinks.Add(ScrapeUniversityLinks(File.ReadAllText(file)));
+                        using (File.OpenRead(file))
+                        {
+                            universityLinks.Add(ScrapeUniversityLinks(File.ReadAllText(file)));
+                        }
                     }
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.StackTrace);
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.StackTrace);
+                    }
+
+                    break;
                 }
             }
 
-            Thread t = new Thread(() => StartThreadWithTimeout("", _standardTimeout, 0));
-            Thread t2 = new Thread(() => StartThreadWithTimeout("", _standardTimeout, 0));
+            Thread t = new Thread(() => StartThreadWithTimeout("", _standardTimeout));
+            Thread t2 = new Thread(() => StartThreadWithTimeout("", _standardTimeout));
             int universityIndexInCountry;
             int currentCountryNum = 1;
             foreach (var linksList in universityLinks)
@@ -87,7 +95,8 @@ namespace WebScraper
                         {
                             string htmlCode = client.DownloadString(_websiteLink + link);
                             Console.WriteLine("UNIVERSITY {0:d}/{1:d} START:" + DateTime.Now, universityIndexInCountry + 1, linksList.Count);
-
+                            
+                            /* Palieku komentare nes maybe ateity dar bandysiu padaryt kad su threadais veiktų
                             if (_currentUniversityId % 2 == 0)
                             {
                                 if (!t.IsAlive)
@@ -111,15 +120,15 @@ namespace WebScraper
                                 {
                                     t2 = new Thread(() => StartThreadWithTimeout(htmlCode, _standardTimeout, _currentUniversityId));
                                     t2.Start();
+
+                                    if (universityIndexInCountry == linksList.Count - 1)
+                                    {
+                                        t2.Join();
+                                    }
                                 }
                                 else
                                 {
                                     StartThreadWithTimeout(htmlCode, _standardTimeout, _currentUniversityId);
-                                }
-
-                                if (universityIndexInCountry == linksList.Count - 1)
-                                {
-                                    t2.Join();
                                 }
 
                                 if (t.IsAlive)
@@ -131,7 +140,9 @@ namespace WebScraper
                                 {
                                     t2.Join();
                                 }
-                            }
+                            }*/
+                            
+                            StartThreadWithTimeout(htmlCode, _standardTimeout);
                         }
                         catch (WebException e)
                         {
@@ -141,7 +152,6 @@ namespace WebScraper
                     }
 
                     universityIndexInCountry++;
-                    _currentUniversityId += _facultiesPerUniversityMax;
                 }
 
                 currentCountryNum++;
@@ -155,7 +165,7 @@ namespace WebScraper
         {
             try
             {
-                return Directory.GetFiles(_countryLinksPath);
+                return Directory.GetFiles(projectPath);
             }
             catch (Exception e)
             {
@@ -189,7 +199,7 @@ namespace WebScraper
         }
 
         // Find the name of university and it's Faculties' names
-        private void ScrapeUniversity(string text, int universityId)
+        private void ScrapeUniversity(string text)
         {
             University university = new University();
 
@@ -197,40 +207,42 @@ namespace WebScraper
             int start = text.IndexOf("<h2>") + 4; // 4 length
             int end = text.IndexOf("<span", start);
 
-            university.Name = text.Substring(start, end - start).Trim(new char[] { '\t', '\n' });
-            university.Id = universityId;
+            byte[] bytes = Encoding.Default.GetBytes(text.Substring(start, end - start).Trim(new char[] { '\t', '\n' }));
+            university.Name = Encoding.UTF8.GetString(bytes);
 
             // Read University description
             start = text.IndexOf("<span class=\"dt\">History") + 83;
             if (start != 82)
             {
                 end = text.IndexOf("</sp", start);
-                university.Description = text.Substring(start, end - start);
+                bytes = Encoding.Default.GetBytes(text.Substring(start, end - start));
+                university.Description = Encoding.UTF8.GetString(bytes);
             }
-
             universities.Add(university);
-            ReadFaculties(text, universityId);
+            ReadFaculties(text);
         }
 
-        private void ReadFaculties(string text, int universityId)
+        private void ReadFaculties(string text)
         {
             int start = 0;
             int end;
             string facultyName;
             int nextFaculty, nextFOS;
-            int facultyId = universityId;
+            int facultyCount = 0;
 
             do
             {
                 List<string> fields;
                 start = text.IndexOf("Faculty : ", start);
-                if (start != -1)
-                {
+                if (start != -1) {
                     start += 10;
                     end = text.IndexOf("</p>", start);
-                    facultyName = text.Substring(start, end - start);
-                    // Add Faculty to db here, facultyName, create new faculty Id, use UniversityId
-                    faculties.Add(new Faculty { Name = facultyName, UniversityId = universityId, Id = facultyId });
+                    byte[] bytes = Encoding.Default.GetBytes(text.Substring(start, end - start));
+                    facultyName = Encoding.UTF8.GetString(bytes);
+                    facultyCount++;
+
+                    // Add Faculty to db here, facultyName, create new faculty Id, use UniversityId 
+                    faculties.Add(new Faculty { Name = facultyName});
 
                     // Searching for fields of study
                     nextFaculty = text.IndexOf("Faculty : ", start) > 0 ? text.IndexOf("Faculty : ", start) + 10 : text.Length; //doesn't exist -> good too
@@ -238,23 +250,27 @@ namespace WebScraper
                     if (nextFaculty > nextFOS && nextFOS != 44) // 44 as in returned -1(not found) + 45 (line above)
                     {
                         end = text.IndexOf("</span>", nextFOS);
-                        fields = Regex.Split(text.Substring(nextFOS, end - nextFOS), ", ").ToList();
+                        bytes = Encoding.Default.GetBytes(text.Substring(nextFOS, end - nextFOS));
+                        fields = Regex.Split(Encoding.UTF8.GetString(bytes), ", ").ToList();
 
                         foreach (var field in fields)
                         {
-                            programmes.Add(new Programme() { Name = field, UniversityId = universityId, FacultyId = facultyId }); // Guid create needed. Also add Faculty's from above Guid
+                            programmes.Add(new Programme() { Name = field });
                         }
+
+                        programmesCountPerFaculty.Add(fields.Count());
                     }
                 }
 
-                facultyId++;
             } while (start != -1);
+
+            facultiesCountPerUniversity.Add(facultyCount);
         }
 
         /// <summary>
         /// Gets country's university's href list
         /// </summary>
-        /// <param name="country">Country's name to get university list</param>
+        /// <param name="country">Country's name to get university list for</param>
         /// <param name="offset">From what number to start gathering university hrefs (2 to 2 + _readThisMany)</param>
         /// <returns></returns>
         private async Task<int> Scrape(string country, int offset)
@@ -275,7 +291,7 @@ namespace WebScraper
 
             try
             {
-                using (StreamWriter outputFile = new StreamWriter(_countryLinksPath + "\\" + country + ".txt"))
+                using (StreamWriter outputFile = new StreamWriter(projectPath + "\\" + country + ".txt")) 
                 {
                     outputFile.Write(responseString);
                 }
@@ -306,9 +322,9 @@ namespace WebScraper
             return Int32.Parse(txt);
         }
 
-        private void StartThreadWithTimeout(string text, int timeout, int universityId)
+        private void StartThreadWithTimeout(string text, int timeout)
         {
-            Thread t = new Thread(() => ScrapeUniversity(text, universityId));
+            Thread t = new Thread(() => ScrapeUniversity(text));
             t.Start();
             DateTime current = DateTime.Now;
             while (t.IsAlive)
@@ -340,7 +356,7 @@ namespace WebScraper
             }
         }
 
-        public List<University> GetUniversities()
+        public List<University> GetUniversities()   
         {
             return universities;
         }
@@ -351,8 +367,18 @@ namespace WebScraper
         }
 
         public List<Programme> GetProgrammes()
-        {
-            return programmes;
+        { 
+            return programmes;  
+        }
+
+        public List<int> GetFacultiesCountPerUniversity() 
+        { 
+            return facultiesCountPerUniversity;
+        }
+
+        public List<int> GetProgrammesCountPerFaculty()
+        { 
+            return programmesCountPerFaculty;
         }
     }
 }

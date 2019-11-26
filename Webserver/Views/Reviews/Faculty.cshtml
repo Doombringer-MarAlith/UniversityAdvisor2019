@@ -15,9 +15,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Value)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UserId)
-        </th>
         <th></th>
     </tr>
 
@@ -41,5 +38,5 @@
 </table>
 
 <p>
-    @Html.ActionLink("Back To Faculty Details", "Details", new { id = ViewBag.FacultyId })
+    @Html.ActionLink("Back To Faculty Details", "Details", "Faculties", new { id = ViewBag.FacultyId }, null)
 </p>

@@ -11,6 +11,9 @@ using System.Web.Mvc;
 using Webserver.Data.Infrastructure;
 using Webserver.Data.Repositories;
 using Webserver.Models;
+using Webserver.Data;
+using Webserver.Services.Api;
+using WebScraper;
 
 [assembly: OwinStartupAttribute(typeof(Webserver.Startup))]
 
@@ -22,6 +25,8 @@ namespace Webserver
         {
             var builder = new ContainerBuilder();
 
+            builder.RegisterType<Scraper>().As<IGatherDatabase>().SingleInstance();
+            builder.RegisterType<DatabaseFiller>().AsSelf().SingleInstance();
             builder.RegisterType<DatabaseFactory>().As<IDatabaseFactory>().SingleInstance();
 
             builder.RegisterType<ApplicationUserRepository>().As<IUserStore<ApplicationUser>>().InstancePerRequest();
@@ -29,6 +34,7 @@ namespace Webserver
             builder.RegisterType<FacultyRepository>().As<IFacultyRepository>().InstancePerRequest();
             builder.RegisterType<ReviewRepository>().As<IReviewRepository>().InstancePerRequest();
             builder.RegisterType<ProgrammeRepository>().As<IProgrammeRepository>().InstancePerRequest();
+            builder.RegisterType<MapsEmbedApi>().As<IMapsApi>().InstancePerRequest();
 
             builder.RegisterType<ApplicationUserManager>().AsSelf().InstancePerRequest();
             builder.RegisterType<ApplicationSignInManager>().AsSelf().InstancePerRequest();
