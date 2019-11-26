@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Webserver.Services.Api
+﻿namespace Webserver.Services.Api
 {
     public interface IMapsApi
     {

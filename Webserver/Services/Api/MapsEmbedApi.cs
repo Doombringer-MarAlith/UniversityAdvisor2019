@@ -13,8 +13,16 @@ namespace Webserver.Services.Api
             result.Append(ConfigurationManager.AppSettings["GoogleMapsEmbedBaseUrl"].ToString());
             result.Append(ConfigurationManager.AppSettings["GoogleMapsEmbedApiKey"].ToString());
             result.Append("&q=");
+            result.Append(MakeStringUrlCompatible(seachCriteria));
 
-            foreach (string key in seachCriteria.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
+            return result.ToString();
+        }
+
+        private string MakeStringUrlCompatible(string value)
+        {
+            StringBuilder result = new StringBuilder();
+
+            foreach (string key in value.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
             {
                 result.Append(key + '+');
             }
