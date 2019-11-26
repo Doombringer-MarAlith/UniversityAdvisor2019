@@ -1,22 +1,25 @@
-﻿using Models;
+﻿using ASPNET_MVC_Samples.Models;
+using Models;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using Webserver.Data.Repositories;
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using ASPNET_MVC_Samples.Models;
+using Webserver.Services.Api;
 
 namespace Webserver.Controllers
 {
     public class UniversitiesController : Controller
     {
         private readonly IUniversityRepository _repository;
+        private readonly IMapsApi _mapsApi;
 
-        public UniversitiesController(IUniversityRepository repository)
+        public UniversitiesController(IUniversityRepository repository, IMapsApi mapsApi)
         {
             _repository = repository;
+            _mapsApi = mapsApi;
         }
 
         // GET: Universities
@@ -59,6 +62,7 @@ namespace Webserver.Controllers
             // bet bedele tame kad tai yra review controller o ne UniversitiesController
 
             ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
+            ViewBag.GoogleMapUri = _mapsApi.GetStaticMapUri(university.Name);
 
             return View(university);
         }

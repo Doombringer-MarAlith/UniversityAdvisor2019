@@ -11,8 +11,9 @@ using System.Web.Mvc;
 using Webserver.Data.Infrastructure;
 using Webserver.Data.Repositories;
 using Webserver.Models;
-using WebScraper;
 using Webserver.Data;
+using Webserver.Services.Api;
+using WebScraper;
 
 [assembly: OwinStartupAttribute(typeof(Webserver.Startup))]
 
@@ -33,6 +34,7 @@ namespace Webserver
             builder.RegisterType<FacultyRepository>().As<IFacultyRepository>().InstancePerRequest();
             builder.RegisterType<ReviewRepository>().As<IReviewRepository>().InstancePerRequest();
             builder.RegisterType<ProgrammeRepository>().As<IProgrammeRepository>().InstancePerRequest();
+            builder.RegisterType<MapsEmbedApi>().As<IMapsApi>().InstancePerRequest();
 
             builder.RegisterType<ApplicationUserManager>().AsSelf().InstancePerRequest();
             builder.RegisterType<ApplicationSignInManager>().AsSelf().InstancePerRequest();

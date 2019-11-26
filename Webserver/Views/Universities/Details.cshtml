@@ -67,7 +67,7 @@
     }
 }
 <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 <div id="chartContainer" style="height:300px; width: 100%;"></div>
 
@@ -83,7 +83,7 @@
             subtitles: [
                 { text: "University rating by users" }
             ],
-            axisX:{      
+            axisX:{
 				valueFormatString: "#" ,
 				interval: 1
 			},
@@ -91,10 +91,16 @@
                 {
                     type: "column", //change type to bar, line, area, pie, etc
                    dataPoints: @Html.Raw(ViewBag.DataPoints)
-                   
+
                 }
             ]
         });
         chart.render();
     };
 </script>
+
+<div>
+    <h3>Location</h3>
+    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="@ViewBag.GoogleMapUri" style="border: 1px solid black"></iframe>
+</div>
