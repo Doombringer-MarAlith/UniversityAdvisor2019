@@ -11,37 +11,52 @@
     <h4>Review</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.UniversityId)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.UniversityId)
-        </dd>
+        @if (Request.IsAuthenticated)
+        {
+            if (User.IsInRole("Administrator"))
+            {
+                <dt>
+                    @Html.DisplayNameFor(model => model.UniversityId)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FacultyId)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.UniversityId)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.FacultyId)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.FacultyId)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LecturerId)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.FacultyId)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.LecturerId)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.LecturerId)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ProgrammeId)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.LecturerId)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ProgrammeId)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ProgrammeId)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ProgrammeId)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.UserId)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UserId)
+                </dd>
+            }
+        }
 
         <dt>
             @Html.DisplayNameFor(model => model.Text)
@@ -57,14 +72,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Value)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UserId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UserId)
         </dd>
     </dl>
 </div>
