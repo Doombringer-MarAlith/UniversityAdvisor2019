@@ -13,5 +13,9 @@ namespace Models
         public DateTime FoundingDate { get; set; }
 
         public int Id { get; set; }
+
+        public string City { get; set; }
+
+        public string Country { get; set; }
     }
 }

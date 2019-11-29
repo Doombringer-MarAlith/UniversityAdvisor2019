@@ -1,1765 +1,72 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6"> <![endif]-->
-<!--[if IE 7 ]><html lang="en" class="no-js ie ie7"> <![endif]-->
-<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"> <![endif]-->
-<!--[if IE 9 ]><html lang="en" class="no-js ie ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-<head>
-  <title>Search Results – WHED – IAU's World Higher Education Database</title>
-  <meta name="description" content="">
-  
-  <meta http-equiv="X-UA-Compatible" content="IE=10">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="icon" type="image/png" href="favicon.png">
-<meta name="viewport" content="width=device-width">
-<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
-<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
-<script type="text/javascript" src="js/js.js"></script>
-<!--[if lt IE 8]>
-<script type="text/javascript">var IE7_PNG_SUFFIX = ".png";</script>
-<script src="js/IE8.js"></script><![endif]-->
-<!--[if lt IE 9]><script type="text/javascript" src="js/html5shiv.js"></script><![endif]-->
-<link rel="stylesheet" href="css/styles.min.css" type="text/css" media="all">
-  
-  <script type="text/javascript"><!--
-    function CocheAll() {
-      var lst = $('.case').map(function(){return $(this).val();}).get().join(',');
-      Coche(lst,1);
-    }
-    function Coche(id,all) {
-      $.ajax({
-	url: "ajax/checkinstitution.php",
-	type: "POST",
-	data: "id=" + id + "&all=" + all,
-	cache: false,
-	success:function(msg){
-	  $("#tools").html(msg);
-	  if ( !id ) $('.case').prop("checked", false);
-	  if ( all ) $('.case').prop("checked", true);
-	},
-	error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
-	  $.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
-	}
-      }); 
-    }
-  //--></script>
-
-</head>
-
-<body class="page_search results large">
-
-  <div id="page" class="clearfix">
-  
-    <div class="main">
-    
-      <header role="banner" id="entete" class="clearfix">
-  <a target="_top" href="http://www.iau-aiu.net/" class="iau" title="IAU website"><img class="whed" src="images/Logo_WHED-IAU.png" alt="IAU Website" /></a>
-  <a target="_top" href="https://en.unesco.org/" class="iau" title="UNESCO website"><img class="whed" src="images/unesco.png" alt="UNESCO Website" /></a>
-      
-  
-    <div class="mobile">
-      <a href="#qsearch">Search</a>
-    <span> &ndash; </span>
-    <a href="#login">Login</a>
-  </div>
-</header>
-      
-      <nav class="ariane"><a href="home.php">Home</a> <img src="images/crumb.png" alt="&gt;"> Search results Institution(s)</nav>
-      
-      <section role="main" id="contenu">
-      
-	<h2>Search results Institution(s)</h2>
-	
-		  <form method="post" name="grille">
-	    <input type="hidden" class="envoi" name="where" value="(Country LIKE 'Korea (Democratic People\'s Republic of)')">
-	    <input type="hidden" class="envoi" name="requete" value="(Country=Korea (Democratic People's Republic of))">
-	    <input type="hidden" class="envoi" name="total" value="72">
-	    <input type="hidden" name="ret" value="home.php">
-	    <input type="hidden" class="envoi" name="quick" value="0">
-	    <input type="hidden" class="envoi" name="membre" value="0">
-	    <input type="hidden" class="envoi" name="Chp0" value="">
-	    <input type="hidden" class="envoi" name="Chp1" value="Korea (Democratic People's Republic of)">
-	    <input type="hidden" name="debut" value="0">
-	    <input type="hidden" name="use" value="">
-	    <input type="hidden" name="afftri" value="yes">
-	    <input type="hidden" name="stat" value="Country">
-	    
-	    <p class="fright">
-	      	      <a class="bouton search" href="home.php">New search</a>
-	    </p>
-	  
-	    <p class="infos">72 results found for <strong>(Country=Korea (Democratic People's Republic of))</strong></p>
-
-    	<div class="tri">
-	    	        
-	      	<h3>Sort by:</h3>
-	      	<p>
-	      		<select name="sort" onChange="document.grille.debut.value='0';document.grille.submit();">
-						<option value="IAUMember DESC,Country,InstNameEnglish,iBranchName" selected>IAU Members first</option><option value="InstNameEnglish,iBranchName">Institution</option><option value="Country,InstNameEnglish,iBranchName">Country</option>      
-	      		</select>
-	      		<noscript><input type="submit" value="ok"></noscript>
-	      	</p>   	
-	    						<h3>Results per page:</h3><p><select name="nbr_ref_pge" onChange="document.grille.debut.value='0';document.grille.submit();">
-						<option value="10">10</option>
-						<option value="20">20</option>
-						<option value="50">50</option>
-						<option value="100">100</option>
-					</select>
-				</p>
-	  	</div>
-	  </form>
-	  <!-- debut form select -->
-	  <form name="SELECT">  
-	  <div class="pagination">
-  <p class="prem">Results 1 to 72 of 72</p>
-  </div>
-	  <ul id="results">
-	  <span class="gui">&nbsp;&nbsp;IAU-002622&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="2622"><input class="case" type="checkbox" onClick="Coche(2622,0);" name="result[]" id="2622" value="2622"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result2622" id="result2622" title="Expand result">
-		    <span>Expand result for </span>Cha Gwan Su University</a></h3>
-		  <p class="i_name">
-		Cha Gwang Su Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Biology and Chemistry; Foreign Studies; History and Geography; Korean Language and Literature; Mathematics; Physical Education; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzhSLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-002625&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="2625"><input class="case" type="checkbox" onClick="Coche(2625,0);" name="result[]" id="2625" value="2625"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result2625" id="result2625" title="Expand result">
-		    <span>Expand result for </span>Chagang University</a></h3>
-		  <p class="i_name">
-		Chagang Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Forestry; Forestry Engineering; Forestry Machinery; Horticulture; Sericulture; Veterinary Medicine and Animal Husbandry; Wood Processing</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzhSLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-002637&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="2637"><input class="case" type="checkbox" onClick="Coche(2637,0);" name="result[]" id="2637" value="2637"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result2637" id="result2637" title="Expand result">
-		    <span>Expand result for </span>Chang Chol Gu University</a></h3>
-		  <p class="i_name">
-		Chang Chol Gu Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Commercial Management; Cookery; Management; Organizational Techniques; Supply Service; Tailoring</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzhTLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-002648&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="2648"><input class="case" type="checkbox" onClick="Coche(2648,0);" name="result[]" id="2648" value="2648"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result2648" id="result2648" title="Expand result">
-		    <span>Expand result for </span>Changjasan University</a></h3>
-		  <p class="i_name">
-		Changjasan Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Biochemistry; Foreign Studies; Home Economics; Korean Language and Literature; Mathematics; Pedagogical Psychology; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzhULmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-002651&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="2651"><input class="case" type="checkbox" onClick="Coche(2651,0);" name="result[]" id="2651" value="2651"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result2651" id="result2651" title="Expand result">
-		    <span>Expand result for </span>Changsusan University</a></h3>
-		  <p class="i_name">
-		Changsusan Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Koryo Medicine and Pharmacy; Pharmacy</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzhVLDBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-002747&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="2747"><input class="case" type="checkbox" onClick="Coche(2747,0);" name="result[]" id="2747" value="2747"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result2747" id="result2747" title="Expand result">
-		    <span>Expand result for </span>Chinmyong University</a></h3>
-		  <p class="i_name">
-		Chinmyong Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Biology and Chemistry; History and Geography; Korean Language and Literature; Mathematics; Music and Fine Arts; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzxULVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-002757&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="2757"><input class="case" type="checkbox" onClick="Coche(2757,0);" name="result[]" id="2757" value="2757"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result2757" id="result2757" title="Expand result">
-		    <span>Expand result for </span>Chong Jun Taek University of Economics</a></h3>
-		  <p class="i_name">
-		Chong Jun Taek Kyongje Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Commercial Management; Finance; Economics; Materials Supply and Labour Administration; Planning Economics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzxVLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-002774&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="2774"><input class="case" type="checkbox" onClick="Coche(2774,0);" name="result[]" id="2774" value="2774"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result2774" id="result2774" title="Expand result">
-		    <span>Expand result for </span>Chongsong University</a></h3>
-		  <p class="i_name">
-		Chongsong Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Hygiene; Koryo Medicine; Medicine; Stomatology; Surgery</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzxXLWBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-002778&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="2778"><input class="case" type="checkbox" onClick="Coche(2778,0);" name="result[]" id="2778" value="2778"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result2778" id="result2778" title="Expand result">
-		    <span>Expand result for </span>Chonrigil University</a></h3>
-		  <p class="i_name">
-		Chonrigil Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Biology and Chemistry; History and Geography; Korean Language and Literature; Mathematics; Music and Fine Arts; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzxXLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-002779&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="2779"><input class="case" type="checkbox" onClick="Coche(2779,0);" name="result[]" id="2779" value="2779"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result2779" id="result2779" title="Expand result">
-		    <span>Expand result for </span>Choson University of Physical Education</a></h3>
-		  <p class="i_name">
-		Choson Cheyuk Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Physical Education; Sports</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0sQzxXLjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-006955&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="6955"><input class="case" type="checkbox" onClick="Coche(6955,0);" name="result[]" id="6955" value="6955"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result6955" id="result6955" title="Expand result">
-		    <span>Expand result for </span>Hambuk University</a></h3>
-		  <p class="i_name">
-		Hambuk Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Farm Machinery; Pomiculture; Veterinary Medicine and Animal Husbandry</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQ0RVLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-007618&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="7618"><input class="case" type="checkbox" onClick="Coche(7618,0);" name="result[]" id="7618" value="7618"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result7618" id="result7618" title="Expand result">
-		    <span>Expand result for </span>Huichon University of Technology</a></h3>
-		  <p class="i_name">
-		Huichon Kongop Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Automation Engineering; Electro-Apparatus Engineering; Mechanical Engineering; Radio Engineering; Wire Communication Engineering</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzhRLmBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-007849&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="7849"><input class="case" type="checkbox" onClick="Coche(7849,0);" name="result[]" id="7849" value="7849"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result7849" id="result7849" title="Expand result">
-		    <span>Expand result for </span>Inpung University</a></h3>
-		  <p class="i_name">
-		Inpung Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Koryo Medicine; Medicine; Surgery</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tU0BULjBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-009862&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="9862"><input class="case" type="checkbox" onClick="Coche(9862,0);" name="result[]" id="9862" value="9862"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result9862" id="result9862" title="Expand result">
-		    <span>Expand result for </span>Jangsun University of Pharmacy</a></h3>
-		  <p class="i_name">
-		Jangsu Yakhak Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Herbal Studies; Koryo Pharmacy; Medical Zoology</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0BWLEBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010096&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="10096"><input class="case" type="checkbox" onClick="Coche(10096,0);" name="result[]" id="10096" value="10096"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10096" id="result10096" title="Expand result">
-		    <span>Expand result for </span>Kang Gon University</a></h3>
-		  <p class="i_name">
-		Kang Gon Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Medicine; Pharmacy; Surgery; Traditional Eastern Medicine</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BQLjM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010144&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="10144"><input class="case" type="checkbox" onClick="Coche(10144,0);" name="result[]" id="10144" value="10144"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10144" id="result10144" title="Expand result">
-		    <span>Expand result for </span>Karimchon University</a></h3>
-		  <p class="i_name">
-		Karimchon Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Medicine; Traditional Eastern Medicine</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BRLSMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010367&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="10367"><input class="case" type="checkbox" onClick="Coche(10367,0);" name="result[]" id="10367" value="10367"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10367" id="result10367" title="Expand result">
-		    <span>Expand result for </span>Kim Chaek University of Technology</a></h3>
-		  <p class="i_name">
-		Kim Chaek Kongop Jonghap Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Automatic Engineering; Communication; Computer Engineering; Electrical Engineering; Electronic Engineering; Geological Prospecting; Heating Engineering; Industrial Management; Machine Building; Materials Engineering; Mechanical Engineering; Metallurgy; Mining Engineering; Physical Engineering; Power-Driven Machine Engineering; Shipbuilding</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BTLUM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010369&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="10369"><input class="case" type="checkbox" onClick="Coche(10369,0);" name="result[]" id="10369" value="10369"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10369" id="result10369" title="Expand result">
-		    <span>Expand result for </span>Kim Chol Ju University of Education</a></h3>
-		  <p class="i_name">
-		Kim Chol Ju Sabom Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Biology and Chemistry; Foreign Studies; History and Geography; Korean Language and Literature; Mathematics; Physical Education; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BTLUNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010370&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="10370"><input class="case" type="checkbox" onClick="Coche(10370,0);" name="result[]" id="10370" value="10370"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10370" id="result10370" title="Expand result">
-		    <span>Expand result for </span>Kim Hyong Gwon University of Education</a></h3>
-		  <p class="i_name">
-		Kim Hyong Gwon Sabon Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Biochemistry; Foreign Studies; Korean Language and Literature; Mathematics; Physical Education; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BTLVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010371&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="10371"><input class="case" type="checkbox" onClick="Coche(10371,0);" name="result[]" id="10371" value="10371"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10371" id="result10371" title="Expand result">
-		    <span>Expand result for </span>Kim Hyong Jik University of Education</a></h3>
-		  <p class="i_name">
-		Kim Hyong Jik Sabom Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Biology; Chemistry; Education; Geography; History; Korean Language and Literature; Mathematics; Philosophy; Physical Education; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BTLVMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010372&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="10372"><input class="case" type="checkbox" onClick="Coche(10372,0);" name="result[]" id="10372" value="10372"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10372" id="result10372" title="Expand result">
-		    <span>Expand result for </span>Kim Il Sung University</a></h3>
-		  <p class="i_name">
-		Kim Il Sung Juonghap Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Automation; Biology; Chemistry; Economics; Foreign Languages and Literature; Geography; Geology; History; Juche Philosophy; Korean Language and Literature; Law; Mathematics; Philosophy; Physics; Social Sciences</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BTLVMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010373&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="10373"><input class="case" type="checkbox" onClick="Coche(10373,0);" name="result[]" id="10373" value="10373"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10373" id="result10373" title="Expand result">
-		    <span>Expand result for </span>Kim Je Won University</a></h3>
-		  <p class="i_name">
-				  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Sciences Research; Agriculture; Agronomics; Farm Machinery; Forest and River Protection; Pomiculture; Veterinary Medicine and Animal Husbandry</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BTLVMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010374&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="10374"><input class="case" type="checkbox" onClick="Coche(10374,0);" name="result[]" id="10374" value="10374"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10374" id="result10374" title="Expand result">
-		    <span>Expand result for </span>Kim Jong Suk University of Education</a></h3>
-		  <p class="i_name">
-		Kim Jong Suk Sabom Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Biochemistry; Foreign Studies; History and Geography; Korean Language and Literature; Mathematics; Physical Education; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BTLVMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010375&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="10375"><input class="case" type="checkbox" onClick="Coche(10375,0);" name="result[]" id="10375" value="10375"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10375" id="result10375" title="Expand result">
-		    <span>Expand result for </span>Kim Jong Tae University</a></h3>
-		  <p class="i_name">
-		Kim Jong Tae Sabon Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Biochemistry; Foreign Studies; History and Geography; Korean Language and Literature; Mathematics; Physical Education; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BTLVM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010540&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="10540"><input class="case" type="checkbox" onClick="Coche(10540,0);" name="result[]" id="10540" value="10540"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10540" id="result10540" title="Expand result">
-		    <span>Expand result for </span>Koryo University of Pharmacy</a></h3>
-		  <p class="i_name">
-		Koryo Yakhak Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Pharmacy</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BVLSNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010597&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="10597"><input class="case" type="checkbox" onClick="Coche(10597,0);" name="result[]" id="10597" value="10597"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10597" id="result10597" title="Expand result">
-		    <span>Expand result for </span>Kumgang University</a></h3>
-		  <p class="i_name">
-		Kumgang Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Biochemistry; Foreign Studies; History and Geography; Korean Language and Literature; Mathematics; Physical Education; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BVLjM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010600&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="10600"><input class="case" type="checkbox" onClick="Coche(10600,0);" name="result[]" id="10600" value="10600"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10600" id="result10600" title="Expand result">
-		    <span>Expand result for </span>Kumya University</a></h3>
-		  <p class="i_name">
-		Kumya Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Scientific Research; Agriculture; Farm Machinery; Pomiculture; Veterinary Medicine and Animal Husbandry</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BWLCNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010654&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="10654"><input class="case" type="checkbox" onClick="Coche(10654,0);" name="result[]" id="10654" value="10654"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10654" id="result10654" title="Expand result">
-		    <span>Expand result for </span>Kwanje University</a></h3>
-		  <p class="i_name">
-		Kwangje Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Hygiene; Koryo Medicine; Medicine; Pharmacy; Stomatology; Surgery</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BWLTMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010660&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="10660"><input class="case" type="checkbox" onClick="Coche(10660,0);" name="result[]" id="10660" value="10660"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10660" id="result10660" title="Expand result">
-		    <span>Expand result for </span>Kwanso University</a></h3>
-		  <p class="i_name">
-		Kwanso Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Biochemistry; History and Geography; Korean Language and Literature; Mathematics; Music and Fine Arts; Physical Education; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BWLUNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010670&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="10670"><input class="case" type="checkbox" onClick="Coche(10670,0);" name="result[]" id="10670" value="10670"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10670" id="result10670" title="Expand result">
-		    <span>Expand result for </span>Kye Ung San University</a></h3>
-		  <p class="i_name">
-		Kye Ung Sang Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Agrochemistry; Agronomy; Biology; Economic Plant; Farm Machinery; Forest and River Protection; Land  Development; Pomiculture; Sericulture; Veterinary Medicine and Animal Husbandry</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BWLVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010690&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="10690"><input class="case" type="checkbox" onClick="Coche(10690,0);" name="result[]" id="10690" value="10690"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10690" id="result10690" title="Expand result">
-		    <span>Expand result for </span>Kyongsong University</a></h3>
-		  <p class="i_name">
-		Kyongsong Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Hygiene; Koryo Medicine; Medicine; Pharmacy; Stomatology; Surgery</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BWLjNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-011360&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="11360"><input class="case" type="checkbox" onClick="Coche(11360,0);" name="result[]" id="11360" value="11360"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result11360" id="result11360" title="Expand result">
-		    <span>Expand result for </span>Manpung University</a></h3>
-		  <p class="i_name">
-		Manpung Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Farm Machinery; Pomiculture; Stockraising</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyRTLUNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-012260&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="12260"><input class="case" type="checkbox" onClick="Coche(12260,0);" name="result[]" id="12260" value="12260"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result12260" id="result12260" title="Expand result">
-		    <span>Expand result for </span>Myongsin University</a></h3>
-		  <p class="i_name">
-				  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Biochemistry; Foreign Studies; History and Geography; Korean Language and Literature; Mathematics; Physical Education; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhSLUNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-012330&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="12330"><input class="case" type="checkbox" onClick="Coche(12330,0);" name="result[]" id="12330" value="12330"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result12330" id="result12330" title="Expand result">
-		    <span>Expand result for </span>Nampo University</a></h3>
-		  <p class="i_name">
-		Nampo Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Farm Machinery; Horticulture; Pomiculture</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhTLFNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-012331&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="12331"><input class="case" type="checkbox" onClick="Coche(12331,0);" name="result[]" id="12331" value="12331"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result12331" id="result12331" title="Expand result">
-		    <span>Expand result for </span>Nampo University of Medicine</a></h3>
-		  <p class="i_name">
-		Nampo Uihak Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Medicine; Pharmacy</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhTLFMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-012938&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="12938"><input class="case" type="checkbox" onClick="Coche(12938,0);" name="result[]" id="12938" value="12938"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result12938" id="result12938" title="Expand result">
-		    <span>Expand result for </span>O Jung Hup University</a></h3>
-		  <p class="i_name">
-		O Jung Hup Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Biochemistry; Foreign Studies; History and Geography; Korean Language and Literature; Mathematics; Musics and Fine Arts; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyhZLFNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-013646&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="13646"><input class="case" type="checkbox" onClick="Coche(13646,0);" name="result[]" id="13646" value="13646"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result13646" id="result13646" title="Expand result">
-		    <span>Expand result for </span>Ponghwa University</a></h3>
-		  <p class="i_name">
-		Ponghwa Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Koryo Medicine; Medicine; Pharmacy; Stomatology; Surgery</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxWLSM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-013806&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="13806"><input class="case" type="checkbox" onClick="Coche(13806,0);" name="result[]" id="13806" value="13806"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result13806" id="result13806" title="Expand result">
-		    <span>Expand result for </span>Pyongyang Nongop University of Agriculture</a></h3>
-		  <p class="i_name">
-		Pyongyang Nongop Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Agriculture; Agrobiology; Farm Machinery; Veterinary Medicine and Animal Husbandry</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxYLCM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-013812&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="13812"><input class="case" type="checkbox" onClick="Coche(13812,0);" name="result[]" id="13812" value="13812"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result13812" id="result13812" title="Expand result">
-		    <span>Expand result for </span>Pyongyang University of Cinematics</a></h3>
-		  <p class="i_name">
-		Pyongyang Yonguk Yonghwa Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Acting; Cinema; Cinematography; Creation; Direction; Social Sciences; Technology</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxYLDMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-013805&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="13805"><input class="case" type="checkbox" onClick="Coche(13805,0);" name="result[]" id="13805" value="13805"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result13805" id="result13805" title="Expand result">
-		    <span>Expand result for </span>Pyongyang University of Fine Arts</a></h3>
-		  <p class="i_name">
-		Pyongyang Misul Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Crafts; Fine Arts Research; Graphic Art; Industrial Art; Korean Painting; Painting; Sculpture</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxYLCM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-013807&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="13807"><input class="case" type="checkbox" onClick="Coche(13807,0);" name="result[]" id="13807" value="13807"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result13807" id="result13807" title="Expand result">
-		    <span>Expand result for </span>Pyongyang University of Foreign Studies</a></h3>
-		  <p class="i_name">
-		Pyongyang Oeguko Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Education; Education Theory; English; French and Spanish; Russian; Chinese; Arabic; Japanese; Simultaneous Interpretation; Training</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxYLCM8YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-013804&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="13804"><input class="case" type="checkbox" onClick="Coche(13804,0);" name="result[]" id="13804" value="13804"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result13804" id="result13804" title="Expand result">
-		    <span>Expand result for </span>Pyongyang University of Light Industry</a></h3>
-		  <p class="i_name">
-		Pyongyang Kyonggongop Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Chemical Engineering; Food Engineering; Food Research; Light Industry; Machine Engineering; Management; Paper Technology; Textile Engineering</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxYLCMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-013801&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="13801"><input class="case" type="checkbox" onClick="Coche(13801,0);" name="result[]" id="13801" value="13801"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result13801" id="result13801" title="Expand result">
-		    <span>Expand result for </span>Pyongyang University of Mechanical Engineering</a></h3>
-		  <p class="i_name">
-		Pyongyang Kigye Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Automation; Construction Machinery; Design; Mechanical Engineering</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxYLCMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-013809&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="13809"><input class="case" type="checkbox" onClick="Coche(13809,0);" name="result[]" id="13809" value="13809"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result13809" id="result13809" title="Expand result">
-		    <span>Expand result for </span>Pyongyang University of Medicine</a></h3>
-		  <p class="i_name">
-		Pyongyang Uihak Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Basic Medicine; Clinical Medicine; Hygiene; Koryo Medicine; Pharmacy; Stomatology</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxYLCNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-013810&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="13810"><input class="case" type="checkbox" onClick="Coche(13810,0);" name="result[]" id="13810" value="13810"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result13810" id="result13810" title="Expand result">
-		    <span>Expand result for </span>Pyongyang University of Music and Dance</a></h3>
-		  <p class="i_name">
-		Pyongyang Umakmuyong Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Composition; Dance; Music and Dance; National Instruments; Preparatory; Vocal Technique; Western Instruments</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxYLDNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-013798&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="13798"><input class="case" type="checkbox" onClick="Coche(13798,0);" name="result[]" id="13798" value="13798"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result13798" id="result13798" title="Expand result">
-		    <span>Expand result for </span>Pyongyang University of Railways</a></h3>
-		  <p class="i_name">
-		Pyongyang Choldo Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Railway Engineering</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxXLjNAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-013811&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="13811"><input class="case" type="checkbox" onClick="Coche(13811,0);" name="result[]" id="13811" value="13811"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result13811" id="result13811" title="Expand result">
-		    <span>Expand result for </span>Pyongyang University of Surgery</a></h3>
-		  <p class="i_name">
-				  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Dentistry; Koryo Medicine; Medical Sciences; Pharmacy</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxYLDMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-013989&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="13989"><input class="case" type="checkbox" onClick="Coche(13989,0);" name="result[]" id="13989" value="13989"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result13989" id="result13989" title="Expand result">
-		    <span>Expand result for </span>Ri Kye Sun University</a></h3>
-		  <p class="i_name">
-		Ri Kye Sun Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Biochemistry; Foreign Studies; Korean Language and Literature; Mathematics; Physical Education; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxZLiNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-013990&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="13990"><input class="case" type="checkbox" onClick="Coche(13990,0);" name="result[]" id="13990" value="13990"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result13990" id="result13990" title="Expand result">
-		    <span>Expand result for </span>Ri Su Bok University</a></h3>
-		  <p class="i_name">
-		Ri Su Bok Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Antibiotics Pharmacy; Chemical Machine Building; High Polymer Chemistry; Inorganic Synthetic Techniques; Organic Synthetic Techniques</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMyxZLjNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-014156&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="14156"><input class="case" type="checkbox" onClick="Coche(14156,0);" name="result[]" id="14156" value="14156"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result14156" id="result14156" title="Expand result">
-		    <span>Expand result for </span>Ryanggang University</a></h3>
-		  <p class="i_name">
-		Ryanggang Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural and Forestry Scientific Research; Agriculture; Forestry Engineering; Stockraising; Wood Processing</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzBRLTM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-014159&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="14159"><input class="case" type="checkbox" onClick="Coche(14159,0);" name="result[]" id="14159" value="14159"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result14159" id="result14159" title="Expand result">
-		    <span>Expand result for </span>Ryomyong University</a></h3>
-		  <p class="i_name">
-		Ryomyong Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>History and Geography; Korean Language and Literature; Mathematics; Music and Fine Arts; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzBRLTNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-014184&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="14184"><input class="case" type="checkbox" onClick="Coche(14184,0);" name="result[]" id="14184" value="14184"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result14184" id="result14184" title="Expand result">
-		    <span>Expand result for </span>Saenal University</a></h3>
-		  <p class="i_name">
-		Saenal Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Biochemistry; History and Geography; Korean Language and Literature; Mathematics; Music and Fine Arts; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzBRLiMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-014375&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="14375"><input class="case" type="checkbox" onClick="Coche(14375,0);" name="result[]" id="14375" value="14375"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result14375" id="result14375" title="Expand result">
-		    <span>Expand result for </span>Sanmgwang University</a></h3>
-		  <p class="i_name">
-		Samgwang Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Biochemistry; Foreign Studies; History and Geography; Korean Language and Literature; Mathematics; Physical Education; Physics; Technical Education</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzBTLVM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-014525&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="14525"><input class="case" type="checkbox" onClick="Coche(14525,0);" name="result[]" id="14525" value="14525"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result14525" id="result14525" title="Expand result">
-		    <span>Expand result for </span>Sariwon University</a></h3>
-		  <p class="i_name">
-		Sariwon Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>History and Geography; Korean Language and Literature; Mathematics; Music and Fine Arts; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzBVLEM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-015455&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="15455"><input class="case" type="checkbox" onClick="Coche(15455,0);" name="result[]" id="15455" value="15455"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result15455" id="result15455" title="Expand result">
-		    <span>Expand result for </span>Sinuiju University of Light Industry</a></h3>
-		  <p class="i_name">
-		Sinuiju Kyongkongop Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Chemical Engineering; Food Technology; Machine Engineering; Textile Engineering</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRULTM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-015512&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="15512"><input class="case" type="checkbox" onClick="Coche(15512,0);" name="result[]" id="15512" value="15512"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result15512" id="result15512" title="Expand result">
-		    <span>Expand result for </span>Sohae University</a></h3>
-		  <p class="i_name">
-		Sohae Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Fish Farming and Cultivation; Fisheries; Mechanical Engineering</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRVLDMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-015530&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="15530"><input class="case" type="checkbox" onClick="Coche(15530,0);" name="result[]" id="15530" value="15530"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result15530" id="result15530" title="Expand result">
-		    <span>Expand result for </span>Songdo University</a></h3>
-		  <p class="i_name">
-		Songdo Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Arts; Biochemistry; Foreign Studies; History and Geography; Korean Language and Literature; Mathematics; Physical Training; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRVLFNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-015531&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="15531"><input class="case" type="checkbox" onClick="Coche(15531,0);" name="result[]" id="15531" value="15531"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result15531" id="result15531" title="Expand result">
-		    <span>Expand result for </span>Songdowon University</a></h3>
-		  <p class="i_name">
-		Songdowon Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Koryo Medicine; Koryo Pharmacy; Medicine</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRVLFMkYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-016770&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="16770"><input class="case" type="checkbox" onClick="Coche(16770,0);" name="result[]" id="16770" value="16770"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result16770" id="result16770" title="Expand result">
-		    <span>Expand result for </span>Tonghae University</a></h3>
-		  <p class="i_name">
-		Tonghae Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Fish Farming and Cultivation; Fisheries; Marine Products Processing; Mechanical Engineering</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzhXLVNgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-007663&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="7663"><input class="case" type="checkbox" onClick="Coche(7663,0);" name="result[]" id="7663" value="7663"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result7663" id="result7663" title="Expand result">
-		    <span>Expand result for </span>University of Chemical Industry</a></h3>
-		  <p class="i_name">
-		Hwahak Kongop Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>High Polymers Chemical Engineering; Inorganic Chemical Engineering; Machine Engineering; Organic Chemical Engineering; Silicate Engineering</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tUzhWLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-015522&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="15522"><input class="case" type="checkbox" onClick="Coche(15522,0);" name="result[]" id="15522" value="15522"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result15522" id="result15522" title="Expand result">
-		    <span>Expand result for </span>University of Coal Mining</a></h3>
-		  <p class="i_name">
-		Sokthan Kongop Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Anthracite Engineering; Automation; Coal Mine Machine Engineering; Coal Mining</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRVLEMoYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010519&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="10519"><input class="case" type="checkbox" onClick="Coche(10519,0);" name="result[]" id="10519" value="10519"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10519" id="result10519" title="Expand result">
-		    <span>Expand result for </span>University of Construction and Building Materials</a></h3>
-		  <p class="i_name">
-		Konsol Konjae Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Architectural Engineering; Architecture; Building Machines; Building Materials; City Management; Civil Engineering; Construction</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BVLDNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-009915&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="9915"><input class="case" type="checkbox" onClick="Coche(9915,0);" name="result[]" id="9915" value="9915"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result9915" id="result9915" title="Expand result">
-		    <span>Expand result for </span>University of Geology</a></h3>
-		  <p class="i_name">
-		Jijil Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Geological Engineering; Geology; Machine Engineering; Physical Prospecting</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uM0RRLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-015984&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="15984"><input class="case" type="checkbox" onClick="Coche(15984,0);" name="result[]" id="15984" value="15984"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result15984" id="result15984" title="Expand result">
-		    <span>Expand result for </span>University of Hydraulics and Dynamics</a></h3>
-		  <p class="i_name">
-		Suridongryok Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Electrical Engineering; Hydraulic and Port Construction Engineering; Hydraulic Engineering; Irrigation; Mechanical Engineering</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRZLiMwYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010539&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="10539"><input class="case" type="checkbox" onClick="Coche(10539,0);" name="result[]" id="10539" value="10539"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10539" id="result10539" title="Expand result">
-		    <span>Expand result for </span>University of Light Industry</a></h3>
-		  <p class="i_name">
-		Koryo Songgyungwan Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Textile Technology</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BVLFNEYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-010656&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="10656"><input class="case" type="checkbox" onClick="Coche(10656,0);" name="result[]" id="10656" value="10656"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result10656" id="result10656" title="Expand result">
-		    <span>Expand result for </span>University of Mining and Metallurgical Engineering</a></h3>
-		  <p class="i_name">
-		Kwangsan Gumsok Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Automation; Coal Engineering; Geotechnology; Metallurgy; Mineral Analysis; Mining; Mining Machine Engineering</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sM2BWLTM4YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-007837&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="7837"><input class="case" type="checkbox" onClick="Coche(7837,0);" name="result[]" id="7837" value="7837"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result7837" id="result7837" title="Expand result">
-		    <span>Expand result for </span>University of National Economics</a></h3>
-		  <p class="i_name">
-		Inmin Gyongje Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Management; Finance and Banking; Government; Industrial Management; Planning; Statistics; Trade</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tU0BTLVBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-009505&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="9505"><input class="case" type="checkbox" onClick="Coche(9505,0);" name="result[]" id="9505" value="9505"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result9505" id="result9505" title="Expand result">
-		    <span>Expand result for </span>University of Printing Technology</a></h3>
-		  <p class="i_name">
-		Inswae Kongop Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Engineering and Technology; Printing and Printmaking</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0uMzRQLTBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-014005&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="14005"><input class="case" type="checkbox" onClick="Coche(14005,0);" name="result[]" id="14005" value="14005"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result14005" id="result14005" title="Expand result">
-		    <span>Expand result for </span>University of Science</a></h3>
-		  <p class="i_name">
-		Rigwa Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Automation; Biology; Chemistry; Computer Sciences; Electrical Engineering; Mathematics; Mechanical Engineering; Physics</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzBQLCM0YApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-006933&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="6933"><input class="case" type="checkbox" onClick="Coche(6933,0);" name="result[]" id="6933" value="6933"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result6933" id="result6933" title="Expand result">
-		    <span>Expand result for </span>University of Sea Transport</a></h3>
-		  <p class="i_name">
-		Haeun Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Electrical Engineering; Marine Engineering; Marine Transport; Nautical Science</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?Jzo2MF0tQ0RTLFBgYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-015993&nbsp;&nbsp;</span>	      <li class="odd clearfix plus">
-		<div class="tools">
-				  <label for="15993"><input class="case" type="checkbox" onClick="Coche(15993,0);" name="result[]" id="15993" value="15993"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result15993" id="result15993" title="Expand result">
-		    <span>Expand result for </span>University of Veterinary Medicine and Animal Husbandry</a></h3>
-		  <p class="i_name">
-		Suui Chuksan Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Animal Husbandry; Veterinary Science</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sMzRZLjMsYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    <span class="gui">&nbsp;&nbsp;IAU-021328&nbsp;&nbsp;</span>	      <li class="even clearfix plus">
-		<div class="tools">
-				  <label for="21328"><input class="case" type="checkbox" onClick="Coche(21328,0);" name="result[]" id="21328" value="21328"></label>
-		</div>
-		<div class="details">
-		  <p class="country">Korea (Democratic People's Republic of)</p>
-				  <h3>
-		    <a href="#result21328" id="result21328" title="Expand result">
-		    <span>Expand result for </span>Wonsan University of Agriculture</a></h3>
-		  <p class="i_name">
-		Wonsan Nongop Taehak		  </p>
-		 <p class="gallery">
-			</p>
-		  <!-- <p class="people"><span>Officers:</span> <strong></strong></p> -->
-		  <p class="divisions"><span>Divisions:</span> <strong>Agricultural Machines; Agriculture; Agrobiology; Agrochemistry; Agronomy; Botany; Irrigation Engineering; Pomiculture; Sericulture</strong></p>
-			
-		  <p class="tools fright">
-		  	<a class="detail fancybox fancybox.iframe" href="detail_institution.php?KDo2MF0sQyRTLENAYApgCg==" onclick="javascript:return false;" title="More details">More details</a>
-		  		  </p>
-		</div>
-	      </li>
-	    	    </ul>
-	  </form>
-	  <div class="pagination">
-  <p class="prem">Results 1 to 72 of 72</p>
-  </div>
-	
-	      
-      </section><!-- fin contenu -->
-    </div><!-- fin main -->
-    
-    <div class="mob">
-      <aside class="outils">
-	<div class="user">
-	  <div id="login">
-
-  <h2>MyWhed</h2>
-  <form method="post">
-    <label for="user">Username</label><input autocomplete="off" required type="text" name="user" id="user" value="" placeholder="Username">
-    <label for="pass">Password</label><input autocomplete="off" required type="password" name="pass" id="pass" value="" placeholder="Password">
-    <button type="button" onClick="Connexion();">Ok</button>
-	  <a style="color:#fff;" target="_top" href="lost_pwd.php">Forgotten password?</a>
-  </form>
-  <!-- div class="bas"><h3><a target="_top" href="register.php">Register</a></h3></div -->
-
-<script type="text/javascript">
-<!--
-function Connexion() {
-
-	$.ajax({
-		url: "ajax/login.php",
-		type: "POST",
-		data: "user=" + $('#user').val() + "&pass=" + $('#pass').val(),
-		cache: false,
-		success:function(msg){
-			switch (msg) {
-				case 'ABSENT':
-					$.fancybox('<p>Login details missing</p>',{padding:15,closeBtn:true});
-					break;
-				case 'INCONNU':
-					$.fancybox('<p>Login details not recognized</p>',{padding:15,closeBtn:true});
-					break;
-				case 'SUSPENDU':
-					$.fancybox('<p>Sorry, your account has been temporarily suspended</p>',{padding:15,closeBtn:true});
-					break;
-				case 'OK':
-					window.top.location.href = "home.php";
-					break;
-				default:
-					if ( msg ) {
-						/* $.fancybox('<p>Sorry, your account has expired - <a href="payment.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true}); */
-						$.fancybox('<p>Sorry, your account has expired - <a href="expired.php?id='+msg+'">Reactivate</a></p>',{padding:15,closeBtn:true});
-					} else {
-						$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});	
-					} 
-			} 
-		},
-		error:function(XMLHttpRequest, textStatus, errorThrows){	// PB AJAX
-			$.fancybox('<p>AJAX ERROR</p>',{padding:15,closeBtn:true});
-		}
-	});
-
-}
-//-->
-</script>
-
-</div>
-	</div>
-        <section role="seealso" id="infos">
-  <ul>
-    <li class="info-c"><a style="font-size:12px;" href="About.html">About</a></li>
-    <li class="info-o"><a style="font-size:12px;" href="Faq.html">IAU Global WHED ID</a></li>
-    <li class="info-p"><a style="font-size:12px;" href="Contact.html">FAQ / Contact</a></li>
-  </ul>
-</section>
-<section role="search" id="qsearch">
- <h2>HEI Quick search</h2>
- <div class="cadre">
-  	<form id="fsearch" action="results_institutions.php" method="post">
-  	<div class="recherche">Choose a country and/or enter a keyword</div>
-  	<select id="Chp1" name="Chp1" style="width: 100%; height: 1.8em; margin-bottom:2px;">
-			<option value="">All countries</option>
-			<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><optgroup label="Belgium"><option value="Belgium">Belgium (all)</option><option value="Belgium - Flemish Community">Flemish Community</option><option value="Belgium - French Community">French Community</option><option value="Belgium - German-speaking Community">German-speaking Community</option></optgroup><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><optgroup label="Canada"><option value="Canada">Canada (all)</option><option value="Canada - Alberta">Alberta</option><option value="Canada - British Columbia / Colombie-Britannique">British Columbia / Colombie-Britannique</option><option value="Canada - Manitoba">Manitoba</option><option value="Canada - New Brunswick / Nouveau-Brunswick">New Brunswick / Nouveau-Brunswick</option><option value="Canada - Newfoundland & Labrador / Terre-Neuve et Labrador">Newfoundland & Labrador / Terre-Neuve et Labrador</option><option value="Canada - Northwest Territories / Territoires du Nord-Ouest">Northwest Territories / Territoires du Nord-Ouest</option><option value="Canada - Nova Scotia / Nouvelle-Écosse">Nova Scotia / Nouvelle-Écosse</option><option value="Canada - Nunavut">Nunavut</option><option value="Canada - Ontario">Ontario</option><option value="Canada - Prince Edward Island / Île-du-Prince-Édouard">Prince Edward Island / Île-du-Prince-Édouard</option><option value="Canada - Quebec / Québec">Quebec / Québec</option><option value="Canada - Saskatchewan">Saskatchewan</option><option value="Canada - Yukon">Yukon</option></optgroup><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="China - Hong Kong SAR">China - Hong Kong SAR</option><option value="China - Macao SAR">China - Macao SAR</option><option value="China - Taiwan">China - Taiwan</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="France - French Guyana">France - French Guyana</option><option value="France - French Polynesia">France - French Polynesia</option><option value="France - Guadeloupe">France - Guadeloupe</option><option value="France - Martinique">France - Martinique</option><option value="France - New Caledonia">France - New Caledonia</option><option value="France - Reunion">France - Reunion</option><option value="Gabon">Gabon</option><option value="Gambia (The)">Gambia (The)</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Holy See">Holy See</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Korea (Democratic People's Republic of)" selected>Korea (Democratic People's Republic of)</option><option value="Korea (Republic of)">Korea (Republic of)</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia (The Former Yugoslav Republic)">Macedonia (The Former Yugoslav Republic)</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovak Republic">Slovak Republic</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><optgroup label="United States of America"><option value="United States of America">United States of America (all)</option><option value="United States of America - Alabama">Alabama</option><option value="United States of America - Alaska">Alaska</option><option value="United States of America - Arizona">Arizona</option><option value="United States of America - Arkansas">Arkansas</option><option value="United States of America - California">California</option><option value="United States of America - Colorado">Colorado</option><option value="United States of America - Connecticut">Connecticut</option><option value="United States of America - Delaware">Delaware</option><option value="United States of America - District of Columbia">District of Columbia</option><option value="United States of America - Florida">Florida</option><option value="United States of America - Georgia">Georgia</option><option value="United States of America - Guam">Guam</option><option value="United States of America - Hawaii">Hawaii</option><option value="United States of America - Idaho">Idaho</option><option value="United States of America - Illinois">Illinois</option><option value="United States of America - Indiana">Indiana</option><option value="United States of America - Iowa">Iowa</option><option value="United States of America - Kansas">Kansas</option><option value="United States of America - Kentucky">Kentucky</option><option value="United States of America - Louisiana">Louisiana</option><option value="United States of America - Maine">Maine</option><option value="United States of America - Maryland">Maryland</option><option value="United States of America - Massachusetts">Massachusetts</option><option value="United States of America - Michigan">Michigan</option><option value="United States of America - Minnesota">Minnesota</option><option value="United States of America - Mississippi">Mississippi</option><option value="United States of America - Missouri">Missouri</option><option value="United States of America - Montana">Montana</option><option value="United States of America - Nebraska">Nebraska</option><option value="United States of America - Nevada">Nevada</option><option value="United States of America - New Hampshire">New Hampshire</option><option value="United States of America - New Jersey">New Jersey</option><option value="United States of America - New Mexico">New Mexico</option><option value="United States of America - New York">New York</option><option value="United States of America - North Carolina">North Carolina</option><option value="United States of America - North Dakota">North Dakota</option><option value="United States of America - Ohio">Ohio</option><option value="United States of America - Oklahoma">Oklahoma</option><option value="United States of America - Oregon">Oregon</option><option value="United States of America - Outside USA">Outside USA</option><option value="United States of America - Pennsylvania">Pennsylvania</option><option value="United States of America - Puerto Rico">Puerto Rico</option><option value="United States of America - Rhode Island">Rhode Island</option><option value="United States of America - South Carolina">South Carolina</option><option value="United States of America - South Dakota">South Dakota</option><option value="United States of America - Tennessee">Tennessee</option><option value="United States of America - Texas">Texas</option><option value="United States of America - Utah">Utah</option><option value="United States of America - Vermont">Vermont</option><option value="United States of America - Virgin Islands">Virgin Islands</option><option value="United States of America - Virginia">Virginia</option><option value="United States of America - Washington">Washington</option><option value="United States of America - West Virginia">West Virginia</option><option value="United States of America - Wisconsin">Wisconsin</option><option value="United States of America - Wyoming">Wyoming</option></optgroup><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>		</select>
-    <input name="Chp0" id="search" style="width:98%;" value="" placeholder="Enter HEI or field of study keyword(s)" /><br />
-    <input name="Chp10" id="Chp10" style="width:98%;" value="" placeholder="Enter IAU Global WHED ID" /><br />
-		<input value="1" name="membre" id="membre1"  type="radio"  /><label for="membre1">Only IAU members</label>
-    <input value="0" name="membre" id="membre2" type="radio" checked /><label for="membre2">All institutions</label><br />
-		<!-- <p align="right"><input type="submit" value="Go" /></p> -->
-		<p align="right"><input type="button" onClick="return Valide();" value="Go" /></p>
-   </form>
-   <script>
-   	function Valide() {
-   		if ( !$("#Chp10").val() && !$("#Chp1").val() && !$("#search").val() && $('input[name=membre]:checked', '#qsearch').val() == 0 ) {
-      	$.fancybox({
-					type: 'iframe',
-					href: 'erreur.php'
-				});
-   			return false;	
-   		}
-   		$('#fsearch').submit();
-   	}
-   </script>
-	<p></p>
-   <div class="bas"><h2><a style="text-decoration:underline;" href="login.php" class="popup fancybox.iframe">HEI Advanced search</a></h2>
-   		Please log in for advanced access, or contact IAU at <a href="mailto:centre@iau-aiu.net">centre@iau-aiu.net</a> to get access to MyWhed   
-	    </div>
- </div>
-</section>
-<section role="search" id="fields">
- <div class="clearfix"> </div><br /><br />
- 	 <a class="twitter-timeline" data-height="350" data-theme="light" data-link-color="#008EA8" href="https://twitter.com/IAU_AIU?ref_src=twsrc%5Etfw">Tweets by IAU_AIU</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-</section>      </aside><!-- fin outils -->
-      
-      <footer id="pied">
-  <nav class="mobile">    <a href="home.php">Home</a> <span>&ndash;</span> <a href="#entete">Top</a>
-  </nav>
-  <p>&copy; 2019 <a target="_blank" href="http://www.iau-aiu.net/">International Association of Universities (IAU)</a> official partner of UNESCO (associate status) 
-	Database update November 2019  <a href="Terms_of_use.html">Terms of use</a></p>  
-</footer>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-50092355-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-    </div><!-- fin mob -->
-  </div><!-- fin page -->
-</body>
-</html>
+detail_institution.php?Jzo2MF0sQzhSLEBgYApgCg==",
+detail_institution.php?Jzo2MF0sQzhSLTBgYApgCg==",
+detail_institution.php?Jzo2MF0sQzhTLVBgYApgCg==",
+detail_institution.php?Jzo2MF0sQzhULmBgYApgCg==",
+detail_institution.php?Jzo2MF0sQzhVLDBgYApgCg==",
+detail_institution.php?Jzo2MF0sQzxULVBgYApgCg==",
+detail_institution.php?Jzo2MF0sQzxVLVBgYApgCg==",
+detail_institution.php?Jzo2MF0sQzxXLWBgYApgCg==",
+detail_institution.php?Jzo2MF0sQzxXLmBgYApgCg==",
+detail_institution.php?Jzo2MF0sQzxXLjBgYApgCg==",
+detail_institution.php?Jzo2MF0tQ0RVLTBgYApgCg==",
+detail_institution.php?Jzo2MF0tUzhRLmBgYApgCg==",
+detail_institution.php?Jzo2MF0tU0BULjBgYApgCg==",
+detail_institution.php?Jzo2MF0uM0BWLEBgYApgCg==",
+detail_institution.php?KDo2MF0sM2BQLjM4YApgCg==",
+detail_institution.php?KDo2MF0sM2BRLSMwYApgCg==",
+detail_institution.php?KDo2MF0sM2BTLUM8YApgCg==",
+detail_institution.php?KDo2MF0sM2BTLUNEYApgCg==",
+detail_institution.php?KDo2MF0sM2BTLVNgYApgCg==",
+detail_institution.php?KDo2MF0sM2BTLVMkYApgCg==",
+detail_institution.php?KDo2MF0sM2BTLVMoYApgCg==",
+detail_institution.php?KDo2MF0sM2BTLVMsYApgCg==",
+detail_institution.php?KDo2MF0sM2BTLVMwYApgCg==",
+detail_institution.php?KDo2MF0sM2BTLVM0YApgCg==",
+detail_institution.php?KDo2MF0sM2BVLSNgYApgCg==",
+detail_institution.php?KDo2MF0sM2BVLjM8YApgCg==",
+detail_institution.php?KDo2MF0sM2BWLCNgYApgCg==",
+detail_institution.php?KDo2MF0sM2BWLTMwYApgCg==",
+detail_institution.php?KDo2MF0sM2BWLUNgYApgCg==",
+detail_institution.php?KDo2MF0sM2BWLVNgYApgCg==",
+detail_institution.php?KDo2MF0sM2BWLjNgYApgCg==",
+detail_institution.php?KDo2MF0sMyRTLUNgYApgCg==",
+detail_institution.php?KDo2MF0sMyhSLUNgYApgCg==",
+detail_institution.php?KDo2MF0sMyhTLFNgYApgCg==",
+detail_institution.php?KDo2MF0sMyhTLFMkYApgCg==",
+detail_institution.php?KDo2MF0sMyhZLFNAYApgCg==",
+detail_institution.php?KDo2MF0sMyxWLSM4YApgCg==",
+detail_institution.php?KDo2MF0sMyxYLCM4YApgCg==",
+detail_institution.php?KDo2MF0sMyxYLDMoYApgCg==",
+detail_institution.php?KDo2MF0sMyxYLCM0YApgCg==",
+detail_institution.php?KDo2MF0sMyxYLCM8YApgCg==",
+detail_institution.php?KDo2MF0sMyxYLCMwYApgCg==",
+detail_institution.php?KDo2MF0sMyxYLCMkYApgCg==",
+detail_institution.php?KDo2MF0sMyxYLCNEYApgCg==",
+detail_institution.php?KDo2MF0sMyxYLDNgYApgCg==",
+detail_institution.php?KDo2MF0sMyxXLjNAYApgCg==",
+detail_institution.php?KDo2MF0sMyxYLDMkYApgCg==",
+detail_institution.php?KDo2MF0sMyxZLiNEYApgCg==",
+detail_institution.php?KDo2MF0sMyxZLjNgYApgCg==",
+detail_institution.php?KDo2MF0sMzBRLTM4YApgCg==",
+detail_institution.php?KDo2MF0sMzBRLTNEYApgCg==",
+detail_institution.php?KDo2MF0sMzBRLiMwYApgCg==",
+detail_institution.php?KDo2MF0sMzBTLVM0YApgCg==",
+detail_institution.php?KDo2MF0sMzBVLEM0YApgCg==",
+detail_institution.php?KDo2MF0sMzRULTM0YApgCg==",
+detail_institution.php?KDo2MF0sMzRVLDMoYApgCg==",
+detail_institution.php?KDo2MF0sMzRVLFNgYApgCg==",
+detail_institution.php?KDo2MF0sMzRVLFMkYApgCg==",
+detail_institution.php?KDo2MF0sMzhXLVNgYApgCg==",
+detail_institution.php?Jzo2MF0tUzhWLFBgYApgCg==",
+detail_institution.php?KDo2MF0sMzRVLEMoYApgCg==",
+detail_institution.php?KDo2MF0sM2BVLDNEYApgCg==",
+detail_institution.php?Jzo2MF0uM0RRLTBgYApgCg==",
+detail_institution.php?KDo2MF0sMzRZLiMwYApgCg==",
+detail_institution.php?KDo2MF0sM2BVLFNEYApgCg==",
+detail_institution.php?KDo2MF0sM2BWLTM4YApgCg==",
+detail_institution.php?Jzo2MF0tU0BTLVBgYApgCg==",
+detail_institution.php?Jzo2MF0uMzRQLTBgYApgCg==",
+detail_institution.php?KDo2MF0sMzBQLCM0YApgCg==",
+detail_institution.php?Jzo2MF0tQ0RTLFBgYApgCg==",
+detail_institution.php?KDo2MF0sMzRZLjMsYApgCg==",
+detail_institution.php?KDo2MF0sQyRTLENAYApgCg==",
