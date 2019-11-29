@@ -19,11 +19,9 @@ namespace WebScraper
         private const int _readThisMany = 880;
         private readonly HttpClient _client = new HttpClient();
         private string currentCountryName;
-        //private readonly string projectPath =
-        //           AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("Webserver"))
-        //  + "WebScraper\\CountryLinks";
-        private readonly string projectPath = "CountryLinks";
-
+        private readonly string projectPath =
+                   AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("Webserver"))
+          + "WebScraper\\CountryLinks";
         private readonly List<List<string>> universityLinks = new List<List<string>>();
         private List<University> universities = new List<University>();
         private List<Faculty> faculties = new List<Faculty>();
@@ -64,8 +62,8 @@ namespace WebScraper
             // scrapes university links from every file (file contains up to 100 universities from WHED.net search by Country)
             foreach (var file in files)
             {
-               //if (file.Equals(projectPath + "\\Lithuania.txt"))
-               // {
+               if (file.Equals(projectPath + "\\Lithuania.txt"))
+               {
                     try
                     {
                         using (File.OpenRead(file))
@@ -78,10 +76,10 @@ namespace WebScraper
                         Console.WriteLine(e.StackTrace);
                     }
 
-                //    break;
-                //}
+                    break;
+               }
             }
-
+            
             // Thread t = new Thread(() => StartThreadWithTimeout("", _standardTimeout)); currently unused
             // Thread t2 = new Thread(() => StartThreadWithTimeout("", _standardTimeout));
             int universityIndexInCountry;
@@ -196,7 +194,7 @@ namespace WebScraper
 
             do
             {
-                startIndex = text.IndexOf("detail_institution.php", startIndex, text.Length - startIndex - 1) + 1;
+                startIndex = text.IndexOf("detail_institution.php", startIndex, text.Length - startIndex) + 1;
                 if (startIndex != 0)
                 {
                     endIndex = text.IndexOf("\"", startIndex, text.Length - startIndex - 1);
@@ -370,6 +368,25 @@ namespace WebScraper
             {
                 Console.WriteLine(e.StackTrace);
                 throw;
+            }
+        }
+
+        private void CleanupHtml(string outputPath, string[] files)
+        {
+            string path = outputPath;
+            int currentCountryNum = 1;
+            foreach (var listForCountry in universityLinks)
+            {
+                using (StreamWriter writer = new StreamWriter(path + files[currentCountryNum - 1].Substring(files[currentCountryNum - 1].IndexOf("CountryLinks", 0) + 13,
+                    files[currentCountryNum - 1].Length - files[currentCountryNum - 1].IndexOf("CountryLinks", 0) - 17) + ".txt"))
+                {
+                    foreach (var link in listForCountry)
+                    {
+                        writer.Write(link + "\",\r\n");
+                    }
+                }
+
+                currentCountryNum++;
             }
         }
 

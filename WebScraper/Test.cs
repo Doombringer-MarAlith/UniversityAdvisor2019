@@ -23,6 +23,7 @@ namespace WebScraper
                 foreach (var item in unis)
                 {
                     Console.WriteLine(item.Name);
+                    Console.WriteLine(item.Country + " --> " + item.City);
                 }
             }
             Console.ReadKey();
