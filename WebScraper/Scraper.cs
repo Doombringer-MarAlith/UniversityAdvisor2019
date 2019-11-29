@@ -89,10 +89,12 @@ namespace WebScraper
             {
                 currentCountryName = files[currentCountryNum - 1].Substring(files[currentCountryNum - 1].IndexOf("CountryLinks", 0) + 13,
                     files[currentCountryNum - 1].Length - files[currentCountryNum - 1].IndexOf("CountryLinks", 0) - 17);
-                if(previousCountryName == currentCountryName + "1" || previousCountryName == currentCountryName + "2")
+
+                if (previousCountryName == currentCountryName + "1" || previousCountryName == currentCountryName + "2")
                 {
                     currentCountryName = previousCountryName;
                 }
+
                 universityIndexInCountry = 0;
                 Console.Write("COUNTRY {0:d}/{1:d} ", currentCountryNum, universityLinks.Count);
                 foreach (var link in linksList)
@@ -209,7 +211,7 @@ namespace WebScraper
         private string FindElement(string text, string begin, string ending, int offset)
         {
             int start;
-            if((start = text.IndexOf(begin) + begin.Length + offset) == -1 + begin.Length + offset)
+            if ((start = text.IndexOf(begin) + begin.Length + offset) == -1 + begin.Length + offset)
             {
                 return null;
             }
@@ -377,13 +379,21 @@ namespace WebScraper
             int currentCountryNum = 1;
             foreach (var listForCountry in universityLinks)
             {
-                using (StreamWriter writer = new StreamWriter(path + files[currentCountryNum - 1].Substring(files[currentCountryNum - 1].IndexOf("CountryLinks", 0) + 13,
-                    files[currentCountryNum - 1].Length - files[currentCountryNum - 1].IndexOf("CountryLinks", 0) - 17) + ".txt"))
+                try
                 {
-                    foreach (var link in listForCountry)
+                    using (StreamWriter writer = new StreamWriter(path + files[currentCountryNum - 1].Substring(files[currentCountryNum - 1].IndexOf("CountryLinks", 0) + 13,
+                    files[currentCountryNum - 1].Length - files[currentCountryNum - 1].IndexOf("CountryLinks", 0) - 17) + ".txt"))
                     {
-                        writer.Write(link + "\",\r\n");
+                        foreach (var link in listForCountry)
+                        {
+                            writer.Write(link + "\",\r\n");
+                        }
                     }
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.StackTrace);
+                    throw;
                 }
 
                 currentCountryNum++;
