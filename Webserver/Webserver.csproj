@@ -216,6 +216,10 @@
     <Compile Include="Migrations\201911232102516_InitialCreate.Designer.cs">
       <DependentUpon>201911232102516_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911291042477_universityCountry.cs" />
+    <Compile Include="Migrations\201911291042477_universityCountry.Designer.cs">
+      <DependentUpon>201911291042477_universityCountry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ViewModels\Account\ExternalLoginConfirmationViewModel.cs" />
@@ -373,6 +377,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201911232102516_InitialCreate.resx">
       <DependentUpon>201911232102516_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911291042477_universityCountry.resx">
+      <DependentUpon>201911291042477_universityCountry.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

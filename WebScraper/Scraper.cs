@@ -59,7 +59,7 @@ namespace WebScraper
                 return false;
             }
 
-            // scrapes university links from every file (file contains up to 100 universities from WHED.net search by Country)
+            // Scrapes university links from every file (file contains up to 880 universities from WHED.net search by Country)
             foreach (var file in files)
             {
                if (file.Equals(projectPath + "\\Lithuania.txt"))
