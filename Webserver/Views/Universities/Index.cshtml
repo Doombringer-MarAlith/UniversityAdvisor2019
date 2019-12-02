@@ -1,51 +1,85 @@
-﻿@model IEnumerable<Models.University>
+﻿@model Webserver.Models.ViewModels.Pagination.PagerViewModel<Models.University>
 
 @{
     ViewBag.Title = "Universities";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Search For Universities: </h2>
-@using (Html.BeginForm("Search", "Universities", FormMethod.Get))
+<h2>Search for universities: </h2>
+
+@using (Html.BeginForm("Index", "Universities", FormMethod.Get))
 {
     <ul class="nav navbar-nav">
-        <li>@Html.TextBox("text", "")</li>
+        <li>@Html.TextBox("searchCriteria", "")</li>
         <li><input type="submit" value="Search" /></li>
     </ul>
 }
 
-<table class="table" style="margin-top: 50px">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.City)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+<div class="tab-content">
+    <table class="table">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.ActionLink("Details", "Details", new { id = item.Id })
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.LastOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.LastOrDefault().City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.LastOrDefault().Description)
+            </th>
+            <th></th>
         </tr>
-    }
-</table>
+
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+@if (Model.Pager.EndPage > 1)
+{
+    <ul class="pagination">
+        @if (Model.Pager.CurrentPage > 1)
+        {
+            <li>
+                @Html.ActionLink("First", "Index", new { page = 1, searchCriteria = ViewBag.SearchCriteria })
+            </li>
+            <li>
+                @Html.ActionLink("Previous", "Index", new { page = Model.Pager.CurrentPage - 1, searchCriteria = ViewBag.SearchCriteria })
+            </li>
+        }
+
+        @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
+        {
+            <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
+                @Html.ActionLink(page.ToString(), "Index", new { page = page, searchCriteria = ViewBag.SearchCriteria })
+            </li>
+        }
+
+        @if (Model.Pager.CurrentPage < Model.Pager.TotalPageCount)
+        {
+            <li>
+                @Html.ActionLink("Next", "Index", new { page = Model.Pager.CurrentPage + 1, searchCriteria = ViewBag.SearchCriteria })
+            </li>
+            <li>
+                @Html.ActionLink("Last", "Index", new { page = Model.Pager.TotalPageCount, searchCriteria = ViewBag.SearchCriteria })
+            </li>
+        }
+    </ul>
+}
 
 @if (Request.IsAuthenticated)
 {

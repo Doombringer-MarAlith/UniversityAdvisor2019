@@ -1,7 +1,5 @@
 ﻿using AutoFixture.Xunit2;
-using Models;
 using Moq;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 using Webserver.Controllers;
 using Webserver.Data.Repositories;
@@ -16,6 +14,7 @@ namespace Webserver.Tests.Controllers
         public void Index([Frozen] Mock<IReviewRepository> reviewRepository)
         {
             var sut = new AddReviewController(reviewRepository.Object);
+
             // Act
             ViewResult result = sut.Index() as ViewResult;
 
@@ -28,6 +27,7 @@ namespace Webserver.Tests.Controllers
         public void UniversityReview([Frozen] Mock<IReviewRepository> reviewRepository)
         {
             var sut = new AddReviewController(reviewRepository.Object);
+
             // Act
             ViewResult result = sut.UniversityReview(15) as ViewResult;
 
@@ -40,6 +40,7 @@ namespace Webserver.Tests.Controllers
         public void FacultyReview([Frozen] Mock<IReviewRepository> reviewRepository)
         {
             var sut = new AddReviewController(reviewRepository.Object);
+
             // Act
             ViewResult result = sut.FacultyReview(14) as ViewResult;
 
@@ -52,6 +53,7 @@ namespace Webserver.Tests.Controllers
         public void ProgrammeReview([Frozen] Mock<IReviewRepository> reviewRepository)
         {
             var sut = new AddReviewController(reviewRepository.Object);
+
             // Act
             ViewResult result = sut.ProgrammeReview(14) as ViewResult;
 
