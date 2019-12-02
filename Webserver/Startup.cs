@@ -6,6 +6,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.DataProtection;
 using Owin;
+using System.Configuration;
 using System.Web;
 using System.Web.Mvc;
 using Webserver.Data.Infrastructure;
@@ -25,24 +26,64 @@ namespace Webserver
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<Scraper>().As<IGatherDatabase>().SingleInstance();
-            builder.RegisterType<DatabaseFiller>().AsSelf().SingleInstance();
-            builder.RegisterType<DatabaseFactory>().As<IDatabaseFactory>().SingleInstance();
+            builder.RegisterType<Scraper>()
+                .As<IGatherDatabase>()
+                .SingleInstance()
+                .WithParameter(new TypedParameter(typeof(bool), ConfigurationManager.AppSettings["Environment"].ToString() == "Production"));
 
-            builder.RegisterType<ApplicationUserRepository>().As<IUserStore<ApplicationUser>>().InstancePerRequest();
-            builder.RegisterType<UniversityRepository>().As<IUniversityRepository>().InstancePerRequest();
-            builder.RegisterType<FacultyRepository>().As<IFacultyRepository>().InstancePerRequest();
-            builder.RegisterType<ReviewRepository>().As<IReviewRepository>().InstancePerRequest();
-            builder.RegisterType<ProgrammeRepository>().As<IProgrammeRepository>().InstancePerRequest();
-            builder.RegisterType<MapsEmbedApi>().As<IMapsApi>().InstancePerRequest();
+            builder.RegisterType<DatabaseFiller>()
+                .AsSelf()
+                .SingleInstance();
 
-            builder.RegisterType<ApplicationUserManager>().AsSelf().InstancePerRequest();
-            builder.RegisterType<ApplicationSignInManager>().AsSelf().InstancePerRequest();
+            builder.RegisterType<DatabaseFactory>()
+                .As<IDatabaseFactory>()
+                .SingleInstance();
 
-            builder.Register<IAuthenticationManager>(c => HttpContext.Current.GetOwinContext().Authentication).InstancePerRequest();
-            builder.Register<IDataProtectionProvider>(c => app.GetDataProtectionProvider()).InstancePerRequest();
-            builder.RegisterType<RoleStore<IdentityRole>>().As<IRoleStore<IdentityRole, string>>().InstancePerRequest();
-            builder.RegisterType<RoleManager<IdentityRole>>().AsSelf().InstancePerRequest();
+            builder.RegisterType<ApplicationUserRepository>()
+                .As<IUserStore<ApplicationUser>>()
+                .InstancePerRequest();
+
+            builder.RegisterType<UniversityRepository>()
+                .As<IUniversityRepository>()
+                .InstancePerRequest();
+
+            builder.RegisterType<FacultyRepository>()
+                .As<IFacultyRepository>()
+                .InstancePerRequest();
+
+            builder.RegisterType<ReviewRepository>()
+                .As<IReviewRepository>()
+                .InstancePerRequest();
+
+            builder.RegisterType<ProgrammeRepository>()
+                .As<IProgrammeRepository>()
+                .InstancePerRequest();
+
+            builder.RegisterType<MapsEmbedApi>()
+                .As<IMapsApi>()
+                .InstancePerRequest();
+
+            builder.RegisterType<ApplicationUserManager>()
+                .AsSelf()
+                .InstancePerRequest();
+
+            builder.RegisterType<ApplicationSignInManager>()
+                .AsSelf()
+                .InstancePerRequest();
+
+            builder.Register<IAuthenticationManager>(c => HttpContext.Current.GetOwinContext().Authentication)
+                .InstancePerRequest();
+
+            builder.Register<IDataProtectionProvider>(c => app.GetDataProtectionProvider())
+                .InstancePerRequest();
+
+            builder.RegisterType<RoleStore<IdentityRole>>()
+                .As<IRoleStore<IdentityRole, string>>()
+                .InstancePerRequest();
+
+            builder.RegisterType<RoleManager<IdentityRole>>()
+                .AsSelf()
+                .InstancePerRequest();
 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
 
