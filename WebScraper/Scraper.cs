@@ -21,11 +21,11 @@ namespace WebScraper
         private string currentCountryName;
         private readonly string projectPath;
         private readonly List<List<string>> universityLinks = new List<List<string>>();
-        private List<University> universities = new List<University>();
-        private List<Faculty> faculties = new List<Faculty>();
-        private List<Programme> programmes = new List<Programme>();
-        private List<int> facultiesCountPerUniversity = new List<int>();
-        private List<int> programmesCountPerFaculty = new List<int>();
+        private readonly List<University> universities = new List<University>();
+        private readonly List<Faculty> faculties = new List<Faculty>();
+        private readonly List<Programme> programmes = new List<Programme>();
+        private readonly List<int> facultiesCountPerUniversity = new List<int>();
+        private readonly List<int> programmesCountPerFaculty = new List<int>();
 
         // Gets universities from WHED.net website.
         // Feed it html source file of uni search by country and it will gather Uni names + Uni descriptions + Faculties + Faculty programmes
@@ -34,22 +34,14 @@ namespace WebScraper
         {
             _websiteLink = "https://www.whed.net/";
             _standardTimeout = 15000;
-
-            if (productionEnvironment)
-            {
-                projectPath = AppDomain.CurrentDomain.BaseDirectory + "bin\\CountryLinks";
-            }
-            else
-            {
-                projectPath = AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("Webserver"))
-                    + "WebScraper\\CountryLinks";
-            }
+            projectPath = DetermineProjectPath(productionEnvironment);
         }
 
-        public Scraper(string websiteLink, int standardTimeout)
+        public Scraper(string websiteLink, int standardTimeout, bool productionEnvironment)
         {
             _websiteLink = websiteLink;
             _standardTimeout = standardTimeout;
+            projectPath = DetermineProjectPath(productionEnvironment);
         }
 
         public void UpdateData()
@@ -61,7 +53,8 @@ namespace WebScraper
         public bool TryToGatherUnversities()
         {
             DateTime startTime = DateTime.Now;
-            string[] files = null;
+            string[] files;
+
             if ((files = GetFiles()) == null)
             {
                 return false;
@@ -406,6 +399,17 @@ namespace WebScraper
 
                 currentCountryNum++;
             }
+        }
+
+        private string DetermineProjectPath(bool productionEnvironment)
+        {
+            if (productionEnvironment)
+            {
+                return AppDomain.CurrentDomain.BaseDirectory + "bin\\CountryLinks";
+            }
+
+            return AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("Webserver"))
+                + "WebScraper\\CountryLinks";
         }
 
         public List<University> GetUniversities()   
