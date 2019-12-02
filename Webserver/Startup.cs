@@ -6,6 +6,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.DataProtection;
 using Owin;
+using System.Configuration;
 using System.Web;
 using System.Web.Mvc;
 using Webserver.Data.Infrastructure;
@@ -25,9 +26,18 @@ namespace Webserver
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<Scraper>().As<IGatherDatabase>().SingleInstance();
-            builder.RegisterType<DatabaseFiller>().AsSelf().SingleInstance();
-            builder.RegisterType<DatabaseFactory>().As<IDatabaseFactory>().SingleInstance();
+            builder.RegisterType<Scraper>()
+                .As<IGatherDatabase>()
+                .SingleInstance()
+                .WithParameter(new TypedParameter(typeof(bool), ConfigurationManager.AppSettings["Environment"].ToString() == "Production"));
+
+            builder.RegisterType<DatabaseFiller>()
+                .AsSelf()
+                .SingleInstance();
+
+            builder.RegisterType<DatabaseFactory>()
+                .As<IDatabaseFactory>()
+                .SingleInstance();
 
             builder.RegisterType<ApplicationUserRepository>().As<IUserStore<ApplicationUser>>().InstancePerRequest();
             builder.RegisterType<UniversityRepository>().As<IUniversityRepository>().InstancePerRequest();

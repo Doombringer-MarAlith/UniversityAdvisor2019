@@ -19,9 +19,7 @@ namespace WebScraper
         private const int _readThisMany = 880;
         private readonly HttpClient _client = new HttpClient();
         private string currentCountryName;
-        private readonly string projectPath =
-                   AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("Webserver"))
-          + "WebScraper\\CountryLinks";
+        private readonly string projectPath;
         private readonly List<List<string>> universityLinks = new List<List<string>>();
         private List<University> universities = new List<University>();
         private List<Faculty> faculties = new List<Faculty>();
@@ -32,10 +30,20 @@ namespace WebScraper
         // Gets universities from WHED.net website.
         // Feed it html source file of uni search by country and it will gather Uni names + Uni descriptions + Faculties + Faculty programmes
         // Will need to incorporate adding items straight to database
-        public Scraper()
+        public Scraper(bool productionEnvironment)
         {
             _websiteLink = "https://www.whed.net/";
             _standardTimeout = 15000;
+
+            if (productionEnvironment)
+            {
+                projectPath = AppDomain.CurrentDomain.BaseDirectory + "bin\\CountryLinks";
+            }
+            else
+            {
+                projectPath = AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("Webserver"))
+                    + "WebScraper\\CountryLinks";
+            }
         }
 
         public Scraper(string websiteLink, int standardTimeout)
