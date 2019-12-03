@@ -4,10 +4,10 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using Webserver.Data.Repositories;
+using Webserver.Models.ViewModels.Pagination;
 using Webserver.Services.Api;
 
 namespace Webserver.Controllers
@@ -25,22 +25,23 @@ namespace Webserver.Controllers
             _mapsApi = mapsApi;
         }
 
-        // GET: Universities
-        public ActionResult Index()
+        // GET: Universities/{page}/{searchCriteria}
+        public ActionResult Index(int? page, string searchCriteria = null)
         {
-            return View(_universityRepository.GetAll());
-        }
+            var universities = searchCriteria != null 
+                ? _universityRepository.GetMany(university => university.Name.Contains(searchCriteria))
+                : _universityRepository.GetAll();
 
-        // GET: Universities/Search/{text}
-        public ActionResult Search(string text)
-        {
-            if (text == null)
+            var pager = new Pager(universities.Count(), page);
+
+            var viewModel = new PagerViewModel<University>
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
+                Items = universities.Skip((pager.CurrentPage - 1) * pager.PageSize).Take(pager.PageSize),
+                Pager = pager
+            };
 
-            var universityList = _universityRepository.GetMany(university => university.Name.Contains(text));
-            return View("Index", universityList);
+            ViewBag.SearchCriteria = searchCriteria;
+            return View(viewModel);
         }
 
         // GET: Universities/Details/{id}
