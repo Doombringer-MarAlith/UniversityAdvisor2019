@@ -4,12 +4,15 @@ namespace Webserver.Models.ViewModels.Pagination
 {
     public class Pager
     {
+        private const int VISIBILITY_RANGE_LEFT = 5;
+        private const int VISIBILITY_RANGE_RIGHT = 4;
+
         public Pager(int totalItems, int? page, int pageSize = 10)
         {
             var totalPageCount = (int)Math.Ceiling(totalItems / (decimal)pageSize);
             var currentPage = page ?? 1;
-            var startPage = currentPage - 5;
-            var endPage = currentPage + 4;
+            var startPage = currentPage - VISIBILITY_RANGE_LEFT;
+            var endPage = currentPage + VISIBILITY_RANGE_RIGHT;
 
             if (startPage <= 0)
             {
