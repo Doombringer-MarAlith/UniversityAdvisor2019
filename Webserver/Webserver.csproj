@@ -209,6 +209,7 @@
     <Compile Include="Data\Repositories\ProgrammeRepository.cs" />
     <Compile Include="Data\Repositories\RepositoryBase.cs" />
     <Compile Include="Data\Repositories\ReviewRepository.cs" />
+    <Compile Include="Data\Services\IDatabaseFiller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -219,6 +220,10 @@
     <Compile Include="Migrations\201911291042477_universityCountry.cs" />
     <Compile Include="Migrations\201911291042477_universityCountry.Designer.cs">
       <DependentUpon>201911291042477_universityCountry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912041822106_EntityCleanup.cs" />
+    <Compile Include="Migrations\201912041822106_EntityCleanup.Designer.cs">
+      <DependentUpon>201912041822106_EntityCleanup.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -369,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911291042477_universityCountry.resx">
       <DependentUpon>201911291042477_universityCountry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912041822106_EntityCleanup.resx">
+      <DependentUpon>201912041822106_EntityCleanup.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

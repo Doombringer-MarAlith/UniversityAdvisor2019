@@ -12,7 +12,7 @@ using System.Web.Mvc;
 using Webserver.Data.Infrastructure;
 using Webserver.Data.Repositories;
 using Webserver.Models;
-using Webserver.Data;
+using Webserver.Data.Services;
 using Webserver.Services.Api;
 using WebScraper;
 
@@ -32,7 +32,7 @@ namespace Webserver
                 .WithParameter(new TypedParameter(typeof(bool), ConfigurationManager.AppSettings["Environment"].ToString() == "Production"));
 
             builder.RegisterType<DatabaseFiller>()
-                .AsSelf()
+                .As<IDatabaseFiller>()
                 .SingleInstance();
 
             builder.RegisterType<DatabaseFactory>()
