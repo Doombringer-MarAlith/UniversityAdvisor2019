@@ -1,8 +1,4 @@
-﻿using Models;
-using System;
-using System.Linq;
-
-namespace Webserver.Data.Models
+﻿namespace Webserver.Data.Models
 {
     public static class DataFixture
     {

@@ -1,68 +1,64 @@
-﻿using System.Collections.Generic;
-using Models;
-using System.Linq;
+﻿using Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using WebScraper;
-using System;
 
-namespace Webserver.Data
+namespace Webserver.Data.Services
 {
-    public class DatabaseFiller
+    public class DatabaseFiller : IDatabaseFiller
     {
-        public void Initialize(ApplicationDbContext dbContext, IGatherDatabase gatherDatabase)
+        private readonly IGatherDatabase _gatherDatabase;
+
+        public DatabaseFiller(IGatherDatabase gatherDatabase)
         {
-            if (!dbContext.Universities.Any())
+            _gatherDatabase = gatherDatabase;
+        }
+
+        public async Task Fill(ApplicationDbContext dbContext)
+        {
+            if (_gatherDatabase.TryToGatherUniversities())
             {
-                if (gatherDatabase.TryToGatherUnversities())
+                List<University> universities = _gatherDatabase.GetUniversities();
+                List<Faculty> faculties = _gatherDatabase.GetFaculties();
+                List<Programme> programmes = _gatherDatabase.GetProgrammes();
+                List<int> facultyCount = _gatherDatabase.GetFacultiesCountPerUniversity();
+                List<int> programmeCount = _gatherDatabase.GetProgrammesCountPerFaculty();
+                int currentIndex = 0;
+                int id = 1;
+
+                foreach (var university in universities)
                 {
-                    List<University> universities = gatherDatabase.GetUniversities();
-                    List<Faculty> faculties = gatherDatabase.GetFaculties();
-                    List<Programme> programmes = gatherDatabase.GetProgrammes();
-                    List<int> facultyCount = gatherDatabase.GetFacultiesCountPerUniversity();
-                    List<int> programmeCount = gatherDatabase.GetProgrammesCountPerFaculty();
-                    int currentIndex = 0;
-                    int id = 1;
-
-                    foreach (var university in universities)
-                    {
-                        university.FoundingDate = DateTime.Now;
-                        dbContext.Universities.Add(university);
-                    }
-
-                    if (!dbContext.Faculties.Any())
-                    {
-                        foreach (var currentCount in facultyCount)
-                        {
-                            for (int i = 0; i < currentCount; i++)
-                            {
-                                faculties[currentIndex].UniversityId = id;
-                                dbContext.Faculties.Add(faculties[currentIndex]);
-                                currentIndex++;
-                            }
-
-                            id++;
-                        }
-                    }
-
-                    id = 1;
-                    currentIndex = 0;
-
-                    if (!dbContext.Programmes.Any())
-                    {
-                        foreach (var currentCount in programmeCount)
-                        {
-                            for (int i = 0; i < currentCount; i++)
-                            {
-                                programmes[currentIndex].FacultyId = id;
-                                dbContext.Programmes.Add(programmes[currentIndex]);
-                                currentIndex++;
-                            }
-
-                            id++;
-                        }
-                    }
-
-                    dbContext.SaveChanges();
+                    dbContext.Universities.Add(university);
                 }
+
+                foreach (var currentCount in facultyCount)
+                {
+                    for (int i = 0; i < currentCount; i++)
+                    {
+                        faculties[currentIndex].UniversityId = id;
+                        dbContext.Faculties.Add(faculties[currentIndex]);
+                        currentIndex++;
+                    }
+
+                    id++;
+                }
+
+                id = 1;
+                currentIndex = 0;
+
+                foreach (var currentCount in programmeCount)
+                {
+                    for (int i = 0; i < currentCount; i++)
+                    {
+                        programmes[currentIndex].FacultyId = id;
+                        dbContext.Programmes.Add(programmes[currentIndex]);
+                        currentIndex++;
+                    }
+
+                    id++;
+                }
+
+                await dbContext.SaveChangesAsync();
             }
         }
     }

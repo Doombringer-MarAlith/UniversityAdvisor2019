@@ -16,10 +16,6 @@ namespace Webserver
     {
         public void ConfigureAuth(IAppBuilder app)
         {
-            // Security stamp validator needs ApplicationUserManager and it tries to resolve the instance
-            // from OWIN context (because it does not know any better). So you still need to register ApplicationUserManager with OWIN
-            app.CreatePerOwinContext(() => DependencyResolver.Current.GetService<ApplicationUserManager>());
-
             // Configure authentication roles
             var roleManager = DependencyResolver.Current.GetService<RoleManager<IdentityRole>>();
             if (!roleManager.RoleExists("User"))

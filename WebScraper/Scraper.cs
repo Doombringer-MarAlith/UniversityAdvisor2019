@@ -51,7 +51,7 @@ namespace WebScraper
         }
 
         // Returns true if success and false otherwise
-        public bool TryToGatherUnversities()
+        public bool TryToGatherUniversities()
         {
             DateTime startTime = DateTime.Now;
             string[] files;

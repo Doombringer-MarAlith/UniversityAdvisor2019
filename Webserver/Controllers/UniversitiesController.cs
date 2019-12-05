@@ -88,14 +88,13 @@ namespace Webserver.Controllers
         [HttpPost]
         [Authorize(Roles = "Administrator")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id, Name, Description, FoundingDate")] University university)
+        public async Task<ActionResult> Edit([Bind(Include = "Id, Name, Description")] University university)
         {
             if (ModelState.IsValid)
             {
                 University universityToBeUpdated = _universityRepository.GetById(university.Id);
                 universityToBeUpdated.Name = university.Name;
                 universityToBeUpdated.Description = university.Description;
-                universityToBeUpdated.FoundingDate = university.FoundingDate;
 
                 _universityRepository.GetEntry(universityToBeUpdated).State = EntityState.Modified;
                 await _universityRepository.Commit();
@@ -117,7 +116,7 @@ namespace Webserver.Controllers
         [HttpPost]
         [Authorize(Roles = "Administrator")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Add([Bind(Include = "Name, Description, Location, FoundingDate")] University university)
+        public async Task<ActionResult> Add([Bind(Include = "Name, Description")] University university)
         {
             if (ModelState.IsValid)
             {
