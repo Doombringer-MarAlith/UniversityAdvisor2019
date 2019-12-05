@@ -11,5 +11,7 @@
         public string City { get; set; }
 
         public string Country { get; set; }
+
+        public string Website { get; set; }
     }
 }
