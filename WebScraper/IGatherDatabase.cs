@@ -5,7 +5,7 @@ namespace WebScraper
 {
     public interface IGatherDatabase
     {
-        bool TryToGatherUnversities();
+        bool TryToGatherUniversities();
 
         void UpdateData();
 

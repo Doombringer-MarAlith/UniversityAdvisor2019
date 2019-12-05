@@ -1,18 +1,15 @@
-﻿using System.Linq;
-using WebScraper;
+﻿using Webserver.Data.Services;
 
 namespace Webserver.Data.Infrastructure
 {
     public class DatabaseFactory : IDatabaseFactory
     {
+        private readonly IDatabaseFiller _dbFiller;
         private ApplicationDbContext _dbContext;
-        private DatabaseFiller _dbFiller;
-        private IGatherDatabase _scraper;
 
-        public DatabaseFactory(DatabaseFiller dbFiller, IGatherDatabase scraper)
+        public DatabaseFactory(IDatabaseFiller dbFiller)
         {
             _dbFiller = dbFiller;
-            _scraper = scraper;
         }
 
         public ApplicationDbContext Initialize()
@@ -20,12 +17,7 @@ namespace Webserver.Data.Infrastructure
             if (_dbContext == null)
             {
                 _dbContext = new ApplicationDbContext();
-                _dbContext.Initialize();
-            }
-
-            if (!_dbContext.Universities.Any() && !_dbContext.Faculties.Any() && !_dbContext.Programmes.Any())
-            {
-                _dbFiller.Initialize(_dbContext, _scraper);
+                _dbContext.Initialize(_dbFiller);
             }
 
             return _dbContext;

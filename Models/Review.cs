@@ -6,8 +6,6 @@
 
         public int FacultyId { get; set; }
 
-        public int LecturerId { get; set; }
-
         public int ProgrammeId { get; set; }
 
         public string UserId { get; set; }

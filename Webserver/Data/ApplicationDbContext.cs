@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
 using Models;
 using System.Data.Entity;
+using System.Linq;
 using Webserver.Data.Configuration;
 using Webserver.Data.Models;
+using Webserver.Data.Services;
 using Webserver.Models;
 
 namespace Webserver.Data
@@ -27,9 +29,13 @@ namespace Webserver.Data
             modelBuilder.Configurations.Add(new ProgrammeConfiguration());
         }
 
-        public void Initialize()
+        public void Initialize(IDatabaseFiller dbFiller)
         {
-            DataFixture.Initialize(this);
+            if (!Universities.Any() && !Faculties.Any() && !Programmes.Any())
+            {
+                DataFixture.Initialize(this);
+                dbFiller.Fill(this);
+            }
         }
     }
 }
