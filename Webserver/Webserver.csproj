@@ -220,6 +220,10 @@
     <Compile Include="Migrations\201911291042477_universityCountry.Designer.cs">
       <DependentUpon>201911291042477_universityCountry.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912050952102_AddUniWebsite.cs" />
+    <Compile Include="Migrations\201912050952102_AddUniWebsite.Designer.cs">
+      <DependentUpon>201912050952102_AddUniWebsite.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ViewModels\Account\ExternalLoginConfirmationViewModel.cs" />
@@ -369,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911291042477_universityCountry.resx">
       <DependentUpon>201911291042477_universityCountry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912050952102_AddUniWebsite.resx">
+      <DependentUpon>201912050952102_AddUniWebsite.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

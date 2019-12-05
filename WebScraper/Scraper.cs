@@ -47,6 +47,7 @@ namespace WebScraper
         public void UpdateData()
         {
             //TODO updating data in existing files in CountryLinks folder
+            //TODO dont forget to use CleanupHTML() after
         }
 
         // Returns true if success and false otherwise
@@ -235,6 +236,7 @@ namespace WebScraper
                 Country = currentCountryName,
                 Name = FindElement(text, "<h2>", "<span", 0).Trim(new char[] { '\t', '\n', ' ' }).Replace("&ndash; ", ""),
                 City = FindElement(text, "City:</span>", "</span>", 22),
+                Website = FindElement(text, "WWW:</span>", "\" class=", 32),
                 Description = FindElement(text, "<span class=\"dt\">History", "</sp", 59)
             };
 
@@ -405,7 +407,7 @@ namespace WebScraper
         {
             if (productionEnvironment)
             {
-                return AppDomain.CurrentDomain.BaseDirectory + "bin\\CountryLinks";
+                return AppDomain.CurrentDomain.BaseDirectory + "CountryLinks";
             }
 
             return AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("Webserver"))
