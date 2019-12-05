@@ -29,12 +29,12 @@ namespace Webserver.Data
             modelBuilder.Configurations.Add(new ProgrammeConfiguration());
         }
 
-        public void Initialize(IDatabaseFiller dbFiller)
+        public async void Initialize(IDatabaseFiller dbFiller)
         {
             if (!Universities.Any() && !Faculties.Any() && !Programmes.Any())
             {
                 DataFixture.Initialize(this);
-                dbFiller.Fill(this);
+                await dbFiller.Fill(this);
             }
         }
     }
