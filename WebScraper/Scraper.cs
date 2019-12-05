@@ -410,7 +410,7 @@ namespace WebScraper
                 return AppDomain.CurrentDomain.BaseDirectory + "bin\\CountryLinks";
             }
 
-            return AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("UniversityAdvisor2019")+ 22)
+            return AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("UniversityAdvisor2019") + 22)
                 + "WebScraper\\CountryLinks";
         }
 
