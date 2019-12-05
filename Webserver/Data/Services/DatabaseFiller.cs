@@ -16,7 +16,7 @@ namespace Webserver.Data.Services
 
         public async Task Fill(ApplicationDbContext dbContext)
         {
-            if (_gatherDatabase.TryToGatherUnversities())
+            if (_gatherDatabase.TryToGatherUniversities())
             {
                 List<University> universities = _gatherDatabase.GetUniversities();
                 List<Faculty> faculties = _gatherDatabase.GetFaculties();
