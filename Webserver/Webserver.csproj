@@ -225,6 +225,10 @@
     <Compile Include="Migrations\201912041822106_EntityCleanup.Designer.cs">
       <DependentUpon>201912041822106_EntityCleanup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912051031161_AddUniWebsite.cs" />
+    <Compile Include="Migrations\201912051031161_AddUniWebsite.Designer.cs">
+      <DependentUpon>201912051031161_AddUniWebsite.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ViewModels\Account\ExternalLoginConfirmationViewModel.cs" />
@@ -377,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912041822106_EntityCleanup.resx">
       <DependentUpon>201912041822106_EntityCleanup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912051031161_AddUniWebsite.resx">
+      <DependentUpon>201912051031161_AddUniWebsite.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
