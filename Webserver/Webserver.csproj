@@ -213,6 +213,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Enums\Enums.cs" />
     <Compile Include="Migrations\201911232102516_InitialCreate.cs" />
     <Compile Include="Migrations\201911232102516_InitialCreate.Designer.cs">
       <DependentUpon>201911232102516_InitialCreate.cs</DependentUpon>

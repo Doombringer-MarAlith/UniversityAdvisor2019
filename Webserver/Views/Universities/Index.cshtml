@@ -1,4 +1,4 @@
-﻿@model Webserver.Models.ViewModels.Pagination.PagerViewModel<Models.University>
+﻿@model Webserver.Models.ViewModels.Pagination.PagerViewModel<Models.University, Webserver.Enums.UniversitySortOrders>
 
 @{
     ViewBag.Title = "Universities";
@@ -9,7 +9,7 @@
 @using (Html.BeginForm("Index", "Universities", FormMethod.Get))
 {
     <ul class="nav navbar-nav">
-        <li>@Html.TextBox("searchCriteria", "")</li>
+        <li>@Html.TextBox("searchCriteria", Session["UniversitySearchCriteria"]?.ToString())</li>
         <li><input type="submit" value="Search" /></li>
     </ul>
 }
@@ -18,10 +18,28 @@
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Items.LastOrDefault().Name)
+                @if (Model.SortOrder == Webserver.Enums.UniversitySortOrders.NAME_ASC)
+                {
+                    @Html.ActionLink("Name", "Index",
+                        new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrders.NAME_DESC })
+                }
+                else
+                {
+                    @Html.ActionLink("Name", "Index",
+                        new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrders.NAME_ASC })
+                }
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Items.LastOrDefault().City)
+                @if (Model.SortOrder == Webserver.Enums.UniversitySortOrders.CITY_ASC)
+                {
+                    @Html.ActionLink("City", "Index",
+                        new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrders.CITY_DESC })
+                }
+                else
+                {
+                    @Html.ActionLink("City", "Index",
+                        new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrders.CITY_ASC })
+                }
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Items.LastOrDefault().Description)

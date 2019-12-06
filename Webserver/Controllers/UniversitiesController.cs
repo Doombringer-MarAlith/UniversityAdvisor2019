@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using Webserver.Data.Repositories;
+using Webserver.Enums;
 using Webserver.Models.ViewModels.Pagination;
 using Webserver.Services.Api;
 
@@ -25,22 +26,90 @@ namespace Webserver.Controllers
             _mapsApi = mapsApi;
         }
 
-        // GET: Universities/{page}/{searchCriteria}
-        public ActionResult Index(int? page, string searchCriteria = null)
+        // GET: Universities/{page}/{searchCriteria}/{navigation}
+        public ActionResult Index(int? page, string searchCriteria = null, bool navigation = false, UniversitySortOrders sortOrder = UniversitySortOrders.NAME_ASC)
         {
-            var universities = searchCriteria != null 
-                ? _universityRepository.GetMany(university => university.Name.Contains(searchCriteria))
-                : _universityRepository.GetAll();
+            IEnumerable<University> universities;
+
+            // Can't use session data directly in LINQ lambda expression because it throws an error
+            string searchCriteriaInSessionData = Session["UniversitySearchCriteria"]?.ToString();
+            int? currentPage = (int?)Session["CurrentUniversityPage"];
+
+            UniversitySortOrders sortOrderInSessionData =
+                Session["UniversitySortOrder"] != null
+                ? (UniversitySortOrders)Session["UniversitySortOrder"]
+                : UniversitySortOrders.NAME_ASC;
+
+            if (navigation)
+            {
+                if (searchCriteriaInSessionData != null)
+                {
+                    universities = _universityRepository.GetMany(university => university.Name.Contains(searchCriteriaInSessionData));
+                    ViewBag.SearchCriteria = searchCriteriaInSessionData;
+                }
+                else
+                {
+                    universities = _universityRepository.GetAll();
+                }
+
+                if (currentPage != null)
+                {
+                    page = currentPage;
+                }
+
+                sortOrder = sortOrderInSessionData;
+            }
+            else
+            {
+                if (searchCriteria != null)
+                {
+                    universities = _universityRepository.GetMany(university => university.Name.Contains(searchCriteria));
+                    Session["UniversitySearchCriteria"] = searchCriteria;
+                    ViewBag.SearchCriteria = searchCriteria;
+                }
+                else
+                {
+                    universities = _universityRepository.GetAll();
+                    Session["UniversitySearchCriteria"] = null;
+                }
+
+                if (page != null)
+                {
+                    Session["CurrentUniversityPage"] = page;
+                }
+                else
+                {
+                    Session["CurrentUniversityPage"] = null;
+                }
+
+                Session["UniversitySortOrder"] = sortOrder;
+            }
+
+            switch (sortOrder)
+            {
+                case UniversitySortOrders.CITY_ASC:
+                    universities = universities.OrderBy(university => university.City);
+                    break;
+                case UniversitySortOrders.CITY_DESC:
+                    universities = universities.OrderByDescending(university => university.City);
+                    break;
+                case UniversitySortOrders.NAME_DESC:
+                    universities = universities.OrderByDescending(university => university.Name);
+                    break;
+                default:
+                    universities = universities.OrderBy(university => university.Name);
+                    break;
+            }
 
             var pager = new Pager(universities.Count(), page);
 
-            var viewModel = new PagerViewModel<University>
+            var viewModel = new PagerViewModel<University, UniversitySortOrders>
             {
                 Items = universities.Skip((pager.CurrentPage - 1) * pager.PageSize).Take(pager.PageSize),
-                Pager = pager
+                Pager = pager,
+                SortOrder = sortOrder
             };
 
-            ViewBag.SearchCriteria = searchCriteria;
             return View(viewModel);
         }
 
