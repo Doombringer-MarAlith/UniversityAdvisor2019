@@ -28,7 +28,7 @@
 </div>
 
 <p>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", new { navigation = true })
 </p>
 <p>
     @Html.ActionLink("See Faculties", "Index", "Faculties", new { universityId = Model.Id }, null)
