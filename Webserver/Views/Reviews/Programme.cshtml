@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Models.Review>
+﻿@model Webserver.Models.ViewModels.Pagination.PagerViewModel<Models.Review, Webserver.Enums.ReviewSortOrder>
 
 @{
     ViewBag.Title = "Index";
@@ -9,15 +9,24 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Text)
+            @Html.DisplayNameFor(model => model.Items.LastOrDefault().Text)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Value)
+            @if (Model.SortOrder == Webserver.Enums.ReviewSortOrder.VALUE_ASC)
+            {
+                @Html.ActionLink("Value", "Programme",
+                    new { id = ViewBag.ProgrammeId, page = Model.Pager.CurrentPage, sortOrder = Webserver.Enums.ReviewSortOrder.VALUE_DESC })
+            }
+            else
+            {
+                @Html.ActionLink("Value", "Programme",
+                    new { id = ViewBag.ProgrammeId, page = Model.Pager.CurrentPage, sortOrder = Webserver.Enums.ReviewSortOrder.VALUE_ASC })
+            }
         </th>
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
+    @foreach (var item in Model.Items)
     {
         <tr>
             <td>
@@ -32,6 +41,38 @@
         </tr>
     }
 </table>
+
+@if (Model.Pager.EndPage > 1)
+{
+    <ul class="pagination">
+        @if (Model.Pager.CurrentPage > 1)
+        {
+            <li>
+                @Html.ActionLink("First", "Programme", new { id = ViewBag.ProgrammeId, sortOrder = Model.SortOrder })
+            </li>
+            <li>
+                @Html.ActionLink("Previous", "Programme", new { id = ViewBag.ProgrammeId, page = Model.Pager.CurrentPage - 1, sortOrder = Model.SortOrder })
+            </li>
+        }
+
+        @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
+        {
+            <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
+                @Html.ActionLink(page.ToString(), "Programme", new { id = ViewBag.ProgrammeId, page = page, sortOrder = Model.SortOrder })
+            </li>
+        }
+
+        @if (Model.Pager.CurrentPage < Model.Pager.TotalPageCount)
+        {
+            <li>
+                @Html.ActionLink("Next", "Programme", new { id = ViewBag.ProgrammeId, page = Model.Pager.CurrentPage + 1, sortOrder = Model.SortOrder })
+            </li>
+            <li>
+                @Html.ActionLink("Last", "Programme", new { id = ViewBag.ProgrammeId, page = Model.Pager.TotalPageCount, sortOrder = Model.SortOrder })
+            </li>
+        }
+    </ul>
+}
 
 <p>
     @Html.ActionLink("Back To Programme Details", "Details", "Programmes", new { id = ViewBag.ProgrammeId }, null)
