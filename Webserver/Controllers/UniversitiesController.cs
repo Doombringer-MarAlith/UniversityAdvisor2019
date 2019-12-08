@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Web.Mvc;
 using Webserver.Data.Repositories;
 using Webserver.Enums;
-using Webserver.Models.ViewModels.Pagination;
+using Webserver.Services;
 using Webserver.Services.Api;
 
 namespace Webserver.Controllers
@@ -18,16 +18,24 @@ namespace Webserver.Controllers
         private readonly IUniversityRepository _universityRepository;
         private readonly IReviewRepository _reviewRepository;
         private readonly IMapsApi _mapsApi;
+        private readonly IPaginationHandler<University, UniversitySortOrder> _paginationHandler;
 
-        public UniversitiesController(IUniversityRepository universityRepository, IReviewRepository reviewRepository, IMapsApi mapsApi)
+        public UniversitiesController
+        (
+            IUniversityRepository universityRepository,
+            IReviewRepository reviewRepository,
+            IMapsApi mapsApi,
+            IPaginationHandler<University, UniversitySortOrder> paginationHandler
+        )
         {
             _universityRepository = universityRepository;
             _reviewRepository = reviewRepository;
             _mapsApi = mapsApi;
+            _paginationHandler = paginationHandler;
         }
 
         // GET: Universities/{page}/{searchCriteria}/{sortOrder}
-        public ActionResult Index(int? page, string searchCriteria = null, UniversitySortOrders sortOrder = UniversitySortOrders.NAME_ASC)
+        public ActionResult Index(int? page, string searchCriteria = null, UniversitySortOrder sortOrder = UniversitySortOrder.NAME_ASC)
         {
             IEnumerable<University> universities;
 
@@ -45,47 +53,21 @@ namespace Webserver.Controllers
                 universities = _universityRepository.GetAll();
             }
 
-            switch (sortOrder)
-            {
-                case UniversitySortOrders.CITY_ASC:
-                    universities = universities.OrderBy(university => university.City);
-                    break;
-                case UniversitySortOrders.CITY_DESC:
-                    universities = universities.OrderByDescending(university => university.City);
-                    break;
-                case UniversitySortOrders.NAME_DESC:
-                    universities = universities.OrderByDescending(university => university.Name);
-                    break;
-                default:
-                    universities = universities.OrderBy(university => university.Name);
-                    break;
-            }
-
-            var pager = new Pager(universities.Count(), page);
-
-            var viewModel = new PagerViewModel<University, UniversitySortOrders>
-            {
-                Items = universities.Skip((pager.CurrentPage - 1) * pager.PageSize).Take(pager.PageSize),
-                Pager = pager,
-                SortOrder = sortOrder
-            };
-
-            return View(viewModel);
+            return View(_paginationHandler.ConstructViewModel(universities, page, sortOrder));
         }
 
-        // GET: Universities/IndexRedirect/{navigation}
-        [ActionName("IndexRedirect")]
-        public ActionResult Index(bool navigation)
+        // GET: Universities/RedirectToIndex/{navigation}
+        public ActionResult RedirectToIndex(bool navigation)
         {
             if (navigation)
             {
                 string searchCriteriaInSessionData = Session["UniversitySearchCriteria"]?.ToString();
                 int? currentPageInSessionData = (int?)Session["CurrentUniversityPage"];
 
-                UniversitySortOrders sortOrderInSessionData =
+                UniversitySortOrder sortOrderInSessionData =
                     Session["UniversitySortOrder"] != null
-                    ? (UniversitySortOrders)Session["UniversitySortOrder"]
-                    : UniversitySortOrders.NAME_ASC;
+                    ? (UniversitySortOrder)Session["UniversitySortOrder"]
+                    : UniversitySortOrder.NAME_ASC;
 
                 return RedirectToAction("Index", 
                     new { 
