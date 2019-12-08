@@ -7,22 +7,22 @@ using Webserver.Models.ViewModels.Pagination;
 
 namespace Webserver.Services
 {
-	public class PaginationHandler<T, E> : IPaginationHandler<T, E> where T : class where E : struct, IConvertible
+    public class PaginationHandler<T, E> : IPaginationHandler<T, E> where T : class where E : struct, IConvertible
     {
-		public PagerViewModel<T, E> ConstructViewModel(IEnumerable<T> items, int? currentPage, E sortOrder)
+        public PagerViewModel<T, E> ConstructViewModel(IEnumerable<T> items, int? currentPage, E sortOrder)
         {
-			if (!typeof(E).IsEnum)
+            if (!typeof(E).IsEnum)
             {
                 throw new InvalidCastException("PaginationHandler::ConstructViewModel(): Not an enum!");
             }
 
-			try
+            try
             {
                 dynamic value = sortOrder;
                 var convertedSortOrder = (Int32)value;
                 items = Sort(items, convertedSortOrder);
             }
-			catch
+            catch
             {
                 throw;
             }
@@ -39,13 +39,13 @@ namespace Webserver.Services
             return viewModel;
         }
 
-		public IEnumerable<T> Sort(IEnumerable<T> items, int sortOrder)
+        public IEnumerable<T> Sort(IEnumerable<T> items, int sortOrder)
         {
-			if (items.GetType().GetGenericArguments()[0].Name == typeof(University).Name)
+            if (items.GetType().GetGenericArguments()[0].Name == typeof(University).Name)
             {
                 IEnumerable<University> convertedItems = items.Cast<University>();
 
-				switch (sortOrder)
+                switch (sortOrder)
                 {
                     case (Int32)UniversitySortOrder.CITY_ASC:
                         return convertedItems.OrderBy(university => university.City).Cast<T>();
@@ -57,11 +57,11 @@ namespace Webserver.Services
                         return convertedItems.OrderBy(university => university.Name).Cast<T>();
                 }
             }
-			else if (items.GetType().GetGenericArguments()[0].Name == typeof(Review).Name)
+            else if (items.GetType().GetGenericArguments()[0].Name == typeof(Review).Name)
             {
                 IEnumerable<Review> convertedItems = items.Cast<Review>();
 
-				switch (sortOrder)
+                switch (sortOrder)
                 {
                     case (Int32)ReviewSortOrder.VALUE_ASC:
                         return convertedItems.OrderBy(review => review.Value).Cast<T>();
@@ -77,5 +77,5 @@ namespace Webserver.Services
 
             return null;
         }
-	}
+    }
 }
