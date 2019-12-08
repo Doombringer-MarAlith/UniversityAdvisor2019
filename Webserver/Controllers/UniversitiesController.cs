@@ -26,63 +26,23 @@ namespace Webserver.Controllers
             _mapsApi = mapsApi;
         }
 
-        // GET: Universities/{page}/{searchCriteria}/{navigation}
-        public ActionResult Index(int? page, string searchCriteria = null, bool navigation = false, UniversitySortOrders sortOrder = UniversitySortOrders.NAME_ASC)
+        // GET: Universities/{page}/{searchCriteria}/{sortOrder}
+        public ActionResult Index(int? page, string searchCriteria = null, UniversitySortOrders sortOrder = UniversitySortOrders.NAME_ASC)
         {
             IEnumerable<University> universities;
 
-            // Can't use session data directly in LINQ lambda expression because it throws an error
-            string searchCriteriaInSessionData = Session["UniversitySearchCriteria"]?.ToString();
-            int? currentPage = (int?)Session["CurrentUniversityPage"];
+            Session["CurrentUniversityPage"] = page;
+            Session["UniversitySortOrder"] = sortOrder;
+            Session["UniversitySearchCriteria"] = searchCriteria;
+            ViewBag.SearchCriteria = searchCriteria;
 
-            UniversitySortOrders sortOrderInSessionData =
-                Session["UniversitySortOrder"] != null
-                ? (UniversitySortOrders)Session["UniversitySortOrder"]
-                : UniversitySortOrders.NAME_ASC;
-
-            if (navigation)
+            if (searchCriteria != null)
             {
-                if (searchCriteriaInSessionData != null)
-                {
-                    universities = _universityRepository.GetMany(university => university.Name.Contains(searchCriteriaInSessionData));
-                    ViewBag.SearchCriteria = searchCriteriaInSessionData;
-                }
-                else
-                {
-                    universities = _universityRepository.GetAll();
-                }
-
-                if (currentPage != null)
-                {
-                    page = currentPage;
-                }
-
-                sortOrder = sortOrderInSessionData;
+                universities = _universityRepository.GetMany(university => university.Name.Contains(searchCriteria));
             }
             else
             {
-                if (searchCriteria != null)
-                {
-                    universities = _universityRepository.GetMany(university => university.Name.Contains(searchCriteria));
-                    Session["UniversitySearchCriteria"] = searchCriteria;
-                    ViewBag.SearchCriteria = searchCriteria;
-                }
-                else
-                {
-                    universities = _universityRepository.GetAll();
-                    Session["UniversitySearchCriteria"] = null;
-                }
-
-                if (page != null)
-                {
-                    Session["CurrentUniversityPage"] = page;
-                }
-                else
-                {
-                    Session["CurrentUniversityPage"] = null;
-                }
-
-                Session["UniversitySortOrder"] = sortOrder;
+                universities = _universityRepository.GetAll();
             }
 
             switch (sortOrder)
@@ -111,6 +71,31 @@ namespace Webserver.Controllers
             };
 
             return View(viewModel);
+        }
+
+        // GET: Universities/IndexRedirect/{navigation}
+        [ActionName("IndexRedirect")]
+        public ActionResult Index(bool navigation)
+        {
+            if (navigation)
+            {
+                string searchCriteriaInSessionData = Session["UniversitySearchCriteria"]?.ToString();
+                int? currentPageInSessionData = (int?)Session["CurrentUniversityPage"];
+
+                UniversitySortOrders sortOrderInSessionData =
+                    Session["UniversitySortOrder"] != null
+                    ? (UniversitySortOrders)Session["UniversitySortOrder"]
+                    : UniversitySortOrders.NAME_ASC;
+
+                return RedirectToAction("Index", 
+                    new { 
+                        page = currentPageInSessionData, 
+                        searchCriteria = searchCriteriaInSessionData,
+                        sortOrder = sortOrderInSessionData 
+                    });
+            }
+
+            return RedirectToAction("Index");
         }
 
         // GET: Universities/Details/{id}

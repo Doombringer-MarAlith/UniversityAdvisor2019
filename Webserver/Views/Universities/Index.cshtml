@@ -6,7 +6,7 @@
 
 <h2>Search for universities: </h2>
 
-@using (Html.BeginForm("Index", "Universities", FormMethod.Get))
+@using (Html.BeginForm("Index", "Universities", new { page = Model.Pager.CurrentPage, sortOrder = Model.SortOrder }, FormMethod.Get))
 {
     <ul class="nav navbar-nav">
         <li>@Html.TextBox("searchCriteria", Session["UniversitySearchCriteria"]?.ToString())</li>
@@ -73,27 +73,27 @@
         @if (Model.Pager.CurrentPage > 1)
         {
             <li>
-                @Html.ActionLink("First", "Index", new { page = 1, searchCriteria = ViewBag.SearchCriteria })
+                @Html.ActionLink("First", "Index", new { searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
             </li>
             <li>
-                @Html.ActionLink("Previous", "Index", new { page = Model.Pager.CurrentPage - 1, searchCriteria = ViewBag.SearchCriteria })
+                @Html.ActionLink("Previous", "Index", new { page = Model.Pager.CurrentPage - 1, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
             </li>
         }
 
         @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
         {
             <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
-                @Html.ActionLink(page.ToString(), "Index", new { page = page, searchCriteria = ViewBag.SearchCriteria })
+                @Html.ActionLink(page.ToString(), "Index", new { page = page, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
             </li>
         }
 
         @if (Model.Pager.CurrentPage < Model.Pager.TotalPageCount)
         {
             <li>
-                @Html.ActionLink("Next", "Index", new { page = Model.Pager.CurrentPage + 1, searchCriteria = ViewBag.SearchCriteria })
+                @Html.ActionLink("Next", "Index", new { page = Model.Pager.CurrentPage + 1, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
             </li>
             <li>
-                @Html.ActionLink("Last", "Index", new { page = Model.Pager.TotalPageCount, searchCriteria = ViewBag.SearchCriteria })
+                @Html.ActionLink("Last", "Index", new { page = Model.Pager.TotalPageCount, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
             </li>
         }
     </ul>
