@@ -56,28 +56,23 @@ namespace Webserver.Controllers
             return View(_paginationHandler.ConstructViewModel(universities, page, sortOrder));
         }
 
-        // GET: Universities/RedirectToIndex/{navigation}
-        public ActionResult RedirectToIndex(bool navigation)
+        // GET: Universities/RedirectToIndex
+        public ActionResult RedirectToIndex()
         {
-            if (navigation)
-            {
-                string searchCriteriaInSessionData = Session["UniversitySearchCriteria"]?.ToString();
-                int? currentPageInSessionData = (int?)Session["CurrentUniversityPage"];
+            string searchCriteriaInSessionData = Session["UniversitySearchCriteria"]?.ToString();
+            int? currentPageInSessionData = (int?)Session["CurrentUniversityPage"];
 
-                UniversitySortOrder sortOrderInSessionData =
-                    Session["UniversitySortOrder"] != null
-                    ? (UniversitySortOrder)Session["UniversitySortOrder"]
-                    : UniversitySortOrder.NAME_ASC;
+            UniversitySortOrder sortOrderInSessionData =
+                Session["UniversitySortOrder"] != null
+                ? (UniversitySortOrder)Session["UniversitySortOrder"]
+                : UniversitySortOrder.NAME_ASC;
 
-                return RedirectToAction("Index", 
-                    new { 
-                        page = currentPageInSessionData, 
-                        searchCriteria = searchCriteriaInSessionData,
-                        sortOrder = sortOrderInSessionData 
-                    });
-            }
-
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", 
+                new { 
+                    page = currentPageInSessionData, 
+                    searchCriteria = searchCriteriaInSessionData,
+                    sortOrder = sortOrderInSessionData 
+                });
         }
 
         // GET: Universities/Details/{id}

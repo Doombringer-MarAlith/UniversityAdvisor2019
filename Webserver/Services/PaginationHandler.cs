@@ -57,10 +57,25 @@ namespace Webserver.Services
                         return convertedItems.OrderBy(university => university.Name).Cast<T>();
                 }
             }
-			else
+			else if (items.GetType().GetGenericArguments()[0].Name == typeof(Review).Name)
             {
-                return null;
+                IEnumerable<Review> convertedItems = items.Cast<Review>();
+
+				switch (sortOrder)
+                {
+                    case (Int32)ReviewSortOrder.VALUE_ASC:
+                        return convertedItems.OrderBy(review => review.Value).Cast<T>();
+                    case (Int32)ReviewSortOrder.VALUE_DESC:
+                        return convertedItems.OrderByDescending(review => review.Value).Cast<T>();
+                    case (Int32)ReviewSortOrder.DATE_ASC:
+                        return null;
+                    case (Int32)ReviewSortOrder.DATE_DESC:
+                    default:
+                        return null;
+                }
             }
+
+            return null;
         }
 	}
 }
