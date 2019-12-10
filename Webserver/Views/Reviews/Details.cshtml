@@ -15,37 +15,37 @@
         {
             if (User.IsInRole("Administrator"))
             {
-                <dt>
-                    @Html.DisplayNameFor(model => model.UniversityId)
-                </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.UniversityId)
+        </dt>
 
-                <dd>
-                    @Html.DisplayFor(model => model.UniversityId)
-                </dd>
+        <dd>
+            @Html.DisplayFor(model => model.UniversityId)
+        </dd>
 
-                <dt>
-                    @Html.DisplayNameFor(model => model.FacultyId)
-                </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.FacultyId)
+        </dt>
 
-                <dd>
-                    @Html.DisplayFor(model => model.FacultyId)
-                </dd>
+        <dd>
+            @Html.DisplayFor(model => model.FacultyId)
+        </dd>
 
-                <dt>
-                    @Html.DisplayNameFor(model => model.ProgrammeId)
-                </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProgrammeId)
+        </dt>
 
-                <dd>
-                    @Html.DisplayFor(model => model.ProgrammeId)
-                </dd>
+        <dd>
+            @Html.DisplayFor(model => model.ProgrammeId)
+        </dd>
 
-                <dt>
-                    @Html.DisplayNameFor(model => model.UserId)
-                </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
 
-                <dd>
-                    @Html.DisplayFor(model => model.UserId)
-                </dd>
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
             }
         }
 
@@ -69,32 +69,32 @@
 
 @if (Model.UniversityId != 0)
 {
-    <p>
-        @Html.ActionLink("Back to List", "RedirectToUniversity", new { id = Model.UniversityId })
-    </p>
+<p>
+    @Html.ActionLink("Back to List", "RedirectToUniversity", new { id = Model.UniversityId })
+</p>
 }
 else if (Model.FacultyId != 0)
 {
-    <p>
-        @Html.ActionLink("Back to List", "RedirectToFaculty", new { id = Model.FacultyId })
-    </p>
+<p>
+    @Html.ActionLink("Back to List", "RedirectToFaculty", new { id = Model.FacultyId })
+</p>
 }
 else if (Model.ProgrammeId != 0)
 {
-    <p>
-        @Html.ActionLink("Back to List", "RedirectToProgramme", new { id = Model.ProgrammeId })
-    </p>
+<p>
+    @Html.ActionLink("Back to List", "RedirectToProgramme", new { id = Model.ProgrammeId })
+</p>
 }
 
 @if (Request.IsAuthenticated)
 {
     if (User.IsInRole("Administrator"))
     {
-        <p>
-            @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
-        </p>
-        <p>
-            @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
-        </p>
+<p>
+    @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+</p>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+</p>
     }
 }

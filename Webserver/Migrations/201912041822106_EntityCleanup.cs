@@ -1,8 +1,7 @@
 namespace Webserver.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class EntityCleanup : DbMigration
     {
         public override void Up()
@@ -11,7 +10,7 @@ namespace Webserver.Migrations
             DropColumn("dbo.University", "Location");
             DropColumn("dbo.University", "FoundingDate");
         }
-        
+
         public override void Down()
         {
             AddColumn("dbo.University", "FoundingDate", c => c.DateTime(nullable: false));

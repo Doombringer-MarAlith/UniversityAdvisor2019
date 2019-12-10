@@ -10,14 +10,14 @@ using Owin;
 using System.Configuration;
 using System.Web;
 using System.Web.Mvc;
+using WebScraper;
 using Webserver.Data.Infrastructure;
 using Webserver.Data.Repositories;
+using Webserver.Data.Services;
 using Webserver.Enums;
 using Webserver.Models;
-using Webserver.Data.Services;
 using Webserver.Services;
 using Webserver.Services.Api;
-using WebScraper;
 
 [assembly: OwinStartupAttribute(typeof(Webserver.Startup))]
 

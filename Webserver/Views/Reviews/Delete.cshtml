@@ -57,33 +57,32 @@
         <dd>
             @Html.DisplayFor(model => model.Value)
         </dd>
-
     </dl>
 
     @using (Html.BeginForm("Delete", "Reviews", new { id = Model.Id }, FormMethod.Post))
     {
-        @Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" />
-            @if (Model.UniversityId != 0)
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-default" />
+        @if (Model.UniversityId != 0)
             {
-                <p>
-                    @Html.ActionLink("Back to List", "RedirectToUniversity", new { id = Model.UniversityId })
-                </p>
+        <p>
+            @Html.ActionLink("Back to List", "RedirectToUniversity", new { id = Model.UniversityId })
+        </p>
             }
             else if (Model.FacultyId != 0)
             {
-                <p>
-                    @Html.ActionLink("Back to List", "RedirectToFaculty", new { id = Model.FacultyId })
-                </p>
+        <p>
+            @Html.ActionLink("Back to List", "RedirectToFaculty", new { id = Model.FacultyId })
+        </p>
             }
             else if (Model.ProgrammeId != 0)
             {
-                <p>
-                    @Html.ActionLink("Back to List", "RedirectToProgramme", new { id = Model.ProgrammeId })
-                </p>
+        <p>
+            @Html.ActionLink("Back to List", "RedirectToProgramme", new { id = Model.ProgrammeId })
+        </p>
             }
-        </div>
+    </div>
     }
 </div>
