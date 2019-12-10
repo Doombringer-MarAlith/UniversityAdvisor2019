@@ -254,6 +254,7 @@
     <Compile Include="Data\Repositories\UniversityRepository.cs" />
     <Compile Include="Services\Api\IMapsApi.cs" />
     <Compile Include="Services\Api\MapsEmbedApi.cs" />
+    <Compile Include="Services\IPaginationHandler.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -295,6 +296,7 @@
     <Content Include="Scripts\src\jquery-1.11.1.min.js" />
     <Content Include="Scripts\src\react\components\Login.js" />
     <Content Include="Scripts\webpack.config.js" />
+    <Compile Include="Services\PaginationHandler.cs" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

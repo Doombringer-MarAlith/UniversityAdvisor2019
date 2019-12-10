@@ -5,14 +5,17 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.DataProtection;
+using Models;
 using Owin;
 using System.Configuration;
 using System.Web;
 using System.Web.Mvc;
 using Webserver.Data.Infrastructure;
 using Webserver.Data.Repositories;
+using Webserver.Enums;
 using Webserver.Models;
 using Webserver.Data.Services;
+using Webserver.Services;
 using Webserver.Services.Api;
 using WebScraper;
 
@@ -61,6 +64,14 @@ namespace Webserver
 
             builder.RegisterType<MapsEmbedApi>()
                 .As<IMapsApi>()
+                .InstancePerRequest();
+
+            builder.RegisterType<PaginationHandler<University, UniversitySortOrder>>()
+                .As<IPaginationHandler<University, UniversitySortOrder>>()
+                .InstancePerRequest();
+
+            builder.RegisterType<PaginationHandler<Review, ReviewSortOrder>>()
+                .As<IPaginationHandler<Review, ReviewSortOrder>>()
                 .InstancePerRequest();
 
             builder.RegisterType<ApplicationUserManager>()
