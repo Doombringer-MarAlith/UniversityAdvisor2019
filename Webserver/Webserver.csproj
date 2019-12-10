@@ -276,6 +276,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <None Include="Properties\PublishProfiles\universityadvisor - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\universityadvisor2019 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\canavasjs.min.js" />
     <Content Include="Scripts\dark-mode-switch.js" />
@@ -351,6 +352,7 @@
     <Content Include="Views\Programmes\Add.cshtml" />
     <None Include="Web.universityadvisor - Web Deploy.config">
       <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>

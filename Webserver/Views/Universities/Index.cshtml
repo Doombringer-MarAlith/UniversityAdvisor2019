@@ -8,10 +8,10 @@
 
 @using (Html.BeginForm("Index", "Universities", new { page = Model.Pager.CurrentPage, sortOrder = Model.SortOrder }, FormMethod.Get))
 {
-    <ul class="nav navbar-nav">
-        <li>@Html.TextBox("searchCriteria", Session["UniversitySearchCriteria"]?.ToString())</li>
-        <li><input type="submit" value="Search" /></li>
-    </ul>
+<ul class="nav navbar-nav">
+    <li>@Html.TextBox("searchCriteria", Session["UniversitySearchCriteria"]?.ToString())</li>
+    <li><input type="submit" value="Search" /></li>
+</ul>
 }
 
 <div class="tab-content">
@@ -20,24 +20,24 @@
             <th>
                 @if (Model.SortOrder == Webserver.Enums.UniversitySortOrder.NAME_ASC)
                 {
-                    @Html.ActionLink("Name", "Index",
+                @Html.ActionLink("Name", "Index",
                         new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrder.NAME_DESC })
                 }
                 else
                 {
-                    @Html.ActionLink("Name", "Index",
+                @Html.ActionLink("Name", "Index",
                         new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrder.NAME_ASC })
                 }
             </th>
             <th>
                 @if (Model.SortOrder == Webserver.Enums.UniversitySortOrder.CITY_ASC)
                 {
-                    @Html.ActionLink("City", "Index",
+                @Html.ActionLink("City", "Index",
                         new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrder.CITY_DESC })
                 }
                 else
                 {
-                    @Html.ActionLink("City", "Index",
+                @Html.ActionLink("City", "Index",
                         new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrder.CITY_ASC })
                 }
             </th>
@@ -49,62 +49,62 @@
 
         @foreach (var item in Model.Items)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.City)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    @Html.ActionLink("Details", "Details", new { id = item.Id })
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
+            </td>
+        </tr>
         }
     </table>
 </div>
 
 @if (Model.Pager.EndPage > 1)
 {
-    <ul class="pagination">
-        @if (Model.Pager.CurrentPage > 1)
+<ul class="pagination">
+    @if (Model.Pager.CurrentPage > 1)
         {
-            <li>
-                @Html.ActionLink("First", "Index", new { searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
-            </li>
-            <li>
-                @Html.ActionLink("Previous", "Index", new { page = Model.Pager.CurrentPage - 1, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
-            </li>
+    <li>
+        @Html.ActionLink("First", "Index", new { searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
+    </li>
+    <li>
+        @Html.ActionLink("Previous", "Index", new { page = Model.Pager.CurrentPage - 1, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
+    </li>
         }
 
-        @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
+    @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
         {
-            <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
-                @Html.ActionLink(page.ToString(), "Index", new { page = page, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
-            </li>
+    <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
+        @Html.ActionLink(page.ToString(), "Index", new { page = page, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
+    </li>
         }
 
-        @if (Model.Pager.CurrentPage < Model.Pager.TotalPageCount)
+    @if (Model.Pager.CurrentPage < Model.Pager.TotalPageCount)
         {
-            <li>
-                @Html.ActionLink("Next", "Index", new { page = Model.Pager.CurrentPage + 1, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
-            </li>
-            <li>
-                @Html.ActionLink("Last", "Index", new { page = Model.Pager.TotalPageCount, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
-            </li>
+    <li>
+        @Html.ActionLink("Next", "Index", new { page = Model.Pager.CurrentPage + 1, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
+    </li>
+    <li>
+        @Html.ActionLink("Last", "Index", new { page = Model.Pager.TotalPageCount, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
+    </li>
         }
-    </ul>
+</ul>
 }
 
 @if (Request.IsAuthenticated)
 {
     if (User.IsInRole("Administrator"))
     {
-        <p>
-            @Html.ActionLink("Add", "Add")
-        </p>
+<p>
+    @Html.ActionLink("Add", "Add")
+</p>
     }
 }

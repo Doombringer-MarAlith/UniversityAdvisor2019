@@ -6,7 +6,7 @@ namespace Webserver.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "Webserver.Data.ApplicationDbContext";
         }
 

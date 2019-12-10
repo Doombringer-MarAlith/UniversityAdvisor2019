@@ -5,10 +5,10 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Text;
 
 namespace WebScraper
 {
@@ -64,24 +64,19 @@ namespace WebScraper
             // Scrapes university links from every file (file contains up to 880 universities from WHED.net search by Country)
             foreach (var file in files)
             {
-               if (file.Equals(projectPath + "\\Lithuania.txt"))
-               {
-                    try
+                try
+                {
+                    using (File.OpenRead(file))
                     {
-                        using (File.OpenRead(file))
-                        {
-                            universityLinks.Add(ScrapeUniversityLinks(File.ReadAllText(file)));
-                        }
+                        universityLinks.Add(ScrapeUniversityLinks(File.ReadAllText(file)));
                     }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.StackTrace);
-                    }
-
-                    break;
-               }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.StackTrace);
+                }
             }
-            
+
             // Thread t = new Thread(() => StartThreadWithTimeout("", _standardTimeout)); currently unused
             // Thread t2 = new Thread(() => StartThreadWithTimeout("", _standardTimeout));
             int universityIndexInCountry;
@@ -107,7 +102,7 @@ namespace WebScraper
                         {
                             string htmlCode = client.DownloadString(_websiteLink + link);
                             Console.WriteLine("UNIVERSITY {0:d}/{1:d} START:" + DateTime.Now, universityIndexInCountry + 1, linksList.Count);
-                            
+
                             /* Palieku komentare nes maybe ateity dar bandysiu padaryt kad su threadais veiktų
                             if (_currentUniversityId % 2 == 0)
                             {
@@ -153,7 +148,7 @@ namespace WebScraper
                                     t2.Join();
                                 }
                             }*/
-                            
+
                             StartThreadWithTimeout(htmlCode, _standardTimeout);
                         }
                         catch (WebException e)
@@ -256,12 +251,13 @@ namespace WebScraper
             {
                 List<string> fields;
                 start = text.IndexOf("Faculty : ", start);
-                if (start != -1) {
+                if (start != -1)
+                {
                     start += 10;
                     end = text.IndexOf("</p>", start);
                     byte[] bytes = Encoding.Default.GetBytes(text.Substring(start, end - start));
                     facultyName = Encoding.UTF8.GetString(bytes);
-                    faculties.Add(new Faculty { Name = facultyName});
+                    faculties.Add(new Faculty { Name = facultyName });
                     facultyCount++;
 
                     // Searching for fields of study
@@ -281,7 +277,6 @@ namespace WebScraper
                         programmesCountPerFaculty.Add(fields.Count());
                     }
                 }
-
             } while (start != -1);
 
             facultiesCountPerUniversity.Add(facultyCount);
@@ -311,7 +306,7 @@ namespace WebScraper
 
             try
             {
-                using (StreamWriter outputFile = new StreamWriter(projectPath + "\\" + country + ".txt")) 
+                using (StreamWriter outputFile = new StreamWriter(projectPath + "\\" + country + ".txt"))
                 {
                     outputFile.Write(responseString);
                 }
@@ -393,7 +388,7 @@ namespace WebScraper
                         }
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine(e.StackTrace);
                     throw;
@@ -414,7 +409,7 @@ namespace WebScraper
                 + "WebScraper\\CountryLinks";
         }
 
-        public List<University> GetUniversities()   
+        public List<University> GetUniversities()
         {
             return universities;
         }
@@ -425,17 +420,17 @@ namespace WebScraper
         }
 
         public List<Programme> GetProgrammes()
-        { 
-            return programmes;  
+        {
+            return programmes;
         }
 
-        public List<int> GetFacultiesCountPerUniversity() 
-        { 
+        public List<int> GetFacultiesCountPerUniversity()
+        {
             return facultiesCountPerUniversity;
         }
 
         public List<int> GetProgrammesCountPerFaculty()
-        { 
+        {
             return programmesCountPerFaculty;
         }
     }

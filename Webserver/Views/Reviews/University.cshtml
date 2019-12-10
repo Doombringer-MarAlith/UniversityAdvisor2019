@@ -14,12 +14,12 @@
         <th>
             @if (Model.SortOrder == Webserver.Enums.ReviewSortOrder.VALUE_ASC)
             {
-                @Html.ActionLink("Value", "University",
+            @Html.ActionLink("Value", "University",
                     new { id = ViewBag.UniversityId, page = Model.Pager.CurrentPage, sortOrder = Webserver.Enums.ReviewSortOrder.VALUE_DESC })
             }
             else
             {
-                @Html.ActionLink("Value", "University",
+            @Html.ActionLink("Value", "University",
                     new { id = ViewBag.UniversityId, page = Model.Pager.CurrentPage, sortOrder = Webserver.Enums.ReviewSortOrder.VALUE_ASC })
             }
         </th>
@@ -28,50 +28,50 @@
 
     @foreach (var item in Model.Items)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Text)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Value)
-            </td>
-            <td>
-                @Html.ActionLink("Details", "Details", new { id = item.Id })
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Text)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Value)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id = item.Id })
+        </td>
+    </tr>
     }
 </table>
 
 @if (Model.Pager.EndPage > 1)
 {
-    <ul class="pagination">
-        @if (Model.Pager.CurrentPage > 1)
+<ul class="pagination">
+    @if (Model.Pager.CurrentPage > 1)
         {
-            <li>
-                @Html.ActionLink("First", "University", new { id = ViewBag.UniversityId, sortOrder = Model.SortOrder })
-            </li>
-            <li>
-                @Html.ActionLink("Previous", "University", new { id = ViewBag.UniversityId, page = Model.Pager.CurrentPage - 1, sortOrder = Model.SortOrder })
-            </li>
+    <li>
+        @Html.ActionLink("First", "University", new { id = ViewBag.UniversityId, sortOrder = Model.SortOrder })
+    </li>
+    <li>
+        @Html.ActionLink("Previous", "University", new { id = ViewBag.UniversityId, page = Model.Pager.CurrentPage - 1, sortOrder = Model.SortOrder })
+    </li>
         }
 
-        @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
+    @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
         {
-            <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
-                @Html.ActionLink(page.ToString(), "University", new { id = ViewBag.UniversityId, page = page, sortOrder = Model.SortOrder })
-            </li>
+    <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
+        @Html.ActionLink(page.ToString(), "University", new { id = ViewBag.UniversityId, page = page, sortOrder = Model.SortOrder })
+    </li>
         }
 
-        @if (Model.Pager.CurrentPage < Model.Pager.TotalPageCount)
+    @if (Model.Pager.CurrentPage < Model.Pager.TotalPageCount)
         {
-            <li>
-                @Html.ActionLink("Next", "University", new { id = ViewBag.UniversityId, page = Model.Pager.CurrentPage + 1, sortOrder = Model.SortOrder })
-            </li>
-            <li>
-                @Html.ActionLink("Last", "University", new { id = ViewBag.UniversityId, page = Model.Pager.TotalPageCount, sortOrder = Model.SortOrder })
-            </li>
+    <li>
+        @Html.ActionLink("Next", "University", new { id = ViewBag.UniversityId, page = Model.Pager.CurrentPage + 1, sortOrder = Model.SortOrder })
+    </li>
+    <li>
+        @Html.ActionLink("Last", "University", new { id = ViewBag.UniversityId, page = Model.Pager.TotalPageCount, sortOrder = Model.SortOrder })
+    </li>
         }
-    </ul>
+</ul>
 }
 
 <p>
