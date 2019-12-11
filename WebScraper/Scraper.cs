@@ -61,23 +61,25 @@ namespace WebScraper
                 return false;
             }
 
+            int i = 0;
             // Scrapes university links from every file (file contains up to 880 universities from WHED.net search by Country)
             foreach (var file in files)
             {
-                if (file.Equals(projectPath + "\\Lithuania.txt"))
+                i++;
+                try
                 {
-                    try
+                    using (File.OpenRead(file))
                     {
-                        using (File.OpenRead(file))
-                        {
-                            universityLinks.Add(ScrapeUniversityLinks(File.ReadAllText(file)));
-                        }
+                        universityLinks.Add(ScrapeUniversityLinks(File.ReadAllText(file)));
                     }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.StackTrace);
-                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.StackTrace);
+                }
 
+                if (i >= 3)
+                {
                     break;
                 }
             }
@@ -244,6 +246,37 @@ namespace WebScraper
             ReadFaculties(text);
         }
 
+        private bool SearchingUniversities(string file)
+        {
+            var list = new List<string>
+            {
+                "\\Lithuania.txt",
+                "\\Austria.txt",
+                "\\Belarus.txt",
+                "\\Bolivia.txt",
+                "\\Brazil.txt",
+                "\\Germany.txt",
+                "\\Monaco.txt",
+                "\\Poland.txt",
+                "\\Russia.txt",
+                "\\Spain.txt",
+                "\\Sweden.txt",
+                "\\United Kingdom.txt",
+            };
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                list[i] = projectPath + list[i];
+            }
+
+            if (list.Contains(file))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         private void ReadFaculties(string text)
         {
             int start = 0;
@@ -266,7 +299,7 @@ namespace WebScraper
                     facultyCount++;
 
                     // Searching for fields of study
-                    nextFaculty = text.IndexOf("Faculty : ", start) > 0 ? text.IndexOf("Faculty : ", start) + 10 : text.Length; //doesn't exist -> good too
+                    nextFaculty = text.IndexOf("Faculty : ", start) > 0 ? text.IndexOf("Faculty : ", start, StringComparison.Ordinal) + 10 : text.Length; //doesn't exist -> good too
                     nextFOS = text.IndexOf("Fields of study:", start) + 45;
                     if (nextFaculty > nextFOS && nextFOS != 44) // 44 as in returned -1(not found) + 45 (line above)
                     {
