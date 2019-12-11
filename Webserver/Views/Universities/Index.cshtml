@@ -12,6 +12,10 @@
         <li>@Html.TextBox("searchCriteria", Session["UniversitySearchCriteria"]?.ToString())</li>
         <li><input type="submit" value="Search" /></li>
     </ul>
+
+    <div class="glyphicon-modal-window">
+        @Html.DropDownList("country", new SelectList(Webserver.Helpers.CountryStore.CountryNames), "Select Country")
+    </div>
 }
 
 <div class="tab-content">
@@ -21,24 +25,24 @@
                 @if (Model.SortOrder == Webserver.Enums.UniversitySortOrder.NAME_ASC)
                 {
                     @Html.ActionLink("Name", "Index",
-                        new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrder.NAME_DESC })
+                        new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrder.NAME_DESC, ViewBag.Country })
                 }
                 else
                 {
                     @Html.ActionLink("Name", "Index",
-                        new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrder.NAME_ASC })
+                        new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrder.NAME_ASC, ViewBag.Country })
                 }
             </th>
             <th>
                 @if (Model.SortOrder == Webserver.Enums.UniversitySortOrder.CITY_ASC)
                 {
                     @Html.ActionLink("City", "Index",
-                        new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrder.CITY_DESC })
+                        new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrder.CITY_DESC, ViewBag.Country })
                 }
                 else
                 {
                     @Html.ActionLink("City", "Index",
-                        new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrder.CITY_ASC })
+                        new { page = Model.Pager.CurrentPage, searchCriteria = ViewBag.SearchCriteria, sortOrder = Webserver.Enums.UniversitySortOrder.CITY_ASC, ViewBag.Country })
                 }
             </th>
             <th>
@@ -73,27 +77,27 @@
         @if (Model.Pager.CurrentPage > 1)
         {
             <li>
-                @Html.ActionLink("First", "Index", new { searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
+                @Html.ActionLink("First", "Index", new { searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder, ViewBag.Country })
             </li>
             <li>
-                @Html.ActionLink("Previous", "Index", new { page = Model.Pager.CurrentPage - 1, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
+                @Html.ActionLink("Previous", "Index", new { page = Model.Pager.CurrentPage - 1, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder, ViewBag.Country })
             </li>
         }
 
         @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
         {
             <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
-                @Html.ActionLink(page.ToString(), "Index", new { page = page, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
+                @Html.ActionLink(page.ToString(), "Index", new { page = page, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder, ViewBag.Country })
             </li>
         }
 
         @if (Model.Pager.CurrentPage < Model.Pager.TotalPageCount)
         {
             <li>
-                @Html.ActionLink("Next", "Index", new { page = Model.Pager.CurrentPage + 1, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
+                @Html.ActionLink("Next", "Index", new { page = Model.Pager.CurrentPage + 1, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder, ViewBag.Country })
             </li>
             <li>
-                @Html.ActionLink("Last", "Index", new { page = Model.Pager.TotalPageCount, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder })
+                @Html.ActionLink("Last", "Index", new { page = Model.Pager.TotalPageCount, searchCriteria = ViewBag.SearchCriteria, sortOrder = Model.SortOrder, ViewBag.Country })
             </li>
         }
     </ul>

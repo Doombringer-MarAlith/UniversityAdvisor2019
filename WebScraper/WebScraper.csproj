@@ -660,7 +660,9 @@
     <Content Include="CountryLinks\Zimbabwe.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="realCountriesShort.txt" />
+    <Content Include="realCountriesShort.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">
