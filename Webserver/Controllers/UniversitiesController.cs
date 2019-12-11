@@ -79,9 +79,10 @@ namespace Webserver.Controllers
                 ? (UniversitySortOrder)Session["UniversitySortOrder"]
                 : UniversitySortOrder.NAME_ASC;
 
-            return RedirectToAction("Index", 
-                new { 
-                    page = currentPageInSessionData, 
+            return RedirectToAction("Index",
+                new
+                {
+                    page = currentPageInSessionData,
                     searchCriteria = searchCriteriaInSessionData,
                     sortOrder = sortOrderInSessionData,
                     country = countryInSessionData
@@ -89,7 +90,7 @@ namespace Webserver.Controllers
         }
 
         // GET: Universities/Details/{id}
-       
+
         public ActionResult Details(int id)
         {
             University university = _universityRepository.GetById(id);
@@ -102,7 +103,7 @@ namespace Webserver.Controllers
             var reviewList = _reviewRepository.GetMany(review => review.UniversityId.Equals(id));
 
             List<DataPoint> dataPoints = new List<DataPoint>{
-                new DataPoint(1, reviewList.Where(review => review.Value.Equals(1)).Count()),                   
+                new DataPoint(1, reviewList.Where(review => review.Value.Equals(1)).Count()),
                 new DataPoint(2, reviewList.Where(review => review.Value.Equals(2)).Count()),
                 new DataPoint(3, reviewList.Where(review => review.Value.Equals(3)).Count()),
                 new DataPoint(4, reviewList.Where(review => review.Value.Equals(4)).Count()),

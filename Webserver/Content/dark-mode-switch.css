@@ -15,17 +15,17 @@
     position: relative;
 }
 
-.custom-control-label:after {
-    content: '';
-    position: absolute;
-    top: 1px;
-    left: 5px;
-    width: 35px;
-    height: 35px;
-    background: #fff;
-    border-radius: 90px;
-    transition: 0.3s;
-}
+    .custom-control-label:after {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 5px;
+        width: 35px;
+        height: 35px;
+        background: #fff;
+        border-radius: 90px;
+        transition: 0.3s;
+    }
 
 input:checked + label {
     background: #3a4f46;

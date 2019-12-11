@@ -1,8 +1,7 @@
 namespace Webserver.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class universityCountry : DbMigration
     {
         public override void Up()
@@ -10,7 +9,7 @@ namespace Webserver.Migrations
             AddColumn("dbo.University", "City", c => c.String());
             AddColumn("dbo.University", "Country", c => c.String());
         }
-        
+
         public override void Down()
         {
             DropColumn("dbo.University", "Country");

@@ -49,10 +49,13 @@ namespace Webserver.Services
                 {
                     case (Int32)UniversitySortOrder.CITY_ASC:
                         return convertedItems.OrderBy(university => university.City).Cast<T>();
+
                     case (Int32)UniversitySortOrder.CITY_DESC:
                         return convertedItems.OrderByDescending(university => university.City).Cast<T>();
+
                     case (Int32)UniversitySortOrder.NAME_DESC:
                         return convertedItems.OrderByDescending(university => university.Name).Cast<T>();
+
                     default:
                         return convertedItems.OrderBy(university => university.Name).Cast<T>();
                 }
@@ -65,10 +68,13 @@ namespace Webserver.Services
                 {
                     case (Int32)ReviewSortOrder.VALUE_ASC:
                         return convertedItems.OrderBy(review => review.Value).Cast<T>();
+
                     case (Int32)ReviewSortOrder.VALUE_DESC:
                         return convertedItems.OrderByDescending(review => review.Value).Cast<T>();
+
                     case (Int32)ReviewSortOrder.DATE_ASC:
                         return null;
+
                     case (Int32)ReviewSortOrder.DATE_DESC:
                     default:
                         return null;
