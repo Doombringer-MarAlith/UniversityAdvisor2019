@@ -34,19 +34,30 @@ namespace Webserver.Controllers
             _paginationHandler = paginationHandler;
         }
 
-        // GET: Universities/{page}/{searchCriteria}/{sortOrder}
-        public ActionResult Index(int? page, string searchCriteria = null, UniversitySortOrder sortOrder = UniversitySortOrder.NAME_ASC)
+        // GET: Universities/{page}/{searchCriteria}/{sortOrder}/{country}
+        public ActionResult Index(int? page, string searchCriteria = null, UniversitySortOrder sortOrder = UniversitySortOrder.NAME_ASC, string country = null)
         {
             IEnumerable<University> universities;
 
             Session["CurrentUniversityPage"] = page;
             Session["UniversitySortOrder"] = sortOrder;
             Session["UniversitySearchCriteria"] = searchCriteria;
-            ViewBag.SearchCriteria = searchCriteria;
+            Session["UniversityCountry"] = country;
 
-            if (searchCriteria != null)
+            ViewBag.SearchCriteria = searchCriteria;
+            ViewBag.Country = country;
+
+            if (country != null && searchCriteria != null)
+            {
+                universities = _universityRepository.GetMany(university => university.Country == country && university.Name.Contains(searchCriteria));
+            }
+            else if (searchCriteria != null)
             {
                 universities = _universityRepository.GetMany(university => university.Name.Contains(searchCriteria));
+            }
+            else if (country != null)
+            {
+                universities = _universityRepository.GetMany(university => university.Country == country);
             }
             else
             {
@@ -60,6 +71,7 @@ namespace Webserver.Controllers
         public ActionResult RedirectToIndex()
         {
             string searchCriteriaInSessionData = Session["UniversitySearchCriteria"]?.ToString();
+            string countryInSessionData = Session["UniversityCountry"]?.ToString();
             int? currentPageInSessionData = (int?)Session["CurrentUniversityPage"];
 
             UniversitySortOrder sortOrderInSessionData =
@@ -72,7 +84,8 @@ namespace Webserver.Controllers
                 {
                     page = currentPageInSessionData,
                     searchCriteria = searchCriteriaInSessionData,
-                    sortOrder = sortOrderInSessionData
+                    sortOrder = sortOrderInSessionData,
+                    country = countryInSessionData
                 });
         }
 
