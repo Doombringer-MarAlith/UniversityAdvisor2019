@@ -214,6 +214,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Enums\Enums.cs" />
+    <Compile Include="Helpers\CountryStore.cs" />
     <Compile Include="Migrations\201911232102516_InitialCreate.cs" />
     <Compile Include="Migrations\201911232102516_InitialCreate.Designer.cs">
       <DependentUpon>201911232102516_InitialCreate.cs</DependentUpon>
@@ -282,6 +283,7 @@
     <Content Include="Scripts\dark-mode-switch.js" />
     <Content Include="Scripts\dark-mode-switch.min.js" />
     <Content Include="Content\dark-mode.css" />
+    <Content Include="Scripts\emojiButton.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />

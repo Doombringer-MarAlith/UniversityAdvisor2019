@@ -7,6 +7,7 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.DataProtection;
 using Models;
 using Owin;
+using System;
 using System.Configuration;
 using System.Web;
 using System.Web.Mvc;
@@ -15,6 +16,7 @@ using Webserver.Data.Infrastructure;
 using Webserver.Data.Repositories;
 using Webserver.Data.Services;
 using Webserver.Enums;
+using Webserver.Helpers;
 using Webserver.Models;
 using Webserver.Services;
 using Webserver.Services.Api;
@@ -105,7 +107,19 @@ namespace Webserver
             app.UseAutofacMiddleware(container);
             app.UseAutofacMvc();
 
+            InitializePaginationData();
+
             ConfigureAuth(app);
+        }
+
+        private void InitializePaginationData()
+        {
+            string path = ConfigurationManager.AppSettings["Environment"].ToString() == "Production"
+                ? AppDomain.CurrentDomain.BaseDirectory + "bin\\realCountriesShort.txt"
+                : AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("UniversityAdvisor2019") + 22)
+                + "WebScraper\\realCountriesShort.txt";
+
+            CountryStore.ReadCountryNamesFromFile(path);
         }
     }
 }

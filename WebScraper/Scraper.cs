@@ -64,16 +64,21 @@ namespace WebScraper
             // Scrapes university links from every file (file contains up to 880 universities from WHED.net search by Country)
             foreach (var file in files)
             {
-                try
+                if (file.Equals(projectPath + "\\Lithuania.txt"))
                 {
-                    using (File.OpenRead(file))
+                    try
                     {
-                        universityLinks.Add(ScrapeUniversityLinks(File.ReadAllText(file)));
+                        using (File.OpenRead(file))
+                        {
+                            universityLinks.Add(ScrapeUniversityLinks(File.ReadAllText(file)));
+                        }
                     }
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.StackTrace);
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.StackTrace);
+                    }
+
+                    break;
                 }
             }
 
