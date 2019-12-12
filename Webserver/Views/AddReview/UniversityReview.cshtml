@@ -6,12 +6,12 @@
 
 <h2>University Review</h2>
 
-<link rel="stylesheet" href="~/Content/star_rating.css">
+<link rel="stylesheet" href="~/Content/emoji-button.css">
 
 @using (Html.BeginForm("ReviewUniversity", "AddReview", new { id = ViewBag.universityId }, FormMethod.Post, null))
 {
 <center>
-    @Html.TextAreaFor(model => model.Text, new { name = "text", cols = "40", rows = "10" , placeholder = "Tell us about your experience!", id = "emojiArea" })
+    @Html.TextAreaFor(model => model.Text, new { name = "text", cols = "40", rows = "10", placeholder = "Tell us about your experience!", id = "emojiArea", @class = "text" })
     @Html.ValidationMessageFor(model => model.Text)
     <div>
         @Html.RadioButtonFor(model => model.Value, 1, new { @class = "rate", id = "star1", type = "radio", name = "rating", title = "Terrible", label = "1" })
@@ -25,5 +25,5 @@
 </center>
 }
 
-<script src="https://cdn.jsdelivr.net/npm/emoji-button@latest/dist/index.min.js"></script>
+<script src="~/node_modules/@("@joeattardi")/emoji-button/dist/index.js"></script>
 <script src="~/Scripts/emojiButton.js"></script>
