@@ -11,7 +11,7 @@
 @using (Html.BeginForm("ReviewProgramme", "AddReview", new { id = ViewBag.programmeId }, FormMethod.Post, null))
 {
 <center>
-    @Html.TextAreaFor(model => model.Text, new { name = "text", cols = "40", rows = "10", placeholder = "Tell us abobut your experience!", id = "emojiArea", @class = "text" })
+    @Html.TextAreaFor(model => model.Text, new { name = "text", cols = "40", rows = "10", placeholder = "Tell us about your experience!", id = "emojiArea", @class = "text" })
     @Html.ValidationMessageFor(model => model.Text)
     <div>
         @Html.RadioButtonFor(model => model.Value, 1, new { @class = "rate", id = "star1", type = "radio", name = "rating", title = "Terrible", label = "1" })
