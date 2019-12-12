@@ -1,4 +1,4 @@
-﻿var input = document.querySelector('#emojiArea');
+﻿var input = document.querySelector('.text');
 var picker = new EmojiButton({
     position: 'right-start'
 });
