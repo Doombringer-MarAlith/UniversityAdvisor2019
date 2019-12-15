@@ -47,6 +47,12 @@ namespace Webserver.Controllers
             ViewBag.SearchCriteria = searchCriteria;
             ViewBag.Country = country;
 
+            // Default value from html dropdown list
+            if (country == "")
+            {
+                country = null;
+            }
+
             if (country != null && searchCriteria != null)
             {
                 universities = _universityRepository.GetMany(university => university.Country == country && university.Name.Contains(searchCriteria));
