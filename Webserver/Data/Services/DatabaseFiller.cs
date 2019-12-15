@@ -31,8 +31,6 @@ namespace Webserver.Data.Services
                     dbContext.Universities.Add(university);
                 }
 
-                await dbContext.SaveChangesAsync();
-
                 foreach (var currentCount in facultyCount)
                 {
                     for (int i = 0; i < currentCount; i++)
@@ -44,8 +42,6 @@ namespace Webserver.Data.Services
 
                     id++;
                 }
-
-                await dbContext.SaveChangesAsync();
 
                 id = 1;
                 currentIndex = 0;
