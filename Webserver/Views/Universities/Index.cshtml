@@ -9,12 +9,11 @@
 @using (Html.BeginForm("Index", "Universities", new { page = Model.Pager.CurrentPage, sortOrder = Model.SortOrder }, FormMethod.Get))
 {
     <ul class="nav navbar-nav">
-        <li>@Html.TextBox("searchCriteria", Session["UniversitySearchCriteria"]?.ToString())</li>
+        <li>@Html.TextBox("searchCriteria", Session["UniversitySearchCriteria"]?.ToString(), new { id="txtbox"})</li>
         <li><input type="submit" value="Search" /></li>
     </ul>
-
     <div class="glyphicon-modal-window">
-        @Html.DropDownList("country", new SelectList(Webserver.Helpers.CountryStore.CountryNames), "Select Country")
+        @Html.DropDownList("country", new SelectList(Webserver.Helpers.CountryStore.CountryNames), "Select Country", new { id="dropdwn"})
     </div>
 }
 

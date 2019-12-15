@@ -22,3 +22,28 @@
     [data-theme="dark"] .canvasjs-chart-canvas.backgroundColor {
         background-color: #000000 !important;
     }
+
+    [data-theme="dark"] input[type=submit] {
+        background: #149C82 !important;
+    }
+
+    [data-theme="dark"] #txtbox {
+        background-color: #353836 !important;
+    }
+
+    [data-theme="dark"] #dropdwn {
+        background-color: #353836 !important;
+    }
+
+    [data-theme="dark"] .emoji-picker {
+        background: #353836 !important;
+    }
+
+    [data-theme="dark"] .emoji-picker__search {
+        background: #353836 !important;
+        color: #eee !important;
+    }
+
+    [data-theme="dark"] .emoji-picker__preview-name {
+        color: #eee !important;
+    }
