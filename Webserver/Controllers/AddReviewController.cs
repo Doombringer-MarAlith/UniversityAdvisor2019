@@ -41,7 +41,7 @@ namespace Webserver.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> ReviewUniversity(Review model, int id)
+        public ActionResult ReviewUniversity(Review model, int id)
         {
             model.UniversityId = id;
             if (model.Value > 5 || model.Value < 1)
@@ -51,12 +51,13 @@ namespace Webserver.Controllers
 
             model.UserId = User.Identity.GetUserId();
             _reviewRepository.Add(model);
-            await _reviewRepository.Commit();
+            Task task = Task.Run(async () => await _reviewRepository.Commit());
+            task.Wait();
             return RedirectToAction("Details", "Universities", new { id = id });
         }
 
         [HttpPost]
-        public async Task<ActionResult> ReviewFaculty(Review model, int id)
+        public ActionResult ReviewFaculty(Review model, int id)
         {
             model.FacultyId = id;
             if (model.Value > 5 || model.Value < 1)
@@ -66,12 +67,13 @@ namespace Webserver.Controllers
 
             model.UserId = User.Identity.GetUserId();
             _reviewRepository.Add(model);
-            await _reviewRepository.Commit();
+            Task task = Task.Run(async () => await _reviewRepository.Commit());
+            task.Wait();
             return RedirectToAction("Details", "Faculties", new { id = id });
         }
 
         [HttpPost]
-        public async Task<ActionResult> ReviewProgramme(Review model, int id)
+        public ActionResult ReviewProgramme(Review model, int id)
         {
             model.ProgrammeId = id;
             if (model.Value > 5 || model.Value < 1)
@@ -81,7 +83,8 @@ namespace Webserver.Controllers
 
             model.UserId = User.Identity.GetUserId();
             _reviewRepository.Add(model);
-            await _reviewRepository.Commit();
+            Task task = Task.Run(async () => await _reviewRepository.Commit());
+            task.Wait();
             return RedirectToAction("Details", "Programmes", new { id = id });
         }
     }
