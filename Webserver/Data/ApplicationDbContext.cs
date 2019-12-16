@@ -2,6 +2,7 @@
 using Models;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using Webserver.Data.Configuration;
 using Webserver.Data.Models;
 using Webserver.Data.Services;
@@ -29,7 +30,7 @@ namespace Webserver.Data
             modelBuilder.Configurations.Add(new ProgrammeConfiguration());
         }
 
-        public async void Initialize(IDatabaseFiller dbFiller)
+        public async Task Initialize(IDatabaseFiller dbFiller)
         {
             if (!Universities.Any() && !Faculties.Any() && !Programmes.Any())
             {

@@ -1,4 +1,5 @@
-﻿using Webserver.Data.Services;
+﻿using System.Threading.Tasks;
+using Webserver.Data.Services;
 
 namespace Webserver.Data.Infrastructure
 {
@@ -17,7 +18,8 @@ namespace Webserver.Data.Infrastructure
             if (_dbContext == null)
             {
                 _dbContext = new ApplicationDbContext();
-                _dbContext.Initialize(_dbFiller);
+                Task task = Task.Run(async () => await _dbContext.Initialize(_dbFiller));
+                task.Wait();
             }
 
             return _dbContext;

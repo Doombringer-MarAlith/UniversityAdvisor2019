@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Webserver.Helpers
 {
@@ -17,21 +20,19 @@ namespace Webserver.Helpers
 
             try
             {
-                using (File.OpenRead(path))
+                using (var streamReader = new StreamReader(path, Encoding.UTF8))
                 {
-                    string data = File.ReadAllText(path);
-                    string[] countries = data.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-
-                    foreach (string country in countries)
-                    {
-                        CountryNames.Add(country);
-                    }
+                    string data = streamReader.ReadToEnd();
+                    byte[] bytes = Encoding.UTF8.GetBytes(data);
+                    CountryNames = Regex.Split(Encoding.UTF8.GetString(bytes), ",").ToList();
                 }
             }
             catch (Exception exception)
             {
                 throw exception;
             }
+
+            CountryNames = CountryNames.OrderBy(countryName => countryName).ToList();
         }
     }
 }
