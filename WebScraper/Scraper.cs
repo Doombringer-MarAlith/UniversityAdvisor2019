@@ -81,7 +81,7 @@ namespace WebScraper
                     WriteToFile(e.StackTrace, pathToLog);
                 }
 
-                if(howmany == 3)
+                if (howmany == 50)
                 {
                     break;
                 }
@@ -170,7 +170,7 @@ namespace WebScraper
                         {
                             Console.WriteLine(e.StackTrace);
                             Console.WriteLine(_websiteLink + link);
-                            WriteToFile(e.StackTrace, pathToLog);
+                            //    WriteToFile(e.StackTrace, pathToLog);
                         }
                     }
 
@@ -193,7 +193,7 @@ namespace WebScraper
             catch (Exception e)
             {
                 Console.WriteLine(e.StackTrace);
-                WriteToFile(e.StackTrace, pathToLog);
+                // WriteToFile(e.StackTrace, pathToLog);
                 return null;
             }
         }
@@ -407,18 +407,18 @@ namespace WebScraper
 
         private void WriteToFile(string txt, string path)
         {
-            try
-            {
-                using (StreamWriter writetext = File.AppendText(path))
-                {
-                    writetext.WriteLine(txt);
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.StackTrace);
-                throw;
-            }
+            //try
+            //{
+            //    using (StreamWriter writetext = File.AppendText(path))
+            //    {
+            //        writetext.WriteLine(txt);
+            //    }
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e.StackTrace);
+            //    throw;
+            //}
         }
 
         private void CleanupHtml(string outputPath, string[] files)
