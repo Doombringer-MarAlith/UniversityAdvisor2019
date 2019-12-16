@@ -26,6 +26,7 @@ namespace WebScraper
         private readonly List<Programme> programmes = new List<Programme>();
         private readonly List<int> facultiesCountPerUniversity = new List<int>();
         private readonly List<int> programmesCountPerFaculty = new List<int>();
+        private readonly string pathToLog;
 
         // Gets universities from WHED.net website.
         // Feed it html source file of uni search by country and it will gather Uni names + Uni descriptions + Faculties + Faculty programmes
@@ -35,6 +36,7 @@ namespace WebScraper
             _websiteLink = "https://www.whed.net/";
             _standardTimeout = 15000;
             projectPath = DetermineProjectPath(productionEnvironment);
+            pathToLog = projectPath + "\\..\\Log\\Log.txt";
         }
 
         public Scraper(string websiteLink, int standardTimeout, bool productionEnvironment)
@@ -42,6 +44,7 @@ namespace WebScraper
             _websiteLink = websiteLink;
             _standardTimeout = standardTimeout;
             projectPath = DetermineProjectPath(productionEnvironment);
+            pathToLog = projectPath + "\\..\\Log\\Log.txt";
         }
 
         public void UpdateData()
@@ -61,25 +64,29 @@ namespace WebScraper
                 return false;
             }
 
+            int howmany = 0;
             // Scrapes university links from every file (file contains up to 880 universities from WHED.net search by Country)
             foreach (var file in files)
             {
-                if (file.Equals(projectPath + "\\Lithuania.txt"))
+                try
                 {
-                    try
+                    using (File.OpenRead(file))
                     {
-                        using (File.OpenRead(file))
-                        {
-                            universityLinks.Add(ScrapeUniversityLinks(File.ReadAllText(file)));
-                        }
+                        universityLinks.Add(ScrapeUniversityLinks(File.ReadAllText(file)));
                     }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.StackTrace);
-                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.StackTrace);
+                    WriteToFile(e.StackTrace, pathToLog);
+                }
 
+                if(howmany == 3)
+                {
                     break;
                 }
+
+                howmany++;
             }
 
             // Thread t = new Thread(() => StartThreadWithTimeout("", _standardTimeout)); currently unused
@@ -99,6 +106,8 @@ namespace WebScraper
 
                 universityIndexInCountry = 0;
                 Console.Write("COUNTRY {0:d}/{1:d} ", currentCountryNum, universityLinks.Count);
+                WriteToFile(String.Format("COUNTRY {0:d}/{1:d} ", currentCountryNum, universityLinks.Count), pathToLog);
+
                 foreach (var link in linksList)
                 {
                     using (WebClient client = new WebClient())
@@ -107,6 +116,7 @@ namespace WebScraper
                         {
                             string htmlCode = client.DownloadString(_websiteLink + link);
                             Console.WriteLine("UNIVERSITY {0:d}/{1:d} START:" + DateTime.Now, universityIndexInCountry + 1, linksList.Count);
+                            WriteToFile(String.Format("UNIVERSITY {0:d}/{1:d} START:" + DateTime.Now, universityIndexInCountry + 1, linksList.Count), pathToLog);
 
                             /* Palieku komentare nes maybe ateity dar bandysiu padaryt kad su threadais veiktų
                             if (_currentUniversityId % 2 == 0)
@@ -160,6 +170,7 @@ namespace WebScraper
                         {
                             Console.WriteLine(e.StackTrace);
                             Console.WriteLine(_websiteLink + link);
+                            WriteToFile(e.StackTrace, pathToLog);
                         }
                     }
 
@@ -182,6 +193,7 @@ namespace WebScraper
             catch (Exception e)
             {
                 Console.WriteLine(e.StackTrace);
+                WriteToFile(e.StackTrace, pathToLog);
                 return null;
             }
         }
@@ -319,6 +331,7 @@ namespace WebScraper
             catch (Exception e)
             {
                 Console.WriteLine(e.StackTrace);
+                WriteToFile(e.StackTrace, pathToLog);
             }
 
             return FindUniversityCount(responseString);
@@ -356,6 +369,7 @@ namespace WebScraper
             if (t.IsAlive)
             {
                 Console.WriteLine("Thread aborted");
+                WriteToFile("Thread aborted", pathToLog);
                 t.Abort();
             }
         }
@@ -396,6 +410,7 @@ namespace WebScraper
                 catch (Exception e)
                 {
                     Console.WriteLine(e.StackTrace);
+                    WriteToFile(e.StackTrace, pathToLog);
                     throw;
                 }
 
