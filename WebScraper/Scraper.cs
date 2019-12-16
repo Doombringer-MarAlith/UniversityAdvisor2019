@@ -243,17 +243,24 @@ namespace WebScraper
         // Find info about university and request faculty info
         private void ScrapeUniversity(string text)
         {
-            University university = new University()
+            University university = null;
+            if (text != "Institution not found")
             {
-                Country = currentCountryName,
-                Name = FindElement(text, "<h2>", "<span", 0).Trim(new char[] { '\t', '\n', ' ' }).Replace("&ndash; ", ""),
-                City = FindElement(text, "City:</span>", "</span>", 22),
-                Description = FindElement(text, "<span class=\"dt\">History", "</sp", 59),
-                Website = FindElement(text, "WWW:</span>", "\" class=", 32)
-            };
+                university = new University()
+                {
+                    Country = currentCountryName,
+                    Name = FindElement(text, "<h2>", "<span", 0).Trim(new char[] { '\t', '\n', ' ' }).Replace("&ndash; ", ""),
+                    City = FindElement(text, "City:</span>", "</span>", 22),
+                    Description = FindElement(text, "<span class=\"dt\">History", "</sp", 59),
+                    Website = FindElement(text, "WWW:</span>", "\" class=", 32)
+                } ?? null;
+            }
 
-            universities.Add(university);
-            ReadFaculties(text);
+            if(university != null)
+            {
+                universities.Add(university);
+                ReadFaculties(text);
+            }
         }
 
         private void ReadFaculties(string text)
