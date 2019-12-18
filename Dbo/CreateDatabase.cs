@@ -29,6 +29,20 @@ namespace Dbo
             }
 
             Console.WriteLine("Database is ready.");
+
+            Account acc = new Account()
+            {
+                FirstName = "Tomas",
+                Email = "Tadas",
+                Password = "kodel",
+                Guid = Guid.NewGuid().ToString()
+            };
+
+            DatabaseExecutor dbExecutor = new DatabaseExecutor();
+            dbExecutor.CreateAccount(acc);
+            string guid = dbExecutor.ReturnAccountGuid(acc.Email, acc.Password);
+            var returnAcc = dbExecutor.ReturnAccount(guid);
+            Console.WriteLine(returnAcc.FirstName);
         }
     }
 }
