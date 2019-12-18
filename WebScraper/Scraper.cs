@@ -81,7 +81,7 @@ namespace WebScraper
                     WriteToFile(e.StackTrace, pathToLog);
                 }
 
-                if(howmany == 3)
+                if (howmany == 10)
                 {
                     break;
                 }
@@ -256,7 +256,7 @@ namespace WebScraper
                 } ?? null;
             }
 
-            if(university != null)
+            if (university != null)
             {
                 universities.Add(university);
                 ReadFaculties(text);

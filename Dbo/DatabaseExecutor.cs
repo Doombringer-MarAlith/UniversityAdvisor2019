@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.Linq;
 
 namespace Dbo
 {
@@ -16,7 +18,7 @@ namespace Dbo
 
                 using (var command = new SqlCommand
                 (
-                    $"INSERT INTO [Account] VALUES ('{account.FirstName}','{account.LastName}','{account.Gender}', '{account.Password}', '{account.Email}', '{account.Age.ToString(CultureInfo.InvariantCulture)}')",
+                    $"INSERT INTO [Account] VALUES ('{account.FirstName}','{account.LastName}','{account.Gender}', '{account.Password}', '{account.Email}','{account.Guid}', '{account.Age.ToString(CultureInfo.InvariantCulture)}')",
                     bdoConnection
                 ))
                 {
@@ -37,23 +39,28 @@ namespace Dbo
                     bdoConnection
                 ))
                 {
-                    using (var reader = command.ExecuteReader())
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter { SelectCommand = command };
+                    DataTable data = new DataTable();
+                    dataAdapter.Fill(data);
+
+                    foreach (DataRow row in data.Rows)
                     {
-                        while (reader.Read())
+                        var account = new Account
                         {
-                            var account = new Account
-                            {
-                                FirstName = reader["FirstName"].ToString(),
-                                LastName = reader["LastName"].ToString(),
-                                Gender = reader["Gender"].ToString(),
-                                Age = DateTime.Parse(reader["Age"].ToString()),
-                                Password = reader["Password"].ToString(),
-                                Email = reader["Email"].ToString()
-                            };
-                            bdoConnection.Close();
-                            return account;
-                        }
+                            FirstName = row["FirstName"].ToString(),
+                            LastName = row["LastName"].ToString(),
+                            Gender = row["Gender"].ToString(),
+                            Age = DateTime.Parse(row["Age"].ToString()),
+                            Password = row["Password"].ToString(),
+                            Guid = row["Guid"].ToString(),
+                            Email = row["Email"].ToString(),
+                            Id = int.Parse(row["Id"].ToString())
+                        };
+                        bdoConnection.Close();
+                        return account;
                     }
+
+                    bdoConnection.Close();
                 }
             }
 
@@ -68,23 +75,18 @@ namespace Dbo
                 bdoConnection.Open();
                 using (var command = new SqlCommand
                 (
-                    $"SELECT * FROM [Account] WHERE Email='{email}' AND Password='{password}'",
+                    $"SELECT * FROM [Account]",
                     bdoConnection
                 ))
                 {
-                    using (var reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            var guid = reader["Guid"].ToString();
-                            bdoConnection.Close();
-                            return guid;
-                        }
-                    }
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter { SelectCommand = command };
+                    DataTable data = new DataTable();
+                    dataAdapter.Fill(data);
+                    var guid = data.Select($"Email='{email}' and Password='{password}'").FirstOrDefault()?["Guid"].ToString();
+                    bdoConnection.Close();
+                    return guid;
                 }
             }
-            //Logger.Log($"Account guid return value is null", Level.Warning);
-            return null;
         }
     }
 }
