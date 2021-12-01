@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@joeattardi/emoji-button": "^2.5.2"
+    "@joeattardi/emoji-button": "^4.6.2"
   },
   "devDependencies": {},
   "scripts": {
